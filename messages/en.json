@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "treatments": "Treatments",
+    "specialists": "Specialists",
+    "about": "About",
+    "contact": "Contact",
+    "bookNow": "Book Now",
+    "international": "International"
+  },
+  "hero": {
+    "welcome": "Welcome to Silk Beauty Salon",
+    "tagline": "It is your time to shine",
+    "badge": "Luxury Beauty · Batumi, Georgia",
+    "heading": "Where Beauty Meets Mastery",
+    "sub": "World-class aesthetic medicine, lash artistry, hair colour, and nail design — by internationally certified specialists.",
+    "cta": "Book Appointment",
+    "whatsapp": "WhatsApp Us"
+  },
+  "heroSlider": {
+    "slide1": "Luxury Aesthetic Treatments",
+    "slide2": "Expert Lash & Brow Artistry",
+    "slide3": "Premium Hair Styling",
+    "slide4": "Nail Art & Design"
+  },
+  "pageHero": {
+    "about": {
+      "title": "Our Story",
+      "subtitle": "Born in Batumi, Built for the World"
+    },
+    "treatments": {
+      "title": "Our Services",
+      "subtitle": "Premium Beauty Treatments"
+    },
+    "specialists": {
+      "title": "Meet the Team",
+      "subtitle": "World-Class Experts"
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "subtitle": "Book Your Appointment"
+    }
+  },
+  "about": {
+    "heading": "Born in Batumi, Built for the World",
+    "intro1": "Silk Beauty Salon was founded with one vision: to bring world-class aesthetic medicine and luxury beauty services to the heart of Batumi, Georgia.",
+    "intro2": "Our team of internationally certified specialists — trained across Europe, the Middle East, and beyond — believes that beauty is not a luxury. It's a form of self-expression, and everyone deserves the best.",
+    "cta": "Book a Consultation",
+    "valuesTitle": "What We Stand For",
+    "value1Title": "Medical Excellence",
+    "value1Desc": "All aesthetic treatments performed by certified medical specialists using EU-approved products.",
+    "value2Title": "Client First",
+    "value2Desc": "Every appointment is tailored to your unique features, goals, and skin type. We never rush.",
+    "value3Title": "International Standards",
+    "value3Desc": "Our team trained in Paris, Istanbul, Milan, and Tel Aviv. Global expertise, Batumi roots.",
+    "value4Title": "Clean Beauty",
+    "value4Desc": "We use cruelty-free, dermatologically tested products. No compromises on quality.",
+    "stats": {
+      "clients": "Happy Clients",
+      "specialists": "Specialists",
+      "treatments": "Treatments"
+    }
+  },
+  "specialists": {
+    "title": "Meet Our Specialists",
+    "subtitle": "International experts, each certified in their field and passionate about delivering outstanding results.",
+    "followInstagram": "Follow on Instagram"
+  },
+  "footer": {
+    "tagline": "World-class aesthetic medicine and luxury beauty services in the heart of Batumi, Georgia.",
+    "rights": "All rights reserved."
+  },
+  "contact": {
+    "title": "Book Your Appointment",
+    "name": "Full Name",
+    "phone": "Phone / WhatsApp",
+    "email": "Email",
+    "treatment": "Treatment",
+    "date": "Preferred Date",
+    "message": "Message",
+    "submit": "Confirm Booking Request",
+    "success": "Request Sent!",
+    "successSub": "We'll confirm your appointment via WhatsApp within 1 hour.",
+    "selectTreatment": "Select a treatment",
+    "address": "Address",
+    "phoneLabel": "Phone & WhatsApp",
+    "emailLabel": "Email",
+    "hours": "Hours"
+  },
+  "chat": {
+    "greeting": "Hi! I'm your Silk Beauty Advisor. Ask me about treatments, prices, or book an appointment.",
+    "placeholder": "Ask about a treatment…",
+    "title": "Silk Beauty Advisor",
+    "subtitle": "AI · Ask me anything"
+  }
+}

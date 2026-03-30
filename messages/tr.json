@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "treatments": "Tedaviler",
+    "specialists": "Uzmanlar",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "bookNow": "Randevu Al",
+    "international": "Uluslararası"
+  },
+  "hero": {
+    "welcome": "Silk Beauty Salon'a Hoş Geldiniz",
+    "tagline": "Parlama zamanınız geldi!",
+    "badge": "Lüks Güzellik · Batum",
+    "heading": "Güzelliğin Ustalıkla Buluştuğu Yer",
+    "sub": "Sertifikalı uzmanlarca sunulan dünya standartlarında estetik tıp.",
+    "cta": "Randevu Al",
+    "whatsapp": "WhatsApp"
+  },
+  "heroSlider": {
+    "slide1": "Lüks Estetik Tedaviler",
+    "slide2": "Uzman Kirpik ve Kaş Sanatı",
+    "slide3": "Premium Saç Stili",
+    "slide4": "Tırnak Sanatı ve Tasarım"
+  },
+  "pageHero": {
+    "about": {
+      "title": "Hikayemiz",
+      "subtitle": "Batum'da Doğdu, Dünya İçin Yaratıldı"
+    },
+    "treatments": {
+      "title": "Hizmetlerimiz",
+      "subtitle": "Premium Güzellik Tedavileri"
+    },
+    "specialists": {
+      "title": "Ekiple Tanışın",
+      "subtitle": "Dünya Standartlarında Uzmanlar"
+    },
+    "contact": {
+      "title": "Bize Ulaşın",
+      "subtitle": "Randevunuzu Alın"
+    }
+  },
+  "about": {
+    "heading": "Batum'da Doğdu, Dünya İçin Yaratıldı",
+    "intro1": "Silk Beauty Salon tek bir vizyonla kuruldu: Dünya standartlarında estetik tıp ve lüks güzellik hizmetlerini Batum, Gürcistan'ın kalbine getirmek.",
+    "intro2": "Avrupa, Orta Doğu ve ötesinde eğitim almış uluslararası sertifikalı uzmanlardan oluşan ekibimiz, güzelliğin bir lüks olmadığına inanıyor. Bu bir kendini ifade etme biçimidir ve herkes en iyiyi hak eder.",
+    "cta": "Danışmanlık Randevusu Al",
+    "valuesTitle": "Değerlerimiz",
+    "value1Title": "Tıbbi Mükemmellik",
+    "value1Desc": "Tüm estetik tedaviler, AB onaylı ürünler kullanılarak sertifikalı tıp uzmanları tarafından gerçekleştirilir.",
+    "value2Title": "Müşteri Öncelikli",
+    "value2Desc": "Her randevu benzersiz özelliklerinize, hedeflerinize ve cilt tipinize göre özelleştirilir. Asla acele etmeyiz.",
+    "value3Title": "Uluslararası Standartlar",
+    "value3Desc": "Ekibimiz Paris, İstanbul, Milano ve Tel Aviv'de eğitim aldı. Küresel uzmanlık, Batum kökleri.",
+    "value4Title": "Temiz Güzellik",
+    "value4Desc": "Hayvan deneyi yapılmayan, dermatolojik olarak test edilmiş ürünler kullanıyoruz. Kaliteden ödün yok.",
+    "stats": {
+      "clients": "Mutlu Müşteri",
+      "specialists": "Uzman",
+      "treatments": "Tedavi"
+    }
+  },
+  "specialists": {
+    "title": "Uzmanlarımızla Tanışın",
+    "subtitle": "Her biri alanında sertifikalı ve olağanüstü sonuçlar sunma tutkusuyla uluslararası uzmanlar.",
+    "followInstagram": "Instagram'da Takip Et"
+  },
+  "footer": {
+    "tagline": "Batum'un kalbinde dünya standartlarında güzellik hizmetleri.",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "contact": {
+    "title": "Randevunuzu Alın",
+    "name": "Ad Soyad",
+    "phone": "Telefon / WhatsApp",
+    "email": "E-posta",
+    "treatment": "Tedavi",
+    "date": "Tercih Edilen Tarih",
+    "message": "Mesaj",
+    "submit": "Randevu Talebini Onayla",
+    "success": "Talep Gönderildi!",
+    "successSub": "Randevunuzu 1 saat içinde WhatsApp ile onaylayacağız.",
+    "selectTreatment": "Bir tedavi seçin",
+    "address": "Adres",
+    "phoneLabel": "Telefon ve WhatsApp",
+    "emailLabel": "E-posta",
+    "hours": "Çalışma Saatleri"
+  },
+  "chat": {
+    "greeting": "Merhaba! Ben Silk Beauty Danışmanınızım.",
+    "placeholder": "Soru sorun...",
+    "title": "Silk Beauty Advisor",
+    "subtitle": "AI · Bana her şeyi sorun"
+  }
+}
