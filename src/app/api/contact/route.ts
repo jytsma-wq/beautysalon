@@ -3,7 +3,8 @@ import { z } from 'zod';
 import { Resend } from 'resend';
 import { db } from '@/lib/db';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key is available
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'info@silkbeauty.ge';
 
 const contactFormSchema = z.object({
@@ -37,16 +38,20 @@ export async function POST(request: Request) {
       message: message.trim(),
     };
 
-    // Send email to admin
-    await resend.emails.send({
-      from: 'Silk Beauty Salon <noreply@silkbeauty.ge>',
-      to: [CONTACT_EMAIL],
-      subject: `New enquiry from ${sanitized.name}`,
-      html: `<p><b>Name:</b> ${sanitized.name}</p>
-             <p><b>Email:</b> ${sanitized.email}</p>
-             <p><b>Phone:</b> ${sanitized.phone ?? 'Not provided'}</p>
-             <p><b>Message:</b> ${sanitized.message}</p>`,
-    });
+    // Send email to admin (if Resend is configured)
+    if (resend) {
+      await resend.emails.send({
+        from: 'Silk Beauty Salon <noreply@silkbeauty.ge>',
+        to: [CONTACT_EMAIL],
+        subject: `New enquiry from ${sanitized.name}`,
+        html: `<p><b>Name:</b> ${sanitized.name}</p>
+               <p><b>Email:</b> ${sanitized.email}</p>
+               <p><b>Phone:</b> ${sanitized.phone ?? 'Not provided'}</p>
+               <p><b>Message:</b> ${sanitized.message}</p>`,
+      });
+    } else {
+      console.log('Contact form submission (Resend not configured):', sanitized);
+    }
 
     // Save to database
     await db.contactSubmission.create({

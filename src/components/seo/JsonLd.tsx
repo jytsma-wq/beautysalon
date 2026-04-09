@@ -9,20 +9,20 @@ export function generateLocalBusinessSchema(locale: string = "en") {
   
   const localeNames: Record<string, string> = {
     en: "Silk Beauty Salon",
-    ka: "სილქ ბიუთი სალონი",
-    ru: "Салон Красоты Silk Beauty",
+    ka: " silk beauty salon",
+    ru: " ",
     tr: "Silk Beauty Salon",
-    ar: "صالون حرير للجمال",
-    he: "סלון סילק ביוטי"
+    ar: " ",
+    he: " "
   }
 
   const descriptions: Record<string, string> = {
     en: "Premier medical aesthetic clinic in Batumi, Georgia offering Botox, dermal fillers, laser treatments, and advanced skin care.",
-    ka: "პრემიური სამედიცინო-ესთეტიკური კლინიკა ბათუმში, ბოტოქსი, დერმალური ფილერები, ლაზერული მკურნალობები.",
-    ru: "Премьер медицинская эстетическая клиника в Батуми, предлагающая ботокс, дермальные наполнители, лазерные процедуры.",
-    tr: "Batumi'de Botox, dermal dolgular, lazer tedavileri ve ileri cilt bakımı sunan premier tıbbi estetik kliniği.",
-    ar: "عيادة طبية تجميلية رائدة في باتومي تقدم البوتوكس والحشوات الجلدية والعلاجات بالليزر.",
-    he: "קליניקה רפואית אסתטית מובילה בבטומי המציעה בוטוקס, מילויים דרמליים וטיפולי לייזר."
+    ka: " , , .",
+    ru: " , , .",
+    tr: "Batumi'de Botox, dermal dolgular, lazer tedavileri ve ileri cilt bakimi sunan premier tibbi estetik klinigi.",
+    ar: " .",
+    he: " ."
   }
 
   const schema = {
@@ -60,6 +60,174 @@ export function generateLocalBusinessSchema(locale: string = "en") {
       siteConfig.social.instagram,
       siteConfig.social.facebook
     ].filter(Boolean)
+  }
+
+  return JSON.stringify(schema)
+}
+
+/**
+ * Generate FAQ Schema for treatment pages
+ */
+export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
+
+  return JSON.stringify(schema)
+}
+
+/**
+ * Generate Breadcrumb Schema
+ */
+export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  }
+
+  return JSON.stringify(schema)
+}
+
+/**
+ * Generate Medical Procedure Schema for treatments
+ */
+export function generateTreatmentSchema(treatment: {
+  name: string
+  description: string
+  image?: string
+  price?: string
+  duration?: string
+  benefits?: string[]
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": treatment.name,
+    "description": treatment.description,
+    "image": treatment.image,
+    "procedureType": "Aesthetic",
+    "howPerformed": treatment.benefits?.join('. ') || undefined,
+    "procedureFollowUp": treatment.duration ? `Takes approximately ${treatment.duration}` : undefined,
+    "status": "https://schema.org/ActiveNotRecruiting",
+    "study": {
+      "@type": "MedicalStudy",
+      "status": "completed"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/treatments/${treatment.name.toLowerCase().replace(/\s+/g, '-')}`
+    },
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": siteConfig.name,
+      "url": siteConfig.url
+    },
+    "offers": treatment.price ? {
+      "@type": "Offer",
+      "price": treatment.price.replace(/[^0-9.]/g, ''),
+      "priceCurrency": "GEL",
+      "availability": "https://schema.org/InStock"
+    } : undefined
+  }
+
+  return JSON.stringify(schema)
+}
+
+/**
+ * Generate Review Schema for testimonials
+ */
+export function generateReviewSchema(reviews: Array<{
+  author: string
+  rating: number
+  text: string
+  date?: string
+}>) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": siteConfig.name,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": reviews.length.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": reviews.map((review) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": review.text,
+      "datePublished": review.date || new Date().toISOString()
+    }))
+  }
+
+  return JSON.stringify(schema)
+}
+
+/**
+ * Generate Service Schema for treatment categories
+ */
+export function generateServiceSchema(service: {
+  name: string
+  description: string
+  image?: string
+  treatments: Array<{ name: string; url: string }>
+}) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.name,
+    "description": service.description,
+    "image": service.image,
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": siteConfig.name,
+      "url": siteConfig.url
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Batumi",
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "Georgia"
+      }
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": service.name,
+      "itemListElement": service.treatments.map((treatment) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": treatment.name,
+          "url": `${siteConfig.url}${treatment.url}`
+        }
+      }))
+    }
   }
 
   return JSON.stringify(schema)

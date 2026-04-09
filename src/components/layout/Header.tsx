@@ -49,11 +49,7 @@ export function Header() {
   const tHeader = useTranslations('header');
   const tCommon = useTranslations('common');
   const pathname = usePathname();
-<<<<<<< HEAD
   const locale = useLocale();
-=======
-  const locale = pathname.split('/')[1] || 'en';
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -180,7 +176,6 @@ export function Header() {
     },
     { name: t('pricelist'), href: '/pricelist', hasDropdown: false },
     { name: t('offers'), href: '/offers', hasDropdown: false },
-    { name: t('beforeAfter'), href: '/before-after', hasDropdown: false },
     { name: t('contact'), href: '/contact-us', hasDropdown: false },
   ];
 
@@ -261,7 +256,6 @@ export function Header() {
               </div>
             </Link>
 
-<<<<<<< HEAD
             {/* Book Appointment Button with Dropdown - Right - LARGER */}
             <div className="relative hidden md:block mr-[-8px]">
               <Button
@@ -303,18 +297,6 @@ export function Header() {
                   </a>
                 </div>
               )}
-=======
-            {/* Book Appointment Button - Right - LARGER */}
-            <div className="relative hidden md:block -mr-2">
-              <a
-                href={siteConfig.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold flex items-center gap-2 text-lg px-6 py-3"
-              >
-                {t('bookAppointment')}
-              </a>
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
             </div>
           </div>
 

@@ -20,22 +20,18 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-<<<<<<< HEAD
   const tCommon = await getTranslations({locale: resolvedParams.locale, namespace: 'common'});
   const treatment = await getTreatmentBySlug(resolvedParams.slug, resolvedParams.locale);
-=======
-  const result = await getTreatmentBySlug(resolvedParams.slug, resolvedParams.locale);
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
   
-  if (!result) {
+  if (!treatment) {
     return {
       title: `${tCommon('notFound')} | Silk Beauty Salon`,
     };
   }
 
   return {
-    title: `${result.treatment.name} | Silk Beauty Salon`,
-    description: result.treatment.shortDescription,
+    title: `${treatment.name} | Silk Beauty Salon`,
+    description: treatment.shortDescription,
   };
 }
 
@@ -48,26 +44,16 @@ export async function generateStaticParams() {
 
 export default async function TreatmentPage({ params }: Props) {
   const resolvedParams = await params;
-<<<<<<< HEAD
   const t = await getTranslations({locale: resolvedParams.locale, namespace: 'treatmentPage'});
   const tCommon = await getTranslations({locale: resolvedParams.locale, namespace: 'common'});
   const treatment = await getTreatmentBySlug(resolvedParams.slug, resolvedParams.locale);
-=======
-  const result = await getTreatmentBySlug(resolvedParams.slug, resolvedParams.locale);
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
 
-  if (!result) {
+  if (!treatment) {
     notFound();
   }
 
-  const { treatment } = result;
-
   // Find the category this treatment belongs to
-<<<<<<< HEAD
   const category = await getCategoryByTreatmentSlug(treatment?.slug || '', resolvedParams.locale);
-=======
-  const category = result.category;
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
 
   // Find related treatments
   const relatedTreatments = category?.treatments

@@ -243,14 +243,14 @@ export default async function ConditionPage({ params }: Props) {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedTreatments.map((item) => item && (
                 <Link
-                  key={item.treatment.slug}
-                  href={`/treatments/${item.treatment.slug}`}
+                  key={item.slug}
+                  href={`/treatments/${item.slug}`}
                   className="group bg-white rounded-lg overflow-hidden border border-border card-hover"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src={item.treatment.image}
-                      alt={item.treatment.name}
+                      src={item.image}
+                      alt={item.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -258,14 +258,14 @@ export default async function ConditionPage({ params }: Props) {
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-primary group-hover:text-gold transition-colors">
-                      {item.treatment.name}
+                      {item.name}
                     </h3>
                     <p className="text-sm text-muted-foreground line-clamp-2 mt-1">
-                      {item.treatment.shortDescription}
+                      {item.shortDescription}
                     </p>
-                    {item.treatment.price && (
+                    {item.price && (
                       <p className="text-sm font-medium text-gold mt-2">
-                        {item.treatment.price}
+                        {item.price}
                       </p>
                     )}
                   </div>

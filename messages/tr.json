@@ -9,7 +9,6 @@
     "about": "Hakkımızda",
     "pricelist": "Fiyat Listesi",
     "offers": "Teklifler",
-    "beforeAfter": "Önce ve Sonra",
     "contact": "İletişim",
     "bookAppointment": "Randevu Al",
     "faq": "SSS",
@@ -198,16 +197,6 @@
     "ctaSubtitle": "Estetik hedeflerinizi tartışmak için uzmanlarımızdan biriyle konsültasyon randevusu alın",
     "ctaButton": "Konsültasyon Randevusu Al"
   },
-<<<<<<< HEAD
-=======
-  "beforeAfterPage": {
-    "title": "Önce ve Sonra",
-    "subtitle": "Tedavilerimizin gerçek sonuçlarını görün. Uzman estetik tedavilerimizle görünümünüzü dönüştürün.",
-    "ctaTitle": "Dönüşmeye Hazır mısınız?",
-    "ctaText": "Tedavi hedeflerinizi görüşmek için uzmanlarımızdan biriyle konsültasyon randevusu alın",
-    "bookNow": "Randevu Al"
-  },
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
   "conditionsPage": {
     "title": "Cilt Sorunları",
     "listingTitle": "Tedavi Ettiğimiz Cilt Sorunları",
@@ -421,20 +410,10 @@
     "readMore": "Devamını Oku",
     "bookNow": "Randevu Al",
     "bookConsultation": "Konsültasyon Randevusu Al",
-<<<<<<< HEAD
     "treatments": "Tedaviler",
     "conditions": "Cilt Sorunları",
     "notFound": "Bulunamadı",
     "social": "Bizi Takip Edin"
-=======
-    "bookOnline": "Online Randevu Al",
-    "bookViaWhatsApp": "WhatsApp ile Randevu Al",
-    "scheduleAppointment": "Randevu Planla",
-    "whatsapp": "WhatsApp",
-    "treatments": "Tedaviler",
-    "conditions": "Cilt Sorunları",
-    "notFound": "Bulunamadı"
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
   },
   "siteConfig": {
     "awards": {
@@ -635,13 +614,7 @@
           "name": "Kırışıklık Enjeksiyonları",
           "shortDescription": "Taze ve genç bir görünüm için kırışıklıkları ve ince çizgileri giderin.",
           "description": "Kırışıklık enjeksiyonları, en popüler cerrahi olmayan kozmetik tedavilerden biridir.",
-<<<<<<< HEAD
           "benefits": ["İnce çizgileri ve kırışıklıkları azaltır", "Yeni kırışıklıkların oluşumunu önler", "Minimal downtime ile hızlı tedavi", "Doğal görünümlü sonuçlar", "Uzun süreli etkiler (3-6 ay)"]
-=======
-          "benefits": ["İnce çizgileri ve kırışıklıkları azaltır", "Yeni kırışıklıkların oluşumunu önler", "Minimal downtime ile hızlı tedavi", "Doğal görünümlü sonuçlar", "Uzun süreli etkiler (3-6 ay)"],
-          "howItWorks": "Botulinum toksini, ince bir iğne kullanılarak belirli yüz kaslarına enjekte edilir. Toksin, bu kaslara sinir sinyallerini bloke ederek kasılmalarını ve kırışıklık oluşumunu önler.",
-          "aftercare": "4 saat boyunca yatmayın, 24 saat boyunca egzersiz yapmaktan kaçının ve tedavi edilen bölgeye dokunmayın."
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
         },
         "masseter-botox": {
           "name": "Masseter Botox",
@@ -690,33 +663,6 @@
           "shortDescription": "Heybetli bir profil için çene hattınızı tanımlayın ve şekillendirin.",
           "description": "Çene hattı dolguları, çene hattını tanımlama ve şekillendirme için mükemmel bir tedavidir.",
           "benefits": ["Daha belirgin çene hattı oluşturur", "Yüz simetrisini iyileştirir", "Cerrahi olmayan prosedür", "Anında sonuçlar"]
-<<<<<<< HEAD
-=======
-        },
-        "hand-fillers": {
-          "name": "El Dolguları",
-          "shortDescription": "Hacim restorasyonu ile yaşlanan elleri gençleştirin.",
-          "description": "El dolguları, damarların ve tendonların görünümünü azaltarak ellerde hacmi geri kazandırır.",
-          "benefits": ["Kaybedilen hacmi geri kazandırır", "Genç bir kontur oluşturur", "Yüz oranlarını dengeler", "Sonuçlar 12-18 ay sürer"]
-        },
-        "nose-fillers": {
-          "name": "Burun Dolguları",
-          "shortDescription": "Dermal dolgular kullanarak cerrahi olmadan burnunuzun şeklini değiştirin.",
-          "description": "Cerrahi olmayan rinoplasti, burnu şekillendirmek ve kontur etmek için dermal dolgular kullanır.",
-          "benefits": ["Cerrahi alternatifi", "Downtime yok", "Anında sonuç", "Gerekirse geri alınabilir"]
-        },
-        "tear-fill": {
-          "name": "Gözyaşı Dolguları",
-          "shortDescription": "Göz altı çukurluklarını ve koyu halkaları azaltın.",
-          "description": "Gözyaşı dolgusu tedavisi, daha taze bir görünüm için göz altı çukurluklarını ve koyu halkaları giderir.",
-          "benefits": ["Göz altı çukurluklarını azaltır", "Koyu halkaları minimize eder", "Taze görünüm oluşturur", "Sonuçlar 12-18 ay sürer"]
-        },
-        "temple-fillers": {
-          "name": "Şakak Dolguları",
-          "shortDescription": "Daha genç bir görünüm için şakak bölgesinde hacmi geri kazandırın.",
-          "description": "Şakak dolguları, şakak bölgesinde hacmi geri kazandırarak daha dengeli ve genç bir görünüm oluşturur.",
-          "benefits": ["Kaybedilen hacmi geri kazandırır", "Genç bir kontur oluşturur", "Yüz oranlarını dengeler", "Sonuçlar 12-18 ay sürer"]
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
         }
       }
     },
@@ -741,21 +687,6 @@
           "shortDescription": "Daha sıkı, pürüzsüz cilt için kolajen üretimini uyarın.",
           "description": "Mikro iğneleme, cildin doğal iyileşme sürecini uyararak kolajen ve elastin üretir.",
           "benefits": ["Kolajeni uyarır", "Yaraları azaltır", "Cilt dokusunu iyileştirir", "Gözenekleri minimize eder"]
-<<<<<<< HEAD
-=======
-        },
-        "laser-hair": {
-          "name": "Lazer Tüy Alma",
-          "shortDescription": "Pürüzsüz, tüysüz cilt için kalıcı tüy azaltma.",
-          "description": "Lazer tüy alma, pürüzsüz cilt için uzun süreli tüy azaltma sağlar.",
-          "benefits": ["Kalıcı tüy azaltma", "Pürüzsüz cilt", "Hızlı prosedür", "Uzun süreli sonuçlar"]
-        },
-        "prp-therapy": {
-          "name": "PRP Tedavisi",
-          "shortDescription": "Vücudunuzun kendi büyüme faktörlerini kullanarak cildinizi gençleştirin.",
-          "description": "PRP tedavisi, cildi gençleştirmek ve tazelemek için kendi kan trombositlerinizi kullanır.",
-          "benefits": ["Doğal gençleşme", "İyileşmiş cilt tonu", "Azaltılmış ince çizgiler", "Gelişmiş parlaklık"]
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
         }
       }
     },
@@ -774,15 +705,6 @@
           "shortDescription": "Pigmentasyon, güneş hasarı ve vasküler lezyonları tedavi edin.",
           "description": "IPL terapisi, pigmentasyon ve güneş hasarı dahil çeşitli cilt endişelerini tedavi etmek için ışık kullanır.",
           "benefits": ["Pigmentasyonu tedavi eder", "Güneş hasarını azaltır", "Cilt tonunu iyileştirir", "Minimal downtime"]
-<<<<<<< HEAD
-=======
-        },
-        "laser-vein": {
-          "name": "Lazer Damar Tedavisi",
-          "shortDescription": "İstenmeyen damarları ve örümcek damarları yok edin.",
-          "description": "Lazer damar tedavisi, yüzde ve vücutta istenmeyen damarları güvenli bir şekilde yok eder.",
-          "benefits": ["Damar yok etme", "Güvenli prosedür", "Hızlı iyileşme", "Pürüzsüz cilt"]
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
         }
       }
     },
@@ -819,15 +741,6 @@
           "shortDescription": "İntim gençleştirme ile konfor ve özgüveni yeniden kazanın.",
           "description": "Vajinal gençleştirme, vajinal sağlığı ve fonksiyonunu iyileştirmek için lazer teknolojisini kullanır.",
           "benefits": ["İyileşmiş konfor", "Artan özgüven", "Cerrahi olmayan", "Hızlı iyileşme"]
-<<<<<<< HEAD
-=======
-        },
-        "labia-filler": {
-          "name": "Labia Dolgusu",
-          "shortDescription": "Labial dolgu tedavisi ile konforu ve estetiği iyileştirin.",
-          "description": "Labia dolgu tedavisi kozmetik endişeleri giderir ve konforu artırır.",
-          "benefits": ["Kozmetik iyileştirme", "Konfor", "Özgüven", "Doğal sonuç"]
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
         }
       }
     },
@@ -949,17 +862,5 @@
       "causes": ["Genetik", "Bariyer disfonksiyonu", "Alerjenler", "Çevresel faktörler"],
       "treatments": ["Nazik yüz bakımları", "Yatıştırıcı tedaviler", "Özelleştirilmiş cilt bakımı", "LED terapisi"]
     }
-<<<<<<< HEAD
-=======
-  },
-  "whatsapp": {
-    "whatsapp": "WhatsApp",
-    "greeting": "Merhaba! 👋 Silk Beauty Salon'a hoş geldiniz. Size nasıl yardımcı olabiliriz?",
-    "bookAppointment": "Randevu almak istiyorum",
-    "serviceQuestion": "Hizmetler hakkında bir sorum var",
-    "pricingInfo": "Fiyatlar hakkında daha fazla bilgiye ihtiyacım var",
-    "otherInquiry": "Diğer soru",
-    "typicalReply": "Genellikle birkaç dakika içinde yanıt verir"
->>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
   }
 }
