@@ -1,9 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { Cookie } from "lucide-react"
+import { Cookie, X, Settings, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Switch } from "@/components/ui/switch"
+import { Label } from "@/components/ui/label"
 
 type ConsentCategory = "necessary" | "analytics" | "marketing" | "functional"
 
@@ -35,6 +37,8 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
   const [consent, setConsent] = React.useState<ConsentState>(defaultConsent)
   const [hasConsented, setHasConsented] = React.useState(false)
   const [showBanner, setShowBanner] = React.useState(false)
+  const [showSettings, setShowSettings] = React.useState(false)
+  const [tempPreferences, setTempPreferences] = React.useState<ConsentState>(defaultConsent)
 
   React.useEffect(() => {
     const stored = localStorage.getItem("cookie_consent")
@@ -62,6 +66,7 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("cookie_consent", JSON.stringify(fullConsent))
     setHasConsented(true)
     setShowBanner(false)
+    setShowSettings(false)
   }
 
   const rejectAll = () => {
@@ -69,6 +74,7 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("cookie_consent", JSON.stringify(defaultConsent))
     setHasConsented(true)
     setShowBanner(false)
+    setShowSettings(false)
   }
 
   const savePreferences = (prefs: ConsentState) => {
@@ -76,12 +82,38 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("cookie_consent", JSON.stringify(prefs))
     setHasConsented(true)
     setShowBanner(false)
+    setShowSettings(false)
+  }
+
+  const openSettings = () => {
+    setTempPreferences(consent)
+    setShowSettings(true)
+  }
+
+  const handleSaveSettings = () => {
+    savePreferences(tempPreferences)
   }
 
   return (
     <ConsentContext.Provider value={{ consent, hasConsented, acceptAll, rejectAll, savePreferences }}>
       {children}
-      {showBanner && <CookieBanner onAccept={acceptAll} onReject={rejectAll} />}
+      {showBanner && (
+        <CookieBanner 
+          onAccept={acceptAll} 
+          onReject={rejectAll} 
+          onManage={openSettings}
+        />
+      )}
+      {showSettings && (
+        <CookieSettingsModal 
+          preferences={tempPreferences}
+          onPreferencesChange={setTempPreferences}
+          onSave={handleSaveSettings}
+          onClose={() => setShowSettings(false)}
+          onAcceptAll={acceptAll}
+          onRejectAll={rejectAll}
+        />
+      )}
     </ConsentContext.Provider>
   )
 }
@@ -94,7 +126,7 @@ export function useConsent() {
   return context
 }
 
-function CookieBanner({ onAccept, onReject }: { onAccept: () => void; onReject: () => void }) {
+function CookieBanner({ onAccept, onReject, onManage }: { onAccept: () => void; onReject: () => void; onManage: () => void }) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white border-t shadow-lg">
       <Card className="max-w-4xl mx-auto border-0 shadow-none">
@@ -120,9 +152,88 @@ function CookieBanner({ onAccept, onReject }: { onAccept: () => void; onReject: 
           <Button variant="outline" size="sm" onClick={onReject}>
             Reject All
           </Button>
+          <Button variant="outline" size="sm" onClick={onManage}>
+            <Settings className="w-4 h-4 mr-2" />
+            Manage Preferences
+          </Button>
           <Button size="sm" onClick={onAccept}>
             Accept All
           </Button>
+        </CardFooter>
+      </Card>
+    </div>
+  )
+}
+
+interface CookieSettingsModalProps {
+  preferences: ConsentState
+  onPreferencesChange: (prefs: ConsentState) => void
+  onSave: () => void
+  onClose: () => void
+  onAcceptAll: () => void
+  onRejectAll: () => void
+}
+
+function CookieSettingsModal({ preferences, onPreferencesChange, onSave, onClose, onAcceptAll, onRejectAll }: CookieSettingsModalProps) {
+  const categories = [
+    { key: 'necessary' as const, label: 'Necessary', description: 'Essential for the website to function properly. Cannot be disabled.', enabled: true },
+    { key: 'analytics' as const, label: 'Analytics', description: 'Help us understand how visitors interact with our website.', enabled: preferences.analytics },
+    { key: 'marketing' as const, label: 'Marketing', description: 'Used to track visitors across websites for advertising purposes.', enabled: preferences.marketing },
+    { key: 'functional' as const, label: 'Functional', description: 'Enable enhanced functionality and personalization.', enabled: preferences.functional },
+  ]
+
+  const handleToggle = (key: keyof ConsentState) => {
+    if (key === 'necessary') return
+    onPreferencesChange({ ...preferences, [key]: !preferences[key] })
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+      <Card className="w-full max-w-lg max-h-[90vh] overflow-y-auto">
+        <CardHeader className="flex flex-row items-center justify-between pb-4">
+          <CardTitle className="flex items-center gap-2 text-xl">
+            <Settings className="w-5 h-5" />
+            Cookie Settings
+          </CardTitle>
+          <Button variant="ghost" size="icon" onClick={onClose}>
+            <X className="w-5 h-5" />
+          </Button>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <p className="text-sm text-muted-foreground">
+            Customize your cookie preferences. Necessary cookies cannot be disabled as they are essential for the website to function.
+          </p>
+          <div className="space-y-4">
+            {categories.map((category) => (
+              <div key={category.key} className="flex items-start justify-between gap-4 p-4 rounded-lg border">
+                <div className="space-y-1">
+                  <Label className="font-medium">
+                    {category.label}
+                    {category.key === 'necessary' && <span className="text-xs text-muted-foreground ml-2">(Required)</span>}
+                  </Label>
+                  <p className="text-sm text-muted-foreground">{category.description}</p>
+                </div>
+                <Switch
+                  checked={category.key === 'necessary' ? true : category.enabled}
+                  onCheckedChange={() => handleToggle(category.key)}
+                  disabled={category.key === 'necessary'}
+                />
+              </div>
+            ))}
+          </div>
+        </CardContent>
+        <CardFooter className="flex justify-between gap-2">
+          <Button variant="outline" onClick={onRejectAll}>
+            Reject All
+          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={onAcceptAll}>
+              Accept All
+            </Button>
+            <Button onClick={onSave}>
+              Save Preferences
+            </Button>
+          </div>
         </CardFooter>
       </Card>
     </div>

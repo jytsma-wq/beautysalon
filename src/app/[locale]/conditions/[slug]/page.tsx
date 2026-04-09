@@ -241,16 +241,16 @@ export default async function ConditionPage({ params }: Props) {
               {t('recommendedTreatments') || 'Recommended Treatments'}
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {relatedTreatments.map((treatment) => treatment && (
+              {relatedTreatments.map((item) => item && (
                 <Link
-                  key={treatment.slug}
-                  href={`/treatments/${treatment.slug}`}
+                  key={item.treatment.slug}
+                  href={`/treatments/${item.treatment.slug}`}
                   className="group bg-white rounded-lg overflow-hidden border border-border card-hover"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src={treatment.image}
-                      alt={treatment.name}
+                      src={item.treatment.image}
+                      alt={item.treatment.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -258,14 +258,14 @@ export default async function ConditionPage({ params }: Props) {
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-primary group-hover:text-gold transition-colors">
-                      {treatment.name}
+                      {item.treatment.name}
                     </h3>
                     <p className="text-sm text-muted-foreground line-clamp-2 mt-1">
-                      {treatment.shortDescription}
+                      {item.treatment.shortDescription}
                     </p>
-                    {treatment.price && (
+                    {item.treatment.price && (
                       <p className="text-sm font-medium text-gold mt-2">
-                        {treatment.price}
+                        {item.treatment.price}
                       </p>
                     )}
                   </div>

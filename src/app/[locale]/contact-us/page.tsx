@@ -4,7 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock, Loader2, Instagram, Facebook } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+<<<<<<< HEAD
 import { useLocale } from 'next-intl';
+=======
+>>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -24,7 +27,10 @@ function TikTokIcon({ className }: { className?: string }) {
 export default function ContactPage() {
   const t = useTranslations('contactPage');
   const tCommon = useTranslations('common');
+<<<<<<< HEAD
   const locale = useLocale();
+=======
+>>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
   const [formData, setFormData] = useState({
     name: '',
     email: '',

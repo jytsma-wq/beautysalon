@@ -8,22 +8,21 @@ const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 60; // seconds
 const RATE_LIMIT_MAX = 100; // requests per window
 
-// Bad user agents and bot patterns to block
+// Always allow these search engine bots
+const ALWAYS_ALLOW_UA = [/googlebot/i, /bingbot/i, /twitterbot/i, /facebookexternalhit/i];
+
+// Bad user agents - only known malicious security scanners
 const BLOCKED_USER_AGENTS = [
-  /curl/i,
-  /wget/i,
-  /scrapy/i,
-  /bot/i,
-  /spider/i,
-  /crawler/i,
-  /python-requests/i,
-  /go-http-client/i,
-  /java\//i,
-  /libwww-perl/i,
   /masscan/i,
   /nikto/i,
-  /zap/i,
-  /burp/i,
+  /sqlmap/i,
+  /nmap/i,
+  /zgrab/i,
+  /dirbuster/i,
+  /havij/i,
+  /acunetix/i,
+  /nuclei/i,
+  /hydra/i,
 ];
 
 const BLOCKED_PATTERNS = [
@@ -87,6 +86,14 @@ function isRateLimited(key: string): boolean {
 function checkUserAgent(userAgent: string | null): boolean {
   if (!userAgent) return true; // Block if no user agent
   
+  // First check allowlist - always permit search engine bots
+  for (const pattern of ALWAYS_ALLOW_UA) {
+    if (pattern.test(userAgent)) {
+      return false;
+    }
+  }
+  
+  // Then check blocklist - only block known malicious scanners
   for (const pattern of BLOCKED_USER_AGENTS) {
     if (pattern.test(userAgent)) {
       return true;
@@ -164,17 +171,7 @@ export default function middleware(request: NextRequest) {
     }
   }
 
-  // 4. Protect /api/* routes with API key
-  if (pathname.startsWith('/api/')) {
-    const apiKey = request.headers.get('x-api-key');
-    
-    if (!apiKey || apiKey !== API_SECRET_KEY) {
-      logSuspicious(request, 'API_AUTH_FAIL');
-      return new NextResponse('Unauthorized', { status: 401 });
-    }
-  }
-
-  // 5. Pass to i18n middleware
+  // 4. Pass to i18n middleware
   return i18nMiddleware(request);
 }
 

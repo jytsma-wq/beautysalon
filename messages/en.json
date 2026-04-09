@@ -9,6 +9,7 @@
     "about": "About",
     "pricelist": "Price List",
     "offers": "Offers",
+    "beforeAfter": "Before & After",
     "contact": "Contact",
     "bookAppointment": "Book Appointment",
     "faq": "FAQ",
@@ -197,6 +198,13 @@
     "ctaSubtitle": "Book a consultation with one of our expert practitioners to discuss your aesthetic goals",
     "ctaButton": "Book a Consultation"
   },
+  "beforeAfterPage": {
+    "title": "Before & After",
+    "subtitle": "See the real results from our treatments. Transform your look with our expert aesthetic treatments.",
+    "ctaTitle": "Ready to Transform Your Look?",
+    "ctaText": "Book a consultation with one of our expert practitioners to discuss your treatment goals",
+    "bookNow": "Book Now"
+  },
   "conditionsPage": {
     "title": "Conditions",
     "listingTitle": "Conditions We Treat",
@@ -352,7 +360,14 @@
     "breadcrumb": "Blog",
     "stayUpdated": "Stay Updated",
     "newsletterDesc": "Subscribe to our newsletter for the latest articles, tips, and exclusive offers",
-    "subscribeButton": "Subscribe to Newsletter"
+    "subscribeButton": "Subscribe to Newsletter",
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share this article",
+    "aboutAuthor": "About the Author",
+    "readyToTransform": "Ready to Transform?",
+    "bookConsultationDesc": "Book a consultation with one of our expert practitioners to discuss your aesthetic goals.",
+    "relatedPosts": "Related Posts",
+    "readMore": "Read More"
   },
   "treatmentPage": {
     "bookNow": "Book This Treatment",
@@ -410,6 +425,10 @@
     "readMore": "Read More",
     "bookNow": "Book Now",
     "bookConsultation": "Book a Consultation",
+    "bookOnline": "Book Online",
+    "scheduleAppointment": "Schedule your appointment",
+    "whatsapp": "WhatsApp",
+    "bookViaWhatsApp": "Book via WhatsApp",
     "treatments": "Treatments",
     "conditions": "Conditions",
     "notFound": "Not Found",
@@ -912,5 +931,64 @@
       "causes": ["Genetics", "Barrier dysfunction", "Allergens", "Environmental factors"],
       "treatments": ["Gentle facials", "Calming treatments", "Customized skincare", "LED therapy"]
     }
+  },
+  "bookingPage": {
+    "title": "Book an Appointment",
+    "subtitle": "Schedule your consultation or treatment with our expert practitioners",
+    "selectDateTime": "Select Date & Time",
+    "bookingNotConfigured": "Online Booking Coming Soon",
+    "bookingNotConfiguredDesc": "We're setting up our online booking system. In the meantime, please call or email us to schedule your appointment.",
+    "callToBook": "Call to Book",
+    "emailToBook": "Email to Book",
+    "consultationTypes": "Consultation Types",
+    "consultations": {
+      "facial": {
+        "title": "Facial Consultation",
+        "description": "Discuss anti-wrinkle treatments and dermal fillers"
+      },
+      "skin": {
+        "title": "Skin Consultation",
+        "description": "Comprehensive skin analysis and treatment planning"
+      },
+      "body": {
+        "title": "Body Consultation",
+        "description": "Body contouring and skin tightening options"
+      },
+      "virtual": {
+        "title": "Virtual Consultation",
+        "description": "Online consultation for remote clients"
+      }
+    },
+    "whatToExpect": {
+      "title": "What to Expect",
+      "step1": "Complete our medical questionnaire",
+      "step2": "Discuss your goals and concerns",
+      "step3": "Receive personalized treatment recommendations",
+      "step4": "Get a clear quote with no hidden costs"
+    },
+    "needHelp": "Need Help?",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "faq": {
+      "title": "Booking FAQs",
+      "q1": "How long is a consultation?",
+      "a1": "Initial consultations typically last 30-45 minutes, allowing time for a thorough assessment and discussion of your goals.",
+      "q2": "Is there a deposit required?",
+      "a2": "A 20% deposit is required to secure your appointment, which is deducted from your treatment cost.",
+      "q3": "What is your cancellation policy?",
+      "a3": "We require 48 hours notice for cancellations. Late cancellations may forfeit the deposit.",
+      "q4": "Can I reschedule my appointment?",
+      "a4": "Yes, you can reschedule up to 24 hours before your appointment at no charge."
+    }
+  },
+  "whatsapp": {
+    "whatsapp": "WhatsApp",
+    "greeting": "Hi there! \ud83d\udc4b Welcome to Silk Beauty Salon. How can we help you today?",
+    "bookAppointment": "I'd like to book an appointment",
+    "serviceQuestion": "I have a question about services",
+    "pricingInfo": "I need more information about pricing",
+    "otherInquiry": "Other inquiry",
+    "typicalReply": "Typically replies within minutes"
   }
 }

@@ -47,7 +47,11 @@ export const metadata: Metadata = {
     description: 'Premier medical aesthetic clinic in Batumi, Georgia. Expert Botox, dermal fillers, laser treatments & advanced skin care.',
     images: [
       {
+<<<<<<< HEAD
         url: 'https://www.silkbeauty.ge/og-image.jpg',
+=======
+        url: 'https://www.silkbeauty.ge/og-image.svg',
+>>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
         width: 1200,
         height: 630,
         alt: 'Silk Beauty Salon - Medical Aesthetics in Batumi',
@@ -58,7 +62,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Silk Beauty Salon | Premier Medical Aesthetics in Batumi',
     description: 'Premier medical aesthetic clinic in Batumi, Georgia. Expert Botox, dermal fillers, laser treatments.',
+<<<<<<< HEAD
     images: ['https://www.silkbeauty.ge/og-image.jpg'],
+=======
+    images: ['https://www.silkbeauty.ge/og-image.svg'],
+>>>>>>> 1f321d2e0efec675494d78f6897ff9d091ab7e23
     creator: '@silkbeauty_batumi',
   },
   robots: {
