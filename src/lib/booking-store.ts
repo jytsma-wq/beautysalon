@@ -24,7 +24,8 @@ type SerializedBooking = Omit<Booking, 'date' | 'createdAt' | 'updatedAt'> & {
 
 type BookingStoreMode = 'database' | 'file';
 
-const DB_BACKOFF_MS = 60_000;
+const DB_BACKOFF_MS = 15 * 60_000;
+const DB_OPERATION_TIMEOUT_MS = 2_500;
 const STORAGE_CANDIDATES = [
   process.env.BOOKING_STORAGE_FILE,
   path.join(/* turbopackIgnore: true */ process.cwd(), 'data', 'bookings.json'),
@@ -74,6 +75,31 @@ export function isUniqueBookingSlotError(error: unknown): boolean {
 function markDatabaseUnavailable(error: unknown): void {
   databaseUnavailableUntil = Date.now() + DB_BACKOFF_MS;
   console.error('Booking database is unavailable; using local booking store fallback.', error);
+}
+
+function createDatabaseTimeoutError(): Error & { code: string } {
+  const error = new Error('Database operation timed out') as Error & { code: string };
+  error.code = 'P1002';
+  return error;
+}
+
+function runDatabaseOperation<T>(operation: () => Promise<T>): Promise<T> {
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      reject(createDatabaseTimeoutError());
+    }, DB_OPERATION_TIMEOUT_MS);
+
+    operation().then(
+      (value) => {
+        clearTimeout(timeout);
+        resolve(value);
+      },
+      (error: unknown) => {
+        clearTimeout(timeout);
+        reject(error);
+      }
+    );
+  });
 }
 
 async function getStoragePath(): Promise<string> {
@@ -143,7 +169,7 @@ async function withDatabaseFallback<T>(
   }
 
   try {
-    return { mode: 'database', value: await databaseOperation() };
+    return { mode: 'database', value: await runDatabaseOperation(databaseOperation) };
   } catch (error) {
     if (!isDatabaseAvailabilityError(error)) {
       throw error;
@@ -258,8 +284,11 @@ export async function getBookingStoreHealth() {
   const startedAt = Date.now();
 
   try {
-    await db.$queryRaw`SELECT 1 as health`;
-    const count = await db.booking.count();
+    const count = await runDatabaseOperation(async () => {
+      await db.$queryRaw`SELECT 1 as health`;
+      return db.booking.count();
+    });
+
     return {
       status: 'healthy' as const,
       mode: 'database' as const,
