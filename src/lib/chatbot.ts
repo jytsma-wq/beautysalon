@@ -67,6 +67,14 @@ export function createChatbotReply(message: string): ChatbotReply {
     };
   }
 
+  if (hasAny(text, ['app', 'android', 'apk', 'download'])) {
+    return {
+      reply: 'The Android app is available from our website download page. Download the APK on your Android phone and follow the installation instructions on that page.',
+      quickReplies: ['Book an appointment', 'Contact the salon', 'Opening hours'],
+      links: [{ label: 'Download Android app', href: '/download' }],
+    };
+  }
+
   if (hasAny(text, ['where', 'location', 'address', 'directions', 'map', 'batumi'])) {
     return {
       reply: `Silk Beauty Salon is at ${siteConfig.contact.address}, ${siteConfig.contact.city}, ${siteConfig.contact.country}. You can call ${siteConfig.contact.phone} or email ${siteConfig.contact.email}.`,
@@ -83,14 +91,6 @@ export function createChatbotReply(message: string): ChatbotReply {
         { label: 'Explore treatments', href: '/treatments' },
         { label: 'Skin conditions', href: '/conditions' },
       ],
-    };
-  }
-
-  if (hasAny(text, ['app', 'android', 'apk', 'download'])) {
-    return {
-      reply: 'The Android app is available from our website download page. Download the APK on your Android phone and follow the installation instructions on that page.',
-      quickReplies: ['Book an appointment', 'Contact the salon', 'Opening hours'],
-      links: [{ label: 'Download Android app', href: '/download' }],
     };
   }
 

@@ -16,6 +16,13 @@ describe('createChatbotReply', () => {
     expect(reply.reply).toContain('10:00 - 22:00');
   });
 
+  it('routes Android download questions to the app download page', () => {
+    const reply = createChatbotReply('Where can I download the Android app?');
+
+    expect(reply.reply).toContain('Android app');
+    expect(reply.links).toContainEqual({ label: 'Download Android app', href: '/download' });
+  });
+
   it('returns contact details for human handoff requests', () => {
     const reply = createChatbotReply('I need to speak with a person');
 
