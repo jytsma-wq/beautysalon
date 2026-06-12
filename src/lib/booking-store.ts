@@ -70,6 +70,10 @@ function isDatabaseAvailabilityError(error: unknown): boolean {
   return /authentication failed|can't reach database|connection.*database|database.*timeout/i.test(message);
 }
 
+function isBookingDatabaseEnabled(): boolean {
+  return process.env.BOOKING_DATABASE_ENABLED === '1';
+}
+
 export function isUniqueBookingSlotError(error: unknown): boolean {
   return typeof error === 'object' && error !== null && 'code' in error && error.code === 'P2002';
 }
@@ -183,6 +187,10 @@ async function withDatabaseFallback<T>(
   databaseOperation: () => Promise<T>,
   fileOperation: () => Promise<T>
 ): Promise<{ mode: BookingStoreMode; value: T }> {
+  if (!isBookingDatabaseEnabled()) {
+    return { mode: 'file', value: await fileOperation() };
+  }
+
   if (Date.now() < databaseUnavailableUntil) {
     return { mode: 'file', value: await fileOperation() };
   }
@@ -301,6 +309,17 @@ export async function createBooking(data: BookingCreateData): Promise<Booking> {
 
 export async function getBookingStoreHealth() {
   const startedAt = Date.now();
+
+  if (!isBookingDatabaseEnabled()) {
+    const bookings = await withFileLock(readFileBookings);
+    return {
+      status: 'degraded' as const,
+      mode: 'file' as const,
+      responseTime: Date.now() - startedAt,
+      bookings: bookings.length,
+      message: 'Booking database is disabled; internal booking fallback storage is active.',
+    };
+  }
 
   try {
     const count = await runDatabaseOperation(async () => {

@@ -72,6 +72,7 @@ function request(
 
 describe('Bookings API', () => {
   beforeEach(() => {
+    process.env.BOOKING_DATABASE_ENABLED = '1';
     vi.useFakeTimers();
     vi.setSystemTime(new Date('2026-06-12T12:00:00.000Z'));
     vi.clearAllMocks();
