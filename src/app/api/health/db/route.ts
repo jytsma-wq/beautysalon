@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/db';
 import { getBookingStoreHealth } from '@/lib/booking-store';
+
+type BookingStoreHealth = Awaited<ReturnType<typeof getBookingStoreHealth>>;
 
 interface HealthCheckResult {
   status: 'healthy' | 'degraded' | 'unhealthy';
@@ -10,273 +11,102 @@ interface HealthCheckResult {
       status: 'healthy' | 'unhealthy';
       responseTime: number;
       message?: string;
-      details?: {
-        connectionPoolSize: number;
-        activeConnections: number;
-        idleConnections: number;
-      };
     };
-    tables?: {
-      status: 'healthy' | 'degraded' | 'unhealthy';
-      counts: Record<string, number>;
-      message?: string;
-    };
-    performance?: {
-      status: 'healthy' | 'degraded' | 'unhealthy';
-      avgQueryTime: number;
-      slowQueries: number;
-      message?: string;
-    };
-    bookingStore?: Awaited<ReturnType<typeof getBookingStoreHealth>>;
+    bookingStore: BookingStoreHealth;
   };
 }
 
-// Health check configuration
-const HEALTH_CHECK_TIMEOUT = 5000; // 5 seconds
-const SLOW_QUERY_THRESHOLD = 1000; // 1 second
-
-/**
- * Check database connectivity
- */
-async function checkDatabase(): Promise<HealthCheckResult['checks']['database']> {
-  const startTime = Date.now();
-
-  try {
-    // Test connection with timeout
-    const timeoutPromise = new Promise((_, reject) => {
-      setTimeout(() => reject(new Error('Database health check timeout')), HEALTH_CHECK_TIMEOUT);
-    });
-
-    const healthCheckPromise = db.$queryRaw`SELECT 1 as health`;
-
-    await Promise.race([healthCheckPromise, timeoutPromise]);
-    const responseTime = Date.now() - startTime;
-
+function databaseHealthFromBookingStore(
+  bookingStoreHealth: BookingStoreHealth
+): HealthCheckResult['checks']['database'] {
+  if (bookingStoreHealth.mode === 'database') {
     return {
       status: 'healthy',
-      responseTime,
-      details: {
-        connectionPoolSize: 1,
-        activeConnections: 1,
-        idleConnections: 0,
-      },
-    };
-  } catch (error) {
-    const responseTime = Date.now() - startTime;
-    return {
-      status: 'unhealthy',
-      responseTime,
-      message: error instanceof Error ? error.message : 'Unknown database error',
+      responseTime: bookingStoreHealth.responseTime,
     };
   }
+
+  return {
+    status: 'unhealthy',
+    responseTime: bookingStoreHealth.responseTime,
+    message: 'Database is unavailable; booking fallback storage is active.',
+  };
 }
 
-/**
- * Check table health and counts
- */
-async function checkTables(): Promise<HealthCheckResult['checks']['tables']> {
-  try {
-    const [contactSubmissions, bookingRequests, newsletterSubscribers, blogPosts, bookings] =
-      await Promise.all([
-        db.contactSubmission.count(),
-        db.bookingRequest.count(),
-        db.newsletterSubscriber.count(),
-        db.blogPost.count(),
-        db.booking.count(),
-      ]);
-
-    const counts = {
-      contactSubmissions,
-      bookingRequests,
-      newsletterSubscribers,
-      blogPosts,
-      bookings,
-    };
-
-    return {
-      status: 'healthy',
-      counts,
-    };
-  } catch (error) {
-    return {
-      status: 'unhealthy',
-      counts: {},
-      message: error instanceof Error ? error.message : 'Failed to check table health',
-    };
-  }
-}
-
-/**
- * Check database performance metrics
- */
-async function checkPerformance(): Promise<HealthCheckResult['checks']['performance']> {
-  const queryTimes: number[] = [];
-
-  try {
-    // Run a simple query multiple times to measure average response time
-    for (let i = 0; i < 3; i++) {
-      const start = Date.now();
-      await db.$queryRaw`SELECT 1 as health`;
-      queryTimes.push(Date.now() - start);
-    }
-
-    const avgQueryTime = queryTimes.reduce((a, b) => a + b, 0) / queryTimes.length;
-    const slowQueries = queryTimes.filter((t) => t > SLOW_QUERY_THRESHOLD).length;
-
-    let status: 'healthy' | 'degraded' | 'unhealthy' = 'healthy';
-    let message: string | undefined;
-
-    if (avgQueryTime > 500) {
-      status = 'degraded';
-      message = 'Average query time is elevated';
-    }
-    if (avgQueryTime > 2000) {
-      status = 'unhealthy';
-      message = 'Database performance is critically slow';
-    }
-
-    return {
-      status,
-      avgQueryTime: Math.round(avgQueryTime),
-      slowQueries,
-      message,
-    };
-  } catch (error) {
-    return {
-      status: 'unhealthy',
-      avgQueryTime: 0,
-      slowQueries: 0,
-      message: error instanceof Error ? error.message : 'Failed to check performance',
-    };
-  }
-}
-
-/**
- * Calculate overall health status
- */
-function calculateOverallStatus(checks: HealthCheckResult['checks']): HealthCheckResult['status'] {
-  if (
-    checks.database.status === 'unhealthy'
-    && checks.bookingStore?.status === 'degraded'
-  ) {
-    return 'degraded';
-  }
-
-  const statuses = [
-    checks.database.status,
-    checks.tables?.status,
-    checks.performance?.status,
-    checks.bookingStore?.status,
-  ].filter(Boolean);
-
-  if (statuses.some((s) => s === 'unhealthy')) {
-    return 'unhealthy';
-  }
-  if (statuses.some((s) => s === 'degraded')) {
-    return 'degraded';
-  }
-  return 'healthy';
+function overallStatusFromBookingStore(
+  bookingStoreHealth: BookingStoreHealth
+): HealthCheckResult['status'] {
+  return bookingStoreHealth.mode === 'database' ? 'healthy' : 'degraded';
 }
 
 /**
  * GET /api/health/db
- * Database health check endpoint
+ * Reports the effective booking persistence health without issuing repeated
+ * database probes. On Hostinger, bad MySQL credentials can make many concurrent
+ * Prisma checks expensive; one guarded booking-store probe is enough here.
  */
 export async function GET(): Promise<Response> {
-  const startTime = Date.now();
+  const startedAt = Date.now();
 
   try {
-    const [databaseHealth, tableHealth, performanceHealth] = await Promise.all([
-      checkDatabase(),
-      checkTables(),
-      checkPerformance(),
-    ]);
     const bookingStoreHealth = await getBookingStoreHealth();
-
     const healthCheck: HealthCheckResult = {
-      status: 'healthy',
+      status: overallStatusFromBookingStore(bookingStoreHealth),
       timestamp: new Date().toISOString(),
       checks: {
-        database: databaseHealth,
-        tables: tableHealth,
-        performance: performanceHealth,
+        database: databaseHealthFromBookingStore(bookingStoreHealth),
         bookingStore: bookingStoreHealth,
       },
     };
 
-    healthCheck.status = calculateOverallStatus(healthCheck.checks);
-
-    // Determine HTTP status code
-    let statusCode = 200;
-    if (healthCheck.status === 'degraded') {
-      statusCode = 200; // Still return 200 but indicate degraded state
-    } else if (healthCheck.status === 'unhealthy') {
-      statusCode = 503; // Service Unavailable
-    }
-
-    const totalResponseTime = Date.now() - startTime;
-
     return NextResponse.json(healthCheck, {
-      status: statusCode,
+      status: healthCheck.status === 'unhealthy' ? 503 : 200,
       headers: {
-        'X-Health-Check-Response-Time': `${totalResponseTime}ms`,
+        'X-Health-Check-Response-Time': `${Date.now() - startedAt}ms`,
         'Cache-Control': 'no-cache, no-store, must-revalidate',
       },
     });
   } catch (error) {
-    const errorCheck: HealthCheckResult = {
-      status: 'unhealthy',
-      timestamp: new Date().toISOString(),
-      checks: {
-        database: {
-          status: 'unhealthy',
-          responseTime: Date.now() - startTime,
-          message: error instanceof Error ? error.message : 'Health check failed',
+    return NextResponse.json(
+      {
+        status: 'unhealthy',
+        timestamp: new Date().toISOString(),
+        checks: {
+          database: {
+            status: 'unhealthy',
+            responseTime: Date.now() - startedAt,
+            message: error instanceof Error ? error.message : 'Health check failed',
+          },
         },
       },
-    };
-
-    return NextResponse.json(errorCheck, {
-      status: 503,
-      headers: {
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
-      },
-    });
+      {
+        status: 503,
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+        },
+      }
+    );
   }
 }
 
 /**
  * HEAD /api/health/db
- * Lightweight health check for load balancers
+ * Lightweight liveness check. A degraded booking fallback still means the app
+ * is serving bookings, so load balancers should not mark the app down.
  */
 export async function HEAD(): Promise<Response> {
   try {
-    await db.$queryRaw`SELECT 1`;
+    const bookingStoreHealth = await getBookingStoreHealth();
 
     return new Response(null, {
       status: 200,
       headers: {
-        'X-Health-Status': 'healthy',
+        'X-Health-Status': bookingStoreHealth.status,
+        'X-Booking-Store': bookingStoreHealth.mode,
         'Cache-Control': 'no-cache, no-store, must-revalidate',
       },
     });
   } catch {
-    try {
-      const bookingStoreHealth = await getBookingStoreHealth();
-      if (bookingStoreHealth.status === 'degraded') {
-        return new Response(null, {
-          status: 200,
-          headers: {
-            'X-Health-Status': 'degraded',
-            'X-Booking-Store': bookingStoreHealth.mode,
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-          },
-        });
-      }
-    } catch {
-      // Fall through to unhealthy below.
-    }
-
     return new Response(null, {
       status: 503,
       headers: {
