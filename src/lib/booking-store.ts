@@ -25,9 +25,16 @@ type SerializedBooking = Omit<Booking, 'date' | 'createdAt' | 'updatedAt'> & {
 type BookingStoreMode = 'database' | 'file';
 
 const DB_BACKOFF_MS = 60_000;
+const HOSTINGER_BOOKING_STORAGE_FILE = path.join(
+  process.env.HOME || '/home/u708796249',
+  'domains',
+  'silkbeautysalon.online',
+  'booking-data',
+  'bookings.json'
+);
 const STORAGE_CANDIDATES = [
   process.env.BOOKING_STORAGE_FILE,
-  path.join(/* turbopackIgnore: true */ process.cwd(), 'data', 'bookings.json'),
+  HOSTINGER_BOOKING_STORAGE_FILE,
   path.join(tmpdir(), 'silk-beauty-salon-bookings.json'),
 ].filter(Boolean) as string[];
 
