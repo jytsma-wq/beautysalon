@@ -35,6 +35,8 @@ const STORAGE_CANDIDATES = [
 let databaseUnavailableUntil = 0;
 let activeStoragePath: string | null = null;
 let fileQueue: Promise<void> = Promise.resolve();
+let useMemoryStorage = false;
+let memoryBookings: Booking[] = [];
 
 function reviveBooking(booking: SerializedBooking): Booking {
   return {
@@ -133,9 +135,12 @@ async function withFileLock<T>(operation: () => Promise<T>): Promise<T> {
 }
 
 async function readFileBookings(): Promise<Booking[]> {
-  const storagePath = await getStoragePath();
+  if (useMemoryStorage) {
+    return [...memoryBookings];
+  }
 
   try {
+    const storagePath = await getStoragePath();
     const raw = await readFile(storagePath, 'utf8');
     const parsed = JSON.parse(raw) as SerializedBooking[];
     if (!Array.isArray(parsed)) {
@@ -146,14 +151,28 @@ async function readFileBookings(): Promise<Booking[]> {
     if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'ENOENT') {
       return [];
     }
-    throw error;
+
+    console.error('Booking file store is unavailable; using in-memory booking fallback.', error);
+    useMemoryStorage = true;
+    return [...memoryBookings];
   }
 }
 
 async function writeFileBookings(bookings: Booking[]): Promise<void> {
-  const storagePath = await getStoragePath();
-  const serialized = bookings.map(serializeBooking);
-  await writeFile(storagePath, `${JSON.stringify(serialized, null, 2)}\n`, 'utf8');
+  if (useMemoryStorage) {
+    memoryBookings = [...bookings];
+    return;
+  }
+
+  try {
+    const storagePath = await getStoragePath();
+    const serialized = bookings.map(serializeBooking);
+    await writeFile(storagePath, `${JSON.stringify(serialized, null, 2)}\n`, 'utf8');
+  } catch (error) {
+    console.error('Booking file store is unavailable; using in-memory booking fallback.', error);
+    memoryBookings = [...bookings];
+    useMemoryStorage = true;
+  }
 }
 
 function isActiveBookingOnDate(booking: Booking, start: Date, end: Date): boolean {
