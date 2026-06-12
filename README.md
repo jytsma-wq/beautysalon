@@ -21,8 +21,8 @@ A modern, multilingual Next.js website for Silk Beauty Salon in Batumi, Georgia.
 
 1. **Clone the repository**
    ```bash
-   git clone <repo-url>
-   cd silk-beauty-salon
+   git clone https://github.com/jytsma-wq/beautysalon.git
+   cd beautysalon
    ```
 
 2. **Install dependencies**
@@ -162,12 +162,13 @@ NODE_ENV=production node .next/standalone/server.js
 
 Use Hostinger managed Node.js hosting for production:
 
-1. Connect the GitHub repository in Hostinger.
+1. Connect `https://github.com/jytsma-wq/beautysalon` in Hostinger.
 2. Set the app root to the repository root.
 3. Use `npm install` as the install command.
 4. Use `npm run build` as the build command.
 5. Use `npm start` as the start command.
 6. Point `silkbeautysalon.online` and `www.silkbeautysalon.online` at the Hostinger Node.js app.
+7. If GitHub billing/account state blocks automation, deploy manually from Hostinger hPanel using the GitHub import or the release ZIP fallback documented in `docs/HOSTINGER_DEPLOYMENT.md`.
 
 ### Performance Optimizations
 
@@ -189,7 +190,9 @@ Ensure all [REQUIRED] variables in `.env.example` are set:
 - `SMTP_PASSWORD` - Hostinger mailbox password
 - `SMTP_FROM` - Sender mailbox, e.g. `info@silkbeautysalon.online`
 - `API_SECRET_KEY` - Secure random string
-- `NEXT_PUBLIC_ANDROID_APK_URL` - Optional Android APK URL override; defaults to `/apk/silk-beauty-salon.apk`
+- `NEXT_PUBLIC_ANDROID_APK_URL` - Optional Android APK URL override; defaults to the GitHub Release APK at `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk`
+
+Android APK and Hostinger ZIP artifacts are published as GitHub Release assets or to external storage. They are intentionally not committed to this repository.
 
 ## Database Backup & Recovery
 

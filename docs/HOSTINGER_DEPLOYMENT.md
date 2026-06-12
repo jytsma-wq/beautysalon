@@ -5,13 +5,14 @@ This project is ready for Hostinger managed Node.js hosting. The public domain i
 ## Current Production Target
 
 - Domain: `silkbeautysalon.online`
-- Repository: `https://github.com/jytsma-wq/silk-beauty-salon`
+- Repository: `https://github.com/jytsma-wq/beautysalon`
 - Branch: `main`
 - Runtime: Node.js 20 or newer
 - Build command: `npm ci && npm run build`
 - Start command: `npm run start`
 - App entrypoint: `.next/standalone/server.js`
-- APK path after deployment: `/apk/silk-beauty-salon.apk`
+- Android APK download: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk`
+- ZIP fallback package: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon-hostinger.zip`
 
 ## Required Hostinger Environment Variables
 
@@ -20,6 +21,7 @@ Set these in the Hostinger Node.js app environment before starting the app:
 ```env
 NODE_ENV=production
 NEXT_PUBLIC_SITE_URL=https://silkbeautysalon.online
+NEXT_PUBLIC_ANDROID_APK_URL=https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
 DATABASE_URL=<production-postgres-url>
 DIRECT_DATABASE_URL=<production-postgres-direct-url>
 CONTACT_EMAIL=info@silkbeautysalon.online
@@ -37,7 +39,7 @@ SMTP_FROM=Silk Beauty Salon <info@silkbeautysalon.online>
 2. Go to Websites.
 3. Add a Node.js Web App, or open the existing Node.js app if one already exists.
 4. Choose Import Git Repository.
-5. Select `jytsma-wq/silk-beauty-salon`.
+5. Select `jytsma-wq/beautysalon`.
 6. Select branch `main`.
 7. Use Node.js 20 or newer.
 8. Set the build command to `npm ci && npm run build`.
@@ -48,12 +50,13 @@ SMTP_FROM=Silk Beauty Salon <info@silkbeautysalon.online>
 
 ## Deploy From ZIP Fallback
 
-If Hostinger cannot access GitHub while GitHub Actions are locked, upload the prepared ZIP package instead.
+If Hostinger cannot access GitHub while GitHub Actions are locked, upload the prepared ZIP package from GitHub Releases instead. The ZIP is not committed to the repository.
 
 1. In hPanel, choose the Node.js Web App file-upload or ZIP-upload deployment path.
-2. Upload the package named like `silk-beauty-salon-hostinger-<commit>.zip`.
-3. Use the same Node.js version, build command, start command, and environment variables listed above.
-4. Deploy and connect the domain to the Node.js app.
+2. Download `silk-beauty-salon-hostinger.zip` from `https://github.com/jytsma-wq/beautysalon/releases/tag/mobile-artifacts-2026-06-12`.
+3. Upload that ZIP package to Hostinger.
+4. Use the same Node.js version, build command, start command, and environment variables listed above.
+5. Deploy and connect the domain to the Node.js app.
 
 ## Database Migration
 
@@ -72,16 +75,16 @@ Run these checks after Hostinger reports the app is deployed and the domain is c
 ```bash
 curl -I https://silkbeautysalon.online/api/health
 curl -I https://silkbeautysalon.online/en/download
-curl -I https://silkbeautysalon.online/apk/silk-beauty-salon.apk
+curl -I https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
 ```
 
 Expected results:
 
 - `/api/health` returns HTTP 200 JSON.
 - `/en/download` returns HTTP 200 HTML for the Silk download page.
-- `/apk/silk-beauty-salon.apk` returns HTTP 200 with `Content-Type: application/vnd.android.package-archive`.
+- The GitHub Release APK returns HTTP 200 with `Content-Type: application/vnd.android.package-archive` or `application/octet-stream`.
 - The page title must not be `Parked Domain name on Hostinger DNS system`.
 
 ## Current External Blocker
 
-If GitHub Actions show `The job was not started because your account is locked due to a billing issue`, this is a GitHub account state and not an application-code failure. Hostinger can still deploy by importing the repository directly or by using the ZIP fallback.
+Final production cutover still requires manual action in Hostinger hPanel: connect `silkbeautysalon.online` to this Node.js app and deploy either from `jytsma-wq/beautysalon` branch `main` or from the release ZIP. If GitHub Actions show `The job was not started because your account is locked due to a billing issue`, this is a GitHub account state and not an application-code failure; unlock billing or use Hostinger's GitHub import/ZIP fallback from hPanel.

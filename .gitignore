@@ -20,6 +20,11 @@ node_modules
 # production
 /build
 
+# Android release artifacts live in GitHub Releases or external storage, not git
+*.apk
+*.aab
+/public/apk/
+
 # misc
 .DS_Store
 *.pem
