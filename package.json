@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "set NODE_OPTIONS=--max-old-space-size=4096 && next dev -p 3000 --turbopack --hostname 0.0.0.0",
     "dev:alt": "next dev -p 3001",
-    "build": "node -e \"const {spawnSync}=require('child_process'); const fs=require('fs'); const databaseUrl=process.env.DATABASE_URL||'mysql://build:build@localhost:3306/build'; const env={...process.env, BUILD_TIMESTAMP:new Date().toISOString(), SKIP_ENV_VALIDATION:process.env.SKIP_ENV_VALIDATION||'1', DATABASE_URL:databaseUrl, DIRECT_DATABASE_URL:process.env.DIRECT_DATABASE_URL||databaseUrl}; const result=spawnSync(process.execPath,[require.resolve('next/dist/bin/next'),'build'],{stdio:'inherit',env}); if(result.status!==0) process.exit(result.status||1); [['.next/static','.next/standalone/.next/static'],['public','.next/standalone/public']].forEach(([src,dest])=>{try{fs.cpSync(src,dest,{recursive:true})}catch{}});\"",
+    "build": "node scripts/hostinger-build.cjs",
     "start": "node .next/standalone/server.js",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
