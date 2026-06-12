@@ -10,7 +10,8 @@ import { serverEnvSchema, publicEnvSchema, fullEnvSchema } from '@/lib/env';
 describe('Environment Variable Validation', () => {
   const validServerEnv = {
     NODE_ENV: 'production' as const,
-    DATABASE_URL: 'postgresql://user:pass@localhost:5432/db',
+    DATABASE_URL: 'mysql://user:pass@localhost:3306/db',
+    DIRECT_DATABASE_URL: 'mysql://user:pass@localhost:3306/db',
     CONTACT_EMAIL: 'info@silkbeautysalon.online',
     SMTP_HOST: 'smtp.hostinger.com',
     SMTP_PORT: '465',
@@ -66,6 +67,17 @@ describe('Environment Variable Validation', () => {
       if (!result.success) {
         const errorPaths = result.error.issues.map((issue: z.ZodIssue) => issue.path.join('.'));
         expect(errorPaths).toContain('DATABASE_URL');
+      }
+    });
+
+    it('should throw when DATABASE_URL is not a MySQL URL', () => {
+      const invalidEnv = { ...validServerEnv, DATABASE_URL: 'postgresql://user:pass@localhost:5432/db' };
+      const result = serverEnvSchema.safeParse(invalidEnv);
+
+      expect(result.success).toBe(false);
+      if (!result.success) {
+        const errorMessages = result.error.issues.map((issue: z.ZodIssue) => issue.message).join(' ');
+        expect(errorMessages).toContain('DATABASE_URL must be a MySQL connection string');
       }
     });
 
@@ -214,6 +226,7 @@ describe('Environment Variable Validation', () => {
       const serverEnvCheck: {
         NODE_ENV: 'development' | 'test' | 'production';
         DATABASE_URL: string;
+        DIRECT_DATABASE_URL: string;
         CONTACT_EMAIL: string;
         SMTP_HOST: string;
         SMTP_PORT: number;

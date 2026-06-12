@@ -9,12 +9,12 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
+  provider  = "mysql"
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_DATABASE_URL")
 }
 
-// PostgreSQL Enums for status fields
+// Status enums for persisted workflow state.
 
 enum ContactStatus {
   NEW
@@ -38,11 +38,11 @@ enum SubscriberStatus {
 }
 
 model ContactSubmission {
-  id        String         @id @default(uuid()) @db.Uuid
+  id        String         @id @default(uuid()) @db.Char(36)
   name      String
   email     String
   phone     String?
-  message   String
+  message   String         @db.Text
   locale    String         @default("en")
   createdAt DateTime       @default(now())
   status    ContactStatus  @default(NEW)
@@ -52,14 +52,14 @@ model ContactSubmission {
 }
 
 model BookingRequest {
-  id            String        @id @default(uuid()) @db.Uuid
+  id            String        @id @default(uuid()) @db.Char(36)
   name          String
   email         String
   phone         String
   service       String
   preferredDate DateTime?
   preferredTime String?
-  message       String?
+  message       String?       @db.Text
   locale        String        @default("en")
   createdAt     DateTime      @default(now())
   status        BookingStatus @default(PENDING)
@@ -70,7 +70,7 @@ model BookingRequest {
 }
 
 model NewsletterSubscriber {
-  id        String           @id @default(uuid()) @db.Uuid
+  id        String           @id @default(uuid()) @db.Char(36)
   email     String           @unique
   locale    String           @default("en")
   createdAt DateTime         @default(now())
@@ -80,12 +80,12 @@ model NewsletterSubscriber {
 }
 
 model BlogPost {
-  id         String   @id @default(uuid()) @db.Uuid
+  id         String   @id @default(uuid()) @db.Char(36)
   title      String
   slug       String
-  excerpt    String   @default("")
-  content    String   @default("")
-  image      String   @default("")
+  excerpt    String   @default("") @db.VarChar(500)
+  content    String   @db.LongText
+  image      String   @default("") @db.VarChar(1024)
   category   String   @default("")
   author     String   @default("")
   readTime   String   @default("5 min")
@@ -101,7 +101,7 @@ model BlogPost {
 
 // Treatment Category - base data (images, slugs are non-translatable)
 model TreatmentCategory {
-  id          String   @id @default(uuid()) @db.Uuid
+  id          String   @id @default(uuid()) @db.Char(36)
   slug        String   @unique
   image       String
   sortOrder   Int      @default(0)
@@ -119,11 +119,11 @@ model TreatmentCategory {
 
 // Treatment Category Translations (i18n content)
 model TreatmentCategoryTranslation {
-  id          String            @id @default(uuid()) @db.Uuid
-  categoryId  String            @db.Uuid
+  id          String            @id @default(uuid()) @db.Char(36)
+  categoryId  String            @db.Char(36)
   locale      String            // en, ka, ru, ar, he, tr
   name        String
-  description String
+  description String            @db.Text
 
   // Relations
   category    TreatmentCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
@@ -134,7 +134,7 @@ model TreatmentCategoryTranslation {
 
 // Individual Treatment - base data
 model Treatment {
-  id          String   @id @default(uuid()) @db.Uuid
+  id          String   @id @default(uuid()) @db.Char(36)
   slug        String   @unique
   image       String
   price       String?  // e.g., "From ₾200"
@@ -145,7 +145,7 @@ model Treatment {
   updatedAt   DateTime @updatedAt
 
   // Relations
-  categoryId  String   @db.Uuid
+  categoryId  String   @db.Char(36)
   category    TreatmentCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   translations TreatmentTranslation[]
   benefits     TreatmentBenefit[]
@@ -158,14 +158,14 @@ model Treatment {
 
 // Treatment Translations (i18n content)
 model TreatmentTranslation {
-  id              String    @id @default(uuid()) @db.Uuid
-  treatmentId     String    @db.Uuid
+  id              String    @id @default(uuid()) @db.Char(36)
+  treatmentId     String    @db.Char(36)
   locale          String    // en, ka, ru, ar, he, tr
   name            String
-  description     String
-  shortDescription String
-  howItWorks      String?
-  aftercare       String?
+  description     String    @db.Text
+  shortDescription String   @db.Text
+  howItWorks      String?   @db.Text
+  aftercare       String?   @db.Text
 
   // Relations
   treatment       Treatment @relation(fields: [treatmentId], references: [id], onDelete: Cascade)
@@ -176,10 +176,10 @@ model TreatmentTranslation {
 
 // Treatment Benefits (translatable array items)
 model TreatmentBenefit {
-  id          String    @id @default(uuid()) @db.Uuid
-  treatmentId String    @db.Uuid
+  id          String    @id @default(uuid()) @db.Char(36)
+  treatmentId String    @db.Char(36)
   locale      String
-  text        String
+  text        String    @db.Text
   sortOrder   Int       @default(0)
 
   // Relations
@@ -191,11 +191,11 @@ model TreatmentBenefit {
 
 // Treatment FAQs (translatable Q&A)
 model TreatmentFAQ {
-  id          String    @id @default(uuid()) @db.Uuid
-  treatmentId String    @db.Uuid
+  id          String    @id @default(uuid()) @db.Char(36)
+  treatmentId String    @db.Char(36)
   locale      String
-  question    String
-  answer      String
+  question    String    @db.Text
+  answer      String    @db.Text
   sortOrder   Int       @default(0)
 
   // Relations
@@ -207,14 +207,14 @@ model TreatmentFAQ {
 
 // Booking model for calendar-based appointment system
 model Booking {
-  id          String        @id @default(uuid()) @db.Uuid
+  id          String        @id @default(uuid()) @db.Char(36)
   name        String
   email       String
   phone       String?
   service     String
   date        DateTime
   timeSlot    String        // e.g. "09:00 - 10:00"
-  message     String?
+  message     String?       @db.Text
   status      BookingStatus @default(PENDING)
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt

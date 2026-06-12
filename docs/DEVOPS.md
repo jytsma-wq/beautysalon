@@ -19,8 +19,8 @@ Use repository `https://github.com/jytsma-wq/beautysalon` and branch `main`.
 ## Required Environment Variables
 
 ```env
-DATABASE_URL="postgresql://..."
-DIRECT_DATABASE_URL="postgresql://..."
+DATABASE_URL="mysql://..."
+DIRECT_DATABASE_URL="mysql://..."
 CONTACT_EMAIL="info@silkbeautysalon.online"
 SMTP_HOST="smtp.hostinger.com"
 SMTP_PORT="465"

@@ -1,25 +1,25 @@
 # Database Documentation
 
-Silk Beauty Salon uses PostgreSQL through Prisma. The app is intended to connect to a managed PostgreSQL database in production and to a locally installed PostgreSQL instance in development.
+Silk Beauty Salon uses MySQL through Prisma. Production is intended to use a Hostinger MySQL database managed from hPanel.
 
 ## Required Environment Variables
 
 Set these values in `.env.local` for development and in the Hostinger app environment for production:
 
 ```env
-DATABASE_URL="postgresql://user:password@host:5432/silkbeauty?schema=public"
-DIRECT_DATABASE_URL="postgresql://user:password@host:5432/silkbeauty?schema=public"
+DATABASE_URL="mysql://user:password@host:3306/silkbeauty"
+DIRECT_DATABASE_URL="mysql://user:password@host:3306/silkbeauty"
 ```
 
 `DATABASE_URL` is used by the app. `DIRECT_DATABASE_URL` is used by Prisma migrations.
 
 ## Local Setup
 
-1. Install PostgreSQL 16 or use a managed PostgreSQL database.
+1. Install MySQL 8 or use a managed MySQL database.
 2. Create the database:
 
 ```bash
-createdb silkbeauty
+mysql -u root -p -e "CREATE DATABASE silkbeauty CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 ```
 
 3. Add the connection strings to `.env.local`.
@@ -35,8 +35,8 @@ npm run db:migrate:dev
 Use the production database connection string provided by the hosting/database provider. In Hostinger, add the values as app environment variables before deploying:
 
 ```env
-DATABASE_URL="postgresql://..."
-DIRECT_DATABASE_URL="postgresql://..."
+DATABASE_URL="mysql://..."
+DIRECT_DATABASE_URL="mysql://..."
 ```
 
 Run migrations during deployment or manually from a trusted environment:
@@ -47,16 +47,7 @@ npm run db:migrate
 
 ## Backup and Restore
 
-The repository includes TypeScript backup helpers:
-
-```bash
-npm run db:backup
-npm run db:backup:list
-npm run db:backup:verify
-npm run db:restore
-```
-
-The shell backup helper at `scripts/backup/backup.sh` uses direct PostgreSQL tools (`pg_dump`, `psql`, `createdb`, and `dropdb`) and reads `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` from the environment.
+Use Hostinger hPanel backups for production MySQL. If you add custom database backup tooling, test it against the active MySQL target before scheduling it.
 
 ## Health Checks
 

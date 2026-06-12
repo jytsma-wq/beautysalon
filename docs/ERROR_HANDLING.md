@@ -361,7 +361,7 @@ Use the error boundary's retry mechanism:
 
 **Health check failing**
 - Check database connection string
-- Verify PostgreSQL is running
+- Verify MySQL is running
 - Check connection pool settings
 
 **Logs not appearing**

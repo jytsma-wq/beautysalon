@@ -22,15 +22,16 @@ Set these in the Hostinger Node.js app environment before starting the app:
 NODE_ENV=production
 NEXT_PUBLIC_SITE_URL=https://silkbeautysalon.online
 NEXT_PUBLIC_ANDROID_APK_URL=https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
-DATABASE_URL=<production-postgres-url>
-DIRECT_DATABASE_URL=<production-postgres-direct-url>
+DATABASE_URL=mysql://<database-user>:<database-password>@<database-host>:3306/<database-name>
+DIRECT_DATABASE_URL=mysql://<database-user>:<database-password>@<database-host>:3306/<database-name>
 CONTACT_EMAIL=info@silkbeautysalon.online
 SMTP_HOST=smtp.hostinger.com
 SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=info@silkbeautysalon.online
 SMTP_PASSWORD=<hostinger-mailbox-password>
-SMTP_FROM=Silk Beauty Salon <info@silkbeautysalon.online>
+SMTP_FROM=info@silkbeautysalon.online
+API_SECRET_KEY=<secure-random-secret-at-least-32-characters>
 ```
 
 ## Deploy From GitHub
@@ -60,13 +61,14 @@ If Hostinger cannot access GitHub while GitHub Actions are locked, upload the pr
 
 ## Database Migration
 
+Create a Hostinger MySQL database in hPanel, then use its credentials for both `DATABASE_URL` and `DIRECT_DATABASE_URL`.
 After the production database URL is set, run Prisma migrations once:
 
 ```bash
 npm run db:migrate
 ```
 
-This applies the booking slot uniqueness constraint used by the internal booking system.
+This creates the application tables and applies the booking slot uniqueness constraint used by the internal booking system.
 
 ## Verification
 
@@ -85,6 +87,16 @@ Expected results:
 - The GitHub Release APK returns HTTP 200 with `Content-Type: application/vnd.android.package-archive` or `application/octet-stream`.
 - The page title must not be `Parked Domain name on Hostinger DNS system`.
 
-## Current External Blocker
+## Database-Backed Verification
 
-Final production cutover still requires manual action in Hostinger hPanel: connect `silkbeautysalon.online` to this Node.js app and deploy either from `jytsma-wq/beautysalon` branch `main` or from the release ZIP. If GitHub Actions show `The job was not started because your account is locked due to a billing issue`, this is a GitHub account state and not an application-code failure; unlock billing or use Hostinger's GitHub import/ZIP fallback from hPanel.
+After migrations and environment variables are applied, verify:
+
+```bash
+curl -I https://silkbeautysalon.online/api/health/db
+curl -I "https://silkbeautysalon.online/api/bookings?date=2026-06-13"
+```
+
+Expected results:
+
+- `/api/health/db` returns HTTP 200 when MySQL is reachable.
+- `/api/bookings?date=...` returns HTTP 200 JSON with `bookedSlots`.

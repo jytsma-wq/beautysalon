@@ -17,7 +17,19 @@ const booleanEnvSchema = z
 const serverEnvSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
 
-  DATABASE_URL: z.string().url('DATABASE_URL must be a valid URL'),
+  DATABASE_URL: z
+    .string()
+    .url('DATABASE_URL must be a valid URL')
+    .refine((value) => value.startsWith('mysql://') || value.startsWith('mysql2://'), {
+      message: 'DATABASE_URL must be a MySQL connection string',
+    }),
+
+  DIRECT_DATABASE_URL: z
+    .string()
+    .url('DIRECT_DATABASE_URL must be a valid URL')
+    .refine((value) => value.startsWith('mysql://') || value.startsWith('mysql2://'), {
+      message: 'DIRECT_DATABASE_URL must be a MySQL connection string',
+    }),
 
   CONTACT_EMAIL: z.string().email('CONTACT_EMAIL must be a valid email address'),
 
@@ -112,7 +124,8 @@ const shouldSkipEnvValidation =
 
 const buildFallbackEnv: FullEnv = {
   NODE_ENV: (process.env.NODE_ENV as FullEnv['NODE_ENV']) || 'production',
-  DATABASE_URL: process.env.DATABASE_URL || 'postgresql://build:build@localhost:5432/build',
+  DATABASE_URL: process.env.DATABASE_URL || 'mysql://build:build@localhost:3306/build',
+  DIRECT_DATABASE_URL: process.env.DIRECT_DATABASE_URL || process.env.DATABASE_URL || 'mysql://build:build@localhost:3306/build',
   CONTACT_EMAIL: process.env.CONTACT_EMAIL || 'info@silkbeautysalon.online',
   SMTP_HOST: process.env.SMTP_HOST || 'smtp.hostinger.com',
   SMTP_PORT: Number(process.env.SMTP_PORT || 465),
@@ -151,6 +164,7 @@ export const serverEnv: ServerEnv = process.env.VITEST || process.env.NODE_ENV =
   : {
       NODE_ENV: env.NODE_ENV,
       DATABASE_URL: env.DATABASE_URL,
+      DIRECT_DATABASE_URL: env.DIRECT_DATABASE_URL,
       CONTACT_EMAIL: env.CONTACT_EMAIL,
       SMTP_HOST: env.SMTP_HOST,
       SMTP_PORT: env.SMTP_PORT,

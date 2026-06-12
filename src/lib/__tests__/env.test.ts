@@ -30,7 +30,8 @@ describe('Environment Validation', () => {
     it('validates email format in schema', () => {
       const invalidEmail = {
         NODE_ENV: 'production',
-        DATABASE_URL: 'postgresql://user:pass@localhost/db',
+        DATABASE_URL: 'mysql://user:pass@localhost:3306/db',
+        DIRECT_DATABASE_URL: 'mysql://user:pass@localhost:3306/db',
         CONTACT_EMAIL: 'invalid-email',
         SMTP_USER: 'info@silkbeautysalon.online',
         SMTP_PASSWORD: 'hostinger-mailbox-password',
@@ -44,6 +45,7 @@ describe('Environment Validation', () => {
       const invalidUrl = {
         NODE_ENV: 'production',
         DATABASE_URL: 'not-a-url',
+        DIRECT_DATABASE_URL: 'mysql://user:pass@localhost:3306/db',
         CONTACT_EMAIL: 'test@silkbeautysalon.online',
         SMTP_USER: 'info@silkbeautysalon.online',
         SMTP_PASSWORD: 'hostinger-mailbox-password',

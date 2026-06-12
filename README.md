@@ -8,7 +8,7 @@ A modern, multilingual Next.js website for Silk Beauty Salon in Batumi, Georgia.
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + shadcn/ui components
 - **Internationalization**: next-intl (6 locales: EN, KA, RU, TR, AR, HE)
-- **Database**: Prisma ORM with PostgreSQL
+- **Database**: Prisma ORM with Hostinger MySQL
 - **Email**: Hostinger Email via SMTP
 - **Deployment**: Hostinger managed Node.js hosting with Next.js standalone output
 
@@ -40,7 +40,7 @@ A modern, multilingual Next.js website for Silk Beauty Salon in Batumi, Georgia.
    Edit `.env.local` and fill in your values. See `.env.example` for detailed comments on each variable.
 
 4. **Set up the database**
-   Configure a PostgreSQL database and set `DATABASE_URL` plus `DIRECT_DATABASE_URL` in `.env.local`, then run:
+   Configure a MySQL database and set `DATABASE_URL` plus `DIRECT_DATABASE_URL` in `.env.local`, then run:
    ```bash
    npm run db:migrate:dev
    ```
@@ -180,8 +180,8 @@ Use Hostinger managed Node.js hosting for production:
 
 Ensure all [REQUIRED] variables in `.env.example` are set:
 
-- `DATABASE_URL` - PostgreSQL connection string
-- `DIRECT_DATABASE_URL` - Direct PostgreSQL connection (for migrations, bypasses PgBouncer)
+- `DATABASE_URL` - MySQL connection string
+- `DIRECT_DATABASE_URL` - Direct MySQL connection used by Prisma migrations
 - `CONTACT_EMAIL` - Contact form recipient
 - `SMTP_HOST` - SMTP server, defaults to `smtp.hostinger.com`
 - `SMTP_PORT` - SMTP port, defaults to `465`
@@ -196,13 +196,7 @@ Android APK and Hostinger ZIP artifacts are published as GitHub Release assets o
 
 ## Database Backup & Recovery
 
-Backups run automatically daily at 03:00 UTC via GitHub Actions and are stored in S3. Locally:
-
-- Create backup: `npm run db:backup`
-- Verify latest backup: `npm run db:backup:verify`
-- Restore from backup: `npm run db:restore`
-
-Retention: 30 daily backups, 12 monthly backups (configure in S3 lifecycle rules).
+Use Hostinger hPanel backups for the production MySQL database. Local backup scripts are intended for manual maintenance only and should be tested against the active database target before use.
 
 ## License
 
