@@ -1,11 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import React from "react";
-import { db } from "@/lib/db";
 import { verifyCsrfToken } from "@/lib/csrf";
 import { bookingsApiRateLimit } from "@/lib/rate-limit";
 import { logSecurityEvent } from "@/lib/security-logger";
 import { sanitizeText, sanitizeEmail, sanitizeName } from "@/lib/sanitize";
+import {
+  createBooking,
+  findBookingConflict,
+  getBookedSlotsForDate,
+  isUniqueBookingSlotError,
+  listBookings,
+} from "@/lib/booking-store";
 import { AdminNotificationEmail } from "@/emails/admin-notification";
 import { BookingConfirmationEmail } from "@/emails/booking-confirmation";
 import { emailConfig } from "@/lib/email-config";
@@ -123,10 +129,6 @@ function isTimeSlotWithinOpeningHours(date: Date, timeSlot: string): boolean {
   return slotEnd > slotStart && slotEnd - slotStart === 60 && slotStart >= open && slotEnd <= close;
 }
 
-function isUniqueConstraintError(error: unknown): boolean {
-  return typeof error === "object" && error !== null && "code" in error && error.code === "P2002";
-}
-
 // GET handler - returns booked slots for a date or all bookings
 export async function GET(request: NextRequest) {
   try {
@@ -152,23 +154,7 @@ export async function GET(request: NextRequest) {
 
       const { start, end } = bookingDateRange;
 
-      // Return booked time slots for the specified date
-      const bookings = await db.booking.findMany({
-        where: {
-          date: {
-            gte: start,
-            lt: end,
-          },
-          status: {
-            not: "CANCELLED",
-          },
-        },
-        select: {
-          timeSlot: true,
-        },
-      });
-
-      const bookedSlots = bookings.map((booking) => booking.timeSlot);
+      const bookedSlots = await getBookedSlotsForDate(start, end);
       return NextResponse.json({ bookedSlots });
     }
 
@@ -180,12 +166,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Return all bookings ordered by createdAt desc
-    const bookings = await db.booking.findMany({
-      orderBy: {
-        createdAt: "desc",
-      },
-    });
+    const bookings = await listBookings();
 
     return NextResponse.json(bookings);
   } catch (error) {
@@ -287,18 +268,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Check for time slot conflicts
-    const existingBooking = await db.booking.findFirst({
-      where: {
-        date: {
-          gte: bookingDateRange.start,
-          lt: bookingDateRange.end,
-        },
-        timeSlot: sanitized.timeSlot,
-        status: {
-          not: "CANCELLED",
-        },
-      },
-    });
+    const existingBooking = await findBookingConflict(
+      bookingDateRange.start,
+      bookingDateRange.end,
+      sanitized.timeSlot
+    );
 
     if (existingBooking) {
       return NextResponse.json(
@@ -308,17 +282,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Create the booking
-    const booking = await db.booking.create({
-      data: {
-        name: sanitized.name,
-        email: sanitized.email,
-        phone: sanitized.phone,
-        service: sanitized.service,
-        date: bookingDateRange.start,
-        timeSlot: sanitized.timeSlot,
-        message: sanitized.message,
-        status: "PENDING",
-      },
+    const booking = await createBooking({
+      name: sanitized.name,
+      email: sanitized.email,
+      phone: sanitized.phone,
+      service: sanitized.service,
+      date: bookingDateRange.start,
+      timeSlot: sanitized.timeSlot,
+      message: sanitized.message,
+      status: "PENDING",
     });
 
     try {
@@ -364,7 +336,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(booking, { status: 201 });
   } catch (error) {
-    if (isUniqueConstraintError(error)) {
+    if (isUniqueBookingSlotError(error)) {
       return NextResponse.json(
         { error: "This time slot is already booked" },
         { status: 409 }

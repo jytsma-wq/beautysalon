@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
+import { getBookingStoreHealth } from '@/lib/booking-store';
 
 interface HealthCheckResult {
   status: 'healthy' | 'degraded' | 'unhealthy';
@@ -26,6 +27,7 @@ interface HealthCheckResult {
       slowQueries: number;
       message?: string;
     };
+    bookingStore?: Awaited<ReturnType<typeof getBookingStoreHealth>>;
   };
 }
 
@@ -153,10 +155,18 @@ async function checkPerformance(): Promise<HealthCheckResult['checks']['performa
  * Calculate overall health status
  */
 function calculateOverallStatus(checks: HealthCheckResult['checks']): HealthCheckResult['status'] {
+  if (
+    checks.database.status === 'unhealthy'
+    && checks.bookingStore?.status === 'degraded'
+  ) {
+    return 'degraded';
+  }
+
   const statuses = [
     checks.database.status,
     checks.tables?.status,
     checks.performance?.status,
+    checks.bookingStore?.status,
   ].filter(Boolean);
 
   if (statuses.some((s) => s === 'unhealthy')) {
@@ -181,6 +191,7 @@ export async function GET(): Promise<Response> {
       checkTables(),
       checkPerformance(),
     ]);
+    const bookingStoreHealth = await getBookingStoreHealth();
 
     const healthCheck: HealthCheckResult = {
       status: 'healthy',
@@ -189,6 +200,7 @@ export async function GET(): Promise<Response> {
         database: databaseHealth,
         tables: tableHealth,
         performance: performanceHealth,
+        bookingStore: bookingStoreHealth,
       },
     };
 
@@ -249,6 +261,22 @@ export async function HEAD(): Promise<Response> {
       },
     });
   } catch {
+    try {
+      const bookingStoreHealth = await getBookingStoreHealth();
+      if (bookingStoreHealth.status === 'degraded') {
+        return new Response(null, {
+          status: 200,
+          headers: {
+            'X-Health-Status': 'degraded',
+            'X-Booking-Store': bookingStoreHealth.mode,
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+          },
+        });
+      }
+    } catch {
+      // Fall through to unhealthy below.
+    }
+
     return new Response(null, {
       status: 503,
       headers: {

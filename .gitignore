@@ -69,6 +69,7 @@ server.log
 *.db
 *.db-shm
 *.db-wal
+data/bookings.json
 db/*.db
 dev.db
 prisma/*.db
