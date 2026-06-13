@@ -6,7 +6,7 @@
     "dev": "set NODE_OPTIONS=--max-old-space-size=4096 && next dev -p 3000 --turbopack --hostname 0.0.0.0",
     "dev:alt": "next dev -p 3001",
     "build": "node scripts/hostinger-build.cjs",
-    "start": "node .next/standalone/server.js",
+    "start": "node scripts/start-standalone.cjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "prepare": "node scripts/prepare-husky.cjs",

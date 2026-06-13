@@ -9,7 +9,7 @@ This project is ready for Hostinger managed Node.js hosting. The public domain i
 - Branch: `main`
 - Runtime: Node.js 20 or newer
 - Build command: `npm ci && npm run build`
-- Start command: `npm run start`
+- Start command: `npm run start -- -p $PORT`
 - App entrypoint: `.next/standalone/server.js`
 - Android APK download: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk`
 - ZIP fallback package: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon-hostinger.zip`
@@ -47,7 +47,7 @@ API_SECRET_KEY=<secure-random-secret-at-least-32-characters>
 6. Select branch `main`.
 7. Use Node.js 20 or newer.
 8. Set the build command to `npm ci && npm run build`.
-9. Set the start command to `npm run start`.
+9. Set the start command to `npm run start -- -p $PORT`.
 10. Add the environment variables above.
 11. Deploy.
 12. Connect `silkbeautysalon.online` and `www.silkbeautysalon.online` to the Node.js app.
