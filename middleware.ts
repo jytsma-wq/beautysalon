@@ -294,6 +294,15 @@ export default async function middleware(request: NextRequest) {
   const nonce = generateNonce();
   const requestHeaders = createRequestHeaders(request, pathname, nonce);
 
+  const requestHost = request.headers.get('host')?.split(':')[0]?.toLowerCase();
+  if (requestHost === 'www.silkbeautysalon.online') {
+    const canonicalUrl = request.nextUrl.clone();
+    canonicalUrl.hostname = 'silkbeautysalon.online';
+    canonicalUrl.protocol = 'https:';
+    const response = NextResponse.redirect(canonicalUrl, 308);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, requestHeaders);
+  }
+
   // Check if IP is on the security block list
   const blocked = !isAutomatedTestRun && (await isIpBlocked(ip));
   if (blocked) {
