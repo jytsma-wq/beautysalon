@@ -8,6 +8,7 @@ describe('getSitemapRoutes', () => {
 
     expect(paths).toContain('');
     expect(paths).toContain('/book');
+    expect(paths).toContain('/beauty-salon-batumi');
     expect(paths).toContain('/blog/beauty-salon-batumi-guide');
     expect(paths).toContain('/treatments/category/dermal-fillers');
     expect(paths).toContain('/treatments/anti-wrinkle');

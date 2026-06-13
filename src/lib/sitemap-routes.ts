@@ -20,6 +20,7 @@ export type SitemapRoute = {
 
 export const staticSitemapRoutes: SitemapRoute[] = [
   { path: '', changeFrequency: 'daily', priority: 1 },
+  { path: '/beauty-salon-batumi', changeFrequency: 'weekly', priority: 0.96 },
   { path: '/treatments', changeFrequency: 'weekly', priority: 0.95 },
   { path: '/conditions', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.85 },

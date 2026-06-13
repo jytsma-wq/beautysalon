@@ -10,12 +10,15 @@ This document tracks the parts of the Silk6 SEO goal that are outside normal cod
 - The blog now has code-owned expert articles for Batumi beauty salon, facials, skin care, Botox, fillers, safety, and aftercare.
 - The About page exposes ownership, legal name, address, phone, email, opening hours, standards, team bios, languages, and qualifications.
 - Media hosts used by the site have preconnect and DNS-prefetch hints in the root layout.
+- A dedicated `beauty-salon-batumi` landing page targets the main local query with unique local content, service links, NAP, hours, FAQ schema, breadcrumb schema, and Local Business schema.
+- Search Console HTML meta verification is supported with the optional `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` Hostinger environment variable.
 
 ## Owner tasks
 
 1. Google Search Console
    - Add `https://silkbeautysalon.online` as a Domain property.
    - Verify DNS ownership in the domain registrar or Hostinger DNS.
+   - If using the HTML meta tag method instead, set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` in Hostinger to the token from Search Console, redeploy, then click Verify.
    - Submit `https://silkbeautysalon.online/sitemap.xml`.
    - Check Indexing > Pages weekly until every main page is indexed.
    - Check Experience > Core Web Vitals monthly.

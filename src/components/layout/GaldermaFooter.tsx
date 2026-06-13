@@ -166,6 +166,12 @@ export function GaldermaFooter() {
               {t('information', { defaultValue: 'Information' })}
             </h3>
             <nav className="space-y-3">
+              <Link
+                href="/beauty-salon-batumi"
+                className="block text-sm text-stone-600 transition-colors hover:text-stone-900"
+              >
+                Beauty salon Batumi
+              </Link>
               <Link href="/about" className="block text-sm text-stone-600 transition-colors hover:text-stone-900">
                 {tNav('about')}
               </Link>

@@ -22,6 +22,8 @@ const dmSerifDisplay = DM_Serif_Display({
   variable: '--font-dm-serif-display',
 });
 
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   applicationName: siteConfig.name,
@@ -73,6 +75,13 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  ...(googleSiteVerification
+    ? {
+        verification: {
+          google: googleSiteVerification,
+        },
+      }
+    : {}),
 };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
