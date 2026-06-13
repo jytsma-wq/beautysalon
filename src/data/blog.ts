@@ -262,7 +262,7 @@ export async function getBlogPostBySlug(
 ): Promise<BlogPost | null> {
   const fallbackPost = getFallbackPosts(locale).find((post) => post.slug === slug) || null;
 
-  if (isPlaceholderBuild) {
+  if (fallbackPost || isPlaceholderBuild) {
     return fallbackPost;
   }
 
