@@ -299,6 +299,7 @@ export default async function middleware(request: NextRequest) {
     const canonicalUrl = request.nextUrl.clone();
     canonicalUrl.hostname = 'silkbeautysalon.online';
     canonicalUrl.protocol = 'https:';
+    canonicalUrl.port = '';
     const response = NextResponse.redirect(canonicalUrl, 308);
     return withMiddlewareHeaders(response, requestId, pathname, nonce, requestHeaders);
   }
