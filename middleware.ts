@@ -49,6 +49,12 @@ function checkMiddlewareRateLimit(ip: string): { success: boolean; reset: number
   };
 }
 
+function isHealthCheckPath(pathname: string): boolean {
+  return pathname === '/api/health'
+    || pathname.startsWith('/api/health/')
+    || pathname === '/api/v1/health';
+}
+
 // Always allow these search engine bots
 const ALWAYS_ALLOW_UA = [/googlebot/i, /bingbot/i, /twitterbot/i, /facebookexternalhit/i];
 
@@ -337,7 +343,12 @@ export default async function middleware(request: NextRequest) {
   }
 
   // Apply in-process rate limiting to non-static requests
-  if (!isAutomatedTestRun && !pathname.startsWith('/_next') && !pathname.includes('.')) {
+  if (
+    !isAutomatedTestRun
+    && !isHealthCheckPath(pathname)
+    && !pathname.startsWith('/_next')
+    && !pathname.includes('.')
+  ) {
     const { success, reset } = checkMiddlewareRateLimit(ip);
 
     if (!success) {

@@ -26,9 +26,15 @@ type BookingStoreMode = 'database' | 'file';
 
 const DB_BACKOFF_MS = 15 * 60_000;
 const DB_OPERATION_TIMEOUT_MS = 2_500;
+const homeStorageRoot = process.env.HOME || process.env.USERPROFILE;
 const STORAGE_CANDIDATES = [
   process.env.BOOKING_STORAGE_FILE,
-  path.join(/* turbopackIgnore: true */ process.cwd(), 'data', 'bookings.json'),
+  process.env.BOOKING_STORAGE_DIR
+    ? path.join(process.env.BOOKING_STORAGE_DIR, 'bookings.json')
+    : undefined,
+  homeStorageRoot
+    ? path.join(homeStorageRoot, '.silk-beauty-salon', 'bookings.json')
+    : undefined,
   path.join(tmpdir(), 'silk-beauty-salon-bookings.json'),
 ].filter(Boolean) as string[];
 
@@ -115,10 +121,14 @@ async function getStoragePath(): Promise<string> {
 
   for (const candidate of STORAGE_CANDIDATES) {
     try {
-      await mkdir(path.dirname(candidate), { recursive: true });
-      const probePath = path.join(path.dirname(candidate), `.silk-write-test-${randomUUID()}`);
-      await writeFile(probePath, 'ok', 'utf8');
-      await unlink(probePath).catch(() => undefined);
+      const candidateDirectory = path.dirname(/* turbopackIgnore: true */ candidate);
+      await mkdir(/* turbopackIgnore: true */ candidateDirectory, { recursive: true });
+      const probePath = path.join(
+        /* turbopackIgnore: true */ candidateDirectory,
+        `.silk-write-test-${randomUUID()}`
+      );
+      await writeFile(/* turbopackIgnore: true */ probePath, 'ok', 'utf8');
+      await unlink(/* turbopackIgnore: true */ probePath).catch(() => undefined);
       activeStoragePath = candidate;
       return candidate;
     } catch {
@@ -145,7 +155,7 @@ async function readFileBookings(): Promise<Booking[]> {
 
   try {
     const storagePath = await getStoragePath();
-    const raw = await readFile(storagePath, 'utf8');
+    const raw = await readFile(/* turbopackIgnore: true */ storagePath, 'utf8');
     const parsed = JSON.parse(raw) as SerializedBooking[];
     if (!Array.isArray(parsed)) {
       return [];
@@ -171,7 +181,11 @@ async function writeFileBookings(bookings: Booking[]): Promise<void> {
   try {
     const storagePath = await getStoragePath();
     const serialized = bookings.map(serializeBooking);
-    await writeFile(storagePath, `${JSON.stringify(serialized, null, 2)}\n`, 'utf8');
+    await writeFile(
+      /* turbopackIgnore: true */ storagePath,
+      `${JSON.stringify(serialized, null, 2)}\n`,
+      'utf8'
+    );
   } catch (error) {
     console.error('Booking file store is unavailable; using in-memory booking fallback.', error);
     memoryBookings = [...bookings];

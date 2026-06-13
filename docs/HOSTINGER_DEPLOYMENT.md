@@ -24,6 +24,9 @@ NEXT_PUBLIC_SITE_URL=https://silkbeautysalon.online
 NEXT_PUBLIC_ANDROID_APK_URL=https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
 DATABASE_URL=mysql://<database-user>:<database-password>@<database-host>:3306/<database-name>
 DIRECT_DATABASE_URL=mysql://<database-user>:<database-password>@<database-host>:3306/<database-name>
+BOOKING_DATABASE_ENABLED=1
+# Optional but recommended fallback path if MySQL is temporarily unavailable:
+# BOOKING_STORAGE_DIR=/home/<hostinger-user>/silk-booking-storage
 CONTACT_EMAIL=info@silkbeautysalon.online
 SMTP_HOST=smtp.hostinger.com
 SMTP_PORT=465
@@ -62,6 +65,10 @@ If Hostinger cannot access GitHub while GitHub Actions are locked, upload the pr
 ## Database Migration
 
 Create a Hostinger MySQL database in hPanel, then use its credentials for both `DATABASE_URL` and `DIRECT_DATABASE_URL`.
+Set `BOOKING_DATABASE_ENABLED=1` so the internal booking system uses MySQL in production. If this is omitted or set to any value other than `1`, the app deliberately uses the local booking fallback store instead.
+
+For extra resilience, create a writable private directory on Hostinger and set `BOOKING_STORAGE_DIR` to it. The app writes `bookings.json` there only when MySQL is disabled or temporarily unavailable.
+
 After the production database URL is set, run Prisma migrations once:
 
 ```bash

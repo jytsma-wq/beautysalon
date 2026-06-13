@@ -4,12 +4,39 @@
  */
 
 import {
+  ApiErrorCodes,
+  createErrorResponse,
   createSuccessResponse,
   createJsonResponse,
   generateRequestId,
 } from '@/lib/api/types';
-import { db } from '@/lib/db';
-import { publicEnv } from '@/lib/env';
+import {
+  getLightweightBookingStoreHealth,
+  type BookingStoreHealth,
+} from '@/lib/booking-health';
+
+type HealthStatus = 'healthy' | 'degraded' | 'unhealthy';
+type HealthChecks = {
+  database: 'ok' | 'degraded' | 'error';
+  dbLatencyMs?: number;
+  bookingStore: BookingStoreHealth;
+};
+
+function getHealthStatus(bookingStoreHealth: BookingStoreHealth): HealthStatus {
+  return bookingStoreHealth.mode === 'database' && bookingStoreHealth.status === 'healthy'
+    ? 'healthy'
+    : 'degraded';
+}
+
+function getHealthChecks(bookingStoreHealth: BookingStoreHealth): HealthChecks {
+  return {
+    database: bookingStoreHealth.mode === 'database' ? 'ok' : 'degraded',
+    dbLatencyMs: bookingStoreHealth.mode === 'database'
+      ? bookingStoreHealth.responseTime
+      : undefined,
+    bookingStore: bookingStoreHealth,
+  };
+}
 
 /**
  * @swagger
@@ -44,41 +71,48 @@ import { publicEnv } from '@/lib/env';
  *                       properties:
  *                         database:
  *                           type: string
- *                           enum: [ok, error]
+ *                           enum: [ok, degraded, error]
  *       503:
  *         description: Service is unhealthy
  */
 export async function GET(): Promise<Response> {
-  const checks: { database: 'ok' | 'error'; dbLatencyMs?: number } = { database: 'error' };
-  let status: 'healthy' | 'degraded' | 'unhealthy' = 'unhealthy';
+  const requestId = generateRequestId();
 
   try {
-    // Check database connection with latency measurement
-    const dbStart = Date.now();
-    await db.$queryRaw`SELECT 1`;
-    checks.dbLatencyMs = Date.now() - dbStart;
-    checks.database = 'ok';
-    status = 'healthy';
+    const bookingStoreHealth = await getLightweightBookingStoreHealth();
+    const status = getHealthStatus(bookingStoreHealth);
+    const checks = getHealthChecks(bookingStoreHealth);
+
+    const response = createSuccessResponse(
+      {
+        status,
+        timestamp: new Date().toISOString(),
+        version: process.env.NEXT_PUBLIC_APP_VERSION
+          ?? process.env.npm_package_version
+          ?? '0.2.0',
+        checks,
+      },
+      { requestId }
+    );
+
+    return createJsonResponse(response, 200, {
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+    });
   } catch (error) {
-    console.error('Health check - Database error:', error);
-    status = 'unhealthy';
+    console.error('Health check failed:', error);
+
+    const response = createErrorResponse(
+      ApiErrorCodes.SERVICE_UNAVAILABLE,
+      'Health check failed',
+      {
+        message: error instanceof Error ? error.message : 'Unknown health check failure',
+      },
+      { requestId }
+    );
+
+    return createJsonResponse(response, 503, {
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+      'Retry-After': '60',
+    });
   }
-
-  const response = createSuccessResponse(
-    {
-      status,
-      timestamp: new Date().toISOString(),
-      version: publicEnv.NEXT_PUBLIC_APP_VERSION
-        ?? process.env.npm_package_version
-        ?? '0.2.0',
-      checks,
-    },
-    { requestId: generateRequestId() }
-  );
-
-  const statusCode = status === 'unhealthy' ? 503 : 200;
-
-  return createJsonResponse(response, statusCode, {
-    'Cache-Control': 'no-store, no-cache, must-revalidate',
-  });
 }

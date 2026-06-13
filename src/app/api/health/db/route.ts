@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
-import { getBookingStoreHealth } from '@/lib/booking-store';
-
-type BookingStoreHealth = Awaited<ReturnType<typeof getBookingStoreHealth>>;
+import {
+  getLightweightBookingStoreHealth,
+  type BookingStoreHealth,
+} from '@/lib/booking-health';
 
 interface HealthCheckResult {
   status: 'healthy' | 'degraded' | 'unhealthy';
@@ -43,13 +44,13 @@ function overallStatusFromBookingStore(
  * GET /api/health/db
  * Reports the effective booking persistence health without issuing repeated
  * database probes. On Hostinger, bad MySQL credentials can make many concurrent
- * Prisma checks expensive; one guarded booking-store probe is enough here.
+ * Prisma checks expensive; one guarded lightweight probe is enough here.
  */
 export async function GET(): Promise<Response> {
   const startedAt = Date.now();
 
   try {
-    const bookingStoreHealth = await getBookingStoreHealth();
+    const bookingStoreHealth = await getLightweightBookingStoreHealth();
     const healthCheck: HealthCheckResult = {
       status: overallStatusFromBookingStore(bookingStoreHealth),
       timestamp: new Date().toISOString(),
@@ -83,6 +84,7 @@ export async function GET(): Promise<Response> {
         status: 503,
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Retry-After': '60',
         },
       }
     );
@@ -96,7 +98,7 @@ export async function GET(): Promise<Response> {
  */
 export async function HEAD(): Promise<Response> {
   try {
-    const bookingStoreHealth = await getBookingStoreHealth();
+    const bookingStoreHealth = await getLightweightBookingStoreHealth();
 
     return new Response(null, {
       status: 200,
@@ -112,6 +114,7 @@ export async function HEAD(): Promise<Response> {
       headers: {
         'X-Health-Status': 'unhealthy',
         'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Retry-After': '60',
       },
     });
   }
