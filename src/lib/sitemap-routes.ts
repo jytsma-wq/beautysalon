@@ -1,5 +1,6 @@
 import { getAllConditions } from '@/data/conditions';
 import { getAllBlogSlugs } from '@/data/blog';
+import { localSeoLandingSitemapRoutes } from '@/data/local-seo-pages';
 import { treatmentCollections } from '@/data/treatment-collections';
 import { getAllTreatments } from '@/data/treatments';
 
@@ -75,6 +76,7 @@ export async function getSitemapRoutes(): Promise<SitemapRoute[]> {
 
   return [
     ...staticSitemapRoutes,
+    ...localSeoLandingSitemapRoutes,
     ...blogRoutes,
     ...treatmentCategoryRoutes,
     ...treatmentRoutes,

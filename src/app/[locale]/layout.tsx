@@ -12,6 +12,7 @@ import { ChatbotWidget } from "@/components/layout/ChatbotWidget";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { siteConfig } from '@/data/site-config';
+import { rtlLocales } from '@/i18n';
 import { getSiteUrl } from '@/lib/seo';
 
 export async function generateMetadata({
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
 
   // Ensure valid locale
   const validLocale = (routing.locales as readonly string[]).includes(locale) ? locale : routing.defaultLocale;
+  const isRtl = rtlLocales.includes(validLocale as 'ar' | 'he');
 
   setRequestLocale(validLocale);
 
@@ -65,21 +67,23 @@ export default async function LocaleLayout({
   
   return (
     <ThemeProvider>
-      <NextIntlClientProvider messages={messages}>
-        <ConsentProvider>
-          <AnnouncerProvider>
-            <SkipLink />
-            <GaldermaHeader />
-            <main id="main-content" className="pt-35">
-              {children}
-            </main>
-            <GaldermaFooter />
-            <ChatbotWidget />
-            <WhatsAppWidget />
-            <Toaster />
-          </AnnouncerProvider>
-        </ConsentProvider>
-      </NextIntlClientProvider>
+      <div lang={validLocale} dir={isRtl ? 'rtl' : 'ltr'}>
+        <NextIntlClientProvider messages={messages}>
+          <ConsentProvider>
+            <AnnouncerProvider>
+              <SkipLink />
+              <GaldermaHeader />
+              <main id="main-content" className="pt-35">
+                {children}
+              </main>
+              <GaldermaFooter />
+              <ChatbotWidget />
+              <WhatsAppWidget />
+              <Toaster />
+            </AnnouncerProvider>
+          </ConsentProvider>
+        </NextIntlClientProvider>
+      </div>
     </ThemeProvider>
   );
 }

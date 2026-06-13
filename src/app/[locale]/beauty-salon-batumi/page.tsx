@@ -22,29 +22,47 @@ const serviceHighlights = [
     title: 'Facials and skin care',
     description:
       'Hydrating, calming, brightening, and texture-focused skin care planned around your skin condition and Batumi climate.',
-    href: '/treatments',
+    href: '/skin-treatment-batumi',
     cta: 'Explore facials and skin care in Batumi',
   },
   {
     title: 'Botox and injectables',
     description:
       'Consultation-led anti-wrinkle treatments and facial balancing with clear expectations and aftercare.',
-    href: '/treatments/anti-wrinkle',
+    href: '/botox-batumi',
     cta: 'Learn about Botox and injectables in Batumi',
   },
   {
     title: 'Dermal fillers',
     description:
       'Natural-looking lip, cheek, chin, jawline, and tear trough planning with conservative aesthetic judgment.',
-    href: '/treatments/lip-fillers',
+    href: '/dermal-fillers-batumi',
     cta: 'Learn about dermal fillers in Batumi',
   },
   {
     title: 'Laser and advanced skin treatments',
     description:
       'Technology-led options for tone, texture, hair reduction, collagen stimulation, and skin rejuvenation.',
-    href: '/treatments/cutera-secret-pro-rf-microneedling',
+    href: '/skin-treatment-batumi',
     cta: 'Explore advanced skin treatments in Batumi',
+  },
+];
+
+const localSearchLinks = [
+  {
+    label: 'Botox Batumi',
+    href: '/botox-batumi',
+    description: 'Consultation-led Botox and neuromodulator treatments in central Batumi.',
+  },
+  {
+    label: 'Dermal fillers Batumi',
+    href: '/dermal-fillers-batumi',
+    description: 'Lip, cheek, jawline, chin, and under-eye filler planning in Batumi.',
+  },
+  {
+    label: 'Skin treatment Batumi',
+    href: '/skin-treatment-batumi',
+    description: 'Facials, peels, microneedling, skin analysis, and skin care planning.',
   },
 ];
 
@@ -242,6 +260,27 @@ export default async function BeautySalonBatumiPage({
                 </Link>
               </article>
             ))}
+          </div>
+
+          <div className="mt-14 border-t border-[#d8cbbb] pt-8">
+            <h3 className="mb-6 font-sans text-2xl font-light text-[#241f1b]">
+              Popular local searches for Silk Beauty Salon
+            </h3>
+            <div className="grid gap-5 md:grid-cols-3">
+              {localSearchLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group border-t border-[#d8cbbb] pt-5"
+                >
+                  <span className="mb-3 inline-flex items-center gap-1 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#8d6f58] group-hover:text-[#241f1b]">
+                    {item.label}
+                    <ChevronRight className="h-4 w-4" />
+                  </span>
+                  <p className="text-sm leading-6 text-stone-600">{item.description}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
