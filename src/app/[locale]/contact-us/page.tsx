@@ -6,6 +6,7 @@ import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/data/site-config';
 import ContactFormClient from './ContactForm';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 function TikTokIcon({ className }: { className?: string }) {
   return (
@@ -15,11 +16,18 @@ function TikTokIcon({ className }: { className?: string }) {
   );
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Contact Us | Silk Beauty Salon',
-    description: 'Get in touch with Silk Beauty Salon. Book your consultation today.',
-  };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+
+  return buildSeoMetadata({
+    locale,
+    path: '/contact-us',
+    title: 'Contact Silk Beauty Salon in Batumi, Georgia',
+    description:
+      'Contact Silk Beauty Salon on Zurab Gorgiladze Street in Batumi, Georgia to book facials, aesthetic treatments and beauty salon appointments.',
+    keywords: localSeoKeywords,
+    imageAlt: 'Contact Silk Beauty Salon in Batumi, Georgia',
+  });
 }
 
 export async function generateStaticParams() {
@@ -56,7 +64,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <div className="relative aspect-4/3 overflow-hidden rounded-xl">
               <Image
                 src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80"
-                alt={t('contactSilkBeautySalon')}
+                alt={`${t('contactSilkBeautySalon')} in Batumi, Georgia`}
                 fill
                 className="object-cover"
                 priority

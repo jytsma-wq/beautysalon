@@ -7,6 +7,7 @@ import { getTranslations } from 'next-intl/server';
 import { getAllTreatments, getTreatmentBySlug } from '@/data/treatments';
 import { getTreatmentCollectionBySlug } from '@/data/treatment-collections';
 import type { Treatment } from '@/data/treatments';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
@@ -47,10 +48,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {
-    title: `${collection.title} | Silk Beauty Salon`,
-    description: collection.description,
-  };
+  return buildSeoMetadata({
+    locale,
+    path: `/treatments/category/${slug}`,
+    title: `${collection.title} in Batumi, Georgia`,
+    description: `${collection.description} Book consultation-led ${collection.title.toLowerCase()} at Silk Beauty Salon in Batumi, Georgia.`,
+    keywords: [collection.title, `${collection.title} Batumi`, `${collection.title} Georgia`, ...localSeoKeywords],
+    image: collection.image,
+    imageAlt: `${collection.title} at Silk Beauty Salon in Batumi, Georgia`,
+  });
 }
 
 export default async function TreatmentCollectionPage({ params }: Props) {
@@ -115,7 +121,7 @@ export default async function TreatmentCollectionPage({ params }: Props) {
           <div className="relative min-h-[44svh] overflow-hidden lg:min-h-0">
             <Image
               src={collection.image}
-              alt=""
+              alt={`${collection.title} at Silk Beauty Salon in Batumi, Georgia`}
               fill
               priority
               className="object-cover"

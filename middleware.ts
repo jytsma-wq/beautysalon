@@ -376,6 +376,16 @@ export default async function middleware(request: NextRequest) {
     return withMiddlewareHeaders(response, requestId, pathname, nonce);
   }
 
+  // Maintenance route returns a deliberate 503 and must not be locale-prefixed.
+  if (pathname === '/service-unavailable') {
+    const response = NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
+    return withMiddlewareHeaders(response, requestId, pathname, nonce);
+  }
+
   // Pass to i18n middleware for locale routing
   const response = i18nMiddleware(request);
 

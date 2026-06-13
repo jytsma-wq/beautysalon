@@ -5,15 +5,23 @@ import { getTranslations } from 'next-intl/server';
 import { ChevronRight, MapPin, Phone, Clock, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { treatmentCategories } from '@/data/navigation';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'consultation' });
   
-  return {
-    title: t('metaTitle', { defaultValue: 'Find a Specialist | Silk Beauty Salon' }),
-    description: t('metaDescription', { defaultValue: 'Book a consultation with our expert aesthetic practitioners. Start your journey to enhanced natural beauty.' }),
-  };
+  return buildSeoMetadata({
+    locale,
+    path: '/consultation',
+    title: t('metaTitle', { defaultValue: 'Aesthetic Consultation in Batumi, Georgia' }),
+    description: t('metaDescription', {
+      defaultValue:
+        'Book an aesthetic consultation at Silk Beauty Salon in Batumi, Georgia and start a personalized treatment plan.',
+    }),
+    keywords: localSeoKeywords,
+    imageAlt: 'Aesthetic consultation at Silk Beauty Salon in Batumi, Georgia',
+  });
 }
 
 export default async function ConsultationPage({
@@ -40,7 +48,7 @@ export default async function ConsultationPage({
     {
       icon: MapPin,
       title: t('features.convenient.title', { defaultValue: 'Convenient Location' }),
-      description: t('features.convenient.description', { defaultValue: 'Easy access in central Tbilisi with comfortable, private treatment rooms.' }),
+      description: t('features.convenient.description', { defaultValue: 'Easy access in central Batumi with comfortable, private treatment rooms.' }),
     },
   ];
 
@@ -74,7 +82,7 @@ export default async function ConsultationPage({
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1920&q=80"
-            alt={t('consultation')}
+            alt={`${t('consultation')} at Silk Beauty Salon in Batumi, Georgia`}
             fill
             sizes="100vw"
             className="object-cover"
@@ -221,7 +229,7 @@ export default async function ConsultationPage({
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1920&q=80"
-            alt={t('bookConsultation')}
+            alt={`${t('bookConsultation')} at Silk Beauty Salon in Batumi, Georgia`}
             fill
             sizes="100vw"
             className="object-cover"

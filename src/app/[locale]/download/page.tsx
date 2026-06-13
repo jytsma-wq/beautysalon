@@ -5,6 +5,7 @@ import { Link } from '@/i18n/routing';
 import { locales, type Locale } from '@/i18n';
 import { siteConfig } from '@/data/site-config';
 import { androidApkFileName, androidApkUrl, androidInstallSteps } from '@/lib/mobile-app-download';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 type DownloadCopy = {
   badge: string;
@@ -161,10 +162,14 @@ export async function generateMetadata({
   const { locale } = await params;
   const pageCopy = getCopy(locale);
 
-  return {
-    title: `${pageCopy.title} | ${siteConfig.name}`,
+  return buildSeoMetadata({
+    locale,
+    path: '/download',
+    title: pageCopy.title,
     description: pageCopy.subtitle,
-  };
+    keywords: [...localSeoKeywords, 'Silk Beauty Salon Android app', 'Batumi salon app'],
+    imageAlt: 'Silk Beauty Salon Android app download for Batumi, Georgia',
+  });
 }
 
 export function generateStaticParams() {
@@ -224,7 +229,7 @@ export default async function DownloadPage({
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/hero-poster.jpg"
-                  alt=""
+                  alt="Silk Beauty Salon Android app download for clients in Batumi, Georgia"
                   fill
                   className="object-cover"
                   priority

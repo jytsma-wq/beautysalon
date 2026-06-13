@@ -5,93 +5,26 @@
 
 import { MetadataRoute } from 'next';
 import { locales } from '@/i18n';
+import { getCanonicalUrl, getLanguageAlternates } from '@/lib/seo';
+import { getSitemapRoutes } from '@/lib/sitemap-routes';
 
-const defaultLocale = 'en';
-
-// Static routes that exist in all locales
-const STATIC_ROUTES = [
-  '',
-  '/about',
-  '/treatments',
-  '/conditions',
-  '/pricelist',
-  '/offers',
-  '/before-after',
-  '/contact-us',
-  '/book',
-  '/consultation',
-  '/international-clients',
-  '/faq',
-  '/careers',
-  '/media-press',
-  '/media-gallery',
-  '/blog',
-  '/download',
-  '/accessibility',
-  '/privacy-policy',
-  '/terms-conditions',
-];
-
-interface SitemapEntry {
-  url: string;
-  lastModified: Date;
-  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number;
-  alternates?: {
-    languages: Record<string, string>;
-  };
-}
+const BUILD_TIME = new Date(process.env.BUILD_TIMESTAMP || Date.now());
 
 /**
  * Generate sitemap entries for all locales
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.silkbeautysalon.online';
-  const entries: MetadataRoute.Sitemap = [];
+  const routes = await getSitemapRoutes();
 
-  // Generate entries for each static route in each locale
-  for (const route of STATIC_ROUTES) {
-    const routeEntries: SitemapEntry[] = [];
-    const alternates: Record<string, string> = {};
-
-    // Build alternates for all locales + x-default
-    for (const locale of locales) {
-      const url = `${baseUrl}/${locale}${route}`;
-      alternates[locale] = url;
-    }
-    // Add x-default pointing to default locale
-    alternates['x-default'] = `${baseUrl}/${defaultLocale}${route}`;
-
-    // Create entry for each locale with alternates
-    for (const locale of locales) {
-      const url = `${baseUrl}/${locale}${route}`;
-      
-      // Determine change frequency based on route
-      const changeFrequency = route === '/blog' ? 'weekly' : 
-                             route === '' ? 'daily' : 'monthly';
-      
-      // Determine priority based on route depth and importance
-      const priority = route === '' ? 1.0 :
-                      route === '/treatments' ? 0.9 :
-                      route === '/about' ? 0.8 :
-                      route === '/contact-us' ? 0.8 :
-                      0.6;
-
-      const entry: SitemapEntry = {
-        url,
-        lastModified: new Date(),
-        changeFrequency,
-        priority,
-        alternates: {
-          languages: alternates,
-        },
-      };
-
-      routeEntries.push(entry);
-    }
-
-    entries.push(...routeEntries);
-  }
-
-  return entries;
+  return locales.flatMap((locale) =>
+    routes.map((route) => ({
+      url: getCanonicalUrl(locale, route.path),
+      lastModified: BUILD_TIME,
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
+      alternates: {
+        languages: getLanguageAlternates(route.path),
+      },
+    }))
+  );
 }

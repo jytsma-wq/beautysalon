@@ -1,15 +1,24 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { EnhancedBeforeAfter } from '@/components/gallery/EnhancedBeforeAfter';
+import { Link } from '@/i18n/routing';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'beforeAfterPage' });
 
-  return {
-    title: t('title'),
-    description: t('subtitle'),
-  };
+  return buildSeoMetadata({
+    locale,
+    path: '/before-after',
+    title: locale === 'en' ? 'Before and After Aesthetic Results in Batumi' : t('title'),
+    description:
+      locale === 'en'
+        ? 'View treatment results from Silk Beauty Salon in Batumi, Georgia and book a consultation for your own aesthetic plan.'
+        : t('subtitle'),
+    keywords: [...localSeoKeywords, 'before and after Batumi', 'aesthetic results Georgia'],
+    imageAlt: 'Before and after aesthetic results at Silk Beauty Salon in Batumi',
+  });
 }
 
 export default async function BeforeAfterPage({
@@ -72,15 +81,13 @@ export default async function BeforeAfterPage({
           <p className="text-stone-500 mb-10 max-w-xl mx-auto leading-relaxed">
             {t('ctaText', { defaultValue: 'Book a consultation with one of our expert practitioners to discuss your aesthetic goals.' })}
           </p>
-          <a
-            href={`https://www.silkbeautysalon.online/book`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/book"
             className="inline-flex items-center gap-3 px-10 py-4 bg-stone-900 text-stone-50 text-sm uppercase tracking-widest hover:bg-[#b5453a] transition-colors duration-300"
           >
             {t('bookNow', { defaultValue: 'Book Now' })}
             <span className="text-lg">→</span>
-          </a>
+          </Link>
         </div>
       </section>
     </div>

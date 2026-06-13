@@ -1,11 +1,12 @@
 export const siteConfig = {
   name: "Silk Beauty Salon",
   description: "Batumi's premier beauty salon on Zurab Gorgiladze Street. We bring together expert practitioners, cutting-edge treatments & luxury care to enhance your natural beauty with precision & confidence.",
-  url: "https://www.silkbeautysalon.online",
+  url: "https://silkbeautysalon.online",
   
   contact: {
     address: "Zurab Gorgiladze 63",
     city: "Batumi",
+    region: "Adjara",
     postcode: "6000",
     country: "Georgia",
     phone: "+995 599 123 456",

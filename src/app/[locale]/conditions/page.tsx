@@ -5,15 +5,23 @@ import { ChevronRight } from 'lucide-react';
 import { getLocalizedConditions } from '@/data/conditions';
 import { Button } from '@/components/ui/button';
 import { getTranslations } from 'next-intl/server';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'conditionsPage' });
 
-  return {
-    title: t('metaTitle'),
-    description: t('metaDescription'),
-  };
+  return buildSeoMetadata({
+    locale,
+    path: '/conditions',
+    title: locale === 'en' ? 'Skin Conditions Treated in Batumi, Georgia' : t('metaTitle'),
+    description:
+      locale === 'en'
+        ? 'Find targeted skin care and aesthetic treatment plans for acne, pigmentation, wrinkles and more at Silk Beauty Salon in Batumi, Georgia.'
+        : t('metaDescription'),
+    keywords: localSeoKeywords,
+    imageAlt: 'Skin care treatments at Silk Beauty Salon in Batumi, Georgia',
+  });
 }
 
 export async function generateStaticParams() {
@@ -37,7 +45,7 @@ export default async function ConditionsPage({
       <section className="relative w-full h-[60vh] md:h-[80vh]">
         <Image
           src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80"
-          alt={t('skinCareTreatment')}
+          alt={`${t('skinCareTreatment')} at Silk Beauty Salon in Batumi, Georgia`}
           fill
           className="object-cover"
           priority

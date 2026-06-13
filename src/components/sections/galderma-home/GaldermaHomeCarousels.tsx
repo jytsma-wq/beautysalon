@@ -108,9 +108,15 @@ export function ClinicalHeroCarousel() {
                     <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
                       {slide.eyebrow}
                     </p>
-                    <h1 className="font-sans text-[clamp(2.75rem,5.4vw,5.4rem)] font-light leading-[1.02] text-[#241f1b]">
-                      {slide.title}
-                    </h1>
+                    {index === 0 ? (
+                      <h1 className="font-sans text-[clamp(2.75rem,5.4vw,5.4rem)] font-light leading-[1.02] text-[#241f1b]">
+                        {slide.title}
+                      </h1>
+                    ) : (
+                      <h2 className="font-sans text-[clamp(2.75rem,5.4vw,5.4rem)] font-light leading-[1.02] text-[#241f1b]">
+                        {slide.title}
+                      </h2>
+                    )}
                     <p className="mt-7 max-w-md text-base leading-8 text-stone-700 md:text-lg">
                       {slide.description}
                     </p>
@@ -125,7 +131,7 @@ export function ClinicalHeroCarousel() {
                 <div className="relative order-1 min-h-[48svh] overflow-hidden lg:order-2 lg:min-h-0">
                   <Image
                     src={slide.image}
-                    alt=""
+                    alt={`Silk Beauty Salon in Batumi, Georgia - ${slide.title}`}
                     fill
                     priority={index === 0}
                     className="object-cover"
@@ -210,7 +216,7 @@ export function ConcernCarousel() {
                 <div className="relative aspect-4/5 overflow-hidden bg-stone-100">
                   <Image
                     src={item.image}
-                    alt=""
+                    alt={`${item.name} treatment consultation at Silk Beauty Salon in Batumi, Georgia`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     sizes="(max-width: 640px) 86vw, (max-width: 1024px) 48vw, 31vw"
@@ -269,7 +275,7 @@ export function ResultsCarousel() {
                   <div className="relative aspect-3/4 overflow-hidden bg-stone-100">
                     <Image
                       src={item.beforeImage}
-                      alt=""
+                      alt={`Before ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
                       fill
                       className="object-cover object-top"
                       sizes="(max-width: 768px) 46vw, 24vw"
@@ -283,7 +289,7 @@ export function ResultsCarousel() {
                   <div className="relative aspect-3/4 overflow-hidden bg-stone-100">
                     <Image
                       src={item.afterImage}
-                      alt=""
+                      alt={`After ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
                       fill
                       className="object-cover object-top"
                       sizes="(max-width: 768px) 46vw, 24vw"
@@ -346,7 +352,7 @@ export function TrendsCarousel() {
                 <div className="relative aspect-4/3 overflow-hidden bg-stone-100">
                   <Image
                     src={article.image}
-                    alt=""
+                    alt={`${article.title} - Silk Beauty Salon Batumi skin care guide`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 88vw, 32vw"

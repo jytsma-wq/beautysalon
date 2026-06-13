@@ -10,6 +10,7 @@ import {
 } from '@/data/treatments';
 import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -35,10 +36,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {
-    title: `${treatment.name} | Silk Beauty Salon`,
-    description: treatment.shortDescription,
-  };
+  return buildSeoMetadata({
+    locale: resolvedParams.locale,
+    path: `/treatments/${resolvedParams.slug}`,
+    title: `${treatment.name} in Batumi, Georgia`,
+    description: `${treatment.shortDescription} Book ${treatment.name.toLowerCase()} at Silk Beauty Salon in Batumi, Georgia.`,
+    keywords: [treatment.name, `${treatment.name} Batumi`, `${treatment.name} Georgia`, ...localSeoKeywords],
+    image: treatment.image,
+    imageAlt: `${treatment.name} at Silk Beauty Salon in Batumi, Georgia`,
+  });
 }
 
 export async function generateStaticParams() {
@@ -146,7 +152,7 @@ export default async function TreatmentPage({ params }: Props) {
           <div className="relative min-h-[44svh] overflow-hidden lg:min-h-0">
             <Image
               src={treatment.image}
-              alt={treatment.name}
+              alt={`${treatment.name} at Silk Beauty Salon in Batumi, Georgia`}
               fill
               className="object-cover"
               priority
@@ -292,7 +298,7 @@ export default async function TreatmentPage({ params }: Props) {
                       <div className="relative mb-6 aspect-4/5 overflow-hidden">
                         <Image
                           src={related.image}
-                          alt={related.name}
+                          alt={`${related.name} treatment at Silk Beauty Salon in Batumi`}
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />

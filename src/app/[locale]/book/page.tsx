@@ -7,6 +7,7 @@ import { getTranslations } from 'next-intl/server';
 import { siteConfig } from '@/data/site-config';
 import { BookingForm } from './booking-form';
 import { ConsultationTypeButtons } from './consultation-type-buttons';
+import { buildSeoMetadata, getSiteUrl, localSeoKeywords } from '@/lib/seo';
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -24,7 +25,7 @@ const JSON_LD_BASE = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
   name: 'Silk Beauty Salon',
-  image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1920&q=80',
+  image: `${getSiteUrl()}/images/hero-poster.jpg`,
   priceRange: '$$',
   acceptsOffers: [
     { '@type': 'Offer', name: 'Facial Consultation', price: '50', priceCurrency: 'USD' },
@@ -34,11 +35,18 @@ const JSON_LD_BASE = {
   ],
 } as const;
 
-export async function generateMetadata({ params: _params }: Props): Promise<Metadata> {
-  return {
-    title: 'Book Your Consultation | Silk Beauty Salon',
-    description: 'Select a consultation type and reserve your appointment.',
-  };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  return buildSeoMetadata({
+    locale,
+    path: '/book',
+    title: 'Book a Beauty Salon Consultation in Batumi',
+    description:
+      'Book a consultation at Silk Beauty Salon in Batumi, Georgia for facials, skin care, injectables and aesthetic treatment planning.',
+    keywords: localSeoKeywords,
+    imageAlt: 'Book Silk Beauty Salon consultations in Batumi, Georgia',
+  });
 }
 
 export default async function BookingPage({ params }: Props) {
@@ -77,7 +85,9 @@ export default async function BookingPage({ params }: Props) {
       '@type': 'PostalAddress' as const,
       streetAddress: siteConfig.contact.address,
       addressLocality: siteConfig.contact.city,
-      addressCountry: 'GE',
+      addressRegion: siteConfig.contact.region,
+      postalCode: siteConfig.contact.postcode,
+      addressCountry: siteConfig.contact.country,
     },
     telephone: siteConfig.contact.phone,
     email: siteConfig.contact.email,
@@ -117,7 +127,7 @@ export default async function BookingPage({ params }: Props) {
             <div className="relative aspect-4/3 overflow-hidden rounded-xl">
               <Image
                 src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1920&q=80"
-                alt={t('heroImageAlt')}
+                alt={`${t('heroImageAlt')} at Silk Beauty Salon in Batumi, Georgia`}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 52vw"

@@ -5,14 +5,22 @@ import { siteConfig } from '@/data/site-config';
 import { Button } from '@/components/ui/button';
 import { getTranslations } from 'next-intl/server';
 import { Link as I18nLink } from '@/i18n/routing';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'internationalPage' });
-  return {
-    title: `${t('title')} | Silk Beauty Salon`,
-    description: t('subtitle'),
-  };
+  return buildSeoMetadata({
+    locale,
+    path: '/international-clients',
+    title: locale === 'en' ? 'Beauty Salon in Batumi for International Clients' : t('title'),
+    description:
+      locale === 'en'
+        ? 'Plan aesthetic treatments in Batumi, Georgia with Silk Beauty Salon, including Botox, fillers, facials and travel-friendly consultations.'
+        : t('subtitle'),
+    keywords: localSeoKeywords,
+    imageAlt: 'Silk Beauty Salon in Batumi, Georgia for international aesthetic clients',
+  });
 }
 
 export async function generateStaticParams() {
@@ -74,7 +82,7 @@ export default async function InternationalClientsPage({
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920&q=80"
-            alt={t('silkBeautySalon')}
+            alt={`${t('silkBeautySalon')} in Batumi, Georgia`}
             fill
             className="object-cover"
             priority
@@ -163,7 +171,7 @@ export default async function InternationalClientsPage({
               <div className="aspect-4/5 overflow-hidden relative bg-[#f7f4f0]">
                 <Image
                   src={team?.image || "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80"}
-                  alt={t('teamMember', { name: team?.name || 'Team Member' })}
+                  alt={`${t('teamMember', { name: team?.name || 'Team Member' })} at Silk Beauty Salon in Batumi`}
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"

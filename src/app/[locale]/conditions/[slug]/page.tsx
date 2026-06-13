@@ -7,6 +7,7 @@ import { getConditionBySlug, getAllConditions } from '@/data/conditions';
 import { getTreatmentBySlug } from '@/data/treatments';
 import { Button } from '@/components/ui/button';
 import { getTranslations } from 'next-intl/server';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -23,10 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {
-    title: `${condition.name} | Silk Beauty Salon`,
-    description: condition.shortDescription,
-  };
+  return buildSeoMetadata({
+    locale: resolvedParams.locale,
+    path: `/conditions/${resolvedParams.slug}`,
+    title: `${condition.name} Treatment in Batumi, Georgia`,
+    description: `${condition.shortDescription} Book a consultation for ${condition.name.toLowerCase()} at Silk Beauty Salon in Batumi, Georgia.`,
+    keywords: [condition.name, `${condition.name} treatment Batumi`, `${condition.name} Georgia`, ...localSeoKeywords],
+    image: condition.image,
+    imageAlt: `${condition.name} consultation at Silk Beauty Salon in Batumi, Georgia`,
+  });
 }
 
 export const dynamicParams = true;
@@ -106,7 +112,7 @@ export default async function ConditionPage({ params }: Props) {
             <div className="relative aspect-3/4 w-full overflow-hidden rounded-[8px]">
               <Image
                 src={condition.image}
-                alt={condition.name}
+                alt={`${condition.name} consultation at Silk Beauty Salon in Batumi, Georgia`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

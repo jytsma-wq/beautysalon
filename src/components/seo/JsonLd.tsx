@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import { siteConfig } from "@/data/site-config"
+import { getSiteUrl } from '@/lib/seo';
 
 export function generateLocalBusinessSchema(locale: string = "en") {
   const localeNames: Record<string, string> = {
@@ -12,7 +13,7 @@ export function generateLocalBusinessSchema(locale: string = "en") {
   }
 
   const descriptions: Record<string, string> = {
-    en: "Premier medical aesthetic clinic in Batumi, Georgia offering Botox, dermal fillers, laser treatments, and advanced skin care.",
+    en: "Beauty salon in Batumi, Georgia offering aesthetic treatments, Botox, dermal fillers, laser treatments, facials, nails, lashes, and advanced skin care.",
     ka: "ბათუმის წამალი ესთეტიკის კლინიკა, ბოტოქსი, დერმალური ფილერები, ლაზერული მკურნალობა და გაუმჯობესებული კანის მოვლა.",
     ru: "Ведущая клиника медицинской эстетики в Батуми, Грузия. Предлагаем ботокс, дермальные наполнители, лазерные процедуры и уход за кожей.",
     tr: "Batumi'de Botox, dermal dolgular, lazer tedavileri ve ileri cilt bakimi sunan premier tibbi estetik klinigi.",
@@ -20,18 +21,29 @@ export function generateLocalBusinessSchema(locale: string = "en") {
     he: "קליניקת אסתטיקה רפואית מובילה בבטומי גאורגיה המציעה בוטוקס, מילוי עור, טיפולי לייזר וטיפוח עור מתקדם."
   }
 
+  const siteUrl = getSiteUrl();
+
   const schema = {
     "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "BeautySalon"],
+    "@type": "BeautySalon",
+    "@id": `${siteUrl}/#beautysalon`,
     "name": localeNames[locale] || localeNames.en,
+    "alternateName": "Silk Beauty Salon Batumi",
     "description": descriptions[locale] || descriptions.en,
-    "url": siteConfig.url,
+    "url": siteUrl,
     "telephone": siteConfig.contact.phone,
     "email": siteConfig.contact.email,
+    "priceRange": "GEL $$",
+    "image": [
+      `${siteUrl}/images/hero-poster.jpg`,
+      `${siteUrl}/opengraph-image.png`
+    ],
+    "logo": `${siteUrl}/logo.svg`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteConfig.contact.address,
       "addressLocality": siteConfig.contact.city,
+      "addressRegion": siteConfig.contact.region,
       "postalCode": siteConfig.contact.postcode,
       "addressCountry": siteConfig.contact.country
     },
@@ -40,6 +52,25 @@ export function generateLocalBusinessSchema(locale: string = "en") {
       "latitude": "41.6417",
       "longitude": "41.6372"
     },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Zurab%20Gorgiladze%2063%2C%20Batumi%2C%20Georgia",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Batumi",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Adjara"
+        }
+      },
+      {
+        "@type": "Country",
+        "name": "Georgia"
+      }
+    ],
+    "openingHours": [
+      "Mo-Sa 10:00-22:00",
+      "Su 11:00-22:00"
+    ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "10:00", "closes": "22:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "22:00" },
@@ -49,8 +80,6 @@ export function generateLocalBusinessSchema(locale: string = "en") {
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "22:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "22:00" }
     ],
-    "priceRange": "$$",
-    "image": `${siteConfig.url}/opengraph-image.png`,
     "sameAs": [
       siteConfig.social.instagram,
       siteConfig.social.facebook,
@@ -126,12 +155,12 @@ export function generateTreatmentSchema(treatment: {
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `${siteConfig.url}/treatments/${treatment.name.toLowerCase().replace(/\s+/g, '-')}`
+      "@id": `${getSiteUrl()}/treatments/${treatment.name.toLowerCase().replace(/\s+/g, '-')}`
     },
     "provider": {
-      "@type": "MedicalBusiness",
+      "@type": "BeautySalon",
       "name": siteConfig.name,
-      "url": siteConfig.url
+      "url": getSiteUrl()
     },
     "offers": treatment.price ? {
       "@type": "Offer",
@@ -200,9 +229,9 @@ export function generateServiceSchema(service: {
     "description": service.description,
     "image": service.image,
     "provider": {
-      "@type": "MedicalBusiness",
+      "@type": "BeautySalon",
       "name": siteConfig.name,
-      "url": siteConfig.url
+      "url": getSiteUrl()
     },
     "areaServed": {
       "@type": "City",
@@ -220,7 +249,7 @@ export function generateServiceSchema(service: {
         "itemOffered": {
           "@type": "Service",
           "name": treatment.name,
-          "url": `${siteConfig.url}${treatment.url}`
+          "url": `${getSiteUrl()}${treatment.url}`
         }
       }))
     }

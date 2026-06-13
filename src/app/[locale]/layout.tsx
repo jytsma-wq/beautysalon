@@ -12,6 +12,7 @@ import { ChatbotWidget } from "@/components/layout/ChatbotWidget";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { siteConfig } from '@/data/site-config';
+import { getSiteUrl } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -22,11 +23,16 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata' });
   
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || siteConfig.url),
-    title: t('siteTitle'),
+    metadataBase: new URL(getSiteUrl()),
+    title: {
+      default: t('siteTitle'),
+      template: '%s | Silk Beauty Salon',
+    },
     description: t('siteDescription'),
     keywords: t('siteKeywords'),
-    authors: [{ name: "Silk Beauty Salon" }],
+    authors: [{ name: siteConfig.name }],
+    creator: siteConfig.name,
+    publisher: siteConfig.name,
     icons: {
       icon: "/favicon.ico",
     },

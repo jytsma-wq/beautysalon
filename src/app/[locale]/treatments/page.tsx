@@ -5,6 +5,7 @@ import { getTreatmentCategoriesByLocale, getAllCategorySlugs } from '@/lib/treat
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 // Generate static params for all locales
 export async function generateStaticParams() {
@@ -29,10 +30,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'treatmentsPage' });
 
-  return {
-    title: t('metaTitle'),
-    description: t('metaDescription'),
-  };
+  return buildSeoMetadata({
+    locale,
+    path: '/treatments',
+    title: locale === 'en' ? 'Aesthetic Treatments in Batumi, Georgia' : t('metaTitle'),
+    description:
+      locale === 'en'
+        ? 'Explore Botox, dermal fillers, facials, laser treatments and advanced skin care at Silk Beauty Salon in Batumi, Georgia.'
+        : t('metaDescription'),
+    keywords: localSeoKeywords,
+    imageAlt: 'Aesthetic treatments at Silk Beauty Salon in Batumi, Georgia',
+  });
 }
 
 export default async function TreatmentsPage({
@@ -51,7 +59,7 @@ export default async function TreatmentsPage({
       <section className="relative w-full h-[60vh] md:h-[80vh]">
         <Image
           src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1920&q=80"
-          alt={t('luxuryBeautySalon')}
+          alt={`${t('luxuryBeautySalon')} at Silk Beauty Salon in Batumi, Georgia`}
           fill
           className="object-cover"
           priority

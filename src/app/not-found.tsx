@@ -1,11 +1,6 @@
-import { Link } from '@/i18n/routing';
-import { Button } from '@/components/ui/button';
-import { routing } from '@/i18n/routing';
+import Link from 'next/link';
 
 export default function NotFound() {
-  // Root not-found should redirect to default locale
-  const locale = routing.defaultLocale;
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center max-w-md px-4">
@@ -19,16 +14,18 @@ export default function NotFound() {
           Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved or deleted.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild className="btn-gold">
-            <Link href={`/${locale}`}>
-              Go Home
-            </Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link href={`/${locale}/contact-us`}>
-              Contact Us
-            </Link>
-          </Button>
+          <Link
+            href="/"
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-[#241f1b] px-6 text-sm font-medium text-white transition-colors hover:bg-[#8d6f58]"
+          >
+            Go Home
+          </Link>
+          <Link
+            href="/en/contact-us"
+            className="inline-flex min-h-11 items-center justify-center rounded-md border border-[#d9cec1] px-6 text-sm font-medium text-[#241f1b] transition-colors hover:bg-[#f3ece3]"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </div>

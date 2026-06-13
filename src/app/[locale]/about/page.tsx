@@ -5,14 +5,22 @@ import { ChevronRight, Award, Heart, Shield, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/data/site-config';
 import { getTranslations } from 'next-intl/server';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'aboutPage' });
-  return {
-    title: `${t('title')} | Silk Beauty Salon`,
-    description: t('subtitle'),
-  };
+  return buildSeoMetadata({
+    locale,
+    path: '/about',
+    title: locale === 'en' ? 'Beauty Specialists in Batumi, Georgia' : t('title'),
+    description:
+      locale === 'en'
+        ? 'Meet Silk Beauty Salon, a beauty salon in Batumi, Georgia led by experienced aesthetic and beauty specialists.'
+        : t('subtitle'),
+    keywords: localSeoKeywords,
+    imageAlt: 'Silk Beauty Salon team and clinic in Batumi, Georgia',
+  });
 }
 
 export async function generateStaticParams() {
@@ -61,7 +69,7 @@ export default async function AboutPage({
             <div className="relative aspect-[4/3] overflow-hidden rounded-[8px]">
               <Image
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920&q=80"
-                alt="Silk Beauty Salon Interior"
+                alt="Silk Beauty Salon interior in Batumi, Georgia"
                 fill
                 className="object-cover"
                 priority
@@ -83,7 +91,7 @@ export default async function AboutPage({
             <div className="relative aspect-[4/5] overflow-hidden rounded-[8px]">
               <Image
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80"
-                alt="Silk Beauty Salon Clinic"
+                alt="Silk Beauty Salon clinic in Batumi, Georgia"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -122,7 +130,7 @@ export default async function AboutPage({
                 <div className="relative mx-auto mb-4 aspect-[4/5] max-w-xs overflow-hidden rounded-[8px]">
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name}, ${member.role} at Silk Beauty Salon in Batumi`}
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 640px) 50vw, 400px"
