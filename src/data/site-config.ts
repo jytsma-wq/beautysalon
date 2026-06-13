@@ -1,5 +1,7 @@
 export const siteConfig = {
   name: "Silk Beauty Salon",
+  legalName: "Silk Beauty Salon Batumi",
+  founderName: "Nana Gviniashvili",
   description: "Batumi's premier beauty salon on Zurab Gorgiladze Street. We bring together expert practitioners, cutting-edge treatments & luxury care to enhance your natural beauty with precision & confidence.",
   url: "https://silkbeautysalon.online",
   
@@ -25,7 +27,22 @@ export const siteConfig = {
   
   social: {
     instagram: "https://www.instagram.com/silkbeauty_batumi/",
-    facebook: "https://www.facebook.com/silkbeautybatumi/"
+    facebook: "https://www.facebook.com/silkbeautybatumi/",
+    googleBusinessProfile: ""
+  },
+
+  trust: {
+    ownership: "Locally operated in Batumi by Nana Gviniashvili, owner and lead aesthetic practitioner.",
+    standards: [
+      "Consultation-led treatments with clear contraindication checks and aftercare guidance",
+      "Practitioners trained across aesthetics, facial care, skin analysis, and client safety",
+      "Transparent contact details, opening hours, and location information on every page"
+    ],
+    evidence: [
+      "Team profiles list practitioner experience, languages, and training areas",
+      "Treatment pages explain procedure expectations, benefits, downtime, and aftercare",
+      "Editorial articles cite dermatology and regulatory sources where medical-aesthetic guidance is discussed"
+    ]
   },
   
   awards: [

@@ -3,16 +3,29 @@ import { Link } from '@/i18n/routing';
 import { ChevronRight, Calendar, Clock } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { getBlogPosts } from '@/data/blog';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'blogPage' });
-  return {
-    title: t('metaTitle', { defaultValue: 'Blog | Silk Beauty Salon' }),
-    description: t('metaDescription', {
-      defaultValue: 'Read our latest articles on aesthetic treatments, skincare tips, and industry insights.',
-    }),
-  };
+
+  return buildSeoMetadata({
+    locale,
+    path: '/blog',
+    title: locale === 'en' ? 'Beauty Care Blog in Batumi' : t('metaTitle'),
+    description:
+      locale === 'en'
+        ? 'Expert beauty salon guides for Batumi clients, including facials, skin care, Botox, fillers, aftercare, and treatment planning.'
+        : t('metaDescription'),
+    keywords: [
+      'beauty blog Batumi',
+      'skin care Batumi',
+      'facials Batumi',
+      'Botox and fillers Batumi',
+      ...localSeoKeywords,
+    ],
+    imageAlt: 'Silk Beauty Salon beauty care journal in Batumi, Georgia',
+  });
 }
 
 export async function generateStaticParams() {

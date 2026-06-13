@@ -88,6 +88,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <head>
         {csrfToken ? <meta name="csrf-token" content={csrfToken} /> : null}
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://cdn.coverr.co" />
+        <link rel="dns-prefetch" href="https://cdn.coverr.co" />
       </head>
       <body className={`${inter.variable} ${dmSerifDisplay.variable}`}>{children}</body>
     </html>

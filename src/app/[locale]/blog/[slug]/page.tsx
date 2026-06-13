@@ -1,16 +1,19 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
 import { ChevronRight, Calendar, Clock, User, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { siteConfig } from '@/data/site-config';
+import { locales } from '@/i18n';
 import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
-import { JsonLd, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
+import { JsonLd, generateArticleSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 import { getBlogPostBySlug, getAllBlogSlugs, getRelatedBlogPosts } from '@/data/blog';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
@@ -18,25 +21,37 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const post = await getBlogPostBySlug(slug, locale);
   
   if (!post) {
-    return { title: 'Post Not Found' };
+    return buildSeoMetadata({
+      locale,
+      path: `/blog/${slug}`,
+      title: 'Post Not Found',
+      description: 'This Silk Beauty Salon blog post could not be found.',
+      noIndex: true,
+    });
   }
 
-  return {
-    title: `${post.title} | Silk Beauty Salon Blog`,
+  const metadata = buildSeoMetadata({
+    locale,
+    path: `/blog/${slug}`,
+    title: post.title,
     description: post.excerpt,
+    keywords: [post.title, post.category, post.author, ...localSeoKeywords],
+    image: post.image,
+    imageAlt: `${post.title} by ${post.author}`,
+    type: 'article',
+  });
+
+  return {
+    ...metadata,
     openGraph: {
+      ...metadata.openGraph,
       title: post.title,
       description: post.excerpt,
-      images: [post.image],
       type: 'article',
       publishedTime: post.createdAt.toISOString(),
+      modifiedTime: post.updatedAt.toISOString(),
       authors: [post.author],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
+      tags: [post.category],
     },
   };
 }
@@ -54,30 +69,22 @@ export default async function BlogPostPage({
   const relatedPosts = await getRelatedBlogPosts(slug, locale, 3);
   
   if (!post) {
-    return (
-      <div className="section-spacing text-center">
-        <h1 className="text-2xl font-serif text-primary">Post not found</h1>
-        <Link href="/blog" className="text-gold hover:underline mt-4 inline-block">
-          Back to Blog
-        </Link>
-      </div>
-    );
+    notFound();
   }
 
   // Generate schemas
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: tCommon('home'), url: siteConfig.url },
-    { name: t('breadcrumb'), url: `${siteConfig.url}/blog` },
-    { name: post.title, url: `${siteConfig.url}/blog/${slug}` },
+    { name: tCommon('home'), url: `${siteConfig.url}/${locale}` },
+    { name: t('breadcrumb'), url: `${siteConfig.url}/${locale}/blog` },
+    { name: post.title, url: `${siteConfig.url}/${locale}/blog/${slug}` },
   ]);
-
-  // Parse FAQs from content if they exist (stored as JSON in a comment or separate field)
-  // For now, we'll skip FAQ schema generation since FAQs are not in the database schema
+  const articleSchema = generateArticleSchema({ ...post, locale });
 
   return (
     <>
       {/* JSON-LD Schemas */}
-      <JsonLd schema={breadcrumbSchema} />
+      <JsonLd id="json-ld-blog-breadcrumbs" schema={breadcrumbSchema} />
+      <JsonLd id="json-ld-blog-article" schema={articleSchema} />
 
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] md:h-[80vh]">
@@ -168,7 +175,7 @@ export default async function BlogPostPage({
                 <div className="flex items-center gap-3">
                   <Button variant="outline" size="sm" asChild>
                     <a 
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${siteConfig.url}/blog/${slug}`)}`}
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${siteConfig.url}/${locale}/blog/${slug}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -178,7 +185,7 @@ export default async function BlogPostPage({
                   </Button>
                   <Button variant="outline" size="sm" asChild>
                     <a 
-                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`${siteConfig.url}/blog/${slug}`)}&text=${encodeURIComponent(post.title)}`}
+                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(`${siteConfig.url}/${locale}/blog/${slug}`)}&text=${encodeURIComponent(post.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -188,7 +195,7 @@ export default async function BlogPostPage({
                   </Button>
                   <Button variant="outline" size="sm" asChild>
                     <a 
-                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`${siteConfig.url}/blog/${slug}`)}&title=${encodeURIComponent(t('shareArticleTitle', { title: post.title }))}`}
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`${siteConfig.url}/${locale}/blog/${slug}`)}&title=${encodeURIComponent(post.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

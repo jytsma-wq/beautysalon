@@ -1,7 +1,18 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { ChevronRight, Award, Heart, Shield, Sparkles } from 'lucide-react';
+import {
+  ChevronRight,
+  Award,
+  Heart,
+  Shield,
+  Sparkles,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  CheckCircle2,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/data/site-config';
 import { getTranslations } from 'next-intl/server';
@@ -101,6 +112,97 @@ export default async function AboutPage({
         </div>
       </section>
 
+      <section className="section-spacing bg-[#f7f4f0]" aria-labelledby="trust-title">
+        <div className="container-custom">
+          <div className="mb-12 max-w-3xl">
+            <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
+              Trust, ownership, and contact details
+            </p>
+            <h2
+              id="trust-title"
+              className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl"
+            >
+              Locally operated beauty care in Batumi
+            </h2>
+            <p className="text-base leading-7 text-stone-700">{siteConfig.trust.ownership}</p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-[42%_58%]">
+            <dl className="grid gap-6 sm:grid-cols-2">
+              <div className="border-t border-[#d8cbbb] pt-5">
+                <dt className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-stone-500">
+                  <Award className="h-4 w-4 text-[#8d6f58]" />
+                  Legal name
+                </dt>
+                <dd className="font-sans text-lg text-[#241f1b]">{siteConfig.legalName}</dd>
+              </div>
+              <div className="border-t border-[#d8cbbb] pt-5">
+                <dt className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-stone-500">
+                  <Shield className="h-4 w-4 text-[#8d6f58]" />
+                  Owner
+                </dt>
+                <dd className="font-sans text-lg text-[#241f1b]">{siteConfig.founderName}</dd>
+              </div>
+              <div className="border-t border-[#d8cbbb] pt-5">
+                <dt className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-stone-500">
+                  <MapPin className="h-4 w-4 text-[#8d6f58]" />
+                  Address
+                </dt>
+                <dd className="text-sm leading-6 text-stone-700">
+                  {siteConfig.contact.address}, {siteConfig.contact.city}, {siteConfig.contact.region}{' '}
+                  {siteConfig.contact.postcode}, {siteConfig.contact.country}
+                </dd>
+              </div>
+              <div className="border-t border-[#d8cbbb] pt-5">
+                <dt className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-stone-500">
+                  <Phone className="h-4 w-4 text-[#8d6f58]" />
+                  Contact
+                </dt>
+                <dd className="space-y-1 text-sm leading-6 text-stone-700">
+                  <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`} className="block hover:text-[#8d6f58]">
+                    {siteConfig.contact.phone}
+                  </a>
+                  <a href={`mailto:${siteConfig.contact.email}`} className="block hover:text-[#8d6f58]">
+                    <Mail className="mr-1 inline h-3.5 w-3.5" />
+                    {siteConfig.contact.email}
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="mb-4 flex items-center gap-2 font-sans text-xl font-light text-[#241f1b]">
+                  <Clock className="h-5 w-5 text-[#8d6f58]" />
+                  Opening hours
+                </h3>
+                <dl className="space-y-2 text-sm text-stone-700">
+                  {Object.entries(siteConfig.businessHours).map(([day, hours]) => (
+                    <div key={day} className="flex justify-between gap-4 border-b border-[#e8e4df] pb-2">
+                      <dt className="capitalize">{day}</dt>
+                      <dd className="text-[#241f1b]">{hours}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+              <div>
+                <h3 className="mb-4 font-sans text-xl font-light text-[#241f1b]">
+                  Operating standards
+                </h3>
+                <ul className="space-y-3 text-sm leading-6 text-stone-700">
+                  {siteConfig.trust.standards.map((standard) => (
+                    <li key={standard} className="flex gap-3">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#8d6f58]" />
+                      <span>{standard}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-spacing bg-secondary">
         <div className="container-custom">
           <div className="mb-12 text-center">
@@ -141,6 +243,16 @@ export default async function AboutPage({
                   {member.role}
                 </p>
                 <p className="mx-auto max-w-sm text-sm text-muted-foreground">{member.bio}</p>
+                {member.qualifications && (
+                  <ul className="mx-auto mt-4 max-w-sm space-y-2 text-left text-xs leading-5 text-stone-600">
+                    {member.qualifications.map((qualification) => (
+                      <li key={qualification} className="flex gap-2">
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#8d6f58]" />
+                        <span>{qualification}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {member.languages && (
                   <p className="mt-2 text-xs text-muted-foreground">Languages: {member.languages.join(', ')}</p>
                 )}

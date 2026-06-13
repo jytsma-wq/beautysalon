@@ -28,6 +28,7 @@ export function generateLocalBusinessSchema(locale: string = "en") {
     "@type": "BeautySalon",
     "@id": `${siteUrl}/#beautysalon`,
     "name": localeNames[locale] || localeNames.en,
+    "legalName": siteConfig.legalName,
     "alternateName": "Silk Beauty Salon Batumi",
     "description": descriptions[locale] || descriptions.en,
     "url": siteUrl,
@@ -80,9 +81,21 @@ export function generateLocalBusinessSchema(locale: string = "en") {
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "22:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "22:00" }
     ],
+    "founder": {
+      "@type": "Person",
+      "name": siteConfig.founderName,
+      "jobTitle": "Owner and Medical Aesthetic Practitioner"
+    },
+    "employee": siteConfig.team.map((member) => ({
+      "@type": "Person",
+      "name": member.name,
+      "jobTitle": member.role,
+      "knowsLanguage": member.languages
+    })),
     "sameAs": [
       siteConfig.social.instagram,
       siteConfig.social.facebook,
+      siteConfig.social.googleBusinessProfile,
       "https://www.tiktok.com/@silkbeautybatumi"
     ].filter(Boolean)
   }
@@ -214,6 +227,56 @@ export function generateReviewSchema(reviews: Array<{
 }
 
 /**
+ * Generate Article Schema for editorial content
+ */
+export function generateArticleSchema(article: {
+  title: string
+  slug: string
+  excerpt: string
+  image: string
+  category: string
+  author: string
+  locale?: string
+  createdAt: Date
+  updatedAt: Date
+  sourceUrls?: string[]
+}) {
+  const siteUrl = getSiteUrl()
+  const articleUrl = `${siteUrl}/${article.locale || 'en'}/blog/${article.slug}`
+  const imageUrl = article.image.startsWith('http') ? article.image : `${siteUrl}${article.image}`
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": articleUrl
+    },
+    "headline": article.title,
+    "description": article.excerpt,
+    "image": [imageUrl],
+    "datePublished": article.createdAt.toISOString(),
+    "dateModified": article.updatedAt.toISOString(),
+    "articleSection": article.category,
+    "author": {
+      "@type": "Person",
+      "name": article.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": siteConfig.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/logo.svg`
+      }
+    },
+    "citation": article.sourceUrls?.length ? article.sourceUrls : undefined
+  }
+
+  return JSON.stringify(schema)
+}
+
+/**
  * Generate Service Schema for treatment categories
  */
 export function generateServiceSchema(service: {
@@ -258,12 +321,12 @@ export function generateServiceSchema(service: {
   return JSON.stringify(schema)
 }
 
-export async function JsonLd({ schema }: { schema: string }) {
+export async function JsonLd({ schema, id = 'json-ld' }: { schema: string; id?: string }) {
   const nonce = await getNonce();
 
   return (
     <script
-      id="json-ld"
+      id={id}
       type="application/ld+json"
       nonce={nonce || undefined}
       dangerouslySetInnerHTML={{ __html: schema }}

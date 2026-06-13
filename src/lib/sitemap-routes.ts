@@ -1,4 +1,5 @@
 import { getAllConditions } from '@/data/conditions';
+import { getAllBlogSlugs } from '@/data/blog';
 import { treatmentCollections } from '@/data/treatment-collections';
 import { getAllTreatments } from '@/data/treatments';
 
@@ -41,9 +42,10 @@ export const staticSitemapRoutes: SitemapRoute[] = [
 ];
 
 export async function getSitemapRoutes(): Promise<SitemapRoute[]> {
-  const [treatments, conditions] = await Promise.all([
+  const [treatments, conditions, blogSlugs] = await Promise.all([
     getAllTreatments('en'),
     getAllConditions('en'),
+    getAllBlogSlugs(),
   ]);
 
   const treatmentRoutes = treatments.map((treatment) => ({
@@ -64,8 +66,15 @@ export async function getSitemapRoutes(): Promise<SitemapRoute[]> {
     priority: 0.78,
   }));
 
+  const blogRoutes = blogSlugs.map((slug) => ({
+    path: `/blog/${slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.72,
+  }));
+
   return [
     ...staticSitemapRoutes,
+    ...blogRoutes,
     ...treatmentCategoryRoutes,
     ...treatmentRoutes,
     ...conditionRoutes,

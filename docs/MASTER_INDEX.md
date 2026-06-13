@@ -6,6 +6,18 @@ You now have **11 comprehensive documents** covering every aspect of your websit
 
 ---
 
+## Organic SEO
+
+**ORGANIC_SEO_ROADMAP.md**
+- **What:** Search Console, Google Business Profile, local citations, review process, content plan, backlink outreach, and monthly measurement checklist.
+- **When to use:** When maintaining organic ranking work after deployment.
+- **Key features:**
+  - Separates code-complete SEO items from account-owner tasks
+  - Lists exact NAP to keep consistent across local profiles
+  - Includes legitimate outreach and monitoring workflow
+
+---
+
 ## 🎨 MAGAZINE REDESIGN (New!)
 
 ### Visual Transformation Documents
