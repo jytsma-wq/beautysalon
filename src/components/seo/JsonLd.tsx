@@ -1,6 +1,6 @@
-import Script from 'next/script';
 import { siteConfig } from "@/data/site-config"
 import { getSiteUrl } from '@/lib/seo';
+import { getNonce } from '@/lib/nonce';
 
 export function generateLocalBusinessSchema(locale: string = "en") {
   const localeNames: Record<string, string> = {
@@ -258,11 +258,14 @@ export function generateServiceSchema(service: {
   return JSON.stringify(schema)
 }
 
-export function JsonLd({ schema }: { schema: string }) {
+export async function JsonLd({ schema }: { schema: string }) {
+  const nonce = await getNonce();
+
   return (
-    <Script
+    <script
       id="json-ld"
       type="application/ld+json"
+      nonce={nonce || undefined}
       dangerouslySetInnerHTML={{ __html: schema }}
     />
   )
