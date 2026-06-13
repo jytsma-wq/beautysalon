@@ -1017,8 +1017,8 @@ Requirements:
                Batumi, Georgia 6010
              </p>
              <p className="mb-3">
-               <a href="tel:+995555123456" className="hover:text-stone-900">
-                 +995 555 123 456
+               <a href="tel:+995577345767" className="hover:text-stone-900">
+                 +995 577 34 57 67
                </a>
              </p>
              <p>
@@ -1104,7 +1104,7 @@ Requirements:
          </div>
          <div>
            <p className="mb-2 text-stone-500">Contact</p>
-           <p>+995 555 123 456</p>
+           <p>+995 577 34 57 67</p>
          </div>
          <div>
            <p className="mb-2 text-stone-500">Hours</p>

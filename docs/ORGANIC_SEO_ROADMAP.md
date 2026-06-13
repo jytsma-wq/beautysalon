@@ -28,7 +28,7 @@ This document tracks the parts of the Silk6 SEO goal that are outside normal cod
    - Use the exact NAP from the site:
      - Name: Silk Beauty Salon
      - Address: Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia
-     - Phone: +995 599 123 456
+     - Phone: +995 577 34 57 67
      - Email: info@silkbeautysalon.online
    - Add the website URL, business hours, service categories, photos, and appointment URL.
    - After the profile URL is live, add it to `siteConfig.social.googleBusinessProfile`.

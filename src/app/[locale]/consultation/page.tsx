@@ -123,7 +123,7 @@ export default async function ConsultationPage({
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-primary rounded-none px-8 py-6 text-sm tracking-widest uppercase"
               >
-                <Link href="tel:+995599123456">
+                <Link href="tel:+995577345767">
                   <Phone className="w-4 h-4 mr-2" />
                   {t('hero.call', { defaultValue: 'Call Us' })}
                 </Link>

@@ -246,7 +246,7 @@
       "title": "Visit Us",
       "address": "Zurab Gorgiladze 63",
       "city": "Batumi 6000, Georgia",
-      "phone": "+995 599 123 456",
+      "phone": "+995 577 34 57 67",
       "email": "info@silkbeautysalon.online"
     }
   },
@@ -457,7 +457,7 @@
       "downtimeQuestion": "Is there any downtime?",
       "downtimeAnswer": "Many of our treatments have minimal to no downtime. Some treatments may cause temporary swelling, redness, or bruising. We'll provide detailed aftercare instructions and advice on timing treatments around social commitments.",
       "bookingQuestion": "How do I book an appointment?",
-      "bookingAnswer": "You can book online through our website, call us at +995 599 123 456, or email info@silkbeautysalon.online. We recommend booking consultations in advance as we often have a waiting list.",
+      "bookingAnswer": "You can book online through our website, call us at +995 577 34 57 67, or email info@silkbeautysalon.online. We recommend booking consultations in advance as we often have a waiting list.",
       "virtualQuestion": "Do you offer virtual consultations?",
       "virtualAnswer": "Yes, we offer virtual consultations for those who cannot visit the salon initially. However, for treatments requiring precise assessment, an in-person consultation is recommended.",
       "brandsQuestion": "What brands of products do you use?",
@@ -1632,7 +1632,7 @@
     "fullName": "Full Name",
     "namePlaceholder": "Enter your full name",
     "phoneNumber": "Phone Number",
-    "phonePlaceholder": "+995 599 123 456",
+    "phonePlaceholder": "+995 577 34 57 67",
     "emailAddress": "Email Address",
     "emailPlaceholder": "your@email.com",
     "successTitle": "Booking Request Submitted",
@@ -1859,7 +1859,7 @@
     "conditions": "Skin Conditions",
     "contact": "Contact Info",
     "address": "Zurab Gorgiladze 63, Batumi 6000, Georgia",
-    "phone": "Tel: +995 599 123 456",
+    "phone": "Tel: +995 577 34 57 67",
     "email": "info@silkbeautysalon.online",
     "openingHours": "Opening Hours",
     "hours": {

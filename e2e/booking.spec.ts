@@ -85,7 +85,7 @@ test.describe('Booking Flow', () => {
     // Fill form
     await dialog.getByLabel(/full name/i).fill('Test User');
     await dialog.getByLabel(/email address/i).fill('test@example.com');
-    await dialog.getByLabel(/phone number/i).fill('+995 599 123 456');
+    await dialog.getByLabel(/phone number/i).fill('+995 577 34 57 67');
     
     // Select service
     await dialog.getByLabel(/select service/i).click();

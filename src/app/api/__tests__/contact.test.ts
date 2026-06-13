@@ -58,7 +58,7 @@ describe('Contact API', () => {
         body: JSON.stringify({
           name: 'John Doe',
           email: 'john@example.com',
-          phone: '+995 599 123 456',
+          phone: '+995 577 34 57 67',
           message: 'I would like to book a consultation for Botox treatment.',
           locale: 'en',
         }),
@@ -74,7 +74,7 @@ describe('Contact API', () => {
         data: {
           name: 'John Doe',
           email: 'john@example.com',
-          phone: '+995 599 123 456',
+          phone: '+995 577 34 57 67',
           message: 'I would like to book a consultation for Botox treatment.',
         },
       });
@@ -186,7 +186,7 @@ describe('Contact API', () => {
         body: JSON.stringify({
           name: '  John Doe  ',
           email: 'JOHN@EXAMPLE.COM',
-          phone: '  +995 599 123 456  ',
+          phone: '  +995 577 34 57 67  ',
           message: '  Test message with spaces.  ',
         }),
       });
@@ -197,7 +197,7 @@ describe('Contact API', () => {
         data: {
           name: 'John Doe',
           email: 'john@example.com',
-          phone: '+995 599 123 456',
+          phone: '+995 577 34 57 67',
           message: 'Test message with spaces.',
         },
       });

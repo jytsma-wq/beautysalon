@@ -47,7 +47,7 @@ import { GET, POST } from '../bookings/route';
 const validBookingPayload = {
   name: 'Jane Doe',
   email: 'JANE@example.com',
-  phone: '+995 599 123 456',
+  phone: '+995 577 34 57 67',
   service: 'Skin Consultation',
   date: '2026-06-15',
   timeSlot: '10:00 - 11:00',

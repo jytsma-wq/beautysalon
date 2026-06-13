@@ -67,7 +67,7 @@ const localFaqs = [
   {
     question: 'How can I book a beauty appointment in Batumi?',
     answer:
-      'Use the online booking page, call +995 599 123 456, or email info@silkbeautysalon.online to request an appointment.',
+      'Use the online booking page, call +995 577 34 57 67, or email info@silkbeautysalon.online to request an appointment.',
   },
 ];
 

@@ -284,7 +284,7 @@ export function BookingForm({ consultationTypes }: BookingFormProps) {
             required
             minLength={5}
             className="rounded-none border-border"
-            placeholder={t('phonePlaceholder', { defaultValue: '+995 599 123 456' })}
+            placeholder={t('phonePlaceholder', { defaultValue: '+995 577 34 57 67' })}
           />
         </div>
       </div>

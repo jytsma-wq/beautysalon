@@ -299,7 +299,7 @@
       "title": "Bizi Ziyaret Edin",
       "address": "Zurab Gorgiladze Cad. 63",
       "city": "Batumi 6000, Gürcistan",
-      "phone": "+995 599 123 456",
+      "phone": "+995 577 34 57 67",
       "email": "info@silkbeautysalon.online"
     }
   },
@@ -457,7 +457,7 @@
       "downtimeQuestion": "Herhangi bir iyileşme süresi var mı?",
       "downtimeAnswer": "Tedavilerimizin çoğu minimal veya sıfır iyileşme süresine sahiptir. Bazı tedaviler geçici şişlik, kızarıklık veya morluklara neden olabilir. Tedavi sonrası bakım için ayrıntılı talimatlar ve sosyal taahhütler etrafında tedavilerin zamanlaması konusunda tavsiyeler sağlayacağız.",
       "bookingQuestion": "Randevu nasıl alınır?",
-      "bookingAnswer": "Web sitemiz üzerinden çevrimiçi rezervasyon yapabilir, bizi +995 599 123 456 numaradan arayabilir veya info@silkbeautysalon.online adresine e-posta gönderebilirsiniz. Sıklıkla bekleme listemiz olduğu için konsültasyonları önceden ayırtmanızı öneririz.",
+      "bookingAnswer": "Web sitemiz üzerinden çevrimiçi rezervasyon yapabilir, bizi +995 577 34 57 67 numaradan arayabilir veya info@silkbeautysalon.online adresine e-posta gönderebilirsiniz. Sıklıkla bekleme listemiz olduğu için konsültasyonları önceden ayırtmanızı öneririz.",
       "virtualQuestion": "Sanal konsültasyon sunuyor musunuz?",
       "virtualAnswer": "Evet, başlangıçta salona gelemeyenler için sanal konsültasyonlar sunuyoruz. Ancak hassas değerlendirme gerektiren tedaviler için yüz yüze konsültasyon önerilir.",
       "brandsQuestion": "Hangi ürün markalarını kullanıyorsunuz?",
@@ -1859,7 +1859,7 @@
     "conditions": "Cilt Sorunları",
     "contact": "İletişim Bilgileri",
     "address": "Zurab Gorgiladze Cad. 63, Batumi 6000, Gürcistan",
-    "phone": "Tel: +995 599 123 456",
+    "phone": "Tel: +995 577 34 57 67",
     "email": "info@silkbeautysalon.online",
     "openingHours": "Çalışma Saatleri",
     "hours": {

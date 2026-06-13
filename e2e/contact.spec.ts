@@ -55,7 +55,7 @@ test.describe('Contact Page', () => {
     await nameInput.fill('Test User');
     await emailInput.fill('test@example.com');
     if (await phoneInput.isVisible().catch(() => false)) {
-      await phoneInput.fill('+995 599 123 456');
+      await phoneInput.fill('+995 577 34 57 67');
     }
     await messageInput.fill('I would like to book a consultation for Botox treatment. Please contact me to schedule.');
     

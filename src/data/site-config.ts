@@ -11,7 +11,7 @@ export const siteConfig = {
     region: "Adjara",
     postcode: "6000",
     country: "Georgia",
-    phone: "+995 599 123 456",
+    phone: "+995 577 34 57 67",
     email: "info@silkbeautysalon.online"
   },
   
@@ -187,7 +187,7 @@ export const siteConfig = {
     },
     {
       question: "How do I book an appointment?",
-      answer: "You can book online through our website, call us at +995 599 123 456, or email info@silkbeautysalon.online. We recommend booking consultations in advance as we often have a waiting list."
+      answer: "You can book online through our website, call us at +995 577 34 57 67, or email info@silkbeautysalon.online. We recommend booking consultations in advance as we often have a waiting list."
     },
     {
       question: "Do you offer virtual consultations?",
