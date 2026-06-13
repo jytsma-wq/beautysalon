@@ -23,24 +23,28 @@ const serviceHighlights = [
     description:
       'Hydrating, calming, brightening, and texture-focused skin care planned around your skin condition and Batumi climate.',
     href: '/treatments',
+    cta: 'Explore facials and skin care in Batumi',
   },
   {
     title: 'Botox and injectables',
     description:
       'Consultation-led anti-wrinkle treatments and facial balancing with clear expectations and aftercare.',
     href: '/treatments/anti-wrinkle',
+    cta: 'Learn about Botox and injectables in Batumi',
   },
   {
     title: 'Dermal fillers',
     description:
       'Natural-looking lip, cheek, chin, jawline, and tear trough planning with conservative aesthetic judgment.',
     href: '/treatments/lip-fillers',
+    cta: 'Learn about dermal fillers in Batumi',
   },
   {
     title: 'Laser and advanced skin treatments',
     description:
       'Technology-led options for tone, texture, hair reduction, collagen stimulation, and skin rejuvenation.',
     href: '/treatments/cutera-secret-pro-rf-microneedling',
+    cta: 'Explore advanced skin treatments in Batumi',
   },
 ];
 
@@ -233,7 +237,7 @@ export default async function BeautySalonBatumiPage({
                   href={service.href}
                   className="inline-flex items-center gap-1 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#8d6f58] hover:text-[#241f1b]"
                 >
-                  Learn more
+                  {service.cta}
                   <ChevronRight className="h-4 w-4" />
                 </Link>
               </article>
