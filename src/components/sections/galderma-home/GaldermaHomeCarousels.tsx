@@ -22,7 +22,7 @@ function CarouselButton({
   onClick: () => void;
   disabled?: boolean;
 }) {
-  const t = useTranslations('accessibility');
+  const t = useTranslations('homeEditorial');
   const Icon = direction === 'previous' ? ArrowLeft : ArrowRight;
 
   return (
@@ -30,7 +30,7 @@ function CarouselButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      aria-label={direction === 'previous' ? t('previousSlide') : t('nextSlide')}
+      aria-label={direction === 'previous' ? t('carousel.previousSlide') : t('carousel.nextSlide')}
       className="grid size-11 place-items-center border border-stone-300 bg-white text-stone-950 transition-colors hover:border-stone-950 disabled:pointer-events-none disabled:opacity-30"
     >
       <Icon className="size-4" strokeWidth={1.5} />

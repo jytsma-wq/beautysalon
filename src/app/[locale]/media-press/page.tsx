@@ -118,8 +118,9 @@ export default async function MediaPressPage({
                   {feature.excerpt}
                 </p>
                 <a
-                  href="#"
+                  href={`mailto:${siteConfig.contact.email}?subject=${encodeURIComponent(`Press feature request: ${feature.publication}`)}`}
                   className="inline-flex items-center gap-1 text-sm font-medium text-gold hover:underline"
+                  aria-label={`${t('readArticle')}: ${feature.title}`}
                 >
                   {t('readArticle')}
                   <ExternalLink className="w-3 h-3" />

@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://www.silkbeautysalon.online/sitemap.xml
+Host: https://www.silkbeautysalon.online

@@ -61,7 +61,7 @@ function PhilosophySection() {
 }
 
 function PortfolioSection() {
-  const t = useTranslations('home');
+  const t = useTranslations('homeEditorial');
   const items = portfolioHighlights.map((item, index) => ({
     ...item,
     title: t(`portfolio.items.item${index + 1}.title`),
@@ -176,7 +176,7 @@ function SpecialistCta() {
 }
 
 export function GaldermaInspiredHome() {
-  const t = useTranslations('home');
+  const t = useTranslations('homeEditorial');
   return (
     <>
       <ClinicalHeroCarousel />

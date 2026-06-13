@@ -1,7 +1,23 @@
 import type { ReactNode } from 'react';
 import { headers } from 'next/headers';
+import { DM_Serif_Display, Inter } from 'next/font/google';
 import { rtlLocales } from '@/i18n';
 import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-dm-serif-display',
+});
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   const headersList = await headers();
@@ -14,28 +30,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {csrfToken ? <meta name="csrf-token" content={csrfToken} /> : null}
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
-        <script
-          nonce={nonce}
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const theme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (theme === 'dark' || (!theme && prefersDark)) {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  document.documentElement.classList.remove('dark');
-                }
-              })();
-            `,
-          }}
-        />
       </head>
-      <body>{children}</body>
+      <body className={`${inter.variable} ${dmSerifDisplay.variable}`}>{children}</body>
     </html>
   );
 }

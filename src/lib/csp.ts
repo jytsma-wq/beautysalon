@@ -17,13 +17,14 @@
 export function buildCSPHeader(nonce: string): string {
   const directives = [
     "default-src 'self'",
-    "script-src 'self' 'nonce-" + nonce + "' 'strict-dynamic' https://www.google-analytics.com https://www.googletagmanager.com",
+    "script-src 'self' 'nonce-" + nonce + "' 'strict-dynamic' https://www.google-analytics.com https://www.googletagmanager.com https://connect.facebook.net https://static.elfsight.com",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https: blob:",
-    "media-src 'self' https://cdn.coverr.co https://storage.googleapis.com blob:",
+    "media-src 'self' https://cdn.coverr.co https://videos.pexels.com https://storage.googleapis.com blob:",
+    "child-src 'self' https://www.google.com",
     "font-src 'self'",
-    "connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://cdn.coverr.co",
-    "frame-src 'self'",
+    "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://vitals.vercel-insights.com https://cdn.coverr.co https://videos.pexels.com",
+    "frame-src 'self' https://www.google.com",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",

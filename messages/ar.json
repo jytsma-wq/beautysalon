@@ -1893,7 +1893,11 @@
   },
   "accessibility": {
     "loadingThemeToggle": "تحميل تبديل الموضوع",
+    "switchToDarkTheme": "التبديل إلى المظهر الداكن",
+    "switchToLightTheme": "التبديل إلى المظهر الفاتح",
     "closeVideo": "إغلاق الفيديو",
+    "muteVideo": "كتم صوت الفيديو",
+    "unmuteVideo": "إلغاء كتم صوت الفيديو",
     "toggleFullscreen": "تبديل وضع ملء الشاشة",
     "closeGallery": "إغلاق المعرض",
     "previousImage": "الصورة السابقة",

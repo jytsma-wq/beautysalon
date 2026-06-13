@@ -1,8 +1,9 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useSyncExternalStore, ReactNode } from 'react';
 
 type Theme = 'light' | 'dark';
+const THEME_CHANGE_EVENT = 'silk-theme-change';
 
 interface ThemeContextType {
   theme: Theme;
@@ -11,16 +12,33 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+function getPreferredTheme(): Theme {
+  const storedTheme = localStorage.getItem('theme') as Theme | null;
+  if (storedTheme) return storedTheme;
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function getServerTheme(): Theme {
+  return 'light';
+}
+
+function subscribeToThemeChanges(callback: () => void) {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  window.addEventListener('storage', callback);
+  window.addEventListener(THEME_CHANGE_EVENT, callback);
+  mediaQuery.addEventListener('change', callback);
+
+  return () => {
+    window.removeEventListener('storage', callback);
+    window.removeEventListener(THEME_CHANGE_EVENT, callback);
+    mediaQuery.removeEventListener('change', callback);
+  };
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window === 'undefined') return 'light';
-
-    const storedTheme = localStorage.getItem('theme') as Theme | null;
-    if (storedTheme) return storedTheme;
-
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
-  });
+  const theme = useSyncExternalStore(subscribeToThemeChanges, getPreferredTheme, getServerTheme);
 
   useEffect(() => {
     // Sync theme to localStorage and DOM
@@ -34,9 +52,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
   }, [theme]);
 
-  const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
-  };
+  const setTheme = useCallback((newTheme: Theme) => {
+    localStorage.setItem('theme', newTheme);
+    window.dispatchEvent(new Event(THEME_CHANGE_EVENT));
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

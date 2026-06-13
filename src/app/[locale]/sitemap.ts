@@ -14,15 +14,22 @@ const STATIC_ROUTES = [
   '/about',
   '/treatments',
   '/conditions',
-  '/results',
-  '/team',
-  '/contact',
+  '/pricelist',
+  '/offers',
+  '/before-after',
+  '/contact-us',
+  '/book',
+  '/consultation',
+  '/international-clients',
   '/faq',
-  '/press',
+  '/careers',
+  '/media-press',
+  '/media-gallery',
   '/blog',
+  '/download',
   '/accessibility',
-  '/privacy',
-  '/terms',
+  '/privacy-policy',
+  '/terms-conditions',
 ];
 
 interface SitemapEntry {
@@ -39,7 +46,7 @@ interface SitemapEntry {
  * Generate sitemap entries for all locales
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://silkbeautysalon.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.silkbeautysalon.online';
   const entries: MetadataRoute.Sitemap = [];
 
   // Generate entries for each static route in each locale
@@ -67,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       const priority = route === '' ? 1.0 :
                       route === '/treatments' ? 0.9 :
                       route === '/about' ? 0.8 :
-                      route === '/contact' ? 0.8 :
+                      route === '/contact-us' ? 0.8 :
                       0.6;
 
       const entry: SitemapEntry = {

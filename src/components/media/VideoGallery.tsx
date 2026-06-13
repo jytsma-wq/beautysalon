@@ -189,7 +189,9 @@ export function VideoGallery({
                   playsInline
                   controls
                   className="w-full h-full"
-                />
+                >
+                  <track kind="captions" srcLang="en" label="English captions" src="data:text/vtt,WEBVTT" />
+                </video>
 
                 {/* Custom controls overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -203,7 +205,7 @@ export function VideoGallery({
                       <button
                         onClick={() => setIsMuted(!isMuted)}
                         className="p-2 text-white/70 hover:text-white rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                        aria-label={isMuted ? t('closeVideo') : t('closeVideo')}
+                        aria-label={isMuted ? t('unmuteVideo') : t('muteVideo')}
                       >
                         {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
                       </button>

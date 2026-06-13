@@ -194,7 +194,9 @@ export default async function MediaGalleryPage({ params }: Props) {
                 poster="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80"
                 controls
                 className="w-full h-full object-cover"
-              />
+              >
+                <track kind="captions" srcLang="en" label="English captions" src="data:text/vtt,WEBVTT" />
+              </video>
             </div>
           </div>
         </div>

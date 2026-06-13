@@ -9,7 +9,8 @@ const PAGES = [
   '/blog','/faq','/contact-us','/book',
   '/consultation','/international-clients',
   '/privacy-policy','/terms-conditions',
-  '/careers','/media-press',
+  '/careers','/media-press','/media-gallery',
+  '/download','/accessibility',
 ];
 
 // Reflects when this build was deployed — static pages "changed" at deploy time

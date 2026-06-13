@@ -33,6 +33,13 @@ export function BeforeAfterSlider({
     setPosition((x / rect.width) * 100);
   }, []);
 
+  const setClampedPosition = useCallback((nextPosition: number | ((current: number) => number)) => {
+    setPosition((current) => {
+      const rawPosition = typeof nextPosition === 'function' ? nextPosition(current) : nextPosition;
+      return Math.max(0, Math.min(rawPosition, 100));
+    });
+  }, []);
+
   // Mouse events
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -56,6 +63,33 @@ export function BeforeAfterSlider({
   const handleTouchStart = (e: React.TouchEvent) => {
     setIsDragging(true);
     updatePosition(e.touches[0].clientX);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    const step = e.shiftKey ? 10 : 5;
+
+    switch (e.key) {
+      case 'ArrowLeft':
+      case 'ArrowDown':
+        e.preventDefault();
+        setClampedPosition((current) => current - step);
+        break;
+      case 'ArrowRight':
+      case 'ArrowUp':
+        e.preventDefault();
+        setClampedPosition((current) => current + step);
+        break;
+      case 'Home':
+        e.preventDefault();
+        setClampedPosition(0);
+        break;
+      case 'End':
+        e.preventDefault();
+        setClampedPosition(100);
+        break;
+      default:
+        break;
+    }
   };
 
   useEffect(() => {
@@ -102,8 +136,14 @@ export function BeforeAfterSlider({
       style={{ cursor: isDragging ? 'col-resize' : 'ew-resize' }}
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
-      role="img"
+      onKeyDown={handleKeyDown}
+      role="slider"
+      tabIndex={0}
       aria-label={t('beforeAfterComparison', { beforeAlt })}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={Math.round(position)}
+      aria-valuetext={`${Math.round(position)}% before image visible`}
     >
       {/* After image (bottom layer — full width) */}
       <div className="absolute inset-0">

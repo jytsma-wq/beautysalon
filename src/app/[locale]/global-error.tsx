@@ -18,7 +18,7 @@ export default function GlobalError({
   }, [error]);
 
   return (
-    <html>
+    <html lang="en">
       <body>
         <div style={{ padding: '2rem', textAlign: 'center' }}>
           <h2>{t('globalError')}</h2>

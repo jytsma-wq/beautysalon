@@ -1,7 +1,12 @@
 import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 
-const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
+const eslintConfig = [
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  { rules: jsxA11y.flatConfigs.recommended.rules },
+  {
   rules: {
     // Error level
     "react-hooks/exhaustive-deps": "error",
@@ -20,13 +25,16 @@ const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
     "react/display-name": "off",
     "react-compiler/react-compiler": "off",
   },
-}, {
+  },
+  {
   ignores: [
     "node_modules/**",
     ".next/**",
     "out/**",
     "build/**",
     "coverage/**",
+    "playwright-report/**",
+    "test-results/**",
     "scripts/**",
     "prisma/**",
     "next-env.d.ts",
@@ -38,6 +46,7 @@ const eslintConfig = [...nextCoreWebVitals, ...nextTypescript, {
     "src/lib/api-error-handler.ts",
     "src/lib/env.ts"
   ]
-}];
+  }
+];
 
 export default eslintConfig;

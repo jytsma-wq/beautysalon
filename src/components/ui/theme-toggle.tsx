@@ -43,7 +43,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       className="h-8 w-8 rounded-full"
-      aria-label={theme === 'light' ? t('toggleFullscreen') : t('toggleFullscreen')}
+      aria-label={theme === 'light' ? t('switchToDarkTheme') : t('switchToLightTheme')}
     >
       {theme === 'light' ? (
         <Sun className="h-4 w-4 text-stone-600" />

@@ -33,7 +33,7 @@ const copy: Record<Locale, DownloadCopy> = {
     benefitsTitle: 'Built for salon visits',
     installTitle: 'How to install',
     installIntro:
-      'Because this app is distributed directly from Silk Beauty Salon, Android may ask you to allow installation from your browser or file manager.',
+      'Because this app is distributed directly from Silk Beauty Salon, Android may ask you to allow the Install unknown apps permission for your browser or file manager.',
     installSteps: androidInstallSteps,
     safetyTitle: 'Direct download',
     safetyText:
@@ -54,7 +54,7 @@ const copy: Record<Locale, DownloadCopy> = {
       'აპი პირდაპირ Silk Beauty Salon-იდან ვრცელდება, ამიტომ Android-მა შეიძლება მოგთხოვოთ ბრაუზერის ან ფაილების მენეჯერისთვის ინსტალაციის ნებართვა.',
     installSteps: [
       'ჩამოტვირთეთ APK თქვენს Android ტელეფონზე.',
-      'Android-ის მოთხოვნისას ნება დართეთ ბრაუზერს ან ფაილების მენეჯერს unknown apps-ის ინსტალაციაზე.',
+      'Android-ის მოთხოვნისას ნება დართეთ ბრაუზერს ან ფაილების მენეჯერს Install unknown apps-ის ინსტალაციაზე.',
       'გახსენით ჩამოტვირთული ფაილი და დააჭირეთ Install-ს.',
     ],
     safetyTitle: 'პირდაპირი ჩამოტვირთვა',
@@ -75,7 +75,7 @@ const copy: Record<Locale, DownloadCopy> = {
       'Так как приложение распространяется напрямую от Silk Beauty Salon, Android может попросить разрешить установку из браузера или файлового менеджера.',
     installSteps: [
       'Скачайте APK на Android-телефон.',
-      'Когда Android попросит, разрешите браузеру или файловому менеджеру устанавливать unknown apps.',
+      'Когда Android попросит, разрешите браузеру или файловому менеджеру устанавливать Install unknown apps.',
       'Откройте загруженный файл и нажмите Install.',
     ],
     safetyTitle: 'Прямая загрузка',
@@ -96,7 +96,7 @@ const copy: Record<Locale, DownloadCopy> = {
       'Bu uygulama dogrudan Silk Beauty Salon tarafindan dagitildigi icin Android, tarayiciniz veya dosya yoneticiniz icin yukleme izni isteyebilir.',
     installSteps: [
       'APK dosyasini Android telefonunuza indirin.',
-      'Android sordugunda tarayiciya veya dosya yoneticisine unknown apps yukleme izni verin.',
+      'Android sordugunda tarayiciya veya dosya yoneticisine Install unknown apps izni verin.',
       'Indirilen dosyayi acin ve Install secenegine dokunun.',
     ],
     safetyTitle: 'Dogrudan indirme',
@@ -117,7 +117,7 @@ const copy: Record<Locale, DownloadCopy> = {
       'لأن التطبيق موزع مباشرة من Silk Beauty Salon، قد يطلب Android السماح بالتثبيت من المتصفح أو مدير الملفات.',
     installSteps: [
       'حمّلي ملف APK على هاتف Android.',
-      'عندما يطلب Android ذلك، اسمحي للمتصفح أو مدير الملفات بتثبيت unknown apps.',
+      'عندما يطلب Android ذلك، اسمحي للمتصفح أو مدير الملفات بتثبيت Install unknown apps.',
       'افتحي الملف الذي تم تنزيله واضغطي Install.',
     ],
     safetyTitle: 'تحميل مباشر',
@@ -138,7 +138,7 @@ const copy: Record<Locale, DownloadCopy> = {
       'מכיוון שהאפליקציה מופצת ישירות מ-Silk Beauty Salon, Android עשוי לבקש לאפשר התקנה מהדפדפן או ממנהל הקבצים.',
     installSteps: [
       'הורידו את קובץ ה-APK לטלפון Android.',
-      'כאשר Android מבקש, אפשרו לדפדפן או למנהל הקבצים להתקין unknown apps.',
+      'כאשר Android מבקש, אפשרו לדפדפן או למנהל הקבצים להתקין Install unknown apps.',
       'פתחו את הקובץ שהורד ולחצו Install.',
     ],
     safetyTitle: 'הורדה ישירה',
@@ -178,7 +178,6 @@ export default async function DownloadPage({
 }) {
   const { locale } = await params;
   const pageCopy = getCopy(locale);
-  const isHostedFile = androidApkUrl.startsWith('/');
 
   return (
     <>
@@ -205,7 +204,7 @@ export default async function DownloadPage({
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={androidApkUrl}
-                  download={isHostedFile ? androidApkFileName : undefined}
+                  download={androidApkFileName}
                   className="inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-[#241f1b] px-7 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#8d6f58]"
                 >
                   <Download className="h-5 w-5" />

@@ -23,7 +23,7 @@ export function MagneticButton({
   innerShift = true,
   onClick,
 }: MagneticButtonProps) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement>(null);
   const prefersReduced = useReducedMotion();
 
   const springConfig = { stiffness: 200, damping: 20, mass: 0.5 };
@@ -64,22 +64,50 @@ export function MagneticButton({
   }, [innerShift, innerX, innerY, radius, resetPosition, strength, x, y]);
 
   if (prefersReduced) {
+    if (onClick) {
+      return (
+        <button type="button" className={`inline-block ${className}`} onClick={onClick}>
+          {children}
+        </button>
+      );
+    }
+
     return (
-      <div className={`inline-block ${className}`} onClick={onClick}>
+      <div className={`inline-block ${className}`}>
         {children}
       </div>
     );
   }
 
+  if (onClick) {
+    return (
+      <motion.button
+        type="button"
+        ref={ref as React.Ref<HTMLButtonElement>}
+        style={{ x, y }}
+        className={`inline-block cursor-pointer ${className}`}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={resetPosition}
+        onClick={onClick}
+        whileTap={{ scale: 0.96 }}
+      >
+        <motion.span
+          style={innerShift ? { x: innerX, y: innerY } : {}}
+          className="block"
+        >
+          {children}
+        </motion.span>
+      </motion.button>
+    );
+  }
+
   return (
     <motion.div
-      ref={ref}
+      ref={ref as React.Ref<HTMLDivElement>}
       style={{ x, y }}
-      className={`inline-block cursor-pointer ${className}`}
+      className={`inline-block ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={resetPosition}
-      onClick={onClick}
-      whileTap={{ scale: 0.96 }}
     >
       <motion.span
         style={innerShift ? { x: innerX, y: innerY } : {}}
