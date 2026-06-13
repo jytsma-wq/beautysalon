@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 export function WhatsAppWidget() {
   const t = useTranslations('whatsapp');
   const { showBanner } = useConsent();
-  const phoneNumber = siteConfig.contact.phone.replace(/\s/g, '').replace('+', '');
+  const phoneNumber = siteConfig.contact.whatsappPhone.replace(/\s/g, '').replace('+', '');
   const [isOpen, setIsOpen] = useState(false);
 
   const quickMessages = [

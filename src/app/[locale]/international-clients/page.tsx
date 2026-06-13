@@ -107,7 +107,7 @@ export default async function InternationalClientsPage({
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild className="btn-gold">
-                  <a href={`https://wa.me/${siteConfig.contact.phone.replace(/\s/g, '').replace('+', '')}`} target="_blank" rel="noopener noreferrer">
+                  <a href={`https://wa.me/${siteConfig.contact.whatsappPhone.replace(/\s/g, '').replace('+', '')}`} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     {t('bookConsultation')}
                   </a>
@@ -458,7 +458,7 @@ export default async function InternationalClientsPage({
             {t('cta.subtitle')}
           </p>
           <Button asChild className="btn-gold">
-            <a href={`https://wa.me/${siteConfig.contact.phone.replace(/\s/g, '').replace('+', '')}`} target="_blank" rel="noopener noreferrer">
+            <a href={`https://wa.me/${siteConfig.contact.whatsappPhone.replace(/\s/g, '').replace('+', '')}`} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-5 h-5 mr-2" />
               {t('cta.button')}
             </a>
