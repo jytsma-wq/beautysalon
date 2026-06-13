@@ -16,8 +16,7 @@ const PAGES = [
 // Reflects when this build was deployed — static pages "changed" at deploy time
 const BUILD_TIME = new Date(process.env.BUILD_TIMESTAMP || Date.now());
 
-// Revalidate sitemap at most once per hour to reduce DB load
-export const revalidate = 3600;
+export const revalidate = 0;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Generate static page URLs with build time
