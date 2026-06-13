@@ -10,7 +10,7 @@ This project is ready for Hostinger managed Node.js hosting. The public domain i
 - Runtime: Node.js 20 or newer
 - Build command: `npm ci && npm run build`
 - Start command: `npm run start -- -p $PORT`
-- App entrypoint: `.next/standalone/server.js`
+- Output directory: `.next`
 - Android APK download: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk`
 - ZIP fallback package: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon-hostinger.zip`
 
