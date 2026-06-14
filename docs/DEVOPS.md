@@ -30,10 +30,10 @@ SMTP_PASSWORD="..."
 SMTP_FROM="info@silkbeautysalon.online"
 API_SECRET_KEY="..."
 NEXT_PUBLIC_SITE_URL="https://silkbeautysalon.online"
-NEXT_PUBLIC_ANDROID_APK_URL="https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk"
+ANDROID_APK_SOURCE_URL="https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk"
 ```
 
-`NEXT_PUBLIC_ANDROID_APK_URL` can be left unset only when the default GitHub Release URL is correct. APK and ZIP binaries should be attached to GitHub Releases or external storage, not committed to the repository.
+`ANDROID_APK_SOURCE_URL` can be left unset only when the default GitHub Release URL is correct. The public download button always uses `/api/download/android`, so customers download from `silkbeautysalon.online` instead of leaving for GitHub. APK and ZIP binaries should be attached to GitHub Releases or external storage, not committed to the repository.
 
 ## CI
 
@@ -49,7 +49,8 @@ The repository keeps GitHub Actions for linting, type checking, tests, translati
 ```bash
 curl -I https://silkbeautysalon.online/api/health
 curl -I https://silkbeautysalon.online/en/download
-curl -I https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
+curl -I https://silkbeautysalon.online/api/download/android
+curl -H "Range: bytes=0-1023" -I https://silkbeautysalon.online/api/download/android
 ```
 
 5. Install the APK on a physical Android device and confirm the app opens without Metro.

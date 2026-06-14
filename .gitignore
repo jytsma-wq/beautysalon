@@ -101,3 +101,9 @@ lint-output.txt
 temp.log
 dev-log.txt
 dev-log2.txt
+
+# Keep the first-party APK download API route tracked while binary download
+# artifact folders remain ignored.
+!src/app/api/download/
+!src/app/api/download/android/
+!src/app/api/download/android/route.ts

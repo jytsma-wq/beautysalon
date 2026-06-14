@@ -190,9 +190,9 @@ Ensure all [REQUIRED] variables in `.env.example` are set:
 - `SMTP_PASSWORD` - Hostinger mailbox password
 - `SMTP_FROM` - Sender mailbox, e.g. `info@silkbeautysalon.online`
 - `API_SECRET_KEY` - Secure random string
-- `NEXT_PUBLIC_ANDROID_APK_URL` - Optional Android APK URL override; defaults to the GitHub Release APK at `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk`
+- `ANDROID_APK_SOURCE_URL` - Optional upstream APK source for `/api/download/android`; defaults to the GitHub Release APK.
 
-Android APK and Hostinger ZIP artifacts are published as GitHub Release assets or to external storage. They are intentionally not committed to this repository.
+The public download button uses `/api/download/android` so customers download from `silkbeautysalon.online`. Android APK and Hostinger ZIP artifacts are published as GitHub Release assets or external storage. They are intentionally not committed to this repository.
 
 ## Database Backup & Recovery
 

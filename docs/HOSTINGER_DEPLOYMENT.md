@@ -11,7 +11,8 @@ This project is ready for Hostinger managed Node.js hosting. The public domain i
 - Build command: `npm ci && npm run build`
 - Start command: `npm run start -- -p $PORT`
 - Output directory: `.next`
-- Android APK download: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk`
+- Android APK download: `https://silkbeautysalon.online/api/download/android`
+- Upstream APK source: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk`
 - ZIP fallback package: `https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon-hostinger.zip`
 
 ## Required Hostinger Environment Variables
@@ -21,7 +22,7 @@ Set these in the Hostinger Node.js app environment before starting the app:
 ```env
 NODE_ENV=production
 NEXT_PUBLIC_SITE_URL=https://silkbeautysalon.online
-NEXT_PUBLIC_ANDROID_APK_URL=https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
+ANDROID_APK_SOURCE_URL=https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
 DATABASE_URL=mysql://<database-user>:<database-password>@<database-host>:3306/<database-name>
 DIRECT_DATABASE_URL=mysql://<database-user>:<database-password>@<database-host>:3306/<database-name>
 BOOKING_DATABASE_ENABLED=1
@@ -84,14 +85,16 @@ Run these checks after Hostinger reports the app is deployed and the domain is c
 ```bash
 curl -I https://silkbeautysalon.online/api/health
 curl -I https://silkbeautysalon.online/en/download
-curl -I https://github.com/jytsma-wq/beautysalon/releases/download/mobile-artifacts-2026-06-12/silk-beauty-salon.apk
+curl -I https://silkbeautysalon.online/api/download/android
+curl -H "Range: bytes=0-1023" -I https://silkbeautysalon.online/api/download/android
 ```
 
 Expected results:
 
 - `/api/health` returns HTTP 200 JSON.
 - `/en/download` returns HTTP 200 HTML for the Silk download page.
-- The GitHub Release APK returns HTTP 200 with `Content-Type: application/vnd.android.package-archive` or `application/octet-stream`.
+- `/api/download/android` returns HTTP 200 with `Content-Type: application/vnd.android.package-archive`.
+- A range request to `/api/download/android` returns HTTP 206 and `Accept-Ranges: bytes`.
 - The page title must not be `Parked Domain name on Hostinger DNS system`.
 
 ## Database-Backed Verification

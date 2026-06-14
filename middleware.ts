@@ -56,10 +56,15 @@ function isHealthCheckPath(pathname: string): boolean {
     || pathname === '/api/v1/health';
 }
 
+function isLargeDownloadPath(pathname: string): boolean {
+  return pathname === '/api/download/android';
+}
+
 function shouldApplyMiddlewareRateLimit(pathname: string, method: string): boolean {
   if (
     isAutomatedTestRun
     || isHealthCheckPath(pathname)
+    || isLargeDownloadPath(pathname)
     || pathname.startsWith('/_next')
     || pathname.includes('.')
   ) {
