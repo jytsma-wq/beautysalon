@@ -107,18 +107,18 @@ export function ClinicalHeroCarousel() {
         <div className="flex">
           {slides.map((slide, index) => (
             <article key={slide.title} className="min-w-0 flex-[0_0_100%]">
-              <div className="grid min-h-[calc(100svh-152px)] grid-cols-1 lg:grid-cols-[46%_54%]">
-                <div className="order-2 flex items-center px-6 py-14 md:px-12 md:py-16 lg:order-1 lg:px-16 xl:px-24">
-                  <div className="max-w-xl">
+              <div className="grid min-h-[calc(100svh-128px)] grid-cols-1 lg:grid-cols-[50%_50%]">
+                <div className="order-2 flex items-center px-6 py-10 md:px-12 md:py-14 lg:order-1 lg:px-14 xl:px-20">
+                  <div className="max-w-2xl">
                     <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
                       {slide.eyebrow}
                     </p>
                     {index === 0 ? (
-                      <h1 className="font-sans text-[clamp(2.75rem,5.4vw,5.4rem)] font-light leading-[1.02] text-[#241f1b]">
+                      <h1 className="font-sans text-[clamp(2.15rem,9vw,3.2rem)] font-light leading-[1.05] text-[#241f1b] lg:text-[clamp(2.35rem,4vw,4.5rem)]">
                         {slide.title}
                       </h1>
                     ) : (
-                      <h2 className="font-sans text-[clamp(2.75rem,5.4vw,5.4rem)] font-light leading-[1.02] text-[#241f1b]">
+                      <h2 className="font-sans text-[clamp(2.15rem,9vw,3.2rem)] font-light leading-[1.05] text-[#241f1b] lg:text-[clamp(2.35rem,4vw,4.5rem)]">
                         {slide.title}
                       </h2>
                     )}
@@ -133,7 +133,7 @@ export function ClinicalHeroCarousel() {
                     </Link>
                   </div>
                 </div>
-                <div className="relative order-1 min-h-[48svh] overflow-hidden lg:order-2 lg:min-h-0">
+                <div className="relative order-1 min-h-[34svh] overflow-hidden sm:min-h-[42svh] lg:order-2 lg:min-h-0">
                   <motion.div
                     className="absolute inset-0"
                     animate={

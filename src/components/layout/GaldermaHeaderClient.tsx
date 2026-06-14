@@ -100,7 +100,7 @@ function BrandLogo({
       height={180}
       priority={priority}
       className={imageClassName || className}
-      sizes="(max-width: 767px) 64px, 88px"
+      sizes="(max-width: 1023px) 64px, 72px"
     />
   );
 }
@@ -174,7 +174,7 @@ export function GaldermaHeaderClient({
         animate={{ y: isHidden ? -100 : 0 }}
       >
         <div className="mx-auto flex h-11 max-w-7xl items-center justify-between px-6 text-xs lg:px-8">
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             <Link
               href="/about"
               className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
@@ -191,7 +191,7 @@ export function GaldermaHeaderClient({
 
           <a
             href={`tel:${siteConfig.contact.phone}`}
-            className="flex h-11 items-center gap-2 text-stone-600 transition-colors hover:text-[#8d6f58] md:hidden"
+            className="flex h-11 items-center gap-2 text-stone-600 transition-colors hover:text-[#8d6f58] lg:hidden"
           >
             <Phone className="h-3.5 w-3.5" />
             <span>{siteConfig.contact.phone}</span>
@@ -213,28 +213,24 @@ export function GaldermaHeaderClient({
         animate={{ y: isHidden ? -140 : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
-          <div className="mb-4 hidden justify-center md:flex">
-            <Link href="/" className="block transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
+        <div className="mx-auto max-w-7xl px-6 py-3 lg:px-8">
+          <div className="hidden items-center justify-between gap-6 lg:flex">
+            <Link href="/" className="block shrink-0 transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
               <BrandLogo
                 priority
-                imageClassName="h-20 w-20 object-contain"
+                imageClassName="h-14 w-14 object-contain"
               />
             </Link>
-          </div>
-
-          <div className="hidden items-center justify-between md:flex">
-            <div className="w-24" />
 
             <nav
               aria-label={t('mainNavigation', { defaultValue: 'Main navigation' })}
-              className="relative flex items-center justify-center gap-10"
+              className="relative flex min-w-0 flex-1 items-center justify-center gap-5 xl:gap-8"
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
               <div onMouseEnter={() => setActiveMegaMenu('treatments')}>
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-xs uppercase tracking-[0.2em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none"
+                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none xl:tracking-[0.2em]"
                   aria-expanded={activeMegaMenu === 'treatments'}
                 >
                   {t('treatments', { defaultValue: 'Treatments' })}
@@ -245,7 +241,7 @@ export function GaldermaHeaderClient({
               <div onMouseEnter={() => setActiveMegaMenu('conditions')}>
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-xs uppercase tracking-[0.2em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none"
+                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none xl:tracking-[0.2em]"
                   aria-expanded={activeMegaMenu === 'conditions'}
                 >
                   {t('conditions', { defaultValue: 'Skin Conditions' })}
@@ -253,16 +249,16 @@ export function GaldermaHeaderClient({
                 </button>
               </div>
 
-              <Link href="/pricelist" className="text-xs uppercase tracking-[0.2em] text-stone-700 transition-colors hover:text-[#8d6f58]">
+              <Link href="/pricelist" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
                 {t('pricelist', { defaultValue: 'Pricelist' })}
               </Link>
-              <Link href="/offers" className="text-xs uppercase tracking-[0.2em] text-stone-700 transition-colors hover:text-[#8d6f58]">
+              <Link href="/offers" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
                 {t('offers', { defaultValue: 'Offers' })}
               </Link>
-              <Link href="/download" className="text-xs uppercase tracking-[0.2em] text-stone-700 transition-colors hover:text-[#8d6f58]">
+              <Link href="/download" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
                 {t('downloadApp', { defaultValue: 'Download App' })}
               </Link>
-              <Link href="/international-clients" className="text-xs uppercase tracking-[0.2em] text-stone-700 transition-colors hover:text-[#8d6f58]">
+              <Link href="/international-clients" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
                 {t('international', { defaultValue: 'International Clients' })}
               </Link>
 
@@ -299,7 +295,7 @@ export function GaldermaHeaderClient({
             </Link>
           </div>
 
-          <div className="flex items-center justify-between md:hidden">
+          <div className="flex items-center justify-between lg:hidden">
             <Link href="/" className="block transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
               <BrandLogo
                 priority
