@@ -202,9 +202,9 @@ body {
 
 .localized-hero-heading {
   max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: normal;
-  hyphens: auto;
+  hyphens: none;
   font-size: 2.25rem;
   line-height: 1.04;
 }
@@ -235,9 +235,9 @@ body {
 
 .localized-carousel-heading {
   max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: normal;
-  hyphens: auto;
+  hyphens: none;
   font-size: 2.15rem;
   line-height: 1.05;
 }
@@ -260,11 +260,34 @@ body {
   }
 }
 
+html[lang="ka"] .localized-carousel-heading {
+  font-size: 2.2rem;
+  line-height: 1.08;
+}
+
+@media (min-width: 640px) {
+  html[lang="ka"] .localized-carousel-heading {
+    font-size: 2.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  html[lang="ka"] .localized-carousel-heading {
+    font-size: 3.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  html[lang="ka"] .localized-carousel-heading {
+    font-size: 3.75rem;
+  }
+}
+
 .localized-section-heading {
   max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: normal;
-  hyphens: auto;
+  hyphens: none;
   font-size: 2.35rem;
   line-height: 1;
 }
@@ -289,9 +312,9 @@ body {
 
 .localized-statement-heading {
   max-width: 100%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: normal;
-  hyphens: auto;
+  hyphens: none;
   font-size: 2rem;
   line-height: 1.12;
 }

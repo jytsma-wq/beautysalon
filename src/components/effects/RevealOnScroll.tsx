@@ -1,7 +1,8 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 
 interface RevealOnScrollProps {
   children: ReactNode;
@@ -18,7 +19,7 @@ export function RevealOnScroll({
   duration = 0.6,
   className,
 }: RevealOnScrollProps) {
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useHydratedReducedMotion();
 
   const getInitialPosition = () => {
     switch (direction) {

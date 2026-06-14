@@ -1,8 +1,9 @@
 'use client';
 
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
+import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -16,7 +17,7 @@ const variants = {
 
 export function PageTransition({ children }: PageTransitionProps) {
   const pathname = usePathname();
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useHydratedReducedMotion();
 
   if (shouldReduceMotion) {
     return <>{children}</>;

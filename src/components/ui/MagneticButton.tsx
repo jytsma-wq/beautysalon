@@ -1,7 +1,8 @@
 'use client';
 
 import { useCallback, useRef } from 'react';
-import { motion, useReducedMotion, useSpring } from 'framer-motion';
+import { motion, useSpring } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 
 interface MagneticButtonProps {
   children: React.ReactNode;
@@ -24,7 +25,7 @@ export function MagneticButton({
   onClick,
 }: MagneticButtonProps) {
   const ref = useRef<HTMLElement>(null);
-  const prefersReduced = useReducedMotion();
+  const prefersReduced = useHydratedReducedMotion();
 
   const springConfig = { stiffness: 200, damping: 20, mass: 0.5 };
   const x = useSpring(0, springConfig);

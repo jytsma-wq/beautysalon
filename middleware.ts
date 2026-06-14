@@ -56,6 +56,23 @@ function isHealthCheckPath(pathname: string): boolean {
     || pathname === '/api/v1/health';
 }
 
+function shouldApplyMiddlewareRateLimit(pathname: string, method: string): boolean {
+  if (
+    isAutomatedTestRun
+    || isHealthCheckPath(pathname)
+    || pathname.startsWith('/_next')
+    || pathname.includes('.')
+  ) {
+    return false;
+  }
+
+  if (pathname.startsWith('/api')) {
+    return true;
+  }
+
+  return method !== 'GET' && method !== 'HEAD' && method !== 'OPTIONS';
+}
+
 // Always allow these search engine bots
 const ALWAYS_ALLOW_UA = [/googlebot/i, /bingbot/i, /twitterbot/i, /facebookexternalhit/i];
 
@@ -362,13 +379,9 @@ export default async function middleware(request: NextRequest) {
     logSuspicious(request, 'SUSPICIOUS_PATH', requestId);
   }
 
-  // Apply in-process rate limiting to non-static requests
-  if (
-    !isAutomatedTestRun
-    && !isHealthCheckPath(pathname)
-    && !pathname.startsWith('/_next')
-    && !pathname.includes('.')
-  ) {
+  // Rate-limit API and unsafe page requests without blocking normal public
+  // browsing or search engine crawling.
+  if (shouldApplyMiddlewareRateLimit(pathname, request.method)) {
     const { success, reset } = checkMiddlewareRateLimit(ip);
 
     if (!success) {

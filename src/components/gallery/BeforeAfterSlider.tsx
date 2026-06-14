@@ -2,8 +2,9 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 
 interface BeforeAfterSliderProps {
   beforeSrc: string;
@@ -22,7 +23,7 @@ export function BeforeAfterSlider({
   initialPosition = 50,
 }: BeforeAfterSliderProps) {
   const t = useTranslations('accessibility');
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useHydratedReducedMotion();
   const [position, setPosition] = useState(initialPosition);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);

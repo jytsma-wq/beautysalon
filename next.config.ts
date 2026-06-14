@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  allowedDevOrigins: ['127.0.0.1', 'localhost'],
 
   // CSP is handled exclusively by middleware.ts (nonce-based, per-request).
   // DO NOT add a Content-Security-Policy header here — it would shadow the

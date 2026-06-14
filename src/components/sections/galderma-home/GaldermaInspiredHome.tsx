@@ -3,11 +3,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { siteConfig } from '@/data/site-config';
 import { portfolioHighlights, proofStats } from '@/data/homepage';
 import { RevealOnScroll } from '@/components/effects/RevealOnScroll';
+import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 import {
   ClinicalHeroCarousel,
   ConcernCarousel,
@@ -65,7 +66,7 @@ function PhilosophySection() {
 
 function PortfolioSection() {
   const t = useTranslations('homeEditorial');
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useHydratedReducedMotion();
   const items = portfolioHighlights.map((item, index) => ({
     ...item,
     title: t(`portfolio.items.item${index + 1}.title`),

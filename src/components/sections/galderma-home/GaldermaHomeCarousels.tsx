@@ -4,10 +4,11 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import useEmblaCarousel from 'embla-carousel-react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Star } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { BeforeAfterSlider } from '@/components/gallery/BeforeAfterSlider';
+import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 import {
   homeHeroSlides,
   resultCases,
@@ -84,7 +85,7 @@ function useCarouselControls(options?: { loop?: boolean; watchDrag?: boolean }) 
 
 export function ClinicalHeroCarousel() {
   const t = useTranslations('homeEditorial');
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useHydratedReducedMotion();
   const slides = homeHeroSlides.map((slide, index) => ({
     ...slide,
     eyebrow: t(`heroSlides.slide${index + 1}.eyebrow`),
@@ -198,7 +199,7 @@ export function ClinicalHeroCarousel() {
 
 export function ConcernCarousel() {
   const t = useTranslations('homeEditorial');
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useHydratedReducedMotion();
   const concerns = skinConcernHighlights.map((item, index) => ({
     ...item,
     name: t(`concernItems.item${index + 1}.name`),
@@ -325,7 +326,7 @@ export function ResultsCarousel() {
 
 export function ReviewsCarousel() {
   const t = useTranslations('homeEditorial');
-  const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useHydratedReducedMotion();
   const reviews = testimonials.slice(0, 6);
   const {
     emblaRef,
