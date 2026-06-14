@@ -39,8 +39,14 @@
     "more": "More",
     "treatmentPortfolio": "Treatment portfolio",
     "skinConditions": "Skin conditions",
+    "treatmentPortfolioDescription": "Explore consultation-led injectables, skin quality treatments, facials, nails, lashes, and body care.",
+    "conditionsDescription": "Find treatment pathways by skin concern, from wrinkles and firmness to tone, texture, hydration, and acne marks.",
     "downloadApp": "Download App",
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "call": "Call Silk Beauty Salon",
+    "whatsapp": "Message Silk Beauty Salon on WhatsApp",
+    "stickyBookingLabel": "Fast mobile booking actions"
   },
   "header": {
     "announcement": "Award Winning | Batumi's Premier Beauty Salon | Featured in Georgian Fashion & Beauty Magazine"
@@ -1547,6 +1553,13 @@
       "description": "Educational notes for patients who want to understand treatment planning before they book.",
       "cta": "Read journal"
     },
+    "reviews": {
+      "eyebrow": "Client stories",
+      "title": "What clients say after their visit.",
+      "description": "A moving carousel of recent client feedback from people choosing Silk Beauty Salon for injectables, fillers, facials, and skin treatments in Batumi.",
+      "ratingLabel": "{rating} out of 5 stars",
+      "goToReview": "Go to review {number}"
+    },
     "trendItems": {
       "item1": {
         "category": "Treatment planning",
@@ -1836,7 +1849,9 @@
     "closeMenu": "Close menu",
     "required": "required",
     "keyTab": "Tab",
-    "keyEscape": "Escape"
+    "keyEscape": "Escape",
+    "beforeAfterComparison": "Before and after comparison for {beforeAlt}",
+    "switchToVideo": "Switch to {title} video"
   },
   "social": {
     "instagram": "Instagram",

@@ -4,6 +4,10 @@ export const siteConfig = {
   founderName: "Nana Gviniashvili",
   description: "Batumi's premier beauty salon on Zurab Gorgiladze Street. We bring together expert practitioners, cutting-edge treatments & luxury care to enhance your natural beauty with precision & confidence.",
   url: "https://silkbeautysalon.online",
+  logo: {
+    image: "/images/brand/silk-beauty-salon-logo.webp",
+    schemaImage: "/logo.png"
+  },
   
   contact: {
     address: "Zurab Gorgiladze 63",

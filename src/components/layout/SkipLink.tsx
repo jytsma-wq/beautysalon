@@ -27,7 +27,7 @@ export function SkipLink() {
           <li key={target.href}>
             <a
               href={target.href}
-              className="inline-block px-4 py-2 text-white bg-gold rounded-lg hover:bg-gold/90 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none transition-colors"
+              className="inline-flex min-h-11 items-center px-4 py-2 text-white bg-gold rounded-lg hover:bg-gold/90 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none transition-colors"
             >
               {target.label}
             </a>

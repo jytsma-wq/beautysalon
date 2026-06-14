@@ -43,7 +43,7 @@ export function WhatsAppWidget() {
     <div 
       className={cn(
         "fixed right-6 z-40 transition-all duration-300",
-        showBanner ? "bottom-32" : "bottom-6"
+        showBanner ? "bottom-44 md:bottom-32" : "bottom-24 md:bottom-6"
       )}
     >
       {/* Chat Popup */}

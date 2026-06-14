@@ -39,7 +39,7 @@ export function generateLocalBusinessSchema(locale: string = "en") {
       `${siteUrl}/images/hero-poster.jpg`,
       `${siteUrl}/opengraph-image.png`
     ],
-    "logo": `${siteUrl}/logo.svg`,
+    "logo": `${siteUrl}${siteConfig.logo.schemaImage}`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteConfig.contact.address,
@@ -267,7 +267,7 @@ export function generateArticleSchema(article: {
       "name": siteConfig.name,
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/logo.svg`
+        "url": `${siteUrl}${siteConfig.logo.schemaImage}`
       }
     },
     "citation": article.sourceUrls?.length ? article.sourceUrls : undefined

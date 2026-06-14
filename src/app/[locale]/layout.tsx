@@ -7,8 +7,9 @@ import { ConsentProvider } from "@/components/providers/ConsentProvider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LocaleChrome } from '@/components/layout/LocaleChrome';
 import { siteConfig } from '@/data/site-config';
-import { rtlLocales } from '@/i18n';
+import { rtlLocales, type Locale } from '@/i18n';
 import { getSiteUrl } from '@/lib/seo';
+import { getNonce } from '@/lib/nonce';
 
 export async function generateMetadata({
   params,
@@ -54,19 +55,26 @@ export default async function LocaleLayout({
   // Ensure valid locale
   const validLocale = (routing.locales as readonly string[]).includes(locale) ? locale : routing.defaultLocale;
   const isRtl = rtlLocales.includes(validLocale as 'ar' | 'he');
+  const direction = isRtl ? 'rtl' : 'ltr';
 
   setRequestLocale(validLocale);
 
   const messages = await getMessages();
+  const nonce = await getNonce();
+  const htmlLocaleScript = `document.documentElement.lang=${JSON.stringify(validLocale)};document.documentElement.dir=${JSON.stringify(direction)};`;
 
   
   return (
     <ThemeProvider>
-      <div lang={validLocale} dir={isRtl ? 'rtl' : 'ltr'}>
+      <script
+        nonce={nonce || undefined}
+        dangerouslySetInnerHTML={{ __html: htmlLocaleScript }}
+      />
+      <div lang={validLocale} dir={direction}>
         <NextIntlClientProvider messages={messages}>
           <ConsentProvider>
             <AnnouncerProvider>
-              <LocaleChrome>
+              <LocaleChrome locale={validLocale as Locale}>
                 {children}
               </LocaleChrome>
             </AnnouncerProvider>

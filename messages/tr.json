@@ -39,8 +39,14 @@
     "more": "Daha Fazla",
     "treatmentPortfolio": "Tedavi Portföyü",
     "skinConditions": "Cilt Durumları",
+    "treatmentPortfolioDescription": "Konsültasyonla planlanan enjeksiyonları, cilt kalitesi tedavilerini, yüz bakımlarını, tırnak, kirpik ve vücut bakımını keşfedin.",
+    "conditionsDescription": "Kırışıklık, sıkılık kaybı, ton, doku, nem ve akne izleri gibi cilt endişelerine göre tedavi yollarını bulun.",
     "downloadApp": "Uygulamayı indir",
-    "openMenu": "Menüyü aç"
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "call": "Silk Beauty Salon'u ara",
+    "whatsapp": "Silk Beauty Salon'a WhatsApp'tan yaz",
+    "stickyBookingLabel": "Hızlı mobil rezervasyon işlemleri"
   },
   "header": {
     "announcement": "Ödüllü | Batumi'nin En İyi Güzellik Salonu | Gürcistan Moda ve Güzellik Dergisi'nde yayınlandı"
@@ -1767,6 +1773,13 @@
       "description": "Randevu almadan ?nce tedavi planlamas?n? anlamak isteyen hastalar i?in e?itici notlar.",
       "cta": "Dergiyi oku"
     },
+    "reviews": {
+      "eyebrow": "Müşteri yorumları",
+      "title": "Müşteriler ziyaretlerinden sonra ne söylüyor.",
+      "description": "Batumi'de enjeksiyon, dolgu, yüz bakımı ve cilt tedavileri için Silk Beauty Salon'u seçen müşterilerden gelen hareketli yorum karuseli.",
+      "ratingLabel": "5 üzerinden {rating} yıldız",
+      "goToReview": "{number}. yoruma git"
+    },
     "trendItems": {
       "item1": {
         "category": "Tedavi planlamas?",
@@ -1836,7 +1849,9 @@
     "closeMenu": "Menüyü kapat",
     "required": "gerekli",
     "keyTab": "Tab",
-    "keyEscape": "Escape"
+    "keyEscape": "Escape",
+    "beforeAfterComparison": "{beforeAlt} için önce ve sonra karşılaştırması",
+    "switchToVideo": "{title} videosuna geç"
   },
   "social": {
     "instagram": "Instagram",

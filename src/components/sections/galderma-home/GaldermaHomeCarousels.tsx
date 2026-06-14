@@ -4,14 +4,17 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowLeft, ArrowRight, Star } from 'lucide-react';
 import { Link } from '@/i18n/routing';
+import { BeforeAfterSlider } from '@/components/gallery/BeforeAfterSlider';
 import {
   homeHeroSlides,
   resultCases,
   skinConcernHighlights,
   skinTrendArticles,
 } from '@/data/homepage';
+import { testimonials } from '@/data/testimonials';
 
 function CarouselButton({
   direction,
@@ -38,10 +41,11 @@ function CarouselButton({
   );
 }
 
-function useCarouselControls(options?: { loop?: boolean }) {
+function useCarouselControls(options?: { loop?: boolean; watchDrag?: boolean }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: options?.loop ?? false,
+    watchDrag: options?.watchDrag ?? true,
   });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -80,6 +84,7 @@ function useCarouselControls(options?: { loop?: boolean }) {
 
 export function ClinicalHeroCarousel() {
   const t = useTranslations('homeEditorial');
+  const shouldReduceMotion = useReducedMotion();
   const slides = homeHeroSlides.map((slide, index) => ({
     ...slide,
     eyebrow: t(`heroSlides.slide${index + 1}.eyebrow`),
@@ -97,7 +102,7 @@ export function ClinicalHeroCarousel() {
   } = useCarouselControls();
 
   return (
-    <section className="relative bg-[#f7f2eb] pt-42.5 md:pt-47">
+    <section className="relative bg-[#f7f2eb]">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, index) => (
@@ -129,14 +134,34 @@ export function ClinicalHeroCarousel() {
                   </div>
                 </div>
                 <div className="relative order-1 min-h-[48svh] overflow-hidden lg:order-2 lg:min-h-0">
-                  <Image
-                    src={slide.image}
-                    alt={`Silk Beauty Salon in Batumi, Georgia - ${slide.title}`}
-                    fill
-                    priority={index === 0}
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 55vw"
-                  />
+                  <motion.div
+                    className="absolute inset-0"
+                    animate={
+                      shouldReduceMotion
+                        ? { scale: 1, x: '0%' }
+                        : { scale: [1.02, 1.07, 1.03], x: ['0%', '-1.5%', '0.75%'] }
+                    }
+                    transition={
+                      shouldReduceMotion
+                        ? { duration: 0 }
+                        : {
+                            duration: 18,
+                            repeat: Infinity,
+                            repeatType: 'mirror',
+                            ease: 'easeInOut',
+                          }
+                    }
+                    style={{ willChange: shouldReduceMotion ? 'auto' : 'transform' }}
+                  >
+                    <Image
+                      src={slide.image}
+                      alt={`Silk Beauty Salon in Batumi, Georgia - ${slide.title}`}
+                      fill
+                      priority={index === 0}
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 55vw"
+                    />
+                  </motion.div>
                   <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-black/20 to-transparent" />
                 </div>
               </div>
@@ -150,12 +175,12 @@ export function ClinicalHeroCarousel() {
           direction="previous"
           onClick={scrollPrev}
           disabled={!canScrollPrev}
-                  />
+        />
         <CarouselButton
           direction="next"
           onClick={scrollNext}
           disabled={!canScrollNext}
-                  />
+        />
       </div>
       <div className="absolute bottom-8 left-6 flex gap-2 md:left-12 lg:left-16 xl:left-24">
         {slides.map((slide, index) => (
@@ -173,6 +198,7 @@ export function ClinicalHeroCarousel() {
 
 export function ConcernCarousel() {
   const t = useTranslations('homeEditorial');
+  const shouldReduceMotion = useReducedMotion();
   const concerns = skinConcernHighlights.map((item, index) => ({
     ...item,
     name: t(`concernItems.item${index + 1}.name`),
@@ -183,13 +209,14 @@ export function ConcernCarousel() {
 
   useEffect(() => {
     if (!emblaApi) return;
+    if (shouldReduceMotion) return;
 
     const autoplay = window.setInterval(() => {
       emblaApi.scrollNext();
     }, 4500);
 
     return () => window.clearInterval(autoplay);
-  }, [emblaApi]);
+  }, [emblaApi, shouldReduceMotion]);
 
   return (
     <div>
@@ -198,12 +225,12 @@ export function ConcernCarousel() {
           direction="previous"
           onClick={scrollPrev}
           disabled={!canScrollPrev}
-                  />
+        />
         <CarouselButton
           direction="next"
           onClick={scrollNext}
           disabled={!canScrollNext}
-                  />
+        />
       </div>
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="-ml-5 flex">
@@ -247,7 +274,7 @@ export function ResultsCarousel() {
     detail: t(`resultItems.item${index + 1}.detail`),
   }));
   const { emblaRef, scrollPrev, scrollNext, canScrollPrev, canScrollNext } =
-    useCarouselControls();
+    useCarouselControls({ watchDrag: false });
 
   return (
     <div>
@@ -256,12 +283,12 @@ export function ResultsCarousel() {
           direction="previous"
           onClick={scrollPrev}
           disabled={!canScrollPrev}
-                  />
+        />
         <CarouselButton
           direction="next"
           onClick={scrollNext}
           disabled={!canScrollNext}
-                  />
+        />
       </div>
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="-ml-6 flex">
@@ -270,35 +297,14 @@ export function ResultsCarousel() {
               key={item.treatment}
               className="min-w-0 flex-[0_0_92%] pl-6 md:flex-[0_0_58%] lg:flex-[0_0_42%]"
             >
-              <div className="grid grid-cols-2 gap-1 bg-white">
-                <div>
-                  <div className="relative aspect-3/4 overflow-hidden bg-stone-100">
-                    <Image
-                      src={item.beforeImage}
-                      alt={`Before ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 46vw, 24vw"
-                    />
-                    <span className="absolute bottom-0 left-0 bg-[#241f1b] px-4 py-2 text-[0.62rem] uppercase tracking-[0.18em] text-white">
-                      {t('results.before')}
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <div className="relative aspect-3/4 overflow-hidden bg-stone-100">
-                    <Image
-                      src={item.afterImage}
-                      alt={`After ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 46vw, 24vw"
-                    />
-                    <span className="absolute bottom-0 left-0 bg-[#8d6f58] px-4 py-2 text-[0.62rem] uppercase tracking-[0.18em] text-white">
-                      {t('results.after')}
-                    </span>
-                  </div>
-                </div>
+              <div className="relative aspect-3/4 overflow-hidden bg-white">
+                <BeforeAfterSlider
+                  beforeSrc={item.beforeImage}
+                  afterSrc={item.afterImage}
+                  beforeAlt={`Before ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
+                  afterAlt={`After ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
+                  initialPosition={52}
+                />
               </div>
               <div className="pt-5">
                 <h3 className="font-sans text-2xl font-light text-[#241f1b]">
@@ -313,6 +319,109 @@ export function ResultsCarousel() {
       <p className="mt-8 text-center text-[0.68rem] uppercase tracking-[0.16em] text-stone-500">
         {t('results.disclaimer')}
       </p>
+    </div>
+  );
+}
+
+export function ReviewsCarousel() {
+  const t = useTranslations('homeEditorial');
+  const shouldReduceMotion = useReducedMotion();
+  const reviews = testimonials.slice(0, 6);
+  const {
+    emblaRef,
+    emblaApi,
+    scrollPrev,
+    scrollNext,
+    canScrollPrev,
+    canScrollNext,
+    selectedIndex,
+  } = useCarouselControls({ loop: true });
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    if (shouldReduceMotion) return;
+
+    const autoplay = window.setInterval(() => {
+      emblaApi.scrollNext();
+    }, 6500);
+
+    return () => window.clearInterval(autoplay);
+  }, [emblaApi, shouldReduceMotion]);
+
+  return (
+    <div>
+      <div className="mb-8 flex justify-end gap-3">
+        <CarouselButton
+          direction="previous"
+          onClick={scrollPrev}
+          disabled={!canScrollPrev}
+        />
+        <CarouselButton
+          direction="next"
+          onClick={scrollNext}
+          disabled={!canScrollNext}
+        />
+      </div>
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="-ml-5 flex">
+          {reviews.map((review) => {
+            const rating = review.rating ?? 5;
+
+            return (
+              <article
+                key={`${review.author}-${review.role}`}
+                className="min-w-0 flex-[0_0_88%] pl-5 md:flex-[0_0_48%] lg:flex-[0_0_33%]"
+              >
+                <figure className="flex min-h-80 flex-col justify-between border border-stone-200 bg-white p-7 md:p-9">
+                  <div>
+                    <div
+                      className="mb-7 flex gap-1 text-[#8d6f58]"
+                      aria-label={t('reviews.ratingLabel', { rating })}
+                    >
+                      {Array.from({ length: rating }).map((_, index) => (
+                        <Star
+                          key={`${review.author}-star-${index}`}
+                          className="size-4 fill-current"
+                          strokeWidth={1.5}
+                          aria-hidden="true"
+                        />
+                      ))}
+                    </div>
+                    <blockquote className="font-sans text-2xl font-light leading-snug text-[#241f1b]">
+                      &ldquo;{review.quote}&rdquo;
+                    </blockquote>
+                  </div>
+                  <figcaption className="mt-10 border-t border-stone-200 pt-5">
+                    <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#241f1b]">
+                      {review.author}
+                    </p>
+                    {review.role ? (
+                      <p className="mt-2 text-sm text-stone-500">{review.role}</p>
+                    ) : null}
+                  </figcaption>
+                </figure>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+      <div className="mt-8 flex justify-center gap-2">
+        {reviews.map((review, index) => (
+          <button
+            key={`${review.author}-dot`}
+            type="button"
+            onClick={() => emblaApi?.scrollTo(index)}
+            aria-label={t('reviews.goToReview', { number: index + 1 })}
+            className="grid h-8 w-14 place-items-center"
+          >
+            <span
+              className={`h-px transition-all ${
+                selectedIndex === index ? 'w-12 bg-[#241f1b]' : 'w-5 bg-stone-400'
+              }`}
+            />
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
@@ -334,12 +443,12 @@ export function TrendsCarousel() {
           direction="previous"
           onClick={scrollPrev}
           disabled={!canScrollPrev}
-                  />
+        />
         <CarouselButton
           direction="next"
           onClick={scrollNext}
           disabled={!canScrollNext}
-                  />
+        />
       </div>
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="-ml-5 flex">

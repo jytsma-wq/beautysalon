@@ -39,8 +39,14 @@
     "more": "Ещё",
     "treatmentPortfolio": "Портфель процедур",
     "skinConditions": "Состояния кожи",
+    "treatmentPortfolioDescription": "Изучите инъекционные процедуры, уход за качеством кожи, facials, ногти, ресницы и уход за телом с консультацией перед записью.",
+    "conditionsDescription": "Найдите подходящие процедуры по проблеме кожи: морщины, упругость, тон, текстура, увлажнение и следы акне.",
     "downloadApp": "Скачать приложение",
-    "openMenu": "Открыть меню"
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "call": "Позвонить в Silk Beauty Salon",
+    "whatsapp": "Написать в Silk Beauty Salon в WhatsApp",
+    "stickyBookingLabel": "Быстрые действия для записи с телефона"
   },
   "header": {
     "announcement": "Награды | Лучший салон красоты Батуми | Публикации в грузинском журнале моды и красоты"
@@ -1767,6 +1773,13 @@
       "description": "??????????????? ????????? ??? ?????????, ??????? ????? ?????? ???????????? ??????? ?? ??????.",
       "cta": "?????? ??????"
     },
+    "reviews": {
+      "eyebrow": "Отзывы клиентов",
+      "title": "Что говорят клиенты после визита.",
+      "description": "Движущаяся карусель отзывов клиентов, которые выбирают Silk Beauty Salon в Батуми для инъекций, филлеров, ухода за лицом и процедур для кожи.",
+      "ratingLabel": "{rating} из 5 звезд",
+      "goToReview": "Перейти к отзыву {number}"
+    },
     "trendItems": {
       "item1": {
         "category": "???????????? ???????",
@@ -1836,7 +1849,9 @@
     "closeMenu": "Закрыть меню",
     "required": "обязательно",
     "keyTab": "Tab",
-    "keyEscape": "Escape"
+    "keyEscape": "Escape",
+    "beforeAfterComparison": "Сравнение до и после для {beforeAlt}",
+    "switchToVideo": "Переключиться на видео {title}"
   },
   "social": {
     "instagram": "Инстаграм",

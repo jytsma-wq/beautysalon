@@ -105,7 +105,7 @@ export default async function BookingPage({ params }: Props) {
         <div className="container-custom py-16 md:py-20">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">
-            <Link href="/" className="hover:text-[#241f1b]">
+            <Link href="/" className="inline-flex min-h-11 min-w-11 items-center hover:text-[#241f1b]">
               {tCommon('home')}
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />

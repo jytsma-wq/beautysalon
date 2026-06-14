@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 interface BeforeAfterSliderProps {
@@ -22,6 +22,7 @@ export function BeforeAfterSlider({
   initialPosition = 50,
 }: BeforeAfterSliderProps) {
   const t = useTranslations('accessibility');
+  const shouldReduceMotion = useReducedMotion();
   const [position, setPosition] = useState(initialPosition);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,6 +45,10 @@ export function BeforeAfterSlider({
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsDragging(true);
+    updatePosition(e.clientX);
+  };
+
+  const handleClick = (e: React.MouseEvent) => {
     updatePosition(e.clientX);
   };
 
@@ -109,6 +114,9 @@ export function BeforeAfterSlider({
 
   // Auto-demo drag animation on mount
   useEffect(() => {
+    if (shouldReduceMotion) return;
+
+    let animationFrameId: number | null = null;
     const timeout = setTimeout(() => {
       let start: number | null = null;
       const demo = (ts: number) => {
@@ -122,12 +130,17 @@ export function BeforeAfterSlider({
           setPosition(55);
           return; // stop
         }
-        requestAnimationFrame(demo);
+        animationFrameId = requestAnimationFrame(demo);
       };
-      requestAnimationFrame(demo);
+      animationFrameId = requestAnimationFrame(demo);
     }, 600); // delay so user sees the initial state first
-    return () => clearTimeout(timeout);
-  }, []);
+    return () => {
+      clearTimeout(timeout);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [shouldReduceMotion]);
 
   return (
     <div
@@ -135,6 +148,7 @@ export function BeforeAfterSlider({
       className="relative w-full h-full select-none overflow-hidden"
       style={{ cursor: isDragging ? 'col-resize' : 'ew-resize' }}
       onMouseDown={handleMouseDown}
+      onClick={handleClick}
       onTouchStart={handleTouchStart}
       onKeyDown={handleKeyDown}
       role="slider"
@@ -192,7 +206,7 @@ export function BeforeAfterSlider({
           className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2
                      w-10 h-10 rounded-full bg-white shadow-xl flex items-center justify-center
                      pointer-events-none"
-          animate={{ scale: isDragging ? 1.2 : 1 }}
+          animate={{ scale: isDragging && !shouldReduceMotion ? 1.2 : 1 }}
           transition={{ type: 'spring', stiffness: 400, damping: 25 }}
         >
           {/* Double chevron icon */}

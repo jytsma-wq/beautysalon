@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface RevealOnScrollProps {
@@ -8,6 +8,7 @@ interface RevealOnScrollProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right';
   duration?: number;
+  className?: string;
 }
 
 export function RevealOnScroll({
@@ -15,7 +16,10 @@ export function RevealOnScroll({
   delay = 0,
   direction = 'up',
   duration = 0.6,
+  className,
 }: RevealOnScrollProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   const getInitialPosition = () => {
     switch (direction) {
       case 'up':
@@ -35,8 +39,13 @@ export function RevealOnScroll({
     return { opacity: 1, y: 0, x: 0 };
   };
 
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
+      className={className}
       initial={getInitialPosition()}
       whileInView={getFinalPosition()}
       viewport={{ once: true, margin: '-50px' }}

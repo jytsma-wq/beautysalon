@@ -3,12 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { siteConfig } from '@/data/site-config';
 import { portfolioHighlights, proofStats } from '@/data/homepage';
+import { RevealOnScroll } from '@/components/effects/RevealOnScroll';
 import {
   ClinicalHeroCarousel,
   ConcernCarousel,
+  ReviewsCarousel,
   ResultsCarousel,
   TrendsCarousel,
 } from './GaldermaHomeCarousels';
@@ -44,24 +47,25 @@ function PhilosophySection() {
 
   return (
     <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
-      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[42%_58%] lg:items-end">
-        <SectionHeading
-          eyebrow={t('philosophy.eyebrow')}
-          title={t('philosophy.title')}
-          description={t('philosophy.description')}
-        />
-        <div className="border-t border-stone-200 pt-8">
-          <p className="font-sans text-[clamp(2rem,3.8vw,3.8rem)] font-light leading-tight text-[#241f1b]">
-            {t('philosophy.statement')}
-          </p>
-        </div>
-      </div>
+      <RevealOnScroll className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[42%_58%] lg:items-end">
+          <SectionHeading
+            eyebrow={t('philosophy.eyebrow')}
+            title={t('philosophy.title')}
+            description={t('philosophy.description')}
+          />
+          <div className="border-t border-stone-200 pt-8">
+            <p className="font-sans text-[clamp(2rem,3.8vw,3.8rem)] font-light leading-tight text-[#241f1b]">
+              {t('philosophy.statement')}
+            </p>
+          </div>
+      </RevealOnScroll>
     </section>
   );
 }
 
 function PortfolioSection() {
   const t = useTranslations('homeEditorial');
+  const shouldReduceMotion = useReducedMotion();
   const items = portfolioHighlights.map((item, index) => ({
     ...item,
     title: t(`portfolio.items.item${index + 1}.title`),
@@ -71,7 +75,7 @@ function PortfolioSection() {
   return (
     <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <RevealOnScroll className="mb-14 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
             eyebrow={t('portfolio.eyebrow')}
             title={t('portfolio.title')}
@@ -83,32 +87,45 @@ function PortfolioSection() {
           >
             {t('portfolio.viewAll')}
           </Link>
-        </div>
+        </RevealOnScroll>
 
         <div className="grid gap-px bg-stone-200 lg:grid-cols-3">
-          {items.map((item) => (
-            <Link key={item.title} href={item.href} className="group bg-white">
-              <div className="relative aspect-4/5 overflow-hidden bg-stone-100">
-                <Image
-                  src={item.image}
-                  alt={`${item.title} at Silk Beauty Salon in Batumi, Georgia`}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                />
-              </div>
-              <div className="min-h-56 p-7 md:p-9">
-                <h3 className="font-sans text-4xl font-light text-[#241f1b]">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-stone-600">
-                  {item.description}
-                </p>
-                <span className="mt-7 inline-block text-[0.68rem] font-medium uppercase tracking-[0.2em] text-[#8d6f58]">
-                  {t('portfolio.explore')}
-                </span>
-              </div>
-            </Link>
+          {items.map((item, index) => (
+            <motion.article
+              key={item.title}
+              className="bg-white"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+              whileHover={shouldReduceMotion ? undefined : { y: -8 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
+            >
+              <Link href={item.href} className="group block h-full">
+                <div className="relative aspect-4/5 overflow-hidden bg-stone-100">
+                  <Image
+                    src={item.image}
+                    alt={`${item.title} at Silk Beauty Salon in Batumi, Georgia`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-24 translate-y-4 bg-linear-to-t from-[#241f1b]/35 to-transparent opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100" />
+                </div>
+                <div className="min-h-56 p-7 md:p-9">
+                  <h3 className="font-sans text-4xl font-light text-[#241f1b]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-stone-600">
+                    {item.description}
+                  </p>
+                  <span className="mt-7 inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-[#8d6f58]">
+                    {t('portfolio.explore')}
+                    <span className="h-px w-7 bg-current transition-transform duration-300 group-hover:translate-x-2" />
+                  </span>
+                </div>
+              </Link>
+            </motion.article>
           ))}
         </div>
       </div>
@@ -123,14 +140,16 @@ function StatsSection() {
     <section className="bg-[#f7f2eb] px-6 py-20 md:px-12 lg:px-16 xl:px-24">
       <div className="mx-auto grid max-w-7xl gap-px bg-stone-200 md:grid-cols-3">
         {proofStats.map((stat, index) => (
-          <div key={stat.value} className="bg-[#f7f2eb] px-8 py-12 text-center">
-            <p className="font-sans text-6xl font-light leading-none text-[#241f1b]">
-              {stat.value}
-            </p>
-            <p className="mt-4 text-[0.68rem] uppercase tracking-[0.22em] text-stone-500">
-              {t(`stats.item${index + 1}.label`)}
-            </p>
-          </div>
+          <RevealOnScroll key={stat.value} delay={index * 0.08}>
+            <div className="bg-[#f7f2eb] px-8 py-12 text-center">
+              <p className="font-sans text-6xl font-light leading-none text-[#241f1b]">
+                {stat.value}
+              </p>
+              <p className="mt-4 text-[0.68rem] uppercase tracking-[0.22em] text-stone-500">
+                {t(`stats.item${index + 1}.label`)}
+              </p>
+            </div>
+          </RevealOnScroll>
         ))}
       </div>
     </section>
@@ -142,7 +161,7 @@ function SpecialistCta() {
 
   return (
     <section className="bg-[#241f1b] px-6 py-24 text-white md:px-12 md:py-32 lg:px-16 xl:px-24">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[55%_45%] lg:items-center">
+      <RevealOnScroll className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[55%_45%] lg:items-center">
         <div>
           <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#d8cbbb]">
             {t('cta.eyebrow')}
@@ -170,7 +189,7 @@ function SpecialistCta() {
             </Link>
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </section>
   );
 }
@@ -184,14 +203,16 @@ export function GaldermaInspiredHome() {
 
       <section className="bg-[#f7f2eb] px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12">
+          <RevealOnScroll className="mb-12">
             <SectionHeading
               eyebrow={t('concerns.eyebrow')}
               title={t('concerns.title')}
               description={t('concerns.description')}
             />
-          </div>
-          <ConcernCarousel />
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <ConcernCarousel />
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -200,7 +221,7 @@ export function GaldermaInspiredHome() {
 
       <section className="bg-[#f7f2eb] px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <RevealOnScroll className="mb-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <SectionHeading
               eyebrow={t('results.eyebrow')}
               title={t('results.title')}
@@ -212,8 +233,25 @@ export function GaldermaInspiredHome() {
             >
               {t('results.cta')}
             </Link>
-          </div>
-          <ResultsCarousel />
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <ResultsCarousel />
+          </RevealOnScroll>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+        <div className="mx-auto max-w-7xl">
+          <RevealOnScroll className="mb-12">
+            <SectionHeading
+              eyebrow={t('reviews.eyebrow')}
+              title={t('reviews.title')}
+              description={t('reviews.description')}
+            />
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <ReviewsCarousel />
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -221,7 +259,7 @@ export function GaldermaInspiredHome() {
 
       <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <RevealOnScroll className="mb-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <SectionHeading
               eyebrow={t('journal.eyebrow')}
               title={t('journal.title')}
@@ -233,8 +271,10 @@ export function GaldermaInspiredHome() {
             >
               {t('journal.cta')}
             </Link>
-          </div>
-          <TrendsCarousel />
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.08}>
+            <TrendsCarousel />
+          </RevealOnScroll>
         </div>
       </section>
     </>

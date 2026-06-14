@@ -4,11 +4,14 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { siteConfig } from '@/data/site-config';
-import { motion, AnimatePresence } from 'framer-motion';
+import { rtlLocales, type Locale } from '@/i18n';
+import { motion } from 'framer-motion';
+
+const MOBILE_MENU_TOGGLE_ID = 'silk-mobile-menu-toggle';
 
 type MegaMenuItem = {
   title: string;
@@ -80,6 +83,35 @@ function MegaMenuPanel({
   );
 }
 
+function BrandLogo({
+  className,
+  imageClassName,
+  priority = false,
+}: {
+  className?: string;
+  imageClassName?: string;
+  priority?: boolean;
+}) {
+  return (
+    <Image
+      src={siteConfig.logo.image}
+      alt={siteConfig.name}
+      width={180}
+      height={180}
+      priority={priority}
+      className={imageClassName || className}
+      sizes="(max-width: 767px) 64px, 88px"
+    />
+  );
+}
+
+function closeMobileMenu() {
+  const menuToggle = document.getElementById(MOBILE_MENU_TOGGLE_ID) as HTMLInputElement | null;
+  if (menuToggle) {
+    menuToggle.checked = false;
+  }
+}
+
 export function GaldermaHeaderClient({
   treatmentMegaMenuItems,
   skinConditionMegaMenuItems,
@@ -87,11 +119,16 @@ export function GaldermaHeaderClient({
   treatmentMegaMenuItems: MegaMenuItem[];
   skinConditionMegaMenuItems: MegaMenuItem[];
 }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [activeMegaMenu, setActiveMegaMenu] = useState<'treatments' | 'conditions' | null>(null);
+  const locale = useLocale() as Locale;
   const t = useTranslations('nav');
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    document.documentElement.dir = rtlLocales.includes(locale) ? 'rtl' : 'ltr';
+  }, [locale]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,8 +145,27 @@ export function GaldermaHeaderClient({
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeMobileMenu();
+      }
+    };
+
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, []);
+
   return (
     <>
+      <input
+        id={MOBILE_MENU_TOGGLE_ID}
+        type="checkbox"
+        className="peer/mobile-menu sr-only"
+        aria-label={t('openMenu')}
+        aria-controls="silk-mobile-menu-panel"
+      />
+
       <motion.div
         className={`fixed top-0 left-0 right-0 z-50 border-b border-[#e8e4df] bg-[#f7f4f0] transition-all duration-300 ${
           isHidden ? '-translate-y-full' : 'translate-y-0'
@@ -117,7 +173,7 @@ export function GaldermaHeaderClient({
         initial={{ y: 0 }}
         animate={{ y: isHidden ? -100 : 0 }}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs lg:px-8">
+        <div className="mx-auto flex h-11 max-w-7xl items-center justify-between px-6 text-xs lg:px-8">
           <nav className="hidden items-center gap-6 md:flex">
             <Link
               href="/about"
@@ -135,7 +191,7 @@ export function GaldermaHeaderClient({
 
           <a
             href={`tel:${siteConfig.contact.phone}`}
-            className="flex items-center gap-2 text-stone-600 transition-colors hover:text-[#8d6f58] md:hidden"
+            className="flex h-11 items-center gap-2 text-stone-600 transition-colors hover:text-[#8d6f58] md:hidden"
           >
             <Phone className="h-3.5 w-3.5" />
             <span>{siteConfig.contact.phone}</span>
@@ -152,15 +208,18 @@ export function GaldermaHeaderClient({
         className={`fixed left-0 right-0 z-40 border-b border-[#e8e4df] bg-white transition-all duration-300 ${
           isHidden ? '-translate-y-full' : 'translate-y-0'
         }`}
-        style={{ top: '40px' }}
+        style={{ top: '44px' }}
         initial={{ y: 0 }}
         animate={{ y: isHidden ? -140 : 0 }}
         transition={{ duration: 0.3 }}
       >
         <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
-          <div className="mb-4 flex justify-center">
-            <Link href="/" className="font-serif text-2xl tracking-tight text-[#1c1c1c] transition-colors hover:text-[#8d6f58]">
-              {siteConfig.name}
+          <div className="mb-4 hidden justify-center md:flex">
+            <Link href="/" className="block transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
+              <BrandLogo
+                priority
+                imageClassName="h-20 w-20 object-contain"
+              />
             </Link>
           </div>
 
@@ -241,107 +300,111 @@ export function GaldermaHeaderClient({
           </div>
 
           <div className="flex items-center justify-between md:hidden">
-            <Link href="/" className="font-serif text-xl tracking-tight text-[#1c1c1c]">
-              {siteConfig.name}
+            <Link href="/" className="block transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
+              <BrandLogo
+                priority
+                imageClassName="h-16 w-16 object-contain"
+              />
             </Link>
-            <button onClick={() => setIsMenuOpen(true)} className="p-2 text-[#1c1c1c]" aria-label={t('openMenu')}>
+
+            <label
+              htmlFor={MOBILE_MENU_TOGGLE_ID}
+              className="grid h-11 w-11 cursor-pointer place-items-center text-[#1c1c1c]"
+              aria-label={t('openMenu')}
+            >
               <Menu className="h-6 w-6" strokeWidth={1} />
-            </button>
+            </label>
+
           </div>
         </div>
       </motion.header>
 
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-[#f7f4f0]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+      <div
+        id="silk-mobile-menu-panel"
+        className="fixed inset-0 z-[70] hidden overflow-y-auto bg-[#f7f4f0] peer-checked/mobile-menu:block"
+      >
+        <div className="relative flex min-h-dvh items-center justify-center px-6 py-20">
+          <label
+            htmlFor={MOBILE_MENU_TOGGLE_ID}
+            className="absolute top-8 right-8 grid h-11 w-11 cursor-pointer place-items-center text-4xl font-light text-stone-900 transition-colors hover:text-stone-600"
+            aria-label={t('closeMenu')}
           >
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              className="absolute top-8 right-8 text-4xl font-light text-stone-900 transition-colors hover:text-stone-600"
-              aria-label={t('closeMenu')}
-            >
-              <X className="h-8 w-8" strokeWidth={1} />
-            </button>
+            <X className="h-8 w-8" strokeWidth={1} />
+          </label>
 
-            <div className="w-full max-w-5xl px-8">
-              <div className="mb-12 text-center">
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="font-serif text-3xl tracking-tight text-[#1c1c1c]">
-                  {siteConfig.name}
+          <div className="w-full max-w-5xl">
+            <div className="mb-10 flex justify-center">
+              <Link href="/" onClick={closeMobileMenu} className="block transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
+                <BrandLogo imageClassName="h-24 w-24 object-contain" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 gap-10">
+              <nav className="space-y-5">
+                <span className="mb-6 block text-xs uppercase tracking-[0.4em] text-stone-400">{t('menu')}</span>
+                <Link href="/treatments" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                  {t('treatments', { defaultValue: 'Treatments' })}
                 </Link>
-              </div>
+                <Link href="/conditions" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                  {t('conditions', { defaultValue: 'Skin Conditions' })}
+                </Link>
+                <Link href="/pricelist" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                  {t('pricelist', { defaultValue: 'Pricelist' })}
+                </Link>
+                <Link href="/offers" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                  {t('offers', { defaultValue: 'Offers' })}
+                </Link>
+                <Link href="/download" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                  {t('downloadApp', { defaultValue: 'Download App' })}
+                </Link>
+                <Link href="/international-clients" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                  {t('international', { defaultValue: 'International Clients' })}
+                </Link>
+              </nav>
 
-              <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
-                <nav className="space-y-6">
-                  <span className="mb-6 block text-xs uppercase tracking-[0.4em] text-stone-400">{t('menu')}</span>
-                  <Link href="/treatments" onClick={() => setIsMenuOpen(false)} className="block text-3xl font-serif font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
-                    {t('treatments', { defaultValue: 'Treatments' })}
+              <div>
+                <span className="mb-6 block text-xs uppercase tracking-[0.4em] text-stone-400">{t('more')}</span>
+                <nav className="mb-8 space-y-4">
+                  <Link href="/about" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
+                    {t('about', { defaultValue: 'About' })}
                   </Link>
-                  <Link href="/conditions" onClick={() => setIsMenuOpen(false)} className="block text-3xl font-serif font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
-                    {t('conditions', { defaultValue: 'Skin Conditions' })}
+                  <Link href="/contact-us" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
+                    {t('contact', { defaultValue: 'Contact Us' })}
                   </Link>
-                  <Link href="/pricelist" onClick={() => setIsMenuOpen(false)} className="block text-3xl font-serif font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
-                    {t('pricelist', { defaultValue: 'Pricelist' })}
+                  <Link href="/faq" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
+                    {t('faq', { defaultValue: 'FAQ' })}
                   </Link>
-                  <Link href="/offers" onClick={() => setIsMenuOpen(false)} className="block text-3xl font-serif font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
-                    {t('offers', { defaultValue: 'Offers' })}
-                  </Link>
-                  <Link href="/download" onClick={() => setIsMenuOpen(false)} className="block text-3xl font-serif font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
-                    {t('downloadApp', { defaultValue: 'Download App' })}
-                  </Link>
-                  <Link href="/international-clients" onClick={() => setIsMenuOpen(false)} className="block text-3xl font-serif font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
-                    {t('international', { defaultValue: 'International Clients' })}
+                  <Link href="/blog" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
+                    {t('blog', { defaultValue: 'Journal' })}
                   </Link>
                 </nav>
 
-                <div>
-                  <span className="mb-6 block text-xs uppercase tracking-[0.4em] text-stone-400">{t('more')}</span>
-                  <nav className="mb-8 space-y-4">
-                    <Link href="/about" onClick={() => setIsMenuOpen(false)} className="block text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
-                      {t('about', { defaultValue: 'About' })}
-                    </Link>
-                    <Link href="/contact-us" onClick={() => setIsMenuOpen(false)} className="block text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
-                      {t('contact', { defaultValue: 'Contact Us' })}
-                    </Link>
-                    <Link href="/faq" onClick={() => setIsMenuOpen(false)} className="block text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
-                      {t('faq', { defaultValue: 'FAQ' })}
-                    </Link>
-                    <Link href="/blog" onClick={() => setIsMenuOpen(false)} className="block text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
-                      {t('blog', { defaultValue: 'Journal' })}
-                    </Link>
-                  </nav>
-
-                  <div className="mt-16">
-                    <span className="mb-4 block text-xs uppercase tracking-[0.4em] text-stone-400">
-                      {t('visitUs', { defaultValue: 'Visit Us' })}
-                    </span>
-                    <p className="text-sm leading-relaxed text-stone-600">
-                      {siteConfig.contact.address}
-                      <br />
-                      {siteConfig.contact.city}, {siteConfig.contact.country} {siteConfig.contact.postcode}
-                    </p>
-                    <a href={`tel:${siteConfig.contact.phone}`} className="mt-4 block text-sm text-stone-900 hover:underline">
-                      {siteConfig.contact.phone}
-                    </a>
-                  </div>
-
-                  <Link
-                    href="/book"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="mt-12 block w-full rounded-md border border-[#d9cec1] bg-[#f3ece3] py-5 text-center text-sm uppercase tracking-widest text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
-                  >
-                    {t('bookConsultation', { defaultValue: 'Book Consultation' })}
-                  </Link>
+                <div className="mt-10">
+                  <span className="mb-4 block text-xs uppercase tracking-[0.4em] text-stone-400">
+                    {t('visitUs', { defaultValue: 'Visit Us' })}
+                  </span>
+                  <p className="text-sm leading-relaxed text-stone-600">
+                    {siteConfig.contact.address}
+                    <br />
+                    {siteConfig.contact.city}, {siteConfig.contact.country} {siteConfig.contact.postcode}
+                  </p>
+                  <a href={`tel:${siteConfig.contact.phone}`} className="mt-4 block text-sm text-stone-900 hover:underline">
+                    {siteConfig.contact.phone}
+                  </a>
                 </div>
+
+                <Link
+                  href="/book"
+                  onClick={closeMobileMenu}
+                  className="mt-10 block w-full rounded-md border border-[#d9cec1] bg-[#f3ece3] py-5 text-center text-sm uppercase tracking-widest text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+                >
+                  {t('bookConsultation', { defaultValue: 'Book Consultation' })}
+                </Link>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

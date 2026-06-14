@@ -126,11 +126,11 @@ export default async function LocalSeoLandingPage({ params }: Props) {
       <section className="bg-[#f7f2eb] pt-[170px] md:pt-[188px]">
         <div className="container-custom py-16 md:py-20">
           <nav className="mb-8 flex flex-wrap items-center gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">
-            <Link href="/" className="hover:text-[#241f1b]">
+            <Link href="/" className="inline-flex min-h-11 min-w-11 items-center hover:text-[#241f1b]">
               Home
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
-            <Link href="/beauty-salon-batumi" className="hover:text-[#241f1b]">
+            <Link href="/beauty-salon-batumi" className="inline-flex min-h-11 items-center hover:text-[#241f1b]">
               Batumi
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
@@ -149,10 +149,10 @@ export default async function LocalSeoLandingPage({ params }: Props) {
                 {content.intro}
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <Button asChild className="btn-gold">
+                <Button asChild className="btn-gold min-h-11">
                   <Link href="/book">{content.bookCta}</Link>
                 </Button>
-                <Button asChild variant="outline" className="rounded-md">
+                <Button asChild variant="outline" className="min-h-11 rounded-md">
                   <Link href={`/treatments/category/${page.categorySlug}`}>
                     {content.categoryCta}
                   </Link>

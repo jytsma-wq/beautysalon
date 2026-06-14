@@ -39,8 +39,14 @@
     "more": "עוד",
     "treatmentPortfolio": "תיק טיפולים",
     "skinConditions": "מצבי עור",
+    "treatmentPortfolioDescription": "גלו הזרקות, טיפולי איכות עור, טיפולי פנים, ציפורניים, ריסים וטיפולי גוף לאחר ייעוץ מותאם.",
+    "conditionsDescription": "מצאו מסלולי טיפול לפי דאגת עור, מקמטים ומיצוק ועד גוון, מרקם, לחות וסימני אקנה.",
     "downloadApp": "הורדת האפליקציה",
-    "openMenu": "פתיחת תפריט"
+    "openMenu": "פתיחת תפריט",
+    "closeMenu": "סגור תפריט",
+    "call": "התקשרו ל-Silk Beauty Salon",
+    "whatsapp": "שלחו הודעה ל-Silk Beauty Salon ב-WhatsApp",
+    "stickyBookingLabel": "פעולות הזמנה מהירות בנייד"
   },
   "header": {
     "announcement": "זוכת פרסים | סלון היופי הטוב בבתומי | פורסם במגזין האופנה והיופי הגיאורגי"
@@ -1767,6 +1773,13 @@
       "description": "????? ???????? ???????? ?????? ????? ?? ????? ?????? ???? ??? ?????? ???.",
       "cta": "??? ?? ??????"
     },
+    "reviews": {
+      "eyebrow": "סיפורי לקוחות",
+      "title": "מה לקוחות אומרות אחרי הביקור.",
+      "description": "קרוסלת חוות דעת מלקוחות שבוחרות ב-Silk Beauty Salon בבטומי להזרקות, מילויים, טיפולי פנים וטיפולי עור.",
+      "ratingLabel": "{rating} מתוך 5 כוכבים",
+      "goToReview": "מעבר לחוות דעת {number}"
+    },
     "trendItems": {
       "item1": {
         "category": "????? ?????",
@@ -1836,7 +1849,9 @@
     "closeMenu": "סגור תפריט",
     "required": "נדרש",
     "keyTab": "Tab",
-    "keyEscape": "Escape"
+    "keyEscape": "Escape",
+    "beforeAfterComparison": "השוואת לפני ואחרי עבור {beforeAlt}",
+    "switchToVideo": "עבור לסרטון {title}"
   },
   "social": {
     "instagram": "אינסטגרם",

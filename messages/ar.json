@@ -39,8 +39,14 @@
     "more": "المزيد",
     "treatmentPortfolio": "مجموعة العلاجات",
     "skinConditions": "حالات البشرة",
+    "treatmentPortfolioDescription": "استكشف الحقن وعلاجات جودة البشرة والعناية بالوجه والأظافر والرموش والجسم بعد استشارة مناسبة.",
+    "conditionsDescription": "اعثر على مسارات علاجية حسب مشكلة البشرة، من التجاعيد وفقدان التماسك إلى اللون والملمس والترطيب وآثار حب الشباب.",
     "downloadApp": "تحميل التطبيق",
-    "openMenu": "فتح القائمة"
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "call": "اتصل بصالون سيلك بيوتي",
+    "whatsapp": "راسل صالون سيلك بيوتي على واتساب",
+    "stickyBookingLabel": "إجراءات حجز سريعة على الهاتف"
   },
   "header": {
     "announcement": "حائزة على جوائز | أفضل صالون تجميل في باتومي | نُشرت في مجلة الجمال والموضة الجورجية"
@@ -1912,7 +1918,9 @@
     "skipToMain": "Skip to main content",
     "skipToTreatments": "Skip to treatments",
     "skipToBooking": "Skip to booking",
-    "skipNavigation": "Skip links"
+    "skipNavigation": "Skip links",
+    "beforeAfterComparison": "مقارنة قبل وبعد لـ {beforeAlt}",
+    "switchToVideo": "التبديل إلى فيديو {title}"
   },
   "errors": {
     "title": "حدث خطأ ما",
@@ -2137,6 +2145,13 @@
       "title": "Aesthetic insight, without the noise.",
       "description": "Educational notes for patients who want to understand treatment planning before they book.",
       "cta": "Read journal"
+    },
+    "reviews": {
+      "eyebrow": "قصص العملاء",
+      "title": "ماذا يقول العملاء بعد زيارتهم.",
+      "description": "دوّار متحرك لآراء العملاء الذين يختارون Silk Beauty Salon في باتومي للحقن والفيلر وعلاجات الوجه والبشرة.",
+      "ratingLabel": "{rating} من 5 نجوم",
+      "goToReview": "الانتقال إلى التقييم {number}"
     },
     "trendItems": {
       "item1": {

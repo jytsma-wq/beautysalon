@@ -28,7 +28,7 @@ export function ThemeToggle() {
       <Button
         variant="ghost"
         size="icon"
-        className="h-8 w-8 rounded-full opacity-0"
+        className="h-11 w-11 rounded-full opacity-0"
         aria-label={t('loadingThemeToggle')}
         disabled
       >
@@ -42,7 +42,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      className="h-8 w-8 rounded-full"
+      className="h-11 w-11 rounded-full"
       aria-label={theme === 'light' ? t('switchToDarkTheme') : t('switchToLightTheme')}
     >
       {theme === 'light' ? (
