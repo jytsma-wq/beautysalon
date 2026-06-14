@@ -3,8 +3,8 @@
 import { FormEvent, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Facebook, Instagram } from 'lucide-react';
 import { Link } from '@/i18n/routing';
+import { FacebookBrandIcon, InstagramBrandIcon, TikTokBrandIcon } from '@/components/icons';
 import { siteConfig } from '@/data/site-config';
 import { useAnnouncer } from '@/components/ui/announcer';
 
@@ -122,24 +122,33 @@ export function GaldermaFooter() {
             </h3>
             <p className="max-w-xs text-sm leading-relaxed text-stone-600">{t('description')}</p>
 
-            <div className="mt-8 flex gap-6">
-              <a
-                href={siteConfig.social?.instagram ?? 'https://instagram.com/silkbeauty'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-stone-400 transition-colors hover:text-[#8d6f58]"
-                aria-label={t('instagram')}
-              >
-                <Instagram className="h-[26px] w-[26px]" strokeWidth={1.8} />
-              </a>
+            <div className="mt-8 flex items-center gap-4">
               <a
                 href={siteConfig.social?.facebook ?? 'https://facebook.com/silkbeauty'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-stone-400 transition-colors hover:text-[#8d6f58]"
+                className="grid h-11 w-11 place-items-center transition-opacity hover:opacity-80"
                 aria-label={t('facebook')}
               >
-                <Facebook className="h-[26px] w-[26px]" strokeWidth={1.8} />
+                <FacebookBrandIcon className="h-7 w-7" />
+              </a>
+              <a
+                href={siteConfig.social?.instagram ?? 'https://instagram.com/silkbeauty'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-11 w-11 place-items-center transition-opacity hover:opacity-80"
+                aria-label={t('instagram')}
+              >
+                <InstagramBrandIcon className="h-7 w-7" />
+              </a>
+              <a
+                href={siteConfig.social.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-11 w-11 place-items-center transition-opacity hover:opacity-80"
+                aria-label="TikTok"
+              >
+                <TikTokBrandIcon className="h-7 w-7" />
               </a>
             </div>
           </div>
