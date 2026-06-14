@@ -11,7 +11,8 @@ import {
   type DashboardBooking,
 } from '@/lib/dashboard-bookings';
 import { getDashboardPasswordFromEnv, isDashboardAuthenticated } from '@/lib/dashboard-auth';
-import { loginDashboard, logoutDashboard } from './actions';
+import { DeleteBookingButton } from './delete-booking-button';
+import { deleteDashboardBooking, loginDashboard, logoutDashboard } from './actions';
 
 export const dynamic = 'force-dynamic';
 
@@ -101,7 +102,9 @@ function DashboardLogin({ locale, error }: { locale: string; error?: string }) {
     ? 'Dashboard password is not configured in Hostinger environment variables.'
     : error === 'invalid'
       ? 'The password was not correct.'
-      : null;
+      : error === 'unauthorized'
+        ? 'Please sign in before changing bookings.'
+        : null;
 
   return (
     <section className="min-h-screen bg-[#f7f2eb] px-4 py-10 md:px-8">
@@ -154,7 +157,7 @@ function EmptyState() {
   );
 }
 
-function AppointmentTable({ bookings }: { bookings: DashboardBooking[] }) {
+function AppointmentTable({ bookings, locale }: { bookings: DashboardBooking[]; locale: string }) {
   if (bookings.length === 0) {
     return <EmptyState />;
   }
@@ -162,7 +165,7 @@ function AppointmentTable({ bookings }: { bookings: DashboardBooking[] }) {
   return (
     <div className="overflow-hidden rounded-[8px] border border-[#e8e4df] bg-white">
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[960px] border-collapse text-left">
+        <table className="w-full min-w-[1080px] border-collapse text-left">
           <thead className="border-b border-[#e8e4df] bg-[#fbf8f4] text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">
             <tr>
               <th className="px-5 py-4 font-medium">Appointment</th>
@@ -171,6 +174,7 @@ function AppointmentTable({ bookings }: { bookings: DashboardBooking[] }) {
               <th className="px-5 py-4 font-medium">Service</th>
               <th className="px-5 py-4 font-medium">Status</th>
               <th className="px-5 py-4 font-medium">Notes</th>
+              <th className="px-5 py-4 font-medium">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#eee8e1] text-sm">
@@ -215,6 +219,13 @@ function AppointmentTable({ bookings }: { bookings: DashboardBooking[] }) {
                 <td className="max-w-[260px] px-5 py-4 text-stone-700">
                   {booking.message ? booking.message : <span className="text-stone-400">No notes</span>}
                 </td>
+                <td className="px-5 py-4">
+                  <form action={deleteDashboardBooking}>
+                    <input type="hidden" name="locale" value={locale} />
+                    <input type="hidden" name="bookingId" value={booking.id} />
+                    <DeleteBookingButton clientName={booking.name} />
+                  </form>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -236,6 +247,7 @@ export default async function DashboardPage({ params, searchParams }: DashboardP
   const { listBookings } = await import('@/lib/booking-store');
   const selectedDate = normalizeDate(firstParam(resolvedSearchParams.date));
   const selectedStatus = normalizeStatus(firstParam(resolvedSearchParams.status));
+  const deleteResult = firstParam(resolvedSearchParams.deleted);
   const bookings = await listBookings();
   const stats = getDashboardStats(bookings);
   const filteredBookings = sortAppointments(
@@ -282,6 +294,16 @@ export default async function DashboardPage({ params, searchParams }: DashboardP
           ))}
         </div>
 
+        {deleteResult === '1' ? (
+          <div className="mt-6 rounded-[8px] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800" role="status">
+            Booking deleted.
+          </div>
+        ) : deleteResult === '0' ? (
+          <div className="mt-6 rounded-[8px] border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800" role="status">
+            That booking was already removed.
+          </div>
+        ) : null}
+
         <form className="mt-8 grid gap-4 rounded-[8px] border border-[#e8e4df] bg-white p-4 md:grid-cols-[minmax(0,1fr)_220px_auto_auto] md:items-end">
           <div className="space-y-2">
             <Label htmlFor="date">Date</Label>
@@ -319,7 +341,7 @@ export default async function DashboardPage({ params, searchParams }: DashboardP
             <h2 className="font-sans text-2xl font-light text-[#241f1b]">Appointment list</h2>
             <p className="text-sm text-stone-600">{filteredBookings.length} shown</p>
           </div>
-          <AppointmentTable bookings={filteredBookings} />
+          <AppointmentTable bookings={filteredBookings} locale={locale} />
         </div>
       </div>
     </section>

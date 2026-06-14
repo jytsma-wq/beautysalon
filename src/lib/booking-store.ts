@@ -321,6 +321,34 @@ export async function createBooking(data: BookingCreateData): Promise<Booking> {
   return result.value;
 }
 
+export async function deleteBookingById(id: string): Promise<boolean> {
+  const result = await withDatabaseFallback(
+    async () => {
+      try {
+        await db.booking.delete({ where: { id } });
+        return true;
+      } catch (error) {
+        if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'P2025') {
+          return false;
+        }
+        throw error;
+      }
+    },
+    async () => withFileLock(async () => {
+      const bookings = await readFileBookings();
+      const remainingBookings = bookings.filter((booking) => booking.id !== id);
+      if (remainingBookings.length === bookings.length) {
+        return false;
+      }
+
+      await writeFileBookings(remainingBookings);
+      return true;
+    })
+  );
+
+  return result.value;
+}
+
 export async function getBookingStoreHealth() {
   const startedAt = Date.now();
 
