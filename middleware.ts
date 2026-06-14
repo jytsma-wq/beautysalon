@@ -5,6 +5,7 @@ import { locales } from './src/i18n';
 import { structuredLog } from './src/lib/logger';
 import { isIpBlocked } from './src/lib/security-logger';
 import { buildCSPHeader, generateNonce } from './src/lib/csp';
+import { getHtmlCacheControl, shouldBypassLocaleRedirect } from './src/lib/performance-routing';
 
 // Path check result type
 interface PathCheckResult {
@@ -173,6 +174,7 @@ function withMiddlewareHeaders(
   requestId: string,
   pathname: string,
   nonce: string,
+  method: string,
   requestHeaders?: Headers
 ) {
   if (requestHeaders) {
@@ -193,6 +195,10 @@ function withMiddlewareHeaders(
   response.headers.set('x-pathname', pathname);
   response.headers.set('x-nonce', nonce);
   response.headers.set('Content-Security-Policy', buildCSPHeader(nonce));
+  const htmlCacheControl = getHtmlCacheControl(pathname, method);
+  if (htmlCacheControl) {
+    response.headers.set('Cache-Control', htmlCacheControl);
+  }
   return response;
 }
 
@@ -301,7 +307,7 @@ export default async function middleware(request: NextRequest) {
     canonicalUrl.protocol = 'https:';
     canonicalUrl.port = '';
     const response = NextResponse.redirect(canonicalUrl, 308);
-    return withMiddlewareHeaders(response, requestId, pathname, nonce, requestHeaders);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method, requestHeaders);
   }
 
   // Check if IP is on the security block list
@@ -314,15 +320,19 @@ export default async function middleware(request: NextRequest) {
         'Content-Type': 'text/plain',
       },
     });
-    return withMiddlewareHeaders(response, requestId, pathname, nonce);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method);
   }
 
-  // Redirect root to detected locale
-  if (pathname === '/') {
+  // Serve the default English homepage at the root to avoid a mobile-critical
+  // document redirect. Locale-prefixed URLs remain available for every language.
+  if (shouldBypassLocaleRedirect(pathname)) {
     const detectedLocale = detectLocale(request);
-    const response = NextResponse.redirect(new URL(`/${detectedLocale}`, request.url), 307);
+    const response = NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
 
-    // Set NEXT_LOCALE cookie for subsequent requests
     response.cookies.set('NEXT_LOCALE', detectedLocale, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
@@ -331,14 +341,14 @@ export default async function middleware(request: NextRequest) {
       maxAge: 60 * 60 * 24, // 24 hours
     });
 
-    return withMiddlewareHeaders(response, requestId, pathname, nonce);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method, requestHeaders);
   }
 
   // Check for blocked user agents
   if (!isAutomatedTestRun && checkUserAgent(userAgent)) {
     logSuspicious(request, 'BLOCKED_UA', requestId);
     const response = new NextResponse('Forbidden', { status: 403 });
-    return withMiddlewareHeaders(response, requestId, pathname, nonce);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method);
   }
 
   // Check path for blocked/suspicious patterns
@@ -346,7 +356,7 @@ export default async function middleware(request: NextRequest) {
   if (pathCheck.blocked) {
     logSuspicious(request, 'BLOCKED_PATH', requestId);
     const response = new NextResponse('Forbidden', { status: 403 });
-    return withMiddlewareHeaders(response, requestId, pathname, nonce);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method);
   }
   if (pathCheck.suspicious) {
     logSuspicious(request, 'SUSPICIOUS_PATH', requestId);
@@ -371,7 +381,7 @@ export default async function middleware(request: NextRequest) {
           'X-RateLimit-Remaining': '0',
         }
       });
-      return withMiddlewareHeaders(response, requestId, pathname, nonce);
+      return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method);
     }
   }
 
@@ -383,7 +393,7 @@ export default async function middleware(request: NextRequest) {
         headers: requestHeaders,
       },
     });
-    return withMiddlewareHeaders(response, requestId, pathname, nonce);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method);
   }
 
   // Maintenance route returns a deliberate 503 and must not be locale-prefixed.
@@ -393,13 +403,13 @@ export default async function middleware(request: NextRequest) {
         headers: requestHeaders,
       },
     });
-    return withMiddlewareHeaders(response, requestId, pathname, nonce);
+    return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method);
   }
 
   // Pass to i18n middleware for locale routing
   const response = i18nMiddleware(request);
 
-  return withMiddlewareHeaders(response, requestId, pathname, nonce, requestHeaders);
+  return withMiddlewareHeaders(response, requestId, pathname, nonce, request.method, requestHeaders);
 }
 
 export const config = {
