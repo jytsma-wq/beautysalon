@@ -239,6 +239,7 @@ export function BookingForm({ consultationTypes }: BookingFormProps) {
           {t('selectService', { defaultValue: 'Select Service' })}
         </Label>
         <select
+          id="service"
           value={formData.service}
           onChange={(e) => handleChange('service', e.target.value)}
           required
@@ -350,6 +351,8 @@ export function BookingForm({ consultationTypes }: BookingFormProps) {
                 <button
                   key={slot.value}
                   type="button"
+                  data-testid="booking-time-slot"
+                  data-value={slot.value}
                   disabled={isBooked}
                   onClick={() => handleChange('preferredTime', slot.value)}
                   className={`inline-flex h-12 w-full min-w-0 items-center justify-center rounded-md border text-sm transition-colors ${

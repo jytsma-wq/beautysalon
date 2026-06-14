@@ -2,14 +2,14 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Treatments', () => {
   test('should load treatments page', async ({ page }) => {
-    await page.goto('/en/treatments');
+    await page.goto('/en/treatments', { waitUntil: 'domcontentloaded' });
     
     await expect(page).toHaveTitle(/Treatments|treatments|პროცედურები/);
     await expect(page.locator('h1')).toContainText(/Treatments|treatments|პროცედურები/);
   });
 
   test('should display treatment categories', async ({ page }) => {
-    await page.goto('/en/treatments');
+    await page.goto('/en/treatments', { waitUntil: 'domcontentloaded' });
     
     // Main content should be visible
     await expect(page.locator('main')).toBeVisible();
@@ -20,7 +20,7 @@ test.describe('Treatments', () => {
   });
 
   test('should navigate to individual treatment page', async ({ page }) => {
-    await page.goto('/en/treatments');
+    await page.goto('/en/treatments', { waitUntil: 'domcontentloaded' });
     
     // Find and click on a treatment link
     const treatmentLinks = page.locator('a[href*="/treatments/"]').first();
@@ -38,7 +38,7 @@ test.describe('Treatments', () => {
   });
 
   test('should have booking redirect functionality', async ({ page }) => {
-    await page.goto('/en/treatments');
+    await page.goto('/en/treatments', { waitUntil: 'domcontentloaded' });
     
     // Look for book appointment button or link
     const bookButton = page.locator('text=/book|schedule|appointment/i').first();
@@ -51,7 +51,7 @@ test.describe('Treatments', () => {
 
   test('should display treatment details on individual page', async ({ page }) => {
     // Try to navigate to a specific treatment
-    await page.goto('/en/treatments/botox');
+    await page.goto('/en/treatments/botox', { waitUntil: 'domcontentloaded' });
     
     // Page should load
     await expect(page.locator('main')).toBeVisible();
@@ -61,7 +61,7 @@ test.describe('Treatments', () => {
   });
 
   test('should handle 404 for non-existent treatment', async ({ page }) => {
-    await page.goto('/en/treatments/non-existent-treatment');
+    await page.goto('/en/treatments/non-existent-treatment', { waitUntil: 'domcontentloaded' });
     
     // Should either show 404 or redirect
     const status = await page.evaluate(() => document.title);
@@ -70,7 +70,7 @@ test.describe('Treatments', () => {
 
   test('should be responsive on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('/en/treatments');
+    await page.goto('/en/treatments', { waitUntil: 'domcontentloaded' });
     
     // Content should still be visible
     await expect(page.locator('main')).toBeVisible();

@@ -27,7 +27,7 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <details className="group relative">
+    <details className="group relative" data-testid="language-switcher">
       <summary
         className="flex h-11 min-w-11 cursor-pointer list-none items-center justify-center gap-2 rounded-md px-2 text-sm hover:bg-stone-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8d6f58] sm:min-w-0 sm:justify-start [&::-webkit-details-marker]:hidden"
         aria-label={t('currentLanguageFlag', { language: localeNames[locale]?.name || locale })}

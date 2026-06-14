@@ -41,8 +41,8 @@ test.describe('Contact Page', () => {
     const submitButton = page.locator('button[type="submit"]').first();
     await submitButton.click();
     
-    // Should show error or validation message
-    await expect(page.locator('text=/invalid|error|valid/i').first()).toBeVisible();
+    const isInvalid = await emailInput.evaluate((input) => input instanceof HTMLInputElement && !input.validity.valid);
+    expect(isInvalid).toBe(true);
   });
 
   test('should successfully submit valid form', async ({ page }) => {

@@ -1,82 +1,63 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Homepage', () => {
-  test('should load English homepage', async ({ page }) => {
-    await page.goto('/en');
-    
-    // Verify basic page elements
+  test('loads the English homepage with the current branded header and hero', async ({ page }) => {
+    await page.goto('/en', { waitUntil: 'domcontentloaded' });
+
     await expect(page).toHaveTitle(/Silk Beauty Salon/);
-    await expect(page.locator('text=Silk Beauty')).toBeVisible();
-    
-    // Verify hero section
-    await expect(page.locator('h1')).toContainText(/Specialists in Anti-Ageing|متخصصون في مكافحة الشيخوخة/);
+    await expect(page.getByRole('banner')).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Silk Beauty Salon');
+    await expect(page.getByRole('link', { name: 'Silk Beauty Salon' }).first()).toBeVisible();
+    await expect(page.locator('a[href="/en/book"]:visible').first()).toBeVisible();
   });
 
-  test('should load Georgian homepage', async ({ page }) => {
-    await page.goto('/ka');
-    
-    await expect(page).toHaveTitle(/Silk Beauty Salon/);
-    await expect(page.locator('text=Silk Beauty')).toBeVisible();
+  test('loads supported localized homepages without placeholder text', async ({ page }) => {
+    const locales = ['ka', 'ru', 'tr', 'ar', 'he'] as const;
+
+    for (const locale of locales) {
+      await page.goto(`/${locale}`, { waitUntil: 'domcontentloaded' });
+
+      await expect(page).toHaveTitle(/Silk Beauty Salon/);
+      await expect(page.getByRole('heading', { level: 1 })).toContainText('Silk Beauty Salon');
+      await expect(page.locator('body')).not.toContainText('????????');
+    }
   });
 
-  test('should load Russian homepage', async ({ page }) => {
-    await page.goto('/ru');
-    
-    await expect(page).toHaveTitle(/Silk Beauty Salon/);
-    await expect(page.locator('text=Silk Beauty')).toBeVisible();
+  test('shows main navigation and language switcher', async ({ page }) => {
+    await page.goto('/en', { waitUntil: 'domcontentloaded' });
+
+    await expect(page.getByTestId('language-switcher')).toBeVisible();
+
+    if ((page.viewportSize()?.width ?? 1280) < 1024) {
+      return;
+    }
+
+    const mainNav = page.getByRole('navigation', { name: 'Main navigation' });
+
+    await expect(mainNav).toBeVisible();
+    await expect(mainNav.getByRole('link', { name: 'Price List' })).toBeVisible();
+    await expect(mainNav.getByRole('link', { name: 'Offers' })).toBeVisible();
   });
 
-  test('should verify main sections are visible', async ({ page }) => {
-    await page.goto('/en');
-    
-    // Hero section
-    await expect(page.locator('h1')).toBeVisible();
-    
-    // Treatments section should be visible
-    await expect(page.locator('text=Treatments, or nav.treatments').first()).toBeVisible();
-    
-    // Conditions section should be visible
-    await expect(page.locator('text=Conditions, or nav.conditions').first()).toBeVisible();
-    
-    // About section or similar content
-    await expect(page.locator('main')).toBeVisible();
+  test('keeps the logo link on the localized homepage', async ({ page }) => {
+    await page.goto('/en/contact-us', { waitUntil: 'domcontentloaded' });
+
+    await page.getByRole('link', { name: 'Silk Beauty Salon' }).first().click();
+
+    await expect(page).toHaveURL(/\/en\/?$/);
   });
 
-  test('should test language switch functionality', async ({ page }) => {
-    await page.goto('/en');
-    
-    // Find and click language switcher (it's in the header)
-    const langSwitcher = page.locator('[data-testid="language-switcher"]').first();
-    
-    // The language switcher should be visible
-    await expect(langSwitcher).toBeVisible();
-  });
-
-  test('should have working navigation links', async ({ page }) => {
-    await page.goto('/en');
-    
-    // Check that navigation links are visible
-    const nav = page.locator('nav').first();
-    await expect(nav).toBeVisible();
-    
-    // Verify logo link works
-    const logo = page.locator('text=Silk Beauty').first();
-    await expect(logo).toBeVisible();
-    await logo.click();
-    
-    // Should still be on homepage
-    await expect(page).toHaveURL(/\/en/);
-  });
-
-  test('should be responsive on mobile', async ({ page }) => {
-    // Set mobile viewport
+  test('renders the mobile homepage without horizontal overflow', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('/en');
-    
-    // Mobile menu button should be visible
-    await expect(page.locator('button').first()).toBeVisible();
-    
-    // Main content should be visible
+    await page.goto('/en', { waitUntil: 'domcontentloaded' });
+
+    await expect(page.getByRole('banner')).toBeVisible();
     await expect(page.locator('main')).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Book' }).first()).toBeVisible();
+
+    const overflowX = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth
+    );
+    expect(overflowX).toBeLessThanOrEqual(1);
   });
 });
