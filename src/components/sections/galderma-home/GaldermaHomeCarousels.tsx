@@ -377,6 +377,7 @@ export function ReviewsCarousel() {
                   <div>
                     <div
                       className="mb-7 flex gap-1 text-[#8d6f58]"
+                      role="img"
                       aria-label={t('reviews.ratingLabel', { rating })}
                     >
                       {Array.from({ length: rating }).map((_, index) => (

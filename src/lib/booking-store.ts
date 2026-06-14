@@ -3,7 +3,6 @@ import { mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import type { Booking, BookingStatus } from '@prisma/client';
-import { db } from '@/lib/db';
 
 type BookingCreateData = {
   name: string;
@@ -73,11 +72,16 @@ function isDatabaseAvailabilityError(error: unknown): boolean {
   }
 
   const message = error instanceof Error ? error.message : String(error);
-  return /authentication failed|can't reach database|connection.*database|database.*timeout/i.test(message);
+  return /authentication failed|can't reach database|connection.*database|database.*timeout|environment validation failed|DATABASE_URL/i.test(message);
 }
 
 function isBookingDatabaseEnabled(): boolean {
   return process.env.BOOKING_DATABASE_ENABLED === '1';
+}
+
+async function getBookingDb() {
+  const { db } = await import('@/lib/db');
+  return db;
 }
 
 export function isUniqueBookingSlotError(error: unknown): boolean {
@@ -223,6 +227,7 @@ async function withDatabaseFallback<T>(
 export async function getBookedSlotsForDate(start: Date, end: Date): Promise<string[]> {
   const result = await withDatabaseFallback(
     async () => {
+      const db = await getBookingDb();
       const bookings = await db.booking.findMany({
         where: {
           date: {
@@ -253,7 +258,10 @@ export async function getBookedSlotsForDate(start: Date, end: Date): Promise<str
 
 export async function listBookings(): Promise<Booking[]> {
   const result = await withDatabaseFallback(
-    async () => db.booking.findMany({ orderBy: { createdAt: 'desc' } }),
+    async () => {
+      const db = await getBookingDb();
+      return db.booking.findMany({ orderBy: { createdAt: 'desc' } });
+    },
     async () => withFileLock(async () => {
       const bookings = await readFileBookings();
       return bookings.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
@@ -265,18 +273,21 @@ export async function listBookings(): Promise<Booking[]> {
 
 export async function findBookingConflict(start: Date, end: Date, timeSlot: string): Promise<Booking | null> {
   const result = await withDatabaseFallback(
-    async () => db.booking.findFirst({
-      where: {
-        date: {
-          gte: start,
-          lt: end,
+    async () => {
+      const db = await getBookingDb();
+      return db.booking.findFirst({
+        where: {
+          date: {
+            gte: start,
+            lt: end,
+          },
+          timeSlot,
+          status: {
+            not: 'CANCELLED',
+          },
         },
-        timeSlot,
-        status: {
-          not: 'CANCELLED',
-        },
-      },
-    }),
+      });
+    },
     async () => withFileLock(async () => {
       const bookings = await readFileBookings();
       return bookings.find((booking) => (
@@ -290,7 +301,10 @@ export async function findBookingConflict(start: Date, end: Date, timeSlot: stri
 
 export async function createBooking(data: BookingCreateData): Promise<Booking> {
   const result = await withDatabaseFallback(
-    async () => db.booking.create({ data }),
+    async () => {
+      const db = await getBookingDb();
+      return db.booking.create({ data });
+    },
     async () => withFileLock(async () => {
       const bookings = await readFileBookings();
       const conflict = bookings.find((booking) => (
@@ -324,6 +338,7 @@ export async function createBooking(data: BookingCreateData): Promise<Booking> {
 export async function deleteBookingById(id: string): Promise<boolean> {
   const result = await withDatabaseFallback(
     async () => {
+      const db = await getBookingDb();
       try {
         await db.booking.delete({ where: { id } });
         return true;
@@ -365,6 +380,7 @@ export async function getBookingStoreHealth() {
 
   try {
     const count = await runDatabaseOperation(async () => {
+      const db = await getBookingDb();
       await db.$queryRaw`SELECT 1 as health`;
       return db.booking.count();
     });

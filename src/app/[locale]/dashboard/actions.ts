@@ -10,7 +10,6 @@ import {
   isValidDashboardPassword,
   setDashboardSessionCookie,
 } from '@/lib/dashboard-auth';
-import { deleteBookingById } from '@/lib/booking-store';
 
 function getSafeLocale(value: FormDataEntryValue | null): string {
   return typeof value === 'string' && (locales as readonly string[]).includes(value) ? value : 'en';
@@ -53,6 +52,7 @@ export async function deleteDashboardBooking(formData: FormData) {
     redirect(`/${locale}/dashboard?error=missing-booking`);
   }
 
+  const { deleteBookingById } = await import('@/lib/booking-store');
   const deleted = await deleteBookingById(bookingId);
   revalidatePath(`/${locale}/dashboard`);
   redirect(`/${locale}/dashboard?deleted=${deleted ? '1' : '0'}`);

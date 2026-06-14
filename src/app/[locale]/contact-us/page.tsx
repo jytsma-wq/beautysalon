@@ -67,6 +67,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 alt={`${t('contactSilkBeautySalon')} in Batumi, Georgia`}
                 fill
                 className="object-cover"
+                sizes="(max-width: 1023px) 100vw, 52vw"
                 priority
               />
             </div>
