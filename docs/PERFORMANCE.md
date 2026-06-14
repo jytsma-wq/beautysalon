@@ -135,7 +135,7 @@ The middleware automatically sets appropriate caching headers:
 | ---------- | ------------- |
 | Static files (`/_next/static`) | `max-age=31536000, immutable` |
 | Images | `max-age=86400` (24 hours) |
-| HTML pages | `s-maxage=3600, stale-while-revalidate=86400` |
+| HTML pages | `s-maxage=60, must-revalidate` |
 | API routes | `no-cache` |
 
 ### Client-Side Caching

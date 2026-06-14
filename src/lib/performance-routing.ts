@@ -1,4 +1,4 @@
-const PUBLIC_HTML_CACHE_CONTROL = 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400';
+const PUBLIC_HTML_CACHE_CONTROL = 'public, max-age=0, s-maxage=60, must-revalidate';
 const PRIVATE_HTML_CACHE_CONTROL = 'private, no-store, no-cache, max-age=0, must-revalidate';
 
 export function shouldBypassLocaleRedirect(pathname: string): boolean {
