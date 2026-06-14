@@ -2,15 +2,10 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
-import { Toaster } from "@/components/ui/toaster";
 import { AnnouncerProvider } from "@/components/ui/announcer";
-import { GaldermaHeader } from "@/components/layout/GaldermaHeader";
-import { GaldermaFooter } from "@/components/layout/GaldermaFooter";
 import { ConsentProvider } from "@/components/providers/ConsentProvider";
-import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
-import { ChatbotWidget } from "@/components/layout/ChatbotWidget";
-import { SkipLink } from "@/components/layout/SkipLink";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { LocaleChrome } from '@/components/layout/LocaleChrome';
 import { siteConfig } from '@/data/site-config';
 import { rtlLocales } from '@/i18n';
 import { getSiteUrl } from '@/lib/seo';
@@ -71,15 +66,9 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ConsentProvider>
             <AnnouncerProvider>
-              <SkipLink />
-              <GaldermaHeader />
-              <main id="main-content" className="pt-35">
+              <LocaleChrome>
                 {children}
-              </main>
-              <GaldermaFooter />
-              <ChatbotWidget />
-              <WhatsAppWidget />
-              <Toaster />
+              </LocaleChrome>
             </AnnouncerProvider>
           </ConsentProvider>
         </NextIntlClientProvider>
