@@ -1881,7 +1881,8 @@
       "monFri": "Mon-Fri: 10:00 - 22:00",
       "satSun": "Sat-Sun: 10:00 - 22:00",
       "sat": "Sat",
-      "sun": "Sun"
+      "sun": "Sun",
+      "monFriLabel": "Mon - Fri"
     },
     "social": "Follow Us",
     "faqDesc": "Read some of the most frequently asked questions about the clinic and our treatments.",
@@ -1906,7 +1907,8 @@
     "socialDescription": "Follow us on Social Media for current news and patients stories",
     "disclaimer": "Always consult a healthcare professional for individualized treatment recommendations and to discuss important safety information and risks associated with the use of the products.",
     "instagram": "Instagram",
-    "facebook": "Facebook"
+    "facebook": "Facebook",
+    "beautySalonBatumi": "Beauty salon Batumi"
   },
   "blogPage": {
     "title": "Our Blog",
@@ -2167,5 +2169,97 @@
     "section3Title": "Treatment portfolio",
     "section4Title": "Skin conditions",
     "section5Title": "Treatment portfolio"
+  },
+  "treatmentCollectionPage": {
+    "metadataTitle": "{title} in Batumi, Georgia",
+    "metadataDescription": "{description} Book consultation-led {title} at Silk Beauty Salon in Batumi, Georgia.",
+    "imageAlt": "{title} at Silk Beauty Salon in Batumi, Georgia",
+    "includedTreatments": "Included treatments",
+    "treatmentOptionsTitle": "Treatment options in this category",
+    "serviceOptions": "Service options",
+    "serviceOptionsTitle": "Consultation-led beauty services",
+    "consultationEyebrow": "Consultation",
+    "consultationTitle": "Build the right plan before treatment.",
+    "consultationDescription": "Every appointment starts with anatomy, skin condition, timing, downtime, and outcome planning. That keeps the result precise and realistic.",
+    "collections": {
+      "botox": {
+        "title": "Botox",
+        "eyebrow": "Injectables",
+        "description": "A focused edit of anti-wrinkle, therapeutic, and facial-balancing neuromodulator treatments."
+      },
+      "dermalFillers": {
+        "title": "Dermal fillers",
+        "eyebrow": "Volume and contour",
+        "description": "Lips, cheeks, chin, jawline, tear trough, and profile-balancing treatments built around facial harmony."
+      },
+      "skinTreatments": {
+        "title": "Skin treatments",
+        "eyebrow": "Skin quality",
+        "description": "A curated mix of facials, peels, boosters, and collagen-renewal treatments for brighter, healthier skin."
+      },
+      "laserTreatments": {
+        "title": "Laser treatments",
+        "eyebrow": "Devices and resurfacing",
+        "description": "Laser-led resurfacing, pigmentation, vascular, and collagen-stimulation treatments selected for skin precision."
+      },
+      "hairAndHairExtensions": {
+        "title": "Hair and hair extensions",
+        "eyebrow": "Hair services",
+        "description": "Scalp-led consultation, restoration planning, and in-salon beauty support for fuller, more polished hair.",
+        "services": {
+          "service1": {
+            "title": "Hair restoration consultation",
+            "description": "Clinical scalp assessment and personalized treatment planning.",
+            "duration": "45-60 minutes"
+          },
+          "service2": {
+            "title": "Hair extension consultation",
+            "description": "Color match, blend planning, and maintenance guidance before application.",
+            "duration": "30 minutes"
+          }
+        }
+      },
+      "nails": {
+        "title": "Nails",
+        "eyebrow": "Salon services",
+        "description": "Manicure and pedicure services are booked through consultation-first salon appointments.",
+        "services": {
+          "service1": {
+            "title": "Signature manicure",
+            "description": "Shape, cuticle care, polish planning, and finish selection.",
+            "duration": "45 minutes"
+          },
+          "service2": {
+            "title": "Luxury pedicure",
+            "description": "Foot treatment, exfoliation, hydration, and long-wear polish finish.",
+            "duration": "60 minutes"
+          }
+        }
+      },
+      "lashes": {
+        "title": "Lashes",
+        "eyebrow": "Beauty finishing",
+        "description": "Lash appointments are planned as dedicated beauty services with shape, lift, and finish options.",
+        "services": {
+          "service1": {
+            "title": "Lash lift consultation",
+            "description": "Natural lift, curl direction, and aftercare planning.",
+            "duration": "30 minutes"
+          },
+          "service2": {
+            "title": "Lash styling appointment",
+            "description": "A fuller lash finish with personalized shape and maintenance guidance.",
+            "duration": "45 minutes"
+          }
+        }
+      }
+    }
+  },
+  "localSeoTemplate": {
+    "locationText": "{name} is located at {address}, {city}. Online booking, phone support, WhatsApp, and email are available for local and international clients.",
+    "booking": "Booking",
+    "online": "Online",
+    "phone": "Phone",
+    "email": "Email"
   }
 }

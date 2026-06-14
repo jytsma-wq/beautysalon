@@ -191,6 +191,121 @@
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.localized-hero-heading {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  font-size: 2.25rem;
+  line-height: 1.04;
+}
+
+@media (min-width: 640px) {
+  .localized-hero-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .localized-hero-heading {
+    font-size: 4.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .localized-hero-heading {
+    font-size: 5.1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .localized-hero-heading {
+    font-size: 5.8rem;
+  }
+}
+
+.localized-carousel-heading {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  font-size: 2.15rem;
+  line-height: 1.05;
+}
+
+@media (min-width: 640px) {
+  .localized-carousel-heading {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .localized-carousel-heading {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .localized-carousel-heading {
+    font-size: 4.5rem;
+  }
+}
+
+.localized-section-heading {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .localized-section-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .localized-section-heading {
+    font-size: 4.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .localized-section-heading {
+    font-size: 5.2rem;
+  }
+}
+
+.localized-statement-heading {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  font-size: 2rem;
+  line-height: 1.12;
+}
+
+@media (min-width: 768px) {
+  .localized-statement-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .localized-statement-heading {
+    font-size: 3.8rem;
+  }
 }
 
 /* Hero video specific styles */

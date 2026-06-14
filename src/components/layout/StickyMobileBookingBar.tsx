@@ -15,7 +15,7 @@ export function StickyMobileBookingBar() {
   return (
     <nav
       aria-label={t('stickyBookingLabel')}
-      className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-[1fr_auto_auto] overflow-hidden rounded-md border border-[#d9cec1] bg-white/95 shadow-[0_16px_44px_rgba(36,31,27,0.18)] backdrop-blur md:hidden"
+      className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-[1fr_auto_auto] overflow-hidden rounded-md border border-[#d9cec1] bg-white/95 shadow-[0_16px_44px_rgba(36,31,27,0.18)] backdrop-blur lg:hidden"
     >
       <Link
         href="/book"

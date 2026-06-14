@@ -43,7 +43,7 @@ export default async function BeforeAfterPage({
           </div>
 
           {/* Magazine Headline */}
-          <h1 className="text-[clamp(3rem,7vw,6rem)] font-serif font-light leading-[0.95] text-stone-900 mb-8 max-w-4xl">
+          <h1 className="localized-hero-heading mb-8 max-w-4xl font-serif font-light text-stone-900">
             {t('title', { defaultValue: 'Real Results,' })}
             <br />
             <em className="italic text-[#b5453a]">

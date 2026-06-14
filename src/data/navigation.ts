@@ -145,4 +145,5 @@ export const legalLinks = [
 export const socialLinks = [
   { name: "Facebook", href: "https://www.facebook.com/silkbeautybatumi/", icon: "facebook" },
   { name: "Instagram", href: "https://www.instagram.com/silkbeauty_batumi/", icon: "instagram" },
+  { name: "TikTok", href: "https://www.tiktok.com/@silkbeautybatumi", icon: "tiktok" },
 ];

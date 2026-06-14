@@ -24,7 +24,7 @@ export function LocaleChrome({ children, locale }: { children: ReactNode; locale
     <>
       {!isDashboardPath ? <SkipLink /> : null}
       {!isDashboardPath ? <GaldermaHeader /> : null}
-      <main id="main-content" className={isDashboardPath ? '' : 'pt-36 pb-24 lg:pt-32 lg:pb-0'}>
+      <main id="main-content" className={isDashboardPath ? '' : 'pt-36 pb-24 lg:pt-40 lg:pb-0'}>
         {children}
       </main>
       {!isDashboardPath ? <GaldermaFooter /> : null}

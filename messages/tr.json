@@ -239,7 +239,7 @@
     "slotConflict": "Bu saat dilimi zaten rezerve edilmiş. Lütfen başka bir saat seçin.",
     "bookingFailed": "Rezervasyon oluşturulamadı",
     "unexpectedError": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
-    "rateLimitMessage": "?ok fazla istek. L?tfen 15 dakika bekleyin.",
+    "rateLimitMessage": "Çok fazla gönderim. Lütfen 15 dakika bekleyin.",
     "bookingSummary": "Rezervasyon Özeti",
     "service": "Hizmet",
     "date": "Tarih",
@@ -1531,51 +1531,51 @@
     "notesPlaceholder": "Bilmemiz gereken herhangi bir özel istek veya bilgi...",
     "requestBooking": "Rezervasyon İste",
     "bookingNote": "Randevunuzu 24 saat içinde onaylayacağız",
-    "eyebrow": "Kons?ltasyon rezervasyonu",
-    "heroImageAlt": "Salon i? mek?n?",
+    "eyebrow": "Konsültasyon randevusu",
+    "heroImageAlt": "Salon iç mekanı",
     "preferredDate": "Tercih edilen tarih",
     "selectService": "Hizmet Seçin",
-    "selectServicePlaceholder": "Bir kons?ltasyon t?r? se?in",
+    "selectServicePlaceholder": "Bir konsültasyon türü seçin",
     "fullName": "Ad Soyad",
     "namePlaceholder": "Ahmet Yılmaz",
     "phoneNumber": "Telefon (İsteğe Bağlı)",
     "phonePlaceholder": "+90 555 123 4567",
     "emailAddress": "E-posta",
     "emailPlaceholder": "ahmet@example.com",
-    "successTitle": "Rezervasyon talebi g?nderildi",
-    "successMessage": "Rezervasyon talebiniz i?in te?ekk?r ederiz. Randevunuzu onaylamak i?in yak?nda sizinle ileti?ime ge?ece?iz.",
-    "bookAnother": "Ba?ka bir randevu al",
-    "dialogTitle": "Book Appointment",
-    "dialogDescription": "Schedule your consultation with our expert practitioners",
-    "continue": "Continue",
-    "back": "Back",
-    "confirmBooking": "Confirm Booking",
-    "bookingStatus": "Booking...",
-    "booked": "(Booked)",
-    "slotConflict": "This time slot is already booked. Please select another time.",
-    "bookingFailed": "Failed to create booking",
-    "unexpectedError": "An unexpected error occurred. Please try again.",
-    "rateLimitMessage": "Too many submissions. Please wait 15 minutes.",
-    "bookingSummary": "Booking Summary",
-    "bookingConfirmed": "Booking Confirmed!",
-    "thankYou": "Thank you, {name}. Your appointment has been scheduled.",
-    "bookingDetails": "Booking Details",
-    "done": "Done",
-    "selectDate": "Select Date",
-    "selectTimeSlot": "Select Time Slot",
-    "service": "Service",
-    "date": "Date",
-    "time": "Time",
-    "message": "Message (Optional)",
-    "servicePlaceholder": "Choose a service",
-    "messagePlaceholder": "Any specific requirements or questions...",
-    "serviceConsultation": "Consultation",
+    "successTitle": "Randevu talebi gönderildi",
+    "successMessage": "Randevu talebiniz için teşekkür ederiz. Randevunuzu onaylamak için kısa süre içinde sizinle iletişime geçeceğiz.",
+    "bookAnother": "Başka bir randevu al",
+    "dialogTitle": "Randevu Al",
+    "dialogDescription": "Uzmanlarımızla konsültasyonunuzu planlayın",
+    "continue": "Devam et",
+    "back": "Geri",
+    "confirmBooking": "Randevuyu onayla",
+    "bookingStatus": "Randevu oluşturuluyor...",
+    "booked": "(Dolu)",
+    "slotConflict": "Bu saat aralığı zaten dolu. Lütfen başka bir saat seçin.",
+    "bookingFailed": "Randevu oluşturulamadı",
+    "unexpectedError": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
+    "rateLimitMessage": "Çok fazla gönderim. Lütfen 15 dakika bekleyin.",
+    "bookingSummary": "Randevu özeti",
+    "bookingConfirmed": "Randevu onaylandı!",
+    "thankYou": "Teşekkürler, {name}. Randevunuz planlandı.",
+    "bookingDetails": "Randevu detayları",
+    "done": "Tamam",
+    "selectDate": "Tarih seçin",
+    "selectTimeSlot": "Saat seçin",
+    "service": "Hizmet",
+    "date": "Tarih",
+    "time": "Saat",
+    "message": "Mesaj (isteğe bağlı)",
+    "servicePlaceholder": "Bir hizmet seçin",
+    "messagePlaceholder": "Özel istekler veya sorular...",
+    "serviceConsultation": "Konsültasyon",
     "serviceBotox": "Botox Treatment",
-    "serviceFillers": "Dermal Fillers",
-    "serviceLaser": "Laser Hair Removal",
+    "serviceFillers": "Dermal dolgular",
+    "serviceLaser": "Lazer epilasyon",
     "serviceRejuvenation": "Skin Rejuvenation",
-    "servicePeel": "Chemical Peel",
-    "serviceMicroneedling": "Microneedling",
+    "servicePeel": "Kimyasal peeling",
+    "serviceMicroneedling": "Mikro iğneleme",
     "serviceHydrafacial": "Hydrafacial",
     "personalInfo": "Kişisel Bilgiler",
     "formNotReady": "Rezervasyon formu hâlâ hazırlanıyor. Lütfen birazdan tekrar deneyin."
@@ -1649,149 +1649,149 @@
   },
   "homeEditorial": {
     "carousel": {
-      "previousSlide": "?nceki slayt",
+      "previousSlide": "Önceki slayt",
       "nextSlide": "Sonraki slayt"
     },
     "heroSlides": {
       "slide1": {
-        "eyebrow": "Batum?da medikal estetik",
-        "title": "Cildinize duydu?unuz g?ven, hassas bir kons?ltasyonla ba?lar.",
-        "description": "Do?al g?r?n?ml? enjeksiyonlar, cilt kalitesi tedavileri ve ileri cihaz uygulamalar?; anatominiz, cilt sa?l???n?z ve ya?am tarz?n?za g?re planlan?r.",
-        "cta": "Kons?ltasyon randevusu al?n"
+        "eyebrow": "Batum, Gürcistan güzellik salonu",
+        "title": "Batum, Gürcistan Silk Beauty Salon - premium estetik tedaviler.",
+        "description": "Doğal görünümlü enjeksiyonlar, yüz bakımları, cilt kalitesi tedavileri, lazer prosedürleri, tırnak, kirpik ve ileri estetik bakım için Batum güzellik salonu.",
+        "cta": "Batum konsültasyonu al"
       },
       "slide2": {
         "eyebrow": "Cilt kalitesi",
-        "title": "Ger?ek cilt sorunlar? i?in ger?ek ??z?mler.",
-        "description": "Dokudan pigmentasyona, nemden s?k?l??a ve y?z dengesine kadar her plan, cilt odakl? bir de?erlendirmeyle ba?lar.",
-        "cta": "Sorunlar? ke?fedin"
+        "title": "Gerçek cilt sorunları için gerçek çözümler.",
+        "description": "Doku ve pigmentasyondan nem, sıkılık ve yüz dengesine kadar her plan cildi merkeze alan bir teşhisle başlar.",
+        "cta": "Sorunları keşfet"
       },
       "slide3": {
         "eyebrow": "Enjeksiyonlar ve kontur",
-        "title": "?nce hacim. D???n?lm?? konturlar. Daha taze siz.",
-        "description": "Dermal dolgular ve k?r???kl?k kar??t? tedaviler; ?l??l?l?k, simetri ve do?al ifadeye sayg?yla uygulan?r.",
-        "cta": "Tedavileri g?r?nt?le"
+        "title": "Zarif hacim. Düşünülmüş konturlar. Daha taze siz.",
+        "description": "Dermal dolgular ve kırışıklık karşıtı tedaviler ölçülülük, simetri ve doğal ifadeye saygıyla uygulanır.",
+        "cta": "Tedavileri görüntüle"
       }
     },
     "philosophy": {
-      "eyebrow": "Yakla??m?m?z",
-      "title": "Cilt odakl? estetik bir yakla??m.",
-      "description": "Galderma?dan ilham alan bu y?n; temiz, klinik ve ?r?n bilinci y?ksek: daha az dekoratif etki, daha fazla g?ven, daha fazla e?itim ve daha sakin bir g?rsel ritim.",
-      "statement": "Bir tedavi ?nermeden ?nce cildinizi, y?z yap?n?z? ve hedeflerinizi inceliyoruz. Sonu?; d???n?lm??, dengeli ve sakin bir ?zg?ven ta??mal?."
+      "eyebrow": "Yaklaşımımız",
+      "title": "Cildi merkeze alan estetik uygulama.",
+      "description": "Batum güzellik salonumuz, doğal görünümlü sonuçlar için dikkatli konsültasyonu, ileri estetik tedavileri ve sakin klinik standartları birleştirir.",
+      "statement": "Bir tedavi önermeden önce cildinizi, yüz yapınızı ve hedeflerinizi inceleriz. Sonuç düşünülmüş, dengeli ve sessiz bir özgüven taşımalıdır."
     },
     "concerns": {
-      "eyebrow": "Cilt sorunlar?",
-      "title": "Ger?ek cilt sorunlar? i?in ger?ek ??z?mler.",
-      "description": "Daha sa?l?kl? ve daha ?zg?venli bir cildi destekleyebilecek yayg?n sorunlar? ve tedavi yollar?n? ke?fedin."
+      "eyebrow": "Cilt sorunları",
+      "title": "Gerçek cilt sorunları için gerçek çözümler.",
+      "description": "Daha sağlıklı ve daha özgüvenli bir cildi destekleyebilecek yaygın sorunları ve tedavi yollarını keşfedin."
     },
     "concernItems": {
       "item1": {
-        "name": "?nce ?izgiler ve k?r???kl?klar",
-        "description": "Do?al hareketi korurken mimik ?izgilerini yumu?at?n."
+        "name": "İnce çizgiler ve kırışıklıklar",
+        "description": "Doğal hareketi korurken mimik çizgilerini yumuşatın."
       },
       "item2": {
-        "name": "S?k?l?k kayb?",
-        "description": "Kolajeni destekleyin, gev?emeyi toparlay?n ve y?z yap?s?n? rafine edin."
+        "name": "Sıkılık kaybı",
+        "description": "Kolajeni destekleyin, gevşemeyi toparlayın ve yüz yapısını rafine edin."
       },
       "item3": {
-        "name": "D?zensiz ton",
-        "description": "Pigmentasyon, matl?k ve inflamasyon sonras? izleri hedefleyin."
+        "name": "Düzensiz ton",
+        "description": "Pigmentasyon, matlık ve inflamasyon sonrası izleri hedefleyin."
       },
       "item4": {
         "name": "Kuru cilt",
-        "description": "Nem, bariyer i?levi ve kal?c? ???lt?y? yeniden kazand?r?n."
+        "description": "Nem, bariyer işlevi ve kalıcı ışıltıyı yeniden kazandırın."
       },
       "item5": {
         "name": "Akne ve izler",
-        "description": "Aktif akneleri, lekeleri ve d?zensiz dokuyu iyile?tirin."
+        "description": "Aktif akneleri, lekeleri ve düzensiz dokuyu iyileştirin."
       }
     },
     "portfolio": {
-      "eyebrow": "Portf?y",
-      "title": "B?t?nc?l estetik tedaviler.",
-      "description": "Y?z dengesi, cilt kalitesi ve uzun vadeli ?zg?ven i?in d???n?lm?? bir portf?y.",
-      "viewAll": "T?m tedavileri g?r?nt?le",
-      "explore": "Ke?fet",
+      "eyebrow": "Portföy",
+      "title": "Bütüncül estetik tedaviler.",
+      "description": "Batum, Gürcistan güzellik salonumuzda yüz dengesi, cilt kalitesi ve uzun vadeli özgüven için düşünülmüş bir portföy.",
+      "viewAll": "Batum güzellik tedavilerini keşfet",
+      "explore": "Keşfet",
       "items": {
         "item1": {
           "title": "Dermal dolgular",
-          "description": "Dudaklar, yanaklar, ?ene hatt?, ?ene ucu, g?z alt? ve y?z dengesi i?in hyal?ronik asit temelli tedaviler."
+          "description": "Dudak, yanak, çene hattı, çene ucu, göz altı ve yüz dengesi için hyalüronik asit tedavileri."
         },
         "item2": {
-          "title": "K?r???kl?k kar??t? enjeksiyonlar",
-          "description": "Al?n ?izgileri, ka? aras?, g?z ?evresi, masseter ve terleme i?in hassas n?romod?lat?r uygulamalar?."
+          "title": "Kırışıklık karşıtı enjeksiyonlar",
+          "description": "Alın çizgileri, kaş arası, göz çevresi, masseter ve terleme için hassas nöromodülatör tedaviler."
         },
         "item3": {
           "title": "Cilt kalitesi",
-          "description": "Daha g??l? ve daha parlak bir cilt i?in medikal bak?mlar, peelingler, booster?lar, microneedling ve lazer odakl? planlar."
+          "description": "Daha güçlü ve parlak cilt için medikal yüz bakımları, peelingler, boosterlar, microneedling ve lazer odaklı planlar."
         }
       }
     },
     "stats": {
       "item1": {
-        "label": "Kons?ltasyon odakl? planlar"
+        "label": "Konsültasyon öncelikli planlar"
       },
       "item2": {
         "label": "Desteklenen diller"
       },
       "item3": {
-        "label": "Cilt ve y?z de?erlendirmesi"
+        "label": "Cilt ve yüz değerlendirmesi"
       }
     },
     "results": {
-      "eyebrow": "Ger?ek sonu?lar",
-      "title": "Kan?t plandad?r.",
-      "description": "?ncesi ve sonras? hikayeleri vaat de?il, klinik ?rnekler olarak okunmal?d?r. Sonucunuz; anatominize, ?r?n se?imine, doza ve bak?m sonras? s?rece ba?l?d?r.",
-      "cta": "Sonu?lar? g?r?n",
-      "before": "?nce",
+      "eyebrow": "Gerçek sonuçlar",
+      "title": "Kanıt plandadır.",
+      "description": "Öncesi ve sonrası hikayeleri vaat değil, klinik örnekler olarak okunmalıdır. Sonucunuz anatomi, ürün seçimi, doz ve bakım sonrası sürece bağlıdır.",
+      "cta": "Sonuçları gör",
+      "before": "Önce",
       "after": "Sonra",
-      "disclaimer": "Bireysel sonu?lar de?i?ebilir. T?m tedavi planlar? klinik kons?ltasyon gerektirir."
+      "disclaimer": "Bireysel sonuçlar değişebilir. Tüm tedavi planları klinik konsültasyon gerektirir."
     },
     "resultItems": {
       "item1": {
-        "treatment": "Yanak ve orta y?z deste?i",
-        "detail": "Yumu?ak ve kalk?k bir konturla hacim geri kazand?r?ld?."
+        "treatment": "Yanak ve orta yüz desteği",
+        "detail": "Yumuşak, kalkık bir konturla hacim geri kazandırıldı."
       },
       "item2": {
-        "treatment": "Dudak nemi ve ?ekli",
-        "detail": "Belirgin s?n?r, dengeli hacim, do?al biti?."
+        "treatment": "Dudak nemi ve şekli",
+        "detail": "Belirgin sınır, dengeli hacim, doğal bitiş."
       },
       "item3": {
-        "treatment": "Cilt ???lt?s? plan?",
-        "detail": "Parlakl?k, doku ve y?zey p?r?zs?zl???nde iyile?me."
+        "treatment": "Cilt ışıltısı planı",
+        "detail": "Parlaklık, doku ve yüzey pürüzsüzlüğünde iyileşme."
       }
     },
     "cta": {
-      "eyebrow": "Uzman?n?z? bulun",
-      "title": "Klinik bir kons?ltasyonla ba?lay?n.",
-      "description": "{clinicName}?i Batum?da ziyaret ederek cildinize, anatominize, zamanlaman?za ve konforunuza g?re haz?rlanm?? yap?land?r?lm?? bir de?erlendirme ve tedavi plan? al?n.",
-      "bookNow": "Hemen rezervasyon yap",
-      "contactUs": "Bize ula??n"
+      "eyebrow": "Uzmanınızı bulun",
+      "title": "Klinik bir konsültasyonla başlayın.",
+      "description": "Cildinize, anatominize, zamanlamanıza ve konforunuza göre yapılandırılmış değerlendirme ve tedavi planı için Batum’daki {clinicName} salonunu ziyaret edin.",
+      "bookNow": "Şimdi randevu al",
+      "contactUs": "Bize ulaşın"
     },
     "journal": {
       "eyebrow": "Cilt trendleri",
-      "title": "G?r?lt?s?z estetik bak?? a??s?.",
-      "description": "Randevu almadan ?nce tedavi planlamas?n? anlamak isteyen hastalar i?in e?itici notlar.",
-      "cta": "Dergiyi oku"
+      "title": "Gürültüsüz estetik içgörü.",
+      "description": "Randevu almadan önce tedavi planlamasını anlamak isteyen hastalar için eğitici notlar.",
+      "cta": "Günlüğü oku"
     },
     "reviews": {
-      "eyebrow": "Müşteri yorumları",
-      "title": "Müşteriler ziyaretlerinden sonra ne söylüyor.",
-      "description": "Batumi'de enjeksiyon, dolgu, yüz bakımı ve cilt tedavileri için Silk Beauty Salon'u seçen müşterilerden gelen hareketli yorum karuseli.",
+      "eyebrow": "Müşteri hikayeleri",
+      "title": "Müşteriler ziyaret sonrası ne söylüyor.",
+      "description": "Batum’da enjeksiyonlar, dolgular, yüz bakımları ve cilt tedavileri için Silk Beauty Salon’u seçen kişilerden son müşteri yorumlarının hareketli karuseli.",
       "ratingLabel": "5 üzerinden {rating} yıldız",
       "goToReview": "{number}. yoruma git"
     },
     "trendItems": {
       "item1": {
-        "category": "Tedavi planlamas?",
-        "title": "Enjeksiyonlar abart?l? g?r?nmeden nas?l planlan?r?"
+        "category": "Tedavi planlaması",
+        "title": "Enjeksiyonlar abartılı görünmeden nasıl planlanır"
       },
       "item2": {
-        "category": "Cilt sa?l???",
+        "category": "Cilt sağlığı",
         "title": "Cilt kalitesi yeni temeldir"
       },
       "item3": {
-        "category": "Kons?ltasyon",
-        "title": "?lk dolgu kons?ltasyonundan ?nce bilinmesi gerekenler"
+        "category": "Konsültasyon",
+        "title": "İlk dolgu konsültasyonundan önce bilinmesi gerekenler"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "whatsapp": "WhatsApp",
     "bookViaWhatsApp": "WhatsApp ile Randevu Al",
     "searchPlaceholder": "Tedavi ve cilt sorunları ara...",
-    "submitting": "G?nderiliyor...",
+    "submitting": "Gönderiliyor...",
     "tryAgain": "Tekrar Dene",
     "view": "Görüntüle",
     "currentLanguageFlag": "{language} bayrağı",
@@ -1874,14 +1874,15 @@
     "conditions": "Cilt Sorunları",
     "contact": "İletişim Bilgileri",
     "address": "Zurab Gorgiladze Cad. 63, Batumi 6000, Gürcistan",
-    "phone": "Tel: +995 577 34 57 67",
+    "phone": "Telefon: +995 577 34 57 67",
     "email": "info@silkbeautysalon.online",
     "openingHours": "Çalışma Saatleri",
     "hours": {
       "monFri": "Pzt-Cum: 10:00 - 22:00",
       "satSun": "Cmt-Paz: 10:00 - 22:00",
       "sat": "Cmt",
-      "sun": "Paz"
+      "sun": "Paz",
+      "monFriLabel": "Pzt - Cum"
     },
     "social": "Bizi Takip Edin",
     "faqDesc": "Klinik ve tedavilerimiz hakkında en sık sorulan soruları okuyun.",
@@ -1906,7 +1907,8 @@
     "socialDescription": "Güncel haberler ve hasta hikayeleri için sosyal medyada bizi takip edin",
     "disclaimer": "Her zaman ürünlerin kullanımıyla ilgili bireyselleştirilmiş tedavi önerileri ve önemli güvenlik bilgileri ile riskleri tartışmak için bir sağlık uzmanına danışın.",
     "instagram": "Instagram",
-    "facebook": "Facebook"
+    "facebook": "Facebook",
+    "beautySalonBatumi": "Batum güzellik salonu"
   },
   "blogPage": {
     "title": "Blogumuz",
@@ -2060,7 +2062,7 @@
     "treatments": {
       "title": "Sunduğumuz Tedaviler",
       "subtitle": "Her endişe için kapsamlı estetik çözümler.",
-      "explore": "Explore treatments ->"
+      "explore": "Tedavileri keşfet →"
     },
     "bookImageAlt": "Konsültasyon rezervasyonu"
   },
@@ -2167,5 +2169,97 @@
     "section3Title": "Tedavi Portföyü",
     "section4Title": "Cilt Durumları",
     "section5Title": "Tedavi Portföyü"
+  },
+  "treatmentCollectionPage": {
+    "metadataTitle": "{title} Batum, Gürcistan",
+    "metadataDescription": "{description} Batum, Gürcistan’daki Silk Beauty Salon’da danışmanlık odaklı {title} için randevu alın.",
+    "imageAlt": "Batum, Gürcistan’daki Silk Beauty Salon’da {title}",
+    "includedTreatments": "Dahil olan uygulamalar",
+    "treatmentOptionsTitle": "Bu kategorideki uygulama seçenekleri",
+    "serviceOptions": "Hizmet seçenekleri",
+    "serviceOptionsTitle": "Danışmanlık odaklı güzellik hizmetleri",
+    "consultationEyebrow": "Danışmanlık",
+    "consultationTitle": "Uygulamadan önce doğru planı oluşturun.",
+    "consultationDescription": "Her randevu anatomi, cilt durumu, zamanlama, iyileşme süreci ve hedeflenen sonucun planlanmasıyla başlar. Bu, sonucu net ve gerçekçi tutar.",
+    "collections": {
+      "botox": {
+        "title": "Botoks",
+        "eyebrow": "Enjeksiyon uygulamaları",
+        "description": "Kırışıklık, terapötik ihtiyaçlar ve yüz dengesi için seçilmiş nöromodülatör uygulamaları."
+      },
+      "dermalFillers": {
+        "title": "Dermal dolgular",
+        "eyebrow": "Hacim ve kontur",
+        "description": "Yüz uyumu için dudak, yanak, çene, çene hattı, göz altı oluğu ve profil dengeleme uygulamaları."
+      },
+      "skinTreatments": {
+        "title": "Cilt bakımları",
+        "eyebrow": "Cilt kalitesi",
+        "description": "Daha aydınlık ve sağlıklı bir cilt için facial, peeling, booster ve kolajen yenileme uygulamalarının seçilmiş kombinasyonu."
+      },
+      "laserTreatments": {
+        "title": "Lazer uygulamaları",
+        "eyebrow": "Cihazlar ve yenileme",
+        "description": "Cilt hassasiyeti için seçilmiş lazer yenileme, pigmentasyon, damar ve kolajen stimülasyonu uygulamaları."
+      },
+      "hairAndHairExtensions": {
+        "title": "Saç ve saç kaynak",
+        "eyebrow": "Saç hizmetleri",
+        "description": "Daha dolgun ve bakımlı saçlar için saç derisi danışmanlığı, restorasyon planı ve salon desteği.",
+        "services": {
+          "service1": {
+            "title": "Saç restorasyon danışmanlığı",
+            "description": "Klinik saç derisi değerlendirmesi ve kişisel tedavi planı.",
+            "duration": "45-60 dakika"
+          },
+          "service2": {
+            "title": "Saç kaynak danışmanlığı",
+            "description": "Uygulama öncesi renk eşleştirme, karışım planı ve bakım rehberliği.",
+            "duration": "30 dakika"
+          }
+        }
+      },
+      "nails": {
+        "title": "Tırnaklar",
+        "eyebrow": "Salon hizmetleri",
+        "description": "Manikür ve pedikür hizmetleri danışmanlık öncelikli salon randevuları olarak planlanır.",
+        "services": {
+          "service1": {
+            "title": "İmza manikür",
+            "description": "Şekil, kütikül bakımı, oje planı ve bitiş seçimi.",
+            "duration": "45 dakika"
+          },
+          "service2": {
+            "title": "Lüks pedikür",
+            "description": "Ayak bakımı, peeling, nemlendirme ve uzun süre kalıcı oje bitişi.",
+            "duration": "60 dakika"
+          }
+        }
+      },
+      "lashes": {
+        "title": "Kirpikler",
+        "eyebrow": "Güzellik dokunuşu",
+        "description": "Kirpik randevuları şekil, lifting ve bitiş seçenekleriyle özel güzellik hizmetleri olarak planlanır.",
+        "services": {
+          "service1": {
+            "title": "Kirpik lifting danışmanlığı",
+            "description": "Doğal lifting, kıvrım yönü ve bakım planı.",
+            "duration": "30 dakika"
+          },
+          "service2": {
+            "title": "Kirpik şekillendirme randevusu",
+            "description": "Kişisel şekil ve bakım rehberliğiyle daha dolgun kirpik görünümü.",
+            "duration": "45 dakika"
+          }
+        }
+      }
+    }
+  },
+  "localSeoTemplate": {
+    "locationText": "{name}, {address}, {city} adresinde yer alır. Online randevu, telefon desteği, WhatsApp ve e-posta yerel ve uluslararası müşteriler için kullanılabilir.",
+    "booking": "Randevu",
+    "online": "Çevrim içi",
+    "phone": "Telefon",
+    "email": "E-posta"
   }
 }

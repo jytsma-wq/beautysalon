@@ -56,7 +56,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div className="grid items-center gap-12 lg:grid-cols-[48%_52%]">
             <div className="max-w-3xl">
               <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">{tNav('contact')}</p>
-              <h1 className="mb-6 font-sans text-[clamp(2.9rem,5.6vw,5.8rem)] font-light leading-[1.02] text-[#241f1b]">
+              <h1 className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]">
                 {t('title')}
               </h1>
               <p className="text-lg leading-8 text-stone-700">{t('subtitle')}</p>

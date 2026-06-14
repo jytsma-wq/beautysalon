@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ReactNode } from 'react';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { FacebookBrandIcon, InstagramBrandIcon, TikTokBrandIcon } from '@/components/icons';
 import { siteConfig } from '@/data/site-config';
 import { rtlLocales, type Locale } from '@/i18n';
 import { motion } from 'framer-motion';
@@ -112,6 +113,28 @@ function closeMobileMenu() {
   }
 }
 
+function SocialIconLink({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="grid h-10 w-9 place-items-center text-stone-600 transition-colors hover:text-[#8d6f58]"
+    >
+      {children}
+    </a>
+  );
+}
+
 export function GaldermaHeaderClient({
   treatmentMegaMenuItems,
   skinConditionMegaMenuItems,
@@ -167,6 +190,7 @@ export function GaldermaHeaderClient({
       />
 
       <motion.div
+        dir="ltr"
         className={`fixed top-0 left-0 right-0 z-50 border-b border-[#e8e4df] bg-[#f7f4f0] transition-all duration-300 ${
           isHidden ? '-translate-y-full' : 'translate-y-0'
         }`}
@@ -174,30 +198,35 @@ export function GaldermaHeaderClient({
         animate={{ y: isHidden ? -100 : 0 }}
       >
         <div className="mx-auto flex h-11 max-w-7xl items-center justify-between px-6 text-xs lg:px-8">
-          <nav className="hidden items-center gap-6 lg:flex">
-            <Link
-              href="/about"
-              className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
-            >
-              {t('about', { defaultValue: 'About' })}
-            </Link>
-            <Link
-              href="/contact-us"
-              className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
-            >
-              {t('contact', { defaultValue: 'Contact Us' })}
-            </Link>
-          </nav>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-0.5" aria-label="Social media links">
+              <SocialIconLink href={siteConfig.social.facebook} label="Facebook">
+                <FacebookBrandIcon className="h-5 w-5" />
+              </SocialIconLink>
+              <SocialIconLink href={siteConfig.social.instagram} label="Instagram">
+                <InstagramBrandIcon className="h-5 w-5" />
+              </SocialIconLink>
+              <SocialIconLink href={siteConfig.social.tiktok} label="TikTok">
+                <TikTokBrandIcon className="h-5 w-5" />
+              </SocialIconLink>
+            </div>
+            <nav className="hidden items-center gap-6 lg:flex">
+              <Link
+                href="/about"
+                className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
+              >
+                {t('about', { defaultValue: 'About' })}
+              </Link>
+              <Link
+                href="/contact-us"
+                className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
+              >
+                {t('contact', { defaultValue: 'Contact Us' })}
+              </Link>
+            </nav>
+          </div>
 
-          <a
-            href={`tel:${siteConfig.contact.phone}`}
-            className="flex h-11 items-center gap-2 text-stone-600 transition-colors hover:text-[#8d6f58] lg:hidden"
-          >
-            <Phone className="h-3.5 w-3.5" />
-            <span>{siteConfig.contact.phone}</span>
-          </a>
-
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             <ThemeToggle />
             <LanguageSwitcher />
           </div>
@@ -205,6 +234,7 @@ export function GaldermaHeaderClient({
       </motion.div>
 
       <motion.header
+        dir="ltr"
         className={`fixed left-0 right-0 z-40 border-b border-[#e8e4df] bg-white transition-all duration-300 ${
           isHidden ? '-translate-y-full' : 'translate-y-0'
         }`}
@@ -214,7 +244,7 @@ export function GaldermaHeaderClient({
         transition={{ duration: 0.3 }}
       >
         <div className="mx-auto max-w-7xl px-6 py-3 lg:px-8">
-          <div className="hidden items-center justify-between gap-6 lg:flex">
+          <div className="relative hidden min-h-14 items-center justify-between gap-6 lg:flex">
             <Link href="/" className="block shrink-0 transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
               <BrandLogo
                 priority
@@ -222,9 +252,25 @@ export function GaldermaHeaderClient({
               />
             </Link>
 
+            <Link
+              href="/"
+              className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap font-serif text-5xl leading-none tracking-tight text-[#1c1c1c] transition-colors hover:text-[#8d6f58]"
+            >
+              {siteConfig.name}
+            </Link>
+
+            <Link
+              href="/book"
+              className="shrink-0 rounded-md border border-[#d9cec1] bg-[#f7f2eb] px-7 py-2.5 text-center text-xs uppercase tracking-[0.15em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+            >
+              {t('book', { defaultValue: 'Book' })}
+            </Link>
+          </div>
+
+          <div className="mt-3 hidden items-center justify-center lg:flex">
             <nav
               aria-label={t('mainNavigation', { defaultValue: 'Main navigation' })}
-              className="relative flex min-w-0 flex-1 items-center justify-center gap-5 xl:gap-8"
+              className="relative flex min-w-0 items-center justify-center gap-4 xl:gap-8"
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
               <div onMouseEnter={() => setActiveMegaMenu('treatments')}>
@@ -286,21 +332,21 @@ export function GaldermaHeaderClient({
                 />
               ) : null}
             </nav>
-
-            <Link
-              href="/book"
-              className="w-24 rounded-md border border-[#d9cec1] bg-[#f7f2eb] px-4 py-2 text-center text-xs uppercase tracking-[0.15em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
-            >
-              {t('book', { defaultValue: 'Book' })}
-            </Link>
           </div>
 
-          <div className="flex items-center justify-between lg:hidden">
+          <div className="relative flex min-h-16 items-center justify-between lg:hidden">
             <Link href="/" className="block transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
               <BrandLogo
                 priority
                 imageClassName="h-16 w-16 object-contain"
               />
+            </Link>
+
+            <Link
+              href="/"
+              className="absolute left-1/2 max-w-[calc(100vw-12.5rem)] -translate-x-1/2 truncate text-center font-serif text-xl leading-none tracking-tight text-[#1c1c1c] min-[380px]:text-[1.35rem] sm:text-2xl"
+            >
+              {siteConfig.name}
             </Link>
 
             <label
@@ -384,9 +430,6 @@ export function GaldermaHeaderClient({
                     <br />
                     {siteConfig.contact.city}, {siteConfig.contact.country} {siteConfig.contact.postcode}
                   </p>
-                  <a href={`tel:${siteConfig.contact.phone}`} className="mt-4 block text-sm text-stone-900 hover:underline">
-                    {siteConfig.contact.phone}
-                  </a>
                 </div>
 
                 <Link

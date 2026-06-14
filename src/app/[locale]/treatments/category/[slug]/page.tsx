@@ -25,6 +25,16 @@ const legacyCategoryAnchors: Record<string, string> = {
   lashes: 'lashes',
 };
 
+const collectionMessageKeys: Record<string, string> = {
+  botox: 'botox',
+  'dermal-fillers': 'dermalFillers',
+  'skin-treatments': 'skinTreatments',
+  'laser-treatments': 'laserTreatments',
+  'hair-and-hair-extensions': 'hairAndHairExtensions',
+  nails: 'nails',
+  lashes: 'lashes',
+};
+
 export async function generateStaticParams() {
   const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr'];
   const slugs = Object.keys(legacyCategoryAnchors);
@@ -40,22 +50,27 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, locale } = await params;
   const t = await getTranslations({ locale, namespace: 'treatmentsPage' });
+  const tCollection = await getTranslations({ locale, namespace: 'treatmentCollectionPage' });
   const collection = getTreatmentCollectionBySlug(slug);
+  const collectionKey = collectionMessageKeys[slug];
 
-  if (!collection) {
+  if (!collection || !collectionKey) {
     return {
       title: t('title'),
     };
   }
 
+  const title = tCollection(`collections.${collectionKey}.title`);
+  const description = tCollection(`collections.${collectionKey}.description`);
+
   return buildSeoMetadata({
     locale,
     path: `/treatments/category/${slug}`,
-    title: `${collection.title} in Batumi, Georgia`,
-    description: `${collection.description} Book consultation-led ${collection.title.toLowerCase()} at Silk Beauty Salon in Batumi, Georgia.`,
-    keywords: [collection.title, `${collection.title} Batumi`, `${collection.title} Georgia`, ...localSeoKeywords],
+    title: tCollection('metadataTitle', { title }),
+    description: tCollection('metadataDescription', { title, description }),
+    keywords: [title, `${title} Batumi`, `${title} Georgia`, ...localSeoKeywords],
     image: collection.image,
-    imageAlt: `${collection.title} at Silk Beauty Salon in Batumi, Georgia`,
+    imageAlt: tCollection('imageAlt', { title }),
   });
 }
 
@@ -66,6 +81,28 @@ export default async function TreatmentCollectionPage({ params }: Props) {
   if (!collection) {
     notFound();
   }
+
+  const collectionKey = collectionMessageKeys[collection.slug];
+
+  if (!collectionKey) {
+    notFound();
+  }
+
+  const tCommon = await getTranslations({ locale, namespace: 'common' });
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const tTreatment = await getTranslations({ locale, namespace: 'treatmentPage' });
+  const tCollection = await getTranslations({ locale, namespace: 'treatmentCollectionPage' });
+  const localizedCollection = {
+    title: tCollection(`collections.${collectionKey}.title`),
+    eyebrow: tCollection(`collections.${collectionKey}.eyebrow`),
+    description: tCollection(`collections.${collectionKey}.description`),
+  };
+  const localizedServices = collection.services?.map((service, index) => ({
+    ...service,
+    title: tCollection(`collections.${collectionKey}.services.service${index + 1}.title`),
+    description: tCollection(`collections.${collectionKey}.services.service${index + 1}.description`),
+    duration: tCollection(`collections.${collectionKey}.services.service${index + 1}.duration`),
+  }));
 
   const collectionTreatments = collection.treatmentSlugs
     ? (
@@ -92,36 +129,36 @@ export default async function TreatmentCollectionPage({ params }: Props) {
             <div className="max-w-xl">
               <nav className="mb-8 flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">
                 <Link href="/" className="hover:text-[#241f1b]">
-                  Home
+                  {tCommon('home')}
                 </Link>
                 <ChevronRight className="h-3.5 w-3.5" />
                 <Link href="/treatments" className="hover:text-[#241f1b]">
-                  Treatments
+                  {tNav('treatments')}
                 </Link>
                 <ChevronRight className="h-3.5 w-3.5" />
-                <span className="text-[#241f1b]">{collection.title}</span>
+                <span className="text-[#241f1b]">{localizedCollection.title}</span>
               </nav>
               <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-                {collection.eyebrow}
+                {localizedCollection.eyebrow}
               </p>
-              <h1 className="font-sans text-[clamp(2.9rem,5.6vw,5.8rem)] font-light leading-[1.02] text-[#241f1b]">
-                {collection.title}
+              <h1 className="localized-hero-heading font-sans font-light text-[#241f1b]">
+                {localizedCollection.title}
               </h1>
               <p className="mt-7 text-base leading-8 text-stone-700 md:text-lg">
-                {collection.description}
+                {localizedCollection.description}
               </p>
               <Link
                 href="/book"
                 className="mt-10 inline-flex h-12 items-center rounded-md border border-[#241f1b] px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
               >
-                Book consultation
+                {tCommon('bookConsultation')}
               </Link>
             </div>
           </div>
           <div className="relative min-h-[44svh] overflow-hidden lg:min-h-0">
             <Image
               src={collection.image}
-              alt={`${collection.title} at Silk Beauty Salon in Batumi, Georgia`}
+              alt={tCollection('imageAlt', { title: localizedCollection.title })}
               fill
               priority
               className="object-cover"
@@ -137,10 +174,10 @@ export default async function TreatmentCollectionPage({ params }: Props) {
             <div className="mb-10 flex items-end justify-between gap-8 border-b border-stone-200 pb-6">
               <div>
                 <p className="text-[0.68rem] uppercase tracking-[0.22em] text-[#8d6f58]">
-                  Included treatments
+                  {tCollection('includedTreatments')}
                 </p>
-                <h2 className="mt-3 font-sans text-[clamp(2.1rem,4vw,4rem)] font-light leading-[1.02] text-[#241f1b]">
-                  Treatment options in this category
+                <h2 className="localized-section-heading mt-3 font-sans font-light text-[#241f1b]">
+                  {tCollection('treatmentOptionsTitle')}
                 </h2>
               </div>
             </div>
@@ -171,7 +208,7 @@ export default async function TreatmentCollectionPage({ params }: Props) {
                     </p>
                   ) : null}
                   <span className="mt-6 inline-block text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#241f1b]">
-                    View treatment
+                    {tTreatment('learnMore')}
                   </span>
                 </Link>
               ))}
@@ -185,15 +222,15 @@ export default async function TreatmentCollectionPage({ params }: Props) {
           <div className="mx-auto max-w-7xl">
             <div className="mb-10 border-b border-stone-200 pb-6">
               <p className="text-[0.68rem] uppercase tracking-[0.22em] text-[#8d6f58]">
-                Service options
+                {tCollection('serviceOptions')}
               </p>
-              <h2 className="mt-3 font-sans text-[clamp(2.1rem,4vw,4rem)] font-light leading-[1.02] text-[#241f1b]">
-                Consultation-led beauty services
+              <h2 className="localized-section-heading mt-3 font-sans font-light text-[#241f1b]">
+                {tCollection('serviceOptionsTitle')}
               </h2>
             </div>
 
             <div className="grid gap-px bg-stone-200 md:grid-cols-2">
-              {collection.services.map((service) => (
+              {localizedServices?.map((service) => (
                 <article key={service.title} className="bg-white p-8">
                   <h3 className="font-sans text-2xl font-light text-[#241f1b]">
                     {service.title}
@@ -217,22 +254,21 @@ export default async function TreatmentCollectionPage({ params }: Props) {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[55%_45%] lg:items-center">
           <div>
             <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-              Consultation
+              {tCollection('consultationEyebrow')}
             </p>
-            <h2 className="font-sans text-[clamp(2.8rem,5vw,5rem)] font-light leading-[0.98] text-[#241f1b]">
-              Build the right plan before treatment.
+            <h2 className="localized-section-heading font-sans font-light text-[#241f1b]">
+              {tCollection('consultationTitle')}
             </h2>
           </div>
           <div>
             <p className="max-w-lg text-base leading-8 text-stone-700 md:text-lg">
-              Every appointment starts with anatomy, skin condition, timing, and outcome
-              planning. That keeps the result precise and realistic.
+              {tCollection('consultationDescription')}
             </p>
             <Link
               href="/book"
               className="mt-8 inline-flex h-12 items-center justify-center rounded-md border border-[#241f1b] bg-transparent px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
             >
-              Book now
+              {tCommon('bookNow')}
             </Link>
           </div>
         </div>

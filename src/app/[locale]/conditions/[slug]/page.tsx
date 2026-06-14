@@ -91,7 +91,7 @@ export default async function ConditionPage({ params }: Props) {
                 Skin conditions
               </p>
               <h1 
-                className="font-sans text-[clamp(2.9rem,5.6vw,5.8rem)] font-light leading-[1.02] text-[#241f1b] mb-6"
+                className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]"
                               >
                 {condition.name}
               </h1>

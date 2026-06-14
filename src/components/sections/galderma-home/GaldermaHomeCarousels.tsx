@@ -103,7 +103,7 @@ export function ClinicalHeroCarousel() {
 
   return (
     <section className="relative bg-[#f7f2eb]">
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden [contain:layout_paint]" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, index) => (
             <article key={slide.title} className="min-w-0 flex-[0_0_100%]">
@@ -114,11 +114,11 @@ export function ClinicalHeroCarousel() {
                       {slide.eyebrow}
                     </p>
                     {index === 0 ? (
-                      <h1 className="font-sans text-[clamp(2.15rem,9vw,3.2rem)] font-light leading-[1.05] text-[#241f1b] lg:text-[clamp(2.35rem,4vw,4.5rem)]">
+                      <h1 className="localized-carousel-heading font-sans font-light text-[#241f1b]">
                         {slide.title}
                       </h1>
                     ) : (
-                      <h2 className="font-sans text-[clamp(2.15rem,9vw,3.2rem)] font-light leading-[1.05] text-[#241f1b] lg:text-[clamp(2.35rem,4vw,4.5rem)]">
+                      <h2 className="localized-carousel-heading font-sans font-light text-[#241f1b]">
                         {slide.title}
                       </h2>
                     )}
@@ -232,7 +232,7 @@ export function ConcernCarousel() {
           disabled={!canScrollNext}
         />
       </div>
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden [contain:layout_paint]" ref={emblaRef}>
         <div className="-ml-5 flex">
           {concerns.map((item) => (
             <article
@@ -290,7 +290,7 @@ export function ResultsCarousel() {
           disabled={!canScrollNext}
         />
       </div>
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden [contain:layout_paint]" ref={emblaRef}>
         <div className="-ml-6 flex">
           {cases.map((item) => (
             <article
@@ -362,7 +362,7 @@ export function ReviewsCarousel() {
           disabled={!canScrollNext}
         />
       </div>
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden [contain:layout_paint]" ref={emblaRef}>
         <div className="-ml-5 flex">
           {reviews.map((review) => {
             const rating = review.rating ?? 5;
@@ -450,7 +450,7 @@ export function TrendsCarousel() {
           disabled={!canScrollNext}
         />
       </div>
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden [contain:layout_paint]" ref={emblaRef}>
         <div className="-ml-5 flex">
           {articles.map((article) => (
             <article

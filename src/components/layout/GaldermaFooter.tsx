@@ -120,7 +120,7 @@ export function GaldermaFooter() {
             <h3 className="mb-6 text-xs uppercase tracking-[0.3em] text-stone-400">
               {t('about', { defaultValue: 'About' })}
             </h3>
-            <p className="max-w-xs text-sm leading-relaxed text-stone-600">{siteConfig.description}</p>
+            <p className="max-w-xs text-sm leading-relaxed text-stone-600">{t('description')}</p>
 
             <div className="mt-8 flex gap-6">
               <a
@@ -170,7 +170,7 @@ export function GaldermaFooter() {
                 href="/beauty-salon-batumi"
                 className="block text-sm text-stone-600 transition-colors hover:text-stone-900"
               >
-                Beauty salon Batumi
+                {t('beautySalonBatumi', { defaultValue: 'Beauty salon Batumi' })}
               </Link>
               <Link href="/about" className="block text-sm text-stone-600 transition-colors hover:text-stone-900">
                 {tNav('about')}
@@ -212,7 +212,7 @@ export function GaldermaFooter() {
             <div className="mt-6 border-t border-stone-100 pt-6">
               <dl className="space-y-1 text-sm">
                 <div className="flex justify-between">
-                  <dt className="text-stone-500">Mon - Fri</dt>
+                  <dt className="text-stone-500">{t('hours.monFriLabel', { defaultValue: 'Mon - Fri' })}</dt>
                   <dd className="text-stone-900">{siteConfig.businessHours.monday}</dd>
                 </div>
                 <div className="flex justify-between">

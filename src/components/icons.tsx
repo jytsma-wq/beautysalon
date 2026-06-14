@@ -24,3 +24,48 @@ export function TikTokIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function FacebookBrandIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="12" fill="#1877F2" />
+      <path
+        fill="#ffffff"
+        d="M15.12 8.08h-1.78c-.58 0-.78.29-.78.98v1.34h2.5l-.32 2.55h-2.18V20h-2.65v-7.05H7.7V10.4h2.21V8.85c0-2.18 1.33-3.37 3.28-3.37.93 0 1.74.07 1.97.1v2.5h-.04z"
+      />
+    </svg>
+  );
+}
+
+export function InstagramBrandIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <defs>
+        <radialGradient id="instagram-brand-gradient" cx="30%" cy="107%" r="140%">
+          <stop offset="0" stopColor="#F58529" />
+          <stop offset="0.3" stopColor="#FEDA77" />
+          <stop offset="0.48" stopColor="#DD2A7B" />
+          <stop offset="0.75" stopColor="#8134AF" />
+          <stop offset="1" stopColor="#515BD4" />
+        </radialGradient>
+      </defs>
+      <rect width="24" height="24" rx="6" fill="url(#instagram-brand-gradient)" />
+      <rect x="5.7" y="5.7" width="12.6" height="12.6" rx="4" fill="none" stroke="#ffffff" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="3.2" fill="none" stroke="#ffffff" strokeWidth="1.8" />
+      <circle cx="16.25" cy="7.75" r="1.15" fill="#ffffff" />
+    </svg>
+  );
+}
+
+export function TikTokBrandIcon({ className }: { className?: string }) {
+  const path = "M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z";
+
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <rect width="24" height="24" rx="5" fill="#111111" />
+      <path d={path} fill="#25F4EE" transform="translate(-1.2 0.65) scale(0.78) translate(3 2.2)" />
+      <path d={path} fill="#FE2C55" transform="translate(1.2 -0.35) scale(0.78) translate(3 2.2)" />
+      <path d={path} fill="#ffffff" transform="scale(0.78) translate(3 2.2)" />
+    </svg>
+  );
+}

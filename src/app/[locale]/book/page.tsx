@@ -37,15 +37,15 @@ const JSON_LD_BASE = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'bookingPage' });
 
   return buildSeoMetadata({
     locale,
     path: '/book',
-    title: 'Book a Beauty Salon Consultation in Batumi',
-    description:
-      'Book a consultation at Silk Beauty Salon in Batumi, Georgia for facials, skin care, injectables and aesthetic treatment planning.',
+    title: t('metadata.title'),
+    description: t('metadata.description'),
     keywords: localSeoKeywords,
-    imageAlt: 'Book Silk Beauty Salon consultations in Batumi, Georgia',
+    imageAlt: t('heroImageAlt'),
   });
 }
 
@@ -57,24 +57,9 @@ export default async function BookingPage({ params }: Props) {
 
   // Build consultation types from translation keys
   const consultationTypes = CONSULTATION_TYPE_KEYS.map(({ key, bookingType }) => ({
-    title: {
-      facial: 'Facial Consultation',
-      skin: 'Skin Consultation',
-      body: 'Body Treatment Consultation',
-      virtual: 'Virtual Consultation',
-    }[key],
-    duration: {
-      facial: '45 min',
-      skin: '45 min',
-      body: '45 min',
-      virtual: '30 min',
-    }[key],
-    description: {
-      facial: 'A short in-clinic consultation focused on your facial goals.',
-      skin: 'Assess skin concerns and build a treatment plan.',
-      body: 'Discuss body contouring and treatment options.',
-      virtual: 'A remote consultation from anywhere.',
-    }[key],
+    title: t(`consultations.${key}.title`),
+    duration: t(`consultations.${key}.duration`),
+    description: t(`consultations.${key}.description`),
     bookingType,
   }));
 
@@ -117,11 +102,11 @@ export default async function BookingPage({ params }: Props) {
               <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
                 {t('personalInfo')}
               </p>
-              <h1 className="mb-6 font-sans text-[clamp(2.9rem,5.6vw,5.8rem)] font-light leading-[1.02] text-[#241f1b]">
+              <h1 className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]">
                 {tNav('book')}
               </h1>
               <p className="text-lg text-stone-700 leading-8">
-                Choose a consultation type, pick a time, and submit your request.
+                {t('subtitle')}
               </p>
             </div>
             <div className="relative aspect-4/3 overflow-hidden rounded-xl">
@@ -201,7 +186,7 @@ export default async function BookingPage({ params }: Props) {
               {/* Consultation Types */}
               <div className="border-t border-[#e8e4df] py-8">
                 <h3 className="mb-4 font-sans text-lg font-light text-[#241f1b]">
-                  Consultation Types
+                  {t('consultationTypes')}
                 </h3>
                 <ConsultationTypeButtons types={consultationTypes} />
               </div>
@@ -209,24 +194,24 @@ export default async function BookingPage({ params }: Props) {
               {/* What to Expect */}
               <div className="border-t border-[#e8e4df] py-8">
                 <h3 className="mb-4 font-sans text-lg font-light text-[#241f1b]">
-                  What to Expect
+                  {t('whatToExpect.title')}
                 </h3>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start gap-2 text-muted-foreground">
                     <span className="text-[#b5453a] text-xs tracking-[0.15em] uppercase">01</span>
-                    <span>Choose the consultation type that fits your needs.</span>
+                    <span>{t('whatToExpect.step1')}</span>
                   </li>
                   <li className="flex items-start gap-2 text-muted-foreground">
                     <span className="text-[#b5453a] text-xs tracking-[0.15em] uppercase">02</span>
-                    <span>Select your preferred date and time.</span>
+                    <span>{t('whatToExpect.step2')}</span>
                   </li>
                   <li className="flex items-start gap-2 text-muted-foreground">
                     <span className="text-[#b5453a] text-xs tracking-[0.15em] uppercase">03</span>
-                    <span>Enter your contact details and notes.</span>
+                    <span>{t('whatToExpect.step3')}</span>
                   </li>
                   <li className="flex items-start gap-2 text-muted-foreground">
                     <span className="text-[#b5453a] text-xs tracking-[0.15em] uppercase">04</span>
-                    <span>We confirm your appointment and follow up promptly.</span>
+                    <span>{t('whatToExpect.step4')}</span>
                   </li>
                 </ul>
               </div>
@@ -234,11 +219,11 @@ export default async function BookingPage({ params }: Props) {
               {/* Contact Info */}
               <div className="border-t border-[#e8e4df] py-8">
                 <h3 className="mb-4 font-sans text-lg font-light text-[#241f1b]">
-                  Need Help
+                  {t('needHelp')}
                 </h3>
                 <div className="space-y-3 text-sm">
                   <div>
-                    <span className="text-muted-foreground">Phone:</span>
+                    <span className="text-muted-foreground">{t('phone')}:</span>
                     <br />
                     <a 
                       href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
@@ -248,7 +233,7 @@ export default async function BookingPage({ params }: Props) {
                     </a>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Email:</span>
+                    <span className="text-muted-foreground">{t('email')}:</span>
                     <br />
                     <a 
                       href={`mailto:${siteConfig.contact.email}`}
@@ -258,7 +243,7 @@ export default async function BookingPage({ params }: Props) {
                     </a>
                   </div>
                   <div>
-                    <span className="text-muted-foreground">Address:</span>
+                    <span className="text-muted-foreground">{t('address')}:</span>
                     <br />
                     <span className="text-primary">
                       {siteConfig.contact.address}, {siteConfig.contact.city}
@@ -275,14 +260,14 @@ export default async function BookingPage({ params }: Props) {
       <section className="section-spacing bg-[#f7f4f0]">
         <div className="container-custom">
           <h2 className="mb-8 text-center font-sans text-2xl font-light text-[#241f1b] md:text-3xl">
-            Frequently Asked Questions
+            {t('faq.title')}
           </h2>
           <div className="max-w-2xl mx-auto space-y-4">
             {[
-              { q: 'How do I book?', a: 'Select a consultation type and choose a time.' },
-              { q: 'Can I reschedule?', a: 'Yes, contact us and we will help adjust your booking.' },
-              { q: 'Do I need a deposit?', a: 'Some consultations may require a deposit depending on the service.' },
-              { q: 'Can I book online?', a: 'Yes, the booking form is available on this page.' },
+              { q: t('faq.q1'), a: t('faq.a1') },
+              { q: t('faq.q2'), a: t('faq.a2') },
+              { q: t('faq.q3'), a: t('faq.a3') },
+              { q: t('faq.q4'), a: t('faq.a4') },
             ].map((faq, index) => (
               <div key={index} className="py-6 border-t border-[#e8e4df]">
                 <h3 className="font-semibold text-primary mb-2">{faq.q}</h3>

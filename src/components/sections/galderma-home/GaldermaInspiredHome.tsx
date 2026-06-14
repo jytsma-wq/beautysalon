@@ -30,7 +30,7 @@ function SectionHeading({
       <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
         {eyebrow}
       </p>
-      <h2 className="font-sans text-[clamp(2.6rem,5vw,5.2rem)] font-light leading-[0.98] text-[#241f1b]">
+      <h2 className="localized-section-heading font-sans font-light text-[#241f1b]">
         {title}
       </h2>
       {description ? (
@@ -54,7 +54,7 @@ function PhilosophySection() {
             description={t('philosophy.description')}
           />
           <div className="border-t border-stone-200 pt-8">
-            <p className="font-sans text-[clamp(2rem,3.8vw,3.8rem)] font-light leading-tight text-[#241f1b]">
+            <p className="localized-statement-heading font-sans font-light text-[#241f1b]">
               {t('philosophy.statement')}
             </p>
           </div>
@@ -166,7 +166,7 @@ function SpecialistCta() {
           <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#d8cbbb]">
             {t('cta.eyebrow')}
           </p>
-          <h2 className="font-sans text-[clamp(3rem,6vw,6rem)] font-light leading-[0.95]">
+          <h2 className="localized-hero-heading font-sans font-light">
             {t('cta.title')}
           </h2>
         </div>

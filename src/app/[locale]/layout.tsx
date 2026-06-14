@@ -31,7 +31,12 @@ export async function generateMetadata({
     creator: siteConfig.name,
     publisher: siteConfig.name,
     icons: {
-      icon: "/favicon.ico",
+      icon: [
+        { url: "/favicon.png", sizes: "64x64", type: "image/png" },
+        { url: "/logo.png", sizes: "512x512", type: "image/png" },
+      ],
+      shortcut: "/favicon.png",
+      apple: "/apple-touch-icon.png",
     },
     other: {
       'link:rel:preload;as:video;href:https://cdn.coverr.co/videos/coverr-a-woman-getting-a-facial-treatment-6960/1080p.mp4;type:video/mp4': '',

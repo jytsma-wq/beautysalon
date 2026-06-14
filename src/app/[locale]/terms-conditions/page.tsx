@@ -37,7 +37,7 @@ export default async function TermsConditionsPage({
             <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
               Legal information
             </p>
-            <h1 className="mb-6 font-sans text-[clamp(2.9rem,5.4vw,5.4rem)] font-light leading-[1.02] text-[#241f1b]">
+            <h1 className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]">
               {t('title')}
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-stone-700">

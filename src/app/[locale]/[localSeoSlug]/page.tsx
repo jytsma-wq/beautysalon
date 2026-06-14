@@ -29,6 +29,7 @@ import { getTreatmentBySlug, type Treatment } from '@/data/treatments';
 import { locales, type Locale } from '@/i18n';
 import { Link } from '@/i18n/routing';
 import { buildSeoMetadata } from '@/lib/seo';
+import { getTranslations } from 'next-intl/server';
 
 interface Props {
   params: Promise<{ locale: string; localSeoSlug: string }>;
@@ -86,6 +87,10 @@ export default async function LocalSeoLandingPage({ params }: Props) {
 
   const localeKey = locales.includes(locale as Locale) ? (locale as Locale) : 'en';
   const content = page.content[localeKey];
+  const tCommon = await getTranslations({ locale: localeKey, namespace: 'common' });
+  const tNav = await getTranslations({ locale: localeKey, namespace: 'nav' });
+  const tTreatment = await getTranslations({ locale: localeKey, namespace: 'treatmentPage' });
+  const tTemplate = await getTranslations({ locale: localeKey, namespace: 'localSeoTemplate' });
   const treatments = (
     await Promise.all(
       page.treatmentSlugs.map((treatmentSlug) =>
@@ -127,7 +132,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
         <div className="container-custom py-16 md:py-20">
           <nav className="mb-8 flex flex-wrap items-center gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">
             <Link href="/" className="inline-flex min-h-11 min-w-11 items-center hover:text-[#241f1b]">
-              Home
+              {tCommon('home')}
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
             <Link href="/beauty-salon-batumi" className="inline-flex min-h-11 items-center hover:text-[#241f1b]">
@@ -142,7 +147,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
               <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
                 {content.eyebrow}
               </p>
-              <h1 className="mb-6 font-sans text-[clamp(2.7rem,5.4vw,5.6rem)] font-light leading-[1.02] text-[#241f1b]">
+              <h1 className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]">
                 {content.h1}
               </h1>
               <p className="text-lg leading-8 text-stone-700 md:text-xl">
@@ -208,9 +213,11 @@ export default async function LocalSeoLandingPage({ params }: Props) {
                 {content.benefitsTitle}
               </h2>
               <p className="leading-7 text-stone-700">
-                {siteConfig.name} is located at {siteConfig.contact.address}, {siteConfig.contact.city}.
-                Online booking, phone support, WhatsApp, and email are available for local and
-                international clients.
+                {tTemplate('locationText', {
+                  name: siteConfig.name,
+                  address: siteConfig.contact.address,
+                  city: siteConfig.contact.city,
+                })}
               </p>
             </div>
 
@@ -238,7 +245,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
         <div className="container-custom">
           <div className="mb-12 max-w-3xl">
             <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-              Treatments
+              {tNav('treatments')}
             </p>
             <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
               {content.treatmentTitle}
@@ -273,7 +280,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
                     </p>
                   ) : null}
                   <span className="mt-6 inline-flex items-center gap-1 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#241f1b]">
-                    View treatment
+                    {tTreatment('learnMore')}
                     <ChevronRight className="h-4 w-4" />
                   </span>
                 </Link>
@@ -299,7 +306,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
           <div className="grid gap-10 lg:grid-cols-[42%_58%]">
             <div>
               <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-                Booking
+                {tTemplate('booking')}
               </p>
               <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
                 {content.bookingTitle}
@@ -311,7 +318,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
               <article className="border-t border-[#e8e4df] pt-5">
                 <CalendarCheck className="mb-4 h-6 w-6 text-[#8d6f58]" />
                 <h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">
-                  Online
+                  {tTemplate('online')}
                 </h3>
                 <Link href="/book" className="text-sm leading-6 text-[#241f1b] hover:text-[#8d6f58]">
                   {content.bookCta}
@@ -320,7 +327,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
               <article className="border-t border-[#e8e4df] pt-5">
                 <Phone className="mb-4 h-6 w-6 text-[#8d6f58]" />
                 <h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">
-                  Phone
+                  {tTemplate('phone')}
                 </h3>
                 <a
                   href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
@@ -332,7 +339,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
               <article className="border-t border-[#e8e4df] pt-5">
                 <Mail className="mb-4 h-6 w-6 text-[#8d6f58]" />
                 <h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">
-                  Email
+                  {tTemplate('email')}
                 </h3>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
