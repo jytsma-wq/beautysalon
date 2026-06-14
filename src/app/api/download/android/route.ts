@@ -13,7 +13,7 @@ function buildDownloadHeaders(upstreamHeaders: Headers) {
   const headers = new Headers({
     'Content-Type': upstreamHeaders.get('content-type') || APK_CONTENT_TYPE,
     'Content-Disposition': attachmentDisposition(),
-    'Cache-Control': 'public, max-age=3600, s-maxage=86400',
+    'Cache-Control': 'no-store',
     'Accept-Ranges': upstreamHeaders.get('accept-ranges') || 'bytes',
     'X-Content-Type-Options': 'nosniff',
   });
