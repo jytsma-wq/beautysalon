@@ -3,25 +3,21 @@
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { format, isBefore, isToday } from 'date-fns';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Calendar as DatePicker } from '@/components/ui/calendar';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { siteConfig } from '@/data/site-config';
+import type { BookingTreatmentOption } from '@/data/booking-treatments';
 import { useClientCsrfToken } from '@/lib/csrf-client';
 
 interface BookingFormProps {
-  consultationTypes: Array<{
-    title: string;
-    duration: string;
-    description: string;
-    bookingType: string;
-  }>;
+  treatments: BookingTreatmentOption[];
 }
 
-export function BookingForm({ consultationTypes }: BookingFormProps) {
+export function BookingForm({ treatments }: BookingFormProps) {
   const t = useTranslations('bookingPage');
   const tCommon = useTranslations('common');
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
@@ -235,8 +231,8 @@ export function BookingForm({ consultationTypes }: BookingFormProps) {
 
       <div className="space-y-2">
         <Label htmlFor="service" className="flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-[#b5453a]" />
-          {t('selectService', { defaultValue: 'Select Service' })}
+          <Sparkles className="w-4 h-4 text-[#b5453a]" />
+          {t('selectTreatment', { defaultValue: 'Select Treatment' })}
         </Label>
         <select
           id="service"
@@ -245,10 +241,10 @@ export function BookingForm({ consultationTypes }: BookingFormProps) {
           required
           className="w-full h-10 px-3 py-2 bg-white border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-[#b5453a]/20 focus:border-[#b5453a]"
         >
-          <option value="">{t('selectServicePlaceholder', { defaultValue: 'Choose a consultation type' })}</option>
-          {consultationTypes.map((type) => (
-            <option key={type.bookingType} value={type.title}>
-              {type.title} — {type.duration}
+          <option value="">{t('selectTreatmentPlaceholder', { defaultValue: 'Choose a treatment' })}</option>
+          {treatments.map((treatment) => (
+            <option key={treatment.id} value={treatment.value}>
+              {treatment.label}
             </option>
           ))}
         </select>

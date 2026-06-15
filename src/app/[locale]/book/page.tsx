@@ -5,21 +5,13 @@ import { Link } from '@/i18n/routing';
 import { ChevronRight, Calendar } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { siteConfig } from '@/data/site-config';
+import { bookingTreatments, getBookingTreatmentOptions } from '@/data/booking-treatments';
 import { BookingForm } from './booking-form';
-import { ConsultationTypeButtons } from './consultation-type-buttons';
 import { buildSeoMetadata, getSiteUrl, localSeoKeywords } from '@/lib/seo';
 
 interface Props {
   params: Promise<{ locale: string }>;
 }
-
-// Hoisted static data - defined once at module level
-const CONSULTATION_TYPE_KEYS = [
-  { key: 'facial', bookingType: 'facial-consultation' },
-  { key: 'skin', bookingType: 'skin-consultation' },
-  { key: 'body', bookingType: 'body-consultation' },
-  { key: 'virtual', bookingType: 'virtual-consultation' },
-] as const;
 
 const JSON_LD_BASE = {
   '@context': 'https://schema.org',
@@ -27,12 +19,12 @@ const JSON_LD_BASE = {
   name: 'Silk Beauty Salon',
   image: `${getSiteUrl()}/images/hero-poster.jpg`,
   priceRange: '$$',
-  acceptsOffers: [
-    { '@type': 'Offer', name: 'Facial Consultation', price: '50', priceCurrency: 'USD' },
-    { '@type': 'Offer', name: 'Skin Consultation', price: '60', priceCurrency: 'USD' },
-    { '@type': 'Offer', name: 'Body Treatment Consultation', price: '50', priceCurrency: 'USD' },
-    { '@type': 'Offer', name: 'Virtual Consultation', price: '40', priceCurrency: 'USD' },
-  ],
+  acceptsOffers: bookingTreatments.map((treatment) => ({
+    '@type': 'Offer' as const,
+    name: treatment.name.en,
+    price: String(treatment.priceGel),
+    priceCurrency: 'GEL',
+  })),
 } as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -54,14 +46,7 @@ export default async function BookingPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'bookingPage' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
-
-  // Build consultation types from translation keys
-  const consultationTypes = CONSULTATION_TYPE_KEYS.map(({ key, bookingType }) => ({
-    title: t(`consultations.${key}.title`),
-    duration: t(`consultations.${key}.duration`),
-    description: t(`consultations.${key}.description`),
-    bookingType,
-  }));
+  const treatmentOptions = getBookingTreatmentOptions(locale);
 
   // Build JSON-LD with dynamic address data
   const jsonLd = {
@@ -138,7 +123,7 @@ export default async function BookingPage({ params }: Props) {
                 </div>
 
                 <div className="rounded-md bg-[#f7f4f0] p-4 md:p-8">
-                  <BookingForm consultationTypes={consultationTypes} />
+                  <BookingForm treatments={treatmentOptions} />
                 </div>
               </div>
             </div>
@@ -183,12 +168,22 @@ export default async function BookingPage({ params }: Props) {
 
             {/* Sidebar */}
             <div className="lg:col-span-1 space-y-6">
-              {/* Consultation Types */}
+              {/* Treatment Menu */}
               <div className="border-t border-[#e8e4df] py-8">
                 <h3 className="mb-4 font-sans text-lg font-light text-[#241f1b]">
-                  {t('consultationTypes')}
+                  {t('treatmentMenu', { defaultValue: 'Treatment menu' })}
                 </h3>
-                <ConsultationTypeButtons types={consultationTypes} />
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {t('treatmentMenuDescription', {
+                    defaultValue: 'Choose the same treatment menu used in the Silk Beauty mobile app.',
+                  })}
+                </p>
+                <a
+                  href="#booking-embed"
+                  className="mt-5 inline-flex min-h-11 items-center rounded-md border border-[#d9cec1] bg-[#f7f2eb] px-4 text-xs font-medium uppercase tracking-widest text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+                >
+                  {t('openTreatmentDropdown', { defaultValue: 'Open treatment dropdown' })}
+                </a>
               </div>
 
               {/* What to Expect */}

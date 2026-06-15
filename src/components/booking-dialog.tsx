@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { format, isBefore, isToday } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
 import { apiPost, apiGet, API_ENDPOINTS, ApiError } from "@/lib/api-client";
 import { useClientCsrfToken } from "@/lib/csrf-client";
 import { siteConfig } from "@/data/site-config";
+import { getBookingTreatmentOptions } from "@/data/booking-treatments";
 import {
   Dialog,
   DialogContent,
@@ -43,23 +44,6 @@ interface BookingDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
-
-const CONSULTATION_KEYS = [
-  { key: "facial", bookingType: "facial-consultation" },
-  { key: "skin", bookingType: "skin-consultation" },
-  { key: "body", bookingType: "body-consultation" },
-  { key: "virtual", bookingType: "virtual-consultation" },
-] as const;
-
-const TREATMENT_KEYS = [
-  "serviceBotox",
-  "serviceFillers",
-  "serviceLaser",
-  "serviceRejuvenation",
-  "servicePeel",
-  "serviceMicroneedling",
-  "serviceHydrafacial",
-] as const;
 
 // Step indicator component
 function StepIndicator({ step }: { step: string }) {
@@ -131,6 +115,8 @@ const INITIAL_FORM_STATE: FormState = {
 
 export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
   const t = useTranslations("bookingPage");
+  const locale = useLocale();
+  const treatmentOptions = getBookingTreatmentOptions(locale);
 
   // Consolidated form state
   const [formState, setFormState] = useState<FormState>(INITIAL_FORM_STATE);
@@ -305,7 +291,7 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
             <div>
               <Label className="flex items-center gap-2 mb-2">
                 <MessageSquare className="w-4 h-4 text-[#b5453a]" />
-                {t('selectService')}
+                {t('selectTreatment')}
               </Label>
               <Select
                 value={selectedService}
@@ -314,17 +300,12 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
                 }
               >
                 <SelectTrigger>
-                  <SelectValue placeholder={t('servicePlaceholder')} />
+                  <SelectValue placeholder={t('selectTreatmentPlaceholder')} />
                 </SelectTrigger>
                 <SelectContent>
-                  {CONSULTATION_KEYS.map(({ key }) => (
-                    <SelectItem key={key} value={t(`consultations.${key}.title`)}>
-                      {t(`consultations.${key}.title`)} - {t(`consultations.${key}.duration`)}
-                    </SelectItem>
-                  ))}
-                  {TREATMENT_KEYS.map((key) => (
-                    <SelectItem key={key} value={t(key)}>
-                      {t(key)}
+                  {treatmentOptions.map((treatment) => (
+                    <SelectItem key={treatment.id} value={treatment.value}>
+                      {treatment.label}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -404,7 +385,7 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
               <h4 className="font-medium text-gray-900 mb-2">{t('bookingSummary')}</h4>
               <div className="text-sm text-gray-600 space-y-1">
                 <p>
-                  <span className="font-medium">{t('service')}:</span> {selectedService}
+                  <span className="font-medium">{t('treatment')}:</span> {selectedService}
                 </p>
                 <p>
                   <span className="font-medium">{t('date')}:</span>{" "}
@@ -527,7 +508,7 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
               <h4 className="font-medium text-gray-900 mb-3">{t('bookingDetails')}</h4>
               <div className="text-sm text-gray-600 space-y-2">
                 <p>
-                  <span className="font-medium">{t('service')}:</span> {selectedService}
+                  <span className="font-medium">{t('treatment')}:</span> {selectedService}
                 </p>
                 <p>
                   <span className="font-medium">{t('date')}:</span>{" "}
