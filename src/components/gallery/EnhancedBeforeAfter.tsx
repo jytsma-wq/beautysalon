@@ -63,7 +63,7 @@ const galleryData: BeforeAfterItem[] = [
     afterImage: 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=600&q=80',
     duration: '12+ months',
     sessions: 2,
-    concerns: ['Volume loss', 'Skin laxity'],
+    concerns: ['Volume loss', 'Reduced firmness'],
     results: ['Gradual volume restoration', 'Natural collagen stimulation'],
     span: 'col-span-1 row-span-2'
   },

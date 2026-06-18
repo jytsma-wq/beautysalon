@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: locale === 'en' ? 'Beauty Salon in Batumi, Georgia' : t('homeTitle'),
     description:
       locale === 'en'
-        ? 'Visit Silk Beauty Salon in Batumi, Georgia for aesthetic treatments, facials, injectables, skin care, laser treatments, nails and lashes.'
+        ? 'Visit Silk Beauty Salon in Batumi, Georgia for aesthetic treatments, injectables, skin care, laser treatments, nails and lashes.'
         : t('homeDescription'),
     keywords: locale === 'en' ? localSeoKeywords : t('keywords').split(',').map((keyword) => keyword.trim()),
     imageAlt: 'Silk Beauty Salon in Batumi, Georgia - beauty salon and aesthetic treatments',

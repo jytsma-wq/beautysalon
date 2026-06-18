@@ -60,7 +60,7 @@ export default async function ConsultationPage({
     },
     {
       number: '2',
-      title: t('steps.assessment.title', { defaultValue: 'Facial Assessment' }),
+      title: t('steps.assessment.title', { defaultValue: 'Skin Assessment' }),
       description: t('steps.assessment.description', { defaultValue: 'Comprehensive analysis of your facial structure and skin condition.' }),
     },
     {

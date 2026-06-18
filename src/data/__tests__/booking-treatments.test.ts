@@ -4,7 +4,7 @@ import { locales } from '@/i18n';
 
 describe('booking treatment options', () => {
   it('keeps the website booking dropdown aligned with the mobile app menu shape', () => {
-    expect(bookingTreatments).toHaveLength(19);
+    expect(bookingTreatments).toHaveLength(16);
     expect(bookingTreatments.map((treatment) => treatment.id)).toEqual([
       'lip-filler-1ml',
       'botox-forehead',
@@ -12,7 +12,6 @@ describe('booking treatment options', () => {
       'cheek-filler',
       'undereye-filler',
       'jawline-contouring',
-      'hydrafacial',
       'chemical-peel',
       'microneedling',
       'skin-boosters',
@@ -23,8 +22,6 @@ describe('booking treatment options', () => {
       'keratin-treatment',
       'gel-manicure',
       'nail-art',
-      'microblading',
-      'lip-blush',
     ]);
   });
 

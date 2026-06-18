@@ -54,15 +54,11 @@ export const treatmentCollections: TreatmentCollection[] = [
     title: 'Skin treatments',
     eyebrow: 'Skin quality',
     description:
-      'A curated mix of facials, peels, boosters, and collagen-renewal treatments for brighter, healthier skin.',
+      'A curated mix of peels, microneedling, diagnostics, and collagen-supporting treatments for brighter, healthier skin.',
     image:
       'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&q=85',
     treatmentSlugs: [
-      'filter-facial',
-      'caviar-peel',
       'skinpen-microneedling',
-      'morpheus-8-treatment',
-      'profhilo-body',
       'observe-skin-scanner',
     ],
   },
@@ -80,7 +76,6 @@ export const treatmentCollections: TreatmentCollection[] = [
       'moxi-laser',
       'cutera-excel-v-ipl',
       'bbl-hero',
-      'neogen-plasma',
     ],
   },
   {

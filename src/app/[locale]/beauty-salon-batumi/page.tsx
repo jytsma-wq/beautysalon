@@ -15,15 +15,15 @@ import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 const pageTitle = 'Beauty Salon in Batumi, Georgia';
 const pageDescription =
-  'Visit Silk Beauty Salon at Zurab Gorgiladze 63 in Batumi for facials, injectables, skin care, nails, lashes, and online booking.';
+  'Visit Silk Beauty Salon at Zurab Gorgiladze 63 in Batumi for injectables, skin care, laser treatments, nails, lashes, and online booking.';
 
 const serviceHighlights = [
   {
-    title: 'Facials and skin care',
+    title: 'Skin care and skin treatments',
     description:
       'Hydrating, calming, brightening, and texture-focused skin care planned around your skin condition and Batumi climate.',
     href: '/skin-treatment-batumi',
-    cta: 'Explore facials and skin care in Batumi',
+    cta: 'Explore skin care in Batumi',
   },
   {
     title: 'Botox and injectables',
@@ -62,7 +62,7 @@ const localSearchLinks = [
   {
     label: 'Skin treatment Batumi',
     href: '/skin-treatment-batumi',
-    description: 'Facials, peels, microneedling, skin analysis, and skin care planning.',
+    description: 'Peels, microneedling, skin analysis, and skin care planning.',
   },
 ];
 
@@ -80,7 +80,7 @@ const localFaqs = [
   {
     question: 'Which beauty services are available in Batumi?',
     answer:
-      'Silk Beauty Salon offers facials, skin care, injectables, dermal fillers, laser and energy treatments, lashes, nails, consultations, and aftercare planning.',
+      'Silk Beauty Salon offers skin care, injectables, dermal fillers, laser treatments, lashes, nails, consultations, and aftercare planning.',
   },
   {
     question: 'How can I book a beauty appointment in Batumi?',
@@ -101,7 +101,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       'beauty salon Batumi',
       'Batumi beauty salon',
       'best beauty salon Batumi',
-      'facials Batumi',
+      'skin care Batumi',
       'Botox Batumi',
       'dermal fillers Batumi',
       'skin care Batumi Georgia',
@@ -153,7 +153,7 @@ export default async function BeautySalonBatumiPage({
               </h1>
               <p className="text-lg leading-8 text-stone-700 md:text-xl">
                 Silk Beauty Salon welcomes local and international clients for aesthetic consultations,
-                facials, injectables, dermal fillers, skin care, lashes, nails, and beauty treatments
+                injectables, dermal fillers, skin care, lashes, nails, and beauty treatments
                 at Zurab Gorgiladze 63 in Batumi.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">

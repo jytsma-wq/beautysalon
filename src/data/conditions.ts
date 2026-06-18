@@ -15,7 +15,7 @@ export const baseConditions: Condition[] = [
   {
     name: "Ageing Skin",
     slug: "ageing-skin",
-    description: "Ageing skin is a natural process characterized by the development of fine lines, wrinkles, loss of elasticity, and changes in skin texture and tone. As we age, our skin produces less collagen and elastin, leading to sagging, wrinkles, and a loss of youthful volume. Environmental factors such as sun exposure, smoking, and pollution can accelerate this process. Our clinic offers a comprehensive range of treatments to address the various signs of ageing, from preventative treatments to advanced corrective procedures. Whether you're concerned about fine lines, deep wrinkles, volume loss, or skin laxity, we have solutions that can help restore a more youthful, refreshed appearance.",
+    description: "Ageing skin is a natural process characterized by the development of fine lines, wrinkles, loss of elasticity, and changes in skin texture and tone. As we age, our skin produces less collagen and elastin, leading to sagging, wrinkles, and a loss of youthful volume. Environmental factors such as sun exposure, smoking, and pollution can accelerate this process. Our clinic offers a comprehensive range of treatments to address the various signs of ageing, from preventative treatments to advanced corrective procedures. Whether you're concerned about fine lines, deep wrinkles, volume loss, or reduced firmness, we have solutions that can help restore a more youthful, refreshed appearance.",
     shortDescription: "Address fine lines, wrinkles, and loss of elasticity with our anti-ageing treatments.",
     image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
     symptoms: [
@@ -38,16 +38,16 @@ export const baseConditions: Condition[] = [
     treatments: [
       "Anti-wrinkle injections to relax facial muscles",
       "Dermal fillers to restore volume",
-      "Skin tightening treatments (HIFU, Thermage)",
+      "Skin rejuvenation treatments for texture improvement",
       "Laser resurfacing for texture improvement",
       "Medical-grade skincare"
     ],
     relatedTreatments: [
       "anti-wrinkle",
       "cheek-fillers",
-      "hifu-treatment",
-      "thermage-flx",
-      "morpheus-8-treatment"
+      "clear-brilliant",
+      "skinpen-microneedling",
+      "cutera-c02-laser"
     ]
   },
   {
@@ -148,17 +148,17 @@ export const baseConditions: Condition[] = [
     ],
     treatments: [
       "Chemical peels",
-      "Medical facials",
+      "Professional skin treatments",
       "Laser treatments",
       "Professional extraction",
       "Targeted skincare protocols"
     ],
     relatedTreatments: [
       "is-clinical-fire-ice-peel",
-      "filter-facial",
       "cutera-aviclear",
       "obagi-blue-radiance-peel",
-      "clear-brilliant"
+      "clear-brilliant",
+      "skinpen-microneedling"
     ]
   },
   {
@@ -201,7 +201,7 @@ export const baseConditions: Condition[] = [
   {
     name: "Collagen Stimulating",
     slug: "collagen-stimulating",
-    description: "Collagen stimulation treatments are designed to boost your skin's natural collagen production, leading to improved skin quality, firmness, and texture. Collagen is the protein responsible for skin's strength and elasticity, but its production decreases significantly as we age. By stimulating new collagen formation, we can address multiple concerns simultaneously including fine lines, wrinkles, scarring, and skin laxity. Our clinic offers various collagen-stimulating treatments using advanced technologies such as radiofrequency, microneedling, ultrasound, and injectable biostimulators to rejuvenate your skin from within.",
+    description: "Collagen stimulation treatments are designed to support your skin's natural collagen production, leading to improved skin quality, firmness, and texture. Collagen is the protein responsible for skin's strength and elasticity, but its production decreases significantly as we age. By encouraging new collagen formation, we can address multiple concerns simultaneously including fine lines, wrinkles, scarring, and texture changes with professional skin treatments.",
     shortDescription: "Boost collagen for firmer, more youthful skin.",
     image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
     symptoms: [
@@ -221,24 +221,23 @@ export const baseConditions: Condition[] = [
       "Genetic predisposition"
     ],
     treatments: [
-      "Radiofrequency microneedling (Morpheus8)",
-      "HIFU treatments",
-      "Injectable biostimulators",
+      "Medical microneedling",
+      "Skin booster treatments",
+      "Professional peels",
       "Laser resurfacing",
       "Thread lifts"
     ],
     relatedTreatments: [
-      "morpheus-8-treatment",
-      "hifu-treatment",
-      "thermage-flx",
       "skinpen-microneedling",
-      "cutera-secret-pro-rf-microneedling"
+      "cutera-secret-pro-rf-microneedling",
+      "cutera-c02-laser",
+      "is-clinical-fire-ice-peel"
     ]
   },
   {
     name: "Dry Skin",
     slug: "dry-skin",
-    description: "Dry skin, also known as xerosis, is a common condition characterized by a lack of moisture and natural oils in the skin. This can lead to tightness, flaking, rough texture, and even cracking or bleeding in severe cases. Dry skin can affect anyone but becomes more common with age as oil production decreases. Environmental factors like cold weather, low humidity, harsh soaps, and hot showers can worsen the condition. Our clinic offers comprehensive hydration treatments including medical-grade facials, skin boosters, and personalized skincare protocols to restore your skin's moisture barrier and achieve a healthy, glowing complexion.",
+    description: "Dry skin, also known as xerosis, is a common condition characterized by a lack of moisture and natural oils in the skin. This can lead to tightness, flaking, rough texture, and even cracking or bleeding in severe cases. Dry skin can affect anyone but becomes more common with age as oil production decreases. Environmental factors like cold weather, low humidity, harsh soaps, and hot showers can worsen the condition. Our clinic offers comprehensive hydration planning including skin-quality treatments and personalized skincare protocols to restore your skin's moisture barrier and achieve a healthy, glowing complexion.",
     shortDescription: "Restore hydration and achieve smooth, glowing skin with our targeted dry skin treatments.",
     image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
     symptoms: [
@@ -261,18 +260,16 @@ export const baseConditions: Condition[] = [
       "Certain medications"
     ],
     treatments: [
-      "HydraFacial for deep hydration",
       "Skin booster injections (Profhilo, Volite)",
-      "Medical-grade moisturizing facials",
+      "Professional hydration protocols",
       "Customized skincare protocols",
       "Humectant-rich professional treatments"
     ],
     relatedTreatments: [
       "is-clinical-fire-ice-peel",
-      "filter-facial",
-      "profhilo-body",
       "clear-brilliant",
-      "obagi-nu-derm"
+      "obagi-nu-derm",
+      "observe-skin-scanner"
     ]
   },
   {
@@ -302,22 +299,21 @@ export const baseConditions: Condition[] = [
     treatments: [
       "Anti-wrinkle injections (Botox)",
       "Skin boosters for hydration",
-      "Collagen-stimulating treatments",
+      "Professional collagen-supporting skin treatments",
       "Laser skin resurfacing",
       "Medical-grade retinoid skincare"
     ],
     relatedTreatments: [
       "anti-wrinkle",
-      "morpheus-8-treatment",
-      "thermage-flx",
       "cutera-c02-laser",
-      "hifu-treatment"
+      "skinpen-microneedling",
+      "clear-brilliant"
     ]
   },
   {
     name: "Loss of Firmness",
     slug: "loss-of-firmness",
-    description: "Loss of skin firmness occurs when the skin's support structure weakens due to decreased collagen and elastin production. This leads to sagging, particularly around the jawline, cheeks, neck, and eyelids. The skin may feel looser and less resilient when pinched. While this is a natural part of aging, factors like sun damage, weight fluctuations, and lifestyle choices can accelerate the process. Our clinic offers advanced skin tightening treatments including HIFU, radiofrequency, thread lifts, and collagen-stimulating procedures to restore firmness and lift sagging areas without surgery.",
+    description: "Loss of skin firmness occurs when the skin's support structure weakens due to decreased collagen and elastin production. This can be visible around the jawline, cheeks, neck, and eyelids. The skin may feel less resilient over time. While this is a natural part of aging, factors like sun damage, weight fluctuations, and lifestyle choices can accelerate the process. Our clinic offers consultation-led treatment plans using injectables, microneedling, laser resurfacing, and professional skin quality treatments.",
     shortDescription: "Lift and tighten sagging skin with our advanced skin firming treatments.",
     image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
     symptoms: [
@@ -339,18 +335,18 @@ export const baseConditions: Condition[] = [
       "Genetic predisposition to sagging"
     ],
     treatments: [
-      "HIFU non-surgical lifting",
-      "Radiofrequency skin tightening",
-      "PDO thread lifts",
-      "Collagen-stimulating injections",
-      "Morpheus8 RF microneedling"
+      "Anti-wrinkle injections",
+      "Dermal fillers for facial support",
+      "Medical microneedling",
+      "Laser resurfacing",
+      "Professional skin quality treatments"
     ],
     relatedTreatments: [
-      "hifu-treatment",
-      "thermage-flx",
-      "morpheus-8-treatment",
-      "mint-pdo-thread-lift",
-      "nanothreads"
+      "anti-wrinkle",
+      "cheek-fillers",
+      "jaw-fillers",
+      "skinpen-microneedling",
+      "cutera-c02-laser"
     ]
   },
   {

@@ -51,14 +51,14 @@ const fallbackBlogPosts: BlogPost[] = [
 
       <h2>Start with consultation quality</h2>
       <p>A useful consultation should cover your goals, skin history, allergies, recent treatments, medications, travel plans, and the amount of downtime you can accept. At Silk Beauty Salon, consultations are designed to match treatment choice with real life: work schedules, beach time, events, and the humid Black Sea climate in Batumi.</p>
-      <p>For first-time clients, a consultation is also where expectations are set. Natural-looking results usually come from conservative planning, careful timing, and aftercare that the client can realistically follow. If you are comparing salons, ask how the practitioner decides whether to recommend a facial, injectable, peel, laser treatment, or no treatment at all.</p>
+      <p>For first-time clients, a consultation is also where expectations are set. Natural-looking results usually come from conservative planning, careful timing, and aftercare that the client can realistically follow. If you are comparing salons, ask how the practitioner decides whether to recommend an injectable, peel, laser treatment, skin analysis, or no treatment at all.</p>
 
       <h2>Look for visible trust signals</h2>
       <p>Trustworthy salons make it easy to identify who provides care, where the salon is located, how to contact the team, and which services are suitable for your concern. A strong local beauty salon page should include a street address, phone number, email address, opening hours, practitioner names, treatment information, and booking instructions.</p>
       <p>Silk Beauty Salon is located at Zurab Gorgiladze 63 in Batumi, Georgia. Clients can book online, call the salon, or email info@silkbeautysalon.online. The team includes Georgian, English, Russian, and Turkish-speaking practitioners, which helps local and international clients understand the plan before treatment begins.</p>
 
       <h2>Check the treatment information before booking</h2>
-      <p>Before choosing a salon, read the treatment page rather than booking from the service name alone. A helpful treatment page should explain what the treatment is for, how long it takes, what results may look like, common downtime, and aftercare. You can start with the <a href="/en/treatments">Silk Beauty Salon treatment menu</a>, then compare individual treatments such as facials, skin boosters, anti-wrinkle treatments, fillers, lashes, nails, and body care.</p>
+      <p>Before choosing a salon, read the treatment page rather than booking from the service name alone. A helpful treatment page should explain what the treatment is for, how long it takes, what results may look like, common downtime, and aftercare. You can start with the <a href="/en/treatments">Silk Beauty Salon treatment menu</a>, then compare individual treatments such as skin quality treatments, anti-wrinkle treatments, fillers, lashes, nails, and hair care.</p>
       <p>If the information feels vague, ask for more detail. A professional salon should be comfortable explaining when a treatment is appropriate and when a different option would be safer or more useful.</p>
 
       <h2>Ask these questions before your appointment</h2>
@@ -81,11 +81,11 @@ const fallbackBlogPosts: BlogPost[] = [
     `,
   },
   {
-    id: 'fallback-facials-batumi-skin-care-guide',
-    title: 'Facials in Batumi: Seasonal Skin Care Before and After Your Appointment',
-    slug: 'facials-batumi-skin-care-guide',
+    id: 'fallback-skin-care-batumi-seasonal-guide',
+    title: 'Skin Care in Batumi: Seasonal Planning Before and After Your Appointment',
+    slug: 'skin-care-batumi-seasonal-guide',
     excerpt:
-      'How to plan a facial in Batumi around humidity, sun exposure, travel, makeup, and aftercare, with practical skin-care guidance from the Silk team.',
+      'How to plan a skin-care appointment in Batumi around humidity, sun exposure, travel, makeup, and aftercare, with practical guidance from the Silk team.',
     image: '/images/natia-tsiklauri.jpg',
     category: 'Skin Care',
     author: 'Natia Tsiklauri',
@@ -99,13 +99,13 @@ const fallbackBlogPosts: BlogPost[] = [
       'https://www.aad.org/media/stats-sunscreen',
     ],
     content: `
-      <p>Facials are one of the most flexible beauty treatments in Batumi because they can support many goals: hydration, dullness, congestion, uneven texture, barrier repair, and event preparation. The best facial is not the most aggressive one. It is the one matched to your skin condition, timeline, and aftercare.</p>
+      <p>Skin-care appointments in Batumi should be planned around your skin condition, timeline, and aftercare. The right plan is not the most aggressive one; it is the one matched to your skin, climate exposure, and schedule.</p>
 
       <h2>How Batumi weather affects skin planning</h2>
-      <p>Batumi's coastal climate can feel humid, sunny, windy, and rainy within the same week. This matters for skin care. Humidity can make oily or congestion-prone skin feel heavier, while sun exposure can increase sensitivity after exfoliation or active treatments. A facial plan should consider what your skin is doing today, not only what treatment name you saw online.</p>
-      <p>If you are planning a facial before a wedding, photoshoot, travel day, or beach weekend, tell your practitioner. Gentle hydrating and calming facials are often easier to schedule close to an event, while stronger exfoliating treatments may need more recovery time.</p>
+      <p>Batumi's coastal climate can feel humid, sunny, windy, and rainy within the same week. This matters for skin care. Humidity can make oily or congestion-prone skin feel heavier, while sun exposure can increase sensitivity after exfoliation or active treatments. A skin-care plan should consider what your skin is doing today, not only what treatment name you saw online.</p>
+      <p>If you are planning a skin-care appointment before a wedding, photoshoot, travel day, or beach weekend, tell your practitioner. Gentler hydration and barrier-support routines are often easier to schedule close to an event, while stronger exfoliating treatments may need more recovery time.</p>
 
-      <h2>What to do before a facial</h2>
+      <h2>What to do before a skin-care appointment</h2>
       <ul>
         <li>Pause strong exfoliating products if your skin is already irritated.</li>
         <li>Tell your practitioner about recent peels, laser treatments, injectables, acne medication, or skin reactions.</li>
@@ -114,14 +114,14 @@ const fallbackBlogPosts: BlogPost[] = [
       </ul>
 
       <h2>What good aftercare looks like</h2>
-      <p>After a facial, the skin barrier deserves a simple routine. In many cases, that means gentle cleansing, moisturizer, and sun protection. The American Academy of Dermatology explains that basic skin care can affect appearance, and its sunscreen guidance recommends broad-spectrum protection with SPF 30 or higher. After in-clinic exfoliation or active treatments, your practitioner may adjust this guidance for your specific skin.</p>
+      <p>After an in-clinic skin treatment, the skin barrier deserves a simple routine. In many cases, that means gentle cleansing, moisturizer, and sun protection. The American Academy of Dermatology explains that basic skin care can affect appearance, and its sunscreen guidance recommends broad-spectrum protection with SPF 30 or higher. After in-clinic exfoliation or active treatments, your practitioner may adjust this guidance for your specific skin.</p>
       <p>For several days after stronger treatments, it is usually sensible to avoid unnecessary heat, harsh scrubs, direct sun exposure, and layering too many active products. The goal is to let the skin recover calmly rather than chasing faster results at home.</p>
 
-      <h2>Which facial should you choose?</h2>
-      <p>There is no universal best facial. Dry or travel-stressed skin may need hydration and barrier support. Congested skin may need cleansing and careful extractions. Sensitive skin may need calming care. Dull or uneven skin may benefit from a planned course rather than a single aggressive session.</p>
-      <p>Silk Beauty Salon offers skin analysis and treatment planning at the salon in Batumi. Browse <a href="/en/treatments">facial and skin care treatments</a>, then <a href="/en/book">book a consultation</a> if you want help choosing the right option.</p>
+      <h2>Which skin treatment should you choose?</h2>
+      <p>There is no universal best skin treatment. Dry or travel-stressed skin may need hydration and barrier support. Congested skin may need careful planning. Sensitive skin may need calming care. Dull or uneven skin may benefit from a planned course rather than a single aggressive session.</p>
+      <p>Silk Beauty Salon offers skin analysis and treatment planning at the salon in Batumi. Browse <a href="/en/treatments">skin care treatments</a>, then <a href="/en/book">book a consultation</a> if you want help choosing the right option.</p>
 
-      <h2>When to delay your facial</h2>
+      <h2>When to delay your skin treatment</h2>
       <p>Delay treatment if you have a fresh sunburn, unexplained rash, active infection, or a recent procedure that has not healed. If you are unsure, contact the salon before arriving. A good practitioner would rather reschedule than treat skin that is not ready.</p>
 
       <h2>Sources and further reading</h2>
@@ -155,7 +155,7 @@ const fallbackBlogPosts: BlogPost[] = [
 
       <h2>Botox and fillers are not the same treatment</h2>
       <p>Anti-wrinkle injections are commonly used to soften selected expression lines by relaxing targeted muscles for a temporary period. Dermal fillers are different: they are injected to restore or enhance volume, shape, or contour in selected areas. Because the goals, anatomy, risks, and aftercare are different, the consultation should be different too.</p>
-      <p>If you are unsure what you need, do not book only by treatment name. Book a consultation and describe the change you want to see. A responsible plan might recommend a facial, skin booster, anti-wrinkle treatment, filler, staged treatment, or no procedure.</p>
+      <p>If you are unsure what you need, do not book only by treatment name. Book a consultation and describe the change you want to see. A responsible plan might recommend skin analysis, a skin booster, anti-wrinkle treatment, filler, staged treatment, or no procedure.</p>
 
       <h2>What a proper injectable consultation should cover</h2>
       <ul>

@@ -39,7 +39,7 @@
     "more": "Daha Fazla",
     "treatmentPortfolio": "Tedavi Portföyü",
     "skinConditions": "Cilt Durumları",
-    "treatmentPortfolioDescription": "Konsültasyonla planlanan enjeksiyonları, cilt kalitesi tedavilerini, yüz bakımlarını, tırnak, kirpik ve vücut bakımını keşfedin.",
+    "treatmentPortfolioDescription": "Randevu öncesi danışmanlıkla planlanan enjeksiyonlar, cilt kalitesi tedavileri, tırnak, kirpik ve saç bakımını keşfedin.",
     "conditionsDescription": "Kırışıklık, sıkılık kaybı, ton, doku, nem ve akne izleri gibi cilt endişelerine göre tedavi yollarını bulun.",
     "downloadApp": "Uygulamayı indir",
     "openMenu": "Menüyü aç",
@@ -116,10 +116,7 @@
       "fillers": "Dolgu Enjeksiyonları",
       "laser": "Lazer Tedavileri",
       "skin": "Cilt Tedavileri",
-      "skinLaxity": "Cilt Sıklığı Tedavileri",
-      "body": "Vücut Tedavileri",
       "intimate": "Mahrem Tedaviler",
-      "facials": "Tıbbi Yüz Bakımları",
       "diagnostic": "Tanı Testleri",
       "hair": "Saç Tedavileri"
     }
@@ -140,7 +137,7 @@
   },
   "technologies": {
     "title": "Gelişmiş Teknolojiler",
-    "subtitle": "Kliniğimiz, cilt sıkılaştırma cihazlarından invaziv olmayan vücut şekillendirme makinelerine kadar en son teknolojiyle donatılmıştır. Estetik yeniliğin ön saflarında kalmaya kararlıyız ve minimum iyileşme süresiyle olağanüstü sonuçlar veren tedaviler sunuyoruz.",
+    "subtitle": "Salonumuz enjeksiyonlar, lazer cilt tedavileri, diagnostik analiz ve kişisel güzellik bakımı için gelişmiş estetik teknolojilerle donatılmıştır. Minimum iyileşme süresiyle görünür sonuç veren kanıtlanmış tedavilere odaklanıyoruz.",
     "aboutUs": "HAKKIMIZDA"
   },
   "testimonials": {
@@ -170,7 +167,7 @@
     "imageAlt": "Silk Beauty Salon",
     "category": "Hakkımızda",
     "title": "Hastaları ön planda tutmak ve mükemmel hizmet sunmak",
-    "description": "Silk Beauty Salon, en iyi sonuçları elde etmek için en son teknolojileri kullanarak minimal invaziv, öncü kozmetik ve sağlık tedavileri sunmaktadır.",
+    "description": "Salonumuz enjeksiyonlar, lazer cilt tedavileri, diagnostik analiz ve kişisel güzellik bakımı için gelişmiş estetik teknolojilerle donatılmıştır. Minimum iyileşme süresiyle görünür sonuç veren kanıtlanmış tedavilere odaklanıyoruz.",
     "descriptionExtended": "Salonumuz, Batumi'de lüks, özel bir ortamda dünya standartlarında uzmanları bir araya getiriyor. Doğal güzelliği ince, rafine sonuçlarla artırarak özgüveni yükselttiğimize inanıyoruz.",
     "readMore": "Daha Fazla Oku",
     "stats": {
@@ -254,8 +251,7 @@
     "serviceLaser": "Lazer Epilasyon",
     "serviceRejuvenation": "Cilt Gençleştirme",
     "servicePeel": "Kimyasal Peeling",
-    "serviceMicroneedling": "Mikro İğneleme",
-    "serviceHydrafacial": "Hydrafacial"
+    "serviceMicroneedling": "Mikro İğneleme"
   },
   "statistics": {
     "years": "Yıllık Deneyim",
@@ -538,7 +534,7 @@
     "job3Title": "Cilt Bakım Uzmanı",
     "job3Type": "Yarı Zamanlı",
     "job3Location": "Batum, Gürcistan",
-    "job3Desc": "Yüz bakımları ve konsültasyonları konusunda deneyimli lisanslı cilt bakım uzmanı.",
+    "job3Desc": "Cilt tedavileri ve konsültasyonları konusunda deneyimli lisanslı cilt bakım uzmanı.",
     "applyNow": "Şimdi Başvur",
     "noRoleTitle": "Doğru Rolü Görmüyor musunuz?",
     "noRoleText": "Her zaman yetenekli profesyonellerle tanışmaya ilgi duyarız. CV'nizi gönderin ve gelecekteki fırsatlar için sizi aklımızda tutalım.",
@@ -798,17 +794,6 @@
             "Gözenekleri minimize eder"
           ]
         },
-        "prp-therapy": {
-          "name": "PRP Yüz",
-          "shortDescription": "Vücudunuzun kendi büyüme faktörlerini kullanarak cildinizi gençleştirin.",
-          "description": "PRP tedavisi, cildi gençleştirmek ve canlandırmak için kendi kanınızın trombositerini kullanır.",
-          "benefits": [
-            "Doğal gençleşme",
-            "İyileştirilmiş cilt tonu",
-            "Azaltılmış ince çizgiler",
-            "Gelişmiş parlaklık"
-          ]
-        },
         "laser-hair": {
           "name": "Lazer Epilasyon",
           "shortDescription": "Pürüzsüz, tüysüz cilt için kalıcı kıl azaltma.",
@@ -861,45 +846,6 @@
         }
       }
     },
-    "body-treatments": {
-      "name": "Vücut Tedavileri",
-      "description": "İleri vücut şekillendirme ve cilt sıkılaştırma tedavileri.",
-      "treatments": {
-        "cool sculpting": {
-          "name": "CoolSculpting",
-          "shortDescription": "İleri soğutma teknolojisi kullanarak cerrahi olmayan yağ azaltma.",
-          "description": "CoolSculpting, cerrahi olmadan inatçı yağ hücrelerini dondurur ve ortadan kaldırır.",
-          "benefits": [
-            "Cerrahi olmayan",
-            "Downtime yok",
-            "Kalıcı yağ azaltma",
-            "Doğal sonuçlar"
-          ]
-        },
-        "emtone": {
-          "name": "Emtone",
-          "shortDescription": "Selülit tedavisi ve cilt dokusu iyileştirmesi.",
-          "description": "Emtone, selüliti etkili bir şekilde tedavi etmek için termal ve mekanik enerjiyi birleştirir.",
-          "benefits": [
-            "Selüliti azaltır",
-            "Cilt dokusunu iyileştirir",
-            "Cildi sıkılaştırır",
-            "Downtime yok"
-          ]
-        },
-        "skin-tightening": {
-          "name": "Radyofrekans Cilt Sıkılaştırma",
-          "shortDescription": "Daha sıkı, genç görünümlü cilt için cerrahi olmayan cilt sıkılaştırma.",
-          "description": "Radyofrekans cilt sıkılaştırma, daha sıkı cilt için kolajen üretimini uyarır.",
-          "benefits": [
-            "Daha sıkı cilt",
-            "Azalmış sarkma",
-            "Cerrahi olmayan",
-            "Downtime yok"
-          ]
-        }
-      }
-    },
     "intimate-treatments": {
       "name": "İntim Tedaviler",
       "description": "Gizli ve profesyonel intim gençleştirme tedavileri.",
@@ -924,34 +870,6 @@
             "Artırılmış konfor",
             "Ameliyatsız",
             "Doğal sonuçlar"
-          ]
-        }
-      }
-    },
-    "medical-facials": {
-      "name": "Tıbbi Yüz Bakımları",
-      "description": "Optimum cilt sağlığı için profesyonel tıbbi sınıf yüz bakımları.",
-      "treatments": {
-        "hydrafacial": {
-          "name": "HydraFacial",
-          "shortDescription": "Parlak cilt için derin temizleme, soyma ve nemlendirme.",
-          "description": "HydraFacial, tek bir tedavide derin temizleme, soyma ve nemlendirme sağlar.",
-          "benefits": [
-            "Derin temizleme",
-            "Anında ışıltı",
-            "Nemlendirme",
-            "Tüm cilt tipleri için uygun"
-          ]
-        },
-        "deraplaning": {
-          "name": "Dermaplaning",
-          "shortDescription": "Pürüzsüz, parlak cilt için soyma ve peach fuzz'u temizleme.",
-          "description": "Dermaplaning, nazikçe soymak ve ince tüyleri temizlemek için cerrahi bir bıçak kullanır.",
-          "benefits": [
-            "Daha pürüzsüz cilt",
-            "Daha iyi ürün emilimi",
-            "Parlak ışıltı",
-            "Makyaj daha iyi tutar"
           ]
         }
       }
@@ -983,6 +901,346 @@
           ]
         }
       }
+    },
+    "diagnostic": {
+      "name": "Diagnostik",
+      "description": "Kişisel tedavi planı için gelişmiş cilt analizi ve tanı araçları."
+    },
+    "tear-trough": {
+      "name": "Göz Altı Dolgusu",
+      "shortDescription": "Doğal denge için enjeksiyon tedavisi.",
+      "description": "Göz Altı Dolgusu: Konsültasyon sonrası yüz harmonisi ve doğal sonuç hedefiyle planlanır.",
+      "benefits": [
+        "Doğal sonuç",
+        "Kişisel plan",
+        "Minimum iyileşme",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "non-surgical-rhinoplasty": {
+      "name": "Ameliyatsız Burun Estetiği",
+      "shortDescription": "Doğal denge için enjeksiyon tedavisi.",
+      "description": "Ameliyatsız Burun Estetiği: Konsültasyon sonrası yüz harmonisi ve doğal sonuç hedefiyle planlanır.",
+      "benefits": [
+        "Doğal sonuç",
+        "Kişisel plan",
+        "Minimum iyileşme",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "marionette-lines": {
+      "name": "Marionette Çizgileri",
+      "shortDescription": "Doğal denge için enjeksiyon tedavisi.",
+      "description": "Marionette Çizgileri: Konsültasyon sonrası yüz harmonisi ve doğal sonuç hedefiyle planlanır.",
+      "benefits": [
+        "Doğal sonuç",
+        "Kişisel plan",
+        "Minimum iyileşme",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "nasolabial-folds": {
+      "name": "Nazolabial Kıvrımlar",
+      "shortDescription": "Doğal denge için enjeksiyon tedavisi.",
+      "description": "Nazolabial Kıvrımlar: Konsültasyon sonrası yüz harmonisi ve doğal sonuç hedefiyle planlanır.",
+      "benefits": [
+        "Doğal sonuç",
+        "Kişisel plan",
+        "Minimum iyileşme",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "neck-rejuvenation": {
+      "name": "Boyun Gençleştirme",
+      "shortDescription": "Doğal denge için enjeksiyon tedavisi.",
+      "description": "Boyun Gençleştirme: Konsültasyon sonrası yüz harmonisi ve doğal sonuç hedefiyle planlanır.",
+      "benefits": [
+        "Doğal sonuç",
+        "Kişisel plan",
+        "Minimum iyileşme",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "decolletage-treatment": {
+      "name": "Dekolte Tedavisi",
+      "shortDescription": "Doğal denge için enjeksiyon tedavisi.",
+      "description": "Dekolte Tedavisi: Konsültasyon sonrası yüz harmonisi ve doğal sonuç hedefiyle planlanır.",
+      "benefits": [
+        "Doğal sonuç",
+        "Kişisel plan",
+        "Minimum iyileşme",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "hand-rejuvenation": {
+      "name": "El Gençleştirme",
+      "shortDescription": "Doğal denge için enjeksiyon tedavisi.",
+      "description": "El Gençleştirme: Konsültasyon sonrası yüz harmonisi ve doğal sonuç hedefiyle planlanır.",
+      "benefits": [
+        "Doğal sonuç",
+        "Kişisel plan",
+        "Minimum iyileşme",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "clear-brilliant": {
+      "name": "Clear + Brilliant",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "Clear + Brilliant: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "cutera-aviclear": {
+      "name": "Cutera AviClear",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "Cutera AviClear: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "cutera-c02-laser": {
+      "name": "Cutera CO2 Lazer",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "Cutera CO2 Lazer: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "cutera-secret-pro-rf-microneedling": {
+      "name": "Cutera Secret PRO RF Mikro İğneleme",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "Cutera Secret PRO RF Mikro İğneleme: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "cutera-excel-v-ipl": {
+      "name": "Cutera Excel V+ IPL",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "Cutera Excel V+ IPL: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "candela-vbeam-laser": {
+      "name": "Candela VBeam Lazer",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "Candela VBeam Lazer: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "bbl-hero": {
+      "name": "BBL HERO",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "BBL HERO: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "moxi-laser": {
+      "name": "MOXI Lazer",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "MOXI Lazer: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "moxi-and-bbl": {
+      "name": "MOXI ve BBL",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "MOXI ve BBL: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "endolift": {
+      "name": "Endolift",
+      "shortDescription": "Cilt tonu ve dokusunu iyileştiren lazer tedavisi.",
+      "description": "Endolift: Gelişmiş lazer teknolojisi cilt tonu, doku ve kaliteyi destekler.",
+      "benefits": [
+        "Ton iyileşmesi",
+        "Doku iyileşmesi",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "is-clinical-fire-ice-peel": {
+      "name": "iS Clinical Fire & Ice Peel",
+      "shortDescription": "Sağlıklı ve parlak görünüm için cilt kalitesi tedavisi.",
+      "description": "iS Clinical Fire & Ice Peel: Profesyonel cilt tedavisi, konsültasyon sonrası cildinizin ihtiyaçlarına göre seçilir.",
+      "benefits": [
+        "Parlak görünüm",
+        "Doku iyileşmesi",
+        "Kişisel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "mesoestetic-cosmelan-peel": {
+      "name": "Mesoestetic Cosmelan Peel",
+      "shortDescription": "Sağlıklı ve parlak görünüm için cilt kalitesi tedavisi.",
+      "description": "Mesoestetic Cosmelan Peel: Profesyonel cilt tedavisi, konsültasyon sonrası cildinizin ihtiyaçlarına göre seçilir.",
+      "benefits": [
+        "Parlak görünüm",
+        "Doku iyileşmesi",
+        "Kişisel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "obagi-blue-radiance-peel": {
+      "name": "Obagi Blue Radiance Peel",
+      "shortDescription": "Sağlıklı ve parlak görünüm için cilt kalitesi tedavisi.",
+      "description": "Obagi Blue Radiance Peel: Profesyonel cilt tedavisi, konsültasyon sonrası cildinizin ihtiyaçlarına göre seçilir.",
+      "benefits": [
+        "Parlak görünüm",
+        "Doku iyileşmesi",
+        "Kişisel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "obagi-nu-derm": {
+      "name": "Obagi Nu-Derm",
+      "shortDescription": "Sağlıklı ve parlak görünüm için cilt kalitesi tedavisi.",
+      "description": "Obagi Nu-Derm: Profesyonel cilt tedavisi, konsültasyon sonrası cildinizin ihtiyaçlarına göre seçilir.",
+      "benefits": [
+        "Parlak görünüm",
+        "Doku iyileşmesi",
+        "Kişisel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "skinpen-microneedling": {
+      "name": "SkinPen Mikro İğneleme",
+      "shortDescription": "Sağlıklı ve parlak görünüm için cilt kalitesi tedavisi.",
+      "description": "SkinPen Mikro İğneleme: Profesyonel cilt tedavisi, konsültasyon sonrası cildinizin ihtiyaçlarına göre seçilir.",
+      "benefits": [
+        "Parlak görünüm",
+        "Doku iyileşmesi",
+        "Kişisel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "dermamelan-intimate-peel": {
+      "name": "Dermamelan Intimate Peel",
+      "shortDescription": "İntim bölge için gizlilik odaklı tedavi.",
+      "description": "Dermamelan Intimate Peel: Tedavi maksimum konfor, gizlilik ve profesyonel yaklaşımla uygulanır.",
+      "benefits": [
+        "Gizlilik",
+        "Konfor",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "intimate-laser-hair-removal": {
+      "name": "İntim Lazer Epilasyon",
+      "shortDescription": "İntim bölge için gizlilik odaklı tedavi.",
+      "description": "İntim Lazer Epilasyon: Tedavi maksimum konfor, gizlilik ve profesyonel yaklaşımla uygulanır.",
+      "benefits": [
+        "Gizlilik",
+        "Konfor",
+        "Profesyonel bakım",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "observe-skin-scanner": {
+      "name": "Observe Cilt Tarayıcı",
+      "shortDescription": "Kişisel plan için gelişmiş cilt analizi.",
+      "description": "Observe Cilt Tarayıcı: Diagnostik analiz, cilt durumunu değerlendirmeye ve doğru tedaviyi seçmeye yardımcı olur.",
+      "benefits": [
+        "Derin analiz",
+        "Kişisel plan",
+        "İlerleme takibi",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "hair-extensions": {
+      "name": "Saç Kaynak",
+      "shortDescription": "Bakımlı ve doğal sonuç için salon hizmeti.",
+      "description": "Saç Kaynak: Hizmet, stiliniz, konforunuz ve istediğiniz sonuca göre planlanır.",
+      "benefits": [
+        "Kişisel plan",
+        "Salon bitişi",
+        "Bakımlı görünüm",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "nails": {
+      "name": "Tırnaklar",
+      "shortDescription": "Bakımlı ve doğal sonuç için salon hizmeti.",
+      "description": "Tırnaklar: Hizmet, stiliniz, konforunuz ve istediğiniz sonuca göre planlanır.",
+      "benefits": [
+        "Kişisel plan",
+        "Salon bitişi",
+        "Bakımlı görünüm",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
+    },
+    "lashes": {
+      "name": "Kirpikler",
+      "shortDescription": "Bakımlı ve doğal sonuç için salon hizmeti.",
+      "description": "Kirpikler: Hizmet, stiliniz, konforunuz ve istediğiniz sonuca göre planlanır.",
+      "benefits": [
+        "Kişisel plan",
+        "Salon bitişi",
+        "Bakımlı görünüm",
+        "Konsültasyon odaklı yaklaşım",
+        "Profesyonel salon sonucu"
+      ]
     }
   },
   "conditionContent": {
@@ -1034,7 +1292,6 @@
       "treatments": [
         "Kimyasal peeling",
         "Lazer tedavisi",
-        "Tıbbi yüz bakımları",
         "Cilt bakımı önerileri"
       ]
     },
@@ -1152,29 +1409,6 @@
         "Topikal tedaviler"
       ]
     },
-    "cellulite": {
-      "name": "Selülit",
-      "shortDescription": "Vücut tedavilerimizle cildi pürüzsüzleştirin ve sıkılaştırın.",
-      "description": "Selülit ciltte çukurlu bir görünüme neden olur.",
-      "symptoms": [
-        "Çukurlu cilt",
-        "Portakal kabuğu dokusu",
-        "Kütlü görünüm",
-        "Uyluk ve kalçalarda yaygın"
-      ],
-      "causes": [
-        "Yağ depoları",
-        "Kötü dolaşım",
-        "Genetik",
-        "Yaşam tarzı faktörleri"
-      ],
-      "treatments": [
-        "Emtone",
-        "CoolSculpting",
-        "Radyofrekans",
-        "Masaj tedavileri"
-      ]
-    },
     "dry-skin": {
       "name": "Kuru ve Dehidre Cilt",
       "shortDescription": "Cildinize nemi ve hidrasyonu geri kazandırın.",
@@ -1195,7 +1429,6 @@
       ],
       "treatments": [
         "Cilt boosterları",
-        "HydraFacial",
         "Tıbbi sınıf cilt bakımı",
         "Nemlendirici tedaviler"
       ]
@@ -1218,7 +1451,6 @@
         "Çevresel faktörler"
       ],
       "treatments": [
-        "Nazik yüz bakımları",
         "Yatıştırıcı tedaviler",
         "Özelleştirilmiş cilt bakımı",
         "LED terapisi"
@@ -1261,7 +1493,7 @@
   },
   "metadata": {
     "homeTitle": "Silk Beauty Salon | Batumi'nin Önde Gelen Tıbbi Estetik Kliniği",
-    "homeDescription": "Batumi, Gürcistan'ın önde gelen tıbbi estetik kliniği. Uzman botoks, dermal dolgular, lazer tedavileri ve ileri cilt bakımı. Bugün konsültasyonunuzu ayırtın."
+    "homeDescription": "Silk Beauty Salon, Batumi Gürcistan’da Botox, dermal dolgular, lazer tedavileri, tırnak, kirpik ve ileri cilt bakımı sunan bir güzellik salonudur."
   },
   "internationalPage": {
     "title": "Uluslararası Müşteriler",
@@ -1320,14 +1552,6 @@
         "recovery": "Şişlik için 24-48 saat",
         "results": "Hemen, nihai sonuçlar 1-2 haftada",
         "lasts": "6-18 ay"
-      },
-      "facial": {
-        "title": "Yüz Dermatolojisi",
-        "description": "Kimyasal peelingler, mezoterapi, PRP, cilt güçlendiriciler, mikro iğneleme",
-        "duration": "30-60 dakika",
-        "recovery": "Tedaviye göre değişir (1-7 gün)",
-        "results": "Aşamalı iyileşme",
-        "lasts": "Tedaviye göre değişir"
       }
     },
     "packages": {
@@ -1482,20 +1706,10 @@
     "treatmentMenuDescription": "Silk Beauty mobil uygulamasındaki aynı tedavi menüsünden seçim yapın.",
     "openTreatmentDropdown": "Tedavi açılır menüsünü aç",
     "consultations": {
-      "facial": {
-        "title": "Yüz Konsültasyonu",
-        "duration": "30 dk",
-        "description": "Kırışıklık karşıtı tedavileri ve dermal dolguları tartışın"
-      },
       "skin": {
         "title": "Cilt Konsültasyonu",
         "duration": "45 dk",
         "description": "Kapsamlı cilt analizi ve tedavi planlaması"
-      },
-      "body": {
-        "title": "Vücut Konsültasyonu",
-        "duration": "30 dk",
-        "description": "Vücut şekillendirme ve cilt sıkılaştırma seçenekleri"
       },
       "virtual": {
         "title": "Sanal Konsültasyon",
@@ -1582,7 +1796,6 @@
     "serviceRejuvenation": "Skin Rejuvenation",
     "servicePeel": "Kimyasal peeling",
     "serviceMicroneedling": "Mikro iğneleme",
-    "serviceHydrafacial": "Hydrafacial",
     "personalInfo": "Kişisel Bilgiler",
     "formNotReady": "Rezervasyon formu hâlâ hazırlanıyor. Lütfen birazdan tekrar deneyin."
   },
@@ -1662,7 +1875,7 @@
       "slide1": {
         "eyebrow": "Batum, Gürcistan güzellik salonu",
         "title": "Batum, Gürcistan Silk Beauty Salon - premium estetik tedaviler.",
-        "description": "Doğal görünümlü enjeksiyonlar, yüz bakımları, cilt kalitesi tedavileri, lazer prosedürleri, tırnak, kirpik ve ileri estetik bakım için Batum güzellik salonu.",
+        "description": "Doğal görünümlü enjeksiyonlar, cilt kalitesi tedavileri, lazer uygulamaları, tırnak, kirpik ve estetik bakım için Batumi güzellik salonu.",
         "cta": "Batum konsültasyonu al"
       },
       "slide2": {
@@ -1728,7 +1941,7 @@
         },
         "item3": {
           "title": "Cilt kalitesi",
-          "description": "Daha güçlü ve parlak cilt için medikal yüz bakımları, peelingler, boosterlar, microneedling ve lazer odaklı planlar."
+          "description": "Daha güçlü ve aydınlık cilt için peeling, mikro iğneleme, diagnostik ve lazer odaklı planlar."
         }
       }
     },
@@ -1782,7 +1995,7 @@
     "reviews": {
       "eyebrow": "Müşteri hikayeleri",
       "title": "Müşteriler ziyaret sonrası ne söylüyor.",
-      "description": "Batum’da enjeksiyonlar, dolgular, yüz bakımları ve cilt tedavileri için Silk Beauty Salon’u seçen kişilerden son müşteri yorumlarının hareketli karuseli.",
+      "description": "Batumi’de enjeksiyonlar, dolgular ve cilt tedavileri için Silk Beauty Salon’u seçen müşterilerden güncel yorumlar.",
       "ratingLabel": "5 üzerinden {rating} yıldız",
       "goToReview": "{number}. yoruma git"
     },
@@ -1885,7 +2098,7 @@
     "openingHours": "Çalışma Saatleri",
     "hours": {
       "monFri": "Pzt-Cum: 10:00 - 22:00",
-      "satSun": "Cmt-Paz: 10:00 - 22:00",
+      "satSun": "Cmt: 10:00 - 22:00 / Paz: 11:00 - 22:00",
       "sat": "Cmt",
       "sun": "Paz",
       "monFriLabel": "Pzt - Cum"
@@ -1893,7 +2106,7 @@
     "social": "Bizi Takip Edin",
     "faqDesc": "Klinik ve tedavilerimiz hakkında en sık sorulan soruları okuyun.",
     "clinicTitle": "Klinik",
-    "clinicDesc": "Zurab Gorgiladze Caddesi'nde yer almaktadır, çalışma saatleri 10:00–19:00.",
+    "clinicDesc": "Zurab Gorgiladze Caddesi'nde yer almaktadır. Pazartesi-cumartesi 10:00-22:00, pazar 11:00-22:00 arası açıktır.",
     "teamTitle": "Ekibimiz",
     "teamDesc": "Nitelikli personelimiz hakkında daha fazla bilgi edinin.",
     "pressTitle": "Medya ve Basın",
@@ -2110,7 +2323,7 @@
       },
       "seasonal": {
         "title": "Mevsimsel Cilt Yenileme",
-        "description": "Herhangi bir lazer tedavisini tıbbi yüz bakımıyla birleştirin ve ikisinde de %15 indirim kazanın.",
+        "description": "Herhangi bir lazer tedavisini cilt analizi veya uygun bir peeling ile birleştirin ve ikisinde de %15 indirim kazanın.",
         "terms": "Her iki tedavi de aynı ay içinde ayırtılmalıdır."
       },
       "loyalty": {
@@ -2201,7 +2414,7 @@
       "skinTreatments": {
         "title": "Cilt bakımları",
         "eyebrow": "Cilt kalitesi",
-        "description": "Daha aydınlık ve sağlıklı bir cilt için facial, peeling, booster ve kolajen yenileme uygulamalarının seçilmiş kombinasyonu."
+        "description": "Daha parlak ve sağlıklı cilt için peeling, mikro iğneleme, diagnostik ve kolajen destekli tedavilerin seçilmiş kombinasyonu."
       },
       "laserTreatments": {
         "title": "Lazer uygulamaları",

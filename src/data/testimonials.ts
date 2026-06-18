@@ -37,9 +37,9 @@ export const testimonials: Testimonial[] = [
     rating: 5
   },
   {
-    quote: "After years of struggling with acne scarring, I finally found a clinic that could help. The Morpheus8 treatment has transformed my skin. I feel like a different person!",
+    quote: "After years of struggling with acne scarring, I finally found a clinic that could help. The skin treatment plan transformed my skin. I feel like a different person!",
     author: "Temo R.",
-    role: "Morpheus8 Client",
+    role: "Skin Treatment Client",
     rating: 5
   },
   {

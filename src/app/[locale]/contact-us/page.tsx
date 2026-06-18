@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: '/contact-us',
     title: 'Contact Silk Beauty Salon in Batumi, Georgia',
     description:
-      'Contact Silk Beauty Salon on Zurab Gorgiladze Street in Batumi, Georgia to book facials, aesthetic treatments and beauty salon appointments.',
+      'Contact Silk Beauty Salon on Zurab Gorgiladze Street in Batumi, Georgia to book aesthetic treatments, skin care and beauty salon appointments.',
     keywords: localSeoKeywords,
     imageAlt: 'Contact Silk Beauty Salon in Batumi, Georgia',
   });

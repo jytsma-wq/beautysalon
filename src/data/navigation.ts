@@ -61,7 +61,7 @@ export const skinboosters: NavCategory = {
   href: "/treatments#skinboosters",
   image: "https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80",
   items: [
-    { name: "Facial Hydration", slug: "facial-hydration", href: "/treatments/is-clinical-fire-ice-peel", description: "Deep facial hydration" },
+    { name: "Skin Hydration", slug: "skin-hydration", href: "/treatments/is-clinical-fire-ice-peel", description: "Deep skin hydration" },
     { name: "Neck Rejuvenation", slug: "neck-rejuvenation", href: "/treatments", description: "Smooth neck lines" },
     { name: "Décolletage Treatment", slug: "decolletage-treatment", href: "/treatments", description: "Rejuvenate chest area" },
     { name: "Hand Rejuvenation", slug: "hand-rejuvenation", href: "/treatments", description: "Restore youthful hands" },
@@ -77,7 +77,6 @@ export const biostimulators: NavCategory = {
   image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
   items: [
     { name: "Facial Rejuvenation", slug: "facial-rejuvenation", href: "/treatments/cutera-secret-pro-rf-microneedling", description: "Natural collagen stimulation" },
-    { name: "Body Contouring", slug: "body-contouring", href: "/treatments", description: "Restore body volume" },
     { name: "Collagen Stimulation", slug: "collagen-stimulation", href: "/treatments/collagen-stimulating", description: "Long-lasting results" },
     { name: "Skin Tightening", slug: "skin-tightening", href: "/conditions/collagen-stimulating", description: "Firm and lift" },
   ],
@@ -110,8 +109,8 @@ export const laserTreatments: NavCategory = {
   items: [
     { name: "Laser Hair Removal", slug: "laser-hair-removal", href: "/treatments/bbl-hero", description: "Permanent hair reduction" },
     { name: "Laser Skin Resurfacing", slug: "laser-resurfacing", href: "/treatments/cutera-c02-laser", description: "Smooth skin texture" },
-    { name: "IPL Photofacial", slug: "ipl-photofacial", href: "/treatments/cutera-excel-v-ipl", description: "Even skin tone" },
-    { name: "HIFU Skin Tightening", slug: "hifu", href: "/conditions/collagen-stimulating", description: "Non-surgical lift" },
+    { name: "IPL Skin Rejuvenation", slug: "ipl-skin-rejuvenation", href: "/treatments/cutera-excel-v-ipl", description: "Even skin tone" },
+    { name: "Skin Quality", slug: "skin-quality", href: "/treatments/skinpen-microneedling", description: "Texture and glow support" },
     { name: "Microneedling", slug: "microneedling", href: "/treatments/cutera-secret-pro-rf-microneedling", description: "Collagen induction" },
     { name: "RF Microneedling", slug: "rf-microneedling", href: "/treatments/cutera-secret-pro-rf-microneedling", description: "Advanced skin rejuvenation" },
   ],

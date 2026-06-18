@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: locale === 'en' ? 'Beauty Salon in Batumi for International Clients' : t('title'),
     description:
       locale === 'en'
-        ? 'Plan aesthetic treatments in Batumi, Georgia with Silk Beauty Salon, including Botox, fillers, facials and travel-friendly consultations.'
+        ? 'Plan aesthetic treatments in Batumi, Georgia with Silk Beauty Salon, including Botox, fillers, skin care and travel-friendly consultations.'
         : t('subtitle'),
     keywords: localSeoKeywords,
     imageAlt: 'Silk Beauty Salon in Batumi, Georgia for international aesthetic clients',
@@ -35,7 +35,6 @@ const pricingData = [
   { treatment: 'Cheek Filler (1ml)', priceGEL: '600-900', priceUSD: '$215-325' },
   { treatment: 'Under-eye Filler (1ml)', priceGEL: '600-900', priceUSD: '$215-325' },
   { treatment: 'Skin Booster', priceGEL: '400-600', priceUSD: '$145-215' },
-  { treatment: 'PRP Facial', priceGEL: '400-600', priceUSD: '$145-215' },
   { treatment: 'Chemical Peel', priceGEL: '200-400', priceUSD: '$70-145' },
 ];
 
@@ -228,7 +227,7 @@ export default async function InternationalClientsPage({
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {['botox', 'fillers', 'facial'].map((service) => (
+            {['botox', 'fillers'].map((service) => (
               <div key={service} className="py-8 border-t border-[#e8e4df]">
                 <h3 className="font-serif text-xl font-semibold text-primary mb-2">
                   {t(`services.${service}.title`)}

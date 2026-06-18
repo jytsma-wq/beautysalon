@@ -5,7 +5,10 @@
  */
 
 import { cache } from 'react';
-import { baseTreatmentCategories } from '@/data/treatments';
+import {
+  baseTreatmentCategories,
+  getLocalizedTreatmentCategories,
+} from '@/data/treatments';
 
 const isPlaceholderBuild =
   process.env.SKIP_ENV_VALIDATION === '1' &&
@@ -82,8 +85,10 @@ export const getTreatmentCategoriesByLocale = cache(async (locale: string) => {
 });
 
 // Fallback function using static data
-function getStaticCategories(_locale: string) {
-  return baseTreatmentCategories.map((category) => ({
+async function getStaticCategories(locale: string) {
+  const categories = await getLocalizedTreatmentCategories(locale);
+
+  return categories.map((category) => ({
     slug: category.slug,
     image: category.image,
     name: category.name,
@@ -149,7 +154,7 @@ export const getAllCategorySlugs = cache(async () => {
 // Cached function to get single treatment by slug
 export const getTreatmentBySlug = cache(async (slug: string, locale: string) => {
   if (isPlaceholderBuild || !hasTreatmentDatabaseConfig()) {
-    return getStaticTreatmentBySlug(slug);
+    return getStaticTreatmentBySlug(slug, locale);
   }
 
   try {
@@ -182,7 +187,7 @@ export const getTreatmentBySlug = cache(async (slug: string, locale: string) => 
 
     if (!treatment) {
       // Fallback to static data
-      return getStaticTreatmentBySlug(slug);
+      return getStaticTreatmentBySlug(slug, locale);
     }
 
     return {
@@ -207,13 +212,15 @@ export const getTreatmentBySlug = cache(async (slug: string, locale: string) => 
     };
   } catch {
     // Fallback to static data when database is not available
-    return getStaticTreatmentBySlug(slug);
+    return getStaticTreatmentBySlug(slug, locale);
   }
 });
 
 // Fallback function to get treatment from static data
-function getStaticTreatmentBySlug(slug: string) {
-  for (const category of baseTreatmentCategories) {
+async function getStaticTreatmentBySlug(slug: string, locale: string) {
+  const categories = await getLocalizedTreatmentCategories(locale);
+
+  for (const category of categories) {
     const treatment = category.treatments.find((t) => t.slug === slug);
     if (treatment) {
       return {
@@ -241,7 +248,7 @@ function getStaticTreatmentBySlug(slug: string) {
 // Cached function to get category by slug
 export const getCategoryBySlug = cache(async (slug: string, locale: string) => {
   if (isPlaceholderBuild || !hasTreatmentDatabaseConfig()) {
-    return getStaticCategoryBySlug(slug);
+    return getStaticCategoryBySlug(slug, locale);
   }
 
   try {
@@ -268,7 +275,7 @@ export const getCategoryBySlug = cache(async (slug: string, locale: string) => {
 
     if (!category) {
       // Fallback to static data
-      return getStaticCategoryBySlug(slug);
+      return getStaticCategoryBySlug(slug, locale);
     }
 
     return {
@@ -288,13 +295,14 @@ export const getCategoryBySlug = cache(async (slug: string, locale: string) => {
     };
   } catch {
     // Fallback to static data when database is not available
-    return getStaticCategoryBySlug(slug);
+    return getStaticCategoryBySlug(slug, locale);
   }
 });
 
 // Fallback function to get category from static data
-function getStaticCategoryBySlug(slug: string) {
-  const category = baseTreatmentCategories.find((c) => c.slug === slug);
+async function getStaticCategoryBySlug(slug: string, locale: string) {
+  const categories = await getLocalizedTreatmentCategories(locale);
+  const category = categories.find((c) => c.slug === slug);
   if (!category) return null;
 
   return {
@@ -317,7 +325,7 @@ function getStaticCategoryBySlug(slug: string) {
 // Cached function to get category by treatment slug
 export const getCategoryByTreatmentSlug = cache(async (treatmentSlug: string, _locale: string) => {
   if (isPlaceholderBuild || !hasTreatmentDatabaseConfig()) {
-    return getStaticCategoryByTreatmentSlug(treatmentSlug);
+    return getStaticCategoryByTreatmentSlug(treatmentSlug, _locale);
   }
 
   try {
@@ -348,7 +356,7 @@ export const getCategoryByTreatmentSlug = cache(async (treatmentSlug: string, _l
 
     if (!treatment) {
       // Fallback to static data
-      return getStaticCategoryByTreatmentSlug(treatmentSlug);
+      return getStaticCategoryByTreatmentSlug(treatmentSlug, _locale);
     }
 
     return {
@@ -368,13 +376,15 @@ export const getCategoryByTreatmentSlug = cache(async (treatmentSlug: string, _l
     };
   } catch {
     // Fallback to static data when database is not available
-    return getStaticCategoryByTreatmentSlug(treatmentSlug);
+    return getStaticCategoryByTreatmentSlug(treatmentSlug, _locale);
   }
 });
 
 // Fallback function to get category by treatment slug from static data
-function getStaticCategoryByTreatmentSlug(treatmentSlug: string) {
-  for (const category of baseTreatmentCategories) {
+async function getStaticCategoryByTreatmentSlug(treatmentSlug: string, locale: string) {
+  const categories = await getLocalizedTreatmentCategories(locale);
+
+  for (const category of categories) {
     const treatment = category.treatments.find((t) => t.slug === treatmentSlug);
     if (treatment) {
       return {

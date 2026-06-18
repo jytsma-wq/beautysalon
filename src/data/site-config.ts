@@ -86,12 +86,12 @@ export const siteConfig = {
     {
       name: "Nana Gviniashvili",
       role: "Owner & Medical Aesthetic Practitioner",
-      bio: "Nana Gviniashvili is the owner and lead practitioner at Silk Beauty Salon. With extensive training in medical aesthetics and facial dermatology, she specializes in Botox, dermal fillers, and advanced skin treatments. Nana is known for her natural-looking results, meticulous attention to detail, and personalized approach to each client. She speaks Georgian, English, and Russian fluently, making international clients feel comfortable and well-cared-for.",
+      bio: "Nana Gviniashvili is the owner and lead practitioner at Silk Beauty Salon. With extensive training in medical aesthetics and skin aesthetics, she specializes in Botox, dermal fillers, and advanced skin treatments. Nana is known for her natural-looking results, meticulous attention to detail, and personalized approach to each client. She speaks Georgian, English, and Russian fluently, making international clients feel comfortable and well-cared-for.",
       image: "/images/nana-gviniashvili.jpg",
       qualifications: [
         "Certified Medical Aesthetic Practitioner",
         "Advanced Botox & Dermal Filler Training",
-        "Facial Dermatology Specialist",
+        "Skin Aesthetics Specialist",
         "Member of Georgian Aesthetic Medicine Association"
       ],
       languages: ["Georgian", "English", "Russian"]
@@ -112,7 +112,7 @@ export const siteConfig = {
     {
       name: "Ana Kalandadze",
       role: "Beauty Therapist",
-      bio: "Ana is our skilled beauty therapist specializing in facials, massage, and body treatments. With a holistic approach to beauty and wellness, she creates relaxing experiences that leave clients feeling rejuvenated both inside and out.",
+      bio: "Ana is our skilled beauty therapist specializing in massage, nails, lashes, and personalized salon care. With a holistic approach to beauty and wellness, she creates relaxing experiences that leave clients feeling refreshed and confident.",
       image: "/images/ana-kalandadze.jpg",
       qualifications: [
         "Certified Beauty Therapist",
@@ -152,11 +152,11 @@ export const siteConfig = {
 
   internationalClients: {
     heroTitle: "World-Class Medical Aesthetics in Batumi, Georgia",
-    heroSubtitle: "Premium Botox, Fillers & Facial Dermatology at Georgian Prices",
+    heroSubtitle: "Premium Botox, Fillers & Skin Aesthetics at Georgian Prices",
     treatments: [
       { name: "Botox Injectables", slug: "botox", minStay: "Same day" },
       { name: "Dermal Fillers", slug: "dermal-fillers", minStay: "24-48 hours" },
-      { name: "Facial Dermatology", slug: "skin", minStay: "Varies" }
+      { name: "Skin Aesthetics", slug: "skin", minStay: "Varies" }
     ],
     packages: [
       { name: "Fresh Face", includes: "Botox (3 areas) + Lip Filler", savings: "15%" },
@@ -185,7 +185,7 @@ export const siteConfig = {
     },
     {
       question: "How long do results last?",
-      answer: "This depends on the treatment. Anti-wrinkle injections typically last 3-6 months, dermal fillers 6-18 months depending on the product and area treated, and skin tightening treatments can provide results lasting 1-2 years. We'll discuss expected duration during your consultation."
+      answer: "This depends on the treatment. Anti-wrinkle injections typically last 3-6 months, and dermal fillers 6-18 months depending on the product and area treated. We'll discuss expected duration during your consultation."
     },
     {
       question: "Is there any downtime?",

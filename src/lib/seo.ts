@@ -124,7 +124,7 @@ export const localSeoKeywords = [
   'beauty salon Georgia',
   'beauty salon Batumi',
   'aesthetic treatments Batumi',
-  'facials Batumi',
+  'skin treatment Batumi',
   'Botox Batumi',
   'dermal fillers Georgia',
   'Silk Beauty Salon Batumi',

@@ -13,7 +13,7 @@ export function generateLocalBusinessSchema(locale: string = "en") {
   }
 
   const descriptions: Record<string, string> = {
-    en: "Beauty salon in Batumi, Georgia offering aesthetic treatments, Botox, dermal fillers, laser treatments, facials, nails, lashes, and advanced skin care.",
+    en: "Beauty salon in Batumi, Georgia offering aesthetic treatments, Botox, dermal fillers, laser treatments, nails, lashes, and advanced skin care.",
     ka: "ბათუმის წამალი ესთეტიკის კლინიკა, ბოტოქსი, დერმალური ფილერები, ლაზერული მკურნალობა და გაუმჯობესებული კანის მოვლა.",
     ru: "Ведущая клиника медицинской эстетики в Батуми, Грузия. Предлагаем ботокс, дермальные наполнители, лазерные процедуры и уход за кожей.",
     tr: "Batumi'de Botox, dermal dolgular, lazer tedavileri ve ileri cilt bakimi sunan premier tibbi estetik klinigi.",

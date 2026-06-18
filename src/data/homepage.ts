@@ -88,7 +88,7 @@ export const portfolioHighlights = [
   {
     title: "Skin quality",
     description:
-      "Medical facials, peels, boosters, microneedling, and laser-led plans for stronger, brighter skin.",
+      "Peels, microneedling, diagnostics, and laser-led plans for stronger, brighter skin.",
     href: "/treatments#skin-treatments",
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=85",
@@ -149,5 +149,5 @@ export const skinTrendArticles = [
 export const proofStats = [
   { value: "1:1", label: "Consultation-first plans" },
   { value: "6", label: "Languages supported" },
-  { value: "360", label: "Skin and facial assessment" },
+{ value: "360", label: "Skin assessment" },
 ];

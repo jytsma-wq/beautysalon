@@ -685,11 +685,11 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
     categorySlug: 'skin-treatments',
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&q=85',
     treatmentSlugs: [
-      'filter-facial',
-      'caviar-peel',
+      'is-clinical-fire-ice-peel',
+      'mesoestetic-cosmelan',
+      'obagi-blue-radiance',
+      'obagi-nu-derm',
       'skinpen-microneedling',
-      'morpheus-8-treatment',
-      'profhilo-body',
       'observe-skin-scanner',
     ],
     priority: 0.96,
@@ -698,12 +698,12 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         title: 'Skin treatment in Batumi',
         h1: 'Skin treatment in Batumi',
         description:
-          'Skin treatment, skin care, facials, peels, microneedling, and skin analysis in Batumi at Silk Beauty Salon.',
+          'Skin treatment, skin care, peels, microneedling, and skin analysis in Batumi at Silk Beauty Salon.',
         eyebrow: 'Skin care Batumi',
         intro:
-          'If you are searching for skin treatment Batumi, skin care Batumi, or facials Batumi, Silk Beauty Salon plans skin treatments around your skin condition, goals, and timing.',
+          'If you are searching for skin treatment Batumi, skin care Batumi, or skin analysis Batumi, Silk Beauty Salon plans skin treatments around your skin condition, goals, and timing.',
         searchTitle: 'Search phrases this page answers',
-        searchPhrases: ['skin treatment Batumi', 'skin care Batumi', 'facials Batumi'],
+        searchPhrases: ['skin treatment Batumi', 'skin care Batumi', 'skin analysis Batumi'],
         benefitsTitle: 'Why clients choose Silk for skin treatment in Batumi',
         benefits: [
           {
@@ -712,25 +712,25 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
           },
           {
             title: 'Treatment plans, not guesses',
-            text: 'Facials, peels, microneedling, boosters, and device-led treatments are selected around your skin and schedule.',
+            text: 'Peels, microneedling, skin analysis, and device-led treatments are selected around your skin and schedule.',
           },
           {
             title: 'Aftercare built in',
             text: 'You receive guidance for sun exposure, home care, and timing around Batumi weather, travel, and events.',
           },
         ],
-        treatmentTitle: 'Skin treatment and facial options',
+        treatmentTitle: 'Skin treatment options',
         treatmentIntro:
-          'Explore skin analysis, facials, peels, microneedling, and collagen-focused treatments before booking your consultation.',
+          'Explore skin analysis, peels, microneedling, and collagen-focused treatments before booking your consultation.',
         faqTitle: 'Skin treatment Batumi questions',
         faqs: [
           {
             question: 'Which skin treatment should I book in Batumi?',
             answer:
-              'If you are unsure, book a consultation or skin analysis first. The team can recommend a suitable facial, peel, microneedling, or device treatment.',
+              'If you are unsure, book a consultation or skin analysis first. The team can recommend a suitable peel, microneedling, or device treatment.',
           },
           {
-            question: 'Can I book a facial before an event?',
+            question: 'Can I book a skin treatment before an event?',
             answer:
               'Yes, but timing matters. Some treatments are event-friendly while others need recovery time, so ask the team before booking close to an event.',
           },
@@ -744,18 +744,18 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         bookCta: 'Book skin consultation',
         bookingTitle: 'Book skin treatment in Batumi',
         bookingText:
-          'Choose a consultation if you want a skin plan for facials, peels, microneedling, collagen support, or skin analysis.',
+          'Choose a consultation if you want a skin plan for peels, microneedling, collagen support, or skin analysis.',
       },
       ka: {
         title: 'კანის მკურნალობა ბათუმში',
         h1: 'კანის მკურნალობა ბათუმში',
         description:
-          'კანის მკურნალობა, კანის მოვლა, სახის პროცედურები, პილინგი, მიკრონიდლინგი და კანის ანალიზი ბათუმში Silk Beauty Salon-ში.',
+          'კანის მკურნალობა, კანის მოვლა, პილინგი, მიკრონიდლინგი და კანის ანალიზი ბათუმში Silk Beauty Salon-ში.',
         eyebrow: 'კანის მოვლა ბათუმში',
         intro:
-          'თუ ეძებთ კანის მკურნალობა ბათუმში, კანის მოვლა ბათუმში ან facials Batumi, Silk Beauty Salon გეგმავს პროცედურებს თქვენი კანის მდგომარეობის, მიზნების და დროის მიხედვით.',
+          'თუ ეძებთ კანის მკურნალობას ბათუმში, კანის მოვლას ბათუმში ან კანის ანალიზს ბათუმში, Silk Beauty Salon გეგმავს პროცედურებს თქვენი კანის მდგომარეობის, მიზნების და დროის მიხედვით.',
         searchTitle: 'საძიებო ფრაზები',
-        searchPhrases: ['კანის მკურნალობა ბათუმში', 'კანის მოვლა ბათუმში', 'სახის პროცედურები ბათუმში'],
+        searchPhrases: ['კანის მკურნალობა ბათუმში', 'კანის მოვლა ბათუმში', 'კანის ანალიზი ბათუმში'],
         benefitsTitle: 'რატომ ირჩევენ Silk-ს კანის მკურნალობისთვის ბათუმში',
         benefits: [
           {
@@ -764,16 +764,16 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
           },
           {
             title: 'გეგმა და არა გამოცნობა',
-            text: 'სახის პროცედურები, პილინგები, მიკრონიდლინგი, ბუსტერები და აპარატული პროცედურები ირჩევა თქვენი კანის მიხედვით.',
+            text: 'პილინგები, მიკრონიდლინგი, კანის ანალიზი და აპარატული პროცედურები ირჩევა თქვენი კანის მიხედვით.',
           },
           {
             title: 'შემდგომი მოვლა',
             text: 'იღებთ რეკომენდაციებს მზეზე ყოფნის, სახლის მოვლის და ბათუმის ამინდთან ან ღონისძიებებთან დროის დაგეგმვისთვის.',
           },
         ],
-        treatmentTitle: 'კანის პროცედურები და სახის მოვლა',
+        treatmentTitle: 'კანის პროცედურების ვარიანტები',
         treatmentIntro:
-          'დაათვალიერეთ კანის ანალიზი, სახის პროცედურები, პილინგი, მიკრონიდლინგი და კოლაგენზე ორიენტირებული პროცედურები.',
+          'დაათვალიერეთ კანის ანალიზი, პილინგი, მიკრონიდლინგი და კოლაგენზე ორიენტირებული პროცედურები.',
         faqTitle: 'კითხვები კანის მკურნალობაზე ბათუმში',
         faqs: [
           {
@@ -782,7 +782,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
               'თუ დარწმუნებული არ ხართ, დაიწყეთ კონსულტაციით ან კანის ანალიზით. გუნდი შეგირჩევთ შესაბამის გზას.',
           },
           {
-            question: 'შემიძლია სახის პროცედურა ღონისძიებამდე?',
+            question: 'შემიძლია კანის პროცედურა ღონისძიებამდე?',
             answer:
               'დიახ, თუმცა დრო მნიშვნელოვანია. ზოგ პროცედურას აღდგენა სჭირდება, ამიტომ ღონისძიებამდე კონსულტაცია რეკომენდებულია.',
           },
@@ -796,18 +796,18 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         bookCta: 'კანის კონსულტაციის დაჯავშნა',
         bookingTitle: 'დაჯავშნეთ კანის მკურნალობა ბათუმში',
         bookingText:
-          'აირჩიეთ კონსულტაცია სახის პროცედურების, პილინგის, მიკრონიდლინგის, კოლაგენის მხარდაჭერის ან კანის ანალიზისთვის.',
+          'აირჩიეთ კონსულტაცია პილინგის, მიკრონიდლინგის, კოლაგენის მხარდაჭერის ან კანის ანალიზისთვის.',
       },
       ru: {
         title: 'Лечение и уход за кожей в Батуми',
         h1: 'Лечение и уход за кожей в Батуми',
         description:
-          'Уход за кожей, процедуры для лица, пилинги, микронидлинг и анализ кожи в Батуми в Silk Beauty Salon.',
+          'Уход за кожей, пилинги, микронидлинг и анализ кожи в Батуми в Silk Beauty Salon.',
         eyebrow: 'Уход за кожей Батуми',
         intro:
-          'Если вы ищете лечение кожи Батуми, уход за кожей Батуми или facials Batumi, Silk Beauty Salon подбирает процедуры по состоянию кожи, целям и срокам.',
+          'Если вы ищете лечение кожи Батуми, уход за кожей Батуми или анализ кожи Батуми, Silk Beauty Salon подбирает процедуры по состоянию кожи, целям и срокам.',
         searchTitle: 'Поисковые запросы',
-        searchPhrases: ['лечение кожи Батуми', 'уход за кожей Батуми', 'процедуры для лица Батуми'],
+        searchPhrases: ['лечение кожи Батуми', 'уход за кожей Батуми', 'анализ кожи Батуми'],
         benefitsTitle: 'Почему выбирают Silk для кожи в Батуми',
         benefits: [
           {
@@ -816,7 +816,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
           },
           {
             title: 'План вместо догадок',
-            text: 'Фейшиалы, пилинги, микронидлинг, бустеры и аппаратные процедуры подбираются по коже и графику.',
+            text: 'Пилинги, микронидлинг, анализ кожи и аппаратные процедуры подбираются по коже и графику.',
           },
           {
             title: 'Уход после процедуры',
@@ -825,7 +825,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         ],
         treatmentTitle: 'Варианты процедур для кожи',
         treatmentIntro:
-          'Изучите анализ кожи, фейшиалы, пилинги, микронидлинг и процедуры для поддержки коллагена.',
+          'Изучите анализ кожи, пилинги, микронидлинг и процедуры для поддержки коллагена.',
         faqTitle: 'Вопросы о лечении кожи в Батуми',
         faqs: [
           {
@@ -834,7 +834,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
               'Если вы не уверены, начните с консультации или анализа кожи. Команда предложит подходящий вариант.',
           },
           {
-            question: 'Можно ли сделать фейшиал перед событием?',
+            question: 'Можно ли сделать процедуру для кожи перед событием?',
             answer:
               'Да, но важны сроки. Некоторые процедуры подходят перед событием, другим нужно время на восстановление.',
           },
@@ -848,18 +848,18 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         bookCta: 'Записаться на консультацию',
         bookingTitle: 'Записаться на уход за кожей в Батуми',
         bookingText:
-          'Консультация подходит для плана фейшиалов, пилингов, микронидлинга, коллагеновой поддержки или анализа кожи.',
+          'Консультация подходит для плана пилингов, микронидлинга, коллагеновой поддержки или анализа кожи.',
       },
       tr: {
         title: "Batumi'de cilt tedavisi",
         h1: "Batumi'de cilt tedavisi",
         description:
-          "Silk Beauty Salon'da Batumi cilt bakımı, yüz bakımı, peeling, microneedling ve cilt analizi.",
+          "Silk Beauty Salon'da Batumi cilt bakımı, peeling, microneedling ve cilt analizi.",
         eyebrow: 'Batumi cilt bakımı',
         intro:
-          "Batumi cilt bakımı, Batumi cilt tedavisi veya facials Batumi arıyorsanız, Silk Beauty Salon tedavileri cilt durumu, hedefler ve zamanlamaya göre planlar.",
+          "Batumi cilt bakımı, Batumi cilt tedavisi veya Batumi cilt analizi arıyorsanız, Silk Beauty Salon tedavileri cilt durumu, hedefler ve zamanlamaya göre planlar.",
         searchTitle: 'Bu sayfanın yanıtladığı aramalar',
-        searchPhrases: ['Batumi cilt bakımı', 'Batumi cilt tedavisi', 'Batumi yüz bakımı'],
+        searchPhrases: ['Batumi cilt bakımı', 'Batumi cilt tedavisi', 'Batumi cilt analizi'],
         benefitsTitle: "Batumi'de cilt tedavisi için neden Silk",
         benefits: [
           {
@@ -868,16 +868,16 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
           },
           {
             title: 'Tahmin değil tedavi planı',
-            text: 'Yüz bakımları, peeling, microneedling, booster ve cihaz odaklı tedaviler cildinize göre seçilir.',
+            text: 'Peeling, microneedling, cilt analizi ve cihaz odaklı tedaviler cildinize göre seçilir.',
           },
           {
             title: 'Bakım önerileri dahil',
             text: 'Güneş, ev bakımı, Batumi havası, seyahat ve etkinlik zamanlaması için öneriler alırsınız.',
           },
         ],
-        treatmentTitle: 'Cilt tedavisi ve yüz bakımı seçenekleri',
+        treatmentTitle: 'Cilt tedavisi seçenekleri',
         treatmentIntro:
-          'Randevu almadan önce cilt analizi, yüz bakımı, peeling, microneedling ve kolajen odaklı tedavileri inceleyin.',
+          'Randevu almadan önce cilt analizi, peeling, microneedling ve kolajen odaklı tedavileri inceleyin.',
         faqTitle: 'Batumi cilt tedavisi soruları',
         faqs: [
           {
@@ -886,7 +886,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
               'Emin değilseniz önce danışmanlık veya cilt analizi alın. Ekip uygun seçeneği önerebilir.',
           },
           {
-            question: 'Etkinlik öncesi yüz bakımı yapılır mı?',
+            question: 'Etkinlik öncesi cilt tedavisi yapılır mı?',
             answer:
               'Evet, ancak zamanlama önemlidir. Bazı işlemler etkinlik öncesi uygundur, bazıları iyileşme süresi ister.',
           },
@@ -900,18 +900,18 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         bookCta: 'Cilt danışmanlığı al',
         bookingTitle: "Batumi'de cilt tedavisi randevusu",
         bookingText:
-          'Yüz bakımı, peeling, microneedling, kolajen desteği veya cilt analizi için danışmanlık seçin.',
+          'Peeling, microneedling, kolajen desteği veya cilt analizi için danışmanlık seçin.',
       },
       ar: {
         title: 'علاج البشرة في باتومي',
         h1: 'علاج البشرة في باتومي',
         description:
-          'علاج البشرة، العناية بالبشرة، جلسات الوجه، التقشير، المايكرونيدلنغ وتحليل البشرة في باتومي لدى Silk Beauty Salon.',
+          'علاج البشرة، العناية بالبشرة، التقشير، المايكرونيدلنغ وتحليل البشرة في باتومي لدى Silk Beauty Salon.',
         eyebrow: 'العناية بالبشرة باتومي',
         intro:
-          'إذا كنت تبحثين عن علاج البشرة باتومي أو العناية بالبشرة في باتومي أو facials Batumi، يخطط Silk Beauty Salon العلاجات حسب حالة البشرة والأهداف والتوقيت.',
+          'إذا كنت تبحثين عن علاج البشرة في باتومي أو العناية بالبشرة في باتومي أو تحليل البشرة في باتومي، يخطط Silk Beauty Salon العلاجات حسب حالة البشرة والأهداف والتوقيت.',
         searchTitle: 'عبارات البحث التي تغطيها الصفحة',
-        searchPhrases: ['علاج البشرة باتومي', 'العناية بالبشرة في باتومي', 'جلسات الوجه في باتومي'],
+        searchPhrases: ['علاج البشرة باتومي', 'العناية بالبشرة في باتومي', 'تحليل البشرة في باتومي'],
         benefitsTitle: 'لماذا يختار العملاء Silk لعلاج البشرة في باتومي',
         benefits: [
           {
@@ -920,16 +920,16 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
           },
           {
             title: 'خطة علاج لا تخمين',
-            text: 'يتم اختيار جلسات الوجه، التقشير، المايكرونيدلنغ، البوسترات والعلاجات بالأجهزة حسب البشرة والجدول.',
+            text: 'يتم اختيار التقشير، المايكرونيدلنغ، تحليل البشرة والعلاجات بالأجهزة حسب البشرة والجدول.',
           },
           {
             title: 'العناية اللاحقة ضمن الخطة',
             text: 'تحصلين على إرشادات للشمس، العناية المنزلية، والتوقيت حول طقس باتومي والسفر والمناسبات.',
           },
         ],
-        treatmentTitle: 'خيارات علاج البشرة وجلسات الوجه',
+        treatmentTitle: 'خيارات علاج البشرة',
         treatmentIntro:
-          'اطلعي على تحليل البشرة، جلسات الوجه، التقشير، المايكرونيدلنغ والعلاجات الداعمة للكولاجين قبل الحجز.',
+          'اطلعي على تحليل البشرة، التقشير، المايكرونيدلنغ والعلاجات الداعمة للكولاجين قبل الحجز.',
         faqTitle: 'أسئلة عن علاج البشرة في باتومي',
         faqs: [
           {
@@ -938,7 +938,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
               'إذا لم تكوني متأكدة، ابدئي باستشارة أو تحليل للبشرة. يمكن للفريق اقتراح الخيار المناسب.',
           },
           {
-            question: 'هل يمكن حجز جلسة وجه قبل مناسبة؟',
+            question: 'هل يمكن حجز علاج بشرة قبل مناسبة؟',
             answer:
               'نعم، لكن التوقيت مهم. بعض العلاجات مناسبة قبل المناسبات وبعضها يحتاج وقتا للتعافي.',
           },
@@ -952,18 +952,18 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         bookCta: 'حجز استشارة بشرة',
         bookingTitle: 'احجزي علاج البشرة في باتومي',
         bookingText:
-          'اختاري الاستشارة لخطة تشمل جلسات الوجه، التقشير، المايكرونيدلنغ، دعم الكولاجين أو تحليل البشرة.',
+          'اختاري الاستشارة لخطة تشمل التقشير، المايكرونيدلنغ، دعم الكولاجين أو تحليل البشرة.',
       },
       he: {
         title: 'טיפולי עור בבטומי',
         h1: 'טיפולי עור בבטומי',
         description:
-          'טיפולי עור, טיפוח עור, טיפולי פנים, פילינג, מיקרונידלינג וניתוח עור בבטומי ב-Silk Beauty Salon.',
+          'טיפולי עור, טיפוח עור, פילינג, מיקרונידלינג וניתוח עור בבטומי ב-Silk Beauty Salon.',
         eyebrow: 'טיפוח עור בטומי',
         intro:
-          'אם אתם מחפשים טיפולי עור בבטומי, טיפוח עור בבטומי או facials Batumi, Silk Beauty Salon מתכנן טיפול לפי מצב העור, המטרות והתזמון.',
+          'אם אתם מחפשים טיפולי עור בבטומי, טיפוח עור בבטומי או אבחון עור בבטומי, Silk Beauty Salon מתכנן טיפול לפי מצב העור, המטרות והתזמון.',
         searchTitle: 'ביטויי חיפוש שהעמוד מכסה',
-        searchPhrases: ['טיפולי עור בבטומי', 'טיפוח עור בבטומי', 'טיפולי פנים בבטומי'],
+        searchPhrases: ['טיפולי עור בבטומי', 'טיפוח עור בבטומי', 'אבחון עור בבטומי'],
         benefitsTitle: 'למה לבחור ב-Silk לטיפולי עור בבטומי',
         benefits: [
           {
@@ -972,16 +972,16 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
           },
           {
             title: 'תכנית טיפול ולא ניחוש',
-            text: 'טיפולי פנים, פילינג, מיקרונידלינג, בוסטרים וטיפולים במכשור נבחרים לפי העור ולוח הזמנים.',
+            text: 'פילינג, מיקרונידלינג, אבחון עור וטיפולים במכשור נבחרים לפי העור ולוח הזמנים.',
           },
           {
             title: 'הנחיות לאחר טיפול',
             text: 'מקבלים הדרכה לגבי שמש, טיפול ביתי ותזמון סביב מזג האוויר בבטומי, נסיעות ואירועים.',
           },
         ],
-        treatmentTitle: 'אפשרויות טיפולי עור ופנים',
+        treatmentTitle: 'אפשרויות טיפולי עור',
         treatmentIntro:
-          'עיינו בניתוח עור, טיפולי פנים, פילינג, מיקרונידלינג וטיפולים ממוקדי קולגן לפני קביעת ייעוץ.',
+          'עיינו בניתוח עור, פילינג, מיקרונידלינג וטיפולים ממוקדי קולגן לפני קביעת ייעוץ.',
         faqTitle: 'שאלות על טיפולי עור בבטומי',
         faqs: [
           {
@@ -990,7 +990,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
               'אם אינכם בטוחים, התחילו בייעוץ או ניתוח עור. הצוות יוכל להמליץ על אפשרות מתאימה.',
           },
           {
-            question: 'אפשר לקבוע טיפול פנים לפני אירוע?',
+            question: 'אפשר לקבוע טיפול עור לפני אירוע?',
             answer:
               'כן, אבל התזמון חשוב. חלק מהטיפולים מתאימים לפני אירוע וחלק דורשים זמן התאוששות.',
           },
@@ -1004,7 +1004,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         bookCta: 'קביעת ייעוץ עור',
         bookingTitle: 'קבעו טיפול עור בבטומי',
         bookingText:
-          'בחרו ייעוץ לתכנית של טיפולי פנים, פילינג, מיקרונידלינג, תמיכת קולגן או ניתוח עור.',
+          'בחרו ייעוץ לתכנית של פילינג, מיקרונידלינג, תמיכת קולגן או ניתוח עור.',
       },
     },
   },

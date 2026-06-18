@@ -5,8 +5,7 @@ export type BookingTreatmentCategory =
   | 'skin'
   | 'lashes'
   | 'hair'
-  | 'nails'
-  | 'pmu';
+  | 'nails';
 
 type LocalizedText = Record<Locale, string>;
 
@@ -110,20 +109,6 @@ export const bookingTreatments: BookingTreatment[] = [
       tr: 'Çene Hattı Konturlama (2ml)',
       ar: 'تحديد خط الفك (2مل)',
       he: 'עיצוב קו הלסת (2מ"ל)',
-    },
-  },
-  {
-    id: 'hydrafacial',
-    category: 'skin',
-    durationMinutes: 60,
-    priceGel: 180,
-    name: {
-      en: 'HydraFacial',
-      ka: 'ჰიდრაფეიშალი',
-      ru: 'Гидрафишл',
-      tr: 'HydraFacial',
-      ar: 'هايدروفاشيال',
-      he: 'הידרה-פיישל',
     },
   },
   {
@@ -264,34 +249,6 @@ export const bookingTreatments: BookingTreatment[] = [
       tr: 'Tırnak Sanatı',
       ar: 'فن الأظافر',
       he: 'אמנות ציפורניים',
-    },
-  },
-  {
-    id: 'microblading',
-    category: 'pmu',
-    durationMinutes: 180,
-    priceGel: 500,
-    name: {
-      en: 'Microblading',
-      ka: 'მიკრობლეიდინგი',
-      ru: 'Микроблейдинг',
-      tr: 'Microblading',
-      ar: 'المايكروبلايدنج',
-      he: 'מיקרובליידינג',
-    },
-  },
-  {
-    id: 'lip-blush',
-    category: 'pmu',
-    durationMinutes: 180,
-    priceGel: 450,
-    name: {
-      en: 'Lip Blush',
-      ka: 'ტუჩების პუდრის შეფერილობა',
-      ru: 'Пудровое напыление губ',
-      tr: 'Dudak Kızarması',
-      ar: 'أحمر شفاه دائم',
-      he: 'סומק שפתיים',
     },
   },
 ];

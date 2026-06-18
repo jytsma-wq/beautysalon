@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: '%s | Silk Beauty Salon',
   },
   description:
-    'Silk Beauty Salon is a beauty salon in Batumi, Georgia for aesthetic treatments, facials, injectables, laser treatments, skin care, nails, lashes, and consultations.',
+    'Silk Beauty Salon is a beauty salon in Batumi, Georgia for aesthetic treatments, injectables, laser treatments, skin care, nails, lashes, and consultations.',
   keywords: localSeoKeywords,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Beauty Salon in Batumi, Georgia | Silk Beauty Salon',
     description:
-      'Silk Beauty Salon in Batumi, Georgia offers aesthetic treatments, skin care, facials, nails, and lashes.',
+      'Silk Beauty Salon in Batumi, Georgia offers aesthetic treatments, skin care, nails, and lashes.',
     images: [`${getSiteUrl()}/opengraph-image.png`],
     creator: '@silkbeauty_batumi',
   },

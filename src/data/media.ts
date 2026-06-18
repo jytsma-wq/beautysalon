@@ -22,8 +22,8 @@ export interface ImageGallery {
 // Hero videos - rotating background videos
 export const heroVideos = [
   {
-    id: 'facial-treatment',
-    title: 'Luxury Facial Treatment',
+    id: 'skin-care-treatment',
+    title: 'Luxury Skin Care Treatment',
     src: 'https://cdn.coverr.co/videos/coverr-a-woman-getting-a-facial-treatment-6960/1080p.mp4',
     thumbnail: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1920&q=80',
   },
@@ -59,9 +59,9 @@ export const treatmentVideos: VideoItem[] = [
     duration: '0:45',
   },
   {
-    id: 'facial-treatment-video',
-    title: 'Advanced Facial Treatment',
-    description: 'Experience our signature facial treatments designed to rejuvenate and restore your skin.',
+    id: 'skin-treatment-video',
+    title: 'Advanced Skin Treatment',
+    description: 'Experience advanced skin treatments designed to rejuvenate and restore your skin.',
     src: 'https://videos.pexels.com/video-files/5068258/5068258-uhd_2560_1440_30fps.mp4',
     thumbnail: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80',
     category: 'treatment',

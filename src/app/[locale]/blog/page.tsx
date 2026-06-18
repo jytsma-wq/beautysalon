@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: locale === 'en' ? 'Beauty Care Blog in Batumi' : t('metaTitle'),
     description:
       locale === 'en'
-        ? 'Expert beauty salon guides for Batumi clients, including facials, skin care, Botox, fillers, aftercare, and treatment planning.'
+        ? 'Expert beauty salon guides for Batumi clients, including skin care, Botox, fillers, aftercare, and treatment planning.'
         : t('metaDescription'),
     keywords: [
       'beauty blog Batumi',
       'skin care Batumi',
-      'facials Batumi',
+      'skin treatment Batumi',
       'Botox and fillers Batumi',
       ...localSeoKeywords,
     ],

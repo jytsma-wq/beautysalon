@@ -260,7 +260,7 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
       {
         name: "Marionette Lines",
         slug: "marionette-lines",
-        description: "Marionette lines are the vertical lines that run from the corners of the mouth down to the chin, giving a puppet-like appearance. These lines develop as we age due to volume loss and skin laxity. Dermal fillers can effectively soften these lines by replacing lost volume and supporting the skin. This treatment can significantly improve the appearance of a downturned mouth and restore a more youthful, cheerful expression.",
+        description: "Marionette lines are the vertical lines that run from the corners of the mouth down to the chin, giving a puppet-like appearance. These lines develop as we age due to volume loss and reduced firmness. Dermal fillers can effectively soften these lines by replacing lost volume and supporting the skin. This treatment can significantly improve the appearance of a downturned mouth and restore a more youthful, cheerful expression.",
         shortDescription: "Soften marionette lines for a more youthful, uplifted appearance.",
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
         price: "From ₾250",
@@ -282,7 +282,7 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
       {
         name: "Nasolabial Folds",
         slug: "nasolabial-folds",
-        description: "Nasolabial folds, often called 'smile lines' or 'laugh lines,' are the deep lines that run from the sides of the nose to the corners of the mouth. While these lines are a natural part of facial expression, they can deepen with age due to volume loss and skin laxity. Dermal fillers can effectively soften these lines by replacing lost volume, creating a smoother, more youthful appearance while maintaining your natural expressions.",
+        description: "Nasolabial folds, often called 'smile lines' or 'laugh lines,' are the deep lines that run from the sides of the nose to the corners of the mouth. While these lines are a natural part of facial expression, they can deepen with age due to volume loss and reduced firmness. Dermal fillers can effectively soften these lines by replacing lost volume, creating a smoother, more youthful appearance while maintaining your natural expressions.",
         shortDescription: "Soften smile lines for a refreshed, youthful appearance.",
         image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
         price: "From ₾250",
@@ -326,7 +326,7 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
       {
         name: "Neck Rejuvenation",
         slug: "neck-rejuvenation",
-        description: "Neck rejuvenation treatments address the signs of aging that often appear in the neck area, including horizontal lines, vertical bands, and skin laxity. Using a combination of Botox and dermal fillers, we can smooth lines, relax prominent neck bands, and restore a more youthful neck contour that matches your rejuvenated face.",
+        description: "Neck rejuvenation treatments address the signs of aging that often appear in the neck area, including horizontal lines, vertical bands, and reduced firmness. Using a combination of Botox and dermal fillers, we can smooth lines, relax prominent neck bands, and restore a more youthful neck contour that matches your rejuvenated face.",
         shortDescription: "Smooth lines and restore youthful contours to the neck.",
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
         price: "From ₾400",
@@ -392,58 +392,6 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
     ]
   },
   {
-    name: "Body Contouring",
-    slug: "body-contouring",
-    description: "Advanced non-surgical treatments for sculpting and contouring the body, addressing stubborn fat, skin laxity, and cellulite.",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
-    treatments: [
-      {
-        name: "Endolift Body",
-        slug: "endolift-body",
-        description: "Endolift is an innovative minimally invasive laser treatment that targets stubborn fat and tightens skin on the body. The laser fiber is inserted beneath the skin through tiny incisions, delivering energy that melts fat and stimulates collagen production. It's excellent for treating areas like the abdomen, arms, thighs, and knees with minimal downtime compared to traditional liposuction.",
-        shortDescription: "Minimally invasive laser for fat reduction and skin tightening on the body.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
-        price: "From ₾2,000",
-        duration: "60-120 minutes",
-        benefits: [
-          "Targets stubborn fat",
-          "Tightens loose skin",
-          "Minimally invasive",
-          "Immediate results",
-          "Continued improvement over months"
-        ],
-        howItWorks: "A microfiber laser is inserted beneath the skin to directly target fat cells and stimulate collagen. The laser energy melts fat which is then naturally eliminated by the body while simultaneously tightening the skin.",
-        aftercare: "Wear compression garment for 1-2 weeks. Avoid strenuous exercise for 1 week. Results improve over 3-6 months as collagen builds.",
-        faqs: [
-          { question: "What areas can be treated?", answer: "Endolift can treat abdomen, flanks, arms, inner thighs, knees, and other areas with localized fat and skin laxity." },
-          { question: "Is it like liposuction?", answer: "Endolift is less invasive than traditional liposuction, with smaller incisions and the added benefit of skin tightening from the laser energy." }
-        ]
-      },
-      {
-        name: "Body Skin Tightening",
-        slug: "body-skin-tightening",
-        description: "Our body skin tightening treatments use radiofrequency and ultrasound technology to stimulate collagen production and firm loose skin on the body. This non-invasive treatment is perfect for addressing skin laxity after weight loss, pregnancy, or due to aging, without the need for surgery.",
-        shortDescription: "Non-invasive treatment to firm and tighten loose body skin.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
-        price: "From ₾350",
-        duration: "45-90 minutes",
-        benefits: [
-          "Firms loose skin",
-          "Stimulates collagen",
-          "Non-invasive",
-          "No downtime",
-          "Gradual, natural results"
-        ],
-        howItWorks: "Radiofrequency or ultrasound energy is delivered deep into the skin to heat tissue and stimulate collagen and elastin production. This process naturally tightens and firms the skin over time.",
-        aftercare: "No downtime required. Stay hydrated. Results develop over 2-3 months as collagen builds. Multiple sessions recommended for optimal results.",
-        faqs: [
-          { question: "How many sessions will I need?", answer: "Most patients need 4-6 sessions spaced 2-4 weeks apart for optimal results, followed by maintenance treatments." },
-          { question: "Does it hurt?", answer: "The treatment is generally comfortable. You may feel a warming sensation as the energy is delivered to the deeper layers of skin." }
-        ]
-      }
-    ]
-  },
-  {
     name: "Laser Treatments",
     slug: "laser",
     description: "Advanced laser technology for skin rejuvenation, resurfacing, and treating various skin concerns with precision.",
@@ -484,7 +432,7 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
       {
         name: "Cutera CO2 Laser",
         slug: "cutera-c02-laser",
-        description: "The Cutera CO2 laser is a powerful skin resurfacing treatment that addresses significant skin concerns including deep wrinkles, acne scars, sun damage, and skin laxity. This fractional CO2 laser creates controlled micro-injuries in the skin, stimulating significant collagen production and skin renewal. It's one of the most effective treatments for dramatic skin rejuvenation with results that can last for years.",
+        description: "The Cutera CO2 laser is a powerful skin resurfacing treatment that addresses significant skin concerns including deep wrinkles, acne scars, sun damage, and uneven texture. This fractional CO2 laser creates controlled micro-injuries in the skin, stimulating significant collagen production and skin renewal. It's one of the most effective treatments for dramatic skin rejuvenation with results that can last for years.",
         shortDescription: "Powerful resurfacing for deep wrinkles, scars, and sun damage.",
         image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
         price: "From ₾800",
@@ -500,7 +448,7 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
       {
         name: "Cutera Secret PRO RF Microneedling",
         slug: "cutera-secret-pro-rf-microneedling",
-        description: "The Cutera Secret PRO combines radiofrequency energy with microneedling for powerful skin rejuvenation. The treatment delivers RF energy through tiny needles, creating controlled micro-injuries while heating the deeper layers of skin. This dual-action approach stimulates significant collagen production, improving skin texture, fine lines, wrinkles, acne scars, and skin laxity with less downtime than traditional resurfacing.",
+        description: "The Cutera Secret PRO combines radiofrequency energy with microneedling for powerful skin rejuvenation. The treatment delivers RF energy through tiny needles, creating controlled micro-injuries while heating the deeper layers of skin. This dual-action approach stimulates significant collagen production, improving skin texture, fine lines, wrinkles, and acne scars with less downtime than traditional resurfacing.",
         shortDescription: "Combined RF and microneedling for powerful skin rejuvenation.",
         image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
         price: "From ₾450",
@@ -548,13 +496,13 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
       {
         name: "BBL HERO",
         slug: "bbl-hero",
-        description: "BBL HERO (BroadBand Light High Energy Rapid Output) is the most advanced IPL technology available. This treatment delivers light energy deep into the skin to target pigmentation, redness, and signs of aging. The HERO technology allows for faster treatment times and larger treatment areas, making it ideal for full-body treatments. It's excellent for sun damage, age spots, rosacea, and overall skin rejuvenation.",
-        shortDescription: "Advanced IPL for full-body skin rejuvenation and pigmentation.",
+        description: "BBL HERO (BroadBand Light High Energy Rapid Output) is advanced IPL technology for visible pigmentation, redness, and signs of aging. The HERO technology allows for fast, even coverage on selected treatment areas. It's excellent for sun damage, age spots, rosacea, and overall skin rejuvenation.",
+        shortDescription: "Advanced IPL for skin rejuvenation and pigmentation.",
         image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
         price: "From ₾350",
         duration: "30-60 minutes",
         benefits: [
-          "Full-body treatment option",
+          "Fast treatment time",
           "Treats sun damage",
           "Reduces pigmentation",
           "Quick treatment time",
@@ -596,15 +544,15 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
       {
         name: "Endolift",
         slug: "endolift",
-        description: "Endolift is an innovative minimally invasive laser treatment that uses a microfiber laser to target fat and tighten skin. The laser fiber is inserted beneath the skin through tiny incisions, delivering energy that melts fat and stimulates collagen production. It's excellent for treating jowls, double chin, and loose skin on the face and body. Results include immediate tightening with continued improvement over several months.",
-        shortDescription: "Minimally invasive laser for fat reduction and skin tightening.",
+        description: "Endolift is an innovative minimally invasive laser treatment for facial contour refinement and collagen stimulation. The laser fiber is inserted beneath the skin through tiny incisions, delivering energy that supports a sharper jawline, jowls, and double chin concerns. Results include immediate tightening with continued improvement over several months.",
+        shortDescription: "Minimally invasive laser for facial contour refinement.",
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
         price: "From ₾1,500",
         duration: "60-90 minutes",
         benefits: [
           "Minimally invasive",
-          "Fat reduction",
-          "Skin tightening",
+          "Facial contour support",
+          "Collagen stimulation",
           "Immediate results",
           "Continued improvement"
         ]
@@ -700,230 +648,6 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
     ]
   },
   {
-    name: "Skin Laxity",
-    slug: "skin-laxity",
-    description: "Non-surgical skin tightening and lifting treatments using advanced energy-based technologies.",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
-    treatments: [
-      {
-        name: "Emface",
-        slug: "emface",
-        description: "Emface is the first device to simultaneously treat facial muscles and skin using synchronized radiofrequency and HIFES™ technology. This groundbreaking treatment builds and tones facial muscles while tightening the skin, providing a non-invasive facelift effect. In just 20 minutes, Emface delivers the equivalent of 20,000 facial muscle contractions while heating the dermis for collagen remodeling. Results include lifted cheeks, reduced wrinkles, and improved facial contours.",
-        shortDescription: "Non-invasive facial toning and skin tightening.",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
-        price: "From ₾800",
-        duration: "20 minutes",
-        benefits: [
-          "Builds facial muscle",
-          "Tightens skin",
-          "Non-invasive facelift",
-          "No downtime",
-          "Quick 20-minute treatment"
-        ]
-      },
-      {
-        name: "Exion Face & Body",
-        slug: "exion-face-body",
-        description: "Exion is an innovative treatment combining radiofrequency with artificial intelligence for precise skin tightening and contouring. The device automatically adjusts energy delivery based on individual tissue response, ensuring optimal results. Exion can treat both face and body, addressing skin laxity, texture, and contouring concerns. It's particularly effective for areas that have been difficult to treat non-surgically.",
-        shortDescription: "AI-powered RF treatment for face and body contouring.",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
-        price: "From ₾400",
-        duration: "30-45 minutes",
-        benefits: [
-          "AI-optimized treatment",
-          "Face and body application",
-          "Skin tightening",
-          "Body contouring",
-          "Precise energy delivery"
-        ]
-      },
-      {
-        name: "HIFU Treatment",
-        slug: "hifu-treatment",
-        description: "High-Intensity Focused Ultrasound (HIFU) delivers ultrasound energy to the foundational layers of the skin, creating a non-surgical lifting and tightening effect. By targeting the SMAS layer (the same layer addressed in surgical facelifts), HIFU stimulates significant collagen production and tissue contraction. This treatment provides gradual, natural-looking lifting results that develop over 2-3 months and can last up to a year.",
-        shortDescription: "Ultrasound-based non-surgical facelift.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
-        price: "From ₾500",
-        duration: "60-90 minutes",
-        benefits: [
-          "Non-surgical lifting",
-          "Targets SMAS layer",
-          "Long-lasting results",
-          "Natural improvement",
-          "Single treatment"
-        ]
-      },
-      {
-        name: "MINT PDO Thread Lift",
-        slug: "mint-pdo-thread-lift",
-        description: "MINT PDO Thread Lift is a minimally invasive procedure that uses absorbable polydioxanone (PDO) threads to lift and tighten sagging skin. These specialized threads are inserted beneath the skin to provide immediate lifting while stimulating collagen production for long-term improvement. The procedure is excellent for lifting the mid-face, jowls, jawline, and neck with results that can last 12-18 months.",
-        shortDescription: "Minimally invasive thread lift for immediate results.",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
-        price: "From ₾800",
-        duration: "45-60 minutes",
-        benefits: [
-          "Immediate lifting",
-          "Collagen stimulation",
-          "Minimally invasive",
-          "Long-lasting results",
-          "Natural improvement"
-        ]
-      },
-      {
-        name: "Morpheus8",
-        slug: "morpheus-8-treatment",
-        description: "Morpheus8 is a fractional skin treatment that combines microneedling with radiofrequency energy to remodel and contour the face and body. By delivering RF energy through tiny needles deep into the skin, Morpheus8 stimulates significant collagen production while tightening the underlying tissue. It's highly effective for treating skin laxity, wrinkles, acne scars, and improving overall skin quality. The treatment can be customized for various depths and treatment areas.",
-        shortDescription: "Fractional RF microneedling for skin remodeling.",
-        image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80",
-        price: "From ₾600",
-        duration: "45-60 minutes",
-        benefits: [
-          "Deep skin remodeling",
-          "Tightens skin",
-          "Improves contours",
-          "Reduces wrinkles",
-          "Customizable depth"
-        ]
-      },
-      {
-        name: "Nanothreads",
-        slug: "nanothreads",
-        description: "Nanothreads are ultra-fine PDO threads designed for subtle skin rejuvenation and texture improvement. Unlike traditional lifting threads, nanothreads focus on stimulating collagen production to improve skin quality, fine lines, and overall radiance. They're perfect for delicate areas like around the eyes and mouth, or for those wanting a subtle refresh without dramatic lifting.",
-        shortDescription: "Fine threads for skin rejuvenation and texture improvement.",
-        image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80",
-        price: "From ₾400",
-        duration: "30-45 minutes",
-        benefits: [
-          "Improves skin quality",
-          "Stimulates collagen",
-          "Subtle rejuvenation",
-          "Delicate areas",
-          "Minimal downtime"
-        ]
-      },
-      {
-        name: "Neogen Plasma",
-        slug: "neogen-plasma",
-        description: "Neogen Plasma uses nitrogen plasma energy to treat skin concerns without ablation or charring. This innovative treatment delivers controlled thermal energy to the skin, stimulating significant collagen production and renewal. It's effective for treating wrinkles, acne scars, skin laxity, and eyelid concerns. The treatment provides dramatic results with less downtime than traditional resurfacing procedures.",
-        shortDescription: "Plasma energy treatment for skin renewal.",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
-        price: "From ₾500",
-        duration: "30-60 minutes",
-        benefits: [
-          "Non-ablative treatment",
-          "Stimulates collagen",
-          "Treats eyelid concerns",
-          "Reduces scarring",
-          "Skin renewal"
-        ]
-      },
-      {
-        name: "Thermage FLX",
-        slug: "thermage-flx",
-        description: "Thermage FLX is the latest generation of the legendary Thermage skin tightening treatment. Using radiofrequency energy, Thermage heats the deep dermis while cooling the skin surface, stimulating collagen production and immediate tissue tightening. A single treatment can provide results that last for years, making it one of the most effective non-invasive skin tightening options available. It's excellent for the face, eyes, and body.",
-        shortDescription: "Advanced RF skin tightening with long-lasting results.",
-        image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
-        price: "From ₾1,500",
-        duration: "60-90 minutes",
-        benefits: [
-          "Single treatment",
-          "Long-lasting results",
-          "Face and body",
-          "Immediate tightening",
-          "Continued improvement"
-        ]
-      }
-    ]
-  },
-  {
-    name: "Body Treatments",
-    slug: "body",
-    description: "Advanced body contouring, skin tightening, and rejuvenation treatments.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-    treatments: [
-      {
-        name: "Profhilo Body",
-        slug: "profhilo-body",
-        description: "Profhilo Body is an injectable hyaluronic acid treatment specifically designed for body skin quality improvement. Using the patented NAHYCO technology, Profhilo delivers stabilized hyaluronic acid that remodels skin from within. It's excellent for treating crepey skin on the arms, neck, décolletage, knees, and other body areas. The treatment hydrates, firms, and improves skin elasticity with a minimal injection protocol.",
-        shortDescription: "Injectable HA treatment for body skin quality.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-        price: "From ₾400",
-        duration: "30 minutes",
-        benefits: [
-          "Improves skin quality",
-          "Hydrates and firms",
-          "Minimal injections",
-          "Treats crepey skin",
-          "Natural results"
-        ]
-      },
-      {
-        name: "Morpheus8 Body",
-        slug: "morpheus8-body",
-        description: "Morpheus8 Body brings the power of fractional RF microneedling to body treatments. With larger treatment tips and deeper penetration capabilities, Morpheus8 Body addresses skin laxity, cellulite, and texture concerns on the body. It's highly effective for treating the abdomen, thighs, arms, and other areas where skin has lost firmness. The treatment remodels tissue deep beneath the skin surface for noticeable contouring and tightening.",
-        shortDescription: "Fractional RF microneedling for body contouring.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-        price: "From ₾800",
-        duration: "60-90 minutes",
-        benefits: [
-          "Deep tissue remodeling",
-          "Reduces cellulite",
-          "Tightens skin",
-          "Body contouring",
-          "Large treatment areas"
-        ]
-      },
-      {
-        name: "Exion Body",
-        slug: "exion-body",
-        description: "Exion Body uses AI-powered radiofrequency technology for body contouring and skin tightening. The device automatically adjusts energy delivery based on individual tissue response for optimal results. It's effective for treating skin laxity and improving contours on the abdomen, thighs, arms, and other body areas. The treatment is comfortable with no downtime required.",
-        shortDescription: "AI-powered RF body contouring treatment.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-        price: "From ₾500",
-        duration: "45-60 minutes",
-        benefits: [
-          "AI-optimized treatment",
-          "Body contouring",
-          "Skin tightening",
-          "No downtime",
-          "Comfortable treatment"
-        ]
-      },
-      {
-        name: "Thermage Body",
-        slug: "thermage-body",
-        description: "Thermage Body delivers radiofrequency energy deep into the skin to tighten and contour body areas. This non-invasive treatment heats the deep dermis while cooling the skin surface, stimulating collagen production for tighter, smoother skin. It's excellent for addressing skin laxity after weight loss, pregnancy, or aging on areas like the abdomen, thighs, arms, and buttocks.",
-        shortDescription: "Non-invasive RF body tightening.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-        price: "From ₾1,500",
-        duration: "90-120 minutes",
-        benefits: [
-          "Non-invasive",
-          "Single treatment",
-          "Long-lasting results",
-          "Multiple body areas",
-          "Collagen stimulation"
-        ]
-      },
-      {
-        name: "Ultraformer HIFU Body",
-        slug: "ultraformer-hifu-body",
-        description: "Ultraformer is an advanced HIFU (High-Intensity Focused Ultrasound) device for body contouring and skin tightening. The treatment delivers focused ultrasound energy to the foundational layers of the skin, creating thermal coagulation points that stimulate collagen production and tissue contraction. It's effective for treating localized fat, skin laxity, and improving body contours without surgery or downtime.",
-        shortDescription: "HIFU body contouring and skin tightening.",
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
-        price: "From ₾600",
-        duration: "60-90 minutes",
-        benefits: [
-          "Non-surgical contouring",
-          "Skin tightening",
-          "Targeted fat reduction",
-          "No downtime",
-          "Gradual results"
-        ]
-      }
-    ]
-  },
-  {
     name: "Intimate Treatments",
     slug: "intimate",
     description: "Specialized treatments for intimate areas with the highest standards of care and privacy.",
@@ -959,46 +683,6 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
           "Complete privacy",
           "Brazilian and Hollywood options",
           "Advanced cooling technology"
-        ]
-      }
-    ]
-  },
-  {
-    name: "Medical Facials",
-    slug: "medical-facials",
-    description: "Results-driven facial treatments using medical-grade products and techniques.",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
-    treatments: [
-      {
-        name: "Filter Facial",
-        slug: "filter-facial",
-        description: "The Filter Facial is our signature results-driven facial designed to give you that 'filtered' look in real life. This multi-step treatment combines deep cleansing, exfoliation, specialized serums, and advanced technology to improve skin texture, reduce pore size, and create a flawless complexion. Perfect before special events or as regular maintenance for glowing skin.",
-        shortDescription: "Signature facial for a flawless, filtered look.",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
-        price: "From ₾150",
-        duration: "60 minutes",
-        benefits: [
-          "Immediate visible results",
-          "Reduces pore appearance",
-          "Improves skin texture",
-          "Creates flawless finish",
-          "Perfect for events"
-        ]
-      },
-      {
-        name: "Caviar Peel",
-        slug: "caviar-peel",
-        description: "The Caviar Peel is a luxurious treatment that combines the benefits of a chemical peel with the nourishing properties of caviar extract. This unique treatment exfoliates and renews the skin while delivering essential nutrients and antioxidants. The result is smoother, brighter, more youthful-looking skin with improved hydration and elasticity.",
-        shortDescription: "Luxurious exfoliating treatment with caviar extract.",
-        image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
-        price: "From ₾200",
-        duration: "60 minutes",
-        benefits: [
-          "Gentle exfoliation",
-          "Nourishes skin",
-          "Anti-aging benefits",
-          "Improves hydration",
-          "Luxurious experience"
         ]
       }
     ]
@@ -1117,25 +801,42 @@ async function getTreatmentTranslations(locale: string) {
   }
 }
 
+const treatmentContentCategoryAliases: Record<string, string> = {
+  laser: 'laser-treatments',
+  skin: 'skin-treatments',
+  intimate: 'intimate-treatments',
+  hair: 'hair-treatments',
+};
+
 // Merge base data with translations
 export async function getLocalizedTreatmentCategories(locale: string): Promise<TreatmentCategory[]> {
   const translations = await getTreatmentTranslations(locale);
   
-  return baseTreatmentCategories.map(category => ({
-    ...category,
-    name: translations[category.slug]?.name || category.name,
-    description: translations[category.slug]?.description || category.description,
-    treatments: category.treatments.map(treatment => ({
-      ...treatment,
-      name: translations[treatment.slug]?.name || treatment.name,
-      description: translations[treatment.slug]?.description || treatment.description,
-      shortDescription: translations[treatment.slug]?.shortDescription || treatment.shortDescription,
-      benefits: translations[treatment.slug]?.benefits || treatment.benefits,
-      howItWorks: translations[treatment.slug]?.howItWorks || treatment.howItWorks,
-      aftercare: translations[treatment.slug]?.aftercare || treatment.aftercare,
-      faqs: translations[treatment.slug]?.faqs || treatment.faqs,
-    }))
-  }));
+  return baseTreatmentCategories.map(category => {
+    const categoryTranslationKey = treatmentContentCategoryAliases[category.slug] || category.slug;
+    const categoryTranslation = translations[categoryTranslationKey];
+
+    return {
+      ...category,
+      name: categoryTranslation?.name || category.name,
+      description: categoryTranslation?.description || category.description,
+      treatments: category.treatments.map(treatment => {
+        const treatmentTranslation =
+          translations[treatment.slug] || categoryTranslation?.treatments?.[treatment.slug];
+
+        return {
+          ...treatment,
+          name: treatmentTranslation?.name || treatment.name,
+          description: treatmentTranslation?.description || treatment.description,
+          shortDescription: treatmentTranslation?.shortDescription || treatment.shortDescription,
+          benefits: treatmentTranslation?.benefits || treatment.benefits,
+          howItWorks: treatmentTranslation?.howItWorks || treatment.howItWorks,
+          aftercare: treatmentTranslation?.aftercare || treatment.aftercare,
+          faqs: treatmentTranslation?.faqs || treatment.faqs,
+        };
+      })
+    };
+  });
 }
 
 export async function getAllTreatments(locale: string = 'en'): Promise<Treatment[]> {
