@@ -244,11 +244,15 @@ export function GaldermaHeaderClient({
         transition={{ duration: 0.3 }}
       >
         <div className="mx-auto max-w-7xl px-6 py-3 lg:px-8">
-          <div className="relative hidden min-h-14 items-center justify-between gap-6 lg:flex">
-            <Link href="/" className="block shrink-0 transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
+          <div className="relative hidden min-h-[4.75rem] items-center justify-between gap-6 lg:flex">
+            <Link
+              href="/"
+              className="grid h-[4.75rem] w-[4.75rem] shrink-0 place-items-center overflow-hidden rounded-[10px] border border-[#c7a669]/45 bg-white shadow-[0_10px_28px_rgba(36,31,27,0.12)] ring-1 ring-white transition-opacity hover:opacity-90"
+              aria-label={siteConfig.name}
+            >
               <BrandLogo
                 priority
-                imageClassName="h-14 w-14 object-contain"
+                imageClassName="h-[4.45rem] w-[4.45rem] object-contain contrast-125 saturate-110"
               />
             </Link>
 
@@ -334,17 +338,21 @@ export function GaldermaHeaderClient({
             </nav>
           </div>
 
-          <div className="relative flex min-h-16 items-center justify-between lg:hidden">
-            <Link href="/" className="block transition-opacity hover:opacity-80" aria-label={siteConfig.name}>
+          <div className="relative flex min-h-20 items-center justify-between lg:hidden">
+            <Link
+              href="/"
+              className="grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-[10px] border border-[#c7a669]/45 bg-white shadow-[0_10px_26px_rgba(36,31,27,0.12)] ring-1 ring-white transition-opacity hover:opacity-90"
+              aria-label={siteConfig.name}
+            >
               <BrandLogo
                 priority
-                imageClassName="h-16 w-16 object-contain"
+                imageClassName="h-[4.65rem] w-[4.65rem] object-contain contrast-125 saturate-110"
               />
             </Link>
 
             <Link
               href="/"
-              className="absolute left-1/2 max-w-[calc(100vw-12.5rem)] -translate-x-1/2 truncate text-center font-serif text-xl leading-none tracking-tight text-[#1c1c1c] min-[380px]:text-[1.35rem] sm:text-2xl"
+              className="absolute left-1/2 max-w-[calc(100vw-13.25rem)] -translate-x-1/2 truncate text-center font-serif text-xl leading-none tracking-tight text-[#1c1c1c] min-[380px]:text-[1.35rem] sm:text-2xl"
             >
               {siteConfig.name}
             </Link>
