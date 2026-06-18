@@ -69,7 +69,7 @@ export default async function ConditionsPage({
       <div className="bg-secondary py-4">
         <div className="container-custom">
           <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-muted-foreground hover:text-gold">
+            <Link href="/" locale={locale} className="text-muted-foreground hover:text-gold">
               {tCommon('home')}
             </Link>
             <ChevronRight className="w-4 h-4 text-muted-foreground" />
@@ -86,6 +86,7 @@ export default async function ConditionsPage({
               <Link
                 key={condition.slug}
                 href={`/conditions/${condition.slug}`}
+                locale={locale}
                 className="group block py-8 border-t border-[#e8e4df] hover:border-[#b5453a] transition-colors"
               >
                 <h2 
@@ -118,7 +119,7 @@ export default async function ConditionsPage({
             {t('ctaSubtitle')}
           </p>
           <Button asChild className="btn-gold">
-            <Link href="/book">
+              <Link href="/book" locale={locale}>
               {t('bookConsultation')}
             </Link>
           </Button>

@@ -1246,29 +1246,31 @@
   "conditionContent": {
     "ageing-skin": {
       "name": "Yaşlanan Cilt",
-      "shortDescription": "Anti-ageing tedavilerimizle ince çizgileri, kırışıklıkları ve elastikiyet kaybını giderin.",
-      "description": "Yaşlanan cilt, ince çizgilerin, kırışıklıkların, elastikiyet kaybının ve cilt dokusu ve tonundaki değişikliklerin gelişmesiyle karakterize edilen doğal bir süreçtir.",
+      "shortDescription": "İnce çizgi, kırışıklık ve elastikiyet kaybını hedefleyen tedaviler.",
+      "description": "Yaşlanan Cilt: İnce çizgi, kırışıklık ve elastikiyet kaybını hedefleyen tedaviler. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
       "symptoms": [
-        "İnce çizgiler ve kırışıklıklar",
-        "Cilt elastikiyeti kaybı",
-        "Sarkık cilt",
-        "Yanaklarda hacim kaybı",
-        "Derin nazolabial kıvrımlar",
-        "Kukla çizgileri"
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti",
+        "Konsültasyonda değerlendirilecek ek belirti"
       ],
       "causes": [
-        "Kolajen üretiminin doğal azalması",
-        "Güneş hasarı",
-        "Yüz yağı ve hacim kaybı",
-        "Cilt hidrasyonunun azalması",
-        "Tekrarlayan yüz ifadeleri"
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör"
       ],
       "treatments": [
-        "Kırışıklık enjeksiyonları",
-        "Dermal dolgular",
-        "Cilt sıkılaştırma tedavileri",
-        "Lazer yenileme",
-        "Tıbbi sınıf cilt bakımı"
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
       ]
     },
     "acne": {
@@ -1296,27 +1298,31 @@
       ]
     },
     "pigmentation": {
-      "name": "Pigmentasyon Sorunları",
-      "shortDescription": "Cilt tonunu eşitleyin ve koyu lekeleri azaltın.",
-      "description": "Pigmentasyon sorunları koyu lekeleri, melasma ve düzensiz cilt tonunu içerir.",
+      "name": "Pigmentasyon",
+      "shortDescription": "Koyu lekeler, melazma ve hiperpigmentasyonu hedefleyen planlar.",
+      "description": "Pigmentasyon: Koyu lekeler, melazma ve hiperpigmentasyonu hedefleyen planlar. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
       "symptoms": [
-        "Koyu lekeler",
-        "Düzensiz cilt tonu",
-        "Melasma",
-        "Güneş lekeleri",
-        "Yaşlılık lekeleri"
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
       ],
       "causes": [
-        "Güneşe maruz kalma",
-        "Hormonal değişiklikler",
-        "Enflamasyon",
-        "Genetik"
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör"
       ],
       "treatments": [
-        "IPL terapisi",
-        "Lazer tedavileri",
-        "Kimyasal peeling",
-        "Cilt boosterları"
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
       ]
     },
     "scars": {
@@ -1410,27 +1416,33 @@
       ]
     },
     "dry-skin": {
-      "name": "Kuru ve Dehidre Cilt",
-      "shortDescription": "Cildinize nemi ve hidrasyonu geri kazandırın.",
-      "description": "Kuru cilt, hava koşulları ve yaşlanma dahil çeşitli faktörlerden kaynaklanabilir.",
+      "name": "Kuru Cilt",
+      "shortDescription": "Kuru cilt planıyla nem ve konforu geri kazanın.",
+      "description": "Kuru Cilt: Kuru cilt planıyla nem ve konforu geri kazanın. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
       "symptoms": [
-        "Gerginlik",
-        "Dökülme",
-        "Kaba doku",
-        "Kaşıntı",
-        "Kızarıklık"
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti",
+        "Konsültasyonda değerlendirilecek ek belirti"
       ],
       "causes": [
-        "Hava koşulları",
-        "Yaşlanma",
-        "Sıcak duşlar",
-        "Sert sabunlar",
-        "Dehidrasyon"
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör",
+        "Ek kişisel faktör",
+        "Ek kişisel faktör"
       ],
       "treatments": [
-        "Cilt boosterları",
-        "Tıbbi sınıf cilt bakımı",
-        "Nemlendirici tedaviler"
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri"
       ]
     },
     "sensitive-skin": {
@@ -1454,6 +1466,206 @@
         "Yatıştırıcı tedaviler",
         "Özelleştirilmiş cilt bakımı",
         "LED terapisi"
+      ]
+    },
+    "acne-scarring": {
+      "name": "Akne ve İzler",
+      "shortDescription": "Aktif akneyi tedavi edin ve akne izlerinin görünümünü iyileştirin.",
+      "description": "Akne ve İzler: Aktif akneyi tedavi edin ve akne izlerinin görünümünü iyileştirin. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
+      "symptoms": [
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
+      ],
+      "causes": [
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör"
+      ],
+      "treatments": [
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
+      ]
+    },
+    "uneven-skin-tone": {
+      "name": "Düzensiz Cilt Tonu",
+      "shortDescription": "Hedefli pigmentasyon tedavileriyle daha parlak ve eşit bir ton.",
+      "description": "Düzensiz Cilt Tonu: Hedefli pigmentasyon tedavileriyle daha parlak ve eşit bir ton. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
+      "symptoms": [
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
+      ],
+      "causes": [
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör"
+      ],
+      "treatments": [
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
+      ]
+    },
+    "blemishes": {
+      "name": "Leke ve Sivilceler",
+      "shortDescription": "Sivilceleri azaltın ve daha pürüzsüz, sağlıklı görünen cildi destekleyin.",
+      "description": "Leke ve Sivilceler: Sivilceleri azaltın ve daha pürüzsüz, sağlıklı görünen cildi destekleyin. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
+      "symptoms": [
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
+      ],
+      "causes": [
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör"
+      ],
+      "treatments": [
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
+      ]
+    },
+    "collagen-stimulating": {
+      "name": "Kolajen Stimülasyonu",
+      "shortDescription": "Daha sıkı, pürüzsüz ve dirençli cilt için kolajeni destekleyin.",
+      "description": "Kolajen Stimülasyonu: Daha sıkı, pürüzsüz ve dirençli cilt için kolajeni destekleyin. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
+      "symptoms": [
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
+      ],
+      "causes": [
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör"
+      ],
+      "treatments": [
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
+      ]
+    },
+    "fine-lines-wrinkles": {
+      "name": "İnce Çizgiler ve Kırışıklıklar",
+      "shortDescription": "Kırışıklık karşıtı ve cilt kalitesi tedavileriyle çizgileri yumuşatın.",
+      "description": "İnce Çizgiler ve Kırışıklıklar: Kırışıklık karşıtı ve cilt kalitesi tedavileriyle çizgileri yumuşatın. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
+      "symptoms": [
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
+      ],
+      "causes": [
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör",
+        "Ek kişisel faktör",
+        "Ek kişisel faktör"
+      ],
+      "treatments": [
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
+      ]
+    },
+    "loss-of-firmness": {
+      "name": "Sıkılık Kaybı",
+      "shortDescription": "Konsültasyon odaklı planla daha sıkı görünen cildi destekleyin.",
+      "description": "Sıkılık Kaybı: Konsültasyon odaklı planla daha sıkı görünen cildi destekleyin. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
+      "symptoms": [
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
+      ],
+      "causes": [
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör",
+        "Ek kişisel faktör",
+        "Ek kişisel faktör"
+      ],
+      "treatments": [
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
+      ]
+    },
+    "other-conditions": {
+      "name": "Diğer Cilt Sorunları",
+      "shortDescription": "Ek cilt ve estetik endişeler için değerlendirme ve yönlendirme.",
+      "description": "Diğer Cilt Sorunları: Ek cilt ve estetik endişeler için değerlendirme ve yönlendirme. Silk Beauty Salon’da plan danışmanlık, cilt değerlendirmesi ve cilt durumu, hedefler ve zamanlamaya göre güvenli tedavi seçimiyle başlar.",
+      "symptoms": [
+        "Ciltte görünür değişiklikler",
+        "Doku veya tonda düzensizlik",
+        "Nem veya sıkılık azalması",
+        "Kızarıklık, lekeler veya tahriş",
+        "Müşteriyi rahatsız eden estetik belirtiler",
+        "Konsültasyonda değerlendirilecek ek belirti"
+      ],
+      "causes": [
+        "Güneş maruziyeti",
+        "Hormonal veya yaşa bağlı değişimler",
+        "Cilt bariyerinin zayıflaması",
+        "Genetik yatkınlık",
+        "Yaşam tarzı ve çevresel faktörler",
+        "Ek kişisel faktör"
+      ],
+      "treatments": [
+        "Danışmanlık ve cilt analizi",
+        "Gerektiğinde lazer veya cihaz odaklı tedavi",
+        "Uygunsa peeling veya microneedling",
+        "Gerektiğinde enjeksiyon veya cilt kalitesi tedavileri",
+        "Kişisel ev bakımı önerileri"
       ]
     }
   },
