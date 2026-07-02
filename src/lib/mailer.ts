@@ -25,9 +25,23 @@ function smtpSecure(port: number): boolean {
   return port === 465;
 }
 
+function smtpPassword(): string | undefined {
+  const encodedPassword = process.env.SMTP_PASSWORD_B64?.trim();
+
+  if (encodedPassword) {
+    const decodedPassword = Buffer.from(encodedPassword, 'base64').toString('utf8');
+
+    if (decodedPassword) {
+      return decodedPassword;
+    }
+  }
+
+  return process.env.SMTP_PASSWORD;
+}
+
 function getTransporter(): Transporter | null {
   const user = process.env.SMTP_USER || emailConfig.replyTo;
-  const pass = process.env.SMTP_PASSWORD;
+  const pass = smtpPassword();
 
   if (!pass) {
     return null;
