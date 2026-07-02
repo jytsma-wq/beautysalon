@@ -1,3 +1,5 @@
+import { baseTreatmentCategories } from './treatments';
+
 export const homeHeroSlides = [
   {
     eyebrow: "Medical aesthetics in Batumi",
@@ -94,6 +96,52 @@ export const portfolioHighlights = [
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=85",
   },
 ];
+
+export const popularTreatmentHighlights = [
+  {
+    id: 'antiWrinkle',
+    priceTreatmentSlug: 'anti-wrinkle',
+    href: '/treatments/anti-wrinkle',
+  },
+  {
+    id: 'dermalFillers',
+    priceTreatmentSlug: 'lip-fillers',
+    href: '/treatments#dermal-fillers',
+  },
+  {
+    id: 'skinpen',
+    priceTreatmentSlug: 'skinpen-microneedling',
+    href: '/treatments/skinpen-microneedling',
+  },
+  {
+    id: 'fireIce',
+    priceTreatmentSlug: 'is-clinical-fire-ice-peel',
+    href: '/treatments/is-clinical-fire-ice-peel',
+  },
+  {
+    id: 'nails',
+    priceTreatmentSlug: 'nails',
+    href: '/treatments/nails',
+  },
+  {
+    id: 'lashes',
+    priceTreatmentSlug: 'lashes',
+    href: '/treatments/lashes',
+  },
+] as const;
+
+const treatmentPriceBySlug = new Map(
+  baseTreatmentCategories.flatMap((category) =>
+    category.treatments.map((treatment) => [treatment.slug, treatment.price] as const)
+  )
+);
+
+export function getPopularTreatmentHighlights() {
+  return popularTreatmentHighlights.map((item) => ({
+    ...item,
+    price: treatmentPriceBySlug.get(item.priceTreatmentSlug) || 'Consultation required',
+  }));
+}
 
 export const resultCases = [
   {

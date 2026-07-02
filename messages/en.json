@@ -1942,6 +1942,45 @@
         }
       }
     },
+    "popularTreatments": {
+      "eyebrow": "Popular prices",
+      "title": "Popular treatments & starting prices.",
+      "description": "A quick way to compare the most-requested appointments before opening the full pricelist.",
+      "viewPricelist": "View full pricelist",
+      "priceLabel": "Starting price",
+      "items": {
+        "antiWrinkle": {
+          "title": "Botox / anti-wrinkle injections",
+          "description": "Expression-line treatment planned conservatively after consultation.",
+          "linkLabel": "View treatment"
+        },
+        "dermalFillers": {
+          "title": "Dermal fillers",
+          "description": "Volume and contour support for lips, cheeks, jawline, and facial balance.",
+          "linkLabel": "View filler options"
+        },
+        "skinpen": {
+          "title": "SkinPen microneedling",
+          "description": "Collagen-stimulating microneedling for texture, scars, and fine lines.",
+          "linkLabel": "View treatment"
+        },
+        "fireIce": {
+          "title": "Fire & Ice Peel",
+          "description": "A professional resurfacing peel for glow, texture, and event-ready skin.",
+          "linkLabel": "View treatment"
+        },
+        "nails": {
+          "title": "Nail services",
+          "description": "Manicure, pedicure, and nail finishing with clean shaping and detailed care.",
+          "linkLabel": "View services"
+        },
+        "lashes": {
+          "title": "Lash services",
+          "description": "Lash lift, styling, and finishing appointments shaped around your eyes.",
+          "linkLabel": "View services"
+        }
+      }
+    },
     "stats": {
       "item1": {
         "label": "Consultation-first plans"

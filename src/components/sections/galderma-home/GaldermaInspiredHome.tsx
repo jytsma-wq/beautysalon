@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { siteConfig } from '@/data/site-config';
-import { portfolioHighlights, proofStats } from '@/data/homepage';
+import { getPopularTreatmentHighlights, portfolioHighlights, proofStats } from '@/data/homepage';
 import { RevealOnScroll } from '@/components/effects/RevealOnScroll';
 import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 import {
@@ -134,6 +134,71 @@ function PortfolioSection() {
   );
 }
 
+function PopularTreatmentsSection() {
+  const t = useTranslations('homeEditorial');
+  const shouldReduceMotion = useHydratedReducedMotion();
+  const items = getPopularTreatmentHighlights().map((item) => ({
+    ...item,
+    title: t(`popularTreatments.items.${item.id}.title`),
+    description: t(`popularTreatments.items.${item.id}.description`),
+    linkLabel: t(`popularTreatments.items.${item.id}.linkLabel`),
+  }));
+
+  return (
+    <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+      <div className="mx-auto max-w-7xl">
+        <RevealOnScroll className="mb-14 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <SectionHeading
+            eyebrow={t('popularTreatments.eyebrow')}
+            title={t('popularTreatments.title')}
+            description={t('popularTreatments.description')}
+          />
+          <Link
+            href="/pricelist"
+            className="inline-flex h-12 items-center self-start border border-[#241f1b] px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+          >
+            {t('popularTreatments.viewPricelist')}
+          </Link>
+        </RevealOnScroll>
+
+        <div className="grid gap-px bg-stone-200 md:grid-cols-2 xl:grid-cols-3">
+          {items.map((item, index) => (
+            <motion.article
+              key={item.id}
+              className="bg-white"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+              whileHover={shouldReduceMotion ? undefined : { y: -8 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.45, delay: index * 0.06, ease: 'easeOut' }}
+            >
+              <Link href={item.href} className="group flex min-h-72 h-full flex-col p-7 md:p-9">
+                <p className="text-[0.68rem] font-medium uppercase tracking-[0.2em] text-[#8d6f58]">
+                  {t('popularTreatments.priceLabel')}
+                </p>
+                <p className="mt-3 font-sans text-3xl font-light text-[#241f1b]">
+                  {item.price}
+                </p>
+                <h3 className="mt-8 font-sans text-3xl font-light text-[#241f1b]">
+                  {item.title}
+                </h3>
+                <p className="mt-4 grow text-sm leading-7 text-stone-600">
+                  {item.description}
+                </p>
+                <span className="mt-7 inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-[#8d6f58]">
+                  {item.linkLabel}
+                  <span className="h-px w-7 bg-current transition-transform duration-300 group-hover:translate-x-2" />
+                </span>
+              </Link>
+            </motion.article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function StatsSection() {
   const t = useTranslations('homeEditorial');
 
@@ -218,6 +283,7 @@ export function GaldermaInspiredHome() {
       </section>
 
       <PortfolioSection />
+      <PopularTreatmentsSection />
       <StatsSection />
 
       <section className="bg-[#f7f2eb] px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">

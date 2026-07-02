@@ -2157,6 +2157,45 @@
         }
       }
     },
+    "popularTreatments": {
+      "eyebrow": "Popüler fiyatlar",
+      "title": "Popüler uygulamalar ve başlangıç fiyatları.",
+      "description": "Tam fiyat listesine geçmeden önce en çok talep edilen randevuları hızlıca karşılaştırın.",
+      "viewPricelist": "Tam fiyat listesini görüntüle",
+      "priceLabel": "Başlangıç fiyatı",
+      "items": {
+        "antiWrinkle": {
+          "title": "Botox / kırışıklık karşıtı enjeksiyonlar",
+          "description": "Mimik çizgileri için konsültasyon sonrası kontrollü planlanan uygulama.",
+          "linkLabel": "Uygulamayı gör"
+        },
+        "dermalFillers": {
+          "title": "Dermal dolgular",
+          "description": "Dudak, yanak, çene hattı ve yüz dengesi için hacim ve kontur desteği.",
+          "linkLabel": "Dolgu seçenekleri"
+        },
+        "skinpen": {
+          "title": "SkinPen mikro iğneleme",
+          "description": "Doku, izler ve ince çizgiler için kolajen destekli mikro iğneleme.",
+          "linkLabel": "Uygulamayı gör"
+        },
+        "fireIce": {
+          "title": "Fire & Ice Peel",
+          "description": "Işıltı, doku ve özel günlere hazır cilt için profesyonel yenileyici peeling.",
+          "linkLabel": "Uygulamayı gör"
+        },
+        "nails": {
+          "title": "Tırnak hizmetleri",
+          "description": "Temiz şekillendirme ve detaylı bakım ile manikür, pedikür ve tırnak bitişleri.",
+          "linkLabel": "Hizmetleri gör"
+        },
+        "lashes": {
+          "title": "Kirpik hizmetleri",
+          "description": "Göz şeklinize göre planlanan kirpik liftingi, şekillendirme ve bitiş randevuları.",
+          "linkLabel": "Hizmetleri gör"
+        }
+      }
+    },
     "stats": {
       "item1": {
         "label": "Konsültasyon öncelikli planlar"
