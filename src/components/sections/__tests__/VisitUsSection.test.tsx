@@ -71,9 +71,9 @@ describe('VisitUsSection', () => {
       'href',
       'tel:+995577345767'
     );
-    expect(screen.getByRole('link', { name: `WhatsApp ${siteConfig.contact.phone}` })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /whatsapp \+995 577 28 68 55/i })).toHaveAttribute(
       'href',
-      'https://wa.me/995577345767'
+      'https://wa.me/995577286855'
     );
 
     const map = screen.getByTitle('Map to Silk Beauty Salon');
