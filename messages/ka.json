@@ -46,6 +46,9 @@
     "closeMenu": "მენიუს დახურვა",
     "call": "Silk Beauty Salon-ში დარეკვა",
     "whatsapp": "Silk Beauty Salon-ს WhatsApp-ზე მიწერა",
+    "whatsappShort": "WhatsApp",
+    "bookNow": "დაჯავშნეთ ახლა",
+    "stickyBookNowLabel": "დაჯავშნეთ ვიზიტი Silk Beauty Salon-ში",
     "stickyBookingLabel": "სწრაფი მობილური დაჯავშნის მოქმედებები"
   },
   "header": {

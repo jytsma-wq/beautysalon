@@ -46,6 +46,9 @@
     "closeMenu": "Закрыть меню",
     "call": "Позвонить в Silk Beauty Salon",
     "whatsapp": "Написать в Silk Beauty Salon в WhatsApp",
+    "whatsappShort": "WhatsApp",
+    "bookNow": "Записаться сейчас",
+    "stickyBookNowLabel": "Записаться в Silk Beauty Salon",
     "stickyBookingLabel": "Быстрые действия для записи с телефона"
   },
   "header": {

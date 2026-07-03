@@ -46,6 +46,9 @@
     "closeMenu": "Close menu",
     "call": "Call Silk Beauty Salon",
     "whatsapp": "Message Silk Beauty Salon on WhatsApp",
+    "whatsappShort": "WhatsApp",
+    "bookNow": "Book Now",
+    "stickyBookNowLabel": "Book an appointment at Silk Beauty Salon",
     "stickyBookingLabel": "Fast mobile booking actions"
   },
   "header": {

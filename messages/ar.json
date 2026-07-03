@@ -46,6 +46,9 @@
     "closeMenu": "إغلاق القائمة",
     "call": "اتصل بصالون سيلك بيوتي",
     "whatsapp": "راسل صالون سيلك بيوتي على واتساب",
+    "whatsappShort": "واتساب",
+    "bookNow": "احجز الآن",
+    "stickyBookNowLabel": "احجز موعدًا في صالون Silk Beauty",
     "stickyBookingLabel": "إجراءات حجز سريعة على الهاتف"
   },
   "header": {

@@ -46,6 +46,9 @@
     "closeMenu": "Menüyü kapat",
     "call": "Silk Beauty Salon'u ara",
     "whatsapp": "Silk Beauty Salon'a WhatsApp'tan yaz",
+    "whatsappShort": "WhatsApp",
+    "bookNow": "Şimdi Randevu Al",
+    "stickyBookNowLabel": "Silk Beauty Salon'da randevu al",
     "stickyBookingLabel": "Hızlı mobil rezervasyon işlemleri"
   },
   "header": {
