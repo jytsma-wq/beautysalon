@@ -26,6 +26,28 @@ Browser verification:
 - RTL mobile `/ar`: page direction was `rtl`; Visit Us rendered with localized Arabic text, real address text, lazy iframe title, no console warnings/errors, and no horizontal overflow.
 - Locale smoke check: `/en`, `/ka`, `/ru`, `/tr`, `/ar`, and `/he` returned HTTP 200 from the local production preview.
 
+## 2026-07-03 - Hero LCP image optimization
+
+Scope:
+- Homepage hero image loading behavior only.
+- Hero layout, copy, crop intent, colors, typography, header, footer, mobile menu, booking CTA, WhatsApp CTA, sticky mobile CTA, routes, analytics, and email behavior were not intentionally changed.
+
+Expected visual result:
+- The homepage hero remains visually unchanged while the first hero slide image receives explicit preload/eager/high-priority loading hints.
+- Non-active carousel images stay lazy-loaded with low fetch priority.
+- The responsive image candidate is smaller on desktop because the `sizes` value now matches the actual 50% hero image column.
+
+Browser verification:
+- Local production preview used: `http://127.0.0.1:3003`.
+- Desktop `/en` at 1366px: hero image rendered from the same Unsplash photo with upstream `w=1920`, selected Next image width `w=750`, `loading="eager"`, `fetchpriority="high"`, no console errors, no page errors, and no horizontal overflow.
+- Mobile `/en` at 390px: hero image rendered from the same Unsplash photo with upstream `w=1920`, selected Next image width `w=1200`, `loading="eager"`, `fetchpriority="high"`, no console errors, no page errors, and no horizontal overflow.
+- Mobile menu: existing menu opened successfully and retained the `/en/book` booking link.
+- Language switcher: dropdown exposed all six locale links for `/en`, `/ka`, `/ru`, `/tr`, `/ar`, and `/he`.
+- Booking CTA and sticky mobile CTA: `/en/book` link remained present and the sticky mobile Book Now action appeared after scroll.
+- WhatsApp CTA: sticky mobile WhatsApp link remained `https://wa.me/995577286855`.
+- RTL mobile `/ar`: page direction was `rtl`; hero image rendered with the same loading behavior, no console errors, no page errors, and no horizontal overflow.
+- Locale smoke check: `/en`, `/ka`, `/ru`, `/tr`, `/ar`, and `/he` returned HTTP 200 from the local production preview.
+
 ## 2026-07-03 - Mobile sticky CTA
 
 Scope:

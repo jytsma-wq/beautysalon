@@ -7,7 +7,7 @@ export const homeHeroSlides = [
     description:
       "Natural-looking injectables, skin quality treatments, and advanced device procedures planned around your anatomy, skin health, and lifestyle.",
     image:
-      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=2200&q=85",
+      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&q=85",
     href: "/book",
     cta: "Book a consultation",
   },
@@ -17,7 +17,7 @@ export const homeHeroSlides = [
     description:
       "From texture and pigmentation to hydration, firmness, and facial balance, every plan begins with a skin-first diagnosis.",
     image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=2200&q=85",
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=85",
     href: "/conditions",
     cta: "Explore concerns",
   },
@@ -27,7 +27,7 @@ export const homeHeroSlides = [
     description:
       "Dermal fillers and anti-wrinkle treatments delivered with restraint, symmetry, and respect for natural expression.",
     image:
-      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=2200&q=85",
+      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1920&q=85",
     href: "/treatments",
     cta: "View treatments",
   },

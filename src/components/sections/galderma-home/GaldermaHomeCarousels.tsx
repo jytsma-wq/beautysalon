@@ -159,9 +159,11 @@ export function ClinicalHeroCarousel() {
                       src={slide.image}
                       alt={`Silk Beauty Salon in Batumi, Georgia - ${slide.title}`}
                       fill
-                      priority={index === 0}
+                      preload={index === 0}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      fetchPriority={index === 0 ? 'high' : 'low'}
                       className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 55vw"
+                      sizes="(max-width: 1023px) 100vw, 50vw"
                     />
                   </motion.div>
                   <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-black/20 to-transparent" />
