@@ -2,6 +2,8 @@
 
 ## 2026-07-03
 
+- Added a branch-only newsletter CSRF fix for staging validation: the footer now fetches a fresh `/api/csrf` token before posting to `/api/newsletter`, while the newsletter API remains strict against no-token requests.
+- Added regression coverage for footer newsletter CSRF submission and strict newsletter API rejection paths, plus staging validation documentation for the Hostinger 503 follow-up.
 - Removed the visible "Search phrases this page answers" keyword block from local SEO landing pages while keeping search phrases available for metadata.
 - Corrected the stale Arabic footer phone placeholder to the shared visible phone number and added regression coverage for localized contact data.
 - Added a localized homepage Visit Us section with real text address, shared opening-hours/contact data, Google Maps directions, and a lazy no-key Google Maps iframe near the lower conversion area.

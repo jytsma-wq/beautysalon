@@ -2,14 +2,16 @@
 
 import { FormEvent, useState } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { FacebookBrandIcon, InstagramBrandIcon, TikTokBrandIcon } from '@/components/icons';
 import { siteConfig } from '@/data/site-config';
 import { useAnnouncer } from '@/components/ui/announcer';
+import { fetchClientCsrfToken } from '@/lib/csrf-client';
 
 export function GaldermaFooter() {
   const currentYear = new Date().getFullYear();
+  const locale = useLocale();
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
   const tNewsletter = useTranslations('newsletter');
@@ -28,15 +30,23 @@ export function GaldermaFooter() {
     setStatusMessage(null);
 
     try {
-      const csrfToken =
-        document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') ?? '';
+      const csrfToken = await fetchClientCsrfToken();
+      if (!csrfToken) {
+        throw new Error(
+          tErrors('form.submitError', {
+            defaultValue: 'Failed to submit form. Please try again.',
+          })
+        );
+      }
+
       const response = await fetch('/api/newsletter', {
         method: 'POST',
+        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/json',
           'X-CSRF-Token': csrfToken,
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, locale, _csrf: csrfToken }),
       });
       const data = await response.json().catch(() => null);
 

@@ -2,6 +2,20 @@
 
 import { useEffect, useState } from 'react';
 
+export async function fetchClientCsrfToken(): Promise<string | null> {
+  const response = await fetch('/api/csrf', {
+    cache: 'no-store',
+    credentials: 'same-origin',
+  });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const data = (await response.json().catch(() => null)) as { token?: unknown } | null;
+  return typeof data?.token === 'string' && data.token ? data.token : null;
+}
+
 /**
  * Hook for client-side CSRF token retrieval.
  * Prefer the server-rendered meta tag, then request a token and matching cookie.
@@ -22,20 +36,10 @@ export function useClientCsrfToken(): string | null {
 
     let cancelled = false;
 
-    fetch('/api/csrf', {
-      cache: 'no-store',
-      credentials: 'same-origin',
-    })
-      .then(async (response) => {
-        if (!response.ok) {
-          return null;
-        }
-
-        return (await response.json()) as { token?: string };
-      })
-      .then((data) => {
-        if (!cancelled && data?.token) {
-          setToken(data.token);
+    fetchClientCsrfToken()
+      .then((csrfToken) => {
+        if (!cancelled && csrfToken) {
+          setToken(csrfToken);
         }
       })
       .catch(() => {
