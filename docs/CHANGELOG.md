@@ -2,6 +2,7 @@
 
 ## 2026-07-03
 
+- Fixed the footer newsletter "Join Our World" form to fetch a fresh CSRF token immediately before submission, preventing live `Invalid CSRF token` errors when no server-rendered token meta tag exists.
 - Removed the visible "Search phrases this page answers" keyword block from local SEO landing pages while keeping search phrases available for metadata.
 - Corrected the stale Arabic footer phone placeholder to the shared visible phone number and added regression coverage for localized contact data.
 - Added a localized homepage Visit Us section with real text address, shared opening-hours/contact data, Google Maps directions, and a lazy no-key Google Maps iframe near the lower conversion area.
