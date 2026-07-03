@@ -20,24 +20,6 @@ export function GaldermaFooter() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
-  const getFreshCsrfToken = async () => {
-    const response = await fetch('/api/csrf', {
-      cache: 'no-store',
-      credentials: 'same-origin',
-    });
-    const data = await response.json().catch(() => null);
-
-    if (!response.ok || typeof data?.token !== 'string') {
-      throw new Error(
-        tErrors('form.submitError', {
-          defaultValue: 'Failed to submit form. Please try again.',
-        })
-      );
-    }
-
-    return data.token;
-  };
-
   const handleNewsletterSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!email.trim()) return;
@@ -46,15 +28,15 @@ export function GaldermaFooter() {
     setStatusMessage(null);
 
     try {
-      const csrfToken = await getFreshCsrfToken();
+      const csrfToken =
+        document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') ?? '';
       const response = await fetch('/api/newsletter', {
         method: 'POST',
-        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/json',
           'X-CSRF-Token': csrfToken,
         },
-        body: JSON.stringify({ email, _csrf: csrfToken }),
+        body: JSON.stringify({ email }),
       });
       const data = await response.json().catch(() => null);
 
