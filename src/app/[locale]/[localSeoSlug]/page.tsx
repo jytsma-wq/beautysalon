@@ -8,7 +8,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Search,
   Shield,
   Sparkles,
 } from 'lucide-react';
@@ -175,29 +174,6 @@ export default async function LocalSeoLandingPage({ params }: Props) {
                 sizes="(max-width: 1024px) 100vw, 52vw"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-[#e8e4df] bg-white">
-        <div className="container-custom py-8">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-            <div className="flex items-center gap-3">
-              <Search className="h-5 w-5 text-[#8d6f58]" />
-              <h2 className="font-sans text-xl font-light text-[#241f1b]">
-                {content.searchTitle}
-              </h2>
-            </div>
-            <ul className="flex flex-wrap gap-3">
-              {content.searchPhrases.map((phrase) => (
-                <li
-                  key={phrase}
-                  className="rounded-md border border-[#d8cbbb] px-4 py-2 text-sm text-stone-700"
-                >
-                  {phrase}
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
