@@ -17,6 +17,29 @@ const newsletterSchema = z.object({
   locale: z.string().default('en'),
 });
 
+function isSameOriginJsonRequest(request: NextRequest): boolean {
+  const contentType = request.headers.get('content-type')?.toLowerCase() ?? '';
+  if (!contentType.includes('application/json')) {
+    return false;
+  }
+
+  const secFetchSite = request.headers.get('sec-fetch-site');
+  const browserSameSite = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
+  const origin = request.headers.get('origin');
+
+  if (!origin) {
+    return browserSameSite;
+  }
+
+  try {
+    const originUrl = new URL(origin);
+    const requestUrl = new URL(request.url);
+    return originUrl.protocol === requestUrl.protocol && originUrl.host === requestUrl.host;
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const headers = request.headers;
@@ -26,7 +49,7 @@ export async function POST(request: NextRequest) {
       'unknown';
 
     const csrfValid = await verifyCsrfToken(request);
-    if (!csrfValid) {
+    if (!csrfValid && !isSameOriginJsonRequest(request)) {
       await logSecurityEvent({
         type: 'csrf_fail',
         ip,
