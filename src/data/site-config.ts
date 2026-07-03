@@ -16,7 +16,7 @@ export const siteConfig = {
     postcode: "6000",
     country: "Georgia",
     phone: "+995 577 34 57 67",
-    whatsappPhone: "+995 577 28 68 55",
+    whatsappPhone: "+995 577 34 57 67",
     email: "info@silkbeautysalon.online"
   },
   

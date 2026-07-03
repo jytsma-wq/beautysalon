@@ -3,6 +3,7 @@ import { act, cleanup, render, screen, waitFor } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import enMessages from '../../../../messages/en.json';
+import { siteConfig } from '@/data/site-config';
 import {
   getWhatsAppHref,
   shouldHideStickyMobileBarForPath,
@@ -207,7 +208,7 @@ describe('StickyMobileBookingBar', () => {
 
     expect(bar).toHaveClass('grid-cols-2');
     expect(bookLink).toHaveAttribute('href', '/book');
-    expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/995577286855');
+    expect(whatsappLink).toHaveAttribute('href', getWhatsAppHref(siteConfig.contact.phone));
     expect(whatsappLink).toHaveAttribute('target', '_blank');
     expect(screen.getByText('Book Now')).toBeInTheDocument();
     expect(screen.getByText('WhatsApp')).toBeInTheDocument();
@@ -283,8 +284,9 @@ describe('StickyMobileBookingBar', () => {
 
   it('handles missing WhatsApp numbers without creating an invalid href', () => {
     expect(getWhatsAppHref('')).toBeUndefined();
-    expect(getWhatsAppHref('+995 577 286 855')).toBe('https://wa.me/995577286855');
-    expect(getWhatsAppHref('+995-577-286-855')).toBe('https://wa.me/995577286855');
+    expect(getWhatsAppHref()).toBe(getWhatsAppHref(siteConfig.contact.phone));
+    expect(getWhatsAppHref('+995 577 345 767')).toBe('https://wa.me/995577345767');
+    expect(getWhatsAppHref('+995-577-345-767')).toBe('https://wa.me/995577345767');
   });
 
   it('recognizes localized booking paths as sticky-bar exclusions', () => {

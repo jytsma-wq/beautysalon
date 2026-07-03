@@ -23,4 +23,8 @@ describe('localized contact data', () => {
 
     expect(arMessages.footer.phone).toContain(siteConfig.contact.phone);
   });
+
+  it('keeps the public WhatsApp number aligned with the shared visible phone number', () => {
+    expect(siteConfig.contact.whatsappPhone).toBe(siteConfig.contact.phone);
+  });
 });

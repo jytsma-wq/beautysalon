@@ -4,6 +4,7 @@
 
 - Removed the visible "Search phrases this page answers" keyword block from local SEO landing pages while keeping search phrases available for metadata.
 - Corrected the stale Arabic footer phone placeholder to the shared visible phone number and added regression coverage for localized contact data.
+- Aligned the shared WhatsApp contact number with the public phone number so header/footer, Visit Us, sticky CTA, and WhatsApp links use consistent contact data.
 - Added a localized homepage Visit Us section with real text address, shared opening-hours/contact data, Google Maps directions, and a lazy no-key Google Maps iframe near the lower conversion area.
 - Updated the sticky mobile CTA to hide while protected lower-page sections are visible, preventing overlap with the Visit Us map/content on mobile.
 - Optimized homepage hero image loading for LCP by switching the first slide image to explicit preload/eager/high fetch priority, lowering non-active slide priority, tightening responsive image sizes, and capping hero source images to 1920px without changing hero design or copy.
