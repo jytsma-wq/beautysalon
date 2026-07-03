@@ -1,45 +1,130 @@
 import { siteConfig } from "@/data/site-config"
-import { getSiteUrl } from '@/lib/seo';
+import { locales, type Locale } from '@/i18n';
+import { getCanonicalUrl, getSiteUrl } from '@/lib/seo';
 import { getNonce } from '@/lib/nonce';
 
-export function generateLocalBusinessSchema(locale: string = "en") {
-  const localeNames: Record<string, string> = {
-    en: "Silk Beauty Salon",
-    ka: "სილქ ბიუთი სალონი",
-    ru: "Салон Красоты Силк",
-    tr: "Silk Beauty Salon",
-    ar: "صالون الجمال سيلك",
-    he: "סלון יופי סילק"
-  }
+type SchemaPrimitive = string | number | boolean;
+type SchemaValue = SchemaPrimitive | SchemaObject | SchemaValue[];
+interface SchemaObject {
+  [key: string]: SchemaValue;
+}
 
-  const descriptions: Record<string, string> = {
-    en: "Beauty salon in Batumi, Georgia offering aesthetic treatments, Botox, dermal fillers, laser treatments, nails, lashes, and advanced skin care.",
-    ka: "ბათუმის წამალი ესთეტიკის კლინიკა, ბოტოქსი, დერმალური ფილერები, ლაზერული მკურნალობა და გაუმჯობესებული კანის მოვლა.",
-    ru: "Ведущая клиника медицинской эстетики в Батуми, Грузия. Предлагаем ботокс, дермальные наполнители, лазерные процедуры и уход за кожей.",
-    tr: "Batumi'de Botox, dermal dolgular, lazer tedavileri ve ileri cilt bakimi sunan premier tibbi estetik klinigi.",
-    ar: "عيادة الجمال الطبي الرائدة في باتومي جورجيا تقدم البوتوكس والحشوات الجلدية وعلاجات الليزر والعناية المتقدمة بالبشرة.",
-    he: "קליניקת אסתטיקה רפואית מובילה בבטומי גאורגיה המציעה בוטוקס, מילוי עור, טיפולי לייזר וטיפוח עור מתקדם."
-  }
+const supportedLocaleSet = new Set<string>(locales);
 
+const dayNameByBusinessHoursKey = {
+  monday: 'Monday',
+  tuesday: 'Tuesday',
+  wednesday: 'Wednesday',
+  thursday: 'Thursday',
+  friday: 'Friday',
+  saturday: 'Saturday',
+  sunday: 'Sunday',
+} as const;
+
+type BusinessHoursKey = keyof typeof dayNameByBusinessHoursKey;
+type DayOfWeek = (typeof dayNameByBusinessHoursKey)[BusinessHoursKey];
+type OpeningHoursSpecification = {
+  "@type": "OpeningHoursSpecification";
+  dayOfWeek: DayOfWeek;
+  opens: string;
+  closes: string;
+};
+
+function getSafeLocale(locale: string): Locale {
+  return supportedLocaleSet.has(locale) ? (locale as Locale) : 'en';
+}
+
+function absoluteSiteUrl(path: string): string {
   const siteUrl = getSiteUrl();
+  return `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`;
+}
 
+function parseBusinessHours(hours: string): { opens: string; closes: string } | undefined {
+  const match = hours.match(/^(\d{2}:\d{2})\s*-\s*(\d{2}:\d{2})$/);
+
+  if (!match) {
+    return undefined;
+  }
+
+  return {
+    opens: match[1],
+    closes: match[2],
+  };
+}
+
+export function getOpeningHoursSpecification() {
+  const specifications: OpeningHoursSpecification[] = [];
+
+  for (const [businessHoursKey, dayOfWeek] of Object.entries(dayNameByBusinessHoursKey) as Array<[BusinessHoursKey, DayOfWeek]>) {
+    const hours = siteConfig.businessHours[businessHoursKey];
+    const parsedHours = parseBusinessHours(hours);
+
+    if (parsedHours) {
+      specifications.push({
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": dayOfWeek,
+        "opens": parsedHours.opens,
+        "closes": parsedHours.closes,
+      });
+    }
+  }
+
+  return specifications;
+}
+
+function removeEmptySchemaValues(value: unknown): SchemaValue | undefined {
+  if (value === undefined || value === null || value === '') {
+    return undefined;
+  }
+
+  if (Array.isArray(value)) {
+    const cleanedItems = value
+      .map(removeEmptySchemaValues)
+      .filter((item): item is SchemaValue => item !== undefined);
+
+    return cleanedItems.length > 0 ? cleanedItems : undefined;
+  }
+
+  if (typeof value === 'object') {
+    const cleanedEntries = Object.entries(value as Record<string, unknown>)
+      .map(([key, item]) => [key, removeEmptySchemaValues(item)] as const)
+      .filter((entry): entry is readonly [string, SchemaValue] => entry[1] !== undefined);
+
+    return cleanedEntries.length > 0 ? Object.fromEntries(cleanedEntries) as SchemaObject : undefined;
+  }
+
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+    return value;
+  }
+
+  return undefined;
+}
+
+export function serializeJsonLd(schema: SchemaObject): string {
+  return JSON.stringify(removeEmptySchemaValues(schema)).replace(/</g, '\\u003c');
+}
+
+export function buildLocalBusinessSchema(locale: string = "en"): SchemaObject {
+  const safeLocale = getSafeLocale(locale);
   const schema = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    "@id": `${siteUrl}/#beautysalon`,
-    "name": localeNames[locale] || localeNames.en,
+    "@id": `${getSiteUrl()}/#beautysalon`,
+    "name": siteConfig.name,
     "legalName": siteConfig.legalName,
-    "alternateName": "Silk Beauty Salon Batumi",
-    "description": descriptions[locale] || descriptions.en,
-    "url": siteUrl,
+    "alternateName": siteConfig.legalName,
+    "description": siteConfig.description,
+    "url": getCanonicalUrl(safeLocale),
+    "mainEntityOfPage": getCanonicalUrl(safeLocale),
+    "inLanguage": safeLocale,
     "telephone": siteConfig.contact.phone,
     "email": siteConfig.contact.email,
     "priceRange": "GEL $$",
     "image": [
-      `${siteUrl}/images/hero-poster.jpg`,
-      `${siteUrl}/opengraph-image.png`
+      absoluteSiteUrl('/images/hero-poster.jpg'),
+      absoluteSiteUrl(siteConfig.logo.image)
     ],
-    "logo": `${siteUrl}${siteConfig.logo.schemaImage}`,
+    "logo": absoluteSiteUrl(siteConfig.logo.schemaImage),
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteConfig.contact.address,
@@ -47,11 +132,6 @@ export function generateLocalBusinessSchema(locale: string = "en") {
       "addressRegion": siteConfig.contact.region,
       "postalCode": siteConfig.contact.postcode,
       "addressCountry": siteConfig.contact.country
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "41.6417",
-      "longitude": "41.6372"
     },
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Zurab%20Gorgiladze%2063%2C%20Batumi%2C%20Georgia",
     "areaServed": [
@@ -68,39 +148,33 @@ export function generateLocalBusinessSchema(locale: string = "en") {
         "name": "Georgia"
       }
     ],
-    "openingHours": [
-      "Mo-Sa 10:00-22:00",
-      "Su 11:00-22:00"
-    ],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "10:00", "closes": "22:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "22:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "22:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "22:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "22:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "22:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "22:00" }
-    ],
-    "founder": {
-      "@type": "Person",
-      "name": siteConfig.founderName,
-      "jobTitle": "Owner and Medical Aesthetic Practitioner"
-    },
-    "employee": siteConfig.team.map((member) => ({
-      "@type": "Person",
-      "name": member.name,
-      "jobTitle": member.role,
-      "knowsLanguage": member.languages
-    })),
+    "openingHoursSpecification": getOpeningHoursSpecification(),
     "sameAs": [
       siteConfig.social.instagram,
       siteConfig.social.facebook,
       siteConfig.social.googleBusinessProfile,
-      "https://www.tiktok.com/@silkbeautybatumi"
-    ].filter(Boolean)
+      siteConfig.social.tiktok
+    ].filter(Boolean),
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "name": "Book an appointment",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": getCanonicalUrl(safeLocale, '/book'),
+        "inLanguage": safeLocale,
+        "actionPlatform": [
+          "https://schema.org/DesktopWebPlatform",
+          "https://schema.org/MobileWebPlatform"
+        ]
+      }
+    }
   }
 
-  return JSON.stringify(schema)
+  return removeEmptySchemaValues(schema) as SchemaObject;
+}
+
+export function generateLocalBusinessSchema(locale: string = "en") {
+  return serializeJsonLd(buildLocalBusinessSchema(locale));
 }
 
 /**
