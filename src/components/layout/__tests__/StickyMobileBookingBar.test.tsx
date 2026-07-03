@@ -94,16 +94,26 @@ function stubMatchMedia(matches: boolean) {
   };
 }
 
-function installPageFixtures({ heroBottom = 620, footerTop = 1600 } = {}) {
+function installPageFixtures({
+  heroBottom = 620,
+  footerTop = 1600,
+  protectedSectionTop,
+}: {
+  heroBottom?: number;
+  footerTop?: number;
+  protectedSectionTop?: number;
+} = {}) {
   document.body.innerHTML = `
     <main id="main-content">
       <section data-testid="hero-section"></section>
+      ${protectedSectionTop === undefined ? '' : '<section data-testid="protected-section" data-sticky-mobile-cta-safe-zone="true"></section>'}
     </main>
     <footer data-testid="site-footer"></footer>
   `;
 
   const heroSection = screen.getByTestId('hero-section');
   const footer = screen.getByTestId('site-footer');
+  const protectedSection = protectedSectionTop === undefined ? null : screen.getByTestId('protected-section');
 
   vi.spyOn(heroSection, 'getBoundingClientRect').mockImplementation(() =>
     createRect({
@@ -121,6 +131,16 @@ function installPageFixtures({ heroBottom = 620, footerTop = 1600 } = {}) {
       width: 390,
     })
   );
+  if (protectedSection) {
+    vi.spyOn(protectedSection, 'getBoundingClientRect').mockImplementation(() =>
+      createRect({
+        top: protectedSectionTop - window.scrollY,
+        bottom: protectedSectionTop + 520 - window.scrollY,
+        height: 520,
+        width: 390,
+      })
+    );
+  }
 }
 
 function renderStickyBar() {
@@ -236,6 +256,20 @@ describe('StickyMobileBookingBar', () => {
   it('does not render once the footer is in view', () => {
     cleanup();
     installPageFixtures({ footerTop: 780 });
+    stubMatchMedia(true);
+    setScrollY(700);
+
+    renderStickyBar();
+    act(() => {
+      window.dispatchEvent(new Event('scroll'));
+    });
+
+    expect(screen.queryByRole('navigation', { name: /fast mobile booking actions/i })).toBeNull();
+  });
+
+  it('does not render while a protected section is in view', () => {
+    cleanup();
+    installPageFixtures({ protectedSectionTop: 780 });
     stubMatchMedia(true);
     setScrollY(700);
 

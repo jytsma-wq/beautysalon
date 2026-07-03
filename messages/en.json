@@ -2025,6 +2025,21 @@
       "bookNow": "Book now",
       "contactUs": "Contact us"
     },
+    "visitUs": {
+      "eyebrow": "Visit us",
+      "title": "Find us in central Batumi.",
+      "description": "Plan your appointment at Silk Beauty Salon on Zurab Gorgiladze Street, close to the city centre and easy to reach by taxi or on foot.",
+      "addressLabel": "Address",
+      "hoursLabel": "Opening hours",
+      "weekdays": "Mon - Fri",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "phoneLabel": "Call",
+      "whatsappLabel": "WhatsApp",
+      "directions": "Get directions",
+      "directionsAria": "Get directions to {salonName} on Google Maps",
+      "mapTitle": "Map to {salonName}"
+    },
     "journal": {
       "eyebrow": "Skin trends",
       "title": "Aesthetic insight, without the noise.",

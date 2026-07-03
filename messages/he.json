@@ -2240,6 +2240,21 @@
       "bookNow": "קבעו עכשיו",
       "contactUs": "צרו קשר"
     },
+    "visitUs": {
+      "eyebrow": "בקרו אותנו",
+      "title": "מצאו אותנו במרכז בתומי.",
+      "description": "תכננו את הביקור ב-Silk Beauty Salon ברחוב Zurab Gorgiladze, קרוב למרכז העיר ונגיש בקלות במונית או ברגל.",
+      "addressLabel": "כתובת",
+      "hoursLabel": "שעות פתיחה",
+      "weekdays": "ב׳ - ו׳",
+      "saturday": "שבת",
+      "sunday": "ראשון",
+      "phoneLabel": "התקשרו",
+      "whatsappLabel": "WhatsApp",
+      "directions": "קבלו הנחיות",
+      "directionsAria": "קבלו הנחיות אל {salonName} ב-Google Maps",
+      "mapTitle": "מפה אל {salonName}"
+    },
     "journal": {
       "eyebrow": "מגמות עור",
       "title": "תובנות אסתטיות בלי רעש.",

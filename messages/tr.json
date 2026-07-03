@@ -2240,6 +2240,21 @@
       "bookNow": "Şimdi randevu al",
       "contactUs": "Bize ulaşın"
     },
+    "visitUs": {
+      "eyebrow": "Bizi ziyaret edin",
+      "title": "Batum merkezinde bizi bulun.",
+      "description": "Randevunuzu Zurab Gorgiladze Caddesi'ndeki Silk Beauty Salon'da planlayın; şehir merkezine yakın, taksiyle veya yürüyerek kolay ulaşılır.",
+      "addressLabel": "Adres",
+      "hoursLabel": "Çalışma saatleri",
+      "weekdays": "Pzt - Cum",
+      "saturday": "Cumartesi",
+      "sunday": "Pazar",
+      "phoneLabel": "Ara",
+      "whatsappLabel": "WhatsApp",
+      "directions": "Yol tarifi al",
+      "directionsAria": "Google Maps'te {salonName} için yol tarifi al",
+      "mapTitle": "{salonName} haritası"
+    },
     "journal": {
       "eyebrow": "Cilt trendleri",
       "title": "Gürültüsüz estetik içgörü.",

@@ -8,6 +8,7 @@ import { Link } from '@/i18n/routing';
 import { siteConfig } from '@/data/site-config';
 import { getPopularTreatmentHighlights, portfolioHighlights, proofStats } from '@/data/homepage';
 import { RevealOnScroll } from '@/components/effects/RevealOnScroll';
+import { VisitUsSection } from '@/components/sections/VisitUsSection';
 import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 import {
   ClinicalHeroCarousel,
@@ -323,6 +324,7 @@ export function GaldermaInspiredHome() {
       </section>
 
       <SpecialistCta />
+      <VisitUsSection />
 
       <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">

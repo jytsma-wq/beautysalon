@@ -2615,6 +2615,21 @@
       "bookNow": "احجزي الآن",
       "contactUs": "تواصلي معنا"
     },
+    "visitUs": {
+      "eyebrow": "زورينا",
+      "title": "اعثري علينا في وسط باتومي.",
+      "description": "خططي لزيارتك إلى Silk Beauty Salon في شارع زوراب غورغيلادزه، بالقرب من وسط المدينة وبوصول سهل بسيارة أجرة أو سيرًا على الأقدام.",
+      "addressLabel": "العنوان",
+      "hoursLabel": "ساعات العمل",
+      "weekdays": "الاثنين - الجمعة",
+      "saturday": "السبت",
+      "sunday": "الأحد",
+      "phoneLabel": "اتصال",
+      "whatsappLabel": "واتساب",
+      "directions": "احصلي على الاتجاهات",
+      "directionsAria": "احصلي على الاتجاهات إلى {salonName} على Google Maps",
+      "mapTitle": "خريطة إلى {salonName}"
+    },
     "journal": {
       "eyebrow": "اتجاهات البشرة",
       "title": "رؤية تجميلية بلا ضجيج.",

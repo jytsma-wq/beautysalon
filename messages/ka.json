@@ -2234,6 +2234,21 @@
       "bookNow": "დაჯავშნა",
       "contactUs": "დაგვიკავშირდით"
     },
+    "visitUs": {
+      "eyebrow": "გვეწვიეთ",
+      "title": "გვიპოვეთ ბათუმის ცენტრში.",
+      "description": "დაგეგმეთ ვიზიტი Silk Beauty Salon-ში ზურაბ გორგილაძის ქუჩაზე, ქალაქის ცენტრთან ახლოს და მარტივად მისასვლელ ადგილას.",
+      "addressLabel": "მისამართი",
+      "hoursLabel": "სამუშაო საათები",
+      "weekdays": "ორშ - პარ",
+      "saturday": "შაბათი",
+      "sunday": "კვირა",
+      "phoneLabel": "დარეკვა",
+      "whatsappLabel": "WhatsApp",
+      "directions": "მარშრუტის ნახვა",
+      "directionsAria": "{salonName}-მდე მისვლის მარშრუტის ნახვა Google Maps-ზე",
+      "mapTitle": "რუკა {salonName}-მდე"
+    },
     "journal": {
       "eyebrow": "კანის ტენდენციები",
       "title": "ესთეტიკური ცოდნა ზედმეტი ხმაურის გარეშე.",

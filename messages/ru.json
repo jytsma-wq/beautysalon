@@ -2240,6 +2240,21 @@
       "bookNow": "Записаться",
       "contactUs": "Связаться с нами"
     },
+    "visitUs": {
+      "eyebrow": "Посетите нас",
+      "title": "Найдите нас в центре Батуми.",
+      "description": "Запланируйте визит в Silk Beauty Salon на улице Зураба Горгиладзе, рядом с центром города и с удобным доступом на такси или пешком.",
+      "addressLabel": "Адрес",
+      "hoursLabel": "Часы работы",
+      "weekdays": "Пн - Пт",
+      "saturday": "Суббота",
+      "sunday": "Воскресенье",
+      "phoneLabel": "Позвонить",
+      "whatsappLabel": "WhatsApp",
+      "directions": "Проложить маршрут",
+      "directionsAria": "Проложить маршрут до {salonName} в Google Maps",
+      "mapTitle": "Карта до {salonName}"
+    },
     "journal": {
       "eyebrow": "Тренды кожи",
       "title": "Эстетические знания без шума.",

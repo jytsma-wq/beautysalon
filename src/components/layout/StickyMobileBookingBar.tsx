@@ -16,6 +16,7 @@ type StickyBarState = {
   isMobile: boolean;
   hasPassedHero: boolean;
   isFooterVisible: boolean;
+  isProtectedSectionVisible: boolean;
 };
 
 export function getWhatsAppHref(phoneNumber: string = siteConfig.contact.whatsappPhone) {
@@ -49,6 +50,18 @@ function isFooterInView() {
   return footer.getBoundingClientRect().top < window.innerHeight - 16;
 }
 
+function isProtectedStickyCtaSectionInView() {
+  const protectedSection = document.querySelector('[data-sticky-mobile-cta-safe-zone="true"]');
+
+  if (!protectedSection) {
+    return false;
+  }
+
+  const rect = protectedSection.getBoundingClientRect();
+
+  return rect.top < window.innerHeight - 16 && rect.bottom > 16;
+}
+
 export function StickyMobileBookingBar() {
   const t = useTranslations('nav');
   const pathname = usePathname();
@@ -58,6 +71,7 @@ export function StickyMobileBookingBar() {
     isMobile: false,
     hasPassedHero: false,
     isFooterVisible: false,
+    isProtectedSectionVisible: false,
   });
 
   useEffect(() => {
@@ -71,6 +85,7 @@ export function StickyMobileBookingBar() {
         isMobile,
         hasPassedHero: isMobile ? window.scrollY >= getHeroTriggerPosition() : false,
         isFooterVisible: isMobile ? isFooterInView() : false,
+        isProtectedSectionVisible: isMobile ? isProtectedStickyCtaSectionInView() : false,
       });
     };
 
@@ -96,6 +111,7 @@ export function StickyMobileBookingBar() {
     !barState.isMobile ||
     !barState.hasPassedHero ||
     barState.isFooterVisible ||
+    barState.isProtectedSectionVisible ||
     showBanner ||
     shouldHideStickyMobileBarForPath(pathname)
   ) {
