@@ -2,11 +2,12 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Star } from 'lucide-react';
 import { Link } from '@/i18n/routing';
+import type { Locale } from '@/i18n';
 import { BeforeAfterSlider } from '@/components/gallery/BeforeAfterSlider';
 import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 import {
@@ -15,7 +16,7 @@ import {
   skinConcernHighlights,
   skinTrendArticles,
 } from '@/data/homepage';
-import { testimonials } from '@/data/testimonials';
+import { getTestimonialViewModel, testimonials } from '@/data/testimonials';
 
 function CarouselButton({
   direction,
@@ -326,6 +327,7 @@ export function ResultsCarousel() {
 
 export function ReviewsCarousel() {
   const t = useTranslations('homeEditorial');
+  const locale = useLocale() as Locale;
   const shouldReduceMotion = useHydratedReducedMotion();
   const reviews = testimonials.slice(0, 6);
   const {
@@ -366,7 +368,8 @@ export function ReviewsCarousel() {
       <div className="overflow-hidden [contain:layout_paint]" ref={emblaRef}>
         <div className="-ml-5 flex">
           {reviews.map((review) => {
-            const rating = review.rating ?? 5;
+            const reviewModel = getTestimonialViewModel(review, locale);
+            const rating = reviewModel.rating;
 
             return (
               <article
@@ -390,16 +393,36 @@ export function ReviewsCarousel() {
                       ))}
                     </div>
                     <blockquote className="font-sans text-2xl font-light leading-snug text-[#241f1b]">
-                      &ldquo;{review.quote}&rdquo;
+                      &ldquo;{reviewModel.quote}&rdquo;
                     </blockquote>
                   </div>
                   <figcaption className="mt-10 border-t border-stone-200 pt-5">
-                    <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#241f1b]">
-                      {review.author}
-                    </p>
-                    {review.role ? (
-                      <p className="mt-2 text-sm text-stone-500">{review.role}</p>
-                    ) : null}
+                    <div className="flex min-w-0 items-center gap-4">
+                      <div
+                        className="relative grid size-12 shrink-0 place-items-center overflow-hidden rounded-full border border-stone-200 bg-[#f7f2eb] text-[0.68rem] font-medium uppercase tracking-[0.12em] text-[#8d6f58]"
+                        aria-hidden="true"
+                      >
+                        {reviewModel.avatarUrl ? (
+                          <Image
+                            src={reviewModel.avatarUrl}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            sizes="48px"
+                          />
+                        ) : (
+                          <span>{reviewModel.initials}</span>
+                        )}
+                      </div>
+                      <div className="min-w-0">
+                        <p className="truncate text-sm font-medium uppercase tracking-[0.18em] text-[#241f1b]">
+                          {reviewModel.displayName}
+                        </p>
+                        {reviewModel.detailLabel ? (
+                          <p className="mt-2 text-sm text-stone-500">{reviewModel.detailLabel}</p>
+                        ) : null}
+                      </div>
+                    </div>
                   </figcaption>
                 </figure>
               </article>
