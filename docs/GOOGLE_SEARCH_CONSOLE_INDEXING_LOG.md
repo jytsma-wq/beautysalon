@@ -5,6 +5,133 @@ Phase: 3 - Google Search Console setup and indexing
 Branch: `codex/visibility-readiness-audit`
 Mode: public technical audit plus local SEO fix; no account-side GSC changes
 
+## Phase 2 Execution Update - 2026-07-04 14:02 Asia/Tbilisi
+
+This update attempted the Google Search Console setup/indexing phase from the current environment.
+
+Result: account-side Search Console execution is blocked because no verified Search Console connector, API session, or authenticated browser session was available in this workspace. No property was created, no verification method was changed, no sitemap was submitted, no URL Inspection requests were run, and no indexing requests were submitted.
+
+What was completed instead:
+
+- Rechecked all 61 requested priority URLs across English, Georgian, Russian, Turkish, Arabic, and Hebrew using public live HTML.
+- Rechecked live sitemap and robots.txt.
+- Confirmed public crawl/indexing signals for canonical-ready pages.
+- Identified URLs that should be held before indexing requests.
+- Recorded which metrics remain unavailable until verified GSC access exists.
+
+### Current GSC Access Status
+
+| Item | Status | Evidence / note |
+| --- | --- | --- |
+| Google Search Console access | Not confirmed / unavailable | No callable Search Console tool, verified API session, or authenticated GSC dashboard session was available. |
+| Domain property for `silkbeautysalon.online` | Not confirmed | Requires verified GSC access. DNS TXT verification requires explicit owner approval. |
+| URL-prefix property for `https://silkbeautysalon.online` | Not confirmed | Requires verified GSC access. |
+| New property created | No | No account-side changes were made. |
+| Verification method changed | No | No DNS, HTML file, meta tag, GA, or GTM verification change was made. |
+| Verification token exposed | No | No token values were read, stored, or committed. |
+
+### Current Sitemap Submission Status
+
+| Sitemap | Public status | GSC submission status |
+| --- | --- | --- |
+| `https://silkbeautysalon.online/sitemap.xml` | HTTP 200, `application/xml`, 516 `<loc>` entries | Not submitted in this session because verified GSC access was unavailable. |
+
+### Current Priority URL Readiness Summary
+
+Public live checks covered:
+
+- 61 priority URLs.
+- 0 HTTP failures.
+- 0 sitemap omissions.
+- 0 visible old placeholder phone occurrences.
+- 49 URLs ready for Search Console inspection and potential indexing request after access.
+- 6 `/pricelist` URLs blocked from indexing requests until canonical/hreflang is live.
+- 6 `/beauty-salon-batumi` URLs should be reviewed before indexing requests because they contain a visible `Popular local searches` block.
+
+### URL Inspection And Indexing Request Plan
+
+Important: the fields below are public-readiness findings, not real GSC URL Inspection output. GSC-only fields such as "URL is on Google", Google-selected canonical, crawl status, mobile usability, rich result eligibility, and indexing-request status are still unavailable.
+
+| URL group | Public HTTP/indexability | User-declared canonical | Hreflang | In sitemap | GSC URL Inspection | Indexing request recommendation |
+| --- | --- | --- | --- | --- | --- | --- |
+| Locale roots: `/en`, `/ka`, `/ru`, `/tr`, `/ar`, `/he` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Botox pages: `/{locale}/botox-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Dermal filler pages: `/{locale}/dermal-fillers-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Lip filler pages: `/{locale}/lip-fillers-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Skin treatment pages: `/{locale}/skin-treatment-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Acne treatment pages: `/{locale}/acne-treatment-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Nails pages: `/{locale}/nails-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Lashes/brows pages: `/{locale}/lashes-brows-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+| Beauty salon pages: `/{locale}/beauty-salon-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Inspect after access, but hold indexing requests until the visible `Popular local searches` block is reviewed or approved. |
+| Pricelist pages: `/{locale}/pricelist` | 200, no noindex | Missing | 0 alternates | Yes | Pending GSC access | Do not request indexing until canonical and hreflang are live. |
+| English booking page: `/en/book` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
+
+### Priority English URL Status
+
+| URL | Public readiness | GSC URL Inspection | Indexing request |
+| --- | --- | --- | --- |
+| `https://silkbeautysalon.online/en` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/beauty-salon-batumi` | Hold for visible SEO-heavy block review | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/botox-batumi` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/dermal-fillers-batumi` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/lip-fillers-batumi` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/skin-treatment-batumi` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/acne-treatment-batumi` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/nails-batumi` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/lashes-brows-batumi` | Ready | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/pricelist` | Blocked: missing canonical/hreflang | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/book` | Ready | Not inspected | Not submitted |
+
+### Priority Localized URL Status
+
+| Locale | Ready for inspection/indexing after access | Hold for SEO-heavy block review | Blocked until canonical/hreflang fix |
+| --- | --- | --- | --- |
+| Georgian `/ka` | `/ka`, `/ka/botox-batumi`, `/ka/dermal-fillers-batumi`, `/ka/lip-fillers-batumi`, `/ka/skin-treatment-batumi`, `/ka/acne-treatment-batumi`, `/ka/nails-batumi`, `/ka/lashes-brows-batumi` | `/ka/beauty-salon-batumi` | `/ka/pricelist` |
+| Russian `/ru` | `/ru`, `/ru/botox-batumi`, `/ru/dermal-fillers-batumi`, `/ru/lip-fillers-batumi`, `/ru/skin-treatment-batumi`, `/ru/acne-treatment-batumi`, `/ru/nails-batumi`, `/ru/lashes-brows-batumi` | `/ru/beauty-salon-batumi` | `/ru/pricelist` |
+| Turkish `/tr` | `/tr`, `/tr/botox-batumi`, `/tr/dermal-fillers-batumi`, `/tr/lip-fillers-batumi`, `/tr/skin-treatment-batumi`, `/tr/acne-treatment-batumi`, `/tr/nails-batumi`, `/tr/lashes-brows-batumi` | `/tr/beauty-salon-batumi` | `/tr/pricelist` |
+| Arabic `/ar` | `/ar`, `/ar/botox-batumi`, `/ar/dermal-fillers-batumi`, `/ar/lip-fillers-batumi`, `/ar/skin-treatment-batumi`, `/ar/acne-treatment-batumi`, `/ar/nails-batumi`, `/ar/lashes-brows-batumi` | `/ar/beauty-salon-batumi` | `/ar/pricelist` |
+| Hebrew `/he` | `/he`, `/he/botox-batumi`, `/he/dermal-fillers-batumi`, `/he/lip-fillers-batumi`, `/he/skin-treatment-batumi`, `/he/acne-treatment-batumi`, `/he/nails-batumi`, `/he/lashes-brows-batumi` | `/he/beauty-salon-batumi` | `/he/pricelist` |
+
+### GSC-Only Fields Still Pending
+
+The following requested fields require verified Search Console access and could not be read from public HTML:
+
+| Field | Current status |
+| --- | --- |
+| URL is on Google | Pending GSC access |
+| Google-selected canonical | Pending GSC access |
+| Last crawl / crawl status | Pending GSC access |
+| Mobile usability | Pending GSC access |
+| Rich result status as shown in GSC | Pending GSC access |
+| Indexing request submitted | No |
+| Pages report | Pending GSC access |
+| Sitemaps report | Pending GSC access |
+| Manual actions | Pending GSC access |
+| Security issues | Pending GSC access |
+| Core Web Vitals | Pending GSC access |
+| HTTPS report | Pending GSC access |
+| Links report | Pending GSC access |
+| Performance baseline | Pending GSC access |
+
+### Current Performance Baseline
+
+No private Search Console performance data is available in this environment.
+
+| Metric | Current value | Reason |
+| --- | --- | --- |
+| Total clicks | Not available | Requires verified GSC access |
+| Total impressions | Not available | Requires verified GSC access |
+| Average CTR | Not available | Requires verified GSC access |
+| Average position | Not available | Requires verified GSC access |
+| Top queries | Not available | Requires verified GSC access |
+| Top pages | Not available | Requires verified GSC access |
+| Countries | Not available | Requires verified GSC access |
+| Devices | Not available | Requires verified GSC access |
+
+### Next Check Date
+
+Recommended next check: 2026-07-11, or earlier immediately after verified Search Console access is available and the live `/pricelist` canonical/hreflang issue is resolved.
+
 ## Safety Rules Applied
 
 - No DNS records were changed.
