@@ -3,6 +3,7 @@ import type { AnchorHTMLAttributes, ImgHTMLAttributes, ReactNode } from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import LocalSeoLandingPage from '../page';
+import { localSeoLandingPages } from '@/data/local-seo-pages';
 
 vi.mock('next/image', () => ({
   default: ({
@@ -82,16 +83,20 @@ describe('LocalSeoLandingPage', () => {
   });
 
   it('does not render search phrase keyword blocks as visible page content', async () => {
-    const page = await LocalSeoLandingPage({
-      params: Promise.resolve({ locale: 'en', localSeoSlug: 'botox-batumi' }),
-    });
+    for (const localSeoPage of localSeoLandingPages) {
+      const page = await LocalSeoLandingPage({
+        params: Promise.resolve({ locale: 'en', localSeoSlug: localSeoPage.slug }),
+      });
 
-    render(page);
+      const { unmount } = render(page);
+      const content = localSeoPage.content.en;
 
-    expect(screen.queryByText('Search phrases this page answers')).not.toBeInTheDocument();
-    expect(screen.queryByText('Botox Batumi')).not.toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: /Why clients choose Silk for Botox in Batumi/i })
-    ).toBeInTheDocument();
+      expect(screen.queryByText(content.searchTitle)).not.toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', { name: content.benefitsTitle })
+      ).toBeInTheDocument();
+
+      unmount();
+    }
   });
 });
