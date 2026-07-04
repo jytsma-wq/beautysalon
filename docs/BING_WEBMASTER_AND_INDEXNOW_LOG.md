@@ -6,6 +6,87 @@ Phase: 4 - Bing Webmaster Tools and IndexNow
 Branch: `codex/visibility-readiness-audit`
 Mode: public technical audit plus owner-side setup plan; no Bing account changes
 
+## Phase 4 Execution Update - 2026-07-04 14:07 Asia/Tbilisi
+
+This update attempted the Bing Webmaster Tools setup phase from the current environment.
+
+Result: account-side Bing execution is blocked because no verified Bing Webmaster Tools connector, API session, or authenticated browser session was available. No Bing property was added or verified, no verification method was changed, no sitemap was submitted, no priority URLs were submitted, and no Bing SEO/crawl reports were reviewed.
+
+What was completed instead:
+
+- Rechecked the public sitemap and robots.txt.
+- Rechecked the requested priority Bing URL set for HTTP status, sitemap inclusion, noindex, canonical, and hreflang signals.
+- Re-scanned the repo for Bing verification files, `msvalidate.01`, IndexNow key files, IndexNow routes/helpers/jobs, and `api.indexnow.org` usage.
+- Updated the IndexNow recommendation without implementing it.
+
+### Current Verification Status
+
+| Item | Status | Evidence / note |
+| --- | --- | --- |
+| Bing Webmaster Tools access | Not confirmed / unavailable | No callable Bing Webmaster tool or verified dashboard session was available. |
+| Site property `https://silkbeautysalon.online` | Not confirmed | Requires Bing Webmaster Tools access. |
+| Site verification | Not performed | No owner-approved verification method was executed. |
+| Verification codes exposed | No | No Bing verification token, XML file content, DNS value, or account detail was read or committed. |
+| Sitemap submitted in Bing | No | Requires verified Bing property. |
+| Priority URLs submitted in Bing | No | Requires verified Bing property. |
+| SEO/crawl/index reports reviewed | No | Requires verified Bing property. |
+
+### Current Public Sitemap And Robots Status
+
+| Check | Result |
+| --- | --- |
+| `https://silkbeautysalon.online/sitemap.xml` HTTP | 200 |
+| Sitemap `<loc>` count | 516 |
+| `https://silkbeautysalon.online/robots.txt` HTTP | 200 |
+| Robots references sitemap | Yes |
+| Robots blocks all crawling | No |
+
+### Current Priority URL Submission Readiness
+
+This table is based on public live checks, not private Bing Webmaster Tools data.
+
+| Priority URL | HTTP | In sitemap | Noindex | Canonical | Hreflang | Bing action after verified access |
+| --- | ---: | --- | --- | --- | ---: | --- |
+| `https://silkbeautysalon.online/en` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/botox-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/dermal-fillers-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/lip-fillers-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/skin-treatment-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/acne-treatment-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/nails-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/lashes-brows-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/pricelist` | 200 | Yes | No | Missing | 0 | Hold. Do not manually submit until canonical/hreflang is live. |
+| `https://silkbeautysalon.online/en/book` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+
+### Current Crawl / Indexing Findings
+
+Private Bing crawl/indexing findings are unavailable until the site is verified in Bing Webmaster Tools.
+
+| Report area | Current status |
+| --- | --- |
+| Sitemaps report | Pending Bing access |
+| URL Inspection | Pending Bing access |
+| Indexing status | Pending Bing access |
+| Crawl errors | Pending Bing access |
+| SEO reports | Pending Bing access |
+| Backlinks | Pending Bing access |
+| Keyword/search performance | Pending Bing access |
+
+### Current IndexNow Check
+
+Current implementation status: not implemented.
+
+Evidence from repo scan:
+
+- No IndexNow key file found.
+- No IndexNow API submission code found.
+- No `api.indexnow.org` usage found.
+- No IndexNow route/helper/job found.
+- No Bing verification XML file found.
+- No `msvalidate.01` value found in source.
+
+Recommendation remains unchanged: do not implement IndexNow yet. Consider it later as a separate owner-approved code task after Bing Webmaster Tools is verified and the sitemap/URL submission baseline is stable.
+
 ## Safety Rules Applied
 
 - No Bing Webmaster Tools property was created or modified in this session.
