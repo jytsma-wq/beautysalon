@@ -2,6 +2,7 @@
 
 ## 2026-07-04
 
+- Added a Phase 5 structured data validation log covering live JSON-LD parseability, schema types, review/rating exclusions, validator limitations, and follow-up cleanup recommendations.
 - Added a Phase 4 Bing Webmaster Tools and IndexNow log documenting verification blockers, sitemap/priority URL readiness, and a separate owner-approved IndexNow implementation plan.
 - Added a Phase 3 Google Search Console indexing log and prepared a narrow pricelist metadata fix so priority price-list pages expose canonical and hreflang metadata before indexing requests.
 - Added a Phase 2 Google Business Profile optimization log with category recommendations, a compliant profile description draft, service plan, photo shot list, review workflow/templates, Q&A drafts, and a 12-week GBP post calendar.
