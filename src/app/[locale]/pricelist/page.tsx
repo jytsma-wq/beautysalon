@@ -4,14 +4,25 @@ import { ChevronRight } from 'lucide-react';
 import { getLocalizedTreatmentCategories } from '@/data/treatments';
 import { Button } from '@/components/ui/button';
 import { getTranslations } from 'next-intl/server';
+import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pricelistPage' });
-  return {
-    title: `${t('title')} | Silk Beauty Salon`,
+
+  return buildSeoMetadata({
+    locale,
+    path: '/pricelist',
+    title: t('title'),
     description: t('subtitle'),
-  };
+    keywords: [
+      ...localSeoKeywords,
+      'beauty salon prices Batumi',
+      'Botox prices Batumi',
+      'fillers prices Batumi',
+      'skin treatment prices Batumi',
+    ],
+  });
 }
 
 export async function generateStaticParams() {
