@@ -2,6 +2,7 @@
 
 ## 2026-07-04
 
+- Added a Phase 1 Google/AI SEO access and source-of-truth audit documenting account availability, production source, live route health, NAP facts, and owner-approval gates.
 - Added an online visibility readiness plan covering Google Search Console, Google Business Profile/Maps, Bing Webmaster/Bing Places, citations, reviews, AI-search readiness, and owner-approval gates.
 - Added a multilingual SEO topic map for high-intent Batumi beauty searches across English, Georgian, Russian, Turkish, Arabic, and Hebrew.
 - Added consultation-led local SEO landing routes for lip fillers, acne treatment, nails, and lashes/brows using the existing local SEO page template and existing treatment data.
