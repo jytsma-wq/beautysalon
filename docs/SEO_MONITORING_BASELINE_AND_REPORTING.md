@@ -30,6 +30,58 @@ Mode: public technical baseline plus private-data access plan; no account settin
 | Reviews | Google review count/rating not confirmed. Salonly public citation shows a small review footprint, but it is not a GBP baseline. | Medium |
 | Competitor snapshot | LAKmousse, Academy of Cosmetology, Heaven Nails, Sakura, Arna Sacman/Inna Kakhidze, 100doc, Madloba, Locate, Yandex Maps, Tripadvisor, Salonly. | Medium public-search baseline |
 
+## Phase 8 Operating Rhythm Update - 2026-07-04 14:17 Asia/Tbilisi
+
+This update consolidates the current Google/Maps/Bing/AI execution logs into one 90-day operating system. It is a documentation-only update. No website code, dependencies, deployments, Google Business Profile edits, Search Console submissions, Bing submissions, citation edits, review requests, or public profile changes were made.
+
+### Current Reporting Baseline By System
+
+| System | Current baseline | What is missing | Next action |
+| --- | --- | --- | --- |
+| Live website | Priority routes are mostly crawlable. Sitemap and robots are public. Homepage `BeautySalon` JSON-LD parses and has no review/rating markup. | Live `/pricelist` routes still need canonical/hreflang verification before manual indexing requests. The `Popular local searches` block on `/{locale}/beauty-salon-batumi` needs owner/content review. | Fix or verify the two live blockers, then use account tools for indexing and monitoring. |
+| Google Search Console | No verified access in this workspace. Public checks covered 61 requested priority URLs: 49 ready, 6 `/pricelist` blocked, 6 `/beauty-salon-batumi` held for content review. | Property status, sitemap submission, URL Inspection, Pages report, Performance report, Core Web Vitals, HTTPS, Links, Manual actions, Security issues. | Owner provides/approves GSC access and verification; submit sitemap and inspect only canonical-ready URLs. |
+| Google Business Profile | No verified GBP Manager access in this workspace. Website source of truth and public citation plan are documented. | Current profile URL, ownership, category data, services, hours, photos, Q&A, review count/rating, unanswered reviews, profile performance. | Owner confirms/claims GBP, records current state, then approves any public edits. |
+| Bing Webmaster / Bing Places | No verified Bing access in this workspace. Public sitemap/robots are healthy. IndexNow is not implemented. | Bing verification, sitemap submission, URL submissions, crawl/indexing reports, SEO reports, backlinks, keyword performance, Places listing. | Verify Bing after GSC/GBP source of truth is stable; submit sitemap; consider IndexNow later as a separate approved task. |
+| AI query baseline | Public search samples only. Google AI Overview / AI Mode and account-side local pack visibility were not available. | AI answer mentions, AI citations, stable Google local pack position, personalized/location-specific results. | Repeat controlled manual query checks monthly and after indexed-page data appears. |
+| Citations/NAP | Website NAP is clear. Salonly/Facebook/BeautyBook and map-platform risks are documented. Old placeholder phone is not visible in live HTML but still appears in stale snippets. | Confirmed GBP/Maps profile, Bing Places, Apple Maps, Yandex Maps, 2GIS, Salonly admin, Facebook canonical page, BeautyBook admin data. | Prioritize GBP/Maps, Salonly, Facebook, BeautyBook, Bing Places, Apple Maps, and Yandex Maps after owner approval. |
+| Reviews | Ethical multilingual request/reply SOP exists. No fake reviews or incentives were created. | Official Google review link, GBP review count/rating, recent review themes, unanswered reviews, staff launch approval. | Owner approves SOP, confirms review link, and starts requests only for real clients. |
+
+### Keyword Group Framework
+
+Use `docs/SEO_KEYWORD_MAP.md` as the source of truth. Monthly reporting should group Search Console queries and manual checks by these intent groups instead of reading every query one by one.
+
+| Intent group | Example queries | Primary monitoring target |
+| --- | --- | --- |
+| Beauty salon / broad local | beauty salon Batumi; best beauty salon Batumi; local-language equivalents | `/{locale}/beauty-salon-batumi` and locale root |
+| Aesthetic salon / clinic | aesthetic salon Batumi; aesthetic clinic Batumi | `/{locale}/beauty-salon-batumi` with careful wording and no unverified medical claims |
+| Botox / anti-wrinkle | Botox Batumi; Botox injections Batumi; anti-wrinkle injections Batumi | `/{locale}/botox-batumi` |
+| Masseter Botox | masseter Botox Batumi | Treatment detail page or Botox page grouping |
+| Botox price | Botox price Batumi; local-language price equivalents | `/{locale}/pricelist` plus Botox page |
+| Dermal fillers | dermal fillers Batumi; fillers Batumi | `/{locale}/dermal-fillers-batumi` |
+| Lip fillers | lip fillers Batumi; lip augmentation Batumi | `/{locale}/lip-fillers-batumi` |
+| Skin treatments / skin care | skin treatments Batumi; skin care Batumi | `/{locale}/skin-treatment-batumi` |
+| Acne / acne scars | acne treatment Batumi; acne scar treatment Batumi | `/{locale}/acne-treatment-batumi` |
+| Microneedling | microneedling Batumi | Existing skin-treatment/treatment page grouping |
+| Chemical peel | chemical peel Batumi | Existing skin-treatment/treatment page grouping |
+| Nails / nail salon | nails Batumi; nail salon Batumi | `/{locale}/nails-batumi` |
+| Manicure / pedicure | manicure Batumi; pedicure Batumi | `/{locale}/nails-batumi` and pricelist |
+| Lashes | lashes Batumi; lash extensions Batumi; lash lift Batumi | `/{locale}/lashes-brows-batumi` |
+| Brows | brow lamination Batumi; brows Batumi | `/{locale}/lashes-brows-batumi` |
+| Prices | beauty salon prices Batumi; fillers prices Batumi; skin treatment prices Batumi | `/{locale}/pricelist` after canonical/hreflang is live |
+| English/Russian speaking | English speaking beauty salon Batumi; Russian speaking beauty salon Batumi | `/{locale}/beauty-salon-batumi` and international-client content after spoken-language approval |
+| Tourist intent | beauty salon for tourists Batumi | `/{locale}/beauty-salon-batumi`, `/{locale}/international-clients`, booking route |
+
+### Monthly Tracking Process
+
+1. Pull Search Console Performance data for the last 28 days and compare against the previous 28 days.
+2. Pull Search Console Pages, Sitemaps, HTTPS, Manual actions, Security issues, Core Web Vitals, and Links summaries.
+3. Pull Bing Webmaster Tools sitemap, indexing, crawl, SEO, backlink, and search-performance summaries if access exists.
+4. Record Google Business Profile performance: views, calls, website clicks, directions, booking clicks if available, review count/rating, photo views, and unanswered reviews.
+5. Record conversion metrics from privacy-safe sources: booking page visits, booking submissions, WhatsApp clicks, phone clicks, direction clicks, contact forms, and newsletter signups.
+6. Re-run the manual multilingual query sample from `docs/SEO_KEYWORD_MAP.md`, using the same location/device context where possible.
+7. Update competitor notes for local pack, organic, directories, review count, photo freshness, prices, multilingual content, and strong service pages.
+8. Create a short decision log: what improved, what declined, what needs owner approval, what should be changed on the website, and what should wait.
+
 ## Current Indexed Pages
 
 Authoritative indexed-page counts require Google Search Console and Bing Webmaster Tools.
@@ -166,6 +218,35 @@ Track manually:
 - Competitor visibility in AI answers
 - Content gaps that prevent Silk from being cited confidently
 
+## KPI Source And Cadence
+
+| KPI | Primary source | Cadence | Current status |
+| --- | --- | --- | --- |
+| Search impressions | Google Search Console Performance | Weekly for first month, monthly after | Pending GSC access |
+| Search clicks | Google Search Console Performance | Weekly for first month, monthly after | Pending GSC access |
+| CTR | Google Search Console Performance | Weekly for first month, monthly after | Pending GSC access |
+| Average position | Google Search Console Performance | Weekly for first month, monthly after | Pending GSC access |
+| Indexed pages | GSC Pages report and Bing Webmaster Tools | Weekly until stable, monthly after | Pending account access |
+| Top queries | GSC and Bing search performance | Monthly | Pending account access |
+| Top pages | GSC and Bing search performance | Monthly | Pending account access |
+| GBP views | Google Business Profile Performance | Monthly | Pending GBP access |
+| GBP calls | Google Business Profile Performance / call logs | Monthly | Pending GBP access |
+| GBP website clicks | Google Business Profile Performance | Monthly | Pending GBP access |
+| GBP direction requests | Google Business Profile Performance | Monthly | Pending GBP access |
+| Booking clicks | GBP appointment link, GA4/GTM if configured, booking logs | Monthly | Pending access/tracking confirmation |
+| Reviews count | GBP, Salonly, Facebook, other approved platforms | Weekly for first month, monthly after | GBP pending; external citations need owner/admin checks |
+| Average rating | GBP and approved platforms | Weekly for first month, monthly after | GBP pending |
+| Photo views | GBP Performance if available | Monthly | Pending GBP access |
+| Booking page visits | GA4/GTM or server logs with privacy-safe aggregation | Monthly | Pending analytics/reporting access |
+| WhatsApp clicks | GA4/GTM consent-aware event if configured, or platform stats | Monthly | Pending tracking confirmation |
+| Phone clicks | GA4/GTM consent-aware event if configured | Monthly | Pending tracking confirmation |
+| Direction clicks | GBP Performance, website click tracking if configured | Monthly | Pending access/tracking confirmation |
+| Form submissions | App/backend logs with no private client data in docs | Monthly | Pending reporting access |
+| AI answer mentions | Manual query checks | Monthly | Baseline public samples documented |
+| AI citations if visible | Manual AI Overview/AI Mode or AI answer tools | Monthly | Not available in this workspace |
+| Competitor mentions | Manual query and local pack checks | Monthly | Baseline competitor set documented |
+| Query-level notes | Manual tracker plus GSC/Bing query data | Monthly | Keyword map ready |
+
 ## Reporting Cadence
 
 | Time | Report focus | Actions |
@@ -254,15 +335,17 @@ Competitor monitoring fields:
 
 ## Critical Issues
 
-1. Google Business Profile ownership/profile URL is still not confirmed.
-2. Google Search Console access is not confirmed, so impressions/clicks/indexed-page data is missing.
-3. Bing Webmaster Tools and Bing Places access are not confirmed.
-4. Public search snippets still show stale placeholder phone `+995 599 123 456` for at least one indexed result, even though live page/footer data uses the correct phone.
-5. Review count/rating baseline is not confirmed for Google.
-6. Booking, WhatsApp, calls, and form conversion tracking are not confirmed.
-7. Analytics mode must remain consent-aware and avoid duplicate GA4 pageviews.
-8. External citation cleanup is still pending owner approval.
-9. Non-English content should receive native review before heavy promotion or paid campaigns.
+1. Live `/pricelist` routes are still a blocker for manual indexing until canonical and hreflang metadata are verified live.
+2. The visible `Popular local searches` section on `/{locale}/beauty-salon-batumi` needs owner/content review before those pages become flagship indexing/GBP landing pages.
+3. Google Business Profile ownership/profile URL is still not confirmed.
+4. Google Search Console access is not confirmed, so impressions/clicks/indexed-page data is missing.
+5. Bing Webmaster Tools and Bing Places access are not confirmed.
+6. Public search snippets still show stale placeholder phone `+995 599 123 456` for at least one indexed result, even though live page/footer data uses the correct phone.
+7. Review count/rating baseline is not confirmed for Google.
+8. Booking, WhatsApp, calls, and form conversion tracking are not confirmed.
+9. Analytics mode must remain consent-aware and avoid duplicate GA4 pageviews.
+10. External citation cleanup is still pending owner approval.
+11. Non-English content should receive native review before heavy promotion, GBP services, printed materials, or paid campaigns.
 
 ## Access Gaps
 
@@ -279,25 +362,28 @@ Needed to make the monitoring system complete:
 
 ## Next 7-Day Action Plan
 
-1. Confirm or claim Google Business Profile.
-2. Confirm the official Google review link and public GBP URL.
-3. Verify Google Search Console and submit `https://silkbeautysalon.online/sitemap.xml`.
-4. Inspect priority URLs in Search Console and request indexing only for canonical, ready pages.
-5. Review stale snippets showing `+995 599 123 456`; request reindexing after GSC access.
-6. Confirm Bing Webmaster Tools/Bing Places access.
-7. Owner approves the review request SOP and templates before staff use them.
-8. Owner confirms real-world hours and exact public NAP for all external citations.
+1. Recheck and resolve live `/pricelist` canonical/hreflang before any manual indexing request for price pages.
+2. Owner reviews the `Popular local searches` block on `/{locale}/beauty-salon-batumi` and either approves it or schedules a visible-content cleanup.
+3. Confirm or claim Google Business Profile.
+4. Confirm the official Google review link and public GBP URL.
+5. Verify Google Search Console and submit `https://silkbeautysalon.online/sitemap.xml`.
+6. Inspect priority URLs in Search Console and request indexing only for canonical, ready pages.
+7. Review stale snippets showing `+995 599 123 456`; request reindexing after GSC access.
+8. Confirm Bing Webmaster Tools/Bing Places access.
+9. Owner approves the review request SOP and templates before staff use them.
+10. Owner confirms real-world hours and exact public NAP for all external citations.
 
 ## Next 30-Day Action Plan
 
-1. Complete GBP NAP/category/service/photo setup.
-2. Submit sitemap to Bing Webmaster Tools.
+1. Complete GBP NAP/category/service/photo setup after owner approval.
+2. Submit sitemap to Bing Webmaster Tools after verification.
 3. Correct or verify Salonly, Facebook, Instagram, and BeautyBook citation data.
-4. Start ethical review request workflow for real completed appointments.
-5. Add owner-approved real photos to GBP and priority citation profiles.
-6. Create the first Week 2 and Week 4 monitoring reports once GSC/GBP data starts appearing.
-7. Track priority queries manually across English, Georgian, Russian, Turkish, Arabic, and Hebrew.
-8. Decide whether IndexNow implementation is worth a separate approved code task.
+4. Check Bing Places, Apple Maps, Yandex Maps, 2GIS, Madloba, Locate, and InfoBatumi for accurate or missing listings.
+5. Start the ethical review request workflow for real completed appointments after SOP approval.
+6. Add owner-approved real photos to GBP and priority citation profiles.
+7. Create the first Week 2 and Week 4 monitoring reports once GSC/GBP data starts appearing.
+8. Track priority queries manually across English, Georgian, Russian, Turkish, Arabic, and Hebrew.
+9. Decide whether IndexNow implementation is worth a separate approved code task.
 
 ## Next 90-Day Action Plan
 
@@ -309,6 +395,69 @@ Needed to make the monitoring system complete:
 6. Review citation consistency across GBP, Bing, Apple, Yandex, 2GIS, Salonly, BeautyBook, Madloba, Locate, and InfoBatumi.
 7. Re-run competitor/SERP analysis and compare review/photo/citation gaps.
 8. Evaluate AI search visibility and whether Silk is cited correctly for Batumi beauty/aesthetic questions.
+9. Reassess whether any new website content is needed, using Search Console evidence rather than adding thin pages.
+10. Consider IndexNow only after Bing verification is stable and owner approves a separate implementation.
+
+## Phase 8 Final Report
+
+### Docs Created Or Updated
+
+- `docs/GOOGLE_AI_SEO_ACCESS_AND_SOURCE_AUDIT.md`
+- `docs/GOOGLE_AI_SEO_EXECUTION_BASELINE.md`
+- `docs/LIVE_SEO_READINESS_CHECK.md`
+- `docs/GOOGLE_SEARCH_CONSOLE_INDEXING_LOG.md`
+- `docs/GOOGLE_BUSINESS_PROFILE_OPTIMIZATION_LOG.md`
+- `docs/BING_WEBMASTER_AND_INDEXNOW_LOG.md`
+- `docs/STRUCTURED_DATA_VALIDATION_LOG.md`
+- `docs/AI_SEARCH_READINESS_AND_QUERY_TRACKING.md`
+- `docs/LOCAL_SERP_COMPETITOR_ANALYSIS.md`
+- `docs/NAP_CITATION_CONSISTENCY_AUDIT.md`
+- `docs/REVIEW_GENERATION_AND_REPLY_SYSTEM.md`
+- `docs/SEO_KEYWORD_MAP.md`
+- `docs/SEO_MONITORING_BASELINE_AND_REPORTING.md`
+
+### Accounts Checked
+
+| Account/tool | Status |
+| --- | --- |
+| Website production URL | Public checks completed. |
+| GitHub repository / local branch | Available for documentation work. |
+| Google Search Console | Access not confirmed; no account-side action made. |
+| Google Business Profile Manager | Access not confirmed; no public profile edits made. |
+| Google Analytics / GTM | Access not available in this phase; no tracking changes made. |
+| Bing Webmaster Tools | Access not confirmed; no account-side action made. |
+| Bing Places | Access not confirmed; no public listing edits made. |
+| Hostinger dashboard | Not used for this Phase 8 reporting update. |
+| Public citations/search results | Public checks documented; no third-party listing edits made. |
+
+### Public Changes Made
+
+None. This phase created and updated internal documentation only.
+
+### Owner Approvals Needed
+
+- Google Search Console access and owner-approved verification method, especially if DNS TXT verification is used.
+- Google Business Profile claim/verification and approval before NAP, category, service, photo, Q&A, review-link, or post changes.
+- Bing Webmaster Tools and Bing Places verification.
+- Citation corrections on Salonly, Facebook, Instagram, BeautyBook, Apple Maps, Yandex Maps, 2GIS, Madloba, Locate, InfoBatumi, and any booking platforms.
+- Review request SOP launch and official Google review link use.
+- Native-language review before high-visibility Georgian, Russian, Turkish, Arabic, and Hebrew profile copy or printed materials.
+- Any future website/code fixes for live canonical/hreflang or content cleanup.
+
+### Urgent Issues
+
+1. Fix or verify live canonical/hreflang for `/pricelist` before manual indexing.
+2. Review `Popular local searches` on `/{locale}/beauty-salon-batumi` before using those pages as priority indexing/GBP landing pages.
+3. Confirm Google Business Profile and Google Maps ownership/profile URL.
+4. Confirm Search Console and Bing Webmaster access.
+5. Investigate stale public snippets that still show `+995 599 123 456`.
+6. Confirm Facebook canonical page/handle and whether the main phone and WhatsApp are displayed in separate fields.
+7. Confirm Salonly and BeautyBook admin data, especially service mix, phone formatting, website link, booking link, and photos.
+
+### Next Check Date
+
+- Next weekly check: 2026-07-11, or earlier when Search Console/GBP/Bing access becomes available.
+- First monthly operating report: 2026-08-04.
 
 ## References
 
@@ -316,5 +465,11 @@ Needed to make the monitoring system complete:
 - Live sitemap: `https://silkbeautysalon.online/sitemap.xml`
 - Live robots: `https://silkbeautysalon.online/robots.txt`
 - Phase 1 source audit: `docs/GOOGLE_AI_SEO_ACCESS_AND_SOURCE_AUDIT.md`
+- Live SEO readiness check: `docs/LIVE_SEO_READINESS_CHECK.md`
+- Search Console log: `docs/GOOGLE_SEARCH_CONSOLE_INDEXING_LOG.md`
+- Google Business Profile log: `docs/GOOGLE_BUSINESS_PROFILE_OPTIMIZATION_LOG.md`
+- Bing Webmaster log: `docs/BING_WEBMASTER_AND_INDEXNOW_LOG.md`
+- AI search tracking: `docs/AI_SEARCH_READINESS_AND_QUERY_TRACKING.md`
+- Keyword map: `docs/SEO_KEYWORD_MAP.md`
 - Phase 7 competitor analysis: `docs/LOCAL_SERP_COMPETITOR_ANALYSIS.md`
 - Phase 8 citation audit: `docs/NAP_CITATION_CONSISTENCY_AUDIT.md`
