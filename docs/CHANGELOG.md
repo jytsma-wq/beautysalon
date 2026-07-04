@@ -2,6 +2,8 @@
 
 ## 2026-07-04
 
+- Added a Phase 10 SEO monitoring baseline and reporting cadence covering sitemap/robots status, access gaps, KPI groups, private metric placeholders, competitor tracking, and 7/30/90-day action plans.
+- Added a Phase 9 ethical multilingual review-generation and reply system with SMS/WhatsApp, email, QR-card, follow-up, review-reply, privacy, and escalation SOP guidance.
 - Added a Phase 8 NAP citation consistency audit documenting public listing findings, phone/social/booking-platform risks, and owner-approved correction priorities.
 - Added a Phase 7 local SERP competitor analysis documenting multilingual query groups, recurring competitors, directory opportunities, Silk gaps, and review/photo quick wins.
 - Added a Phase 6 AI-search readiness and query-tracking audit documenting answerability, citation readiness, multilingual public-search samples, competitor/source notes, and people-first improvement recommendations.
