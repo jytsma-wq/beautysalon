@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-04
+
+- Added a multilingual SEO topic map for high-intent Batumi beauty searches across English, Georgian, Russian, Turkish, Arabic, and Hebrew.
+- Added consultation-led local SEO landing routes for lip fillers, acne treatment, nails, and lashes/brows using the existing local SEO page template and existing treatment data.
+- Corrected local SEO skin-treatment references to existing treatment slugs so related treatment cards resolve correctly.
+- Added regression coverage for local SEO locale coverage, route/data alignment, treatment slug validity, and sitemap inclusion of the new local-intent routes.
+
 ## 2026-07-03
 
 - Added a branch-only newsletter CSRF fix for staging validation: the footer now fetches a fresh `/api/csrf` token before posting to `/api/newsletter`, while the newsletter API remains strict against no-token requests.

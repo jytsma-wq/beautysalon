@@ -4,6 +4,10 @@ export const localSeoLandingPageSlugs = [
   'botox-batumi',
   'dermal-fillers-batumi',
   'skin-treatment-batumi',
+  'lip-fillers-batumi',
+  'acne-treatment-batumi',
+  'nails-batumi',
+  'lashes-brows-batumi',
 ] as const;
 
 export type LocalSeoLandingPageSlug = (typeof localSeoLandingPageSlugs)[number];
@@ -30,14 +34,382 @@ export type LocalSeoLandingPageContent = {
 
 export type LocalSeoLandingPage = {
   slug: LocalSeoLandingPageSlug;
-  categorySlug: 'botox' | 'dermal-fillers' | 'skin-treatments';
+  categorySlug: 'botox' | 'dermal-fillers' | 'skin-treatments' | 'nails' | 'lashes';
   image: string;
   treatmentSlugs: string[];
   priority: number;
   content: Record<Locale, LocalSeoLandingPageContent>;
 };
 
-export const localSeoLandingPages: LocalSeoLandingPage[] = [
+type GeneratedLocalSeoCopy = {
+  title: string;
+  h1: string;
+  description: string;
+  eyebrow: string;
+  topic: string;
+  searchPhrases: string[];
+  categoryCta: string;
+  bookCta: string;
+  bookingTitle: string;
+  bookingText: string;
+};
+
+function makeGeneratedLocalSeoContent(
+  copies: Record<Locale, GeneratedLocalSeoCopy>
+): Record<Locale, LocalSeoLandingPageContent> {
+  return {
+    en: makeEnglishLocalSeoContent(copies.en),
+    ka: makeGeorgianLocalSeoContent(copies.ka),
+    ru: makeRussianLocalSeoContent(copies.ru),
+    tr: makeTurkishLocalSeoContent(copies.tr),
+    ar: makeArabicLocalSeoContent(copies.ar),
+    he: makeHebrewLocalSeoContent(copies.he),
+  };
+}
+
+function makeEnglishLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `If you are comparing ${copy.searchPhrases[0]} options, Silk Beauty Salon offers consultation-led ${copy.topic} in central Batumi with clear suitability checks, starting-price context, and aftercare guidance.`,
+    searchTitle: 'Search phrases this page supports',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `Why clients choose Silk for ${copy.h1}`,
+    benefits: [
+      {
+        title: 'Consultation before booking',
+        text: 'The team checks your goals, timing, contraindications, and expectations before confirming whether the service is suitable.',
+      },
+      {
+        title: 'Linked to real salon services',
+        text: 'This page connects to existing treatment and price information instead of duplicating unverified claims or separate price lists.',
+      },
+      {
+        title: 'Central Batumi location',
+        text: 'Appointments are planned at Zurab Gorgiladze 63 with online booking, phone, WhatsApp, and email support available.',
+      },
+    ],
+    treatmentTitle: `${copy.h1} options`,
+    treatmentIntro:
+      'Use the related treatment cards to compare starting prices, duration, and service details before booking a consultation.',
+    faqTitle: `${copy.h1} questions`,
+    faqs: [
+      {
+        question: `Is ${copy.topic} suitable for me?`,
+        answer:
+          'Suitability depends on your goal, skin or treatment history, timing, and any contraindications. Start with a consultation if you are unsure.',
+      },
+      {
+        question: `How much does ${copy.topic} cost in Batumi?`,
+        answer:
+          'Starting prices are shown on the related treatment cards and full pricelist. A final quote is confirmed after consultation.',
+      },
+      {
+        question: 'Can I book before arriving in Batumi?',
+        answer:
+          'Yes. Local and international clients can book online and contact the salon before visiting to discuss timing and preparation.',
+      },
+      {
+        question: 'Where is the salon?',
+        answer:
+          'Silk Beauty Salon is located at Zurab Gorgiladze 63 in Batumi, Georgia.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeGeorgianLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `თუ ეძებთ ${copy.searchPhrases[0]}, Silk Beauty Salon ბათუმის ცენტრში გთავაზობთ კონსულტაციაზე დაფუძნებულ ${copy.topic}-ს, შესაბამისობის შემოწმებით, საწყისი ფასის კონტექსტით და მოვლის რეკომენდაციებით.`,
+    searchTitle: 'საძიებო ფრაზები',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `რატომ ირჩევენ Silk-ს: ${copy.h1}`,
+    benefits: [
+      {
+        title: 'კონსულტაცია დაჯავშნამდე',
+        text: 'გუნდი აფასებს მიზნებს, დროს, უკუჩვენებებს და მოლოდინებს, სანამ პროცედურის შესაბამისობას დაადასტურებს.',
+      },
+      {
+        title: 'რეალურ სერვისებთან კავშირი',
+        text: 'გვერდი უკავშირდება არსებულ პროცედურებსა და ფასების ინფორმაციას და არ იმეორებს დაუდასტურებელ მტკიცებებს.',
+      },
+      {
+        title: 'ცენტრალური მდებარეობა ბათუმში',
+        text: 'დაჯავშნა შესაძლებელია ზურაბ გორგილაძის 63-ში, ონლაინ, ტელეფონით, WhatsApp-ით ან ელფოსტით.',
+      },
+    ],
+    treatmentTitle: `${copy.h1} - ვარიანტები`,
+    treatmentIntro:
+      'შეადარეთ დაკავშირებული პროცედურები, საწყისი ფასები და ხანგრძლივობა კონსულტაციის დაჯავშნამდე.',
+    faqTitle: `კითხვები: ${copy.h1}`,
+    faqs: [
+      {
+        question: `${copy.topic} ჩემთვის შესაფერისია?`,
+        answer:
+          'შესაბამისობა დამოკიდებულია მიზანზე, კანის ან პროცედურების ისტორიაზე, დროზე და უკუჩვენებებზე. გაურკვევლობისას დაიწყეთ კონსულტაციით.',
+      },
+      {
+        question: `რა ღირს ${copy.topic} ბათუმში?`,
+        answer:
+          'საწყისი ფასები მითითებულია დაკავშირებულ პროცედურებსა და სრულ ფასების გვერდზე. საბოლოო ფასი დასტურდება კონსულტაციის შემდეგ.',
+      },
+      {
+        question: 'შემიძლია დაჯავშნა ბათუმში ჩამოსვლამდე?',
+        answer:
+          'დიახ. ადგილობრივ და საერთაშორისო კლიენტებს შეუძლიათ ონლაინ დაჯავშნა და წინასწარ დროისა და მომზადების განხილვა.',
+      },
+      {
+        question: 'სად მდებარეობს სალონი?',
+        answer:
+          'Silk Beauty Salon მდებარეობს ზურაბ გორგილაძის 63-ში, ბათუმში, საქართველო.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeRussianLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `Если вы ищете ${copy.searchPhrases[0]}, Silk Beauty Salon предлагает консультационный подход к ${copy.topic} в центре Батуми: проверка подходящих вариантов, понятные стартовые цены и рекомендации по уходу.`,
+    searchTitle: 'Поисковые запросы',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `Почему выбирают Silk: ${copy.h1}`,
+    benefits: [
+      {
+        title: 'Сначала консультация',
+        text: 'Команда уточняет цели, сроки, противопоказания и ожидания перед подтверждением подходящего варианта.',
+      },
+      {
+        title: 'Связь с реальными услугами',
+        text: 'Страница ведет к существующим процедурам и ценам, без отдельных неподтвержденных обещаний.',
+      },
+      {
+        title: 'Центр Батуми',
+        text: 'Запись доступна на улице Зураба Горгиладзе 63, онлайн, по телефону, WhatsApp или email.',
+      },
+    ],
+    treatmentTitle: `${copy.h1}: варианты`,
+    treatmentIntro:
+      'Сравните связанные процедуры, стартовые цены и длительность перед записью на консультацию.',
+    faqTitle: `Вопросы: ${copy.h1}`,
+    faqs: [
+      {
+        question: `Подходит ли мне ${copy.topic}?`,
+        answer:
+          'Это зависит от цели, истории кожи или процедур, сроков и возможных противопоказаний. Если не уверены, начните с консультации.',
+      },
+      {
+        question: `Сколько стоит ${copy.topic} в Батуми?`,
+        answer:
+          'Стартовые цены указаны в связанных процедурах и полном прайс-листе. Итоговая стоимость подтверждается после консультации.',
+      },
+      {
+        question: 'Можно ли записаться до приезда в Батуми?',
+        answer:
+          'Да. Местные и международные клиенты могут записаться онлайн и заранее обсудить сроки и подготовку.',
+      },
+      {
+        question: 'Где находится салон?',
+        answer:
+          'Silk Beauty Salon находится по адресу Zurab Gorgiladze 63, Батуми, Грузия.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeTurkishLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `${copy.searchPhrases[0]} seçeneklerini araştırıyorsanız, Silk Beauty Salon Batum merkezinde danışmanlık odaklı ${copy.topic} sunar; uygunluk kontrolü, başlangıç fiyatı bilgisi ve bakım önerileri net şekilde paylaşılır.`,
+    searchTitle: 'Desteklenen arama ifadeleri',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `Neden Silk: ${copy.h1}`,
+    benefits: [
+      {
+        title: 'Rezervasyondan önce danışmanlık',
+        text: 'Ekip hedefleri, zamanlamayı, kontrendikasyonları ve beklentileri değerlendirerek uygunluğu netleştirir.',
+      },
+      {
+        title: 'Gerçek hizmet bilgilerine bağlı',
+        text: 'Sayfa mevcut tedavi ve fiyat bilgilerine bağlanır; ayrı ve doğrulanmamış vaatler oluşturmaz.',
+      },
+      {
+        title: 'Batum merkezinde konum',
+        text: 'Randevular Zurab Gorgiladze 63 adresinde; online, telefon, WhatsApp ve e-posta ile desteklenir.',
+      },
+    ],
+    treatmentTitle: `${copy.h1} seçenekleri`,
+    treatmentIntro:
+      'Danışmanlık almadan önce ilgili hizmet kartlarından başlangıç fiyatlarını, süreleri ve detayları karşılaştırın.',
+    faqTitle: `${copy.h1} hakkında sorular`,
+    faqs: [
+      {
+        question: `${copy.topic} benim için uygun mu?`,
+        answer:
+          'Uygunluk hedefinize, cilt veya işlem geçmişinize, zamanlamaya ve kontrendikasyonlara bağlıdır. Emin değilseniz danışmanlıkla başlayın.',
+      },
+      {
+        question: `Batum'da ${copy.topic} fiyatı nedir?`,
+        answer:
+          'Başlangıç fiyatları ilgili hizmetlerde ve tam fiyat listesinde gösterilir. Son fiyat danışmanlık sonrası onaylanır.',
+      },
+      {
+        question: 'Batum’a gelmeden önce rezervasyon yapabilir miyim?',
+        answer:
+          'Evet. Yerel ve uluslararası müşteriler online rezervasyon yapabilir, zamanlama ve hazırlığı önceden konuşabilir.',
+      },
+      {
+        question: 'Salon nerede?',
+        answer:
+          'Silk Beauty Salon, Zurab Gorgiladze 63, Batum, Gürcistan adresindedir.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeArabicLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `إذا كنت تبحثين عن ${copy.searchPhrases[0]}، يقدم Silk Beauty Salon ${copy.topic} في وسط باتومي بأسلوب قائم على الاستشارة، مع فحص الملاءمة، سياق السعر المبدئي، وإرشادات العناية بعد الموعد.`,
+    searchTitle: 'عبارات البحث المدعومة',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `لماذا يختار العملاء Silk: ${copy.h1}`,
+    benefits: [
+      {
+        title: 'استشارة قبل الحجز',
+        text: 'يراجع الفريق الأهداف، التوقيت، الموانع والتوقعات قبل تأكيد ملاءمة الخدمة.',
+      },
+      {
+        title: 'مرتبطة بخدمات حقيقية',
+        text: 'ترتبط هذه الصفحة بمعلومات العلاجات والأسعار الموجودة، من دون وعود أو قوائم أسعار غير مؤكدة.',
+      },
+      {
+        title: 'موقع مركزي في باتومي',
+        text: 'المواعيد في Zurab Gorgiladze 63 مع حجز إلكتروني ودعم عبر الهاتف وWhatsApp والبريد الإلكتروني.',
+      },
+    ],
+    treatmentTitle: `خيارات ${copy.h1}`,
+    treatmentIntro:
+      'استخدمي بطاقات العلاجات المرتبطة لمقارنة الأسعار المبدئية والمدة والتفاصيل قبل حجز الاستشارة.',
+    faqTitle: `أسئلة حول ${copy.h1}`,
+    faqs: [
+      {
+        question: `هل ${copy.topic} مناسب لي؟`,
+        answer:
+          'تعتمد الملاءمة على الهدف، تاريخ البشرة أو العلاجات، التوقيت وأي موانع. إذا لم تكوني متأكدة فابدئي باستشارة.',
+      },
+      {
+        question: `كم تكلفة ${copy.topic} في باتومي؟`,
+        answer:
+          'تظهر الأسعار المبدئية في بطاقات العلاجات وقائمة الأسعار الكاملة. يتم تأكيد السعر النهائي بعد الاستشارة.',
+      },
+      {
+        question: 'هل يمكن الحجز قبل الوصول إلى باتومي؟',
+        answer:
+          'نعم. يمكن للعملاء المحليين والدوليين الحجز عبر الإنترنت ومناقشة التوقيت والتحضير مسبقا.',
+      },
+      {
+        question: 'أين يقع الصالون؟',
+        answer:
+          'يقع Silk Beauty Salon في Zurab Gorgiladze 63، باتومي، جورجيا.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeHebrewLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `אם אתם מחפשים ${copy.searchPhrases[0]}, Silk Beauty Salon מציע ${copy.topic} במרכז בטומי בגישה מבוססת ייעוץ, עם בדיקת התאמה, מידע על מחיר התחלתי והנחיות לאחר הטיפול.`,
+    searchTitle: 'ביטויי חיפוש נתמכים',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `למה לבחור ב-Silk: ${copy.h1}`,
+    benefits: [
+      {
+        title: 'ייעוץ לפני קביעה',
+        text: 'הצוות בודק מטרות, תזמון, התוויות נגד וציפיות לפני אישור התאמת השירות.',
+      },
+      {
+        title: 'מחובר לשירותים אמיתיים',
+        text: 'העמוד מקשר למידע קיים על טיפולים ומחירים, בלי ליצור הבטחות או מחירונים לא מאומתים.',
+      },
+      {
+        title: 'מיקום מרכזי בבטומי',
+        text: 'הפגישות ב-Zurab Gorgiladze 63 עם הזמנה אונליין ותמיכה בטלפון, WhatsApp ואימייל.',
+      },
+    ],
+    treatmentTitle: `אפשרויות ${copy.h1}`,
+    treatmentIntro:
+      'השתמשו בכרטיסי הטיפול הקשורים כדי להשוות מחיר התחלתי, משך זמן ופרטי שירות לפני קביעת ייעוץ.',
+    faqTitle: `שאלות על ${copy.h1}`,
+    faqs: [
+      {
+        question: `האם ${copy.topic} מתאים לי?`,
+        answer:
+          'ההתאמה תלויה במטרה, בהיסטוריית העור או הטיפולים, בתזמון ובהתוויות נגד. אם אינכם בטוחים, התחילו בייעוץ.',
+      },
+      {
+        question: `כמה עולה ${copy.topic} בבטומי?`,
+        answer:
+          'מחירי התחלה מוצגים בכרטיסי הטיפולים וברשימת המחירים המלאה. המחיר הסופי מאושר לאחר ייעוץ.',
+      },
+      {
+        question: 'אפשר להזמין לפני שמגיעים לבטומי?',
+        answer:
+          'כן. לקוחות מקומיים ובינלאומיים יכולים להזמין אונליין ולדון מראש בתזמון ובהכנה.',
+      },
+      {
+        question: 'איפה נמצא הסלון?',
+        answer:
+          'Silk Beauty Salon נמצא ב-Zurab Gorgiladze 63, בטומי, גאורגיה.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
   {
     slug: 'botox-batumi',
     categorySlug: 'botox',
@@ -53,7 +425,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         eyebrow: 'Batumi Botox clinic search',
         intro:
           'If you are searching for Botox Batumi, Batumi Botox, or botox in Batumi, Silk Beauty Salon offers consultation-led injectable appointments in central Batumi with realistic planning and aftercare.',
-        searchTitle: 'Search phrases this page answers',
+        searchTitle: 'Supported local searches',
         searchPhrases: ['Botox Batumi', 'Batumi Botox', 'botox in Batumi'],
         benefitsTitle: 'Why clients choose Silk for Botox in Batumi',
         benefits: [
@@ -374,7 +746,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         eyebrow: 'Fillers Batumi',
         intro:
           'If you are searching for dermal fillers Batumi, lip fillers Batumi, or fillers in Batumi, Silk Beauty Salon plans facial balancing with conservative aesthetic judgment.',
-        searchTitle: 'Search phrases this page answers',
+        searchTitle: 'Supported local searches',
         searchPhrases: ['dermal fillers Batumi', 'lip fillers Batumi', 'fillers in Batumi'],
         benefitsTitle: 'Why clients choose Silk for fillers in Batumi',
         benefits: [
@@ -686,8 +1058,8 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&q=85',
     treatmentSlugs: [
       'is-clinical-fire-ice-peel',
-      'mesoestetic-cosmelan',
-      'obagi-blue-radiance',
+      'mesoestetic-cosmelan-peel',
+      'obagi-blue-radiance-peel',
       'obagi-nu-derm',
       'skinpen-microneedling',
       'observe-skin-scanner',
@@ -702,7 +1074,7 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
         eyebrow: 'Skin care Batumi',
         intro:
           'If you are searching for skin treatment Batumi, skin care Batumi, or skin analysis Batumi, Silk Beauty Salon plans skin treatments around your skin condition, goals, and timing.',
-        searchTitle: 'Search phrases this page answers',
+        searchTitle: 'Supported local searches',
         searchPhrases: ['skin treatment Batumi', 'skin care Batumi', 'skin analysis Batumi'],
         benefitsTitle: 'Why clients choose Silk for skin treatment in Batumi',
         benefits: [
@@ -1008,6 +1380,391 @@ export const localSeoLandingPages: LocalSeoLandingPage[] = [
       },
     },
   },
+];
+
+const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
+  {
+    slug: 'lip-fillers-batumi',
+    categorySlug: 'dermal-fillers',
+    image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1800&q=85',
+    treatmentSlugs: ['lip-fillers'],
+    priority: 0.94,
+    content: makeGeneratedLocalSeoContent({
+      en: {
+        title: 'Lip fillers in Batumi, Georgia',
+        h1: 'Lip fillers in Batumi',
+        description:
+          'Consultation-led lip fillers in Batumi at Silk Beauty Salon with natural-looking planning, starting prices, and aftercare guidance.',
+        eyebrow: 'Lip filler consultation',
+        topic: 'lip filler appointments',
+        searchPhrases: ['lip fillers Batumi', 'lip augmentation Batumi', 'lip filler Georgia'],
+        categoryCta: 'View dermal filler options',
+        bookCta: 'Book lip filler consultation',
+        bookingTitle: 'Book lip fillers in Batumi',
+        bookingText:
+          'Choose a consultation to discuss lip shape, symmetry, volume goals, timing, and the starting price before any treatment is confirmed.',
+      },
+      ka: {
+        title: 'ტუჩის ფილერი ბათუმში',
+        h1: 'ტუჩის ფილერი ბათუმში',
+        description:
+          'ტუჩის ფილერის კონსულტაცია ბათუმში Silk Beauty Salon-ში ბუნებრივი დაგეგმვით, საწყისი ფასით და შემდგომი მოვლის რეკომენდაციებით.',
+        eyebrow: 'ტუჩის ფილერის კონსულტაცია',
+        topic: 'ტუჩის ფილერის პროცედურა',
+        searchPhrases: ['ტუჩის ფილერი ბათუმი', 'ტუჩების გადიდება ბათუმი', 'ტუჩის ფილერი საქართველოში'],
+        categoryCta: 'ფილერების ვარიანტები',
+        bookCta: 'ტუჩის ფილერის კონსულტაცია',
+        bookingTitle: 'დაჯავშნეთ ტუჩის ფილერი ბათუმში',
+        bookingText:
+          'კონსულტაციაზე განიხილება ტუჩის ფორმა, სიმეტრია, მოცულობის მიზანი, დრო და საწყისი ფასი.',
+      },
+      ru: {
+        title: 'Филлеры губ в Батуми, Грузия',
+        h1: 'Филлеры губ в Батуми',
+        description:
+          'Консультационный подход к филлерам губ в Батуми в Silk Beauty Salon: естественное планирование, стартовые цены и уход после процедуры.',
+        eyebrow: 'Консультация по филлерам губ',
+        topic: 'филлеры губ',
+        searchPhrases: ['филлеры губ Батуми', 'увеличение губ Батуми', 'филлеры губ Грузия'],
+        categoryCta: 'Смотреть варианты филлеров',
+        bookCta: 'Записаться на консультацию',
+        bookingTitle: 'Записаться на филлеры губ в Батуми',
+        bookingText:
+          'На консультации можно обсудить форму губ, симметрию, объем, сроки и стартовую цену до подтверждения процедуры.',
+      },
+      tr: {
+        title: 'Batum dudak dolgusu',
+        h1: 'Batum dudak dolgusu',
+        description:
+          'Silk Beauty Salon’da Batum dudak dolgusu danışmanlığı: doğal planlama, başlangıç fiyatı ve bakım önerileri.',
+        eyebrow: 'Dudak dolgusu danışmanlığı',
+        topic: 'dudak dolgusu randevuları',
+        searchPhrases: ['Batum dudak dolgusu', 'dudak büyütme Batum', 'Gürcistan dudak dolgusu'],
+        categoryCta: 'Dolgu seçeneklerini gör',
+        bookCta: 'Dudak dolgusu danışmanlığı al',
+        bookingTitle: 'Batum’da dudak dolgusu randevusu',
+        bookingText:
+          'Danışmanlıkta dudak şekli, simetri, hacim hedefi, zamanlama ve başlangıç fiyatı konuşulur.',
+      },
+      ar: {
+        title: 'فيلر الشفاه في باتومي',
+        h1: 'فيلر الشفاه في باتومي',
+        description:
+          'استشارة فيلر الشفاه في باتومي لدى Silk Beauty Salon مع تخطيط طبيعي، أسعار مبدئية وإرشادات العناية بعد الموعد.',
+        eyebrow: 'استشارة فيلر الشفاه',
+        topic: 'مواعيد فيلر الشفاه',
+        searchPhrases: ['فيلر الشفاه باتومي', 'تكبير الشفاه باتومي', 'فيلر الشفاه جورجيا'],
+        categoryCta: 'عرض خيارات الفيلر',
+        bookCta: 'حجز استشارة فيلر الشفاه',
+        bookingTitle: 'احجزي فيلر الشفاه في باتومي',
+        bookingText:
+          'تناقش الاستشارة شكل الشفاه، التناسق، هدف الحجم، التوقيت والسعر المبدئي قبل تأكيد العلاج.',
+      },
+      he: {
+        title: 'מילוי שפתיים בבטומי',
+        h1: 'מילוי שפתיים בבטומי',
+        description:
+          'ייעוץ מילוי שפתיים בבטומי ב-Silk Beauty Salon עם תכנון טבעי, מחיר התחלתי והנחיות לאחר הטיפול.',
+        eyebrow: 'ייעוץ מילוי שפתיים',
+        topic: 'פגישות מילוי שפתיים',
+        searchPhrases: ['מילוי שפתיים בטומי', 'עיבוי שפתיים בטומי', 'מילוי שפתיים גאורגיה'],
+        categoryCta: 'ראו אפשרויות פילרים',
+        bookCta: 'קביעת ייעוץ שפתיים',
+        bookingTitle: 'קבעו מילוי שפתיים בבטומי',
+        bookingText:
+          'בייעוץ דנים בצורת השפתיים, סימטריה, מטרת נפח, תזמון ומחיר התחלתי לפני אישור טיפול.',
+      },
+    }),
+  },
+  {
+    slug: 'acne-treatment-batumi',
+    categorySlug: 'skin-treatments',
+    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&q=85',
+    treatmentSlugs: [
+      'cutera-aviclear',
+      'skinpen-microneedling',
+      'cutera-secret-pro-rf-microneedling',
+      'obagi-blue-radiance-peel',
+    ],
+    priority: 0.92,
+    content: makeGeneratedLocalSeoContent({
+      en: {
+        title: 'Acne treatment in Batumi, Georgia',
+        h1: 'Acne treatment in Batumi',
+        description:
+          'Explore consultation-led acne and post-acne treatment options in Batumi, including skin analysis, peels, microneedling, and device-led care.',
+        eyebrow: 'Acne and post-acne support',
+        topic: 'acne and post-acne treatment planning',
+        searchPhrases: ['acne treatment Batumi', 'acne scar treatment Batumi', 'post-acne treatment Batumi'],
+        categoryCta: 'View skin treatment options',
+        bookCta: 'Book acne consultation',
+        bookingTitle: 'Book acne treatment consultation in Batumi',
+        bookingText:
+          'Choose a consultation to discuss active breakouts, acne marks, texture, current products, treatment timing, and aftercare.',
+      },
+      ka: {
+        title: 'აკნეს მკურნალობა ბათუმში',
+        h1: 'აკნეს მკურნალობა ბათუმში',
+        description:
+          'აკნესა და პოსტაკნეს კონსულტაციაზე დაფუძნებული ვარიანტები ბათუმში: კანის ანალიზი, პილინგი, მიკრონიდლინგი და აპარატული პროცედურები.',
+        eyebrow: 'აკნე და პოსტაკნე',
+        topic: 'აკნესა და პოსტაკნეს მკურნალობის დაგეგმვა',
+        searchPhrases: ['აკნეს მკურნალობა ბათუმი', 'აკნეს ნაწიბურების მკურნალობა ბათუმი', 'პოსტაკნე ბათუმი'],
+        categoryCta: 'კანის პროცედურები',
+        bookCta: 'აკნეს კონსულტაცია',
+        bookingTitle: 'დაჯავშნეთ აკნეს კონსულტაცია ბათუმში',
+        bookingText:
+          'კონსულტაციაზე განიხილება გამონაყარი, აკნეს კვალი, ტექსტურა, მიმდინარე მოვლა, დრო და შემდგომი მოვლა.',
+      },
+      ru: {
+        title: 'Лечение акне в Батуми, Грузия',
+        h1: 'Лечение акне в Батуми',
+        description:
+          'Консультационные варианты для акне и постакне в Батуми: анализ кожи, пилинги, микронидлинг и аппаратные процедуры.',
+        eyebrow: 'Акне и постакне',
+        topic: 'планирование лечения акне и постакне',
+        searchPhrases: ['лечение акне Батуми', 'лечение постакне Батуми', 'рубцы после акне Батуми'],
+        categoryCta: 'Смотреть процедуры для кожи',
+        bookCta: 'Записаться на консультацию',
+        bookingTitle: 'Записаться на консультацию по акне в Батуми',
+        bookingText:
+          'На консультации можно обсудить активные высыпания, следы акне, текстуру, текущий уход, сроки и рекомендации после процедур.',
+      },
+      tr: {
+        title: 'Batum akne tedavisi',
+        h1: 'Batum akne tedavisi',
+        description:
+          'Batum’da akne ve akne izi için danışmanlık odaklı seçenekler: cilt analizi, peeling, microneedling ve cihaz destekli bakım.',
+        eyebrow: 'Akne ve akne izi desteği',
+        topic: 'akne ve akne izi tedavi planlaması',
+        searchPhrases: ['Batum akne tedavisi', 'akne izi tedavisi Batum', 'sivilce tedavisi Batum'],
+        categoryCta: 'Cilt tedavilerini gör',
+        bookCta: 'Akne danışmanlığı al',
+        bookingTitle: 'Batum’da akne danışmanlığı',
+        bookingText:
+          'Danışmanlıkta aktif akne, izler, doku, mevcut ürünler, zamanlama ve bakım önerileri konuşulur.',
+      },
+      ar: {
+        title: 'علاج حب الشباب في باتومي',
+        h1: 'علاج حب الشباب في باتومي',
+        description:
+          'خيارات قائمة على الاستشارة لعلاج حب الشباب وآثاره في باتومي، تشمل تحليل البشرة، التقشير، المايكرونيدلنغ والعلاجات بالأجهزة.',
+        eyebrow: 'حب الشباب وآثاره',
+        topic: 'تخطيط علاج حب الشباب وآثاره',
+        searchPhrases: ['علاج حب الشباب باتومي', 'علاج آثار حب الشباب باتومي', 'علاج ندبات حب الشباب باتومي'],
+        categoryCta: 'عرض علاجات البشرة',
+        bookCta: 'حجز استشارة حب الشباب',
+        bookingTitle: 'احجزي استشارة حب الشباب في باتومي',
+        bookingText:
+          'تناقش الاستشارة الحبوب النشطة، آثار حب الشباب، الملمس، المنتجات الحالية، التوقيت والعناية اللاحقة.',
+      },
+      he: {
+        title: 'טיפול באקנה בבטומי',
+        h1: 'טיפול באקנה בבטומי',
+        description:
+          'אפשרויות מבוססות ייעוץ לאקנה ופוסט-אקנה בבטומי, כולל אבחון עור, פילינג, מיקרונידלינג וטיפולי מכשור.',
+        eyebrow: 'אקנה ופוסט-אקנה',
+        topic: 'תכנון טיפול באקנה ובפוסט-אקנה',
+        searchPhrases: ['טיפול באקנה בטומי', 'טיפול בצלקות אקנה בטומי', 'טיפול בפוסט אקנה בטומי'],
+        categoryCta: 'ראו טיפולי עור',
+        bookCta: 'קביעת ייעוץ אקנה',
+        bookingTitle: 'קבעו ייעוץ אקנה בבטומי',
+        bookingText:
+          'בייעוץ דנים בפצעונים פעילים, סימני אקנה, מרקם, מוצרים נוכחיים, תזמון והנחיות לאחר טיפול.',
+      },
+    }),
+  },
+  {
+    slug: 'nails-batumi',
+    categorySlug: 'nails',
+    image: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=1800&q=85',
+    treatmentSlugs: ['nails'],
+    priority: 0.88,
+    content: makeGeneratedLocalSeoContent({
+      en: {
+        title: 'Nails, manicure and pedicure in Batumi',
+        h1: 'Nails in Batumi',
+        description:
+          'Book manicure, pedicure, gel nails, and nail finishing services in Batumi with clear timing, starting prices, and appointment planning.',
+        eyebrow: 'Nail salon Batumi',
+        topic: 'nail service appointments',
+        searchPhrases: ['nails Batumi', 'manicure Batumi', 'pedicure Batumi'],
+        categoryCta: 'View nail services',
+        bookCta: 'Book nail appointment',
+        bookingTitle: 'Book nails in Batumi',
+        bookingText:
+          'Choose a nail appointment for shaping, cuticle care, gel manicure, nail art, pedicure planning, or event-ready finishing.',
+      },
+      ka: {
+        title: 'ფრჩხილები, მანიკური და პედიკური ბათუმში',
+        h1: 'ფრჩხილები ბათუმში',
+        description:
+          'მანიკური, პედიკური, გელ ლაქი და ფრჩხილების მოვლა ბათუმში, დროის, საწყისი ფასებისა და დაჯავშნის მკაფიო დაგეგმვით.',
+        eyebrow: 'ფრჩხილების სალონი ბათუმში',
+        topic: 'ფრჩხილების სერვისების დაჯავშნა',
+        searchPhrases: ['ფრჩხილები ბათუმი', 'მანიკური ბათუმი', 'პედიკური ბათუმი'],
+        categoryCta: 'ფრჩხილების სერვისები',
+        bookCta: 'ფრჩხილების სერვისის დაჯავშნა',
+        bookingTitle: 'დაჯავშნეთ ფრჩხილები ბათუმში',
+        bookingText:
+          'აირჩიეთ ფრჩხილების სერვისი ფორმისთვის, კუტიკულის მოვლისთვის, გელ მანიკურისთვის, nail art-ისთვის ან პედიკურისთვის.',
+      },
+      ru: {
+        title: 'Ногти, маникюр и педикюр в Батуми',
+        h1: 'Ногти в Батуми',
+        description:
+          'Маникюр, педикюр, гель-лак и nail-сервисы в Батуми с понятным временем, стартовыми ценами и записью.',
+        eyebrow: 'Нейл-салон Батуми',
+        topic: 'запись на nail-сервисы',
+        searchPhrases: ['ногти Батуми', 'маникюр Батуми', 'педикюр Батуми'],
+        categoryCta: 'Смотреть nail-сервисы',
+        bookCta: 'Записаться на ногти',
+        bookingTitle: 'Записаться на ногти в Батуми',
+        bookingText:
+          'Выберите nail-сервис для формы, кутикул, гель-маникюра, дизайна, педикюра или подготовки к событию.',
+      },
+      tr: {
+        title: 'Batum tırnak, manikür ve pedikür',
+        h1: 'Batum tırnak hizmetleri',
+        description:
+          'Batum’da manikür, pedikür, kalıcı oje ve tırnak bitirme hizmetleri; süre, başlangıç fiyatı ve randevu planı ile.',
+        eyebrow: 'Batum tırnak salonu',
+        topic: 'tırnak hizmeti randevuları',
+        searchPhrases: ['Batum tırnak', 'manikür Batum', 'pedikür Batum'],
+        categoryCta: 'Tırnak hizmetlerini gör',
+        bookCta: 'Tırnak randevusu al',
+        bookingTitle: 'Batum’da tırnak randevusu',
+        bookingText:
+          'Şekillendirme, kütikül bakımı, jel manikür, nail art, pedikür veya etkinlik öncesi bitiş için randevu alın.',
+      },
+      ar: {
+        title: 'الأظافر والمانيكير والباديكير في باتومي',
+        h1: 'الأظافر في باتومي',
+        description:
+          'خدمات مانيكير، باديكير، جل أظافر وتشطيب الأظافر في باتومي مع توضيح المدة، الأسعار المبدئية وخطة الموعد.',
+        eyebrow: 'صالون أظافر باتومي',
+        topic: 'مواعيد خدمات الأظافر',
+        searchPhrases: ['أظافر باتومي', 'مانيكير باتومي', 'باديكير باتومي'],
+        categoryCta: 'عرض خدمات الأظافر',
+        bookCta: 'حجز موعد أظافر',
+        bookingTitle: 'احجزي الأظافر في باتومي',
+        bookingText:
+          'احجزي للعناية بالشكل، الجلد المحيط، جل مانيكير، فن الأظافر، الباديكير أو لمسة نهائية لمناسبة.',
+      },
+      he: {
+        title: 'ציפורניים, מניקור ופדיקור בבטומי',
+        h1: 'ציפורניים בבטומי',
+        description:
+          'מניקור, פדיקור, ג׳ל ושירותי ציפורניים בבטומי עם זמן טיפול, מחיר התחלתי ותכנון פגישה ברור.',
+        eyebrow: 'סלון ציפורניים בטומי',
+        topic: 'פגישות שירותי ציפורניים',
+        searchPhrases: ['ציפורניים בטומי', 'מניקור בטומי', 'פדיקור בטומי'],
+        categoryCta: 'ראו שירותי ציפורניים',
+        bookCta: 'קביעת פגישת ציפורניים',
+        bookingTitle: 'קבעו ציפורניים בבטומי',
+        bookingText:
+          'קבעו שירות לצורה, טיפול בקוטיקולה, מניקור ג׳ל, עיצוב ציפורניים, פדיקור או הכנה לאירוע.',
+      },
+    }),
+  },
+  {
+    slug: 'lashes-brows-batumi',
+    categorySlug: 'lashes',
+    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=1800&q=85',
+    treatmentSlugs: ['lashes'],
+    priority: 0.87,
+    content: makeGeneratedLocalSeoContent({
+      en: {
+        title: 'Lashes and brows in Batumi',
+        h1: 'Lashes and brows in Batumi',
+        description:
+          'Book lash lift, lash styling, Russian volume lashes, and brow lamination support in Batumi with consultation-led appointment planning.',
+        eyebrow: 'Lash and brow appointments',
+        topic: 'lash and brow service appointments',
+        searchPhrases: ['lashes Batumi', 'lash lift Batumi', 'brow lamination Batumi'],
+        categoryCta: 'View lash services',
+        bookCta: 'Book lash or brow appointment',
+        bookingTitle: 'Book lashes and brows in Batumi',
+        bookingText:
+          'Choose an appointment to discuss lash lift, lash styling, brow lamination, shape preferences, timing, and aftercare.',
+      },
+      ka: {
+        title: 'წამწამები და წარბები ბათუმში',
+        h1: 'წამწამები და წარბები ბათუმში',
+        description:
+          'წამწამების ლიფტინგი, სტაილინგი, მოცულობითი წამწამები და წარბების ლამინაციის მხარდაჭერა ბათუმში კონსულტაციაზე დაფუძნებული დაგეგმვით.',
+        eyebrow: 'წამწამებისა და წარბების სერვისი',
+        topic: 'წამწამებისა და წარბების სერვისების დაჯავშნა',
+        searchPhrases: ['წამწამები ბათუმი', 'წამწამების ლიფტინგი ბათუმი', 'წარბების ლამინაცია ბათუმი'],
+        categoryCta: 'წამწამების სერვისები',
+        bookCta: 'წამწამების ან წარბების დაჯავშნა',
+        bookingTitle: 'დაჯავშნეთ წამწამები და წარბები ბათუმში',
+        bookingText:
+          'კონსულტაციაზე განიხილება წამწამების ლიფტინგი, სტაილინგი, წარბების ლამინაცია, ფორმა, დრო და მოვლა.',
+      },
+      ru: {
+        title: 'Ресницы и брови в Батуми',
+        h1: 'Ресницы и брови в Батуми',
+        description:
+          'Ламинирование ресниц, lash styling, русский объем и ламинирование бровей в Батуми с консультационным планированием.',
+        eyebrow: 'Ресницы и брови',
+        topic: 'запись на услуги ресниц и бровей',
+        searchPhrases: ['ресницы Батуми', 'ламинирование ресниц Батуми', 'ламинирование бровей Батуми'],
+        categoryCta: 'Смотреть услуги ресниц',
+        bookCta: 'Записаться на ресницы или брови',
+        bookingTitle: 'Записаться на ресницы и брови в Батуми',
+        bookingText:
+          'Обсудите ламинирование ресниц, lash styling, ламинирование бровей, желаемую форму, сроки и уход.',
+      },
+      tr: {
+        title: 'Batum kirpik ve kaş hizmetleri',
+        h1: 'Batum kirpik ve kaş hizmetleri',
+        description:
+          'Batum’da kirpik lifting, kirpik styling, Rus hacim kirpikler ve kaş laminasyonu için danışmanlık odaklı randevu.',
+        eyebrow: 'Kirpik ve kaş randevuları',
+        topic: 'kirpik ve kaş hizmeti randevuları',
+        searchPhrases: ['Batum kirpik', 'kirpik lifting Batum', 'kaş laminasyonu Batum'],
+        categoryCta: 'Kirpik hizmetlerini gör',
+        bookCta: 'Kirpik veya kaş randevusu al',
+        bookingTitle: 'Batum’da kirpik ve kaş randevusu',
+        bookingText:
+          'Kirpik lifting, styling, kaş laminasyonu, şekil tercihi, zamanlama ve bakım önerilerini konuşun.',
+      },
+      ar: {
+        title: 'الرموش والحواجب في باتومي',
+        h1: 'الرموش والحواجب في باتومي',
+        description:
+          'حجز رفع الرموش، تنسيق الرموش، رموش الحجم الروسي ودعم تصفيح الحواجب في باتومي مع تخطيط قائم على الاستشارة.',
+        eyebrow: 'مواعيد الرموش والحواجب',
+        topic: 'مواعيد خدمات الرموش والحواجب',
+        searchPhrases: ['رموش باتومي', 'رفع الرموش باتومي', 'تصفيح الحواجب باتومي'],
+        categoryCta: 'عرض خدمات الرموش',
+        bookCta: 'حجز موعد رموش أو حواجب',
+        bookingTitle: 'احجزي الرموش والحواجب في باتومي',
+        bookingText:
+          'ناقشي رفع الرموش، تنسيقها، تصفيح الحواجب، الشكل المفضل، التوقيت والعناية بعد الموعد.',
+      },
+      he: {
+        title: 'ריסים וגבות בבטומי',
+        h1: 'ריסים וגבות בבטומי',
+        description:
+          'קביעת הרמת ריסים, עיצוב ריסים, נפח רוסי ולמינציית גבות בבטומי עם תכנון פגישה מבוסס ייעוץ.',
+        eyebrow: 'פגישות ריסים וגבות',
+        topic: 'פגישות שירותי ריסים וגבות',
+        searchPhrases: ['ריסים בטומי', 'הרמת ריסים בטומי', 'למינציה לגבות בטומי'],
+        categoryCta: 'ראו שירותי ריסים',
+        bookCta: 'קביעת ריסים או גבות',
+        bookingTitle: 'קבעו ריסים וגבות בבטומי',
+        bookingText:
+          'דונו בהרמת ריסים, עיצוב, למינציית גבות, העדפת צורה, תזמון והנחיות לאחר השירות.',
+      },
+    }),
+  },
+];
+
+export const localSeoLandingPages: LocalSeoLandingPage[] = [
+  ...coreLocalSeoLandingPages,
+  ...additionalLocalSeoLandingPages,
 ];
 
 export const localSeoLandingSitemapRoutes = localSeoLandingPages.map((page) => ({
