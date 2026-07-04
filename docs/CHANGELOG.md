@@ -2,6 +2,7 @@
 
 ## 2026-07-04
 
+- Added a Phase 8 NAP citation consistency audit documenting public listing findings, phone/social/booking-platform risks, and owner-approved correction priorities.
 - Added a Phase 7 local SERP competitor analysis documenting multilingual query groups, recurring competitors, directory opportunities, Silk gaps, and review/photo quick wins.
 - Added a Phase 6 AI-search readiness and query-tracking audit documenting answerability, citation readiness, multilingual public-search samples, competitor/source notes, and people-first improvement recommendations.
 - Added a Phase 5 structured data validation log covering live JSON-LD parseability, schema types, review/rating exclusions, validator limitations, and follow-up cleanup recommendations.
