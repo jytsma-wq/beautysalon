@@ -2,6 +2,7 @@
 
 ## 2026-07-04
 
+- Updated the review generation and reply system with separate WhatsApp/SMS templates, explicit Botox/fillers and nails/lashes reply templates, review-check cadence, and launch checklist.
 - Updated the NAP citation consistency audit with current Phase 6 public listing findings, stale-snippet verification, platform-specific mismatches, and prioritized correction actions.
 - Updated the Bing Webmaster and IndexNow log with current Phase 4 access status, public sitemap/robots readiness, priority URL submission recommendations, crawl-report blockers, and IndexNow non-implementation evidence.
 - Updated the Google Business Profile optimization log with the current Phase 3 access status, public citation notes, website source comparison, review-audit status, and owner-approval gates.

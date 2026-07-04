@@ -31,6 +31,81 @@ Use these placeholders in the templates:
 
 If a service is sensitive, injectable, medical-aesthetic, intimate, or otherwise private, use `your appointment` instead of naming the treatment.
 
+## Phase 7 Execution Update - 2026-07-04 14:20 Asia/Tbilisi
+
+This update prepares the compliant review-growth system for Google Business Profile and local trust.
+
+No messages were sent. No review link was generated. No QR code was created. No public review replies were posted. No reviews were requested from clients during this documentation pass.
+
+Current launch status:
+
+| Item | Status |
+| --- | --- |
+| Official Google Business Profile confirmed | No |
+| Official Google review link confirmed | No |
+| Templates prepared | Yes |
+| Staff SOP prepared | Yes |
+| Owner approval received for live use | No |
+| System launched | No |
+
+Do not use these templates publicly until the owner confirms the correct GBP review link and approves the staff process.
+
+## WhatsApp Short Message Templates
+
+Use WhatsApp only when the client has consented to WhatsApp communication. Send once after a real completed appointment. Do not send while the client is still in the salon chair.
+
+### English
+
+Hi [first name], thank you for visiting Silk Beauty Salon in Batumi. If you would like to share your experience, an honest Google review would help us: [Google review link]. You may mention your service only if you are comfortable. No pressure and no reward.
+
+### Georgian
+
+გამარჯობა [first name], მადლობა Silk Beauty Salon-ში ვიზიტისთვის ბათუმში. თუ გსურთ გამოცდილების გაზიარება, გულწრფელი Google შეფასება ძალიან დაგვეხმარება: [Google review link]. სერვისის ხსენება მხოლოდ თუ კომფორტულად ხართ. ზეწოლა ან ჯილდო არ არის.
+
+### Russian
+
+Здравствуйте, [first name]. Спасибо, что посетили Silk Beauty Salon в Батуми. Если хотите поделиться опытом, честный отзыв в Google очень поможет нам: [Google review link]. Упоминайте услугу только если вам комфортно. Без давления и вознаграждений.
+
+### Turkish
+
+Merhaba [first name], Batum'daki Silk Beauty Salon'u ziyaret ettiğiniz için teşekkür ederiz. Deneyiminizi paylaşmak isterseniz dürüst bir Google yorumu bize yardımcı olur: [Google review link]. Hizmeti yalnızca rahat hissederseniz yazabilirsiniz. Baskı veya ödül yoktur.
+
+### Arabic
+
+مرحباً [first name]، شكراً لزيارتك Silk Beauty Salon في باتومي. إذا رغبت في مشاركة تجربتك، فإن تقييمك الصادق على Google يساعدنا كثيراً: [Google review link]. يمكنك ذكر الخدمة فقط إذا كنت مرتاحاً لذلك. لا يوجد ضغط أو مكافأة.
+
+### Hebrew
+
+שלום [first name], תודה שביקרת ב-Silk Beauty Salon בבטומי. אם תרצה/תרצי לשתף את החוויה שלך, ביקורת כנה ב-Google תעזור לנו: [Google review link]. אפשר להזכיר את השירות רק אם זה נוח לך. אין לחץ ואין תגמול.
+
+## SMS Short Message Templates
+
+SMS must be shorter than WhatsApp and should avoid sensitive treatment details. Use only when the client has consented to SMS communication.
+
+### English
+
+Thank you for visiting Silk Beauty Salon. Honest Google feedback is appreciated: [Google review link]. Mention your service only if comfortable. No reward or obligation.
+
+### Georgian
+
+მადლობა Silk Beauty Salon-ში ვიზიტისთვის. გულწრფელი Google შეფასება დაგვეხმარება: [Google review link]. სერვისი ახსენეთ მხოლოდ თუ კომფორტულია. ჯილდო/ვალდებულება არ არის.
+
+### Russian
+
+Спасибо за визит в Silk Beauty Salon. Будем благодарны за честный отзыв Google: [Google review link]. Услугу указывайте только если комфортно. Без наград и обязательств.
+
+### Turkish
+
+Silk Beauty Salon ziyaretiniz için teşekkürler. Dürüst Google yorumunuz değerlidir: [Google review link]. Hizmeti yalnızca rahatsanız yazın. Ödül veya zorunluluk yoktur.
+
+### Arabic
+
+شكراً لزيارتك Silk Beauty Salon. يسعدنا تقييم صادق على Google: [Google review link]. اذكر الخدمة فقط إذا كنت مرتاحاً. لا مكافأة ولا إلزام.
+
+### Hebrew
+
+תודה שביקרת ב-Silk Beauty Salon. נשמח לביקורת כנה ב-Google: [Google review link]. אפשר להזכיר שירות רק אם נוח לך. אין תגמול או חובה.
+
 ## SMS / WhatsApp Short Templates
 
 ### English
@@ -339,6 +414,62 @@ Hebrew:
 
 > תודה ששיתפת את החוויה שלך. שמחנו שהייעוץ, התכנון והנחיות הטיפול היו מועילים.
 
+### Botox / Fillers Review
+
+Use only if the reviewer already mentioned Botox, fillers, or injectables publicly. Keep the reply general and privacy-safe.
+
+English:
+
+> Thank you for sharing your experience. We are glad the consultation, planning, and aftercare guidance felt clear and helpful.
+
+Georgian:
+
+> მადლობა თქვენი გამოცდილების გაზიარებისთვის. გვიხარია, რომ კონსულტაცია, დაგეგმვა და მოვლის რეკომენდაციები ნათელი და სასარგებლო იყო.
+
+Russian:
+
+> Спасибо, что поделились опытом. Мы рады, что консультация, планирование и рекомендации по уходу были понятными и полезными.
+
+Turkish:
+
+> Deneyiminizi paylaştığınız için teşekkür ederiz. Konsültasyon, planlama ve bakım önerilerinin açık ve faydalı olmasına sevindik.
+
+Arabic:
+
+> شكراً لمشاركة تجربتك. يسعدنا أن الاستشارة والتخطيط وإرشادات العناية كانت واضحة ومفيدة.
+
+Hebrew:
+
+> תודה ששיתפת את החוויה שלך. שמחנו שהייעוץ, התכנון והנחיות הטיפול היו ברורים ומועילים.
+
+### Nails / Lashes Review
+
+Use only if the reviewer already mentioned nails, lashes, or brows publicly.
+
+English:
+
+> Thank you for your kind review. We are happy you enjoyed your nail, lash, or brow appointment and appreciate you sharing your experience.
+
+Georgian:
+
+> მადლობა გულთბილი შეფასებისთვის. გვიხარია, რომ ფრჩხილების, წამწამების ან წარბების სერვისით კმაყოფილი დარჩით და გამოცდილება გაგვიზიარეთ.
+
+Russian:
+
+> Спасибо за добрый отзыв. Мы рады, что вам понравился визит на услуги ногтей, ресниц или бровей, и ценим, что вы поделились опытом.
+
+Turkish:
+
+> Güzel yorumunuz için teşekkür ederiz. Tırnak, kirpik veya kaş randevunuzdan memnun kalmanıza sevindik ve deneyiminizi paylaştığınız için teşekkür ederiz.
+
+Arabic:
+
+> شكراً لتقييمك اللطيف. يسعدنا أنك استمتعت بموعد الأظافر أو الرموش أو الحواجب، ونقدر مشاركتك لتجربتك.
+
+Hebrew:
+
+> תודה על הביקורת הטובה. שמחנו שנהנית מפגישת הציפורניים, הריסים או הגבות, ואנו מעריכים ששיתפת את החוויה.
+
 ### Tourist Client Review
 
 English:
@@ -415,6 +546,26 @@ Hebrew:
 3. Use the client's preferred language where known.
 4. Never send a review link only to clients who expressed satisfaction.
 5. Never offer a discount, gift, free service, upgrade, or priority booking for a review.
+
+### Review Check Cadence
+
+1. Check Google reviews at least twice per week after the profile is confirmed.
+2. During the first month after launch, check every business day if practical.
+3. Check Salonly/Facebook/Yandex/Tripadvisor reviews only if those platforms are owner-approved active profiles.
+4. Keep a private operations note of review-response status only; do not store private client treatment details in public docs.
+
+### Launch Checklist
+
+Before any staff member sends review requests:
+
+1. Confirm the correct Google Business Profile.
+2. Confirm the official Google review link.
+3. Confirm which client communication channels are allowed.
+4. Confirm who is allowed to send requests.
+5. Confirm the approved languages/templates.
+6. Train staff on no incentives, no gating, no pressure, and privacy rules.
+7. Prepare a private escalation path for negative reviews.
+8. Confirm no review-request workflow is connected to discounts, loyalty rewards, or appointment priority.
 
 ### How To Respond
 
