@@ -2,6 +2,7 @@
 
 ## 2026-07-04
 
+- Replaced the older SEO keyword map with a full multilingual target-keyword matrix that maps owner-provided English, Georgian, Russian, Turkish, Arabic, and Hebrew queries to existing canonical pages without creating doorway pages or visible keyword stuffing.
 - Added a Phase 10 SEO monitoring baseline and reporting cadence covering sitemap/robots status, access gaps, KPI groups, private metric placeholders, competitor tracking, and 7/30/90-day action plans.
 - Added a Phase 9 ethical multilingual review-generation and reply system with SMS/WhatsApp, email, QR-card, follow-up, review-reply, privacy, and escalation SOP guidance.
 - Added a Phase 8 NAP citation consistency audit documenting public listing findings, phone/social/booking-platform risks, and owner-approved correction priorities.

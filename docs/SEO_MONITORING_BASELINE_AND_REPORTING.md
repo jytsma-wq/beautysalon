@@ -204,6 +204,8 @@ Copy this table each month.
 
 Use a controlled location/device context where possible. Do not overinterpret one-off rankings.
 
+The complete owner-provided multilingual keyword set is mapped in `docs/SEO_KEYWORD_MAP.md`. The shorter table below is the dashboard sample; use the full keyword map for monthly Search Console grouping and manual rank checks.
+
 | Query | Language | Target page | Organic position | Local pack present | Silk in local pack | Competitors above Silk | Notes |
 | --- | --- | --- | ---: | --- | --- | --- | --- |
 | beauty salon Batumi | English | `/en/beauty-salon-batumi` |  |  |  |  |  |
