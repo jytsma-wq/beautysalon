@@ -2,6 +2,7 @@
 
 ## 2026-07-04
 
+- Added a Phase 4 Bing Webmaster Tools and IndexNow log documenting verification blockers, sitemap/priority URL readiness, and a separate owner-approved IndexNow implementation plan.
 - Added a Phase 3 Google Search Console indexing log and prepared a narrow pricelist metadata fix so priority price-list pages expose canonical and hreflang metadata before indexing requests.
 - Added a Phase 2 Google Business Profile optimization log with category recommendations, a compliant profile description draft, service plan, photo shot list, review workflow/templates, Q&A drafts, and a 12-week GBP post calendar.
 - Added a Phase 1 Google/AI SEO access and source-of-truth audit documenting account availability, production source, live route health, NAP facts, and owner-approval gates.
