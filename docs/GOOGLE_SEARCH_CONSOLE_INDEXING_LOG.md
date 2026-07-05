@@ -3,7 +3,212 @@
 Date: 2026-07-04
 Phase: 3 - Google Search Console setup and indexing
 Branch: `codex/visibility-readiness-audit`
-Mode: public technical audit plus local SEO fix; no account-side GSC changes
+Mode: Search Console execution log plus public technical readiness notes
+
+## Phase 2 Execution Update - 2026-07-05 09:36 Asia/Tbilisi
+
+This update performed a real authenticated Google Search Console pass for the domain property. No DNS, verification token, website code, deployment, Google Business Profile, Bing, analytics, or public listing changes were made.
+
+### Property Status
+
+| Item | Status |
+| --- | --- |
+| Search Console access | Available in the in-app browser session |
+| Property type | Domain property: `sc-domain:silkbeautysalon.online` |
+| Verification method | Already verified before this session; method was not changed and no verification token/value was exposed |
+| New property created | No |
+| DNS changed | No |
+| Verification token exposed | No |
+
+### Sitemap Submission Result
+
+`https://silkbeautysalon.online/sitemap.xml` was already submitted in Search Console.
+
+| Sitemap | Type | Submitted | Last read | Status | Discovered pages |
+| --- | --- | --- | --- | --- | ---: |
+| `https://silkbeautysalon.online/sitemap.xml` | Sitemap | 2026-06-13 | 2026-06-21 | Success | 492 |
+
+No duplicate sitemap was submitted.
+
+### Search Console Report Baseline
+
+| Report | Current finding |
+| --- | --- |
+| Overview performance | 20 total web search clicks |
+| Page indexing | 9 indexed pages; 487 not indexed pages |
+| Core Web Vitals | Not enough usage data for mobile or desktop in the last 90 days |
+| HTTPS | 2 HTTPS URLs; 0 non-HTTPS URLs |
+| Breadcrumbs | 1 valid, 0 invalid |
+| Manual actions | No issues detected |
+| Security issues | No issues detected |
+| Links | Processing data; report says to check again later |
+
+### Page Indexing Details
+
+| Reason | Source | Validation | Pages |
+| --- | --- | --- | ---: |
+| Page with redirect | Website | Not started | 1 |
+| Alternate page with proper canonical tag | Website | Not started | 1 |
+| Discovered - currently not indexed | Google systems | Not started | 485 |
+| Blocked by robots.txt | Website | N/A | 0 |
+| Crawled - currently not indexed | Google systems | N/A | 0 |
+| Indexed, though blocked by robots.txt | Website | Not started | 2 |
+
+Follow-up: inspect examples for `Indexed, though blocked by robots.txt` in a separate pass. The public `robots.txt` currently allows crawling, so this may be stale data or non-public/old URL examples.
+
+### Performance Baseline
+
+Default visible period in Search Console: 2026-06-12 to 2026-07-03.
+
+| Metric | Value |
+| --- | ---: |
+| Total clicks | 20 |
+| Total impressions | 293 |
+| Average CTR | 6.8% |
+| Average position | 5 |
+
+Top visible queries:
+
+| Query | Clicks | Impressions |
+| --- | ---: | ---: |
+| `silk beauty salon` | 0 | 6 |
+| `skin treatment near me` | 0 | 2 |
+| `silkbeauty` | 0 | 1 |
+| `silk batumi` | 0 | 1 |
+| `silk nails cootamundra` | 0 | 1 |
+
+Top pages, countries, and devices were attempted but not reliably extracted because the Search Console UI did not switch the table tabs cleanly during this browser session. Re-run those tabs in the next account-side pass.
+
+### URL Inspection Findings
+
+Important: URL Inspection results below are real Search Console UI results from this session. URLs not listed as inspected were not successfully inspected in the account UI in this pass.
+
+English URLs:
+
+| URL | URL is on Google | Page indexing | Indexing allowed | Request indexing submitted |
+| --- | --- | --- | --- | --- |
+| `https://silkbeautysalon.online/en` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
+| `https://silkbeautysalon.online/en/beauty-salon-batumi` | Not inspected in GSC | Held because Phase 1 found `Popular local searches` | N/A | No |
+| `https://silkbeautysalon.online/en/botox-batumi` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
+| `https://silkbeautysalon.online/en/dermal-fillers-batumi` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
+| `https://silkbeautysalon.online/en/lip-fillers-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
+| `https://silkbeautysalon.online/en/skin-treatment-batumi` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
+| `https://silkbeautysalon.online/en/acne-treatment-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
+| `https://silkbeautysalon.online/en/nails-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
+| `https://silkbeautysalon.online/en/lashes-brows-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
+| `https://silkbeautysalon.online/en/pricelist` | Not inspected in GSC | Held because Phase 1 found missing canonical/hreflang | N/A | No |
+| `https://silkbeautysalon.online/en/book` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
+
+Locale roots:
+
+| URL | URL is on Google | Page indexing | Request indexing submitted |
+| --- | --- | --- | --- |
+| `https://silkbeautysalon.online/ka` | No | Discovered - currently not indexed | Yes |
+| `https://silkbeautysalon.online/ru` | No | Discovered - currently not indexed | Yes |
+| `https://silkbeautysalon.online/tr` | No | Discovered - currently not indexed | Yes |
+| `https://silkbeautysalon.online/ar` | No | Discovered - currently not indexed | Yes |
+| `https://silkbeautysalon.online/he` | No | Discovered - currently not indexed | Yes |
+
+Georgian priority URLs:
+
+| URL | URL is on Google | Page indexing | Request indexing submitted |
+| --- | --- | --- | --- |
+| `/ka/beauty-salon-batumi` | No | URL is unknown to Google | No; held for content review group |
+| `/ka/botox-batumi` | No | Discovered - currently not indexed | No |
+| `/ka/dermal-fillers-batumi` | No | Discovered - currently not indexed | No |
+| `/ka/lip-fillers-batumi` | No | URL is unknown to Google | No |
+| `/ka/skin-treatment-batumi` | No | Discovered - currently not indexed | No |
+| `/ka/acne-treatment-batumi` | No | URL is unknown to Google | No |
+| `/ka/nails-batumi` | No | URL is unknown to Google | No |
+| `/ka/lashes-brows-batumi` | No | URL is unknown to Google | No |
+| `/ka/pricelist` | No | Discovered - currently not indexed | No; held for pricelist metadata group |
+
+Russian priority URLs:
+
+| URL | URL is on Google | Page indexing | Request indexing submitted |
+| --- | --- | --- | --- |
+| `/ru/beauty-salon-batumi` | No | Discovered - currently not indexed | No; held for content review group |
+| `/ru/botox-batumi` | No | Discovered - currently not indexed | No |
+| `/ru/dermal-fillers-batumi` | No | Discovered - currently not indexed | No |
+| `/ru/lip-fillers-batumi` | No | URL is unknown to Google | No |
+| `/ru/skin-treatment-batumi` | No | Discovered - currently not indexed | No |
+| `/ru/acne-treatment-batumi` | No | URL is unknown to Google | No |
+| `/ru/nails-batumi` | No | URL is unknown to Google | No |
+| `/ru/lashes-brows-batumi` | No | URL is unknown to Google | No |
+| `/ru/pricelist` | No | Discovered - currently not indexed | No; held for pricelist metadata group |
+
+Turkish priority URLs:
+
+| URL | URL is on Google | Page indexing | Request indexing submitted |
+| --- | --- | --- | --- |
+| `/tr/beauty-salon-batumi` | No | Discovered - currently not indexed | No; held for content review group |
+| `/tr/botox-batumi` | No | Discovered - currently not indexed | No |
+| `/tr/dermal-fillers-batumi` | No | Discovered - currently not indexed | No |
+| `/tr/lip-fillers-batumi` | No | URL is unknown to Google | No |
+| `/tr/skin-treatment-batumi` | No | Discovered - currently not indexed | No |
+| `/tr/acne-treatment-batumi` | No | URL is unknown to Google | No |
+| `/tr/nails-batumi` | No | URL is unknown to Google | No |
+| `/tr/lashes-brows-batumi` | No | URL is unknown to Google | No |
+| `/tr/pricelist` | No | URL is unknown to Google | No; held for pricelist metadata group |
+
+Arabic priority URLs:
+
+| URL | URL Inspection result |
+| --- | --- |
+| `/ar/beauty-salon-batumi` | No; URL is unknown to Google |
+| `/ar/botox-batumi` | Incomplete; Search Console UI timed out |
+| `/ar/dermal-fillers-batumi` | No; Discovered - currently not indexed |
+| `/ar/lip-fillers-batumi` | Incomplete; Search Console UI timed out |
+| `/ar/skin-treatment-batumi` | Incomplete; Search Console UI timed out |
+| `/ar/acne-treatment-batumi` | Incomplete; Search Console UI timed out |
+| `/ar/nails-batumi` | Incomplete; Search Console UI timed out |
+| `/ar/lashes-brows-batumi` | No; URL is unknown to Google |
+| `/ar/pricelist` | Incomplete; Search Console UI timed out |
+
+Hebrew priority URLs:
+
+| URL group | URL Inspection result |
+| --- | --- |
+| `/he` | No; Discovered - currently not indexed; indexing requested |
+| `/he/*` service and pricelist pages | Incomplete; Search Console UI ended with duplicate visible search controls after long inspection session |
+
+### Indexing Requests Made
+
+Indexing was requested only for canonical-ready/high-priority URLs that were not already indexed and were not part of the known blocker groups.
+
+| URL | Result |
+| --- | --- |
+| `https://silkbeautysalon.online/en/lip-fillers-batumi` | Indexing requested |
+| `https://silkbeautysalon.online/en/acne-treatment-batumi` | Indexing requested |
+| `https://silkbeautysalon.online/en/nails-batumi` | Indexing requested |
+| `https://silkbeautysalon.online/en/lashes-brows-batumi` | Indexing requested |
+| `https://silkbeautysalon.online/ka` | Indexing requested |
+| `https://silkbeautysalon.online/ru` | Indexing requested |
+| `https://silkbeautysalon.online/tr` | Indexing requested |
+| `https://silkbeautysalon.online/ar` | Indexing requested |
+| `https://silkbeautysalon.online/he` | Indexing requested |
+
+No indexing request was submitted for:
+
+- Any `/pricelist` URL, because live `/en/pricelist` still lacks canonical/hreflang metadata.
+- Any `/{locale}/beauty-salon-batumi` URL, because Phase 1 still flags visible `Popular local searches` content for review.
+- Localized service pages beyond the locale roots, to avoid mass manual submission and because many are already in the sitemap/discovered state.
+
+### Canonical / Mobile / Rich Result Notes
+
+- Indexed English pages show HTTPS as valid where shown.
+- Non-indexed URLs do not show enhancement/rich-result data in URL Inspection.
+- Mobile usability was not shown in the inspected URL summaries.
+- Google-selected canonical details were not expanded in this pass; the visible summaries for non-indexed pages often show `N/A` because they have not been crawled yet.
+- Public Phase 1 checks still show self-canonical and hreflang for most priority pages except `/pricelist`.
+
+### Next Check Date
+
+Recommended next check: 2026-07-12, or earlier after:
+
+1. `/pricelist` canonical/hreflang is fixed and live.
+2. `Popular local searches` on `/{locale}/beauty-salon-batumi` is reviewed or approved.
+3. Google has had time to process the 9 indexing requests submitted in this pass.
 
 ## Phase 2 Execution Update - 2026-07-04 14:02 Asia/Tbilisi
 
