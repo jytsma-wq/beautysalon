@@ -2,6 +2,7 @@
 
 ## 2026-07-05
 
+- Updated the NAP citation consistency audit with the current Phase 6 public-listing pass, source-of-truth confirmation, `silkbeauty.ge` risk, Salonly/BeautyBook/Facebook findings, stale-phone snippet status, and owner-approved correction order.
 - Updated the AI search readiness and query tracking log with the Phase 5 multilingual public visibility baseline, AI-style question samples, competitor/source notes, content gaps, and next actions.
 - Updated the Bing Webmaster and IndexNow log with the current Phase 4 access result, live sitemap/robots checks, priority URL submission readiness, `/en/pricelist` hold status, crawl-report blockers, and recommendation-only IndexNow plan.
 - Updated the Google Business Profile optimization log with the current Phase 3 access result, public Salonly/Facebook/secondary-domain findings, source-of-truth comparison, safe GBP recommendations, and owner-approval gates.

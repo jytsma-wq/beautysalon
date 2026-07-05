@@ -14,6 +14,82 @@ Mode: public citation audit and correction plan only; no third-party listing edi
 - Public search snippets are treated as approximate because snippets can be stale or personalized.
 - Any third-party edits require owner approval and confirmed account access first.
 
+## Phase 6 Execution Update - 2026-07-05 09:55 Asia/Tbilisi
+
+This update refreshes the public NAP/citation audit after the Phase 5 visibility baseline. It uses public search results, directly accessible public pages, and the website source-of-truth in `src/data/site-config.ts`.
+
+No public listings were edited, created, claimed, merged, deleted, or submitted. No money was spent.
+
+### Fresh Source-Of-Truth Confirmation
+
+| Field | Expected value | Current confidence |
+| --- | --- | --- |
+| Business name | `Silk Beauty Salon` | Confirmed in website config and live first-party pages. |
+| Address | `Zurab Gorgiladze 63, Batumi, Georgia` | Confirmed in website config, live first-party pages, Salonly, Facebook snippets, and `silkbeauty.ge`. |
+| Main phone | `+995 577 34 57 67` | Confirmed in website config and live first-party pages. This should remain the primary NAP phone. |
+| WhatsApp | `+995 577 28 68 55` | Confirmed in website config and public Facebook snippets as a separate contact channel. Do not replace the main NAP phone with this unless owner explicitly approves. |
+| Website | `https://silkbeautysalon.online` | Current canonical website for this project. |
+| Alternative public site | `https://www.silkbeauty.ge/` | Publicly live and appears to describe the same salon/location. Owner must confirm its role before profile/GBP website-link changes. |
+| Booking URL | `https://silkbeautysalon.online/en/book` | Current project booking route. `silkbeauty.ge` also links to BeautyBook; owner must choose the official booking path per platform. |
+| Email | `info@silkbeautysalon.online` | Confirmed on live first-party pages. |
+| Opening hours | Mon-Sat `10:00 - 22:00`; Sun `11:00 - 22:00` | Confirmed in website config and live first-party pages; still should be real-world owner-confirmed before third-party edits. |
+
+### Public Listing Audit Table
+
+| Platform | Current data observed | Expected data | Mismatch / risk | Correction needed | Owner approval required | Priority |
+| --- | --- | --- | --- | --- | --- | --- |
+| Google Business Profile | Not confirmed from public results or editable account view in this phase. | Exact NAP, primary category `Beauty salon`, website, booking URL, hours, services, photos, reviews, Q&A. | Highest local-search gap if unclaimed, incomplete, duplicated, or pointing to the wrong website/phone. | Owner/admin opens GBP Manager, confirms correct profile/pin, records current data, and approves any edits before publishing. | Yes | P0 |
+| Google Maps | No confirmed public Google Maps listing URL for Silk Beauty Salon was captured in this phase. | Map pin at Zurab Gorgiladze 63 with main phone, website, hours, photos, and directions. | If missing/unclaimed, local-pack visibility will remain weak. If duplicate exists, creating another listing would be harmful. | Search Maps from owner account and Batumi/location context; claim/correct only after duplicate check. | Yes | P0 |
+| First-party website | Live pages show correct address, main phone, email, hours, services, booking links, and WhatsApp CTA. | Keep as canonical citation hub. | Public search snippets still show stale old phone for some pages even though live visible HTML is corrected. | Use Search Console URL Inspection/reindexing for affected canonical URLs; continue monitoring snippets. | GSC access needed | P1 |
+| Google search snippets | Fresh public search still showed old `+995 599 123 456` snippets for `/en`, `/en/book`, and `/en/beauty-salon-batumi`; the opened/live page body shows `+995 577 34 57 67`. | Snippets should eventually match live source-of-truth. | Stale snippet pollution can confuse users and search entity data. | Request recrawl after Search Console checks; do not change live source unless old number reappears in current source. | Yes for GSC actions | P1 |
+| Salonly | Public Salonly profile exists at `salonly.ge/en/salons/16`; search/public page shows `Silk Beauty Salon`, `Zurab Gorgiladze street 63, Batumi`, `5.0`, `3 Professionals`, and worker/service pages. Search snippets show services including hair extensions/nanoplastics and phone digits matching `577345767`. | Main phone `+995 577 34 57 67`, correct active services, real staff/professionals, hours, photos, website/booking handoff if supported. | Identity/address/phone digits mostly align, but service mix may be hair-heavy or stale compared with current SEO/service priorities; website/booking/hours not fully public-verifiable. | Owner/admin checks Salonly dashboard for phone formatting, services, professionals, prices, hours, photos, reviews, and website/booking link. | Yes | P0 |
+| BeautyBook | Public search found BeautyBook mentions tied to SilkBeauty.Salon and a `beautybook.ge/salons/616` reference; `silkbeauty.ge` links to BeautyBook for online booking. | If active, exact NAP, current services, current prices, real photos, and clear booking flow. | Booking-source ambiguity: website booking route, Salonly, BeautyBook, and `silkbeauty.ge` may split users unless owner defines the canonical booking path. | Owner/admin opens BeautyBook profile directly, confirms active status, NAP, services, photos, prices, and whether BeautyBook should remain the public booking path. | Yes | P0 |
+| Facebook | Public Facebook snippets for `SilkBeauty.Salon | Batumi` show Batumi/Gorgiladze 63 plus both `577 34 57 67` and `577 28 68 55`; website config links to `facebook.com/silkbeautybatumi/`, while public search also surfaces a page-ID URL. | One canonical Facebook page with business name, address, main phone, separate WhatsApp if supported, website, booking link, hours, services, and real photos. | Page/handle ambiguity plus phone-role ambiguity: some posts use the WhatsApp number as the contact number. | Owner confirms canonical Facebook page and updates About/pinned contact details with primary NAP phone plus WhatsApp as separate channel. | Yes | P0 |
+| Instagram | Website config links to `instagram.com/silkbeauty_batumi/`; `silkbeauty.ge` also links to Instagram. Public search did not expose full current bio/NAP. | Official handle with business name, Batumi location, website/booking link, contact buttons, and service highlights. | Cannot verify profile NAP publicly; many unrelated Silk Beauty profiles exist globally. | Owner/admin checks bio, link-in-bio, contact buttons, location tag, highlights, and whether it points to `silkbeautysalon.online`, `silkbeauty.ge`, BeautyBook, or Salonly. | Yes | P1 |
+| TikTok | Website config links to `tiktok.com/@silkbeautybatumi`; public search did not confirm full profile data. | Consistent official handle/name, Batumi context, link/booking path if supported, no unsupported claims. | Activity/profile quality not confirmed. | Owner confirms whether TikTok is official/active and whether it should remain linked. | Yes | P2 |
+| `silkbeauty.ge` | Public site is live and appears to describe the same salon at Gorgiladze 63 with phone `577 34 57 67`, WhatsApp, Instagram/Facebook links, BeautyBook booking, Georgian content, staff names, services, and claims. | One clearly owner-approved website strategy: either this is an official supporting Georgian site, a legacy site, or it should redirect/canonicalize to the main site later. | P0 source-of-truth risk: two public websites can split authority, confuse GBP website choice, and create service/staff/claim inconsistency. | Owner confirms ownership, purpose, CMS/admin, booking role, claims, service list, and whether it should be linked, redirected, canonicalized, or left as separate. | Yes | P0 |
+| Bing Places | Not confirmed in this phase. | Same NAP as GBP/website with exact website/booking URL, hours, categories, services, photos. | Bing/local AI entity confidence may remain weak. | Verify/claim after owner-approved Bing access; do not add duplicate. | Yes | P1 |
+| Apple Maps / Apple Business Connect | Not confirmed in this phase. | Exact NAP, category, hours, website, photos, directions. | Tourist/iPhone discovery gap. | Owner-approved Apple Business Connect check/claim after Google NAP is finalized. | Yes | P1 |
+| Yandex Maps | Search samples did not find a Silk listing, while competitor Yandex listings for Batumi beauty salons were visible. | Exact NAP, hours, Russian/Georgian category, website/booking link, photos. | Russian-speaking discovery gap. | Check Yandex Maps directly; claim/add only if no duplicate exists and owner approves. | Yes | P1 |
+| 2GIS | No confirmed Silk listing found in public samples. | Exact NAP, map pin, hours, services, website/contact links. | Russian/local map-discovery gap. | Check 2GIS directly and add/claim only after duplicate review. | Yes | P2 |
+| Madloba | Madloba beauty-salon category is visible with competitors including LAKmousse and others; Silk was not found in sampled visible listings. | If listed, exact NAP, website, services, category, photos. | Relevant Georgian/local directory opportunity, not a confirmed mismatch. | Evaluate and add/claim only if platform quality is acceptable and owner approves. | Yes | P1 |
+| InfoBatumi | Beauty salon category visible with competitors such as LAKmousse, Tamarisia, Nail Sector, Diamond, ArtInMotion; Silk not found in sampled visible list. | If listed, exact NAP, website, phone, category, photos. | Local/tourism directory opportunity, lower priority than GBP/Salonly/Facebook/BeautyBook. | Evaluate after P0 platforms. | Yes | P2 |
+| Tripadvisor | Batumi hair/nail salon category shows competitors such as LAKmousse, Mriya, Black Panther; Silk not found. | Only list if category fit and owner wants tourist-facing discovery. | Optional tourism opportunity; review-policy compliance matters. | Evaluate after core NAP cleanup; no fake travel reviews. | Yes | P3 |
+| Other same-name entities | Public results show unrelated Silk Beauty Salon/Spa entities in South Africa, Austin, and other markets. | Silk Beauty Salon Batumi entity should be distinguishable by city, address, website, and Georgian phone. | Brand ambiguity can dilute search entity confidence. | Keep citations consistently tied to Batumi, Georgia, Zurab Gorgiladze 63, and the canonical website. | No public edit unless owner controls listing | P2 |
+
+### Fresh Mismatch Summary
+
+P0:
+
+- Google Business Profile / Google Maps profile still needs owner-account confirmation.
+- `silkbeauty.ge` is a live alternate public site for the same location and must be resolved as official/supporting/legacy before major public profile edits.
+- Salonly and BeautyBook appear active or relevant but need dashboard verification for NAP, booking, services, staff, prices, photos, and review data.
+- Facebook canonical page and phone-role handling need owner confirmation.
+
+P1:
+
+- Google snippets still show stale old phone `+995 599 123 456` for some first-party pages even though live page content shows the correct number.
+- Bing Places, Apple Maps, Yandex Maps, and Madloba remain unconfirmed/missing opportunities.
+- Instagram official profile data is not fully public-verifiable.
+
+P2/P3:
+
+- TikTok, 2GIS, InfoBatumi, Tripadvisor, and other directory opportunities should wait until core sources are consistent.
+- Unrelated same-name Silk Beauty businesses appear globally; citation consistency should make the Batumi entity unambiguous.
+
+### Correction Plan - Current Order
+
+1. Owner confirms `silkbeautysalon.online` versus `silkbeauty.ge` role and the official booking path for public profiles.
+2. Owner confirms Google Business Profile/Maps profile exists, is owned, and has no duplicates.
+3. Correct/complete GBP first: name, address, main phone, separate WhatsApp, website, booking URL, categories, services, hours, photos, Q&A.
+4. Verify Salonly and BeautyBook dashboards; correct only owner-controlled data.
+5. Confirm Facebook canonical page and pin/update an exact NAP/contact post.
+6. Confirm Instagram/TikTok profiles and link destinations.
+7. Claim or correct Bing Places, Apple Maps, and Yandex Maps only after source-of-truth decisions are final.
+8. Add or correct Madloba, 2GIS, InfoBatumi, and Tripadvisor only if platform quality is acceptable and owner approves.
+9. Use Search Console to request recrawl for pages whose snippets still show the old phone.
+10. Recheck public snippets and citation consistency on 2026-08-04.
+
 ## Phase 6 Execution Update - 2026-07-04 14:15 Asia/Tbilisi
 
 This update rechecked public citation signals for Silk Beauty Salon across Google-visible search results, Salonly, Facebook, Instagram/TikTok search visibility, Georgian local directories, beauty booking platforms, and tourism/expat-style directories.
