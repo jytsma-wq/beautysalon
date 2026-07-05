@@ -40,6 +40,7 @@ This update consolidates the current Google/Maps/Bing/AI execution logs into one
 | --- | --- | --- | --- |
 | Live website | Priority routes are mostly crawlable. Sitemap and robots are public. Homepage `BeautySalon` JSON-LD parses and has no review/rating markup. | Live `/pricelist` routes still need canonical/hreflang verification before manual indexing requests. The `Popular local searches` block on `/{locale}/beauty-salon-batumi` needs owner/content review. | Fix or verify the two live blockers, then request indexing only for canonical-ready URLs. |
 | Google Search Console | Domain property is verified. Sitemap was already submitted and reports `Success`. Baseline Performance: 20 clicks, 293 impressions, 6.8% CTR, average position 5. Pages: 9 indexed, 487 not indexed. URL Inspection/indexing requests were submitted for 9 ready URLs. Follow-up diagnosis found 485 discovered/not-indexed, 1 redirect, and 1 alternate-canonical URL. | Top pages, countries, and devices were not reliably extracted due Search Console UI tab issues. Priority discovered URLs need follow-up after Google processes the first 9 indexing requests. | Recheck indexing requests on 2026-07-12, inspect the two stale HTTP/non-www robots warnings, and pull top pages/countries/devices in the next account-side pass. |
+| SEO blocker release branch | `/{locale}/pricelist` metadata fix is present from `4baa40c`; `/{locale}/beauty-salon-batumi` visible local-search block has been replaced with customer-facing localized service navigation in the release branch. | Owner-approved live release and post-release browser/Search Console verification. | After live verification, remove holds for pricelist and beauty-salon-batumi indexing/GBP use. |
 | Google Business Profile | No verified GBP Manager access in this workspace. Website source of truth and public citation plan are documented. | Current profile URL, ownership, category data, services, hours, photos, Q&A, review count/rating, unanswered reviews, profile performance. | Owner confirms/claims GBP, records current state, then approves any public edits. |
 | Bing Webmaster / Bing Places | No verified Bing access in this workspace. Public sitemap/robots are healthy. IndexNow is not implemented. | Bing verification, sitemap submission, URL submissions, crawl/indexing reports, SEO reports, backlinks, keyword performance, Places listing. | Verify Bing after GSC/GBP source of truth is stable; submit sitemap; consider IndexNow later as a separate approved task. |
 | AI query baseline | Public search samples show weak non-brand first-party visibility. Google AI Overview / AI Mode and account-side local pack visibility were not available. | AI answer mentions, AI citations, stable Google local pack position, personalized/location-specific results. | Repeat controlled manual query checks monthly and after more priority URLs are indexed. |
@@ -339,8 +340,8 @@ Competitor monitoring fields:
 
 ## Critical Issues
 
-1. Live `/pricelist` routes are still a blocker for manual indexing until canonical and hreflang metadata are verified live.
-2. The visible `Popular local searches` section on `/{locale}/beauty-salon-batumi` needs owner/content review before those pages become flagship indexing/GBP landing pages.
+1. Live `/pricelist` routes are still a blocker for manual indexing until the prepared canonical/hreflang fix is released and verified live.
+2. The visible `Popular local searches` section on `/{locale}/beauty-salon-batumi` is resolved in the release branch, but the pages remain held until owner-approved live verification.
 3. Google Business Profile ownership/profile URL is still not confirmed.
 4. `silkbeauty.ge` is still a public source-of-truth risk and must be classified as official, legacy, or supporting before broad citation edits.
 5. Google Search Console shows 485 `Discovered - currently not indexed` URLs. This is mostly a crawl/discovery queue for the large multilingual sitemap, but priority pages need follow-up.
@@ -369,8 +370,8 @@ Needed to make the monitoring system complete:
 
 1. Recheck the 9 submitted GSC indexing requests on 2026-07-12 and record whether they moved from unknown/discovered/not indexed to indexed.
 2. Inspect the two `Indexed, though blocked by robots.txt` examples in Search Console and confirm whether the stale HTTP/non-www URLs have cleared after recrawl.
-3. Recheck and resolve live `/pricelist` canonical/hreflang before any manual indexing request for price pages.
-4. Owner reviews the `Popular local searches` block on `/{locale}/beauty-salon-batumi` and either approves it or schedules a visible-content cleanup.
+3. After owner approval, release and verify live `/pricelist` canonical/hreflang before any manual indexing request for price pages.
+4. After owner approval, release and verify the `/{locale}/beauty-salon-batumi` service-navigation cleanup before using those pages for indexing/GBP landing use.
 5. Owner confirms whether `silkbeautysalon.online` is the canonical public website and whether `silkbeauty.ge` should be legacy, redirecting, or supporting.
 6. Confirm or claim Google Business Profile and record the current public state before edits.
 7. Confirm the official Google review link and public GBP URL, but do not launch review requests until owner approval.
@@ -454,8 +455,8 @@ None. This phase created and updated internal documentation only.
 
 ### Urgent Issues
 
-1. Fix or verify live canonical/hreflang for `/pricelist` before manual indexing.
-2. Review `Popular local searches` on `/{locale}/beauty-salon-batumi` before using those pages as priority indexing/GBP landing pages.
+1. Release and verify live canonical/hreflang for `/pricelist` before manual indexing.
+2. Release and verify the `/{locale}/beauty-salon-batumi` service-navigation cleanup before using those pages as priority indexing/GBP landing pages.
 3. Confirm Google Business Profile and Google Maps ownership/profile URL.
 4. Confirm whether `silkbeauty.ge` is official, legacy, redirecting, or supporting.
 5. Inspect the Search Console `Indexed, though blocked by robots.txt` examples and recheck the 9 submitted indexing requests.

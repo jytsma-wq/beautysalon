@@ -2,6 +2,7 @@
 
 ## 2026-07-05
 
+- Prepared the next safe SEO release by keeping the localized pricelist canonical/hreflang metadata fix, replacing the visible `Popular local searches` block on `/[locale]/beauty-salon-batumi` with localized customer-facing service navigation, and adding focused regression coverage for pricelist metadata, sitemap inclusion, and the content cleanup.
 - Added a Google Search Console index coverage diagnosis for the 487 not-indexed URLs, classifying 485 discovered/not-indexed URLs, the expected non-www redirect, the expected root canonical alternate, stale HTTP/non-www robots warnings, priority URL status, and selective indexing recommendations.
 - Updated the SEO monitoring baseline and reporting system with the current Phase 8 operating rhythm, verified Search Console baseline, GSC indexing follow-up plan, KPI cadence, 7/30/90-day action plan, and remaining GBP/Bing/citation/native-review approval gates.
 - Updated the review generation and reply system with the current Phase 7 launch status, Google review-policy refresh, channel-specific rules, prohibited wording examples, native-language review caveats, and owner-approval gates.

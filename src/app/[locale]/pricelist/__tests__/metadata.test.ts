@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getLanguageAlternates } from '@/lib/seo';
+import { locales } from '@/i18n';
 
 vi.mock('@/i18n/routing', () => ({
   Link: () => null,
@@ -29,19 +30,28 @@ vi.mock('next-intl/server', () => ({
 }));
 
 describe('pricelist metadata', () => {
-  it('renders canonical and hreflang metadata for priority price-list pages', async () => {
+  it('renders canonical and hreflang metadata for all localized price-list pages', async () => {
     const { generateMetadata } = await import('../page');
-    const metadata = await generateMetadata({
-      params: Promise.resolve({ locale: 'en' }),
-    });
 
-    expect(metadata.alternates?.canonical).toBe(
-      'https://silkbeautysalon.online/en/pricelist'
-    );
-    expect(metadata.alternates?.languages).toEqual(getLanguageAlternates('/pricelist'));
-    expect(metadata.robots).toMatchObject({
-      index: true,
-      follow: true,
-    });
+    for (const locale of locales) {
+      const metadata = await generateMetadata({
+        params: Promise.resolve({ locale }),
+      });
+
+      expect(metadata.title).toEqual({
+        absolute: 'Beauty Salon Prices in Batumi | Silk Beauty Salon',
+      });
+      expect(metadata.description).toBe(
+        'Browse starting prices for Silk Beauty Salon treatments in Batumi.'
+      );
+      expect(metadata.alternates?.canonical).toBe(
+        `https://silkbeautysalon.online/${locale}/pricelist`
+      );
+      expect(metadata.alternates?.languages).toEqual(getLanguageAlternates('/pricelist'));
+      expect(metadata.robots).toMatchObject({
+        index: true,
+        follow: true,
+      });
+    }
   });
 });

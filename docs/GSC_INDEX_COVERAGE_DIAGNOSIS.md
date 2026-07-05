@@ -5,6 +5,28 @@ Time: 10:15 Asia/Tbilisi
 Property: `sc-domain:silkbeautysalon.online`
 Mode: Google Search Console read-only diagnosis plus public live technical checks
 
+## Release-Branch Status Update - 2026-07-05
+
+This diagnosis is now paired with a website-side release branch that prepares fixes for the two known indexing blockers:
+
+| Blocker | Release-branch status | Live/Search Console status |
+| --- | --- | --- |
+| `/{locale}/pricelist` missing canonical/hreflang on live | Fix already exists in `4baa40c fix(seo): add pricelist canonical metadata`; this branch keeps it and adds all-locale regression coverage. | Still requires owner-approved live release and post-release verification before indexing requests. |
+| `/{locale}/beauty-salon-batumi` visible `Popular local searches` block | Resolved in this branch by replacing the block with localized customer-facing service navigation. | Still requires owner-approved live release and post-release verification before indexing or GBP landing use. |
+
+No new indexing requests were submitted while preparing this release branch.
+
+Release-branch verification completed:
+
+- `npm run typecheck` passed.
+- `npm run lint` passed.
+- `npm test` passed: 341 passed, 12 skipped.
+- `npm run validate:i18n` passed with the existing Georgian extra-key note and no missing keys.
+- `npm run build` passed.
+- Local production preview confirmed all six `/pricelist` pages render self-canonical metadata, 7 hreflang alternates, no `noindex`, and sitemap inclusion.
+- Local production preview confirmed `/en/beauty-salon-batumi`, `/ar/beauty-salon-batumi`, and `/he/beauty-salon-batumi` no longer render the visible `Popular local searches` phrase.
+- Browser checks found no console errors, no hydration errors, and no horizontal overflow on sampled desktop and mobile/RTL routes.
+
 ## Safety Notes
 
 - No website code was changed.
@@ -109,8 +131,8 @@ This table combines current GSC findings with live public technical checks. `Las
 | `/ka`, `/ru`, `/tr`, `/ar`, `/he` | Not indexed; discovered/not indexed; indexing requested on 2026-07-05 | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Recheck after 2026-07-12; do not submit again yet. |
 | `/{locale}/botox-batumi`, `/{locale}/dermal-fillers-batumi`, `/{locale}/skin-treatment-batumi` outside English | Not indexed or discovered/not indexed where inspected | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Wait for locale roots and English new service pages to settle; inspect selected high-priority pages next. |
 | `/{locale}/lip-fillers-batumi`, `/{locale}/acne-treatment-batumi`, `/{locale}/nails-batumi`, `/{locale}/lashes-brows-batumi` outside English | Mostly unknown/not indexed where inspected | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Do not mass-submit. Inspect and request selected top-language/service combinations only after first follow-up. |
-| `/{locale}/beauty-salon-batumi` | Held; not submitted | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Hold indexing requests until visible `Popular local searches` section is reviewed or cleaned. |
-| `/{locale}/pricelist` | Held; not submitted | 200, in sitemap, no noindex, but canonical and hreflang missing on live | Urgent metadata fix/verification before any indexing request. |
+| `/{locale}/beauty-salon-batumi` | Held; not submitted | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Source cleanup is prepared in this branch; hold indexing requests until released and verified live. |
+| `/{locale}/pricelist` | Held; not submitted | 200, in sitemap, no noindex, but canonical and hreflang missing on live | Source metadata fix is prepared; verify live canonical/hreflang before any indexing request. |
 
 ## Canonical And Hreflang Findings
 
@@ -119,7 +141,7 @@ This table combines current GSC findings with live public technical checks. `Las
 | Root `https://silkbeautysalon.online/` canonicalizes to `/en`. | Expected. Explains the single alternate-canonical GSC row. | No action. |
 | `https://www.silkbeautysalon.online/` redirects to non-www. | Expected. Explains the single redirect GSC row. | No action if stable. |
 | Priority service/local SEO pages generally expose self-canonical URLs and 7 hreflang alternates. | Good. Supports future indexing requests. | Keep monitoring. |
-| Localized `/pricelist` pages return 200 and are in sitemap, but live canonical/hreflang are still missing. | Real blocker before manual indexing for price pages. | Deploy/verify the existing pricelist metadata fix separately if owner approves. |
+| Localized `/pricelist` pages return 200 and are in sitemap, but live canonical/hreflang are still missing. | Real blocker before manual indexing for price pages. | Release-branch fix is prepared; owner-approved live release and live verification are still required. |
 | `/ar/accessibility` sample lacks canonical/hreflang. | Low-priority utility-page metadata gap. | Consider a later utility-page metadata cleanup if this appears across utility routes. Not urgent for local SEO. |
 
 ## URLs Recommended For Indexing Request
@@ -151,16 +173,16 @@ Recommended later, after the 2026-07-12 follow-up:
 
 | URL group | Reason held |
 | --- | --- |
-| All `/{locale}/pricelist` pages | Missing canonical/hreflang on live. |
-| All `/{locale}/beauty-salon-batumi` pages | Visible `Popular local searches` block still needs owner/content review before flagship indexing or GBP use. |
+| All `/{locale}/pricelist` pages | Missing canonical/hreflang on live; release-branch fix must be verified live first. |
+| All `/{locale}/beauty-salon-batumi` pages | Source cleanup is prepared, but pages should stay held until the release is live and verified. |
 | Bulk treatment/category/condition/blog pages | Large sitemap already discovered them; mass manual indexing is not appropriate. |
 | Utility/legal pages such as accessibility/privacy/terms/download/careers | Lower SEO priority; inspect metadata later, but do not spend manual indexing quota now. |
 | HTTP and `www` variants | Redirect/canonical variants, not canonical URLs. |
 
 ## Urgent Fixes
 
-1. Verify/deploy the existing `/pricelist` canonical/hreflang metadata fix before requesting indexing for price pages.
-2. Review or clean the visible `Popular local searches` block on `/{locale}/beauty-salon-batumi` before using those pages as priority landing pages.
+1. Owner-approved release and live verification of `/pricelist` canonical/hreflang metadata before requesting indexing for price pages.
+2. Owner-approved release and live verification of the `/{locale}/beauty-salon-batumi` service-navigation cleanup before using those pages as priority landing pages.
 3. Recheck the 9 already submitted indexing requests on 2026-07-12.
 4. Inspect the two stale HTTP/non-www robots warnings again after Google recrawls; do not treat them as a current live robots failure.
 5. Consider a separate low-priority utility metadata audit for routes such as `/ar/accessibility`.
@@ -175,4 +197,4 @@ At that check:
 2. Check whether the 9 submitted URLs moved to indexed, crawled, or still discovered.
 3. Inspect the two `Indexed, though blocked by robots.txt` examples.
 4. Only request indexing for additional canonical-ready high-priority URLs.
-5. Do not request indexing for `/{locale}/pricelist` or `/{locale}/beauty-salon-batumi` until their blockers are resolved.
+5. Do not request indexing for `/{locale}/pricelist` or `/{locale}/beauty-salon-batumi` until their release-branch fixes are live and verified.

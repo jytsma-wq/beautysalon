@@ -5,6 +5,26 @@ Phase: 3 - Google Search Console setup and indexing
 Branch: `codex/visibility-readiness-audit`
 Mode: Search Console execution log plus public technical readiness notes
 
+## Current Status Note - 2026-07-05
+
+Earlier notes in this file record that authenticated Search Console access was unavailable during the first 2026-07-04 pass. A later authenticated browser session became available on 2026-07-05. The current authoritative Search Console status is:
+
+- Domain property: `sc-domain:silkbeautysalon.online`
+- Sitemap: `https://silkbeautysalon.online/sitemap.xml`, submitted and successful
+- Page indexing baseline: 9 indexed, 487 not indexed
+- Not-indexed breakdown: 485 discovered/not-indexed, 1 redirect, 1 alternate-canonical URL
+- Indexing requests already submitted: 9 targeted canonical-ready URLs
+
+Do not use the older "GSC access unavailable" section as the current status. Keep it only as historical audit context.
+
+### Website-Side Blocker Release Status
+
+The next safe SEO release branch updates the website-side blockers before further indexing requests:
+
+- `/{locale}/pricelist` metadata: local fix was already committed in `4baa40c fix(seo): add pricelist canonical metadata`; this release branch keeps it and adds all-locale regression coverage.
+- `/{locale}/beauty-salon-batumi` visible content blocker: this release branch replaces the visible `Popular local searches` block with localized customer-facing service navigation.
+- No new indexing requests should be made until these changes are owner-approved, released, and verified live.
+
 ## Index Coverage Diagnosis Update - 2026-07-05 10:15 Asia/Tbilisi
 
 A follow-up Page indexing diagnosis was performed in the authenticated Search Console browser session. No DNS, website code, deployment, Google Business Profile, Bing, analytics, public listing, or verification changes were made. No additional indexing requests were submitted.
