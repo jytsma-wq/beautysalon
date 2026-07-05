@@ -347,6 +347,157 @@ Do not mass-generate thin posts. Each article should have a real purpose, intern
 - Do not add unverified medical credentials, doctor names, certifications, awards, product brands, or treatment outcome claims.
 - Do not add aggregateRating or review schema.
 
+## Phase 5 AI Search Visibility Baseline - 2026-07-05
+
+- Audit time: 2026-07-05 09:51 Asia/Tbilisi
+- Query source: `docs/SEO_KEYWORD_MAP.md` plus the priority Phase 5 query list
+- Method: public web-search sampling from the audit environment; no paid rank tracker, no ad tools, no controlled Batumi device/location, and no logged-in Google personalization controls
+- Scope: non-brand organic visibility, citation surfaces, directory/social surfaces, competitor patterns, and AI-style natural-language query readiness
+
+Important measurement limits:
+
+- This is a directional public visibility baseline, not official rank tracking.
+- Google AI Overview / AI Mode citation visibility was not available in this environment and was not claimed as measured.
+- Google Maps local pack and Google Business Profile appearance were not reliably exposed through the available search interface; GBP/local-pack visibility still needs manual owner-account/device validation.
+- Search results vary by country, city, language, personalization, device, browser, and time.
+- No paid tools, paid submissions, ads, or paid listings were used.
+- No website code, public profiles, Search Console settings, Bing settings, or Google Business Profile data were changed by this phase.
+
+### Phase 5 Coverage Summary
+
+| Language / group | Queries sampled | Result summary |
+| --- | ---: | --- |
+| English | 9 exact priority queries | Silk first-party pages were mostly not visible in the top public non-brand samples. Silk appeared in lower/broader natural-language samples through `/en/beauty-salon-batumi` and `/en/dermal-fillers-batumi`. |
+| Georgian | 5 priority queries | Silk first-party pages were not visible in the sampled top results. Georgian directories, social profiles, and local medical/beauty pages dominated. |
+| Russian | 5 priority queries | Silk first-party pages were not visible in the sampled top results. LAKmousse, Instagram/Facebook, Yandex/2GIS-style surfaces, and clinic/cosmetology pages were stronger. |
+| Turkish | 5 priority queries | Silk first-party pages were not visible in the sampled top results. `Batum` queries also produced noisy results, including non-local or unrelated meanings. |
+| Arabic | 5 priority queries | Silk first-party pages were not visible in the sampled top results. Results mixed Batumi travel/salon surfaces with global or Tbilisi medical/aesthetic pages. |
+| Hebrew | 5 priority queries | Silk first-party pages were not visible in the sampled top results. Facebook groups, travel pages, LAKmousse/Tripadvisor, and generic Israeli medical pages appeared. |
+| AI-style questions | 8 natural-language queries | Silk appeared in lower public samples for some answer-style queries, especially through `/en/dermal-fillers-batumi` and `/en/beauty-salon-batumi`, but not as a dominant source. |
+
+Overall finding:
+
+- Silk now has the right first-party multilingual SEO architecture, but current public non-brand visibility is still weak.
+- Branded or brand-mixed searches can surface Silk first-party pages and the Salonly citation.
+- Exact high-intent non-brand service queries are currently dominated by competitors, directories, social platforms, and map/listing ecosystems.
+- External entity signals are the main gap: Google Business Profile completeness, local citations, reviews, real photos, Bing/Yandex/Apple/Salonly/directory consistency, and native-language trust signals.
+- The separate WhatsApp number should remain documented as owner-approved before being used in external public profiles.
+
+### English Query Baseline
+
+| Query | Silk visibility in public sample | Competitors / surfaces visible | Content gap / action |
+| --- | --- | --- | --- |
+| `beauty salon Batumi` | First-party Silk page not visible in the top public sample. | LAKmousse, King & Queen, Tripadvisor, Yandex Maps, Instagram/Facebook, salon directories. | Strengthen GBP, citations, photos, reviews, and directory profiles; keep `/en/beauty-salon-batumi` indexed. |
+| `Botox Batumi` | First-party Silk page not visible in the top public sample. | LAKmousse, Arna Sacman, Academy of Cosmetology, 100doc, Unique Aesthetic, Silk Medical. | Build authority for `/en/botox-batumi`; avoid confusion with Silk Medical. |
+| `lip fillers Batumi` | First-party Silk page not visible in the top public sample. | LAKmousse lip augmentation/filler pages, Instagram, Academy of Cosmetology, aesthetic directories. | Strengthen `/en/lip-fillers-batumi`; add external citation/service consistency. |
+| `acne treatment Batumi` | First-party Silk page not visible in the top public sample. | ROGO, Dermalogica, Concierge, BetterSkin/Facebook, medical/cosmetology directories. | Strengthen acne page authority and external citations; keep consultation-led wording. |
+| `skin treatments Batumi` | First-party Silk page not visible in the top public sample. | BetterSkin, Facebook, LAKmousse, Dermalogica, Concierge, Tripadvisor. | Add stronger GBP service coverage and citation alignment for skin treatments. |
+| `nails Batumi` | First-party Silk page not visible in the top public sample. | HEAVEN, Nail Sector, MakeMe/Dikidi, Instagram, InfoBatumi, Madloba. | Nails visibility is directory/social-heavy; prioritize photos and listings. |
+| `lashes Batumi` | First-party Silk page not visible in the top public sample. | Nails Lashes Batumi, HEAVEN, King & Queen, Instagram, Facebook, local directories. | Add lash/brow services to GBP and citations; gather real lash/brow photos. |
+| `beauty salon prices Batumi` | Salonly citation can surface Silk; first-party Silk not dominant. | Salonly, LAKmousse, Madloba, Tripadvisor, InfoBatumi. | Keep pricelist indexable after canonical/hreflang fix is live; align Salonly data. |
+| `English speaking beauty salon Batumi` | Silk appeared only in a lower/broader sample, not top. | King & Queen, expat Facebook groups, Madloba, LAKmousse, Tripadvisor. | Add owner-approved language/tourist statement; confirm actual spoken-language support. |
+
+### Georgian Query Baseline
+
+| Query | Silk visibility in public sample | Competitors / surfaces visible | Content gap / action |
+| --- | --- | --- | --- |
+| `სილამაზის სალონი ბათუმი` | Silk not visible in sampled top results. | InfoBatumi, Facebook/Instagram, Yell.ge, Madloba, 2GIS, local salons. | Native Georgian citation and GBP/category strength needed. |
+| `ბოტოქსი ბათუმი` | Silk not visible in sampled top results. | Enmedic/Facebook, Skin Lab Batumi, MEDI, Locate.ge, Silk Medical. | Georgian Botox page needs native review and stronger external entity signals. |
+| `ტუჩის ფილერი ბათუმი` | Silk not visible in sampled top results. | Instagram/Facebook filler posts, aesthetic/clinic pages, Georgian directories. | Strengthen Georgian filler/lip filler citations and page trust. |
+| `აკნეს მკურნალობა ბათუმი` | Silk not visible in sampled top results. | ROGO, Georgian medical directories, skin clinics, social profiles. | Native review and acne-service GBP/citation alignment needed. |
+| `მანიკური ბათუმი` | Silk not visible in sampled top results. | Madloba, Nail Tone/Facebook, 2GIS, Nail Lounge/Taplink, Instagram, InfoBatumi. | Nail visibility needs photos, reviews, and local listing coverage. |
+
+### Russian Query Baseline
+
+| Query | Silk visibility in public sample | Competitors / surfaces visible | Content gap / action |
+| --- | --- | --- | --- |
+| `салон красоты Батуми` | Silk not visible in sampled top results. | NA VYSOTE, LAKmousse, Yandex Maps, 2GIS, Facebook/Instagram. | Russian GBP/citation/category presence needs work. |
+| `ботокс Батуми` | Silk not visible in sampled top results. | LAKmousse, Arna Sacman, Academy of Cosmetology, dr.domnich, Yandex Maps. | Russian Botox page needs citation support and native-language trust. |
+| `филлеры губ Батуми` | Silk not visible in sampled top results. | LAKmousse, Instagram/Threads, cosmetology pages. | Strengthen `/ru/lip-fillers-batumi` and external listing service labels. |
+| `лечение акне Батуми` | Silk not visible in sampled top results. | LAKmousse, ROGO, Aloe Vera/100doc, Facebook/Instagram. | Native Russian acne copy/review and local citation work. |
+| `маникюр Батуми` | Silk not visible in sampled top results. | Instagram nail studios, Yandex nail salons, HEAVEN, LAKmousse, 2GIS/Dikidi. | Nails are map/social-led; prioritize local listings and real nail photos. |
+
+### Turkish Query Baseline
+
+| Query | Silk visibility in public sample | Competitors / surfaces visible | Content gap / action |
+| --- | --- | --- | --- |
+| `Batum güzellik salonu` | Silk not visible in sampled top results. | Tripadvisor, LAKmousse, Cybo, Instagram/TikTok, travel surfaces. | Track both `Batum` and `Batumi`; strengthen Turkish page/citation signals. |
+| `Batum botoks` | Silk not visible in sampled top results. | Instagram/TikTok, generic Turkish medical pages, LAKmousse. | Turkish Botox service profile and citations needed. |
+| `Batum dudak dolgusu` | Silk not visible in sampled top results. | Instagram/TikTok, Turkish filler education pages, Facebook. | Native Turkish review and stronger local proof needed. |
+| `Batum akne tedavisi` | Silk not visible in sampled top results. | Generic Turkish acne content, Concierge Batumi, Instagram. | Local relevance is weak; strengthen citations and page clarity. |
+| `Batum manikür` | Silk not visible in sampled top results. | Tripadvisor, LAKmousse, Cybo, Instagram. | Nail listing/photo coverage needed; avoid relying on site page alone. |
+
+### Arabic Query Baseline
+
+| Query | Silk visibility in public sample | Competitors / surfaces visible | Content gap / action |
+| --- | --- | --- | --- |
+| `صالون تجميل باتومي` | Silk not visible in sampled top results. | LAKmousse, King & Queen, Tripadvisor Arabic, Instagram, travel pages. | Arabic local entity signals and citations are weak. |
+| `بوتوكس باتومي` | Silk not visible in sampled top results. | LAKmousse, Royal Clinic/Tbilisi, Sydney Royal Clinic, Instagram, medical pages. | Arabic Botox page needs native review and local-profile reinforcement. |
+| `فيلر الشفاه باتومي` | Silk not visible in sampled top results. | LAKmousse, Arabic/global filler pages, Instagram/social. | Strengthen Arabic filler page with verified local citations. |
+| `علاج حب الشباب باتومي` | Silk not visible in sampled top results. | Mayo Clinic Arabic, generic Arabic medical pages, local/global mixed results. | Arabic acne visibility needs local relevance and careful medical wording. |
+| `مانيكير باتومي` | Silk not visible in sampled top results. | Travel/salon listings, Instagram, local directory noise. | Nail services need Arabic-friendly citation/listing signals. |
+
+### Hebrew Query Baseline
+
+| Query | Silk visibility in public sample | Competitors / surfaces visible | Content gap / action |
+| --- | --- | --- | --- |
+| `מכון יופי בטומי` | Silk not visible in sampled top results. | LAKmousse/Tripadvisor Hebrew, Facebook groups, GI Rimon, Instagram. | Hebrew local entity signals and citations are weak. |
+| `בוטוקס בטומי` | Silk not visible in sampled top results. | Facebook groups, tipulim_batumi, GI Rimon, generic Israeli medical pages. | Hebrew Botox page needs native review and citation reinforcement. |
+| `מילוי שפתיים בטומי` | Silk not visible in sampled top results. | Facebook/Instagram, Israeli filler/beauty pages, local travel/social pages. | Strengthen Hebrew lip filler page and profile/service listings. |
+| `טיפול באקנה בטומי` | Silk not visible in sampled top results. | Generic Israeli acne pages, travel/social content. | Local acne-service authority is missing. |
+| `מניקור בטומי` | Silk not visible in sampled top results. | Facebook groups, LAKmousse Hebrew Tripadvisor, travel pages. | Nail visibility needs Hebrew-friendly listings and real photos. |
+
+### AI-Style Natural-Language Query Baseline
+
+| Question | Silk visibility | Competitors / sources visible | Gap / action |
+| --- | --- | --- | --- |
+| Where can I get Botox in Batumi? | Silk not dominant in public sample. | LAKmousse, Arna Sacman, Academy of Cosmetology, Facebook, clinic directories. | Strengthen GBP Botox service, Q&A, citations, and `/en/botox-batumi` authority. |
+| How much are lip fillers in Batumi? | Silk `/en/dermal-fillers-batumi` appeared in a lower public sample, not top. | LAKmousse, Arna Sacman, Instagram, local clinics/directories. | Price-intent support should point clearly to service page plus pricelist after metadata fix is live. |
+| Which beauty salon in Batumi offers skin treatments and acne care? | Silk not dominant. | BetterSkin/Facebook, Dermalogica, LAKmousse, ROGO, GI Rimon. | Add stronger concise skin/acne answer blocks and external profile services. |
+| Where can tourists book nails and lashes in Batumi? | Silk `/en/beauty-salon-batumi` appeared in a lower public sample, not top. | HEAVEN, King & Queen, Facebook expat groups, Instagram, local directories. | Owner-approved tourist/language sentence and real nails/lashes photos are important. |
+| Is there an English-speaking beauty salon in Batumi? | Silk `/en/beauty-salon-batumi` appeared in a lower public sample, not top. | King & Queen, expat Facebook groups, Madloba, LAKmousse, Tripadvisor. | Confirm spoken support before public claims; then use consistent wording across site/GBP/citations. |
+| Can I book beauty treatments in Batumi by WhatsApp? | Silk not dominant. | King & Queen, social profiles, directories, salons with visible WhatsApp. | Keep WhatsApp CTA consistent; confirm separate WhatsApp number before external profile changes. |
+| What is the difference between Botox and fillers? | Generic education pages dominated; Silk not visible. | Bluewater Plastic Surgery, Medical News Today, GoodRx, Allure, Verywell-style sources. | Add a concise, conservative "Botox vs fillers" explanation on relevant pages after owner/practitioner review. |
+| What skin treatment helps acne-prone skin in Batumi? | Silk not dominant. | BetterSkin, Total Charm, Dermalogica, LAKmousse, Facebook/social. | Add concise "acne-prone skin consultation" answer and aftercare/prep basics, avoiding cure claims. |
+
+### Phase 5 Competitor Pattern
+
+Recurring competitors and discovery surfaces:
+
+- LAKmousse: strongest recurring competitor for beauty salon, Botox/fillers, lip augmentation, skin/acne, prices, and travel/directory presence.
+- HEAVEN: strong nail/lash/brow visibility.
+- King & Queen: strong social, multilingual, and WhatsApp-style discovery signals.
+- Arna Sacman, Academy of Cosmetology, Unique Aesthetic, Aloe Vera, GI Rimon, ROGO, BetterSkin: recurring aesthetic/skin/injectable visibility.
+- Directories and platforms: Tripadvisor, Madloba, InfoBatumi, 2GIS, Yandex Maps, Salonly, 100doc, Instagram, Facebook, TikTok, Dikidi.
+- Brand-confusion risk: `Silk Medical` appears for some medical/aesthetic searches and is not Silk Beauty Salon.
+
+### Phase 5 Content And Entity Gaps
+
+1. Google Business Profile visibility is still the biggest unknown and likely the biggest local ranking lever.
+2. External citations need cleanup/alignment: Salonly, Facebook, Instagram, Bing Places, Yandex/2GIS/Apple Maps where appropriate, and trusted Georgian/local directories.
+3. Real GBP photos and real client reviews are needed; no fake reviews or stock photos should be used.
+4. Georgian, Russian, Turkish, Arabic, and Hebrew page copy should receive native review before heavy profile promotion.
+5. `/en/pricelist` should not be promoted for indexing until the canonical/hreflang metadata fix is live and verified.
+6. Add owner-approved language/tourist appointment wording only if spoken support is true in practice.
+7. Add short people-first answer sections later, not AI spam:
+   - `Botox vs fillers`
+   - `Before you book`
+   - `Aftercare basics`
+   - `Who this is for`
+   - `Prices and consultation`
+   - `Tourist appointments in Batumi`
+8. Turkish monitoring should include both `Batum` and `Batumi` variants because `Batum` can produce noisy unrelated results.
+
+### Phase 5 Next Actions
+
+1. Finish Search Console indexing and use actual Performance data once available.
+2. Finish Google Business Profile audit/optimization with owner approval before publishing public changes.
+3. Finish Bing Webmaster verification/sitemap submission and keep IndexNow as recommendation-only unless approved.
+4. Confirm and correct external citation data, especially NAP, booking URL, service categories, photos, and the owner-approved WhatsApp number.
+5. Build an ethical review-generation process using real clients only.
+6. Re-run this same query set after indexing/profile work has had time to settle.
+7. Next monitoring date: 2026-08-04.
+
 ## Next Monitoring Date
 
 Next recommended monitoring date: 2026-08-04.
