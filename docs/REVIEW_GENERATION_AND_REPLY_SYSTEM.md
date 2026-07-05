@@ -1,7 +1,8 @@
 # Review Generation And Reply System
 
 Date: 2026-07-04
-Phase: 9 - Review-generation system
+Last updated: 2026-07-05
+Phase: 7 - Review generation and reply system
 Branch: `codex/visibility-readiness-audit`
 Mode: ethical review operations plan only; no client messages sent; no public review actions taken
 
@@ -18,6 +19,76 @@ Mode: ethical review operations plan only; no client messages sent; no public re
 - Use the official Google review link or QR code only after the correct Google Business Profile is confirmed.
 
 Google's own Business Profile help says reviews should reflect a genuine experience, and that incentives such as free or discounted goods/services in exchange for posting, changing, or removing reviews are prohibited. Google also says businesses may ask customers to use a review link or QR code, and should value a mix of honest feedback. See the references section.
+
+## Phase 7 Execution Update - 2026-07-05 09:57 Asia/Tbilisi
+
+This update confirms the review-generation system is prepared for owner review, but not launched.
+
+No client messages were sent. No public reviews were requested. No review replies were posted. No QR code was generated. No Google Business Profile, Salonly, Facebook, or other platform settings were changed. No incentives, discounts, or paid tools were used.
+
+Current launch status:
+
+| Item | Status |
+| --- | --- |
+| Official Google Business Profile confirmed | No |
+| Official Google review link / QR code confirmed | No |
+| English templates prepared | Yes |
+| Georgian templates prepared | Yes; native review recommended before live use |
+| Russian templates prepared | Yes; native review recommended before live use |
+| Turkish templates prepared | Yes; native review recommended before live use |
+| Arabic templates prepared | Yes; native review recommended before live use |
+| Hebrew templates prepared | Yes; native review recommended before live use |
+| Positive / neutral / negative reply templates prepared | Yes |
+| Botox/fillers privacy-safe replies prepared | Yes |
+| Nails/lashes and tourist replies prepared | Yes |
+| Internal SOP prepared | Yes |
+| Owner approval received for live use | No |
+| System launched | No |
+
+### Policy Refresh
+
+The system was checked against current Google public guidance:
+
+- Google says businesses may ask customers to leave reviews by using a Google review link or QR code.
+- Google says reviews must reflect a genuine experience.
+- Google says incentives such as free or discounted goods/services in exchange for posting, changing, or removing reviews are prohibited.
+- Google recommends valuing all reviews, including balanced feedback.
+- Google review replies are public, should be professional, short, relevant, non-promotional, and privacy-safe.
+
+Operational conclusion:
+
+- The salon may ask real clients for honest reviews after completed appointments, once the correct GBP review link is confirmed.
+- Staff must not offer rewards, filter who receives the request, ask only happy clients, request five stars, request keywords, or pressure clients to review while being watched.
+- For injectables, fillers, skin concerns, acne, and other sensitive aesthetic services, public replies must not confirm treatment details unless the client already made them public, and even then replies should stay general.
+
+### Channel Rules
+
+| Channel | Use | Limit |
+| --- | --- | --- |
+| WhatsApp | Use only when the client consented to WhatsApp communication. Send once after a real completed appointment. | Do not send repeated reminders. Do not name private treatments unless the client already used that wording. |
+| SMS | Use only when SMS consent exists. Keep it short and privacy-safe. | Avoid sensitive service details and any wording that sounds like pressure. |
+| Email | Best for a full thank-you and private support option. | Do not combine with discounts, loyalty rewards, or "leave us five stars" wording. |
+| QR card | Passive handout or receipt/aftercare insert only after a real appointment. | Do not stand over the client while they review. Do not use QR cards for people who have not visited. |
+| In-person mention | Only a light reminder that a review link can be sent if the client wants it. | Do not ask them to review while still in the chair or at reception under staff supervision. |
+
+### Do Not Use
+
+Never use these patterns:
+
+- "Please leave us five stars."
+- "Mention Botox Batumi / lip fillers Batumi / our staff member's name."
+- "Show us your review for a discount."
+- "Only review us if you are happy."
+- "Scan now while I wait."
+- "Change/remove your negative review and we will help you."
+- "Your review must include the treatment you had."
+
+Use instead:
+
+- "If you would like to share your experience, an honest Google review would help us."
+- "You may mention your service only if you are comfortable."
+- "There is no obligation and no reward."
+- "If you prefer to discuss anything privately, please contact us directly."
 
 ## Placeholder Tokens
 
