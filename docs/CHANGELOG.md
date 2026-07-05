@@ -2,6 +2,7 @@
 
 ## 2026-07-05
 
+- Added a Google Search Console index coverage diagnosis for the 487 not-indexed URLs, classifying 485 discovered/not-indexed URLs, the expected non-www redirect, the expected root canonical alternate, stale HTTP/non-www robots warnings, priority URL status, and selective indexing recommendations.
 - Updated the SEO monitoring baseline and reporting system with the current Phase 8 operating rhythm, verified Search Console baseline, GSC indexing follow-up plan, KPI cadence, 7/30/90-day action plan, and remaining GBP/Bing/citation/native-review approval gates.
 - Updated the review generation and reply system with the current Phase 7 launch status, Google review-policy refresh, channel-specific rules, prohibited wording examples, native-language review caveats, and owner-approval gates.
 - Updated the NAP citation consistency audit with the current Phase 6 public-listing pass, source-of-truth confirmation, `silkbeauty.ge` risk, Salonly/BeautyBook/Facebook findings, stale-phone snippet status, and owner-approved correction order.

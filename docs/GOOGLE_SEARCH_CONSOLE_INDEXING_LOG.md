@@ -5,6 +5,48 @@ Phase: 3 - Google Search Console setup and indexing
 Branch: `codex/visibility-readiness-audit`
 Mode: Search Console execution log plus public technical readiness notes
 
+## Index Coverage Diagnosis Update - 2026-07-05 10:15 Asia/Tbilisi
+
+A follow-up Page indexing diagnosis was performed in the authenticated Search Console browser session. No DNS, website code, deployment, Google Business Profile, Bing, analytics, public listing, or verification changes were made. No additional indexing requests were submitted.
+
+Detailed diagnosis: `docs/GSC_INDEX_COVERAGE_DIAGNOSIS.md`.
+
+### Current Page Indexing Breakdown
+
+| Reason | Source | Validation | Pages | Classification |
+| --- | --- | --- | ---: | --- |
+| Page with redirect | Website | Not started | 1 | Expected/harmless: `https://www.silkbeautysalon.online/` redirects to non-www. |
+| Alternate page with proper canonical tag | Website | Not started | 1 | Expected/harmless: `https://silkbeautysalon.online/` canonicalizes to `/en`. |
+| Discovered - currently not indexed | Google systems | Not started | 485 | Main issue. Mostly discovered multilingual sitemap URLs that Google has not crawled yet; prioritize monitoring, not bulk submission. |
+| Blocked by robots.txt | Website | N/A | 0 | No current not-indexed issue. |
+| Crawled - currently not indexed | Google systems | N/A | 0 | No current issue shown. |
+| Indexed, though blocked by robots.txt | Website | Not started | 2 | Appearance warning, not part of the 487 not-indexed count. Examples are stale HTTP/non-www roots last crawled in May 2026. |
+
+### Sample URLs Checked
+
+| URL | GSC bucket | Public live check | Result |
+| --- | --- | --- | --- |
+| `https://silkbeautysalon.online/ar` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Crawlable; wait/recheck. |
+| `https://silkbeautysalon.online/ar/about` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Crawlable; wait/recheck. |
+| `https://silkbeautysalon.online/ar/accessibility` | Discovered - currently not indexed | 200, in sitemap, no noindex, missing canonical/hreflang | Low-priority utility metadata cleanup candidate. |
+| `https://silkbeautysalon.online/ar/beauty-salon-batumi` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Hold indexing request until visible content review. |
+| `https://silkbeautysalon.online/ar/book` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Crawlable; wait/recheck. |
+| `https://www.silkbeautysalon.online/` | Page with redirect | 308 to `https://silkbeautysalon.online/` | Expected. |
+| `https://silkbeautysalon.online/` | Alternate with canonical | 200, canonical `https://silkbeautysalon.online/en` | Expected. |
+| `http://silkbeautysalon.online/` and `http://www.silkbeautysalon.online/` | Indexed, though blocked by robots.txt warning | 301 redirect chain to HTTPS/canonical host | Likely stale; recheck later. |
+
+### Current Recommendation
+
+Do not request indexing for all 487 URLs.
+
+Recommended:
+
+1. Recheck the 9 already requested URLs on 2026-07-12.
+2. Keep `/{locale}/pricelist` held until live canonical/hreflang metadata is fixed and verified.
+3. Keep `/{locale}/beauty-salon-batumi` held until the visible `Popular local searches` section is reviewed or cleaned.
+4. After the 9 existing requests settle, inspect and request selected high-intent non-English service pages only, not the full sitemap.
+5. Treat the HTTP/non-www robots warning as stale unless it persists after recrawl.
+
 ## Phase 2 Execution Update - 2026-07-05 09:36 Asia/Tbilisi
 
 This update performed a real authenticated Google Search Console pass for the domain property. No DNS, verification token, website code, deployment, Google Business Profile, Bing, analytics, or public listing changes were made.
