@@ -92,7 +92,7 @@ Primary source in code: `src/data/site-config.ts`.
 | Business name | Silk Beauty Salon | Confirmed in `siteConfig.name`. |
 | Legal/display variant | Silk Beauty Salon Batumi | Present in `siteConfig.legalName`; use only where appropriate. |
 | Address | Zurab Gorgiladze 63, Batumi, Georgia | Confirmed in source and live page text. |
-| Postal/local detail | Batumi, Adjara 6000, Georgia | Present in `siteConfig.contact`. |
+| Postal/local detail | Batumi, Adjara 6010, Georgia | Owner-confirmed on 2026-07-05. Previous `6000` was outdated/inconsistent; GBP Manager showed `6010`, while public Maps/Search may lag and still show `6000` until Google processes the change. |
 | Main visible phone | `+995 577 34 57 67` | Confirmed in source, messages, live homepage, and JSON-LD. Use as primary NAP phone for listings unless owner approves otherwise. |
 | WhatsApp | `+995 577 28 68 55` | Confirmed in source and live homepage. Owner previously corrected this number, so it is treated as owner-approved as a separate WhatsApp channel. Do not make it the primary NAP/listing phone without explicit approval. |
 | Website | `https://silkbeautysalon.online` | Confirmed in `siteConfig.url` and production checks. |

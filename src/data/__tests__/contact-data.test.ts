@@ -5,6 +5,14 @@ import { locales } from '@/i18n';
 import { siteConfig } from '../site-config';
 
 describe('localized contact data', () => {
+  it('uses the owner-confirmed postal code in the shared site config', () => {
+    expect(siteConfig.contact.postcode).toBe('6010');
+    expect(`${siteConfig.contact.city}, ${siteConfig.contact.region} ${siteConfig.contact.postcode}`).toBe(
+      'Batumi, Adjara 6010'
+    );
+    expect(JSON.stringify(siteConfig.contact)).not.toContain('Batumi, Adjara 6000');
+  });
+
   it('does not serialize the old placeholder phone number in locale messages', () => {
     const messagesDir = path.join(process.cwd(), 'messages');
 

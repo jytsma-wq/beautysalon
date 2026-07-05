@@ -13,6 +13,12 @@ Mode: read-only planning and documentation
 - No credentials, account data, verification tokens, private dashboard data, or screenshots were stored.
 - Public data changes remain blocked until owner approval and verified GBP access are available.
 
+## Postal-Code Source Alignment - 2026-07-05
+
+Owner confirmed the correct postal code is `6010`. This release aligns the first-party website source, BeautySalon JSON-LD source data, email template address, tests, and documentation to `Zurab Gorgiladze 63, Batumi 6010, Georgia`.
+
+No Google Business Profile fields were edited in this release. Public Google Maps/Search may still show the outdated `6000` postal code until Google processes the public display update or an owner-approved GBP correction is completed.
+
 ## Phase 3 Execution Update - 2026-07-05 09:41 Asia/Tbilisi
 
 This update re-ran the Google Business Profile audit as a safe preparation pass. No Google Business Profile fields were edited, no categories or services were published, no photos were uploaded, no Q&A was posted, no reviews were requested or answered, and no GBP posts were created.
@@ -37,7 +43,7 @@ Because the owner GBP dashboard was not inspectable, the fields below remain unc
 | Business name | Not confirmed inside GBP | Website source: `Silk Beauty Salon`. | Keep exact real-world name; do not add keywords such as "Botox Batumi" to the name. |
 | Primary category | Not confirmed | Recommended: `Beauty salon`. | Confirm current category in GBP, then change only with owner approval. |
 | Secondary categories | Not confirmed | Good candidates only if accurate: `Skin care clinic`, `Nail salon`, `Eyelash salon`, `Facial spa`. | Use fewest accurate categories; hold `Medical spa` / `aesthetic clinic` wording until owner/legal approval. |
-| Address | Not confirmed inside GBP | Website source: Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia. Salonly and `silkbeauty.ge` also point to Zurab Gorgiladze 63. | Confirm the exact GBP pin/entrance before publishing. |
+| Address | Not confirmed inside GBP | Website source: Zurab Gorgiladze 63, Batumi, Adjara 6010, Georgia. Salonly and `silkbeauty.ge` also point to Zurab Gorgiladze 63. | Confirm the exact GBP pin/entrance before publishing. |
 | Main phone | Not confirmed inside GBP | Website/source-of-truth main phone: `+995 577 34 57 67`. | Use as primary NAP phone unless owner explicitly approves another primary number. |
 | WhatsApp | Not confirmed inside GBP | Website/source-of-truth WhatsApp: `+995 577 28 68 55`, owner-treated as a separate channel. | Do not replace the main phone with the WhatsApp number on GBP. |
 | Website URL | Not confirmed inside GBP | Current canonical website: `https://silkbeautysalon.online`. Separate site `https://silkbeauty.ge/` creates a canonical-source decision. | Owner must confirm which URL should be the GBP website link. Recommendation remains `https://silkbeautysalon.online` unless owner chooses otherwise. |
@@ -188,7 +194,7 @@ Because verified GBP access was unavailable, the current state below is intentio
 | --- | --- | --- |
 | Business name | Not confirmed inside GBP | Website source-of-truth: `Silk Beauty Salon`. |
 | Categories | Not confirmed | Must be checked in verified GBP dashboard. |
-| Address | Not confirmed inside GBP | Website source-of-truth: Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia. |
+| Address | Not confirmed inside GBP | Website source-of-truth: Zurab Gorgiladze 63, Batumi, Adjara 6010, Georgia. |
 | Phone | Not confirmed inside GBP | Website source-of-truth main phone: `+995 577 34 57 67`. |
 | Website | Not confirmed inside GBP | Source-of-truth website: `https://silkbeautysalon.online`. |
 | Booking URL | Not confirmed inside GBP | Recommended English URL: `https://silkbeautysalon.online/en/book`. Localized booking routes can be used only if GBP supports language-specific links. |

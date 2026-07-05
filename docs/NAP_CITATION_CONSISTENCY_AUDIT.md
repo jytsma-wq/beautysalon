@@ -25,7 +25,7 @@ No public listings were edited, created, claimed, merged, deleted, or submitted.
 | Field | Expected value | Current confidence |
 | --- | --- | --- |
 | Business name | `Silk Beauty Salon` | Confirmed in website config and live first-party pages. |
-| Address | `Zurab Gorgiladze 63, Batumi, Georgia` | Confirmed in website config, live first-party pages, Salonly, Facebook snippets, and `silkbeauty.ge`. |
+| Address | `Zurab Gorgiladze 63, Batumi 6010, Georgia` | Owner-confirmed postal code update on 2026-07-05. Street/location confirmed in website config and live first-party pages; first-party website source, schema, email templates, tests, and docs are aligned to `6010` in this release. Public Google Maps/Search may still show the outdated `6000` until Google processes the display update. |
 | Main phone | `+995 577 34 57 67` | Confirmed in website config and live first-party pages. This should remain the primary NAP phone. |
 | WhatsApp | `+995 577 28 68 55` | Confirmed in website config and public Facebook snippets as a separate contact channel. Do not replace the main NAP phone with this unless owner explicitly approves. |
 | Website | `https://silkbeautysalon.online` | Current canonical website for this project. |
@@ -165,7 +165,7 @@ Use this as the expected public citation baseline unless the owner explicitly ap
 | Field | Expected value | Notes |
 | --- | --- | --- |
 | Business name | `Silk Beauty Salon` | Do not add keywords to the name on GBP, Bing Places, maps, or directories. |
-| Address | `Zurab Gorgiladze 63, Batumi, Georgia` | Website also uses `Batumi, Adjara 6000, Georgia`; directory formatting can vary. |
+| Address | `Zurab Gorgiladze 63, Batumi 6010, Georgia` | Previous website/source use of `Batumi, Adjara 6000, Georgia` was outdated/inconsistent. Directory formatting can vary, but public citations should use the owner-confirmed `6010` postal code where a postal code is shown. |
 | Main phone | `+995 577 34 57 67` | Primary NAP phone for listings. |
 | WhatsApp | `+995 577 28 68 55` | Owner-approved separate WhatsApp channel. Do not make it the main listing phone without explicit approval. |
 | Website | `https://silkbeautysalon.online` | Use canonical host with HTTPS. |

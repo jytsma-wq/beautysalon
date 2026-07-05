@@ -16,7 +16,7 @@ Expected visual result:
 Browser verification:
 - Local production preview used: `http://127.0.0.1:3003`.
 - Browser path: in-app Browser opened the preview; its DOM snapshot API failed, so verification used the Browser read-only evaluate/log APIs for DOM, console, and interaction checks.
-- Desktop `/en`: Visit Us rendered with `Silk Beauty Salon`, `Zurab Gorgiladze 63`, `Batumi, 6000, Georgia`, shared hours, directions link, phone link, WhatsApp link, lazy iframe, no framework overlay, no console warnings/errors, and no horizontal overflow.
+- Desktop `/en`: Visit Us rendered with `Silk Beauty Salon`, `Zurab Gorgiladze 63`, `Batumi, 6010, Georgia`, shared hours, directions link, phone link, WhatsApp link, lazy iframe, no framework overlay, no console warnings/errors, and no horizontal overflow.
 - Directions URL: `https://www.google.com/maps/dir/?api=1&destination=Zurab+Gorgiladze+63%2C+Batumi%2C+Georgia&travelmode=driving`.
 - Map iframe: `https://www.google.com/maps?q=Zurab+Gorgiladze+63%2C+Batumi%2C+Georgia&output=embed`, `loading="lazy"`, and localized title text.
 - Mobile `/en`: Visit Us rendered correctly, no console warnings/errors, no framework overlay, and no horizontal overflow.

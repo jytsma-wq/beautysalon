@@ -48,7 +48,7 @@ URL tested: `https://silkbeautysalon.online/en`
 | Name | `Silk Beauty Salon` |
 | URL | `https://silkbeautysalon.online/en` |
 | `@id` | `https://silkbeautysalon.online/#beautysalon` |
-| Address | `Zurab Gorgiladze 63`, Batumi, Adjara, `6000`, Georgia |
+| Address | `Zurab Gorgiladze 63`, Batumi, Adjara, `6010`, Georgia |
 | Phone | `+995 577 34 57 67` |
 | Email | `info@silkbeautysalon.online` |
 | Opening hours | 7 `OpeningHoursSpecification` entries |

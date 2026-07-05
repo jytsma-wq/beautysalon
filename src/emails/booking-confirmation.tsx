@@ -37,7 +37,7 @@ export function BookingConfirmationEmail({
   time,
   practitionerName = 'our team',
   clinicName = 'Silk Beauty Salon',
-  clinicAddress = 'Zurab Gorgiladze 63, Batumi 6000, Georgia',
+  clinicAddress = 'Zurab Gorgiladze 63, Batumi 6010, Georgia',
 }: BookingConfirmationProps) {
   return (
     <Html lang="en">

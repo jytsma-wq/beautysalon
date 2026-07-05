@@ -13,7 +13,7 @@ export const siteConfig = {
     address: "Zurab Gorgiladze 63",
     city: "Batumi",
     region: "Adjara",
-    postcode: "6000",
+    postcode: "6010",
     country: "Georgia",
     phone: "+995 577 34 57 67",
     whatsappPhone: "+995 577 28 68 55",

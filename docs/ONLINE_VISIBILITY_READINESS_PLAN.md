@@ -13,7 +13,7 @@ Address: Zurab Gorgiladze 63, Batumi, Georgia
 - WhatsApp: `+995 577 28 68 55`
 - Website: `https://silkbeautysalon.online`
 - Email: `info@silkbeautysalon.online`
-- Address: Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia
+- Address: Zurab Gorgiladze 63, Batumi, Adjara 6010, Georgia
 - Target languages: English, Georgian, Russian, Turkish, Arabic, Hebrew
 
 The WhatsApp number is treated as owner-approved because the owner previously corrected it as `+995 577 28 68 55`. For Google Business Profile, Bing Places, and NAP citations, use the visible NAP phone as the main public phone unless the owner explicitly approves using the WhatsApp number as the primary listing phone.
@@ -69,7 +69,7 @@ Actions:
 
 1. Use the exact NAP everywhere:
    - Name: Silk Beauty Salon
-   - Address: Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia
+   - Address: Zurab Gorgiladze 63, Batumi, Adjara 6010, Georgia
    - Main phone: `+995 577 34 57 67`
    - Website: `https://silkbeautysalon.online`
 2. Keep WhatsApp as a separate contact channel unless owner approves it as primary phone.
@@ -145,7 +145,7 @@ Owner/account steps:
    - Main phone: `+995 577 34 57 67`
    - Website: `https://silkbeautysalon.online`
    - Appointment URL: `https://silkbeautysalon.online/en/book`
-   - Address: Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia
+   - Address: Zurab Gorgiladze 63, Batumi, Adjara 6010, Georgia
    - Hours: match website hours
 6. Add real salon photos only:
    - Exterior/signage

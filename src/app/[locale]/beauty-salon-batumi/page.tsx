@@ -378,7 +378,7 @@ const localFaqs = [
   {
     question: 'Where is Silk Beauty Salon in Batumi?',
     answer:
-      'Silk Beauty Salon is located at Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia.',
+      'Silk Beauty Salon is located at Zurab Gorgiladze 63, Batumi, Adjara 6010, Georgia.',
   },
   {
     question: 'Can tourists book appointments at Silk Beauty Salon?',

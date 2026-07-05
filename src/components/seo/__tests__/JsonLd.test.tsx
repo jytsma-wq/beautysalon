@@ -65,6 +65,12 @@ describe('LocalBusiness BeautySalon JSON-LD', () => {
         },
       },
     });
+    expect(schema.address.postalCode).toBe('6010');
+    expect(schema.address.streetAddress).toBe('Zurab Gorgiladze 63');
+    expect(schema.address.addressLocality).toBe('Batumi');
+    expect(schema.address.addressCountry).toBe('Georgia');
+    expect(schema.telephone).toBe('+995 577 34 57 67');
+    expect(JSON.stringify(schema)).not.toContain('+995 599 123 456');
     expect(schema.openingHoursSpecification).toHaveLength(7);
     expect(schema.sameAs).toEqual([
       siteConfig.social.instagram,
