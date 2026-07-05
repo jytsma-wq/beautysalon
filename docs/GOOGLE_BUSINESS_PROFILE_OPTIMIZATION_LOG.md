@@ -1,7 +1,7 @@
 # Google Business Profile Optimization Log
 
-Date: 2026-07-04
-Phase: 2 - Google Business Profile optimization
+Date: 2026-07-04; latest execution update 2026-07-05
+Phase: 3 - Google Business Profile audit and safe optimization plan
 Branch: `codex/visibility-readiness-audit`
 Mode: read-only planning and documentation
 
@@ -12,6 +12,91 @@ Mode: read-only planning and documentation
 - No fake reviews, fake photos, keyword-stuffed business names, unsupported medical claims, or guaranteed-result claims were created.
 - No credentials, account data, verification tokens, private dashboard data, or screenshots were stored.
 - Public data changes remain blocked until owner approval and verified GBP access are available.
+
+## Phase 3 Execution Update - 2026-07-05 09:41 Asia/Tbilisi
+
+This update re-ran the Google Business Profile audit as a safe preparation pass. No Google Business Profile fields were edited, no categories or services were published, no photos were uploaded, no Q&A was posted, no reviews were requested or answered, and no GBP posts were created.
+
+### Access Result
+
+| Surface | Status | Notes |
+| --- | --- | --- |
+| Google Business Profile Manager | Not inspectable in this session | A read-only dashboard check did not produce a usable owner profile view. No editable fields were opened or saved. |
+| Public Google Maps / GBP profile | Not confirmed | Public search did not expose a clearly confirmed Silk Beauty Salon Google Business Profile URL. Treat GBP/Maps ownership as unresolved. |
+| Official website source | Confirmed | `src/data/site-config.ts` and the live website remain the NAP source of truth for this planning pass. |
+| Public Salonly citation | Confirmed public citation | Salonly search results show `Silk Beauty Salon`, `Zurab Gorgiladze street 63, Batumi`, rating `5.0`, `3 Professionals`, and hair-heavy service snippets. This is not GBP data. |
+| Public Facebook citation | Partially confirmed from snippets | Public Facebook search snippets show `SilkBeauty.Salon | Batumi`, address text for Gorgiladze 63, and phone `577 34 57 67`. The canonical page/handle still needs owner confirmation. |
+| `silkbeauty.ge` public site | Confirmed source-of-truth risk | A separate public site at `https://silkbeauty.ge/` presents Silk Beauty in Batumi at Zurab Gorgiladze 63 with phone `577 34 57 67` and WhatsApp/Instagram/Facebook links. Owner must confirm how this domain relates to `silkbeautysalon.online` before GBP website/appointment-link edits. |
+
+### Current GBP State Capture
+
+Because the owner GBP dashboard was not inspectable, the fields below remain unconfirmed inside Google Business Profile. This table separates verified website facts from GBP fields that still require owner-dashboard confirmation.
+
+| GBP field | Current captured state | Comparison to source-of-truth | Required action before public edit |
+| --- | --- | --- | --- |
+| Business name | Not confirmed inside GBP | Website source: `Silk Beauty Salon`. | Keep exact real-world name; do not add keywords such as "Botox Batumi" to the name. |
+| Primary category | Not confirmed | Recommended: `Beauty salon`. | Confirm current category in GBP, then change only with owner approval. |
+| Secondary categories | Not confirmed | Good candidates only if accurate: `Skin care clinic`, `Nail salon`, `Eyelash salon`, `Facial spa`. | Use fewest accurate categories; hold `Medical spa` / `aesthetic clinic` wording until owner/legal approval. |
+| Address | Not confirmed inside GBP | Website source: Zurab Gorgiladze 63, Batumi, Adjara 6000, Georgia. Salonly and `silkbeauty.ge` also point to Zurab Gorgiladze 63. | Confirm the exact GBP pin/entrance before publishing. |
+| Main phone | Not confirmed inside GBP | Website/source-of-truth main phone: `+995 577 34 57 67`. | Use as primary NAP phone unless owner explicitly approves another primary number. |
+| WhatsApp | Not confirmed inside GBP | Website/source-of-truth WhatsApp: `+995 577 28 68 55`, owner-treated as a separate channel. | Do not replace the main phone with the WhatsApp number on GBP. |
+| Website URL | Not confirmed inside GBP | Current canonical website: `https://silkbeautysalon.online`. Separate site `https://silkbeauty.ge/` creates a canonical-source decision. | Owner must confirm which URL should be the GBP website link. Recommendation remains `https://silkbeautysalon.online` unless owner chooses otherwise. |
+| Booking / appointment URL | Not confirmed inside GBP | Recommended website booking URL: `https://silkbeautysalon.online/en/book`. `silkbeauty.ge` and Salonly may expose other booking paths. | Owner must choose the official external booking path before GBP edit. |
+| Opening hours | Not confirmed inside GBP | Website hours: Mon-Sat `10:00 - 22:00`; Sun `11:00 - 22:00`. | Owner must confirm real-world hours before publishing or correcting GBP hours. |
+| Business description | Not confirmed | Safe draft exists below. | Publish only after owner approval and dashboard capture. |
+| Services | Not confirmed | Website supports injectables, fillers, skin/acne, microneedling, peels, nails, lashes/brows, and selected hair items. | Publish only active, owner-approved services; avoid unsupported medical/certification claims. |
+| Products | Not confirmed | Retail product availability is not owner-confirmed. | Do not add products yet. |
+| Photos | Not confirmed | No owner-approved GBP photo set was provided in this session. | Upload only real owner-approved photos; no stock/fake/client-sensitive photos. |
+| Reviews count / average rating | Not confirmed for GBP | Salonly rating is a separate platform and must not be treated as Google review data. | Record Google review count/rating only after verified GBP access. |
+| Q&A | Not confirmed | Safe Q&A drafts exist below. | Publish only owner-approved Q&A from the verified profile. |
+| Social links | Not confirmed inside GBP | Website source links Instagram, Facebook, and TikTok; Facebook public URL/handle ambiguity remains. | Owner must confirm canonical social profiles before adding or correcting links. |
+| Profile completeness issues | Unknown | GBP dashboard was not inspectable. | Capture dashboard completeness and Google suggestions before any public changes. |
+
+### Mismatches And Risks Found
+
+| Issue | Severity | Reason | Safe next action |
+| --- | --- | --- | --- |
+| GBP/Google Maps profile not confirmed | P0 | Local-pack visibility depends heavily on a claimed, accurate GBP. | Owner opens/authorizes the correct GBP, then record current profile fields before edits. |
+| `silkbeauty.ge` vs `silkbeautysalon.online` | P0 | Two public sites appear to represent the same salon/location. Search engines and GBP need one intentional canonical website/booking source. | Owner decides whether GBP website should use `silkbeautysalon.online`, `silkbeauty.ge`, or a specific booking platform. |
+| Facebook canonical page ambiguity | P0 | Website source links one Facebook handle, while search exposes a page-style URL. | Owner confirms official Facebook page before profile/link changes. |
+| Main phone vs WhatsApp split | P1 | The numbers intentionally differ. External platforms can accidentally replace the primary NAP phone with WhatsApp. | Keep `+995 577 34 57 67` as main phone and `+995 577 28 68 55` as separate WhatsApp unless owner approves otherwise. |
+| Salonly service mix looks hair-heavy | P1 | Salonly snippets emphasize hair extensions, hair botox/curling, and nanoplastics more than the current SEO priority mix. | Owner/admin reviews Salonly services, prices, staff, photos, and booking handoff. |
+| Website staff/certification/award/product-brand claims | P1 | Some source data contains claims that should not be copied into GBP without evidence. | Keep GBP description factual and service-level; do not publish certification/award/brand claims unless owner verifies. |
+| GBP reviews unavailable | P1 | Review count, rating, languages, unanswered reviews, and service themes cannot be audited without profile access. | Capture the review baseline after owner dashboard access. |
+
+### Recommended GBP Setup
+
+No recommendation below has been published.
+
+| Area | Recommendation | Approval needed |
+| --- | --- | --- |
+| Business name | `Silk Beauty Salon` only. | Owner confirms exact real-world name. |
+| Primary category | `Beauty salon`. | Owner approval before changing. |
+| Secondary categories | `Skin care clinic`, `Nail salon`, `Eyelash salon`, `Facial spa` only if available and accurate. | Owner confirms active service mix. |
+| Hold categories | `Hair removal service`, `Medical spa`, `Aesthetic clinic`. | Use only if legally/operationally accurate and owner-approved. |
+| Website link | Recommended: `https://silkbeautysalon.online`. | Owner resolves `silkbeauty.ge` relationship first. |
+| Appointment link | Recommended: `https://silkbeautysalon.online/en/book` unless owner chooses Salonly/BeautyBook/another booking source. | Owner chooses canonical booking path. |
+| Services | Use the prepared service plan below, but publish prices only when owner confirms GBP should mirror website/booking prices. | Owner approves service list, descriptions, durations, and prices. |
+| Photos | Use the real-photo shot list below. | Owner supplies/approves photos and consent. |
+| Q&A | Use the prepared Q&A below. | Owner approves answers before publishing. |
+| Posts | Use the 12-week post calendar below with real photos. | Owner approves post copy/media cadence. |
+
+### Changes Made In Public Accounts
+
+None. This was a read-only audit and preparation update.
+
+### Owner Approvals Still Required
+
+1. Confirm or grant access to the correct Google Business Profile / Google Maps listing.
+2. Confirm whether a GBP profile already exists, is unclaimed, or must be created.
+3. Confirm the canonical website link for GBP: `silkbeautysalon.online` versus `silkbeauty.ge`.
+4. Confirm the official booking/appointment URL for GBP.
+5. Confirm the official Facebook page/handle and other social profiles.
+6. Confirm the main phone and separate WhatsApp treatment for all public profiles.
+7. Confirm real-world opening hours.
+8. Approve categories, service list, descriptions, durations, and whether prices can appear on GBP.
+9. Provide/approve real photos and any consent-restricted before/after assets.
+10. Approve Q&A, review request workflow, review replies, and GBP post calendar.
 
 ## Phase 3 Execution Update - 2026-07-04 14:05 Asia/Tbilisi
 
