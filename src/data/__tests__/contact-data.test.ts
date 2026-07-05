@@ -24,6 +24,17 @@ describe('localized contact data', () => {
     }
   });
 
+  it('does not serialize the outdated 6000 postal code in locale address messages', () => {
+    const messagesDir = path.join(process.cwd(), 'messages');
+
+    for (const locale of locales) {
+      const serializedMessages = fs.readFileSync(path.join(messagesDir, `${locale}.json`), 'utf8');
+
+      expect(serializedMessages).toContain('6010');
+      expect(serializedMessages).not.toContain('6000');
+    }
+  });
+
   it('keeps the Arabic footer phone aligned with the shared visible phone number', () => {
     const arMessages = JSON.parse(
       fs.readFileSync(path.join(process.cwd(), 'messages', 'ar.json'), 'utf8')
