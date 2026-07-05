@@ -1,10 +1,108 @@
 # Bing Webmaster And IndexNow Log
 
-Date: 2026-07-04
-Live check time: 2026-07-04 10:09 Asia/Tbilisi / 06:09 UTC
+Date: 2026-07-04; latest execution update 2026-07-05
+Live check time: 2026-07-05 09:44 Asia/Tbilisi / 05:44 UTC
 Phase: 4 - Bing Webmaster Tools and IndexNow
 Branch: `codex/visibility-readiness-audit`
 Mode: public technical audit plus owner-side setup plan; no Bing account changes
+
+## Phase 4 Execution Update - 2026-07-05 09:44 Asia/Tbilisi
+
+This update re-ran Phase 4 for Bing Webmaster Tools and IndexNow. No Bing property was created or verified, no sitemap was submitted inside Bing, no URLs were manually submitted, no Bing Places listing was edited, and no IndexNow key/route/file was added.
+
+### Current Verification Status
+
+| Item | Status | Evidence / note |
+| --- | --- | --- |
+| Bing Webmaster Tools access | Not confirmed | The Bing dashboard did not become inspectable in this session. No account-side property list, sitemaps report, URL Inspection result, crawl report, SEO report, or performance report was available. |
+| Site property `https://silkbeautysalon.online` | Not confirmed in Bing | Requires authenticated Bing Webmaster Tools access. |
+| Site verification | Not performed | No owner-approved Bing verification method was executed. |
+| Verification codes exposed | No | No Bing verification token, XML verification file, DNS value, account identifier, or dashboard screenshot was stored. |
+| Sitemap submitted in Bing | Not confirmed / not submitted from this session | Public sitemap is ready, but account-side submission requires a verified Bing property. |
+| Priority URLs submitted in Bing | No | Manual URL submission requires a verified Bing property and owner approval. |
+| Bing crawl/index reports checked | No | Reports require verified Bing Webmaster Tools access. |
+
+Current Google Search Console status note: project documentation now records verified Google Search Console access and sitemap submission. If the owner approves Bing setup, the preferred Bing verification path is importing the verified Search Console property into Bing Webmaster Tools, because Bing documents that imported verified GSC sites and sitemaps can be automatically verified without repeating manual verification.
+
+### Public Sitemap And Robots Status
+
+| Check | Result |
+| --- | --- |
+| `https://silkbeautysalon.online/sitemap.xml` HTTP | 200 |
+| Sitemap `<loc>` count | 516 |
+| `https://silkbeautysalon.online/robots.txt` HTTP | 200 |
+| Robots references sitemap | Yes |
+| Robots blocks all crawling | No |
+
+### Priority URL Submission Readiness
+
+This table is based on public live checks, not private Bing Webmaster Tools data.
+
+| Priority URL | HTTP | In sitemap | Noindex | Canonical | Hreflang | Bing action after verified access |
+| --- | ---: | --- | --- | --- | ---: | --- |
+| `https://silkbeautysalon.online/en` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/botox-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/dermal-fillers-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/lip-fillers-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/skin-treatment-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/acne-treatment-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/nails-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/lashes-brows-batumi` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+| `https://silkbeautysalon.online/en/pricelist` | 200 | Yes | No | Missing | 0 | Hold for manual URL submission until live canonical/hreflang are fixed or verified. Sitemap discovery can remain. |
+| `https://silkbeautysalon.online/en/book` | 200 | Yes | No | Self | 7 | Submit after sitemap if needed. |
+
+Submission rule after access:
+
+1. Submit `https://silkbeautysalon.online/sitemap.xml` first.
+2. Wait for Bing sitemap processing.
+3. Use manual URL submission only for priority canonical URLs or recently changed URLs.
+4. Do not manually submit `/en/pricelist` until the live canonical/hreflang gap is resolved.
+5. Do not repeatedly resubmit unchanged URLs.
+
+### Current Crawl / Indexing Findings
+
+Private Bing crawl/indexing findings remain unavailable until the site is verified in Bing Webmaster Tools.
+
+| Report area | Current status |
+| --- | --- |
+| Sitemaps report | Pending verified Bing access |
+| URL Inspection | Pending verified Bing access |
+| Indexing status | Pending verified Bing access |
+| Crawl errors | Pending verified Bing access |
+| SEO reports | Pending verified Bing access |
+| Backlinks | Pending verified Bing access |
+| Keyword/search performance | Pending verified Bing access |
+| Bing Places listing data | Pending owner-approved Bing Places access |
+
+### Current IndexNow Check
+
+Current implementation status: not implemented.
+
+Evidence from source scan excluding docs:
+
+- No `api.indexnow.org` usage found.
+- No IndexNow route, helper, scheduled job, or submission client found.
+- No IndexNow key file found in `public` or `src`.
+- No `msvalidate.01` value or Bing verification file found in source.
+- No dependency change was made.
+
+Recommendation: do not implement IndexNow in this pass. Consider it later as a separate owner-approved code task after Bing Webmaster Tools is verified and the baseline sitemap/URL submission flow is stable.
+
+Official documentation notes used for the recommendation:
+
+- Bing's IndexNow setup says a custom implementation requires generating an API key, hosting a UTF-8 key file, submitting changed URLs, and using Bing Webmaster Tools to verify received URLs.
+- IndexNow documentation says submitted URLs require proof of host ownership through a hosted key file, `200` only confirms receipt, and `429` can occur for excessive submissions.
+- Bing documents that verified Google Search Console sites can be imported into Bing Webmaster Tools and automatically verified, which is the lowest-risk setup path if the owner approves the connection.
+
+### Owner Approvals Required
+
+1. Owner approval to sign in to or connect Bing Webmaster Tools.
+2. Owner approval to import the verified Google Search Console property into Bing Webmaster Tools.
+3. If GSC import is not used, owner approval for the verification method: DNS TXT, XML file, or meta tag.
+4. Owner approval before submitting priority URLs manually.
+5. Owner approval before adding or editing Bing Places listing data.
+6. Separate explicit approval before generating or exposing an IndexNow key file.
+7. Separate explicit approval before implementing automated IndexNow submissions.
 
 ## Phase 4 Execution Update - 2026-07-04 14:07 Asia/Tbilisi
 
