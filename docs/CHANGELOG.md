@@ -2,6 +2,10 @@
 
 ## 2026-07-09
 
+- Aligned the Botox local SEO pages with high-intent English, Georgian, Russian, Turkish, Arabic, and Hebrew query forms without restoring visible keyword-list blocks; added regression coverage and a focused Botox top-5 action plan.
+- Prepared the Google Business Profile photo and review launch pack, confirmed the official Google review link and current Google review baseline, added first-photo upload planning, and kept review/photo launch blocked pending owner approval and real assets.
+- Published owner-approved Google Business Profile service-only updates for Botox / anti-wrinkle, lip fillers, skin treatments, skin consultation, and acne service descriptions without prices or durations; Google marked the edits pending review, and pre-existing `Dermal fillers` duplicate cleanup remains a separate approval item.
+- Updated SEO status documentation so the live `/pricelist`, `/{locale}/beauty-salon-batumi`, visible keyword-list, postal-code, and KA/TR query-copy fixes are no longer listed as active website-side blockers; remaining GSC, GBP, Bing, citation, native-review, and conversion backlog items stay tracked separately.
 - Prepared a narrow Georgian/Turkish rendered service-copy release for the six priority Botox, lip-filler, and skin-treatment pages so owner-reported query forms appear naturally without visible keyword-list blocks or excessive repetition.
 
 ## 2026-07-05

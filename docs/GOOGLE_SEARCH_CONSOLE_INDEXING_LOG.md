@@ -5,7 +5,7 @@ Phase: 3 - Google Search Console setup and indexing
 Branch: `codex/visibility-readiness-audit`
 Mode: Search Console execution log plus public technical readiness notes
 
-## Current Status Note - 2026-07-05
+## Current Status Note - updated 2026-07-09
 
 Earlier notes in this file record that authenticated Search Console access was unavailable during the first 2026-07-04 pass. A later authenticated browser session became available on 2026-07-05. The current authoritative Search Console status is:
 
@@ -13,17 +13,20 @@ Earlier notes in this file record that authenticated Search Console access was u
 - Sitemap: `https://silkbeautysalon.online/sitemap.xml`, submitted and successful
 - Page indexing baseline: 9 indexed, 487 not indexed
 - Not-indexed breakdown: 485 discovered/not-indexed, 1 redirect, 1 alternate-canonical URL
-- Indexing requests already submitted: 9 targeted canonical-ready URLs
+- Indexing requests already submitted: 9 targeted canonical-ready URLs plus the later six Georgian/Turkish service-page requests
 
 Do not use the older "GSC access unavailable" section as the current status. Keep it only as historical audit context.
 
 ### Website-Side Blocker Release Status
 
-The next safe SEO release branch updates the website-side blockers before further indexing requests:
+These website-side blockers are resolved live and should no longer be treated as active holds:
 
-- `/{locale}/pricelist` metadata: local fix was already committed in `4baa40c fix(seo): add pricelist canonical metadata`; this release branch keeps it and adds all-locale regression coverage.
-- `/{locale}/beauty-salon-batumi` visible content blocker: this release branch replaces the visible `Popular local searches` block with localized customer-facing service navigation.
-- No new indexing requests should be made until these changes are owner-approved, released, and verified live.
+- `/{locale}/pricelist` canonical/hreflang metadata is live and verified.
+- `/{locale}/beauty-salon-batumi` no longer shows `Popular local searches` or `Search phrases this page answers`.
+- The visible keyword-list blocks have been removed from local SEO pages.
+- Georgian/Turkish rendered service-copy alignment is live on the six priority service pages.
+
+Do not bulk-submit the discovered URL backlog. Any further URL Inspection requests should still be selective, canonical, and tied to the scheduled GSC follow-up checks.
 
 ### Georgian/Turkish Service Copy Release Note - 2026-07-09
 
@@ -58,7 +61,7 @@ Detailed diagnosis: `docs/GSC_INDEX_COVERAGE_DIAGNOSIS.md`.
 | `https://silkbeautysalon.online/ar` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Crawlable; wait/recheck. |
 | `https://silkbeautysalon.online/ar/about` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Crawlable; wait/recheck. |
 | `https://silkbeautysalon.online/ar/accessibility` | Discovered - currently not indexed | 200, in sitemap, no noindex, missing canonical/hreflang | Low-priority utility metadata cleanup candidate. |
-| `https://silkbeautysalon.online/ar/beauty-salon-batumi` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Hold indexing request until visible content review. |
+| `https://silkbeautysalon.online/ar/beauty-salon-batumi` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Website-side content blocker is now resolved live; inspect selectively if still priority. |
 | `https://silkbeautysalon.online/ar/book` | Discovered - currently not indexed | 200, in sitemap, self-canonical, 7 hreflang, no noindex | Crawlable; wait/recheck. |
 | `https://www.silkbeautysalon.online/` | Page with redirect | 308 to `https://silkbeautysalon.online/` | Expected. |
 | `https://silkbeautysalon.online/` | Alternate with canonical | 200, canonical `https://silkbeautysalon.online/en` | Expected. |
@@ -71,9 +74,9 @@ Do not request indexing for all 487 URLs.
 Recommended:
 
 1. Recheck the 9 already requested URLs on 2026-07-12.
-2. Keep `/{locale}/pricelist` held until live canonical/hreflang metadata is fixed and verified.
-3. Keep `/{locale}/beauty-salon-batumi` held until the visible `Popular local searches` section is reviewed or cleaned.
-4. After the 9 existing requests settle, inspect and request selected high-intent non-English service pages only, not the full sitemap.
+2. Recheck the six Georgian/Turkish service-page requests on 2026-07-14.
+3. Treat the resolved `/{locale}/pricelist` and `/{locale}/beauty-salon-batumi` website-side blockers as eligible for selective URL Inspection if they are still strategically important.
+4. Do not bulk-submit the 485 discovered URLs; inspect and request only selected high-intent canonical URLs.
 5. Treat the HTTP/non-www robots warning as stale unless it persists after recrawl.
 
 ## Phase 2 Execution Update - 2026-07-05 09:36 Asia/Tbilisi
@@ -159,7 +162,7 @@ English URLs:
 | URL | URL is on Google | Page indexing | Indexing allowed | Request indexing submitted |
 | --- | --- | --- | --- | --- |
 | `https://silkbeautysalon.online/en` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
-| `https://silkbeautysalon.online/en/beauty-salon-batumi` | Not inspected in GSC | Held because Phase 1 found `Popular local searches` | N/A | No |
+| `https://silkbeautysalon.online/en/beauty-salon-batumi` | Not inspected in GSC | Website-side content blocker resolved live after this pass | N/A | No |
 | `https://silkbeautysalon.online/en/botox-batumi` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
 | `https://silkbeautysalon.online/en/dermal-fillers-batumi` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
 | `https://silkbeautysalon.online/en/lip-fillers-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
@@ -167,7 +170,7 @@ English URLs:
 | `https://silkbeautysalon.online/en/acne-treatment-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
 | `https://silkbeautysalon.online/en/nails-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
 | `https://silkbeautysalon.online/en/lashes-brows-batumi` | No | URL is unknown to Google | Yes after live test | Yes |
-| `https://silkbeautysalon.online/en/pricelist` | Not inspected in GSC | Held because Phase 1 found missing canonical/hreflang | N/A | No |
+| `https://silkbeautysalon.online/en/pricelist` | Not inspected in GSC | Canonical/hreflang blocker resolved live after this pass | N/A | No |
 | `https://silkbeautysalon.online/en/book` | Yes | Page is indexed | N/A in indexed summary | No; already indexed |
 
 Locale roots:
@@ -184,7 +187,7 @@ Georgian priority URLs:
 
 | URL | URL is on Google | Page indexing | Request indexing submitted |
 | --- | --- | --- | --- |
-| `/ka/beauty-salon-batumi` | No | URL is unknown to Google | No; held for content review group |
+| `/ka/beauty-salon-batumi` | No | URL is unknown to Google | No; website-side content blocker later resolved live |
 | `/ka/botox-batumi` | No | Discovered - currently not indexed | No |
 | `/ka/dermal-fillers-batumi` | No | Discovered - currently not indexed | No |
 | `/ka/lip-fillers-batumi` | No | URL is unknown to Google | No |
@@ -192,13 +195,13 @@ Georgian priority URLs:
 | `/ka/acne-treatment-batumi` | No | URL is unknown to Google | No |
 | `/ka/nails-batumi` | No | URL is unknown to Google | No |
 | `/ka/lashes-brows-batumi` | No | URL is unknown to Google | No |
-| `/ka/pricelist` | No | Discovered - currently not indexed | No; held for pricelist metadata group |
+| `/ka/pricelist` | No | Discovered - currently not indexed | No; canonical/hreflang blocker later resolved live |
 
 Russian priority URLs:
 
 | URL | URL is on Google | Page indexing | Request indexing submitted |
 | --- | --- | --- | --- |
-| `/ru/beauty-salon-batumi` | No | Discovered - currently not indexed | No; held for content review group |
+| `/ru/beauty-salon-batumi` | No | Discovered - currently not indexed | No; website-side content blocker later resolved live |
 | `/ru/botox-batumi` | No | Discovered - currently not indexed | No |
 | `/ru/dermal-fillers-batumi` | No | Discovered - currently not indexed | No |
 | `/ru/lip-fillers-batumi` | No | URL is unknown to Google | No |
@@ -206,13 +209,13 @@ Russian priority URLs:
 | `/ru/acne-treatment-batumi` | No | URL is unknown to Google | No |
 | `/ru/nails-batumi` | No | URL is unknown to Google | No |
 | `/ru/lashes-brows-batumi` | No | URL is unknown to Google | No |
-| `/ru/pricelist` | No | Discovered - currently not indexed | No; held for pricelist metadata group |
+| `/ru/pricelist` | No | Discovered - currently not indexed | No; canonical/hreflang blocker later resolved live |
 
 Turkish priority URLs:
 
 | URL | URL is on Google | Page indexing | Request indexing submitted |
 | --- | --- | --- | --- |
-| `/tr/beauty-salon-batumi` | No | Discovered - currently not indexed | No; held for content review group |
+| `/tr/beauty-salon-batumi` | No | Discovered - currently not indexed | No; website-side content blocker later resolved live |
 | `/tr/botox-batumi` | No | Discovered - currently not indexed | No |
 | `/tr/dermal-fillers-batumi` | No | Discovered - currently not indexed | No |
 | `/tr/lip-fillers-batumi` | No | URL is unknown to Google | No |
@@ -220,7 +223,7 @@ Turkish priority URLs:
 | `/tr/acne-treatment-batumi` | No | URL is unknown to Google | No |
 | `/tr/nails-batumi` | No | URL is unknown to Google | No |
 | `/tr/lashes-brows-batumi` | No | URL is unknown to Google | No |
-| `/tr/pricelist` | No | URL is unknown to Google | No; held for pricelist metadata group |
+| `/tr/pricelist` | No | URL is unknown to Google | No; canonical/hreflang blocker later resolved live |
 
 Arabic priority URLs:
 
@@ -261,8 +264,8 @@ Indexing was requested only for canonical-ready/high-priority URLs that were not
 
 No indexing request was submitted for:
 
-- Any `/pricelist` URL, because live `/en/pricelist` still lacks canonical/hreflang metadata.
-- Any `/{locale}/beauty-salon-batumi` URL, because Phase 1 still flags visible `Popular local searches` content for review.
+- Any `/pricelist` URL during this older pass because canonical/hreflang metadata had not yet been verified live; that blocker is now resolved live.
+- Any `/{locale}/beauty-salon-batumi` URL during this older pass because the visible `Popular local searches` content had not yet been cleaned; that blocker is now resolved live.
 - Localized service pages beyond the locale roots, to avoid mass manual submission and because many are already in the sitemap/discovered state.
 
 ### Canonical / Mobile / Rich Result Notes
@@ -271,15 +274,15 @@ No indexing request was submitted for:
 - Non-indexed URLs do not show enhancement/rich-result data in URL Inspection.
 - Mobile usability was not shown in the inspected URL summaries.
 - Google-selected canonical details were not expanded in this pass; the visible summaries for non-indexed pages often show `N/A` because they have not been crawled yet.
-- Public Phase 1 checks still show self-canonical and hreflang for most priority pages except `/pricelist`.
+- Public Phase 1 checks showed self-canonical and hreflang for most priority pages. The later `/pricelist` canonical/hreflang blocker is now resolved live.
 
 ### Next Check Date
 
-Recommended next check: 2026-07-12, or earlier after:
+Recommended next checks:
 
-1. `/pricelist` canonical/hreflang is fixed and live.
-2. `Popular local searches` on `/{locale}/beauty-salon-batumi` is reviewed or approved.
-3. Google has had time to process the 9 indexing requests submitted in this pass.
+1. 2026-07-12 for the 9 indexing requests submitted in this pass.
+2. 2026-07-14 for the six Georgian/Turkish service-page requests submitted later.
+3. Treat `/pricelist` and `/{locale}/beauty-salon-batumi` as live-resolved website-side blockers; inspect selectively if they are chosen for the next indexing batch.
 
 ## Phase 2 Execution Update - 2026-07-04 14:02 Asia/Tbilisi
 
@@ -321,8 +324,8 @@ Public live checks covered:
 - 0 sitemap omissions.
 - 0 visible old placeholder phone occurrences.
 - 49 URLs ready for Search Console inspection and potential indexing request after access.
-- 6 `/pricelist` URLs blocked from indexing requests until canonical/hreflang is live.
-- 6 `/beauty-salon-batumi` URLs should be reviewed before indexing requests because they contain a visible `Popular local searches` block.
+- 0 current `/pricelist` URLs blocked by the previously missing canonical/hreflang issue; this was resolved live later.
+- 0 current `/beauty-salon-batumi` URLs blocked by the previously visible `Popular local searches` issue; this was resolved live later.
 
 ### URL Inspection And Indexing Request Plan
 
@@ -338,8 +341,8 @@ Important: the fields below are public-readiness findings, not real GSC URL Insp
 | Acne treatment pages: `/{locale}/acne-treatment-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
 | Nails pages: `/{locale}/nails-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
 | Lashes/brows pages: `/{locale}/lashes-brows-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
-| Beauty salon pages: `/{locale}/beauty-salon-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Inspect after access, but hold indexing requests until the visible `Popular local searches` block is reviewed or approved. |
-| Pricelist pages: `/{locale}/pricelist` | 200, no noindex | Missing | 0 alternates | Yes | Pending GSC access | Do not request indexing until canonical and hreflang are live. |
+| Beauty salon pages: `/{locale}/beauty-salon-batumi` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Website-side content blocker resolved live; inspect selectively if priority. |
+| Pricelist pages: `/{locale}/pricelist` | 200, no noindex | Self-canonical after later release | 7 alternates after later release | Yes | Pending GSC access | Canonical/hreflang blocker resolved live; inspect selectively if priority. |
 | English booking page: `/en/book` | 200, no noindex | Self-canonical | 7 alternates | Yes | Pending GSC access | Safe to inspect and request indexing after access. |
 
 ### Priority English URL Status
@@ -347,7 +350,7 @@ Important: the fields below are public-readiness findings, not real GSC URL Insp
 | URL | Public readiness | GSC URL Inspection | Indexing request |
 | --- | --- | --- | --- |
 | `https://silkbeautysalon.online/en` | Ready | Not inspected | Not submitted |
-| `https://silkbeautysalon.online/en/beauty-salon-batumi` | Hold for visible SEO-heavy block review | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/beauty-salon-batumi` | Ready after later visible SEO-heavy block cleanup | Not inspected | Not submitted |
 | `https://silkbeautysalon.online/en/botox-batumi` | Ready | Not inspected | Not submitted |
 | `https://silkbeautysalon.online/en/dermal-fillers-batumi` | Ready | Not inspected | Not submitted |
 | `https://silkbeautysalon.online/en/lip-fillers-batumi` | Ready | Not inspected | Not submitted |
@@ -355,18 +358,18 @@ Important: the fields below are public-readiness findings, not real GSC URL Insp
 | `https://silkbeautysalon.online/en/acne-treatment-batumi` | Ready | Not inspected | Not submitted |
 | `https://silkbeautysalon.online/en/nails-batumi` | Ready | Not inspected | Not submitted |
 | `https://silkbeautysalon.online/en/lashes-brows-batumi` | Ready | Not inspected | Not submitted |
-| `https://silkbeautysalon.online/en/pricelist` | Blocked: missing canonical/hreflang | Not inspected | Not submitted |
+| `https://silkbeautysalon.online/en/pricelist` | Ready after later canonical/hreflang release | Not inspected | Not submitted |
 | `https://silkbeautysalon.online/en/book` | Ready | Not inspected | Not submitted |
 
 ### Priority Localized URL Status
 
-| Locale | Ready for inspection/indexing after access | Hold for SEO-heavy block review | Blocked until canonical/hreflang fix |
+| Locale | Ready for inspection/indexing after access | Former SEO-heavy block review status | Former canonical/hreflang status |
 | --- | --- | --- | --- |
-| Georgian `/ka` | `/ka`, `/ka/botox-batumi`, `/ka/dermal-fillers-batumi`, `/ka/lip-fillers-batumi`, `/ka/skin-treatment-batumi`, `/ka/acne-treatment-batumi`, `/ka/nails-batumi`, `/ka/lashes-brows-batumi` | `/ka/beauty-salon-batumi` | `/ka/pricelist` |
-| Russian `/ru` | `/ru`, `/ru/botox-batumi`, `/ru/dermal-fillers-batumi`, `/ru/lip-fillers-batumi`, `/ru/skin-treatment-batumi`, `/ru/acne-treatment-batumi`, `/ru/nails-batumi`, `/ru/lashes-brows-batumi` | `/ru/beauty-salon-batumi` | `/ru/pricelist` |
-| Turkish `/tr` | `/tr`, `/tr/botox-batumi`, `/tr/dermal-fillers-batumi`, `/tr/lip-fillers-batumi`, `/tr/skin-treatment-batumi`, `/tr/acne-treatment-batumi`, `/tr/nails-batumi`, `/tr/lashes-brows-batumi` | `/tr/beauty-salon-batumi` | `/tr/pricelist` |
-| Arabic `/ar` | `/ar`, `/ar/botox-batumi`, `/ar/dermal-fillers-batumi`, `/ar/lip-fillers-batumi`, `/ar/skin-treatment-batumi`, `/ar/acne-treatment-batumi`, `/ar/nails-batumi`, `/ar/lashes-brows-batumi` | `/ar/beauty-salon-batumi` | `/ar/pricelist` |
-| Hebrew `/he` | `/he`, `/he/botox-batumi`, `/he/dermal-fillers-batumi`, `/he/lip-fillers-batumi`, `/he/skin-treatment-batumi`, `/he/acne-treatment-batumi`, `/he/nails-batumi`, `/he/lashes-brows-batumi` | `/he/beauty-salon-batumi` | `/he/pricelist` |
+| Georgian `/ka` | `/ka`, `/ka/botox-batumi`, `/ka/dermal-fillers-batumi`, `/ka/lip-fillers-batumi`, `/ka/skin-treatment-batumi`, `/ka/acne-treatment-batumi`, `/ka/nails-batumi`, `/ka/lashes-brows-batumi`, `/ka/beauty-salon-batumi`, `/ka/pricelist` | Resolved live | Resolved live |
+| Russian `/ru` | `/ru`, `/ru/botox-batumi`, `/ru/dermal-fillers-batumi`, `/ru/lip-fillers-batumi`, `/ru/skin-treatment-batumi`, `/ru/acne-treatment-batumi`, `/ru/nails-batumi`, `/ru/lashes-brows-batumi`, `/ru/beauty-salon-batumi`, `/ru/pricelist` | Resolved live | Resolved live |
+| Turkish `/tr` | `/tr`, `/tr/botox-batumi`, `/tr/dermal-fillers-batumi`, `/tr/lip-fillers-batumi`, `/tr/skin-treatment-batumi`, `/tr/acne-treatment-batumi`, `/tr/nails-batumi`, `/tr/lashes-brows-batumi`, `/tr/beauty-salon-batumi`, `/tr/pricelist` | Resolved live | Resolved live |
+| Arabic `/ar` | `/ar`, `/ar/botox-batumi`, `/ar/dermal-fillers-batumi`, `/ar/lip-fillers-batumi`, `/ar/skin-treatment-batumi`, `/ar/acne-treatment-batumi`, `/ar/nails-batumi`, `/ar/lashes-brows-batumi`, `/ar/beauty-salon-batumi`, `/ar/pricelist` | Resolved live | Resolved live |
+| Hebrew `/he` | `/he`, `/he/botox-batumi`, `/he/dermal-fillers-batumi`, `/he/lip-fillers-batumi`, `/he/skin-treatment-batumi`, `/he/acne-treatment-batumi`, `/he/nails-batumi`, `/he/lashes-brows-batumi`, `/he/beauty-salon-batumi`, `/he/pricelist` | Resolved live | Resolved live |
 
 ### GSC-Only Fields Still Pending
 

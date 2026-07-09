@@ -421,12 +421,18 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         title: 'Botox in Batumi, Georgia',
         h1: 'Botox in Batumi, Georgia',
         description:
-          'Book consultation-led Botox in Batumi at Silk Beauty Salon for anti-wrinkle, masseter, and sweating concerns with clear aftercare.',
+          'Book consultation-led Botox injections in Batumi at Silk Beauty Salon for anti-wrinkle, masseter, and sweating concerns with clear aftercare.',
         eyebrow: 'Batumi Botox clinic search',
         intro:
-          'If you are searching for Botox Batumi, Batumi Botox, or botox in Batumi, Silk Beauty Salon offers consultation-led injectable appointments in central Batumi with realistic planning and aftercare.',
+          'If you are searching for Botox Batumi, Botox injections Batumi, or anti-wrinkle injections Batumi, Silk Beauty Salon offers consultation-led injectable appointments in central Batumi with realistic planning and aftercare.',
         searchTitle: 'Supported local searches',
-        searchPhrases: ['Botox Batumi', 'Batumi Botox', 'botox in Batumi'],
+        searchPhrases: [
+          'Botox Batumi',
+          'Botox injections Batumi',
+          'anti-wrinkle injections Batumi',
+          'Botox price Batumi',
+          'where to get Botox in Batumi',
+        ],
         benefitsTitle: 'Why clients choose Silk for Botox in Batumi',
         benefits: [
           {
@@ -453,6 +459,16 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
               'Yes. International clients can book online, call, or email before arriving. The team will explain timing, aftercare, and whether treatment fits your travel plans.',
           },
           {
+            question: 'Where can I get Botox in Batumi?',
+            answer:
+              'Silk Beauty Salon offers consultation-led Botox and anti-wrinkle injection appointments at Zurab Gorgiladze 63 in Batumi, with suitability reviewed before treatment.',
+          },
+          {
+            question: 'What is the Botox price in Batumi?',
+            answer:
+              'Starting prices are shown on the Botox treatment cards and the pricelist. Final pricing depends on the treatment area and consultation.',
+          },
+          {
             question: 'Does Botox require downtime?',
             answer:
               'Most clients return to normal daily plans quickly, but your practitioner will give aftercare guidance and timing advice during the appointment.',
@@ -476,9 +492,9 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'Silk Beauty Salon გთავაზობთ კონსულტაციაზე დაფუძნებულ ბოტოქსის პროცედურებს ბათუმში, მკაფიო დაგეგმვით და შემდგომი მოვლის რეკომენდაციებით.',
         eyebrow: 'ბოტოქსის კონსულტაცია',
         intro:
-          'თუ ეძებთ ბოტოქსი ბათუმში, ბოტოქსის პროცედურა ბათუმში ან Botox Batumi, Silk Beauty Salon ცენტრალურ ბათუმში გთავაზობთ კონსულტაციაზე დაფუძნებულ ინექციურ პროცედურებს.',
+          'თუ ეძებთ ბოტოქსი ბათუმში ან ბოტოქსის ინექციები ბათუმში, Silk Beauty Salon ცენტრალურ ბათუმში გთავაზობთ კონსულტაციაზე დაფუძნებულ ინექციურ პროცედურებს.',
         searchTitle: 'საძიებო ფრაზები',
-        searchPhrases: ['ბოტოქსი ბათუმში', 'ბოტოქსის პროცედურა ბათუმში', 'Botox Batumi'],
+        searchPhrases: ['ბოტოქსი ბათუმში', 'ბოტოქსის ინექციები ბათუმში', 'Botox Batumi'],
         benefitsTitle: 'რატომ ირჩევენ Silk-ს ბოტოქსისთვის ბათუმში',
         benefits: [
           {
@@ -505,6 +521,11 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
               'დიახ. საერთაშორისო კლიენტებს შეუძლიათ ონლაინ დაჯავშნა, დარეკვა ან ელფოსტით დაკავშირება ჩამოსვლამდე.',
           },
           {
+            question: 'რა ღირს ბოტოქსი ბათუმში?',
+            answer:
+              'საწყისი ფასები მითითებულია ბოტოქსის პროცედურების ბარათებზე და ფასების გვერდზე. საბოლოო ფასი კონსულტაციის შემდეგ დასტურდება.',
+          },
+          {
             question: 'სჭირდება ბოტოქსს აღდგენის პერიოდი?',
             answer:
               'ბევრი კლიენტი მალე უბრუნდება ყოველდღიურ გეგმებს, თუმცა სპეციალისტი მოგცემთ ინდივიდუალურ რეკომენდაციებს.',
@@ -528,9 +549,9 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'Запишитесь на консультацию по ботоксу в Батуми в Silk Beauty Salon: против морщин, для массетера и других задач с понятным уходом после процедуры.',
         eyebrow: 'Ботокс Батуми',
         intro:
-          'Если вы ищете ботокс Батуми, ботокс в Батуми или Batumi Botox, Silk Beauty Salon предлагает консультационный подход к инъекционным процедурам в центре Батуми.',
+          'Если вы ищете ботокс Батуми или инъекции ботокса Батуми, Silk Beauty Salon предлагает консультационный подход к инъекционным процедурам в центре Батуми.',
         searchTitle: 'Поисковые запросы',
-        searchPhrases: ['ботокс Батуми', 'ботокс в Батуми', 'Batumi Botox'],
+        searchPhrases: ['ботокс Батуми', 'инъекции ботокса Батуми', 'ботокс цена Батуми'],
         benefitsTitle: 'Почему выбирают Silk для ботокса в Батуми',
         benefits: [
           {
@@ -557,6 +578,11 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
               'Да. Международные клиенты могут записаться онлайн, по телефону или email до приезда в Батуми.',
           },
           {
+            question: 'Сколько стоит ботокс в Батуми?',
+            answer:
+              'Стартовые цены указаны в карточках процедур и в прайс-листе. Итоговая стоимость зависит от зоны и подтверждается после консультации.',
+          },
+          {
             question: 'Нужен ли восстановительный период после ботокса?',
             answer:
               'Чаще всего клиенты быстро возвращаются к обычному графику, но рекомендации по уходу и ограничениям даются индивидуально.',
@@ -580,9 +606,9 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'Batum’da botoks danışmanlığı için Silk Beauty Salon: kırışıklık, masseter ve terleme odaklı seçenekler net bakım önerileriyle planlanır.',
         eyebrow: 'Botoks danışmanlığı',
         intro:
-          'Batum’da botoks randevusu, yüz hareketleri, hedefleriniz ve uygunluk değerlendirmesiyle planlanır.',
+          'Batum’da botoks veya Batum botoks arayan danışanlar için randevu; yüz hareketleri, hedefleriniz ve uygunluk değerlendirmesiyle planlanır.',
         searchTitle: 'Bu sayfanın yanıtladığı aramalar',
-        searchPhrases: ['Batum’da botoks', 'Batum botoks tedavisi', 'Botox Batumi'],
+        searchPhrases: ['Batum’da botoks', 'Batum botoks', 'Batum botoks fiyatları'],
         benefitsTitle: 'Botoks danışmanlığı için neden Silk',
         benefits: [
           {
@@ -609,6 +635,11 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
               'Evet. Uluslararası misafirler gelmeden önce online rezervasyon yapabilir, arayabilir veya email gönderebilir.',
           },
           {
+            question: 'Batum botoks fiyatları nasıl belirlenir?',
+            answer:
+              'Başlangıç fiyatları tedavi kartlarında ve fiyat listesinde yer alır. Son fiyat, uygulama alanı ve danışmanlık sonrası netleşir.',
+          },
+          {
             question: 'Botoks sonrası dinlenme gerekir mi?',
             answer:
               'Birçok kişi günlük planlarına hızlıca döner; kişisel bakım ve zamanlama önerileri randevuda paylaşılır.',
@@ -632,9 +663,9 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'احجزي استشارة بوتوكس في باتومي لدى Silk Beauty Salon لعلاج التجاعيد، عضلة الفك، والتعرق مع إرشادات واضحة للعناية بعد الجلسة.',
         eyebrow: 'بوتوكس باتومي',
         intro:
-          'إذا كنت تبحثين عن بوتوكس باتومي أو حقن بوتوكس في باتومي، يقدم Silk Beauty Salon مواعيد حقن قائمة على الاستشارة في وسط باتومي.',
+          'إذا كنت تبحثين عن بوتوكس باتومي أو حقن بوتوكس باتومي، يقدم Silk Beauty Salon مواعيد حقن قائمة على الاستشارة في وسط باتومي.',
         searchTitle: 'عبارات البحث التي تغطيها الصفحة',
-        searchPhrases: ['بوتوكس باتومي', 'حقن بوتوكس في باتومي', 'Botox Batumi'],
+        searchPhrases: ['بوتوكس باتومي', 'حقن بوتوكس باتومي', 'أسعار البوتوكس باتومي'],
         benefitsTitle: 'لماذا يختار العملاء Silk للبوتوكس في باتومي',
         benefits: [
           {
@@ -661,6 +692,11 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
               'نعم. يمكن للعملاء الدوليين الحجز عبر الإنترنت أو الهاتف أو البريد الإلكتروني قبل الوصول.',
           },
           {
+            question: 'كيف يتم تحديد أسعار البوتوكس في باتومي؟',
+            answer:
+              'تظهر الأسعار المبدئية في بطاقات العلاجات وقائمة الأسعار. يتم تأكيد السعر النهائي حسب منطقة العلاج وبعد الاستشارة.',
+          },
+          {
             question: 'هل يحتاج البوتوكس إلى فترة توقف؟',
             answer:
               'غالبا يمكن العودة إلى الخطط اليومية بسرعة، لكن المختص يعطي تعليمات العناية والتوقيت حسب الحالة.',
@@ -684,9 +720,9 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'קבעו ייעוץ בוטוקס בבטומי ב-Silk Beauty Salon לטיפול בקמטים, מסטר והזעה, עם תכנון ברור והנחיות לאחר הטיפול.',
         eyebrow: 'בוטוקס בטומי',
         intro:
-          'אם אתם מחפשים בוטוקס בבטומי, טיפול בוטוקס בבטומי או Botox Batumi, Silk Beauty Salon מציע ייעוץ וטיפולי הזרקה במרכז בטומי.',
+          'אם אתם מחפשים בוטוקס בטומי, הזרקות בוטוקס בטומי או Botox Batumi, Silk Beauty Salon מציע ייעוץ וטיפולי הזרקה במרכז בטומי.',
         searchTitle: 'ביטויי חיפוש שהעמוד מכסה',
-        searchPhrases: ['בוטוקס בבטומי', 'טיפול בוטוקס בבטומי', 'Botox Batumi'],
+        searchPhrases: ['בוטוקס בטומי', 'הזרקות בוטוקס בטומי', 'מחירי בוטוקס בטומי'],
         benefitsTitle: 'למה לבחור ב-Silk לבוטוקס בבטומי',
         benefits: [
           {
@@ -711,6 +747,11 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
             question: 'האם תיירים יכולים לקבוע בוטוקס בבטומי?',
             answer:
               'כן. לקוחות מחו"ל יכולים להזמין אונליין, להתקשר או לשלוח אימייל לפני ההגעה.',
+          },
+          {
+            question: 'איך נקבעים מחירי בוטוקס בטומי?',
+            answer:
+              'מחירי התחלה מוצגים בכרטיסי הטיפולים וברשימת המחירים. המחיר הסופי תלוי באזור הטיפול ומאושר לאחר ייעוץ.',
           },
           {
             question: 'האם יש זמן החלמה אחרי בוטוקס?',

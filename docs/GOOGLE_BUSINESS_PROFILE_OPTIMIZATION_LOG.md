@@ -1,17 +1,132 @@
 # Google Business Profile Optimization Log
 
-Date: 2026-07-04; latest execution update 2026-07-05
+Date: 2026-07-04; latest execution update 2026-07-09
 Phase: 3 - Google Business Profile audit and safe optimization plan
 Branch: `codex/visibility-readiness-audit`
-Mode: read-only planning and documentation
+Mode: owner-approved service-only publication plus documentation
 
 ## Safety Rules Applied
 
-- No Google Business Profile edits were published.
-- No public business data was changed.
+- No Google Business Profile fields outside the owner-approved service scope were edited.
+- No business name, address, primary phone, WhatsApp, website URL, booking URL, category, photo, Q&A, post, review, or ad field was changed.
+- No GBP prices or durations were published.
 - No fake reviews, fake photos, keyword-stuffed business names, unsupported medical claims, or guaranteed-result claims were created.
 - No credentials, account data, verification tokens, private dashboard data, or screenshots were stored.
-- Public data changes remain blocked until owner approval and verified GBP access are available.
+- Future public data changes outside services remain blocked until owner approval is available.
+
+## GBP Photo And Review Launch Pack - 2026-07-09
+
+This pass prepared a trust-building launch pack only. No photos were uploaded, no review requests were sent, no review replies were posted, no Q&A/posts were published, and no Google Business Profile fields were edited.
+
+### Review Link And Baseline
+
+| Item | Current status |
+| --- | --- |
+| Official Google review link | Confirmed from the verified GBP "Get more reviews" panel: `https://g.page/r/CYnMYroCGjtUEBM/review` |
+| Google review count | `0` Google reviews visible / "Get your first reviews" shown |
+| Google average rating | No Google average rating visible yet |
+| Separate review signals | Google also showed "Reviews from the web"; those are not the Google review baseline. |
+| Review requests launched | No |
+| QR code generated/saved | No |
+
+### First-Photo Upload Checklist
+
+All photos must be real owner-approved salon assets. Do not upload stock photos, AI-generated photos, private client photos, client faces, or before/after photos without written consent.
+
+1. Exterior building / street-facing entrance.
+2. Entrance door/signage that helps clients recognize the location.
+3. Reception or waiting area.
+4. Treatment room with clean setup.
+5. Sanitized tools or prepared treatment setup without private client data.
+6. Staff portraits only with staff approval.
+7. Real product/device photos only if available and owner-approved.
+8. Nails work using real work and consent where needed.
+9. Lashes/brows work using real work and consent where needed.
+10. Before/after photos only with written client consent and separate claim/privacy review.
+
+### First 10-Photo Upload Plan
+
+Recommended first upload batch after owner approval:
+
+| Order | Photo type | Purpose | Approval requirement |
+| --- | --- | --- | --- |
+| 1 | Exterior entrance | Helps Google Maps users find the salon. | Owner confirms location and image quality. |
+| 2 | Door/signage detail | Reinforces real-world identity. | Owner confirms no private data visible. |
+| 3 | Reception/waiting area | Builds comfort and trust. | Owner-approved real photo only. |
+| 4 | Treatment room wide shot | Shows cleanliness and setting. | No client/private data visible. |
+| 5 | Sanitized tools/setup | Supports hygiene trust. | No medical/private data visible. |
+| 6 | Staff portrait | Humanizes the profile. | Written staff approval. |
+| 7 | Product/device detail | Shows real tools/products. | Owner verifies product/device accuracy. |
+| 8 | Nails work | Supports nail-service relevance. | Real work; consent if client-identifiable. |
+| 9 | Lashes/brows work | Supports lash/brow-service relevance. | Real work; consent if client-identifiable. |
+| 10 | Second treatment/reception angle | Adds depth without sensitive content. | Owner-approved real photo only. |
+
+Photo assets were not provided in this session, so photo availability and upload approval remain `No` until the owner supplies and approves real assets.
+
+### Review Launch Workflow
+
+Use the multilingual templates in `docs/REVIEW_GENERATION_AND_REPLY_SYSTEM.md` with the confirmed review link only after owner approval. The workflow remains:
+
+1. Ask only real clients after completed appointments.
+2. Use SMS, WhatsApp, email, or QR card only when the client has consented to that communication channel.
+3. Ask for an honest review, not a positive review.
+4. Do not offer discounts, gifts, free services, rewards, upgrades, or booking priority.
+5. Do not review-gate or ask only happy clients.
+6. Do not pressure clients or ask them to write while staff are watching.
+7. Let clients mention services only if they are comfortable.
+8. Keep replies privacy-safe, especially for injectables, fillers, skin/acne, and other sensitive services.
+
+### Owner Approvals Still Needed For Launch
+
+1. Approve the first 10 real photos before upload.
+2. Provide written consent for any staff portraits, client-identifiable photos, or before/after images.
+3. Approve which staff roles may send review requests.
+4. Approve the exact communication channels and timing.
+5. Approve the final review link / QR-card use in printed or digital materials.
+6. Approve the review reply owner/manager and negative-review escalation path.
+7. Confirm no incentives, discounts, gifts, or review gating will be used.
+
+## Owner-Approved GBP Service Publication - 2026-07-09
+
+Owner approval was provided to publish services only. The verified Google Business Profile services editor was opened from Google Search, the current service list was captured before editing, and only approved service rows were added or updated. Google displayed: "Your edit is pending review. It may take up to one day to be published."
+
+### Current Service List Before Editing
+
+The GBP services editor showed these active services before edits:
+
+`Acne treatments`, `Acrylic nails`, `Balayage`, `Box braids`, `Bridal services`, `Brow lamination`, `Eyelash extensions`, `Hair extensions`, `Hairstyling`, `Laser hair removal`, `Lash lift`, `Manicures`, `Pedicures`, `botox`, `fillers`, `Dermal fillers`, `Botox treatments`, `Anti-wrinkle injections`, `Lip fillers`, `Cheek fillers`, `Jawline fillers`, `Skin treatment`, `Microneedling`, `Facial treatments`, `Botox`, `Dermal Fillers`, `Skin Boosters`, `Chemical Peel`, `HydraFacial`, `Keratin Treatment`.
+
+### Service Edits Made
+
+| Approved service | GBP result | Description status | Price/duration status | Review status |
+| --- | --- | --- | --- | --- |
+| Botox / anti-wrinkle injections | Existing `Anti-wrinkle injections` row was updated to `Botox / anti-wrinkle injections`. | Approved consultation-led description saved. | No price or duration added. | Google pending review / will be published shortly. |
+| Lip fillers | Existing exact `Lip fillers` row updated. | Approved consultation-led description saved. | No price or duration added. | Google pending review / will be published shortly. |
+| Skin treatments | Existing `Skin treatment` row was updated to `Skin treatments`. | Approved consultation-led description saved. | No price or duration added. | Google pending review / will be published shortly. |
+| Skin consultation | New custom `Skin consultation` row added. | Approved consultation-led description saved. | No price or duration added. | Google pending review / will be published shortly. |
+| Acne treatment consultation | Google exposed `Acne treatments` as a fixed predefined service label, so the name was not rewritten to avoid creating a near-duplicate custom service. | Approved acne consultation-led description saved under `Acne treatments`. | No price or duration added. | Google pending review / will be published shortly. |
+| Dermal fillers | Exact `Dermal fillers` already existed before editing. A separate pre-existing duplicate `Dermal Fillers` also exists. | Description update was not saved because Google displayed "You already have this service" for the duplicate pair. No deletion was performed without separate approval. | No price or duration added. | Needs owner approval for duplicate-service cleanup before description can be safely saved. |
+
+### Current Service List After Editing
+
+The editor showed these relevant updated rows after saving:
+
+- `Acne treatments` with the approved acne consultation-led description.
+- `Botox / anti-wrinkle injections` with the approved Botox / anti-wrinkle description.
+- `Lip fillers` with the approved lip-filler description.
+- `Skin treatments` with the approved skin-treatment description.
+- `Skin consultation` with the approved skin-consultation description.
+- `Dermal fillers` still present, plus the pre-existing duplicate `Dermal Fillers`; duplicate cleanup was intentionally not performed in this pass.
+
+### Fields Not Changed
+
+The edit pass did not change business name, address, postal code, main phone, WhatsApp number, website URL, booking URL, primary category, secondary categories, photos, Q&A, posts, reviews, products, business description, or ads.
+
+### Public Profile Check
+
+Public service visibility could not be confirmed as live during this pass because Google marked the service edit as pending review. Recheck the public profile after Google processes the edit.
+
+Next recheck date: 2026-07-10.
 
 ## Postal-Code Source Alignment - 2026-07-05
 
@@ -366,13 +481,13 @@ Operational workflow:
 
 1. After appointment completion, send one polite review request by SMS, WhatsApp, or email if the client has consented to that communication channel.
 2. Use the same neutral request regardless of whether feedback was positive, neutral, or negative.
-3. Include the official GBP review link only after the profile is confirmed.
+3. Include the confirmed official GBP review link only after owner approval to launch review requests.
 4. Keep a private operations log of request date/channel, not review content.
 5. Escalate negative/private feedback to the owner privately, but do not review-gate.
 
 ### Multilingual Review Request Templates
 
-Replace `[review link]` only after the verified GBP review URL is available.
+Replace `[review link]` with `https://g.page/r/CYnMYroCGjtUEBM/review` only after owner approval to launch review requests.
 
 English:
 

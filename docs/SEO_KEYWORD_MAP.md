@@ -79,6 +79,7 @@ Do not use it for:
 | Botox Batumi | Botox / anti-wrinkle | `/en/botox-batumi` | High | Primary injectable query. |
 | Botox injections Batumi | Botox / anti-wrinkle | `/en/botox-batumi` | High | Same landing page. |
 | anti wrinkle injections Batumi | Botox / anti-wrinkle | `/en/botox-batumi` | High | Same landing page. |
+| where to get Botox in Batumi | Botox / anti-wrinkle | `/en/botox-batumi` | High | AI-style / natural-language query; answer with location, consultation and booking. |
 | masseter Botox Batumi | Masseter Botox | `/en/treatments/masseter-botox` | Medium | Specific treatment intent. |
 | Botox price Batumi | Botox price | `/en/pricelist` | High | Also monitor `/en/botox-batumi`. |
 | dermal fillers Batumi | Dermal fillers | `/en/dermal-fillers-batumi` | High | Category page. |
@@ -162,6 +163,7 @@ Do not use it for:
 | --- | --- | --- | --- | --- |
 | Batum güzellik salonu | Beauty salon / broad local | `/tr/beauty-salon-batumi` | High | Primary Turkish local query. |
 | Batum estetik salonu | Aesthetic salon / clinic | `/tr/beauty-salon-batumi` | High | Broad aesthetic query. |
+| Batum’da botoks | Botox / anti-wrinkle | `/tr/botox-batumi` | High | Natural Turkish in-Batumi query form. |
 | Batum botoks | Botox / anti-wrinkle | `/tr/botox-batumi` | High | Botox page. |
 | Batum botoks fiyatları | Botox price | `/tr/pricelist` | High | Also monitor `/tr/botox-batumi`. |
 | Batum dolgu | Dermal fillers | `/tr/dermal-fillers-batumi` | High | Filler category. |

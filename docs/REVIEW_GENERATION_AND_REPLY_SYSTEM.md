@@ -1,7 +1,7 @@
 # Review Generation And Reply System
 
 Date: 2026-07-04
-Last updated: 2026-07-05
+Last updated: 2026-07-09
 Phase: 7 - Review generation and reply system
 Branch: `codex/visibility-readiness-audit`
 Mode: ethical review operations plan only; no client messages sent; no public review actions taken
@@ -16,9 +16,51 @@ Mode: ethical review operations plan only; no client messages sent; no public re
 - Do not ask clients to reveal private treatment details.
 - Do not reveal private treatment information in public replies.
 - Do not use staff, family, contractors, or agencies to manipulate review count or rating.
-- Use the official Google review link or QR code only after the correct Google Business Profile is confirmed.
+- Use the official Google review link or QR code only after the owner approves launch of the correct Google Business Profile workflow.
 
 Google's own Business Profile help says reviews should reflect a genuine experience, and that incentives such as free or discounted goods/services in exchange for posting, changing, or removing reviews are prohibited. Google also says businesses may ask customers to use a review link or QR code, and should value a mix of honest feedback. See the references section.
+
+## Photo And Review Launch Pack - 2026-07-09
+
+This update confirms the official Google review link and prepares the launch pack, but still does not launch review requests.
+
+No client messages were sent. No Google review replies were posted. No QR code was saved. No photos were uploaded. No Google Business Profile settings were changed.
+
+Current launch status:
+
+| Item | Status |
+| --- | --- |
+| Official Google Business Profile confirmed | Yes, via the owner-managed Google "Get more reviews" panel. |
+| Official Google review link confirmed | Yes: `https://g.page/r/CYnMYroCGjtUEBM/review` |
+| Google review count | `0` Google reviews visible / "Get your first reviews" shown |
+| Google average rating | No Google average rating visible yet |
+| English templates prepared | Yes |
+| Georgian templates prepared | Yes; native review still recommended before mass use. |
+| Russian templates prepared | Yes; native review still recommended before mass use. |
+| Turkish templates prepared | Yes; native review still recommended before mass use. |
+| Arabic templates prepared | Yes; native review still recommended before mass use. |
+| Hebrew templates prepared | Yes; native review still recommended before mass use. |
+| Positive / neutral / negative reply templates prepared | Yes |
+| Tourist, nails/lashes, Botox/fillers, and skin/acne reply templates prepared | Yes |
+| Owner approval received for live review requests | No |
+| System launched | No |
+
+### First 10-Photo Review-Support Plan
+
+Photos are not review requests, but they support trust when new clients evaluate reviews. Upload only real owner-approved photos:
+
+1. Exterior entrance.
+2. Door/signage detail.
+3. Reception or waiting area.
+4. Treatment room with clean setup.
+5. Sanitized tools/setup without private client data.
+6. Staff portrait with written staff approval.
+7. Real product/device detail if owner-approved.
+8. Real nails work with consent where needed.
+9. Real lashes/brows work with consent where needed.
+10. Second reception/treatment angle or another owner-approved real interior photo.
+
+Do not upload stock images, AI-generated images, client faces, or before/after images without written consent and separate privacy/claim review.
 
 ## Phase 7 Execution Update - 2026-07-05 09:57 Asia/Tbilisi
 
@@ -31,7 +73,7 @@ Current launch status:
 | Item | Status |
 | --- | --- |
 | Official Google Business Profile confirmed | No |
-| Official Google review link / QR code confirmed | No |
+| Official Google review link / QR code confirmed | No as of 2026-07-05; superseded by the 2026-07-09 confirmed link above. |
 | English templates prepared | Yes |
 | Georgian templates prepared | Yes; native review recommended before live use |
 | Russian templates prepared | Yes; native review recommended before live use |
@@ -95,7 +137,7 @@ Use instead:
 Use these placeholders in the templates:
 
 - `[first name]` - optional; use only if the client consented to direct communication.
-- `[Google review link]` - insert only after the verified Silk Beauty Salon GBP review link is available.
+- `[Google review link]` - use `https://g.page/r/CYnMYroCGjtUEBM/review` only after owner approval to launch requests.
 - `[service]` - optional and client-safe; use broad wording such as `your appointment` if the service is private.
 - `[team member]` - optional; avoid naming staff if it creates privacy or medical/aesthetic sensitivity.
 - `[private contact link]` - use website contact page, email, or WhatsApp for private support.
@@ -113,13 +155,13 @@ Current launch status:
 | Item | Status |
 | --- | --- |
 | Official Google Business Profile confirmed | No |
-| Official Google review link confirmed | No |
+| Official Google review link confirmed | No as of 2026-07-04; superseded by the 2026-07-09 confirmed link above. |
 | Templates prepared | Yes |
 | Staff SOP prepared | Yes |
 | Owner approval received for live use | No |
 | System launched | No |
 
-Do not use these templates publicly until the owner confirms the correct GBP review link and approves the staff process.
+Do not use these templates publicly until the owner approves the staff process and live use of the confirmed Google review link.
 
 ## WhatsApp Short Message Templates
 
@@ -513,6 +555,34 @@ Hebrew:
 
 > תודה ששיתפת את החוויה שלך. שמחנו שהייעוץ, התכנון והנחיות הטיפול היו ברורים ומועילים.
 
+### Skin / Acne Review
+
+Use only if the reviewer already mentioned skin care, acne-prone skin, acne marks, or skin treatments publicly. Keep the reply general and avoid implying a diagnosis or guaranteed result.
+
+English:
+
+> Thank you for sharing your experience. We are glad the skin consultation and care guidance felt clear and helpful.
+
+Georgian:
+
+> მადლობა თქვენი გამოცდილების გაზიარებისთვის. გვიხარია, რომ კანის კონსულტაცია და მოვლის რეკომენდაციები ნათელი და სასარგებლო იყო.
+
+Russian:
+
+> Спасибо, что поделились опытом. Мы рады, что консультация по коже и рекомендации по уходу были понятными и полезными.
+
+Turkish:
+
+> Deneyiminizi paylaştığınız için teşekkür ederiz. Cilt danışmanlığı ve bakım önerilerinin açık ve faydalı olmasına sevindik.
+
+Arabic:
+
+> شكراً لمشاركة تجربتك. يسعدنا أن استشارة البشرة وإرشادات العناية كانت واضحة ومفيدة.
+
+Hebrew:
+
+> תודה ששיתפת את החוויה שלך. שמחנו שהייעוץ לעור והנחיות הטיפול היו ברורים ומועילים.
+
 ### Nails / Lashes Review
 
 Use only if the reviewer already mentioned nails, lashes, or brows publicly.
@@ -630,7 +700,7 @@ Hebrew:
 Before any staff member sends review requests:
 
 1. Confirm the correct Google Business Profile.
-2. Confirm the official Google review link.
+2. Confirm the official Google review link or reconfirm it if Google changes the share URL.
 3. Confirm which client communication channels are allowed.
 4. Confirm who is allowed to send requests.
 5. Confirm the approved languages/templates.
@@ -670,7 +740,7 @@ Before any staff member sends review requests:
 
 Before launching this system:
 
-1. Confirm the official Google Business Profile and review link.
+1. Approve live use of the confirmed official Google review link: `https://g.page/r/CYnMYroCGjtUEBM/review`.
 2. Approve the final SMS/WhatsApp/email/QR templates.
 3. Approve which staff roles may send review requests.
 4. Approve channels and timing.

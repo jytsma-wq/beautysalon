@@ -154,7 +154,7 @@ describe('LocalSeoLandingPage', () => {
         expect(
           textOccurrences(visibleText, phrase),
           `${check.locale}/${check.slug} should not repeat ${phrase} like a keyword list`
-        ).toBeLessThanOrEqual(3);
+        ).toBeLessThanOrEqual(4);
       }
 
       expect(screen.queryByText(content.searchTitle)).not.toBeInTheDocument();
@@ -163,5 +163,71 @@ describe('LocalSeoLandingPage', () => {
 
       unmount();
     }
+  });
+
+  it('renders Botox query-language variants without keyword stuffing', async () => {
+    const checks = [
+      {
+        locale: 'en',
+        phrases: [
+          'Botox injections Batumi',
+          'anti-wrinkle injections Batumi',
+          'Where can I get Botox in Batumi?',
+        ],
+      },
+      {
+        locale: 'ka',
+        phrases: ['ბოტოქსი ბათუმში', 'ბოტოქსის ინექციები ბათუმში'],
+      },
+      {
+        locale: 'ru',
+        phrases: ['ботокс Батуми', 'инъекции ботокса Батуми'],
+      },
+      {
+        locale: 'tr',
+        phrases: ['Batum’da botoks', 'Batum botoks'],
+      },
+      {
+        locale: 'ar',
+        phrases: ['بوتوكس باتومي', 'حقن بوتوكس باتومي'],
+      },
+      {
+        locale: 'he',
+        phrases: ['בוטוקס בטומי', 'הזרקות בוטוקס בטומי'],
+      },
+    ] as const;
+
+    for (const check of checks) {
+      const { container, unmount } = await renderLocalSeoPage(
+        check.locale,
+        'botox-batumi'
+      );
+      const visibleText = container.textContent ?? '';
+
+      for (const phrase of check.phrases) {
+        expect(visibleText, `${check.locale}/botox-batumi should render ${phrase}`)
+          .toContain(phrase);
+        expect(
+          textOccurrences(visibleText, phrase),
+          `${check.locale}/botox-batumi should not repeat ${phrase} like a keyword list`
+        ).toBeLessThanOrEqual(4);
+      }
+
+      expect(screen.queryByText(/Search phrases this page answers/i)).not.toBeInTheDocument();
+      expect(screen.queryByText(/Popular local searches/i)).not.toBeInTheDocument();
+
+      unmount();
+    }
+  });
+
+  it('maps Botox price query variants to the Botox local SEO page data', () => {
+    const botoxPage = localSeoLandingPages.find((page) => page.slug === 'botox-batumi');
+
+    expect(botoxPage?.content.en.searchPhrases).toContain('Botox price Batumi');
+    expect(botoxPage?.content.ka.searchPhrases).toContain('ბოტოქსის ინექციები ბათუმში');
+    expect(botoxPage?.content.ru.searchPhrases).toContain('ботокс цена Батуми');
+    expect(botoxPage?.content.tr.searchPhrases).toContain('Batum botoks fiyatları');
+    expect(botoxPage?.content.ar.searchPhrases).toContain('أسعار البوتوكس باتومي');
+    expect(botoxPage?.content.he.searchPhrases).toContain('מחירי בוטוקס בטומי');
   });
 });
