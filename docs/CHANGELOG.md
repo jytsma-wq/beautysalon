@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-07-09
+
+- Prepared a narrow Georgian/Turkish rendered service-copy release for the six priority Botox, lip-filler, and skin-treatment pages so owner-reported query forms appear naturally without visible keyword-list blocks or excessive repetition.
+
 ## 2026-07-05
 
 - Aligned the owner-confirmed postal code `6010` across first-party website source, locale message files, BeautySalon JSON-LD source data, the booking confirmation email footer, local SEO address copy, and NAP/SEO documentation; previous `6000` references are documented as outdated/public-Google-display lag where relevant.

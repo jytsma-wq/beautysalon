@@ -82,19 +82,84 @@ describe('LocalSeoLandingPage', () => {
     cleanup();
   });
 
+  async function renderLocalSeoPage(locale: string, localSeoSlug: string) {
+    const page = await LocalSeoLandingPage({
+      params: Promise.resolve({ locale, localSeoSlug }),
+    });
+
+    return render(page);
+  }
+
+  function textOccurrences(text: string, phrase: string) {
+    return text.split(phrase).length - 1;
+  }
+
   it('does not render search phrase keyword blocks as visible page content', async () => {
     for (const localSeoPage of localSeoLandingPages) {
-      const page = await LocalSeoLandingPage({
-        params: Promise.resolve({ locale: 'en', localSeoSlug: localSeoPage.slug }),
-      });
-
-      const { unmount } = render(page);
+      const { unmount } = await renderLocalSeoPage('en', localSeoPage.slug);
       const content = localSeoPage.content.en;
 
       expect(screen.queryByText(content.searchTitle)).not.toBeInTheDocument();
       expect(
         screen.getByRole('heading', { name: content.benefitsTitle })
       ).toBeInTheDocument();
+
+      unmount();
+    }
+  });
+
+  it('renders Georgian and Turkish priority query forms without keyword-list blocks', async () => {
+    const checks = [
+      {
+        locale: 'ka',
+        slug: 'lip-fillers-batumi',
+        phrases: ['ტუჩის ფილერი ბათუმში'],
+      },
+      {
+        locale: 'ka',
+        slug: 'botox-batumi',
+        phrases: ['ბოტოქსი ბათუმში'],
+      },
+      {
+        locale: 'ka',
+        slug: 'skin-treatment-batumi',
+        phrases: ['კანის მკურნალობა ბათუმში', 'კანის მოვლა ბათუმში'],
+      },
+      {
+        locale: 'tr',
+        slug: 'lip-fillers-batumi',
+        phrases: ['Batum’da dudak dolgusu'],
+      },
+      {
+        locale: 'tr',
+        slug: 'botox-batumi',
+        phrases: ['Batum’da botoks'],
+      },
+      {
+        locale: 'tr',
+        slug: 'skin-treatment-batumi',
+        phrases: ['Batum’da cilt tedavisi', 'Batum’da cilt bakımı'],
+      },
+    ] as const;
+
+    for (const check of checks) {
+      const { container, unmount } = await renderLocalSeoPage(check.locale, check.slug);
+      const visibleText = container.textContent ?? '';
+      const content = localSeoLandingPages.find((page) => page.slug === check.slug)!
+        .content[check.locale];
+
+      for (const phrase of check.phrases) {
+        expect(visibleText, `${check.locale}/${check.slug} should render ${phrase}`)
+          .toContain(phrase);
+        expect(
+          textOccurrences(visibleText, phrase),
+          `${check.locale}/${check.slug} should not repeat ${phrase} like a keyword list`
+        ).toBeLessThanOrEqual(3);
+      }
+
+      expect(screen.queryByText(content.searchTitle)).not.toBeInTheDocument();
+      expect(screen.queryByText(/Search phrases this page answers/i)).not.toBeInTheDocument();
+      expect(screen.queryByText(/Popular local searches/i)).not.toBeInTheDocument();
 
       unmount();
     }

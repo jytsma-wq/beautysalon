@@ -5,6 +5,21 @@ Time: 10:15 Asia/Tbilisi
 Property: `sc-domain:silkbeautysalon.online`
 Mode: Google Search Console read-only diagnosis plus public live technical checks
 
+## Georgian/Turkish Priority Query Copy Update - 2026-07-09
+
+The six matching Georgian/Turkish service URLs were already inspected in Search Console and submitted for indexing before this release. This release only updates rendered website copy so the owner-reported query forms appear naturally without visible keyword-list blocks:
+
+- `ტუჩის ფილერი ბათუმში`
+- `ბოტოქსი ბათუმში`
+- `კანის მკურნალობა ბათუმში`
+- `კანის მოვლა ბათუმში`
+- `Batum’da dudak dolgusu`
+- `Batum’da botoks`
+- `Batum’da cilt tedavisi`
+- `Batum’da cilt bakımı`
+
+No additional indexing requests should be made in this release task. Next check date for the six priority URLs remains 2026-07-14.
+
 ## Release-Branch Status Update - 2026-07-05
 
 This diagnosis is now paired with a website-side release branch that prepares fixes for the two known indexing blockers:

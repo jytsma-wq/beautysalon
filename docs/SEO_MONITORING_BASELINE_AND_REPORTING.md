@@ -286,6 +286,23 @@ Copy this table each month.
 | Reviews rating |  |  |  |  |  |
 | AI answer mentions |  |  |  |  |  |
 
+## Georgian/Turkish Query Copy Release - 2026-07-09
+
+The six Georgian/Turkish priority service URLs were already inspected in Search Console and submitted for indexing. This release is limited to rendered page-copy alignment for the owner-reported query forms:
+
+- Georgian: `ტუჩის ფილერი ბათუმში`, `ბოტოქსი ბათუმში`, `კანის მკურნალობა ბათუმში`, `კანის მოვლა ბათუმში`
+- Turkish: `Batum’da dudak dolgusu`, `Batum’da botoks`, `Batum’da cilt tedavisi`, `Batum’da cilt bakımı`
+
+Release scope:
+
+- Keep the phrases in concise, natural page copy.
+- Avoid visible keyword-list blocks.
+- Avoid excessive exact-match repetition.
+- Keep injectable/aesthetic wording consultation-led and non-promissory.
+- Do not request new indexing in this release task.
+
+Native Georgian/Turkish review is still recommended before reusing the same wording in Google Business Profile services, ads, printed material, or other off-site public profiles. Next GSC follow-up date for these six URLs remains 2026-07-14.
+
 ## Priority Query Tracking Template
 
 Use a controlled location/device context where possible. Do not overinterpret one-off rankings.

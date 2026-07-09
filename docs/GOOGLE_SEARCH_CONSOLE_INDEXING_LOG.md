@@ -25,6 +25,15 @@ The next safe SEO release branch updates the website-side blockers before furthe
 - `/{locale}/beauty-salon-batumi` visible content blocker: this release branch replaces the visible `Popular local searches` block with localized customer-facing service navigation.
 - No new indexing requests should be made until these changes are owner-approved, released, and verified live.
 
+### Georgian/Turkish Service Copy Release Note - 2026-07-09
+
+The six Georgian/Turkish service URLs were already submitted through URL Inspection before this release. This task does not request additional indexing. The release only aligns rendered page copy so the owner-reported query forms appear naturally without visible keyword-list blocks:
+
+- Georgian: `ტუჩის ფილერი ბათუმში`, `ბოტოქსი ბათუმში`, `კანის მკურნალობა ბათუმში`, `კანის მოვლა ბათუმში`
+- Turkish: `Batum’da dudak dolgusu`, `Batum’da botoks`, `Batum’da cilt tedavisi`, `Batum’da cilt bakımı`
+
+Next follow-up for these six URLs remains 2026-07-14.
+
 ## Index Coverage Diagnosis Update - 2026-07-05 10:15 Asia/Tbilisi
 
 A follow-up Page indexing diagnosis was performed in the authenticated Search Console browser session. No DNS, website code, deployment, Google Business Profile, Bing, analytics, public listing, or verification changes were made. No additional indexing requests were submitted.

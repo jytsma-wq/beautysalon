@@ -133,7 +133,7 @@ function makeGeorgianLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandi
     intro: `თუ ეძებთ ${copy.searchPhrases[0]}, Silk Beauty Salon ბათუმის ცენტრში გთავაზობთ კონსულტაციაზე დაფუძნებულ ${copy.topic}-ს, შესაბამისობის შემოწმებით, საწყისი ფასის კონტექსტით და მოვლის რეკომენდაციებით.`,
     searchTitle: 'საძიებო ფრაზები',
     searchPhrases: copy.searchPhrases,
-    benefitsTitle: `რატომ ირჩევენ Silk-ს: ${copy.h1}`,
+    benefitsTitle: 'რატომ ირჩევენ Silk-ს',
     benefits: [
       {
         title: 'კონსულტაცია დაჯავშნამდე',
@@ -148,10 +148,10 @@ function makeGeorgianLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandi
         text: 'დაჯავშნა შესაძლებელია ზურაბ გორგილაძის 63-ში, ონლაინ, ტელეფონით, WhatsApp-ით ან ელფოსტით.',
       },
     ],
-    treatmentTitle: `${copy.h1} - ვარიანტები`,
+    treatmentTitle: 'სერვისის ვარიანტები',
     treatmentIntro:
       'შეადარეთ დაკავშირებული პროცედურები, საწყისი ფასები და ხანგრძლივობა კონსულტაციის დაჯავშნამდე.',
-    faqTitle: `კითხვები: ${copy.h1}`,
+    faqTitle: 'ხშირი კითხვები',
     faqs: [
       {
         question: `${copy.topic} ჩემთვის შესაფერისია?`,
@@ -247,7 +247,7 @@ function makeTurkishLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandin
     intro: `${copy.searchPhrases[0]} seçeneklerini araştırıyorsanız, Silk Beauty Salon Batum merkezinde danışmanlık odaklı ${copy.topic} sunar; uygunluk kontrolü, başlangıç fiyatı bilgisi ve bakım önerileri net şekilde paylaşılır.`,
     searchTitle: 'Desteklenen arama ifadeleri',
     searchPhrases: copy.searchPhrases,
-    benefitsTitle: `Neden Silk: ${copy.h1}`,
+    benefitsTitle: 'Neden Silk',
     benefits: [
       {
         title: 'Rezervasyondan önce danışmanlık',
@@ -262,10 +262,10 @@ function makeTurkishLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandin
         text: 'Randevular Zurab Gorgiladze 63 adresinde; online, telefon, WhatsApp ve e-posta ile desteklenir.',
       },
     ],
-    treatmentTitle: `${copy.h1} seçenekleri`,
+    treatmentTitle: 'Hizmet seçenekleri',
     treatmentIntro:
       'Danışmanlık almadan önce ilgili hizmet kartlarından başlangıç fiyatlarını, süreleri ve detayları karşılaştırın.',
-    faqTitle: `${copy.h1} hakkında sorular`,
+    faqTitle: 'Sık sorulan sorular',
     faqs: [
       {
         question: `${copy.topic} benim için uygun mu?`,
@@ -474,7 +474,7 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         h1: 'ბოტოქსი ბათუმში',
         description:
           'Silk Beauty Salon გთავაზობთ კონსულტაციაზე დაფუძნებულ ბოტოქსის პროცედურებს ბათუმში, მკაფიო დაგეგმვით და შემდგომი მოვლის რეკომენდაციებით.',
-        eyebrow: 'ბოტოქსი ბათუმში',
+        eyebrow: 'ბოტოქსის კონსულტაცია',
         intro:
           'თუ ეძებთ ბოტოქსი ბათუმში, ბოტოქსის პროცედურა ბათუმში ან Botox Batumi, Silk Beauty Salon ცენტრალურ ბათუმში გთავაზობთ კონსულტაციაზე დაფუძნებულ ინექციურ პროცედურებს.',
         searchTitle: 'საძიებო ფრაზები',
@@ -517,7 +517,7 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         ],
         categoryCta: 'ყველა ბოტოქსის პროცედურა',
         bookCta: 'ბოტოქსის კონსულტაციის დაჯავშნა',
-        bookingTitle: 'დაჯავშნეთ ბოტოქსი ბათუმში',
+        bookingTitle: 'დაჯავშნეთ ბოტოქსის კონსულტაცია',
         bookingText:
           'აირჩიეთ კონსულტაცია, თუ გჭირდებათ დახმარება ანტი-ნაოჭების, მასეტერის, ჭარბი ოფლიანობის ან სხვა ვარიანტის არჩევაში.',
       },
@@ -574,16 +574,16 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'Консультация поможет выбрать между anti-wrinkle, masseter, лечением потливости и другими вариантами.',
       },
       tr: {
-        title: "Batumi'de Botoks",
-        h1: "Batumi'de Botoks",
+        title: 'Batum’da botoks',
+        h1: 'Batum’da botoks',
         description:
-          "Silk Beauty Salon'da Batumi botoks danışmanlığı: kırışıklık, masseter ve terleme odaklı seçenekler, net bakım önerileriyle planlanır.",
-        eyebrow: 'Batumi botoks',
+          'Batum’da botoks danışmanlığı için Silk Beauty Salon: kırışıklık, masseter ve terleme odaklı seçenekler net bakım önerileriyle planlanır.',
+        eyebrow: 'Botoks danışmanlığı',
         intro:
-          "Batumi botoks, Batumi botoks tedavisi veya Botox Batumi arıyorsanız, Silk Beauty Salon merkezi Batumi'de danışmanlık odaklı enjeksiyon randevuları sunar.",
+          'Batum’da botoks randevusu, yüz hareketleri, hedefleriniz ve uygunluk değerlendirmesiyle planlanır.',
         searchTitle: 'Bu sayfanın yanıtladığı aramalar',
-        searchPhrases: ['Batumi botoks', 'Batumi botoks tedavisi', 'Botox Batumi'],
-        benefitsTitle: "Batumi'de botoks için neden Silk",
+        searchPhrases: ['Batum’da botoks', 'Batum botoks tedavisi', 'Botox Batumi'],
+        benefitsTitle: 'Botoks danışmanlığı için neden Silk',
         benefits: [
           {
             title: 'Tedaviden önce danışmanlık',
@@ -594,17 +594,17 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
             text: 'Amaç çizgileri yumuşatırken yüz dengesini ve doğal ifadeyi korumaktır.',
           },
           {
-            title: 'Merkezi Batumi konumu',
-            text: 'Silk Beauty Salon, Zurab Gorgiladze 63 adresinde, Batumi merkezine yakın konumdadır.',
+            title: 'Merkezi Batum konumu',
+            text: 'Silk Beauty Salon, Zurab Gorgiladze 63 adresinde, Batum merkezine yakın konumdadır.',
           },
         ],
         treatmentTitle: 'Botoks ve nöromodülatör seçenekleri',
         treatmentIntro:
           'İlgili tedavileri inceleyin, ardından sizin için uygun planı netleştirmek üzere danışmanlık randevusu alın.',
-        faqTitle: 'Batumi botoks soruları',
+        faqTitle: 'Botoks danışmanlığı soruları',
         faqs: [
           {
-            question: "Turist olarak Batumi'de botoks randevusu alabilir miyim?",
+            question: 'Turist olarak botoks randevusu alabilir miyim?',
             answer:
               'Evet. Uluslararası misafirler gelmeden önce online rezervasyon yapabilir, arayabilir veya email gönderebilir.',
           },
@@ -621,7 +621,7 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         ],
         categoryCta: 'Tüm botoks tedavileri',
         bookCta: 'Botoks danışmanlığı al',
-        bookingTitle: "Batumi'de botoks randevusu",
+        bookingTitle: 'Botoks danışmanlığı randevusu',
         bookingText:
           'Anti-wrinkle, masseter, terleme veya diğer nöromodülatör seçenekleri arasında karar vermek için danışmanlık seçin.',
       },
@@ -1223,16 +1223,16 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'Консультация подходит для плана пилингов, микронидлинга, коллагеновой поддержки или анализа кожи.',
       },
       tr: {
-        title: "Batumi'de cilt tedavisi",
-        h1: "Batumi'de cilt tedavisi",
+        title: 'Batum’da cilt tedavisi',
+        h1: 'Batum’da cilt tedavisi',
         description:
-          "Silk Beauty Salon'da Batumi cilt bakımı, peeling, microneedling ve cilt analizi.",
-        eyebrow: 'Batumi cilt bakımı',
+          'Batum’da cilt tedavisi ve cilt bakımı için Silk Beauty Salon’da peeling, microneedling ve cilt analizi.',
+        eyebrow: 'Cilt danışmanlığı',
         intro:
-          "Batumi cilt bakımı, Batumi cilt tedavisi veya Batumi cilt analizi arıyorsanız, Silk Beauty Salon tedavileri cilt durumu, hedefler ve zamanlamaya göre planlar.",
+          'Batum’da cilt tedavisi ve Batum’da cilt bakımı seçenekleri, cilt analizi ve danışmanlıkla belirlenir.',
         searchTitle: 'Bu sayfanın yanıtladığı aramalar',
-        searchPhrases: ['Batumi cilt bakımı', 'Batumi cilt tedavisi', 'Batumi cilt analizi'],
-        benefitsTitle: "Batumi'de cilt tedavisi için neden Silk",
+        searchPhrases: ['Batum’da cilt tedavisi', 'Batum’da cilt bakımı', 'Batum cilt analizi'],
+        benefitsTitle: 'Cilt tedavisi için neden Silk',
         benefits: [
           {
             title: 'Önce cilt değerlendirmesi',
@@ -1244,16 +1244,16 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
           },
           {
             title: 'Bakım önerileri dahil',
-            text: 'Güneş, ev bakımı, Batumi havası, seyahat ve etkinlik zamanlaması için öneriler alırsınız.',
+            text: 'Güneş, ev bakımı, Batum havası, seyahat ve etkinlik zamanlaması için öneriler alırsınız.',
           },
         ],
         treatmentTitle: 'Cilt tedavisi seçenekleri',
         treatmentIntro:
           'Randevu almadan önce cilt analizi, peeling, microneedling ve kolajen odaklı tedavileri inceleyin.',
-        faqTitle: 'Batumi cilt tedavisi soruları',
+        faqTitle: 'Cilt tedavisi soruları',
         faqs: [
           {
-            question: "Batumi'de hangi cilt tedavisini seçmeliyim?",
+            question: 'Batum’da hangi cilt tedavisini seçmeliyim?',
             answer:
               'Emin değilseniz önce danışmanlık veya cilt analizi alın. Ekip uygun seçeneği önerebilir.',
           },
@@ -1270,7 +1270,7 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         ],
         categoryCta: 'Tüm cilt tedavileri',
         bookCta: 'Cilt danışmanlığı al',
-        bookingTitle: "Batumi'de cilt tedavisi randevusu",
+        bookingTitle: 'Cilt danışmanlığı randevusu',
         bookingText:
           'Peeling, microneedling, kolajen desteği veya cilt analizi için danışmanlık seçin.',
       },
@@ -1411,10 +1411,10 @@ const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'ტუჩის ფილერის კონსულტაცია ბათუმში Silk Beauty Salon-ში ბუნებრივი დაგეგმვით, საწყისი ფასით და შემდგომი მოვლის რეკომენდაციებით.',
         eyebrow: 'ტუჩის ფილერის კონსულტაცია',
         topic: 'ტუჩის ფილერის პროცედურა',
-        searchPhrases: ['ტუჩის ფილერი ბათუმი', 'ტუჩების გადიდება ბათუმი', 'ტუჩის ფილერი საქართველოში'],
+        searchPhrases: ['ტუჩის ფილერი ბათუმში', 'ტუჩების გადიდება ბათუმში', 'ტუჩის ფილერი საქართველოში'],
         categoryCta: 'ფილერების ვარიანტები',
         bookCta: 'ტუჩის ფილერის კონსულტაცია',
-        bookingTitle: 'დაჯავშნეთ ტუჩის ფილერი ბათუმში',
+        bookingTitle: 'დაჯავშნეთ ტუჩის ფილერის კონსულტაცია',
         bookingText:
           'კონსულტაციაზე განიხილება ტუჩის ფორმა, სიმეტრია, მოცულობის მიზანი, დრო და საწყისი ფასი.',
       },
@@ -1433,16 +1433,16 @@ const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
           'На консультации можно обсудить форму губ, симметрию, объем, сроки и стартовую цену до подтверждения процедуры.',
       },
       tr: {
-        title: 'Batum dudak dolgusu',
-        h1: 'Batum dudak dolgusu',
+        title: 'Batum’da dudak dolgusu',
+        h1: 'Batum’da dudak dolgusu',
         description:
-          'Silk Beauty Salon’da Batum dudak dolgusu danışmanlığı: doğal planlama, başlangıç fiyatı ve bakım önerileri.',
+          'Silk Beauty Salon’da Batum’da dudak dolgusu danışmanlığı: doğal planlama, başlangıç fiyatı ve bakım önerileri.',
         eyebrow: 'Dudak dolgusu danışmanlığı',
         topic: 'dudak dolgusu randevuları',
-        searchPhrases: ['Batum dudak dolgusu', 'dudak büyütme Batum', 'Gürcistan dudak dolgusu'],
+        searchPhrases: ['Batum’da dudak dolgusu', 'dudak büyütme Batum', 'Gürcistan dudak dolgusu'],
         categoryCta: 'Dolgu seçeneklerini gör',
         bookCta: 'Dudak dolgusu danışmanlığı al',
-        bookingTitle: 'Batum’da dudak dolgusu randevusu',
+        bookingTitle: 'Dudak dolgusu danışmanlığı randevusu',
         bookingText:
           'Danışmanlıkta dudak şekli, simetri, hacim hedefi, zamanlama ve başlangıç fiyatı konuşulur.',
       },

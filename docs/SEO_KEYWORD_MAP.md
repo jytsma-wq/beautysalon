@@ -240,6 +240,7 @@ Do not use it for:
 - English is operationally usable.
 - Georgian, Russian, Turkish, Arabic, and Hebrew should receive native review before being used in paid ads, GBP services, printed materials, or high-visibility profile copy.
 - Query wording can differ from polished page copy. Do not force exact search phrases into visible content if they sound unnatural.
+- The six priority Georgian/Turkish service pages intentionally include the owner-reported query forms in concise H1/intro-style copy, with rendered-route tests preventing visible keyword-list blocks or excessive exact-match repetition.
 - Arabic and Hebrew should be checked in RTL contexts during any future visible-content implementation.
 
 ## Monitoring Use
