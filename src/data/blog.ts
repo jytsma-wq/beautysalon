@@ -174,7 +174,7 @@ const fallbackBlogPosts: BlogPost[] = [
       <p>International clients visiting Batumi should leave enough time for review before traveling onward. The <a href="/en/international-clients">international clients guide</a> explains how to plan aesthetic appointments around a stay in Georgia.</p>
 
       <h2>How Silk approaches injectables</h2>
-      <p>At Silk Beauty Salon, injectable consultations focus on natural-looking results, facial balance, and conservative planning. The team explains treatment options in Georgian, English, and Russian so clients understand the plan before proceeding. You can learn more on the <a href="/en/treatments">treatments page</a> or <a href="/en/book">book a consultation</a>.</p>
+      <p>At Silk Beauty Salon, injectable consultations focus on natural-looking results, facial balance, and conservative planning. The team explains treatment options in Georgian, English, and Russian so clients understand the plan before proceeding. You can learn more on the <a href="/en/botox-batumi">Botox in Batumi page</a>, compare the wider <a href="/en/treatments">treatments page</a>, or <a href="/en/book">book a consultation</a>.</p>
 
       <h2>Sources and further reading</h2>
       <ul>

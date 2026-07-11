@@ -28,6 +28,22 @@ These website-side blockers are resolved live and should no longer be treated as
 
 Do not bulk-submit the discovered URL backlog. Any further URL Inspection requests should still be selective, canonical, and tied to the scheduled GSC follow-up checks.
 
+### Botox Page Recrawl Request - 2026-07-09
+
+After the owner asked to push visibility for the exact query `botox batumi`, the canonical English Botox page was inspected in Google Search Console:
+
+- URL: `https://silkbeautysalon.online/en/botox-batumi`
+- Property: `sc-domain:silkbeautysalon.online`
+- GSC status: URL is on Google.
+- Page indexing status: Page is indexed.
+- HTTPS enhancement: Page is served over HTTPS.
+- Breadcrumb enhancement: 1 valid item detected.
+- Request indexing: submitted once after the 2026-07-09 Botox query-copy release.
+- GSC result: `Indexing requested. URL was added to a priority crawl queue.`
+- Quota/temporary-unavailable warning: none shown.
+
+Do not repeatedly resubmit this URL. Follow up after Google has had time to recrawl and refresh snippets.
+
 ### Georgian/Turkish Service Copy Release Note - 2026-07-09
 
 The six Georgian/Turkish service URLs were already submitted through URL Inspection before this release. This task does not request additional indexing. The release only aligns rendered page copy so the owner-reported query forms appear naturally without visible keyword-list blocks:

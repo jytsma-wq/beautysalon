@@ -5,6 +5,7 @@ import { locales } from '@/i18n';
 import { baseTreatmentCategories } from '../treatments';
 import {
   getPopularTreatmentHighlights,
+  portfolioHighlights,
   popularTreatmentHighlights,
 } from '../homepage';
 
@@ -35,8 +36,16 @@ describe('homepage popular treatment highlights', () => {
       expect(source, `${card.priceTreatmentSlug} should exist in central treatment data`).toBeDefined();
       expect(card.price).toBe(source?.price);
       expect(card.price).toMatch(/^(From|Consultation)/);
-      expect(card.href.startsWith('/treatments')).toBe(true);
+      expect(card.href.startsWith('/treatments') || card.href === '/botox-batumi').toBe(true);
     }
+  });
+
+  it('routes homepage Botox highlights to the local Botox Batumi page', () => {
+    const botoxCard = popularTreatmentHighlights.find((card) => card.id === 'antiWrinkle');
+    const botoxPortfolioCard = portfolioHighlights.find((card) => card.title === 'Anti-wrinkle injectables');
+
+    expect(botoxCard?.href).toBe('/botox-batumi');
+    expect(botoxPortfolioCard?.href).toBe('/botox-batumi');
   });
 
   it('has localized homepage copy for every supported language', () => {

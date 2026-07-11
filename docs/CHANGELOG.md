@@ -2,6 +2,8 @@
 
 ## 2026-07-09
 
+- Requested a fresh Google Search Console recrawl for the indexed canonical English Botox page after the Botox query-intent release; Google accepted the URL into a priority crawl queue, with no quota or temporary-unavailable warning shown.
+- Strengthened the local Botox page hierarchy by routing homepage Botox/anti-wrinkle highlights and the Botox/fillers safety guide directly to `/botox-batumi`, following safe local SEO service-hierarchy advice without changing visible design, prices, or public claims.
 - Aligned the Botox local SEO pages with high-intent English, Georgian, Russian, Turkish, Arabic, and Hebrew query forms without restoring visible keyword-list blocks; added regression coverage and a focused Botox top-5 action plan.
 - Prepared the Google Business Profile photo and review launch pack, confirmed the official Google review link and current Google review baseline, added first-photo upload planning, and kept review/photo launch blocked pending owner approval and real assets.
 - Published owner-approved Google Business Profile service-only updates for Botox / anti-wrinkle, lip fillers, skin treatments, skin consultation, and acne service descriptions without prices or durations; Google marked the edits pending review, and pre-existing `Dermal fillers` duplicate cleanup remains a separate approval item.

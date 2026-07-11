@@ -39,6 +39,19 @@ Current search-result caveat:
 
 - Public search snippets may still show stale postal-code or old-phone fragments for some Silk pages even when live HTML is corrected. This is a recrawl/snippet-refresh issue, not proof that the current source still contains those values.
 
+## Caleb Ulku / Core 30 Takeaways Applied
+
+The referenced YouTube video was not transcript-accessible in this environment, but the accessible title/channel/search context points to Caleb Ulku's local SEO advice around ranking faster by aligning the website with the Google Business Profile and building clear local service hierarchy. Related accessible Caleb Ulku materials emphasize:
+
+- Complete the Google Business Profile.
+- Add accurate services with descriptions.
+- Build website pages that match real GBP services and categories.
+- Link homepage/category pages to specific service pages.
+- Add real photos and maintain profile activity.
+- Avoid random blog posting when the query has local map-pack intent.
+
+Safe action executed from that framework: strengthen the internal path `homepage -> Botox local service page` without changing design, prices, public claims, business name, or Google Business Profile fields.
+
 ## On-Page Update
 
 The Botox local SEO page copy now includes natural query-language alignment:
@@ -50,6 +63,7 @@ The Botox local SEO page copy now includes natural query-language alignment:
 - Arabic intro includes `بوتوكس باتومي` and `حقن بوتوكس باتومي`.
 - Hebrew intro includes `בוטוקס בטומי` and `הזרקות בוטוקס בטומי`.
 - Price-intent variants are mapped in page data and answered through normal pricing FAQ language without awkward keyword stuffing.
+- Homepage Botox signals now link directly to `/botox-batumi` from the anti-wrinkle portfolio card and the popular treatment pricing card, so the homepage supports the local service page instead of sending those clicks only to generic treatment anchors.
 
 The visible keyword-list blocks remain removed. The page should continue to read as service guidance for clients, not as a list of search phrases.
 

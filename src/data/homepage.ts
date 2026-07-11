@@ -83,7 +83,7 @@ export const portfolioHighlights = [
     title: "Anti-wrinkle injectables",
     description:
       "Precise neuromodulator treatments for forehead lines, frown lines, crow's feet, masseter, and sweating.",
-    href: "/treatments#botox",
+    href: "/botox-batumi",
     image:
       "https://images.unsplash.com/photo-1552693673-1bf958298935?w=1200&q=85",
   },
@@ -101,7 +101,7 @@ export const popularTreatmentHighlights = [
   {
     id: 'antiWrinkle',
     priceTreatmentSlug: 'anti-wrinkle',
-    href: '/treatments/anti-wrinkle',
+    href: '/botox-batumi',
   },
   {
     id: 'dermalFillers',

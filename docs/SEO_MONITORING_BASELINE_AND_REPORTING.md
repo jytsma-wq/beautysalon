@@ -386,6 +386,18 @@ Needed to make the monitoring system complete:
 
 ## Next 7-Day Action Plan
 
+### Botox Batumi Visibility Sprint - 2026-07-09
+
+The canonical English Botox page was confirmed indexed in Google Search Console and one fresh indexing request was submitted after the Botox query-copy release. GSC accepted the request and added the URL to a priority crawl queue.
+
+Next monitoring focus:
+
+- Recheck `botox batumi` in the same location/language context after recrawl.
+- Watch whether Google refreshes stale snippets that previously showed outdated NAP details.
+- Confirm Google Business Profile service edits for Botox / anti-wrinkle injections move from pending review to live.
+- Add real owner-approved Botox/service photos to GBP before expecting stronger local-pack movement.
+- Start the ethical review workflow only with real clients and without asking for keyword-stuffed reviews.
+
 1. Recheck the 9 submitted GSC indexing requests on 2026-07-12 and record whether they moved from unknown/discovered/not indexed to indexed.
 2. Inspect the two `Indexed, though blocked by robots.txt` examples in Search Console and confirm whether the stale HTTP/non-www URLs have cleared after recrawl.
 3. Recheck the six Georgian/Turkish service-page GSC requests on 2026-07-14.
