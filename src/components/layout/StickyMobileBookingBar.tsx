@@ -26,7 +26,9 @@ export function getWhatsAppHref(phoneNumber: string = siteConfig.contact.whatsap
 }
 
 export function shouldHideStickyMobileBarForPath(pathname: string | null | undefined) {
-  return /^\/(?:en|ka|ru|tr|ar|he)?\/?(?:book|contact|contact-us)(?:\/|$)/.test(pathname || '');
+  return /^\/(?:en|ka|ru|tr|ar|he)?\/?(?:book|contact|contact-us|venue-rental-batumi|chair-rental-batumi)(?:\/|$)/.test(
+    pathname || ''
+  );
 }
 
 function getHeroTriggerPosition() {

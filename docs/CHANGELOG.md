@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-07-12
+
+- Renamed the customer-facing Venue Rental label and English page heading to Salon Space Rental, aligned all six localized menu labels and the Chair Rental cross-link, and preserved the existing `/venue-rental-batumi` URL for link and SEO continuity.
+- Moved Download App into the existing More navigation group and added a compact desktop More dropdown that mirrors the mobile secondary links without changing the core treatment navigation.
+- Added a localized chair-rental enquiry page across all six supported languages, with individual suitability and written-term checks rather than unconfirmed public prices, equipment, employment, capacity, or licensing promises.
+- Added Chair Rental to the More menu, footer information links, and localized sitemap; the treatment-focused sticky mobile booking bar remains excluded from rental pages.
+- Added a localized salon venue-rental page for professional meetings, diploma/training sessions, and seminars/workshops across all six supported languages, using consultation-led availability inquiries without publishing unconfirmed prices, capacity, equipment, or certification claims.
+- Added Salon Space Rental to the existing desktop utility navigation, mobile More menu, footer information links, and localized sitemap while preserving the established treatment menu and visual design.
+- Added focused regression coverage for locale content, route metadata/rendering, navigation/footer links, sitemap inclusion, and exclusion of the treatment-focused sticky mobile booking bar on the rental page.
+
 ## 2026-07-09
 
 - Requested a fresh Google Search Console recrawl for the indexed canonical English Botox page after the Botox query-intent release; Google accepted the URL into a priority crawl queue, with no quota or temporary-unavailable warning shown.

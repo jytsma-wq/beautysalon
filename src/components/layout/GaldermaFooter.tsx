@@ -194,6 +194,12 @@ export function GaldermaFooter() {
               <Link href="/about" className="block text-sm text-stone-600 transition-colors hover:text-stone-900">
                 {tNav('about')}
               </Link>
+              <Link href="/venue-rental-batumi" className="block text-sm text-stone-600 transition-colors hover:text-stone-900">
+                {tNav('venueRental', { defaultValue: 'Venue Rental' })}
+              </Link>
+              <Link href="/chair-rental-batumi" className="block text-sm text-stone-600 transition-colors hover:text-stone-900">
+                {tNav('chairRental', { defaultValue: 'Chair Rental' })}
+              </Link>
               <Link href="/faq" className="block text-sm text-stone-600 transition-colors hover:text-stone-900">
                 {tNav('faq')}
               </Link>

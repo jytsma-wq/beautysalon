@@ -1,5 +1,51 @@
 # Visual Regression Log
 
+## 2026-07-12 - Chair rental page and More navigation
+
+Scope:
+- New localized `/{locale}/chair-rental-batumi` page.
+- Download App and Chair Rental are grouped under More on desktop and mobile; the core Treatments, Skin Conditions, Price List, Offers, and International Clients navigation remains unchanged.
+- Chair Rental is also available from the footer information links and localized sitemap.
+
+Expected visual result:
+- The desktop More control opens a compact existing-style dropdown with secondary links, including Salon Space Rental, Chair Rental, and Download App.
+- The mobile full-screen menu lists Chair Rental and Download App in its existing More section rather than the primary service list.
+- The chair-rental page uses the established stone/white palette, typography, borders, button styling, shared contact data, and localized WhatsApp enquiry flow.
+- No unconfirmed price, equipment, capacity, employment, licensing, or professional-result claims are displayed.
+- The treatment-focused sticky mobile booking bar remains hidden on the chair-rental page.
+
+Browser verification:
+- Local production preview: `http://127.0.0.1:4312/en/chair-rental-batumi`.
+- Desktop `/en` at 1280x720: H1, canonical, seven hreflang entries, venue cross-link, and WhatsApp chair-rental enquiry rendered; no console errors, framework overlay, or horizontal overflow.
+- Desktop More: click opened the localized `More links` navigation with About, Salon Space Rental, Chair Rental, Download App, Contact, FAQ, and Blog links.
+- Mobile `/en` at 390x844: full-screen menu opened and its More section contained Chair Rental and Download App; no console errors or horizontal overflow.
+- Mobile `/ar`: document direction was `rtl`, localized chair-rental H1 and canonical rendered, and there were no console errors, framework overlay, or horizontal overflow.
+- Route smoke check: all six localized chair-rental routes, `/en/download`, and `/en/venue-rental-batumi` returned HTTP 200.
+- Sitemap check: all six canonical localized chair-rental URLs were present.
+- Remaining content risk: Georgian, Russian, Turkish, Arabic, and Hebrew chair-rental copy requires native-language review before any production release.
+
+## 2026-07-12 - Salon space rental menu and page
+
+Scope:
+- New localized `/{locale}/venue-rental-batumi` page plus existing-style desktop utility navigation, mobile More-menu, footer, and sitemap links.
+- The established treatment menu, header styling, footer styling, booking flow, analytics, email behavior, contact data, and existing page layouts were not intentionally changed.
+
+Expected visual result:
+- Salon Space Rental appears as a secondary navigation option without restructuring the primary treatment menu.
+- The page uses the existing stone/white palette, serif headings, compact uppercase labels, thin borders, 6px-or-smaller corner treatment, and existing button styles.
+- Content covers professional meetings, diploma/training sessions, and seminars/workshops without displaying unconfirmed price, capacity, equipment, or certification claims.
+- The rental inquiry uses the existing WhatsApp number with a localized prefilled message and offers the existing contact page as an alternative.
+- The treatment-focused sticky mobile booking bar stays hidden on this rental page.
+
+Browser verification:
+- Local production preview: `http://127.0.0.1:4312/en/venue-rental-batumi`.
+- Desktop `/en`: localized title/H1, canonical and seven hreflang links, loaded hero asset, correct WhatsApp inquiry, no framework overlay, no console warnings/errors, and no horizontal overflow.
+- Mobile `/en` at 390x844: layout remained contained, mobile menu opened and closed, Venue Rental appeared in the More menu, all six locale links were present, and the treatment sticky CTA remained absent.
+- Mobile `/ar` and `/he`: document direction was `rtl`, localized H1/content rendered, no framework overlay, no console warnings/errors, and no horizontal overflow.
+- Locale smoke check: `/en`, `/ka`, `/ru`, `/tr`, `/ar`, and `/he` venue-rental routes returned HTTP 200 from the production preview.
+- Sitemap check: all six canonical localized venue-rental URLs were present.
+- Remaining content risk: Georgian, Russian, Turkish, Arabic, and Hebrew rental copy requires native-language review before any production release.
+
 ## 2026-07-03 - Visit Us map section
 
 Scope:

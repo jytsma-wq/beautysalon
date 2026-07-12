@@ -20,6 +20,11 @@ type MegaMenuItem = {
   description: string;
 };
 
+type MoreMenuItem = {
+  title: string;
+  href: string;
+};
+
 function MegaMenuPanel({
   eyebrow,
   title,
@@ -84,6 +89,28 @@ function MegaMenuPanel({
   );
 }
 
+function MoreMenuPanel({ label, items }: { label: string; items: MoreMenuItem[] }) {
+  return (
+    <div className="absolute end-0 top-full z-50 w-72 pt-4">
+      <nav
+        id="silk-desktop-more-menu"
+        aria-label={label}
+        className="overflow-hidden rounded-[8px] border border-[#e8e4df] bg-white px-5 py-3 shadow-[0_20px_50px_rgba(36,31,27,0.12)]"
+      >
+        {items.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="flex min-h-11 items-center border-b border-[#eee8e2] text-sm text-stone-700 transition-colors last:border-b-0 hover:text-[#8d6f58]"
+          >
+            {item.title}
+          </Link>
+        ))}
+      </nav>
+    </div>
+  );
+}
+
 function BrandLogo({
   className,
   imageClassName,
@@ -144,10 +171,19 @@ export function GaldermaHeaderClient({
 }) {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [activeMegaMenu, setActiveMegaMenu] = useState<'treatments' | 'conditions' | null>(null);
+  const [activeMegaMenu, setActiveMegaMenu] = useState<'treatments' | 'conditions' | 'more' | null>(null);
   const locale = useLocale() as Locale;
   const t = useTranslations('nav');
 
+  const moreMenuItems: MoreMenuItem[] = [
+    { title: t('about', { defaultValue: 'About' }), href: '/about' },
+    { title: t('venueRental', { defaultValue: 'Venue Rental' }), href: '/venue-rental-batumi' },
+    { title: t('chairRental', { defaultValue: 'Chair Rental' }), href: '/chair-rental-batumi' },
+    { title: t('downloadApp', { defaultValue: 'Download App' }), href: '/download' },
+    { title: t('contact', { defaultValue: 'Contact Us' }), href: '/contact-us' },
+    { title: t('faq', { defaultValue: 'FAQ' }), href: '/faq' },
+    { title: t('blog', { defaultValue: 'Journal' }), href: '/blog' },
+  ];
   useEffect(() => {
     document.documentElement.lang = locale;
     document.documentElement.dir = rtlLocales.includes(locale) ? 'rtl' : 'ltr';
@@ -216,6 +252,12 @@ export function GaldermaHeaderClient({
                 className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
               >
                 {t('about', { defaultValue: 'About' })}
+              </Link>
+              <Link
+                href="/venue-rental-batumi"
+                className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
+              >
+                {t('venueRental', { defaultValue: 'Venue Rental' })}
               </Link>
               <Link
                 href="/contact-us"
@@ -305,12 +347,22 @@ export function GaldermaHeaderClient({
               <Link href="/offers" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
                 {t('offers', { defaultValue: 'Offers' })}
               </Link>
-              <Link href="/download" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
-                {t('downloadApp', { defaultValue: 'Download App' })}
-              </Link>
               <Link href="/international-clients" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
                 {t('international', { defaultValue: 'International Clients' })}
               </Link>
+              <div onMouseEnter={() => setActiveMegaMenu('more')}>
+                <button
+                  type="button"
+                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none xl:tracking-[0.2em]"
+                  aria-expanded={activeMegaMenu === 'more'}
+                  aria-controls="silk-desktop-more-menu"
+                  onFocus={() => setActiveMegaMenu('more')}
+                  onClick={() => setActiveMegaMenu('more')}
+                >
+                  {t('more', { defaultValue: 'More' })}
+                  <ChevronDown className="h-3 w-3" />
+                </button>
+              </div>
 
               {activeMegaMenu === 'treatments' ? (
                 <MegaMenuPanel
@@ -333,6 +385,13 @@ export function GaldermaHeaderClient({
                   description={t('conditionsDescription')}
                   image="https://images.unsplash.com/photo-1570172619644-dfd40ed531fb?w=1000&q=80"
                   items={skinConditionMegaMenuItems}
+                />
+              ) : null}
+
+              {activeMegaMenu === 'more' ? (
+                <MoreMenuPanel
+                  label={t('moreLinks', { defaultValue: 'More links' })}
+                  items={moreMenuItems}
                 />
               ) : null}
             </nav>
@@ -404,9 +463,6 @@ export function GaldermaHeaderClient({
                 <Link href="/offers" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
                   {t('offers', { defaultValue: 'Offers' })}
                 </Link>
-                <Link href="/download" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
-                  {t('downloadApp', { defaultValue: 'Download App' })}
-                </Link>
                 <Link href="/international-clients" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
                   {t('international', { defaultValue: 'International Clients' })}
                 </Link>
@@ -417,6 +473,15 @@ export function GaldermaHeaderClient({
                 <nav className="mb-8 space-y-4">
                   <Link href="/about" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
                     {t('about', { defaultValue: 'About' })}
+                  </Link>
+                  <Link href="/venue-rental-batumi" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
+                    {t('venueRental', { defaultValue: 'Venue Rental' })}
+                  </Link>
+                  <Link href="/chair-rental-batumi" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
+                    {t('chairRental', { defaultValue: 'Chair Rental' })}
+                  </Link>
+                  <Link href="/download" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
+                    {t('downloadApp', { defaultValue: 'Download App' })}
                   </Link>
                   <Link href="/contact-us" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
                     {t('contact', { defaultValue: 'Contact Us' })}

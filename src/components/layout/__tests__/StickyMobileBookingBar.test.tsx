@@ -293,6 +293,8 @@ describe('StickyMobileBookingBar', () => {
     expect(shouldHideStickyMobileBarForPath('/ar/book/details')).toBe(true);
     expect(shouldHideStickyMobileBarForPath('/en/contact')).toBe(true);
     expect(shouldHideStickyMobileBarForPath('/en/contact-us')).toBe(true);
+    expect(shouldHideStickyMobileBarForPath('/en/venue-rental-batumi')).toBe(true);
+    expect(shouldHideStickyMobileBarForPath('/en/chair-rental-batumi')).toBe(true);
     expect(shouldHideStickyMobileBarForPath('/en/treatments')).toBe(false);
   });
 });

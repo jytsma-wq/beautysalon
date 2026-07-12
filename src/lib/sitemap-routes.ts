@@ -27,6 +27,8 @@ export const staticSitemapRoutes: SitemapRoute[] = [
   { path: '/about', changeFrequency: 'monthly', priority: 0.85 },
   { path: '/contact-us', changeFrequency: 'monthly', priority: 0.85 },
   { path: '/book', changeFrequency: 'weekly', priority: 0.9 },
+  { path: '/venue-rental-batumi', changeFrequency: 'monthly', priority: 0.72 },
+  { path: '/chair-rental-batumi', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/consultation', changeFrequency: 'weekly', priority: 0.85 },
   { path: '/international-clients', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/pricelist', changeFrequency: 'weekly', priority: 0.75 },

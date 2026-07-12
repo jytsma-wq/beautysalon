@@ -8,6 +8,8 @@ describe('getSitemapRoutes', () => {
 
     expect(paths).toContain('');
     expect(paths).toContain('/book');
+    expect(paths).toContain('/venue-rental-batumi');
+    expect(paths).toContain('/chair-rental-batumi');
     expect(paths).toContain('/beauty-salon-batumi');
     expect(paths).toContain('/botox-batumi');
     expect(paths).toContain('/dermal-fillers-batumi');

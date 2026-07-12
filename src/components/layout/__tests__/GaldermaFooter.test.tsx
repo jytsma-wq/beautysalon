@@ -99,4 +99,22 @@ describe('GaldermaFooter', () => {
       expect(screen.getAllByText(/thank you for subscribing/i).length).toBeGreaterThan(0);
     });
   });
+
+  it('keeps venue rental discoverable in the information links', () => {
+    renderFooter();
+
+    expect(screen.getByRole('link', { name: 'Salon Space Rental' })).toHaveAttribute(
+      'href',
+      '/venue-rental-batumi'
+    );
+  });
+
+  it('keeps chair rental discoverable in the information links', () => {
+    renderFooter();
+
+    expect(screen.getByRole('link', { name: 'Chair Rental' })).toHaveAttribute(
+      'href',
+      '/chair-rental-batumi'
+    );
+  });
 });
