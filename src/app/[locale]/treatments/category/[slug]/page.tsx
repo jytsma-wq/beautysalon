@@ -71,6 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [title, `${title} Batumi`, `${title} Georgia`, ...localSeoKeywords],
     image: collection.image,
     imageAlt: tCollection('imageAlt', { title }),
+    noIndex: true,
   });
 }
 

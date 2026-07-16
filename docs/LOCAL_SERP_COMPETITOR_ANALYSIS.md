@@ -5,6 +5,10 @@ Phase: 7 - Competitor and SERP analysis
 Branch: `codex/visibility-readiness-audit`
 Mode: public search-result observations only; no scraping campaign; no code changes
 
+## 2026-07-16 Survey Addendum
+
+A newer query-by-query public visibility sample is available in `docs/SEO_VISIBILITY_SURVEY_2026-07-16.md`. It confirms strong branded and dermal-filler discovery, inconsistent Botox visibility, weak nails/lashes/acne visibility, continued strength from SoloMed and LAKmousse, and an unresolved `.online` versus `silkbeauty.ge` entity/domain question. Returned order is an approximate web-index sample, not a guaranteed Google or local-pack rank.
+
 ## Safety Rules Applied
 
 - No competitor content was copied.

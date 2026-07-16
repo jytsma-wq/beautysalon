@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale, getTranslations } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
 import { AnnouncerProvider } from "@/components/ui/announcer";
@@ -8,25 +8,25 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LocaleChrome } from '@/components/layout/LocaleChrome';
 import { siteConfig } from '@/data/site-config';
 import { rtlLocales, type Locale } from '@/i18n';
-import { getSiteUrl } from '@/lib/seo';
+import { getSiteUrl, localSeoKeywords } from '@/lib/seo';
 import { getNonce } from '@/lib/nonce';
+import { getClientMessages } from '@/lib/client-messages';
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  await params;
   
   return {
     metadataBase: new URL(getSiteUrl()),
     title: {
-      default: t('siteTitle'),
+      default: siteConfig.name,
       template: '%s | Silk Beauty Salon',
     },
-    description: t('siteDescription'),
-    keywords: t('siteKeywords'),
+    description: siteConfig.description,
+    keywords: localSeoKeywords,
     authors: [{ name: siteConfig.name }],
     creator: siteConfig.name,
     publisher: siteConfig.name,
@@ -37,9 +37,6 @@ export async function generateMetadata({
       ],
       shortcut: "/favicon.png",
       apple: "/apple-touch-icon.png",
-    },
-    other: {
-      'link:rel:preload;as:video;href:https://cdn.coverr.co/videos/coverr-a-woman-getting-a-facial-treatment-6960/1080p.mp4;type:video/mp4': '',
     },
   };
 }
@@ -65,6 +62,7 @@ export default async function LocaleLayout({
   setRequestLocale(validLocale);
 
   const messages = await getMessages();
+  const clientMessages = getClientMessages(messages);
   const nonce = await getNonce();
   const htmlLocaleScript = `document.documentElement.lang=${JSON.stringify(validLocale)};document.documentElement.dir=${JSON.stringify(direction)};`;
 
@@ -76,7 +74,7 @@ export default async function LocaleLayout({
         dangerouslySetInnerHTML={{ __html: htmlLocaleScript }}
       />
       <div lang={validLocale} dir={direction}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={clientMessages}>
           <ConsentProvider>
             <AnnouncerProvider>
               <LocaleChrome locale={validLocale as Locale}>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { Award, CalendarCheck, ChevronRight, Clock, Mail, MapPin, Phone, Shield, Sparkles } from 'lucide-react';
+import { CalendarCheck, ChevronRight, Clock, Mail, MapPin, Phone, Shield, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   JsonLd,
@@ -9,44 +9,11 @@ import {
   generateFAQSchema,
   generateLocalBusinessSchema,
 } from '@/components/seo/JsonLd';
+import { beautySalonBatumiCopy } from '@/data/beauty-salon-batumi-copy';
 import { siteConfig } from '@/data/site-config';
 import { locales, type Locale } from '@/i18n';
+import { getLocalizedBusinessHours } from '@/lib/business-hours';
 import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
-
-const pageTitle = 'Beauty Salon in Batumi, Georgia';
-const pageDescription =
-  'Visit Silk Beauty Salon at Zurab Gorgiladze 63 in Batumi for injectables, skin care, laser treatments, nails, lashes, and online booking.';
-
-const serviceHighlights = [
-  {
-    title: 'Skin care and skin treatments',
-    description:
-      'Hydrating, calming, brightening, and texture-focused skin care planned around your skin condition and Batumi climate.',
-    href: '/skin-treatment-batumi',
-    cta: 'Explore skin care in Batumi',
-  },
-  {
-    title: 'Botox and injectables',
-    description:
-      'Consultation-led anti-wrinkle treatments and facial balancing with clear expectations and aftercare.',
-    href: '/botox-batumi',
-    cta: 'Learn about Botox and injectables in Batumi',
-  },
-  {
-    title: 'Dermal fillers',
-    description:
-      'Natural-looking lip, cheek, chin, jawline, and tear trough planning with conservative aesthetic judgment.',
-    href: '/dermal-fillers-batumi',
-    cta: 'Learn about dermal fillers in Batumi',
-  },
-  {
-    title: 'Laser and advanced skin treatments',
-    description:
-      'Technology-led options for tone, texture, hair reduction, collagen stimulation, and skin rejuvenation.',
-    href: '/skin-treatment-batumi',
-    cta: 'Explore advanced skin treatments in Batumi',
-  },
-];
 
 const serviceNavigationByLocale: Record<
   Locale,
@@ -374,41 +341,19 @@ const serviceNavigationByLocale: Record<
   },
 };
 
-const localFaqs = [
-  {
-    question: 'Where is Silk Beauty Salon in Batumi?',
-    answer:
-      'Silk Beauty Salon is located at Zurab Gorgiladze 63, Batumi, Adjara 6010, Georgia.',
-  },
-  {
-    question: 'Can tourists book appointments at Silk Beauty Salon?',
-    answer:
-      'Yes. International clients can book online, call the salon, or email info@silkbeautysalon.online before arriving in Batumi.',
-  },
-  {
-    question: 'Which beauty services are available in Batumi?',
-    answer:
-      'Silk Beauty Salon offers skin care, injectables, dermal fillers, laser treatments, lashes, nails, consultations, and aftercare planning.',
-  },
-  {
-    question: 'How can I book a beauty appointment in Batumi?',
-    answer:
-      'Use the online booking page, call +995 577 34 57 67, or email info@silkbeautysalon.online to request an appointment.',
-  },
-];
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const localeKey = locales.includes(locale as Locale) ? (locale as Locale) : 'en';
+  const copy = beautySalonBatumiCopy[localeKey];
 
   return buildSeoMetadata({
-    locale,
+    locale: localeKey,
     path: '/beauty-salon-batumi',
-    title: pageTitle,
-    description: pageDescription,
+    title: copy.title,
+    description: copy.description,
     keywords: [
       'beauty salon Batumi',
       'Batumi beauty salon',
-      'best beauty salon Batumi',
       'skin care Batumi',
       'Botox Batumi',
       'dermal fillers Batumi',
@@ -431,47 +376,47 @@ export default async function BeautySalonBatumiPage({
 }) {
   const { locale } = await params;
   const localeKey = locales.includes(locale as Locale) ? (locale as Locale) : 'en';
+  const copy = beautySalonBatumiCopy[localeKey];
   const serviceNavigation = serviceNavigationByLocale[localeKey];
+  const businessHours = getLocalizedBusinessHours(localeKey);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: `${siteConfig.url}/${localeKey}` },
-    { name: pageTitle, url: `${siteConfig.url}/${localeKey}/beauty-salon-batumi` },
+    { name: copy.home, url: `${siteConfig.url}/${localeKey}` },
+    { name: copy.h1, url: `${siteConfig.url}/${localeKey}/beauty-salon-batumi` },
   ]);
 
   return (
     <>
       <JsonLd id="json-ld-batumi-business" schema={generateLocalBusinessSchema(locale)} />
       <JsonLd id="json-ld-batumi-breadcrumbs" schema={breadcrumbSchema} />
-      <JsonLd id="json-ld-batumi-faq" schema={generateFAQSchema(localFaqs)} />
+      <JsonLd id="json-ld-batumi-faq" schema={generateFAQSchema(copy.faqs)} />
 
       <section className="bg-[#f7f2eb] pt-[170px] md:pt-[188px]">
         <div className="container-custom py-16 md:py-20">
           <nav className="mb-8 flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">
             <Link href="/" className="hover:text-[#241f1b]">
-              Home
+              {copy.home}
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
-            <span className="text-[#241f1b]">Beauty salon Batumi</span>
+            <span className="text-[#241f1b]">{copy.breadcrumb}</span>
           </nav>
 
           <div className="grid items-end gap-12 lg:grid-cols-[48%_52%]">
             <div className="max-w-3xl">
               <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-                Batumi beauty salon
+                {copy.eyebrow}
               </p>
               <h1 className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]">
-                Beauty Salon in Batumi, Georgia
+                {copy.h1}
               </h1>
               <p className="text-lg leading-8 text-stone-700 md:text-xl">
-                Silk Beauty Salon welcomes local and international clients for aesthetic consultations,
-                injectables, dermal fillers, skin care, lashes, nails, and beauty treatments
-                at Zurab Gorgiladze 63 in Batumi.
+                {copy.intro}
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button asChild className="btn-gold">
-                  <Link href="/book">Book online</Link>
+                  <Link href="/book">{copy.book}</Link>
                 </Button>
                 <Button asChild variant="outline" className="rounded-md">
-                  <Link href="/treatments">View treatments</Link>
+                  <Link href="/treatments">{copy.treatments}</Link>
                 </Button>
               </div>
             </div>
@@ -479,7 +424,7 @@ export default async function BeautySalonBatumiPage({
             <div className="relative aspect-[4/3] overflow-hidden rounded-[8px]">
               <Image
                 src="/images/hero-poster.jpg"
-                alt="Silk Beauty Salon treatment room in Batumi, Georgia"
+                alt="Silk Beauty Salon in Batumi, Georgia"
                 fill
                 className="object-cover"
                 priority
@@ -494,48 +439,29 @@ export default async function BeautySalonBatumiPage({
           <div className="grid gap-10 lg:grid-cols-[38%_62%]">
             <div>
               <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-                Why choose Silk
+                {copy.whyEyebrow}
               </p>
               <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
-                Local expertise with clear consultation and aftercare
+                {copy.whyTitle}
               </h2>
               <p className="leading-7 text-stone-700">
-                A good Batumi beauty salon should make location, pricing context, practitioner details,
-                treatment expectations, and booking options easy to understand. Silk combines visible
-                team expertise, multilingual communication, and online booking so clients can plan beauty
-                care around work, travel, events, and the Black Sea climate.
+                {copy.whyText}
               </p>
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
-              {[
-                {
-                  icon: Shield,
-                  title: 'Consultation first',
-                  text: 'Treatments are planned around skin history, goals, timing, downtime, and contraindications.',
-                },
-                {
-                  icon: Sparkles,
-                  title: 'Natural results',
-                  text: 'The team focuses on balance, skin quality, and results that fit your features.',
-                },
-                {
-                  icon: Award,
-                  title: 'Visible team expertise',
-                  text: 'Practitioner bios list roles, qualifications, languages, and treatment focus.',
-                },
-                {
-                  icon: CalendarCheck,
-                  title: 'Easy booking',
-                  text: 'Book online, call, or email before visiting the salon in central Batumi.',
-                },
-              ].map((item) => (
+              {copy.highlights.map((item, index) => {
+                const icons = [Shield, Sparkles, MapPin, CalendarCheck];
+                const Icon = icons[index] || Shield;
+
+                return (
                 <div key={item.title} className="border-t border-[#e8e4df] pt-6">
-                  <item.icon className="mb-4 h-6 w-6 text-[#8d6f58]" />
+                  <Icon className="mb-4 h-6 w-6 text-[#8d6f58]" />
                   <h3 className="mb-2 font-sans text-xl font-light text-[#241f1b]">{item.title}</h3>
                   <p className="text-sm leading-6 text-stone-600">{item.text}</p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -545,34 +471,17 @@ export default async function BeautySalonBatumiPage({
         <div className="container-custom">
           <div className="mb-12 max-w-3xl">
             <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-              Services in Batumi
+              {copy.servicesEyebrow}
             </p>
             <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
-              Popular beauty and aesthetic treatments
+              {copy.servicesTitle}
             </h2>
             <p className="leading-7 text-stone-700">
-              Start with the treatment category that matches your goal. If you are unsure, book a
-              consultation and the team will help you choose a suitable path.
+              {copy.servicesText}
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {serviceHighlights.map((service) => (
-              <article key={service.title} className="border-t border-[#d8cbbb] pt-6">
-                <h3 className="mb-3 font-sans text-xl font-light text-[#241f1b]">{service.title}</h3>
-                <p className="mb-5 text-sm leading-6 text-stone-600">{service.description}</p>
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center gap-1 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#8d6f58] hover:text-[#241f1b]"
-                >
-                  {service.cta}
-                  <ChevronRight className="h-4 w-4" />
-                </Link>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-14 border-t border-[#d8cbbb] pt-8">
+          <div className="border-t border-[#d8cbbb] pt-8">
             <h3 className="mb-6 font-sans text-2xl font-light text-[#241f1b]">
               {serviceNavigation.title}
             </h3>
@@ -603,15 +512,13 @@ export default async function BeautySalonBatumiPage({
           <div className="grid gap-10 lg:grid-cols-[44%_56%]">
             <div>
               <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-                Visit us
+                {copy.visitEyebrow}
               </p>
               <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
-                Find Silk Beauty Salon in Batumi
+                {copy.visitTitle}
               </h2>
               <p className="leading-7 text-stone-700">
-                The salon is on Zurab Gorgiladze Street, close to central Batumi hotels, shops, and
-                the Black Sea boulevard. Contact the team before arriving if you need help planning
-                a treatment around travel, events, or recovery time.
+                {copy.visitText}
               </p>
             </div>
 
@@ -619,7 +526,7 @@ export default async function BeautySalonBatumiPage({
               <div className="border-t border-[#e8e4df] pt-5">
                 <h3 className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-stone-500">
                   <MapPin className="h-4 w-4 text-[#8d6f58]" />
-                  Address
+                  {copy.address}
                 </h3>
                 <p className="text-sm leading-6 text-stone-700">
                   {siteConfig.contact.address}
@@ -632,7 +539,7 @@ export default async function BeautySalonBatumiPage({
               <div className="border-t border-[#e8e4df] pt-5">
                 <h3 className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-stone-500">
                   <Phone className="h-4 w-4 text-[#8d6f58]" />
-                  Phone and email
+                  {copy.contact}
                 </h3>
                 <p className="space-y-1 text-sm leading-6 text-stone-700">
                   <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`} className="block hover:text-[#8d6f58]">
@@ -647,11 +554,11 @@ export default async function BeautySalonBatumiPage({
               <div className="border-t border-[#e8e4df] pt-5 sm:col-span-2">
                 <h3 className="mb-4 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-stone-500">
                   <Clock className="h-4 w-4 text-[#8d6f58]" />
-                  Opening hours
+                  {copy.hours}
                 </h3>
                 <dl className="grid gap-2 text-sm text-stone-700 sm:grid-cols-2">
-                  {Object.entries(siteConfig.businessHours).map(([day, hours]) => (
-                    <div key={day} className="flex justify-between gap-4 border-b border-[#e8e4df] pb-2">
+                  {businessHours.map(({ key, day, hours }) => (
+                    <div key={key} className="flex justify-between gap-4 border-b border-[#e8e4df] pb-2">
                       <dt className="capitalize">{day}</dt>
                       <dd className="text-[#241f1b]">{hours}</dd>
                     </div>
@@ -667,10 +574,10 @@ export default async function BeautySalonBatumiPage({
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-8 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
-              Questions about booking a beauty salon in Batumi
+              {copy.faqTitle}
             </h2>
             <div className="space-y-8">
-              {localFaqs.map((faq) => (
+              {copy.faqs.map((faq) => (
                 <article key={faq.question} className="border-t border-[#d8cbbb] pt-6">
                   <h3 className="mb-3 font-sans text-xl font-light text-[#241f1b]">{faq.question}</h3>
                   <p className="leading-7 text-stone-700">{faq.answer}</p>
@@ -684,14 +591,13 @@ export default async function BeautySalonBatumiPage({
       <section className="section-spacing">
         <div className="container-custom text-center">
           <h2 className="mb-4 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
-            Ready to book in Batumi?
+            {copy.ctaTitle}
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-stone-600">
-            Choose a consultation if you want help deciding which treatment fits your goals, timing,
-            and skin condition.
+            {copy.ctaText}
           </p>
           <Button asChild className="btn-gold">
-            <Link href="/book">Book a consultation</Link>
+            <Link href="/book">{copy.ctaButton}</Link>
           </Button>
         </div>
       </section>

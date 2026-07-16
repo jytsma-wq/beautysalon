@@ -50,7 +50,11 @@ vi.mock('next-intl/server', () => ({
         home: 'Home',
       },
       nav: {
+        pricelist: 'Pricelist',
         treatments: 'Treatments',
+        treatmentPortfolio: 'Related services',
+        treatmentPortfolioDescription: 'Compare related services in Batumi.',
+        whatsappShort: 'WhatsApp',
       },
       treatmentPage: {
         learnMore: 'Learn more',
@@ -229,5 +233,18 @@ describe('LocalSeoLandingPage', () => {
     expect(botoxPage?.content.tr.searchPhrases).toContain('Batum botoks fiyatları');
     expect(botoxPage?.content.ar.searchPhrases).toContain('أسعار البوتوكس باتومي');
     expect(botoxPage?.content.he.searchPhrases).toContain('מחירי בוטוקס בטומי');
+  });
+
+  it('connects service pages to prices, booking, WhatsApp, and related services', async () => {
+    const { container } = await renderLocalSeoPage('en', 'botox-batumi');
+
+    expect(container.querySelector('a[href="/pricelist"]')).toBeInTheDocument();
+    expect(container.querySelector('a[href="/book"]')).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href="https://wa.me/995577286855"]')
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector('a[href="/dermal-fillers-batumi"]')
+    ).toBeInTheDocument();
   });
 });

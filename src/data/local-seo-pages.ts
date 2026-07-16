@@ -414,7 +414,7 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
     slug: 'botox-batumi',
     categorySlug: 'botox',
     image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1800&q=85',
-    treatmentSlugs: ['anti-wrinkle', 'masseter-botox', 'hyperhidrosis', 'migraine-treatment'],
+    treatmentSlugs: ['anti-wrinkle', 'masseter-botox', 'hyperhidrosis'],
     priority: 0.97,
     content: {
       en: {
@@ -1099,11 +1099,7 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&q=85',
     treatmentSlugs: [
       'is-clinical-fire-ice-peel',
-      'mesoestetic-cosmelan-peel',
-      'obagi-blue-radiance-peel',
-      'obagi-nu-derm',
       'skinpen-microneedling',
-      'observe-skin-scanner',
     ],
     priority: 0.96,
     content: {
@@ -1522,10 +1518,8 @@ const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
     categorySlug: 'skin-treatments',
     image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1800&q=85',
     treatmentSlugs: [
-      'cutera-aviclear',
       'skinpen-microneedling',
-      'cutera-secret-pro-rf-microneedling',
-      'obagi-blue-radiance-peel',
+      'is-clinical-fire-ice-peel',
     ],
     priority: 0.92,
     content: makeGeneratedLocalSeoContent({

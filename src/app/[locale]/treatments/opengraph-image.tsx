@@ -27,12 +27,12 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
   };
   
   const subtitles: Record<string, string> = {
-    en: 'Advanced Medical Aesthetic Treatments in Batumi',
-    ka: 'Advanced Medical Aesthetic Treatments in Batumi',
-    ru: 'Advanced Medical Aesthetic Treatments in Batumi',
-    tr: 'Advanced Medical Aesthetic Treatments in Batumi',
-    ar: 'Advanced Medical Aesthetic Treatments in Batumi',
-    he: 'Advanced Medical Aesthetic Treatments in Batumi',
+    en: 'Beauty and Aesthetic Services in Batumi',
+    ka: 'სილამაზისა და ესთეტიკის სერვისები ბათუმში',
+    ru: 'Услуги красоты и эстетики в Батуми',
+    tr: 'Batum’da Güzellik ve Estetik Hizmetleri',
+    ar: 'خدمات التجميل في باتومي',
+    he: 'שירותי יופי ואסתטיקה בבטומי',
   };
 
   const [fontRegularData, fontBoldData] = await Promise.all([fontRegular, fontBold]);

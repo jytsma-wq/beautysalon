@@ -14,6 +14,33 @@ Mode: public technical baseline plus private-data access plan; no account settin
 - Search Console and GBP account status was not refreshed in this pass because browser automation was unavailable. Existing dates and counts below remain historical snapshots, not a new account baseline.
 - Next monitoring pass: recheck GSC indexing, pending GBP services, postal-code display, real review count, and photo count as soon as account-side browser access is restored.
 
+## Public Visibility Survey - 2026-07-16
+
+The dated public web-index survey is recorded in `docs/SEO_VISIBILITY_SURVEY_2026-07-16.md`.
+
+- Branded discovery and `dermal fillers Batumi` are the strongest observed signals.
+- Close Botox variants produced first-party results, but the exact `Botox Batumi` and `Botox price Batumi` samples did not return Silk in the first 20+ results reviewed.
+- Lip fillers, skin treatments, microneedling, generic salon, prices, and English-speaking intent have partial visibility.
+- Acne treatment, chemical peel, nails, lashes, and most sampled non-English head terms remain weak or absent.
+- Georgian samples surfaced `silkbeauty.ge` rather than the canonical `.online` domain; ownership and intended use remain an owner-confirmation item.
+- Exact Google rank, local-pack placement, GBP appearance, and AI Overview visibility were not claimed because the controlled in-app Google/Maps browser session was unavailable.
+- Short recheck: 2026-07-23. Monthly same-query comparison: 2026-08-16.
+
+## Index Quality Candidate - 2026-07-16
+
+The implementation and evidence gates are documented in `docs/SEO_TRUST_AND_INDEX_QUALITY_AUDIT.md`. This is a local branch candidate and is not live.
+
+- Current public sitemap observed on 2026-07-16: `528` URLs.
+- Local candidate sitemap: `184` URLs.
+- Priority localized service hubs, locale roots, pricelist, booking, rentals, and verified treatment details remain indexable.
+- Low-confidence catalog, condition, category, duplicated editorial, and empty proof routes remain accessible but are `noindex,follow` and absent from the sitemap.
+- Local-service pages now link directly to pricing, booking, related service hubs, and the approved separate WhatsApp number.
+- Actively rendered pages and the client message payload no longer expose checked unverified staff, award, press, discount, patient-count, or product/device claims.
+- English homepage HTML decreased from approximately `241 KB` to `139,156` bytes in the local production preview after pruning unused client message data.
+- No Search Console, GBP, Bing, DNS, Hostinger, analytics, ad, or production action was taken.
+
+Release gates remain owner review, verified treatment inventory, native review for the five non-English copy sets, controlled live QA, then selective recrawl of canonical priority URLs. Do not bulk-submit excluded URLs.
+
 ## Safety Rules Applied
 
 - No Google, Bing, Hostinger, analytics, ads, social, or booking settings were changed.

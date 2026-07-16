@@ -1877,33 +1877,33 @@
     "heroSlides": {
       "slide1": {
         "eyebrow": "Beauty salon in Batumi, Georgia",
-        "title": "Silk Beauty Salon in Batumi, Georgia - Premier Aesthetic Treatments.",
-        "description": "A Batumi beauty salon for natural-looking injectables, skin quality treatments, laser procedures, nails, lashes, and advanced aesthetic care.",
-        "cta": "Book a Batumi consultation"
+        "title": "Silk Beauty Salon in Batumi, Georgia.",
+        "description": "Compare consultation-led Botox and filler appointments, skin care, nails, lashes, brows, starting prices, and online booking.",
+        "cta": "Book an appointment"
       },
       "slide2": {
         "eyebrow": "Skin quality",
-        "title": "Real solutions for real skin concerns.",
-        "description": "From texture and pigmentation to hydration, firmness, and facial balance, every plan begins with a skin-first diagnosis.",
+        "title": "Plan skin care around your needs.",
+        "description": "Read about skin care, acne consultations, peels, microneedling, prices, and questions to ask before booking.",
         "cta": "Explore concerns"
       },
       "slide3": {
         "eyebrow": "Injectables and contour",
-        "title": "Subtle volume. Considered contours. You, refreshed.",
-        "description": "Dermal fillers and anti-wrinkle treatments delivered with restraint, symmetry, and respect for natural expression.",
+        "title": "Compare injectable appointment information.",
+        "description": "Read about Botox and dermal filler consultations, starting prices, timing, and aftercare questions before booking.",
         "cta": "View treatments"
       }
     },
     "philosophy": {
       "eyebrow": "Our approach",
-      "title": "A skin-first aesthetic practice.",
-      "description": "Our Batumi beauty salon combines careful consultation, advanced aesthetic treatments, and calm clinical standards for natural-looking results.",
-      "statement": "We study your skin, facial structure, and goals before recommending a treatment. The result should look considered, balanced, and quietly confident."
+      "title": "Clear information before you book.",
+      "description": "The website connects service descriptions, starting prices, contact details, and online booking for Silk Beauty Salon in Batumi.",
+      "statement": "Choose a service page or start with a consultation when you need help deciding which appointment to request."
     },
     "concerns": {
       "eyebrow": "Skin concerns",
-      "title": "Real solutions for real skin concerns.",
-      "description": "Explore common concerns and the treatment pathways that can support healthier, more confident skin."
+      "title": "Explore common skin concerns.",
+      "description": "Use the concern pages as a starting point, then confirm service suitability directly with the salon."
     },
     "concernItems": {
       "item1": {
@@ -1944,7 +1944,7 @@
         },
         "item3": {
           "title": "Skin quality",
-          "description": "Peels, microneedling, diagnostics, and laser-led plans for stronger, brighter skin."
+          "description": "Skin care, peels, microneedling, consultation, and starting-price information."
         }
       }
     },
@@ -1989,13 +1989,13 @@
     },
     "stats": {
       "item1": {
-        "label": "Consultation-first plans"
+        "label": "Zurab Gorgiladze Street"
       },
       "item2": {
-        "label": "Languages supported"
+        "label": "Website languages"
       },
       "item3": {
-        "label": "Skin assessment"
+        "label": "Days open each week"
       }
     },
     "results": {
@@ -2022,9 +2022,9 @@
       }
     },
     "cta": {
-      "eyebrow": "Find your specialist",
-      "title": "Begin with a clinical consultation.",
-      "description": "Visit {clinicName} in Batumi for a structured assessment and a treatment plan tailored to your skin, anatomy, timing, and comfort.",
+      "eyebrow": "Plan your visit",
+      "title": "Choose a service or start with a consultation.",
+      "description": "Contact {clinicName} in Batumi to confirm service availability, timing, starting prices, and booking options.",
       "bookNow": "Book now",
       "contactUs": "Contact us"
     },
@@ -2045,8 +2045,8 @@
     },
     "journal": {
       "eyebrow": "Skin trends",
-      "title": "Aesthetic insight, without the noise.",
-      "description": "Educational notes for patients who want to understand treatment planning before they book.",
+      "title": "Beauty care information before you book.",
+      "description": "Read practical notes about consultation, timing, preparation, and aftercare questions.",
       "cta": "Read journal"
     },
     "reviews": {

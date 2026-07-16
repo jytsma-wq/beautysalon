@@ -30,13 +30,22 @@ describe('homepage popular treatment highlights', () => {
       'lashes',
     ]);
 
+    const expectedHrefs = {
+      antiWrinkle: '/botox-batumi',
+      dermalFillers: '/dermal-fillers-batumi',
+      skinpen: '/skin-treatment-batumi',
+      fireIce: '/skin-treatment-batumi',
+      nails: '/nails-batumi',
+      lashes: '/lashes-brows-batumi',
+    } as const;
+
     for (const card of cards) {
       const source = findBaseTreatment(card.priceTreatmentSlug);
 
       expect(source, `${card.priceTreatmentSlug} should exist in central treatment data`).toBeDefined();
       expect(card.price).toBe(source?.price);
       expect(card.price).toMatch(/^(From|Consultation)/);
-      expect(card.href.startsWith('/treatments') || card.href === '/botox-batumi').toBe(true);
+      expect(card.href).toBe(expectedHrefs[card.id]);
     }
   });
 

@@ -8,6 +8,8 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Star } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import type { Locale } from '@/i18n';
+import { beautySalonBatumiCopy } from '@/data/beauty-salon-batumi-copy';
+import { localSeoLandingPages } from '@/data/local-seo-pages';
 import { BeforeAfterSlider } from '@/components/gallery/BeforeAfterSlider';
 import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
 import {
@@ -85,14 +87,37 @@ function useCarouselControls(options?: { loop?: boolean; watchDrag?: boolean }) 
 }
 
 export function ClinicalHeroCarousel() {
-  const t = useTranslations('homeEditorial');
+  const locale = useLocale() as Locale;
   const shouldReduceMotion = useHydratedReducedMotion();
+  const hubCopy = beautySalonBatumiCopy[locale];
+  const skinCopy = localSeoLandingPages.find((page) => page.slug === 'skin-treatment-batumi')!.content[locale];
+  const fillerCopy = localSeoLandingPages.find((page) => page.slug === 'dermal-fillers-batumi')!.content[locale];
+  const localizedSlides = [
+    {
+      eyebrow: hubCopy.eyebrow,
+      title: hubCopy.h1,
+      description: hubCopy.intro,
+      href: '/book',
+      cta: hubCopy.book,
+    },
+    {
+      eyebrow: skinCopy.eyebrow,
+      title: skinCopy.h1,
+      description: skinCopy.description,
+      href: '/skin-treatment-batumi',
+      cta: skinCopy.categoryCta,
+    },
+    {
+      eyebrow: fillerCopy.eyebrow,
+      title: fillerCopy.h1,
+      description: fillerCopy.description,
+      href: '/dermal-fillers-batumi',
+      cta: fillerCopy.categoryCta,
+    },
+  ];
   const slides = homeHeroSlides.map((slide, index) => ({
     ...slide,
-    eyebrow: t(`heroSlides.slide${index + 1}.eyebrow`),
-    title: t(`heroSlides.slide${index + 1}.title`),
-    description: t(`heroSlides.slide${index + 1}.description`),
-    cta: t(`heroSlides.slide${index + 1}.cta`),
+    ...localizedSlides[index],
   }));
   const {
     emblaRef,

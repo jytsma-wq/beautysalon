@@ -28,14 +28,19 @@ export function getCanonicalUrl(locale: string, path: string = ''): string {
   return `${getSiteUrl()}${getCanonicalPath(locale, path)}`;
 }
 
-export function getLanguageAlternates(path: string = ''): Record<string, string> {
+export function getLanguageAlternates(
+  path: string = '',
+  alternateLocales: readonly Locale[] = locales
+): Record<string, string> {
   const alternates = Object.fromEntries(
-    locales.map((locale) => [locale, getCanonicalUrl(locale, path)])
-  ) as Record<Locale, string>;
+    alternateLocales.map((locale) => [locale, getCanonicalUrl(locale, path)])
+  ) as Record<string, string>;
 
   return {
     ...alternates,
-    'x-default': getCanonicalUrl('en', path),
+    ...(alternateLocales.includes('en')
+      ? { 'x-default': getCanonicalUrl('en', path) }
+      : {}),
   };
 }
 
@@ -49,6 +54,7 @@ type BuildSeoMetadataOptions = {
   imageAlt?: string;
   type?: 'website' | 'article';
   noIndex?: boolean;
+  alternateLocales?: readonly Locale[];
 };
 
 export function buildSeoMetadata({
@@ -61,6 +67,7 @@ export function buildSeoMetadata({
   imageAlt = 'Silk Beauty Salon in Batumi, Georgia',
   type = 'website',
   noIndex = false,
+  alternateLocales = locales,
 }: BuildSeoMetadataOptions): Metadata {
   const fullTitle = withBrand(title);
   const canonical = getCanonicalUrl(locale, path);
@@ -75,7 +82,7 @@ export function buildSeoMetadata({
     keywords,
     alternates: {
       canonical,
-      languages: getLanguageAlternates(path),
+      languages: getLanguageAlternates(path, alternateLocales),
     },
     openGraph: {
       type,
@@ -103,7 +110,11 @@ export function buildSeoMetadata({
     robots: noIndex
       ? {
           index: false,
-          follow: false,
+          follow: true,
+          googleBot: {
+            index: false,
+            follow: true,
+          },
         }
       : {
           index: true,

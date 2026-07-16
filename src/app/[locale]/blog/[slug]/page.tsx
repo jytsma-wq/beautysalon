@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { JsonLd, generateArticleSchema, generateBreadcrumbSchema } from '@/components/seo/JsonLd';
 import { getBlogPostBySlug, getAllBlogSlugs, getRelatedBlogPosts } from '@/data/blog';
 import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
+import { isIndexableEditorialLocale } from '@/lib/search-index-policy';
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 
   const metadata = buildSeoMetadata({
-    locale,
+    locale: isIndexableEditorialLocale(locale) ? locale : 'en',
     path: `/blog/${slug}`,
     title: post.title,
     description: post.excerpt,
@@ -39,6 +40,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     image: post.image,
     imageAlt: `${post.title} by ${post.author}`,
     type: 'article',
+    noIndex: !isIndexableEditorialLocale(locale),
+    alternateLocales: ['en'],
   });
 
   return {
@@ -84,7 +87,9 @@ export default async function BlogPostPage({
     <>
       {/* JSON-LD Schemas */}
       <JsonLd id="json-ld-blog-breadcrumbs" schema={breadcrumbSchema} />
-      <JsonLd id="json-ld-blog-article" schema={articleSchema} />
+      {isIndexableEditorialLocale(locale) ? (
+        <JsonLd id="json-ld-blog-article" schema={articleSchema} />
+      ) : null}
 
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] md:h-[80vh]">

@@ -15,7 +15,7 @@ interface Props {
 
 const JSON_LD_BASE = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
+  '@type': 'BeautySalon',
   name: 'Silk Beauty Salon',
   image: `${getSiteUrl()}/images/hero-poster.jpg`,
   priceRange: '$$',

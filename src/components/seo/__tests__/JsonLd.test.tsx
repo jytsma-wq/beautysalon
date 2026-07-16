@@ -94,10 +94,7 @@ describe('LocalBusiness BeautySalon JSON-LD', () => {
     expect(serializedSchema).not.toContain('undefined');
     expect(serializedSchema).not.toContain('null');
     expect(schema.sameAs).not.toContain('');
-    expect(schema.image).toEqual([
-      `${siteConfig.url}/images/hero-poster.jpg`,
-      `${siteConfig.url}${siteConfig.logo.image}`,
-    ]);
+    expect(schema.image).toEqual([`${siteConfig.url}${siteConfig.logo.image}`]);
   });
 
   it('builds parseable schema for every localized homepage route', () => {

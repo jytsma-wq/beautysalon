@@ -28,4 +28,31 @@ describe('sitemap', () => {
 
     expect(entries.some((entry) => entry.url.includes('/before-after'))).toBe(false);
   });
+
+  it('publishes original blog content only in English and omits volatile timestamps', async () => {
+    const entries = await sitemap();
+    const blogEntries = entries.filter((entry) => entry.url.includes('/blog'));
+
+    expect(blogEntries.length).toBeGreaterThan(0);
+    expect(blogEntries.every((entry) => entry.url.includes('/en/blog'))).toBe(true);
+    expect(entries.every((entry) => entry.lastModified === undefined)).toBe(true);
+  });
+
+  it('excludes unverified condition, promotion, press, career, and media routes', async () => {
+    const entries = await sitemap();
+    const excludedPaths = [
+      '/conditions/acne-scarring',
+      '/conditions',
+      '/treatments',
+      '/treatments/category/dermal-fillers',
+      '/offers',
+      '/media-press',
+      '/media-gallery',
+      '/careers',
+    ];
+
+    for (const excludedPath of excludedPaths) {
+      expect(entries.some((entry) => entry.url.endsWith(excludedPath))).toBe(false);
+    }
+  });
 });

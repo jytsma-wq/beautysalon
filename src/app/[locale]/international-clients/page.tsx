@@ -1,467 +1,158 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
-import { ChevronRight, Globe, Gift, CreditCard, Shield, Award, MessageCircle, Phone, MapPin, Mail, CheckCircle } from 'lucide-react';
-import { siteConfig } from '@/data/site-config';
+import { CheckCircle2, ChevronRight, Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { getTranslations } from 'next-intl/server';
-import { Link as I18nLink } from '@/i18n/routing';
+import { visitorPageCopy } from '@/data/factual-page-copy';
+import { localSeoLandingPages } from '@/data/local-seo-pages';
+import { siteConfig } from '@/data/site-config';
+import { locales, type Locale } from '@/i18n';
+import { Link } from '@/i18n/routing';
+import { getLocalizedBusinessHours } from '@/lib/business-hours';
 import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
+import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+function getLocale(locale: string): Locale {
+  return locales.includes(locale as Locale) ? (locale as Locale) : 'en';
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'internationalPage' });
+  const localeKey = getLocale(locale);
+  const copy = visitorPageCopy[localeKey];
+
   return buildSeoMetadata({
-    locale,
+    locale: localeKey,
     path: '/international-clients',
-    title: locale === 'en' ? 'Beauty Salon in Batumi for International Clients' : t('title'),
-    description:
-      locale === 'en'
-        ? 'Plan aesthetic treatments in Batumi, Georgia with Silk Beauty Salon, including Botox, fillers, skin care and travel-friendly consultations.'
-        : t('subtitle'),
-    keywords: localSeoKeywords,
-    imageAlt: 'Silk Beauty Salon in Batumi, Georgia for international aesthetic clients',
+    title: copy.title,
+    description: copy.description,
+    keywords: [...localSeoKeywords, 'beauty salon for visitors Batumi'],
+    imageAlt: 'Silk Beauty Salon in Batumi, Georgia',
   });
 }
 
-export async function generateStaticParams() {
-  const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr'];
+export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-const pricingData = [
-  { treatment: 'Botox (1 area)', priceGEL: '250-350', priceUSD: '$90-125' },
-  { treatment: 'Botox (3 areas)', priceGEL: '600-800', priceUSD: '$215-290' },
-  { treatment: 'Lip Filler (1ml)', priceGEL: '500-800', priceUSD: '$180-290' },
-  { treatment: 'Cheek Filler (1ml)', priceGEL: '600-900', priceUSD: '$215-325' },
-  { treatment: 'Under-eye Filler (1ml)', priceGEL: '600-900', priceUSD: '$215-325' },
-  { treatment: 'Skin Booster', priceGEL: '400-600', priceUSD: '$145-215' },
-  { treatment: 'Chemical Peel', priceGEL: '200-400', priceUSD: '$70-145' },
-];
-
-const timingData = [
-  { treatment: 'Botox', minStay: 'Same day OK', reason: 'No visible downtime' },
-  { treatment: 'Fillers', minStay: '24-48 hours', reason: 'Allow swelling to subside' },
-  { treatment: 'Chemical Peel (medium)', minStay: '5-7 days', reason: 'Peeling phase visible' },
-  { treatment: 'PRP/Microneedling', minStay: '48 hours', reason: 'Redness, possible bruising' },
-  { treatment: 'Combination treatments', minStay: '3-5 days', reason: 'Multiple recovery phases' },
-];
-
-const packagesData = [
-  { name: 'Fresh Face', includes: 'Botox (3 areas) + Lip Filler', savings: '15% off' },
-  { name: 'Total Rejuvenation', includes: 'Full face Botox + Cheek Filler + Skin Booster', savings: '20% off' },
-  { name: 'Non-Surgical Lift', includes: '8-point lift (strategic filler placement)', savings: 'Special pricing' },
-  { name: 'Vacation Glow', includes: 'Skin booster + Light chemical peel', savings: '10% off' },
-];
-
-const faqData = [
-  { q: 'Is it safe to have treatments while traveling?', a: 'Yes, many treatments have minimal downtime. We provide detailed aftercare instructions and are available for follow-up support via WhatsApp or video call.' },
-  { q: 'What languages does Nana speak?', a: 'Nana speaks Georgian, English, and Russian fluently, ensuring clear communication with international clients.' },
-  { q: 'How do I book before arriving?', a: 'Contact us via WhatsApp for a free virtual consultation. We\'ll discuss your goals, provide a quote, and schedule your appointment.' },
-  { q: 'Can I have treatment the day before a flight?', a: 'Botox treatments are fine for same-day travel. For fillers, we recommend 24-48 hours before flying to allow swelling to subside.' },
-  { q: 'What if I have a reaction after I return home?', a: 'We provide 24/7 emergency contact and offer virtual follow-up consultations. For dermal fillers, we can provide guidance to local practitioners if needed.' },
-  { q: 'Do you use authentic products?', a: 'Absolutely. We use only Allergan (Juvederm), Galderma (Restylane), and Merz products. You can see the packaging and lot numbers during your treatment.' },
-  { q: 'What payment methods do you accept?', a: 'We accept cash (GEL, USD, EUR), Visa, Mastercard, and contactless payments including Apple Pay and Google Pay.' },
-  { q: 'Do you offer virtual follow-ups?', a: 'Yes, we offer complimentary virtual follow-up consultations for all international clients at 2 weeks post-treatment.' },
-];
-
-export default async function InternationalClientsPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function InternationalClientsPage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'internationalPage' });
-  const tCommon = await getTranslations({ locale, namespace: 'common' });
-  const team = siteConfig.team[0];
+  const localeKey = getLocale(locale);
+  const copy = visitorPageCopy[localeKey];
+  const tCommon = await getTranslations({ locale: localeKey, namespace: 'common' });
+  const whatsappHref = `https://wa.me/${siteConfig.contact.whatsappPhone.replace(/\D/g, '')}`;
+  const businessHours = getLocalizedBusinessHours(localeKey);
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center">
+      <section className="relative flex min-h-[70vh] items-center pt-[120px] md:pt-[138px]">
         <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1920&q=80"
-            alt={`${t('silkBeautySalon')} in Batumi, Georgia`}
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <Image src="/images/hero-poster.jpg" alt="" fill priority sizes="100vw" className="object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[#1c1c1c]/40" />
-        <div className="absolute inset-0 flex items-center">
-          <div className="container-custom">
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-2 mb-4">
-                <Globe className="w-6 h-6 text-gold" />
-                <span className="text-gold text-sm font-medium tracking-wider uppercase">
-                  {t('welcomeText')}
-                </span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-serif font-semibold text-white mb-4">
-                {t('heroTitle')}
-              </h1>
-              <p className="text-xl text-gray-200 mb-8">
-                {t('heroSubtitle')}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild className="btn-gold">
-                  <a href={`https://wa.me/${siteConfig.contact.whatsappPhone.replace(/\s/g, '').replace('+', '')}`} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    {t('bookConsultation')}
-                  </a>
-                </Button>
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                  <I18nLink href="#packages">
-                    {t('viewPackages')}
-                  </I18nLink>
-                </Button>
-              </div>
+        <div className="absolute inset-0 bg-[#1c1c1c]/55" />
+        <div className="container-custom relative z-10 py-20">
+          <div className="max-w-3xl text-white">
+            <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#d8cbbb]">{copy.eyebrow}</p>
+            <h1 className="localized-hero-heading mb-6 font-sans font-light">{copy.h1}</h1>
+            <p className="max-w-2xl text-lg leading-8 text-white/90">{copy.intro}</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Button asChild className="btn-gold"><Link href="/book">{copy.book}</Link></Button>
+              <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#241f1b]">
+                <Link href="/beauty-salon-batumi">{copy.services}</Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Breadcrumb */}
       <div className="bg-secondary py-4">
         <div className="container-custom">
           <nav className="flex items-center gap-2 text-sm">
-            <I18nLink href="/" className="text-muted-foreground hover:text-gold">
-              {tCommon('home')}
-            </I18nLink>
-            <ChevronRight className="w-4 h-4 text-muted-foreground" />
-            <span className="text-primary font-medium">{t('title')}</span>
+            <Link href="/" className="text-muted-foreground hover:text-[#8d6f58]">{tCommon('home')}</Link>
+            <ChevronRight className="h-4 w-4 text-muted-foreground" />
+            <span className="font-medium text-primary">{copy.h1}</span>
           </nav>
         </div>
       </div>
 
-      {/* About Nana Section */}
       <section className="section-spacing">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid gap-12 lg:grid-cols-[38%_62%]">
             <div>
-              <h2 className="text-3xl font-serif font-semibold text-primary mb-2">
-                {t('aboutNana.title')}
-              </h2>
-              <p className="text-gold mb-6">{t('aboutNana.subtitle')}</p>
-              <div className="w-16 h-0.5 bg-gold mb-6" />
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {t('aboutNana.bio')}
-              </p>
-
-              <h3 className="font-semibold text-primary mb-3">{t('aboutNana.qualifications')}</h3>
-              <ul className="space-y-2 mb-6">
-                {[1, 2, 3, 4].map((i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-gold" />
-                    <span className="text-sm">{t(`aboutNana.qualification${i}`)}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex items-center gap-2">
-                <Globe className="w-5 h-5 text-gold" />
-                <span className="font-medium">{t('aboutNana.languages')}:</span>
-                <span>{t('aboutNana.languagesText')}</span>
-              </div>
+              <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">{copy.planTitle}</h2>
+              <p className="leading-7 text-stone-700">{copy.planText}</p>
             </div>
-
-            <div className="relative">
-              <div className="aspect-4/5 overflow-hidden relative bg-[#f7f4f0]">
-                <Image
-                  src={team?.image || "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80"}
-                  alt={`${t('teamMember', { name: team?.name || 'Team Member' })} at Silk Beauty Salon in Batumi`}
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  unoptimized={!!team?.image}
-                />
-              </div>
-            </div>
+            <ol className="grid gap-6 sm:grid-cols-2">
+              {copy.planSteps.map((step, index) => (
+                <li key={step} className="border-t border-[#d8cbbb] pt-5">
+                  <span className="mb-3 block text-[0.68rem] uppercase tracking-[0.18em] text-[#8d6f58]">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="flex gap-3 text-sm leading-6 text-stone-700">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#8d6f58]" /> {step}
+                  </span>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="section-spacing bg-secondary">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-              {t('whyChooseUs.title')}
-            </h2>
-            <p className="text-muted-foreground">{t('whyChooseUs.subtitle')}</p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              { key: 'costSavings', icon: CreditCard },
-              { key: 'premiumProducts', icon: Award },
-              { key: 'personalizedCare', icon: Shield },
-              { key: 'privacy', icon: Globe },
-              { key: 'travelFriendly', icon: MapPin },
-            ].map((item) => (
-              <div key={item.key} className="p-8 text-center">
-                <div className="mb-6">
-                  <item.icon className="w-8 h-8 text-gold mx-auto" />
-                </div>
-                <h3 className="font-serif font-semibold text-primary mb-2">
-                  {t(`whyChooseUs.${item.key}`)}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {t(`whyChooseUs.${item.key}Desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="section-spacing">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-              {t('services.title')}
-            </h2>
-            <p className="text-muted-foreground">{t('services.subtitle')}</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {['botox', 'fillers'].map((service) => (
-              <div key={service} className="py-8 border-t border-[#e8e4df]">
-                <h3 className="font-serif text-xl font-semibold text-primary mb-2">
-                  {t(`services.${service}.title`)}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {t(`services.${service}.description`)}
-                </p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">{t('services.durationLabel')}</span>
-                    <span className="font-medium">{t(`services.${service}.duration`)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">{t('services.recoveryLabel')}</span>
-                    <span className="font-medium">{t(`services.${service}.recovery`)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">{t('services.resultsLabel')}</span>
-                    <span className="font-medium">{t(`services.${service}.results`)}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Packages Section */}
-      <section id="packages" className="section-spacing bg-[#f7f4f0]">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-[#1c1c1c] mb-4">
-              {t('packages.title')}
-            </h2>
-            <p className="text-[#6b6b6b]">{t('packages.subtitle')}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {packagesData.map((pkg, index) => (
-              <div key={index} className="p-8 text-center border-t border-[#e8e4df]">
-                <Gift className="w-8 h-8 text-gold mx-auto mb-4" />
-                <h3 className="font-serif text-xl font-semibold text-[#1c1c1c] mb-2">{pkg.name}</h3>
-                <p className="text-sm text-[#6b6b6b] mb-4">{pkg.includes}</p>
-                <span className="text-xs tracking-[0.15em] uppercase text-gold">
-                  {pkg.savings}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="section-spacing">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-              {t('pricing.title')}
-            </h2>
-            <p className="text-muted-foreground">{t('pricing.subtitle')}</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            {pricingData.map((item, index) => (
-              <div key={index} className="flex justify-between py-6 border-t border-[#e8e4df]">
-                <span className="font-medium">{item.treatment}</span>
-                <div className="text-right">
-                  <span className="text-muted-foreground mr-4">{item.priceGEL} GEL</span>
-                  <span className="font-semibold text-gold">{item.priceUSD}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground mb-2">{t('pricing.note')}</p>
-            <p className="text-xs text-muted-foreground">{t('pricing.finalNote')}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Timing */}
-      <section className="section-spacing bg-secondary">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-              {t('timing.title')}
-            </h2>
-            <p className="text-muted-foreground">{t('timing.subtitle')}</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            {timingData.map((item, index) => (
-              <div key={index} className="flex justify-between py-6 border-t border-[#e8e4df]">
-                <span className="font-medium">{item.treatment}</span>
-                <span className="text-muted-foreground">{item.minStay}</span>
-                <span className="text-sm text-[#9a9a9a] max-w-xs text-right">{item.reason}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-sm text-[#9a9a9a] italic">{t('timing.seaWarning')}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Journey */}
-      <section className="section-spacing">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-              {t('journey.title')}
-            </h2>
-            <p className="text-muted-foreground">{t('journey.subtitle')}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((step) => (
-              <div key={step} className="border-t border-[#e8e4df] pt-6">
-                <span className="text-xs tracking-[0.15em] uppercase text-gold mb-4 block">
-                  {String(step).padStart(2, '0')}
-                </span>
-                <h3 className="font-serif text-lg text-primary mb-2">
-                  {t(`journey.step${step}Title`)}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {t(`journey.step${step}Desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Trust & Safety */}
-      <section className="section-spacing bg-secondary">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-              {t('trust.title')}
-            </h2>
-            <p className="text-muted-foreground">{t('trust.subtitle')}</p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {['licensed', 'certified', 'authentic', 'hygiene', 'emergency'].map((item) => (
-              <div key={item} className="p-8 text-center border-t border-[#e8e4df]">
-                <Shield className="w-8 h-8 text-gold mx-auto mb-4" />
-                <h3 className="font-serif font-semibold text-primary mb-2">
-                  {t(`trust.${item}`)}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {t(`trust.${item}Desc`)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="section-spacing">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-              {t('faq.title')}
-            </h2>
-            <p className="text-muted-foreground">{t('faq.subtitle')}</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqData.map((item, index) => (
-              <details key={index} className="border-t border-[#e8e4df] group">
-                <summary className="flex items-center justify-between py-6 cursor-pointer list-none">
-                  <span className="font-medium text-primary">{item.q}</span>
-                  <ChevronRight className="w-5 h-5 text-muted-foreground group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="pb-6">
-                  <p className="text-muted-foreground">{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
       <section className="section-spacing bg-[#f7f4f0]">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-semibold text-[#1c1c1c] mb-4">
-              {t('contact.title')}
-            </h2>
-            <p className="text-[#6b6b6b]">{t('contact.subtitle')}</p>
+          <div className="mb-12 max-w-3xl">
+            <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">{copy.serviceTitle}</h2>
+            <p className="leading-7 text-stone-700">{copy.serviceText}</p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-            {[
-              { key: 'whatsapp', icon: MessageCircle },
-              { key: 'telegram', icon: MessageCircle },
-              { key: 'instagram', icon: Globe },
-              { key: 'videoConsult', icon: Phone },
-              { key: 'email', icon: Mail },
-            ].map((item) => (
-              <div key={item.key} className="p-6 text-center">
-                <item.icon className="w-8 h-8 text-gold mx-auto mb-3" />
-                <h3 className="font-semibold text-[#1c1c1c] mb-1">{t(`contact.${item.key}`)}</h3>
-                <p className="text-xs text-[#6b6b6b]">{t(`contact.${item.key}Desc`)}</p>
-              </div>
-            ))}
+          <div className="grid gap-px bg-[#d8cbbb] md:grid-cols-2 lg:grid-cols-3">
+            {localSeoLandingPages.map((page) => {
+              const content = page.content[localeKey];
+              return (
+                <Link key={page.slug} href={`/${page.slug}`} className="group bg-white p-7 transition-colors hover:bg-[#f7f2eb]">
+                  <h3 className="font-sans text-xl font-light text-[#241f1b]">{content.h1}</h3>
+                  <p className="mt-3 text-sm leading-6 text-stone-600">{content.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-[0.68rem] uppercase tracking-[0.18em] text-[#8d6f58]">
+                    {tCommon('learnMore')} <ChevronRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              );
+            })}
+            <Link href="/pricelist" className="group bg-white p-7 transition-colors hover:bg-[#f7f2eb]">
+              <h3 className="font-sans text-xl font-light text-[#241f1b]">{copy.services}</h3>
+              <p className="mt-3 text-sm leading-6 text-stone-600">{copy.serviceText}</p>
+              <span className="mt-5 inline-flex items-center gap-1 text-[0.68rem] uppercase tracking-[0.18em] text-[#8d6f58]">
+                {tCommon('viewAll')} <ChevronRight className="h-4 w-4" />
+              </span>
+            </Link>
           </div>
-
-          <p className="text-center text-[#9a9a9a] text-sm">
-            {t('contact.responseTime')}
-          </p>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="section-spacing">
+        <div className="container-custom">
+          <div className="mb-10 max-w-3xl">
+            <h2 className="mb-5 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">{copy.locationTitle}</h2>
+            <p className="leading-7 text-stone-700">{copy.locationText}</p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="border-t border-[#d8cbbb] pt-5"><MapPin className="mb-3 h-5 w-5 text-[#8d6f58]" /><h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">{copy.address}</h3><p className="text-sm leading-6">{siteConfig.contact.address}<br />{siteConfig.contact.city} {siteConfig.contact.postcode}, {siteConfig.contact.country}</p></div>
+            <div className="border-t border-[#d8cbbb] pt-5"><Phone className="mb-3 h-5 w-5 text-[#8d6f58]" /><h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">{copy.phone}</h3><a href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`} className="text-sm hover:text-[#8d6f58]">{siteConfig.contact.phone}</a></div>
+            <div className="border-t border-[#d8cbbb] pt-5"><MessageCircle className="mb-3 h-5 w-5 text-[#8d6f58]" /><h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">{copy.whatsapp}</h3><a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-[#8d6f58]">{siteConfig.contact.whatsappPhone}</a></div>
+            <div className="border-t border-[#d8cbbb] pt-5"><Mail className="mb-3 h-5 w-5 text-[#8d6f58]" /><h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">{copy.email}</h3><a href={`mailto:${siteConfig.contact.email}`} className="break-words text-sm hover:text-[#8d6f58]">{siteConfig.contact.email}</a></div>
+            <div className="border-t border-[#d8cbbb] pt-5"><Clock className="mb-3 h-5 w-5 text-[#8d6f58]" /><h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">{copy.hours}</h3><p className="text-sm leading-6">{businessHours[0].day}: {businessHours[0].hours}<br />{businessHours[6].day}: {businessHours[6].hours}</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-[#241f1b] text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-serif font-semibold text-primary mb-4">
-            {t('cta.title')}
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            {t('cta.subtitle')}
-          </p>
-          <Button asChild className="btn-gold">
-            <a href={`https://wa.me/${siteConfig.contact.whatsappPhone.replace(/\s/g, '').replace('+', '')}`} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              {t('cta.button')}
-            </a>
-          </Button>
+          <h2 className="mb-4 font-sans text-3xl font-light md:text-4xl">{copy.ctaTitle}</h2>
+          <p className="mx-auto mb-8 max-w-xl text-white/75">{copy.ctaText}</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button asChild className="bg-white text-[#241f1b] hover:bg-[#f7f2eb]"><Link href="/book">{copy.book}</Link></Button>
+            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#241f1b]"><a href={whatsappHref} target="_blank" rel="noopener noreferrer">{copy.whatsapp}</a></Button>
+          </div>
         </div>
       </section>
     </>

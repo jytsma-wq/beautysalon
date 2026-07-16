@@ -112,7 +112,6 @@ export function buildLocalBusinessSchema(locale: string = "en"): SchemaObject {
     "@id": `${getSiteUrl()}/#beautysalon`,
     "name": siteConfig.name,
     "legalName": siteConfig.legalName,
-    "alternateName": siteConfig.legalName,
     "description": siteConfig.description,
     "url": getCanonicalUrl(safeLocale),
     "mainEntityOfPage": getCanonicalUrl(safeLocale),
@@ -120,10 +119,7 @@ export function buildLocalBusinessSchema(locale: string = "en"): SchemaObject {
     "telephone": siteConfig.contact.phone,
     "email": siteConfig.contact.email,
     "priceRange": "GEL $$",
-    "image": [
-      absoluteSiteUrl('/images/hero-poster.jpg'),
-      absoluteSiteUrl(siteConfig.logo.image)
-    ],
+    "image": [absoluteSiteUrl(siteConfig.logo.image)],
     "logo": absoluteSiteUrl(siteConfig.logo.schemaImage),
     "address": {
       "@type": "PostalAddress",
@@ -248,8 +244,9 @@ export function generateArticleSchema(article: {
     "dateModified": article.updatedAt.toISOString(),
     "articleSection": article.category,
     "author": {
-      "@type": "Person",
-      "name": article.author
+      "@type": "Organization",
+      "name": siteConfig.name,
+      "url": siteUrl
     },
     "publisher": {
       "@type": "Organization",
@@ -272,6 +269,7 @@ export function generateServiceSchema(service: {
   name: string
   description: string
   image?: string
+  url?: string
   treatments: Array<{ name: string; url: string }>
 }) {
   const schema = {
@@ -280,8 +278,10 @@ export function generateServiceSchema(service: {
     "name": service.name,
     "description": service.description,
     "image": service.image,
+    "url": service.url ? `${getSiteUrl()}${service.url}` : undefined,
     "provider": {
       "@type": "BeautySalon",
+      "@id": `${getSiteUrl()}/#beautysalon`,
       "name": siteConfig.name,
       "url": getSiteUrl()
     },

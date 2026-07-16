@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Mail,
   MapPin,
+  MessageCircle,
   Phone,
   Shield,
   Sparkles,
@@ -90,6 +91,10 @@ export default async function LocalSeoLandingPage({ params }: Props) {
   const tNav = await getTranslations({ locale: localeKey, namespace: 'nav' });
   const tTreatment = await getTranslations({ locale: localeKey, namespace: 'treatmentPage' });
   const tTemplate = await getTranslations({ locale: localeKey, namespace: 'localSeoTemplate' });
+  const whatsappHref = `https://wa.me/${siteConfig.contact.whatsappPhone.replace(/\D/g, '')}`;
+  const relatedPages = localSeoLandingPages
+    .filter((candidate) => candidate.slug !== page.slug)
+    .slice(0, 6);
   const treatments = (
     await Promise.all(
       page.treatmentSlugs.map((treatmentSlug) =>
@@ -114,6 +119,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
     name: content.h1,
     description: content.description,
     image: page.image,
+    url: `/${localeKey}/${page.slug}`,
     treatments: treatments.map((treatment) => ({
       name: treatment.name,
       url: `/${localeKey}/treatments/${treatment.slug}`,
@@ -160,6 +166,9 @@ export default async function LocalSeoLandingPage({ params }: Props) {
                   <Link href={`/treatments/category/${page.categorySlug}`}>
                     {content.categoryCta}
                   </Link>
+                </Button>
+                <Button asChild variant="outline" className="min-h-11 rounded-md">
+                  <Link href="/pricelist">{tNav('pricelist')}</Link>
                 </Button>
               </div>
             </div>
@@ -273,11 +282,54 @@ export default async function LocalSeoLandingPage({ params }: Props) {
                 {content.categoryCta}
               </Link>
             </Button>
+            <Button asChild variant="outline" className="rounded-md">
+              <Link href="/pricelist">{tNav('pricelist')}</Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      <section className="section-spacing">
+      <section className="section-spacing" aria-labelledby="related-local-services">
+        <div className="container-custom">
+          <div className="mb-10 max-w-3xl">
+            <h2
+              id="related-local-services"
+              className="mb-4 font-sans text-3xl font-light text-[#241f1b] md:text-4xl"
+            >
+              {tNav('treatmentPortfolio')}
+            </h2>
+            <p className="leading-7 text-stone-700">
+              {tNav('treatmentPortfolioDescription')}
+            </p>
+          </div>
+          <div className="grid gap-px bg-[#d8cbbb] md:grid-cols-2 lg:grid-cols-3">
+            {relatedPages.map((relatedPage) => {
+              const relatedContent = relatedPage.content[localeKey];
+
+              return (
+                <Link
+                  key={relatedPage.slug}
+                  href={`/${relatedPage.slug}`}
+                  className="group bg-white p-7 transition-colors hover:bg-[#f7f2eb]"
+                >
+                  <h3 className="font-sans text-xl font-light text-[#241f1b]">
+                    {relatedContent.h1}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-stone-600">
+                    {relatedContent.description}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#8d6f58]">
+                    {tTreatment('learnMore')}
+                    <ChevronRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing bg-[#f7f4f0]">
         <div className="container-custom">
           <div className="grid gap-10 lg:grid-cols-[42%_58%]">
             <div>
@@ -290,7 +342,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
               <p className="leading-7 text-stone-700">{content.bookingText}</p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               <article className="border-t border-[#e8e4df] pt-5">
                 <CalendarCheck className="mb-4 h-6 w-6 text-[#8d6f58]" />
                 <h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">
@@ -324,12 +376,26 @@ export default async function LocalSeoLandingPage({ params }: Props) {
                   {siteConfig.contact.email}
                 </a>
               </article>
+              <article className="border-t border-[#e8e4df] pt-5">
+                <MessageCircle className="mb-4 h-6 w-6 text-[#8d6f58]" />
+                <h3 className="mb-2 text-xs uppercase tracking-[0.18em] text-stone-500">
+                  {tNav('whatsappShort')}
+                </h3>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm leading-6 text-[#241f1b] hover:text-[#8d6f58]"
+                >
+                  {siteConfig.contact.whatsappPhone}
+                </a>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-spacing bg-[#f7f4f0]">
+      <section className="section-spacing">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-8 font-sans text-3xl font-light text-[#241f1b] md:text-4xl">

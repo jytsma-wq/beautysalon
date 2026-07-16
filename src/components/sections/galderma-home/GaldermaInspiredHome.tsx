@@ -2,10 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
-import { siteConfig } from '@/data/site-config';
+import { beautySalonBatumiCopy } from '@/data/beauty-salon-batumi-copy';
+import { localSeoLandingPages } from '@/data/local-seo-pages';
+import type { Locale } from '@/i18n';
 import {
   getPopularTreatmentHighlights,
   portfolioHighlights,
@@ -51,19 +53,20 @@ function SectionHeading({
 }
 
 function PhilosophySection() {
-  const t = useTranslations('homeEditorial');
+  const locale = useLocale() as Locale;
+  const copy = beautySalonBatumiCopy[locale];
 
   return (
     <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
       <RevealOnScroll className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[42%_58%] lg:items-end">
           <SectionHeading
-            eyebrow={t('philosophy.eyebrow')}
-            title={t('philosophy.title')}
-            description={t('philosophy.description')}
+            eyebrow={copy.whyEyebrow}
+            title={copy.whyTitle}
+            description={copy.whyText}
           />
           <div className="border-t border-stone-200 pt-8">
             <p className="localized-statement-heading font-sans font-light text-[#241f1b]">
-              {t('philosophy.statement')}
+              {copy.servicesText}
             </p>
           </div>
       </RevealOnScroll>
@@ -73,11 +76,16 @@ function PhilosophySection() {
 
 function PortfolioSection() {
   const t = useTranslations('homeEditorial');
+  const locale = useLocale() as Locale;
+  const copy = beautySalonBatumiCopy[locale];
   const shouldReduceMotion = useHydratedReducedMotion();
+  const localCopies = ['dermal-fillers-batumi', 'botox-batumi', 'skin-treatment-batumi'].map(
+    (slug) => localSeoLandingPages.find((page) => page.slug === slug)!.content[locale]
+  );
   const items = portfolioHighlights.map((item, index) => ({
     ...item,
-    title: t(`portfolio.items.item${index + 1}.title`),
-    description: t(`portfolio.items.item${index + 1}.description`),
+    title: localCopies[index].h1,
+    description: localCopies[index].description,
   }));
 
   return (
@@ -85,9 +93,9 @@ function PortfolioSection() {
       <div className="mx-auto max-w-7xl">
         <RevealOnScroll className="mb-14 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
-            eyebrow={t('portfolio.eyebrow')}
-            title={t('portfolio.title')}
-            description={t('portfolio.description')}
+            eyebrow={copy.servicesEyebrow}
+            title={copy.servicesTitle}
+            description={copy.servicesText}
           />
           <Link
             href="/treatments"
@@ -230,35 +238,38 @@ function StatsSection() {
 }
 
 function SpecialistCta() {
-  const t = useTranslations('homeEditorial');
+  const locale = useLocale() as Locale;
+  const copy = beautySalonBatumiCopy[locale];
+  const tCommon = useTranslations('common');
+  const tNav = useTranslations('nav');
 
   return (
     <section className="bg-[#241f1b] px-6 py-24 text-white md:px-12 md:py-32 lg:px-16 xl:px-24">
       <RevealOnScroll className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[55%_45%] lg:items-center">
         <div>
           <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#d8cbbb]">
-            {t('cta.eyebrow')}
+            {copy.whyEyebrow}
           </p>
           <h2 className="localized-hero-heading font-sans font-light">
-            {t('cta.title')}
+            {copy.ctaTitle}
           </h2>
         </div>
         <div>
           <p className="max-w-lg text-base leading-8 text-stone-200 md:text-lg">
-            {t('cta.description', { clinicName: siteConfig.name })}
+            {copy.ctaText}
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/book"
               className="inline-flex h-12 items-center justify-center rounded-md bg-white px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#f7f2eb]"
             >
-              {t('cta.bookNow')}
+              {tCommon('bookNow')}
             </Link>
             <Link
               href="/contact-us"
               className="inline-flex h-12 items-center justify-center border border-white/60 px-7 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-white hover:text-[#241f1b]"
             >
-              {t('cta.contactUs')}
+              {tNav('contact')}
             </Link>
           </div>
         </div>

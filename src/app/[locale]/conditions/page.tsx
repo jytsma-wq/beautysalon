@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         : t('metaDescription'),
     keywords: localSeoKeywords,
     imageAlt: 'Skin care treatments at Silk Beauty Salon in Batumi, Georgia',
+    noIndex: true,
   });
 }
 

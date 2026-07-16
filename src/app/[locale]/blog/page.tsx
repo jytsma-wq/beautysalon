@@ -4,13 +4,14 @@ import { ChevronRight, Calendar, Clock } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { getBlogPosts } from '@/data/blog';
 import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
+import { isIndexableEditorialLocale } from '@/lib/search-index-policy';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'blogPage' });
 
   return buildSeoMetadata({
-    locale,
+    locale: isIndexableEditorialLocale(locale) ? locale : 'en',
     path: '/blog',
     title: locale === 'en' ? 'Beauty Care Blog in Batumi' : t('metaTitle'),
     description:
@@ -25,6 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ...localSeoKeywords,
     ],
     imageAlt: 'Silk Beauty Salon beauty care journal in Batumi, Georgia',
+    noIndex: !isIndexableEditorialLocale(locale),
+    alternateLocales: ['en'],
   });
 }
 

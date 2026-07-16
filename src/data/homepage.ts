@@ -2,10 +2,10 @@ import { baseTreatmentCategories } from './treatments';
 
 export const homeHeroSlides = [
   {
-    eyebrow: "Medical aesthetics in Batumi",
+    eyebrow: "Beauty and aesthetics in Batumi",
     title: "Confidence in your skin starts with a precise consultation.",
     description:
-      "Natural-looking injectables, skin quality treatments, and advanced device procedures planned around your anatomy, skin health, and lifestyle.",
+      "Compare consultation-led injectables, skin care, nails, lashes, starting prices, and booking options in one place.",
     image:
       "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&q=85",
     href: "/book",
@@ -15,7 +15,7 @@ export const homeHeroSlides = [
     eyebrow: "Skin quality",
     title: "Real solutions for real skin concerns.",
     description:
-      "From texture and pigmentation to hydration, firmness, and facial balance, every plan begins with a skin-first diagnosis.",
+      "From texture and hydration to acne-prone skin, start with clear service information and consultation when needed.",
     image:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=85",
     href: "/conditions",
@@ -25,7 +25,7 @@ export const homeHeroSlides = [
     eyebrow: "Injectables and contour",
     title: "Subtle volume. Considered contours. You, refreshed.",
     description:
-      "Dermal fillers and anti-wrinkle treatments delivered with restraint, symmetry, and respect for natural expression.",
+      "Read about dermal filler and anti-wrinkle consultations, starting prices, timing, and aftercare questions before booking.",
     image:
       "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1920&q=85",
     href: "/treatments",
@@ -37,35 +37,35 @@ export const skinConcernHighlights = [
   {
     name: "Fine lines and wrinkles",
     description: "Soften expression lines while preserving natural movement.",
-    href: "/conditions/fine-lines-wrinkles",
+    href: "/botox-batumi",
     image:
       "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=900&q=85",
   },
   {
     name: "Loss of firmness",
     description: "Support collagen, lift laxity, and refine facial structure.",
-    href: "/conditions/loss-of-firmness",
+    href: "/skin-treatment-batumi",
     image:
       "https://images.unsplash.com/photo-1552693673-1bf958298935?w=900&q=85",
   },
   {
     name: "Uneven tone",
     description: "Target pigmentation, dullness, and post-inflammatory marks.",
-    href: "/conditions/uneven-skin-tone",
+    href: "/skin-treatment-batumi",
     image:
       "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=900&q=85",
   },
   {
     name: "Dry skin",
     description: "Restore hydration, barrier function, and lasting luminosity.",
-    href: "/conditions/dry-skin",
+    href: "/skin-treatment-batumi",
     image:
       "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&q=85",
   },
   {
     name: "Acne and scarring",
     description: "Improve active breakouts, marks, and uneven texture.",
-    href: "/conditions/acne-scarring",
+    href: "/acne-treatment-batumi",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=85",
   },
 ];
@@ -75,7 +75,7 @@ export const portfolioHighlights = [
     title: "Dermal fillers",
     description:
       "Hyaluronic acid treatments for lips, cheeks, jawline, chin, under-eyes, and facial balancing.",
-    href: "/treatments#dermal-fillers",
+    href: "/dermal-fillers-batumi",
     image:
       "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&q=85",
   },
@@ -91,7 +91,7 @@ export const portfolioHighlights = [
     title: "Skin quality",
     description:
       "Peels, microneedling, diagnostics, and laser-led plans for stronger, brighter skin.",
-    href: "/treatments#skin-treatments",
+    href: "/skin-treatment-batumi",
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=85",
   },
@@ -106,27 +106,27 @@ export const popularTreatmentHighlights = [
   {
     id: 'dermalFillers',
     priceTreatmentSlug: 'lip-fillers',
-    href: '/treatments#dermal-fillers',
+    href: '/dermal-fillers-batumi',
   },
   {
     id: 'skinpen',
     priceTreatmentSlug: 'skinpen-microneedling',
-    href: '/treatments/skinpen-microneedling',
+    href: '/skin-treatment-batumi',
   },
   {
     id: 'fireIce',
     priceTreatmentSlug: 'is-clinical-fire-ice-peel',
-    href: '/treatments/is-clinical-fire-ice-peel',
+    href: '/skin-treatment-batumi',
   },
   {
     id: 'nails',
     priceTreatmentSlug: 'nails',
-    href: '/treatments/nails',
+    href: '/nails-batumi',
   },
   {
     id: 'lashes',
     priceTreatmentSlug: 'lashes',
-    href: '/treatments/lashes',
+    href: '/lashes-brows-batumi',
   },
 ] as const;
 
@@ -178,7 +178,7 @@ export const skinTrendArticles = [
 ];
 
 export const proofStats = [
-  { value: "1:1", label: "Consultation-first plans" },
-  { value: "6", label: "Languages supported" },
-{ value: "360", label: "Skin assessment" },
+  { value: "63", label: "Zurab Gorgiladze Street" },
+  { value: "6", label: "Website languages" },
+  { value: "7", label: "Days open each week" },
 ];

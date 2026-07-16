@@ -19,6 +19,41 @@ const treatmentTranslationAliases: Record<string, string> = {
   hair: 'hair-treatments',
 };
 
+const treatmentLandingHrefBySlug: Record<string, string> = {
+  botox: '/botox-batumi',
+  'dermal-fillers': '/dermal-fillers-batumi',
+  skin: '/skin-treatment-batumi',
+};
+
+const publicTreatmentCategorySlugs = new Set(['botox', 'dermal-fillers', 'skin', 'hair']);
+
+const menuCategoryDescriptions: Record<Locale, { treatment: string; condition: string }> = {
+  en: {
+    treatment: 'Review service information and confirm availability before booking.',
+    condition: 'Start with information, then confirm the appropriate appointment with the salon.',
+  },
+  ka: {
+    treatment: 'გაეცანით სერვისის ინფორმაციას და დაჯავშნამდე გადაამოწმეთ ხელმისაწვდომობა.',
+    condition: 'დაიწყეთ ინფორმაციით და შემდეგ სალონთან შეათანხმეთ შესაბამისი ვიზიტი.',
+  },
+  ru: {
+    treatment: 'Изучите информацию об услуге и уточните доступность перед записью.',
+    condition: 'Начните с информации, затем уточните подходящий визит у салона.',
+  },
+  tr: {
+    treatment: 'Hizmet bilgisini inceleyin ve rezervasyondan önce uygunluğu doğrulayın.',
+    condition: 'Bilgiyle başlayın, ardından uygun randevuyu salonla doğrulayın.',
+  },
+  ar: {
+    treatment: 'راجعي معلومات الخدمة وأكدي توفرها قبل الحجز.',
+    condition: 'ابدئي بالمعلومات ثم أكدي الموعد المناسب مع الصالون.',
+  },
+  he: {
+    treatment: 'עיינו במידע על השירות ואשרו זמינות לפני ההזמנה.',
+    condition: 'התחילו במידע ולאחר מכן אשרו עם הסלון את התור המתאים.',
+  },
+};
+
 const conditionTranslationAliases: Record<string, string> = {
   'acne-scarring': 'acne',
 };
@@ -296,7 +331,9 @@ export function GaldermaHeader() {
       href: '/treatments',
       description: overviewDescriptions[locale].treatments,
     },
-    ...baseTreatmentCategories.map((category) => {
+    ...baseTreatmentCategories
+      .filter((category) => publicTreatmentCategorySlugs.has(category.slug))
+      .map((category) => {
       const translationKey = treatmentTranslationAliases[category.slug] || category.slug;
       const fallback = treatmentFallbacks[locale][category.slug];
 
@@ -306,14 +343,14 @@ export function GaldermaHeader() {
           ['treatmentContent', translationKey, 'name'],
           fallback?.title || category.name,
         ),
-        href: `/treatments#${category.slug}`,
+        href: treatmentLandingHrefBySlug[category.slug] || `/treatments#${category.slug}`,
         description: getNestedString(
           messages,
           ['treatmentContent', translationKey, 'description'],
-          fallback?.description || category.description,
+          menuCategoryDescriptions[locale].treatment,
         ),
       };
-    }),
+      }),
   ];
 
   const skinConditionMegaMenuItems = [
@@ -336,7 +373,7 @@ export function GaldermaHeader() {
         description: getNestedString(
           messages,
           ['conditionContent', translationKey, 'shortDescription'],
-          fallback?.description || condition.shortDescription,
+          menuCategoryDescriptions[locale].condition,
         ),
       };
     }),

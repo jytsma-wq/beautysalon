@@ -3,6 +3,8 @@ import type { AnchorHTMLAttributes, ImgHTMLAttributes, ReactNode } from 'react';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import BeautySalonBatumiPage from '../page';
+import { beautySalonBatumiCopy } from '@/data/beauty-salon-batumi-copy';
+import { locales } from '@/i18n';
 
 vi.mock('next/image', () => ({
   default: ({
@@ -82,6 +84,23 @@ describe('BeautySalonBatumiPage', () => {
       expect(screen.queryByText(/Popular local searches/i)).not.toBeInTheDocument();
       expect(container.querySelector('a[href="/pricelist"]')).toBeInTheDocument();
       expect(container.querySelector('a[href="/book"]')).toBeInTheDocument();
+
+      unmount();
+    }
+  });
+
+  it('renders factual localized headings for every supported locale', async () => {
+    for (const locale of locales) {
+      const page = await BeautySalonBatumiPage({
+        params: Promise.resolve({ locale }),
+      });
+      const { container, unmount } = render(page);
+      const copy = beautySalonBatumiCopy[locale];
+
+      expect(screen.getByRole('heading', { level: 1, name: copy.h1 })).toBeInTheDocument();
+      expect(container.textContent).toContain(copy.intro);
+      expect(container.textContent).not.toContain('award-winning');
+      expect(container.textContent).not.toContain('laser technology');
 
       unmount();
     }

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { getSitemapRoutes } from '../sitemap-routes';
 
 describe('getSitemapRoutes', () => {
-  it('includes static, blog, treatment category, treatment, and condition SEO routes', async () => {
+  it('includes verified customer routes and excludes unverified discovery routes', async () => {
     const routes = await getSitemapRoutes();
     const paths = routes.map((route) => route.path);
 
@@ -19,8 +19,21 @@ describe('getSitemapRoutes', () => {
     expect(paths).toContain('/nails-batumi');
     expect(paths).toContain('/lashes-brows-batumi');
     expect(paths).toContain('/blog/beauty-salon-batumi-guide');
-    expect(paths).toContain('/treatments/category/dermal-fillers');
     expect(paths).toContain('/treatments/anti-wrinkle');
-    expect(paths).toContain('/conditions/acne-scarring');
+    expect(paths).toContain('/treatments/skinpen-microneedling');
+    expect(paths).not.toContain('/conditions/acne-scarring');
+    expect(paths).not.toContain('/conditions');
+    expect(paths).not.toContain('/treatments');
+    expect(paths).not.toContain('/treatments/category/dermal-fillers');
+    expect(paths).not.toContain('/treatments/alexandrite-laser-hair-removal');
+    expect(paths).not.toContain('/offers');
+    expect(paths).not.toContain('/media-press');
+    expect(paths).not.toContain('/media-gallery');
+    expect(paths).not.toContain('/careers');
+
+    const blogRoute = routes.find(
+      (route) => route.path === '/blog/beauty-salon-batumi-guide'
+    );
+    expect(blogRoute?.locales).toEqual(['en']);
   });
 });

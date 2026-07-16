@@ -2,6 +2,13 @@
 
 ## 2026-07-16
 
+- Added a branch-only index-quality policy that reduces the candidate sitemap from `528` currently observed live URLs to `184` focused URLs, preserves excluded routes with `noindex,follow`, and removes unsupported catalog, condition, category, duplicated editorial, and empty proof pages from search discovery.
+- Reworked actively rendered About, visitor, consultation, local-service, media, offer, career, homepage, metadata, and schema content to use verified business facts; unverified staff, awards, press, device/product, patient-count, discount, emergency-support, and outcome claims are no longer emitted by the checked pages.
+- Added a server-side client-message allowlist so dormant historic translation keys are not serialized into every route; local English homepage HTML decreased from approximately `241 KB` to `139,156` bytes without changing the visible design or six-locale navigation.
+- Strengthened canonical service-hub links to pricing, booking, related services, and the approved WhatsApp channel; kept existing URLs, menu behavior, RTL, analytics, email, and dependencies unchanged.
+- Added focused regression coverage for index policy, sitemap scope, noindex-follow metadata, factual six-locale content, client-message safety, schema exclusions, and canonical conversion links, plus a complete trust/index-quality audit.
+- Verified the branch candidate with TypeScript, ESLint, `375` passing tests (`12` skipped), six-locale translation validation, a successful production build, and clean diff whitespace checks.
+- Added a no-cost public search visibility survey covering branded, Botox, fillers, skin, acne, price, nails, lashes, and multilingual query samples; documented observed first-party page selection, competitor patterns, index lag, entity ambiguity, and prioritized trust/local-prominence actions without changing the website or public profiles.
 - Prepared a branch-only SEO trust cleanup that withholds unverified testimonials and stock-photo before/after result cases, conditionally omits their homepage sections, and keeps the empty before/after route out of search discovery until verified consented cases exist.
 - Removed unused schema helpers capable of generating fabricated aggregate ratings, review markup, or medical-study markup; the approved BeautySalon JSON-LD remains unchanged.
 - Added regression coverage for empty verified-content sources, before/after noindex/sitemap behavior, stock-patient removal, conditional homepage rendering, and prohibited schema helpers.

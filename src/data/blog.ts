@@ -39,7 +39,7 @@ const fallbackBlogPosts: BlogPost[] = [
       'A practical guide to choosing a beauty salon in Batumi, including consultation quality, hygiene, local convenience, and what to ask before booking.',
     image: '/images/hero-poster.jpg',
     category: 'Local Beauty Guide',
-    author: 'Nana Gviniashvili',
+    author: 'Silk Beauty Salon editorial team',
     readTime: '7 min read',
     locale: 'en',
     published: true,
@@ -54,8 +54,8 @@ const fallbackBlogPosts: BlogPost[] = [
       <p>For first-time clients, a consultation is also where expectations are set. Natural-looking results usually come from conservative planning, careful timing, and aftercare that the client can realistically follow. If you are comparing salons, ask how the practitioner decides whether to recommend an injectable, peel, laser treatment, skin analysis, or no treatment at all.</p>
 
       <h2>Look for visible trust signals</h2>
-      <p>Trustworthy salons make it easy to identify who provides care, where the salon is located, how to contact the team, and which services are suitable for your concern. A strong local beauty salon page should include a street address, phone number, email address, opening hours, practitioner names, treatment information, and booking instructions.</p>
-      <p>Silk Beauty Salon is located at Zurab Gorgiladze 63 in Batumi, Georgia. Clients can book online, call the salon, or email info@silkbeautysalon.online. The team includes Georgian, English, Russian, and Turkish-speaking practitioners, which helps local and international clients understand the plan before treatment begins.</p>
+      <p>Trustworthy salons make it easy to identify where the salon is located, how to contact the business, what services are described, and how booking works. A useful local beauty salon page should include a street address, phone number, email address, opening hours, service information, and booking instructions.</p>
+      <p>Silk Beauty Salon is located at Zurab Gorgiladze 63 in Batumi, Georgia. Clients can book online, call the salon, use WhatsApp, or email info@silkbeautysalon.online. The website is available in six languages; clients should confirm their preferred spoken language when booking.</p>
 
       <h2>Check the treatment information before booking</h2>
       <p>Before choosing a salon, read the treatment page rather than booking from the service name alone. A helpful treatment page should explain what the treatment is for, how long it takes, what results may look like, common downtime, and aftercare. You can start with the <a href="/en/treatments">Silk Beauty Salon treatment menu</a>, then compare individual treatments such as skin quality treatments, anti-wrinkle treatments, fillers, lashes, nails, and hair care.</p>
@@ -63,7 +63,7 @@ const fallbackBlogPosts: BlogPost[] = [
 
       <h2>Ask these questions before your appointment</h2>
       <ul>
-        <li>Who will perform my treatment, and what is their training area?</li>
+        <li>Who will perform my treatment, and what information can the salon provide about the service?</li>
         <li>What result is realistic for my skin, face shape, or beauty goal?</li>
         <li>What should I avoid before and after the appointment?</li>
         <li>How much downtime should I plan for?</li>
@@ -86,9 +86,9 @@ const fallbackBlogPosts: BlogPost[] = [
     slug: 'skin-care-batumi-seasonal-guide',
     excerpt:
       'How to plan a skin-care appointment in Batumi around humidity, sun exposure, travel, makeup, and aftercare, with practical guidance from the Silk team.',
-    image: '/images/natia-tsiklauri.jpg',
+    image: '/images/hero-poster.jpg',
     category: 'Skin Care',
-    author: 'Natia Tsiklauri',
+    author: 'Silk Beauty Salon editorial team',
     readTime: '8 min read',
     locale: 'en',
     published: true,
@@ -137,9 +137,9 @@ const fallbackBlogPosts: BlogPost[] = [
     slug: 'botox-fillers-batumi-consultation-guide',
     excerpt:
       'A client-focused guide to Botox and dermal filler consultations in Batumi, including planning questions, aftercare, and safety signals.',
-    image: '/images/nana-gviniashvili.jpg',
+    image: '/images/hero-poster.jpg',
     category: 'Injectables Safety',
-    author: 'Nana Gviniashvili',
+    author: 'Silk Beauty Salon editorial team',
     readTime: '9 min read',
     locale: 'en',
     published: true,
@@ -174,7 +174,7 @@ const fallbackBlogPosts: BlogPost[] = [
       <p>International clients visiting Batumi should leave enough time for review before traveling onward. The <a href="/en/international-clients">international clients guide</a> explains how to plan aesthetic appointments around a stay in Georgia.</p>
 
       <h2>How Silk approaches injectables</h2>
-      <p>At Silk Beauty Salon, injectable consultations focus on natural-looking results, facial balance, and conservative planning. The team explains treatment options in Georgian, English, and Russian so clients understand the plan before proceeding. You can learn more on the <a href="/en/botox-batumi">Botox in Batumi page</a>, compare the wider <a href="/en/treatments">treatments page</a>, or <a href="/en/book">book a consultation</a>.</p>
+      <p>At Silk Beauty Salon, injectable appointments begin with consultation and planning. The website is available in six languages; confirm your preferred spoken language directly when booking. You can learn more on the <a href="/en/botox-batumi">Botox in Batumi page</a>, compare the wider <a href="/en/treatments">treatments page</a>, or <a href="/en/book">book a consultation</a>.</p>
 
       <h2>Sources and further reading</h2>
       <ul>

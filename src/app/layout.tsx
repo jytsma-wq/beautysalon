@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: '%s | Silk Beauty Salon',
   },
   description:
-    'Silk Beauty Salon is a beauty salon in Batumi, Georgia for aesthetic treatments, injectables, laser treatments, skin care, nails, lashes, and consultations.',
+    'Silk Beauty Salon is a beauty salon in Batumi, Georgia for consultation-led Botox and filler appointments, skin care, nails, lashes, brows, and online booking.',
   keywords: localSeoKeywords,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: 'Beauty Salon in Batumi, Georgia | Silk Beauty Salon',
     description:
-      'Visit Silk Beauty Salon in Batumi, Georgia for premium beauty salon services and aesthetic treatments.',
+      'Visit Silk Beauty Salon in Batumi, Georgia for beauty services, starting prices, contact information, and online booking.',
     images: [
       {
         url: `${getSiteUrl()}/opengraph-image.png`,
@@ -104,8 +104,6 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        <link rel="preconnect" href="https://cdn.coverr.co" />
-        <link rel="dns-prefetch" href="https://cdn.coverr.co" />
       </head>
       <body className={`${inter.variable} ${dmSerifDisplay.variable}`}>{children}</body>
     </html>

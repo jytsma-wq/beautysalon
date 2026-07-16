@@ -4,7 +4,11 @@ import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import { ChevronRight, MapPin, Phone, Clock, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { treatmentCategories } from '@/data/navigation';
+import { aboutPageCopy, visitorPageCopy } from '@/data/factual-page-copy';
+import { beautySalonBatumiCopy } from '@/data/beauty-salon-batumi-copy';
+import { localSeoLandingPages } from '@/data/local-seo-pages';
+import { siteConfig } from '@/data/site-config';
+import { locales, type Locale } from '@/i18n';
 import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -33,22 +37,31 @@ export default async function ConsultationPage({
   const t = await getTranslations({ locale, namespace: 'consultation' });
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const localeKey = locales.includes(locale as Locale) ? (locale as Locale) : 'en';
+  const factualCopy = aboutPageCopy[localeKey];
+  const visitorCopy = visitorPageCopy[localeKey];
+  const hubCopy = beautySalonBatumiCopy[localeKey];
+  const servicePages = localSeoLandingPages.map((page) => ({
+    href: `/${page.slug}`,
+    title: page.content[localeKey].h1,
+    description: page.content[localeKey].description,
+  }));
 
   const features = [
     {
       icon: Star,
-      title: t('features.expert.title', { defaultValue: 'Expert Practitioners' }),
-      description: t('features.expert.description', { defaultValue: 'Our team includes certified aesthetic doctors and nurses with extensive experience.' }),
+      title: factualCopy.standardsTitle,
+      description: factualCopy.standards[0],
     },
     {
       icon: Clock,
       title: t('features.personalized.title', { defaultValue: 'Personalized Approach' }),
-      description: t('features.personalized.description', { defaultValue: 'Every treatment plan is tailored to your unique facial anatomy and aesthetic goals.' }),
+      description: factualCopy.standards[1],
     },
     {
       icon: MapPin,
       title: t('features.convenient.title', { defaultValue: 'Convenient Location' }),
-      description: t('features.convenient.description', { defaultValue: 'Easy access in central Batumi with comfortable, private treatment rooms.' }),
+      description: `${siteConfig.contact.address}, ${siteConfig.contact.city} ${siteConfig.contact.postcode}`,
     },
   ];
 
@@ -56,22 +69,22 @@ export default async function ConsultationPage({
     {
       number: '1',
       title: t('steps.consultation.title', { defaultValue: 'Initial Consultation' }),
-      description: t('steps.consultation.description', { defaultValue: 'Discuss your concerns, goals, and medical history with our specialist.' }),
+      description: visitorCopy.planSteps[0],
     },
     {
       number: '2',
       title: t('steps.assessment.title', { defaultValue: 'Skin Assessment' }),
-      description: t('steps.assessment.description', { defaultValue: 'Comprehensive analysis of your facial structure and skin condition.' }),
+      description: visitorCopy.planSteps[1],
     },
     {
       number: '3',
       title: t('steps.plan.title', { defaultValue: 'Treatment Plan' }),
-      description: t('steps.plan.description', { defaultValue: 'Receive a personalized treatment plan with recommendations and pricing.' }),
+      description: visitorCopy.planSteps[2],
     },
     {
       number: '4',
       title: t('steps.treatment.title', { defaultValue: 'Treatment' }),
-      description: t('steps.treatment.description', { defaultValue: 'Schedule your treatment at your convenience with our caring team.' }),
+      description: visitorCopy.planSteps[3],
     },
   ];
 
@@ -102,12 +115,10 @@ export default async function ConsultationPage({
             </nav>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold mb-6">
-              {t('hero.title', { defaultValue: 'Explore the possibilities with a treatment consultation' })}
+              {visitorCopy.title}
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-              {t('hero.description', { 
-                defaultValue: 'An essential part of treatment, the aesthetic consultation is where your journey begins. The better we understand your needs and desires, the more likely you will achieve the results you want.' 
-              })}
+              {visitorCopy.intro}
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
@@ -115,7 +126,7 @@ export default async function ConsultationPage({
                 className="bg-[#b5453a] hover:bg-[#8e3229] text-white rounded-none px-8 py-6 text-sm tracking-widest uppercase"
               >
                 <Link href="/book">
-                  {t('hero.cta', { defaultValue: 'Book Consultation' })}
+                  {visitorCopy.book}
                 </Link>
               </Button>
               <Button
@@ -157,12 +168,10 @@ export default async function ConsultationPage({
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">
-              {t('journey.title', { defaultValue: 'Your Aesthetic Journey' })}
+              {visitorCopy.planTitle}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t('journey.subtitle', { 
-                defaultValue: 'From consultation to results, we guide you through every step of your transformation.' 
-              })}
+              {visitorCopy.planText}
             </p>
           </div>
 
@@ -189,32 +198,26 @@ export default async function ConsultationPage({
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-semibold text-primary mb-4">
-              {t('treatments.title', { defaultValue: 'Treatments We Offer' })}
+              {hubCopy.servicesTitle}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t('treatments.subtitle', { 
-                defaultValue: 'Comprehensive aesthetic solutions for every concern.' 
-              })}
+              {hubCopy.servicesText}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {treatmentCategories.slice(0, 6).map((category) => (
+            {servicePages.map((service) => (
               <Link
-                key={category.slug}
-                href={category.href}
+                key={service.href}
+                href={service.href}
                 className="group block py-6 border-t border-[#e8e4df]"
               >
                 <h3 className="font-serif text-xl font-semibold text-primary mb-2 group-hover:text-[#b5453a] transition-colors">
-                  {category.name}
+                  {service.title}
                 </h3>
-                <ul className="space-y-1 mb-3">
-                  {category.items.slice(0, 3).map((item) => (
-                    <li key={item.slug} className="text-sm text-muted-foreground">
-                      {item.name}
-                    </li>
-                  ))}
-                </ul>
+                <p className="mb-3 text-sm leading-6 text-muted-foreground">
+                  {service.description}
+                </p>
                 <span className="text-[#b5453a] text-sm">
                   {t('treatments.explore', { defaultValue: 'Explore treatments ->' })}
                 </span>
@@ -239,19 +242,17 @@ export default async function ConsultationPage({
         
         <div className="container-custom relative z-10 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
-            {t('cta.title', { defaultValue: 'Ready to Start Your Journey?' })}
+              {hubCopy.ctaTitle}
           </h2>
           <p className="text-white/80 max-w-xl mx-auto mb-8">
-            {t('cta.description', { 
-              defaultValue: 'Book your consultation today and take the first step towards enhanced natural beauty.' 
-            })}
+            {hubCopy.ctaText}
           </p>
           <Button
             asChild
             className="bg-[#b5453a] hover:bg-[#8e3229] text-white rounded-none px-8 py-6 text-sm tracking-widest uppercase"
           >
             <Link href="/book">
-              {t('cta.button', { defaultValue: 'Find a Specialist' })}
+              {hubCopy.ctaButton}
             </Link>
           </Button>
         </div>

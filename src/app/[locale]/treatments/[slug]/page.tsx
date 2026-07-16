@@ -11,6 +11,7 @@ import {
 import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
+import { isIndexableTreatmentSlug } from '@/lib/search-index-policy';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -44,6 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [treatment.name, `${treatment.name} Batumi`, `${treatment.name} Georgia`, ...localSeoKeywords],
     image: treatment.image,
     imageAlt: `${treatment.name} at Silk Beauty Salon in Batumi, Georgia`,
+    noIndex: !isIndexableTreatmentSlug(resolvedParams.slug),
   });
 }
 
@@ -246,20 +248,6 @@ export default async function TreatmentPage({ params }: Props) {
 
         <div className="clear-both" />
       </div>
-
-      <section className="border-y border-stone-200 py-16 md:py-24">
-        <div className="mx-auto max-w-4xl px-8 text-center md:px-16">
-          <blockquote className="mx-auto max-w-3xl font-serif text-2xl italic leading-tight text-stone-800 md:text-3xl lg:text-4xl">
-            &ldquo;The goal is not to erase expression, but to refine it and let your
-            natural beauty read more clearly.&rdquo;
-          </blockquote>
-          <footer className="mt-8">
-            <cite className="not-italic text-sm text-stone-500">
-              Dr. Ana Beridze, Medical Director
-            </cite>
-          </footer>
-        </div>
-      </section>
 
       {treatment.faqs && treatment.faqs.length > 0 ? (
         <section className="mx-auto max-w-3xl px-8 py-16 md:px-16 md:py-24">
