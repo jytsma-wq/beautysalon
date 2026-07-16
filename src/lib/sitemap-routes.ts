@@ -33,7 +33,6 @@ export const staticSitemapRoutes: SitemapRoute[] = [
   { path: '/international-clients', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/pricelist', changeFrequency: 'weekly', priority: 0.75 },
   { path: '/offers', changeFrequency: 'weekly', priority: 0.75 },
-  { path: '/before-after', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/blog', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/faq', changeFrequency: 'monthly', priority: 0.65 },
   { path: '/download', changeFrequency: 'monthly', priority: 0.65 },

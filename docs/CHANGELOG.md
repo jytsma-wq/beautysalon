@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-16
+
+- Prepared a branch-only SEO trust cleanup that withholds unverified testimonials and stock-photo before/after result cases, conditionally omits their homepage sections, and keeps the empty before/after route out of search discovery until verified consented cases exist.
+- Removed unused schema helpers capable of generating fabricated aggregate ratings, review markup, or medical-study markup; the approved BeautySalon JSON-LD remains unchanged.
+- Added regression coverage for empty verified-content sources, before/after noindex/sitemap behavior, stock-patient removal, conditional homepage rendering, and prohibited schema helpers.
+- Added a no-cost Google Business and website trust strategy with an owner evidence gate for staff, credentials, awards, association membership, product brands, licensing, language, and emergency-support claims. No public profile edit or deployment was made.
+
 ## 2026-07-12
 
 - Renamed the customer-facing Venue Rental label and English page heading to Salon Space Rental, aligned all six localized menu labels and the Chair Rental cross-link, and preserved the existing `/venue-rental-batumi` URL for link and SEO continuity.

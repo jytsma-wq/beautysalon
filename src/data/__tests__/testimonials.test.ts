@@ -83,10 +83,7 @@ describe('testimonial credibility metadata', () => {
     expect(getTestimonialQuote(testimonial, 'ru')).toBe('Original English quote.');
   });
 
-  it('does not require invented photos or dates for existing testimonials', () => {
-    expect(testimonials).toHaveLength(8);
-    expect(testimonials.every((testimonial) => testimonial.avatarUrl === undefined)).toBe(true);
-    expect(testimonials.every((testimonial) => testimonial.reviewDate === undefined)).toBe(true);
-    expect(testimonials.some((testimonial) => testimonial.treatmentType)).toBe(true);
+  it('publishes no testimonials until their source and permission are verified', () => {
+    expect(testimonials).toEqual([]);
   });
 });

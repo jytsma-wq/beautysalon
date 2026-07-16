@@ -1,9 +1,18 @@
 # Google Business Profile Optimization Log
 
-Date: 2026-07-04; latest execution update 2026-07-09
+Date: 2026-07-04; latest execution update 2026-07-16
 Phase: 3 - Google Business Profile audit and safe optimization plan
 Branch: `codex/visibility-readiness-audit`
 Mode: owner-approved service-only publication plus documentation
+
+## Trust And Entity Strategy Update - 2026-07-16
+
+- No Google Business Profile field was changed in this pass.
+- The account-side profile could not be rechecked because the in-app browser automation runtime was unavailable; pending service/public-address status remains unconfirmed rather than guessed.
+- Website review/result content was audited against the recorded Google baseline of zero Google reviews. A branch-only cleanup now withholds unverified testimonials and stock-photo result comparisons until sources and consent are verified.
+- GBP priorities remain: recheck the six service edits, resolve the `Dermal fillers` duplicate with owner approval, confirm postal code `6010`, upload real owner-approved photos, and launch ethical review requests to real clients.
+- Staff credentials, awards, association membership, product-brand use, licensing, language ability, and 24/7 support claims must be evidenced before reuse in GBP services, description, posts, or Q&A.
+- The detailed evidence gate and 7/30/90-day plan are in `docs/SEO_TRUST_AND_GOOGLE_BUSINESS_STRATEGY.md`.
 
 ## Safety Rules Applied
 

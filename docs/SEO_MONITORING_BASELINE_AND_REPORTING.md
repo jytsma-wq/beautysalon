@@ -5,6 +5,15 @@ Phase: 8 - Reporting and operating rhythm
 Branch: `codex/visibility-readiness-audit`
 Mode: public technical baseline plus private-data access plan; no account settings changed
 
+## Trust Baseline Update - 2026-07-16
+
+- Branch-only cleanup removes unverified testimonials and stock-photo before/after cases from publishable data.
+- The localized `/before-after` route is marked `noindex` and removed from the sitemap until verified same-client images, accurate treatment details, and publication consent exist.
+- Dormant review-rating and medical-study schema helpers are removed; live BeautySalon JSON-LD remains the only approved local-business schema path and must continue to exclude reviews and `aggregateRating`.
+- Staff, credential, award, association, product-brand, licensing, language, and 24/7-support claims remain an owner-evidence backlog. They are not new SEO assets until verified.
+- Search Console and GBP account status was not refreshed in this pass because browser automation was unavailable. Existing dates and counts below remain historical snapshots, not a new account baseline.
+- Next monitoring pass: recheck GSC indexing, pending GBP services, postal-code display, real review count, and photo count as soon as account-side browser access is restored.
+
 ## Safety Rules Applied
 
 - No Google, Bing, Hostinger, analytics, ads, social, or booking settings were changed.

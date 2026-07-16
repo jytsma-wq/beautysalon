@@ -22,4 +22,10 @@ describe('sitemap', () => {
       });
     }
   });
+
+  it('excludes the unverified before-and-after gallery from discovery', async () => {
+    const entries = await sitemap();
+
+    expect(entries.some((entry) => entry.url.includes('/before-after'))).toBe(false);
+  });
 });

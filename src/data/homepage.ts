@@ -143,32 +143,15 @@ export function getPopularTreatmentHighlights() {
   }));
 }
 
-export const resultCases = [
-  {
-    treatment: "Cheek and mid-face support",
-    detail: "Restored volume with a soft, lifted contour.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=900&q=85",
-    afterImage:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=900&q=85",
-  },
-  {
-    treatment: "Lip hydration and shape",
-    detail: "Defined border, balanced volume, natural finish.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&q=85",
-    afterImage:
-      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=900&q=85",
-  },
-  {
-    treatment: "Skin radiance plan",
-    detail: "Improved brightness, texture, and surface refinement.",
-    beforeImage:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&q=85",
-    afterImage:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&q=85",
-  },
-];
+export interface ResultCase {
+  treatment: string;
+  detail: string;
+  beforeImage: string;
+  afterImage: string;
+}
+
+// Add only same-client case images with documented publication consent.
+export const resultCases: ResultCase[] = [];
 
 export const skinTrendArticles = [
   {

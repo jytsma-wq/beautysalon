@@ -6,7 +6,13 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { siteConfig } from '@/data/site-config';
-import { getPopularTreatmentHighlights, portfolioHighlights, proofStats } from '@/data/homepage';
+import {
+  getPopularTreatmentHighlights,
+  portfolioHighlights,
+  proofStats,
+  resultCases,
+} from '@/data/homepage';
+import { testimonials } from '@/data/testimonials';
 import { RevealOnScroll } from '@/components/effects/RevealOnScroll';
 import { VisitUsSection } from '@/components/sections/VisitUsSection';
 import { useHydratedReducedMotion } from '@/hooks/use-hydrated-reduced-motion';
@@ -287,41 +293,45 @@ export function GaldermaInspiredHome() {
       <PopularTreatmentsSection />
       <StatsSection />
 
-      <section className="bg-[#f7f2eb] px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
-        <div className="mx-auto max-w-7xl">
-          <RevealOnScroll className="mb-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <SectionHeading
-              eyebrow={t('results.eyebrow')}
-              title={t('results.title')}
-              description={t('results.description')}
-            />
-            <Link
-              href="/before-after"
-              className="inline-flex h-12 items-center self-start border border-[#241f1b] px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
-            >
-              {t('results.cta')}
-            </Link>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.08}>
-            <ResultsCarousel />
-          </RevealOnScroll>
-        </div>
-      </section>
+      {resultCases.length > 0 ? (
+        <section className="bg-[#f7f2eb] px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+          <div className="mx-auto max-w-7xl">
+            <RevealOnScroll className="mb-12 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+              <SectionHeading
+                eyebrow={t('results.eyebrow')}
+                title={t('results.title')}
+                description={t('results.description')}
+              />
+              <Link
+                href="/before-after"
+                className="inline-flex h-12 items-center self-start border border-[#241f1b] px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+              >
+                {t('results.cta')}
+              </Link>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.08}>
+              <ResultsCarousel />
+            </RevealOnScroll>
+          </div>
+        </section>
+      ) : null}
 
-      <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
-        <div className="mx-auto max-w-7xl">
-          <RevealOnScroll className="mb-12">
-            <SectionHeading
-              eyebrow={t('reviews.eyebrow')}
-              title={t('reviews.title')}
-              description={t('reviews.description')}
-            />
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.08}>
-            <ReviewsCarousel />
-          </RevealOnScroll>
-        </div>
-      </section>
+      {testimonials.length > 0 ? (
+        <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+          <div className="mx-auto max-w-7xl">
+            <RevealOnScroll className="mb-12">
+              <SectionHeading
+                eyebrow={t('reviews.eyebrow')}
+                title={t('reviews.title')}
+                description={t('reviews.description')}
+              />
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.08}>
+              <ReviewsCarousel />
+            </RevealOnScroll>
+          </div>
+        </section>
+      ) : null}
 
       <SpecialistCta />
       <VisitUsSection />
