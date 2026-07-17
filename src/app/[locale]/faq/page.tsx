@@ -3,6 +3,7 @@ import { Link } from '@/i18n/routing';
 import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { getTranslations } from 'next-intl/server';
+import { buildSeoMetadata } from '@/lib/seo';
 import {
   Accordion,
   AccordionContent,
@@ -14,10 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'faqPage' });
 
-  return {
+  return buildSeoMetadata({
+    locale,
+    path: '/faq',
     title: t('title'),
     description: t('subtitle'),
-  };
+  });
 }
 
 export default async function FAQPage({

@@ -6,17 +6,22 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { siteConfig } from '@/data/site-config';
+import { buildSeoMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'accessibility' });
-  return {
+  return buildSeoMetadata({
+    locale,
+    path: '/accessibility',
     title: t('pageTitle'),
     description: t('pageDescription'),
-  };
+  });
 }
 
 export default function AccessibilityPage(): React.JSX.Element {
@@ -129,10 +134,10 @@ export default function AccessibilityPage(): React.JSX.Element {
           {t('feedbackText')}
         </p>
         <a
-          href="mailto:accessibility@silkbeautysalon.com"
+          href={`mailto:${siteConfig.contact.email}`}
           className="text-primary hover:underline font-medium"
         >
-          accessibility@silkbeautysalon.com
+          {siteConfig.contact.email}
         </a>
       </section>
 

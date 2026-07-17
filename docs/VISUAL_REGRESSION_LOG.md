@@ -1,5 +1,31 @@
 # Visual Regression Log
 
+## 2026-07-16 - Complete production-preview audit
+
+Scope:
+- All `184` URLs emitted by the local production sitemap, `432` same-origin links, representative desktop/mobile/RTL routes, primary navigation, forms, consent, conversion controls, schema, and hero loading behavior.
+- Narrow fixes to support-page metadata, locale-switcher path construction, and centralized support contact email output.
+- Existing visual design, section order, six-locale structure, booking flow, analytics behavior, email-sending behavior, dependencies, and public production were not intentionally changed.
+
+Browser verification:
+- Local production preview: `http://127.0.0.1:4314/en`.
+- Sitemap crawl: all `184` URLs returned HTTP `200`; every page had a title, description, expected canonical, index policy, and one visible H1; `432` same-origin links produced no broken targets.
+- Desktop/mobile route sample: `28` renders covering all locale roots, booking, treatment, pricing, contact, Botox, skin, salon-space rental, chair rental, and app-download pages had no broken visible images, console errors, page errors, framework overlays, or horizontal overflow.
+- RTL: Arabic and Hebrew roots retained `dir="rtl"` and had no horizontal overflow.
+- Navigation: desktop Treatments, Skin Conditions, and More menus worked; mobile menu opened/closed and retained Salon Space Rental, Chair Rental, Download App, and Booking; the language switcher exposed six correct locale-root links.
+- Conversion: booking form and time slots rendered; contact form fetched CSRF and enforced required fields; sticky mobile Book/WhatsApp bar appeared after the hero and hid on protected/form areas and behind cookie consent; Visit Us retained real address text, lazy map iframe, directions, phone, and approved WhatsApp links.
+- Consent/API: reject persisted non-analytics consent. With safe non-secret preview environment placeholders, missing CSRF returned `403` and valid CSRF plus invalid input returned `400` for newsletter, contact, and booking endpoints.
+- SEO/performance: homepage BeautySalon JSON-LD parsed with phone `+995 577 34 57 67`, postal code `6010`, and no review/aggregate-rating markup; the first hero image remained eager/high priority while inactive slides remained lazy/low priority.
+- Accessibility: Axe reported zero WCAG A/AA violations on nine representative English and RTL routes.
+
+Fixes verified:
+- FAQ, accessibility, privacy, and terms pages now emit self-canonical, `en/ka/ru/tr/ar/he` hreflang, and `x-default` metadata.
+- Language switching on support pages no longer creates nested paths such as `/ka/ka/accessibility`.
+- Accessibility and terms contact links now use the shared `info@silkbeautysalon.online` value.
+
+Remaining local-preview limitation:
+- Production email/database delivery cannot be exercised without production secrets and live data services. This audit used invalid payloads only and did not send email, create bookings, or alter customer records.
+
 ## 2026-07-12 - Chair rental page and More navigation
 
 Scope:

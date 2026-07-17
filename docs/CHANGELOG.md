@@ -2,6 +2,10 @@
 
 ## 2026-07-16
 
+- Completed a production-preview audit of all `184` sitemap URLs and `432` same-origin links; every sitemap route returned HTTP `200`, no broken internal links or checked placeholder/trust claims were found, and priority desktop/mobile/RTL interaction checks reported no console, hydration, image, or horizontal-overflow failures.
+- Added self-canonical, six-locale hreflang, and `x-default` metadata to the localized FAQ, accessibility, privacy, and terms pages; corrected locale-switcher URL generation so support pages no longer produce nested locale paths.
+- Centralized the accessibility and terms contact addresses on the verified `info@silkbeautysalon.online` site configuration value, with focused metadata and locale-path regression tests.
+- Verified menus, the six-language switcher, booking and contact UI validation, consent persistence, sticky mobile booking/WhatsApp behavior, Visit Us, pricing, homepage schema, hero priority hints, and CSRF rejection/validation boundaries; nine representative routes reported zero Axe WCAG A/AA violations.
 - Added a branch-only index-quality policy that reduces the candidate sitemap from `528` currently observed live URLs to `184` focused URLs, preserves excluded routes with `noindex,follow`, and removes unsupported catalog, condition, category, duplicated editorial, and empty proof pages from search discovery.
 - Reworked actively rendered About, visitor, consultation, local-service, media, offer, career, homepage, metadata, and schema content to use verified business facts; unverified staff, awards, press, device/product, patient-count, discount, emergency-support, and outcome claims are no longer emitted by the checked pages.
 - Added a server-side client-message allowlist so dormant historic translation keys are not serialized into every route; local English homepage HTML decreased from approximately `241 KB` to `139,156` bytes without changing the visible design or six-locale navigation.

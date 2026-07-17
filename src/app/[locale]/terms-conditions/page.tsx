@@ -2,14 +2,18 @@ import { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { siteConfig } from '@/data/site-config';
+import { buildSeoMetadata } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'termsConditions' });
-  return {
-    title: `${t('title')} | Silk Beauty Salon`,
+  return buildSeoMetadata({
+    locale,
+    path: '/terms-conditions',
+    title: t('title'),
     description: t('subtitle'),
-  };
+  });
 }
 
 export default async function TermsConditionsPage({
@@ -148,7 +152,7 @@ export default async function TermsConditionsPage({
                 {t('contactTitle')}
               </h2>
               <p className="text-base leading-8 text-stone-700">
-                {t('contactText')} info@silkbeautysalon.ge
+                {t('contactText')} {siteConfig.contact.email}
               </p>
             </div>
           </div>

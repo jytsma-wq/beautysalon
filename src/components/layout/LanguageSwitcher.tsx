@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from '@/i18n/routing';
 import { locales, localeNames, type Locale } from '@/i18n';
 import { trackLanguageChange } from '@/lib/analytics';
+import { getLocalizedPathname } from '@/lib/locale-path';
 
 export function LanguageSwitcher() {
   const t = useTranslations('common');
@@ -14,7 +15,7 @@ export function LanguageSwitcher() {
   const currentPathname = pathname || '/';
 
   const getLocalizedHref = (newLocale: Locale) =>
-    `/${newLocale}${currentPathname === '/' ? '' : currentPathname}`;
+    getLocalizedPathname(currentPathname, newLocale);
 
   const handleLocaleChange = (event: MouseEvent<HTMLAnchorElement>, newLocale: Locale) => {
     if (newLocale === locale) {

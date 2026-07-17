@@ -4,7 +4,7 @@ Date: 2026-07-16
 
 Branch: `codex/seo-trust-and-entity-cleanup`
 
-Status: local candidate only; not pushed or deployed
+Status: review branch candidate; not merged to production or deployed
 
 ## Objective
 
@@ -84,6 +84,12 @@ This is crawl prioritization, not a promise that Google or Bing will index or ra
 - Twenty-five final production-preview route/API checks returned HTTP `200`, with no browser console or hydration errors in the checked desktop/mobile flows.
 - No checked page emitted the prohibited placeholder phone, fake practitioner names, award/press claims, patient-count claims, or discount claims.
 - Homepage JSON-LD remained parseable and excluded reviews and `aggregateRating`.
+- A complete production-preview crawl checked all `184` sitemap URLs and `432` same-origin links with no non-200 sitemap routes or broken internal targets.
+- FAQ, accessibility, privacy, and terms pages now emit self-canonical, six-locale hreflang, and `x-default` metadata.
+- Locale-switcher path regression coverage prevents nested locale paths on localized support pages.
+- Twenty-eight representative desktop/mobile/RTL renders passed without broken visible images, console errors, hydration errors, framework overlays, or horizontal overflow.
+- Nine representative routes reported zero Axe WCAG A/AA violations.
+- Newsletter, contact, and booking CSRF boundaries were checked with safe non-secret preview environment placeholders: missing tokens returned `403`, while valid tokens with invalid payloads returned `400`.
 
 Final command results:
 

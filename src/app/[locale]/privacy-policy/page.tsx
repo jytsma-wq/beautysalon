@@ -2,14 +2,17 @@ import { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { buildSeoMetadata } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'privacyPolicy' });
-  return {
-    title: `${t('title')} | Silk Beauty Salon`,
+  return buildSeoMetadata({
+    locale,
+    path: '/privacy-policy',
+    title: t('title'),
     description: t('subtitle'),
-  };
+  });
 }
 
 export default async function PrivacyPolicyPage({
