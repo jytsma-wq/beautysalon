@@ -4,7 +4,7 @@ Date: 2026-07-16
 
 Branch: `codex/seo-trust-and-entity-cleanup`
 
-Status: review branch candidate; not merged to production or deployed
+Status: released to production `main` at `232a778` and live-verified on 2026-07-17
 
 ## Objective
 

@@ -2,6 +2,7 @@
 
 ## 2026-07-16
 
+- Released the reviewed SEO trust, crawl-surface, and localized support-metadata commits to production `main` at `232a778` on 2026-07-17. Hostinger live verification passed across all `184` sitemap URLs, `18` representative browser routes, `/api/health`, robots, localized support canonicals/hreflang, six-language switching, and the approved BeautySalon schema/NAP fields.
 - Completed a production-preview audit of all `184` sitemap URLs and `432` same-origin links; every sitemap route returned HTTP `200`, no broken internal links or checked placeholder/trust claims were found, and priority desktop/mobile/RTL interaction checks reported no console, hydration, image, or horizontal-overflow failures.
 - Added self-canonical, six-locale hreflang, and `x-default` metadata to the localized FAQ, accessibility, privacy, and terms pages; corrected locale-switcher URL generation so support pages no longer produce nested locale paths.
 - Centralized the accessibility and terms contact addresses on the verified `info@silkbeautysalon.online` site configuration value, with focused metadata and locale-path regression tests.
