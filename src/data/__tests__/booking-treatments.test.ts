@@ -4,8 +4,9 @@ import { locales } from '@/i18n';
 
 describe('booking treatment options', () => {
   it('keeps the website booking dropdown aligned with the mobile app menu shape', () => {
-    expect(bookingTreatments).toHaveLength(16);
+    expect(bookingTreatments).toHaveLength(17);
     expect(bookingTreatments.map((treatment) => treatment.id)).toEqual([
+      'consultation-not-sure',
       'lip-filler-1ml',
       'botox-forehead',
       'botox-full-face',
@@ -29,8 +30,8 @@ describe('booking treatment options', () => {
     const georgianOptions = getBookingTreatmentOptions('ka');
     const firstOption = georgianOptions[0];
 
-    expect(firstOption.label).toBe('ტუჩების შევსება - რუსული ტექნიკა (1მლ)');
-    expect(firstOption.value).toBe('Lip Filler - Russian Technique (1ml)');
+    expect(firstOption.label).toBe('კონსულტაცია / არ ვიცი, რა დავჯავშნო');
+    expect(firstOption.value).toBe('Consultation / Not sure what to book');
   });
 
   it('has a label for every supported website language', () => {

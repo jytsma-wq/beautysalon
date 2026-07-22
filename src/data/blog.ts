@@ -1,3 +1,16 @@
+import {
+  appointmentPolicies,
+  treatmentPlanningKnowledge,
+} from '@/data/client-service-knowledge';
+import {
+  productKnowledgeEntries,
+  unresolvedSalonProductAreas,
+} from '@/data/product-knowledge';
+import {
+  salonProductInventory,
+  salonProductVerificationFields,
+} from '@/data/salon-product-inventory';
+
 const isPlaceholderBuild =
   process.env.SKIP_ENV_VALIDATION === '1' &&
   process.env.DATABASE_URL?.includes('build:build@localhost');
@@ -30,7 +43,214 @@ export interface BlogPostSummary {
   createdAt: Date;
 }
 
+const appointmentGuideTreatments = [
+  ['anti-wrinkle', 'Anti-wrinkle injections'],
+  ['masseter-botox', 'Masseter treatment'],
+  ['hyperhidrosis', 'Excessive-sweating treatment'],
+  ['lip-fillers', 'Lip fillers'],
+  ['skinpen-microneedling', 'SkinPen microneedling'],
+  ['is-clinical-fire-ice-peel', 'iS Clinical Fire & Ice'],
+  ['nails', 'Nail services'],
+  ['lashes', 'Lash services'],
+] as const;
+
+function buildAppointmentGuideContent(): string {
+  const treatmentSections = appointmentGuideTreatments
+    .map(([slug, title]) => {
+      const knowledge = treatmentPlanningKnowledge[slug];
+
+      return `
+        <h2 id="${slug}">${title}</h2>
+        <p><a href="/en/treatments/${slug}">View the current service page</a> for the published starting price and appointment duration.</p>
+        <dl>
+          <dt><strong>Expected results</strong></dt>
+          <dd>${knowledge.results}</dd>
+          <dt><strong>Downtime and social planning</strong></dt>
+          <dd>${knowledge.downtime}</dd>
+          <dt><strong>Sessions</strong></dt>
+          <dd>${knowledge.sessions}</dd>
+          <dt><strong>Preparation</strong></dt>
+          <dd>${knowledge.preparation}</dd>
+          <dt><strong>Comfort</strong></dt>
+          <dd>${knowledge.comfort}</dd>
+          <dt><strong>Safety boundary</strong></dt>
+          <dd>${knowledge.safety}</dd>
+        </dl>
+      `;
+    })
+    .join('\n');
+
+  return `
+    <p>This guide collects the practical questions clients most often ask before requesting an appointment at Silk Beauty Salon: price, duration, expected result, downtime, number of sessions, preparation, comfort, aftercare, and when a human must answer.</p>
+
+    <h2>First: a booking request is not yet a confirmed appointment</h2>
+    <p>The online form sends a preferred treatment, date, and time to the salon. The team aims to confirm the request within ${appointmentPolicies.bookingRequestConfirmationHours} hours. Do not make travel or event plans around the requested time until the salon confirms it.</p>
+    <ul>
+      <li><strong>Cancellation:</strong> contact the salon at least ${appointmentPolicies.cancellationNoticeHours} hours before the appointment.</li>
+      <li><strong>Rescheduling:</strong> contact the salon at least ${appointmentPolicies.rescheduleNoticeHours} hours before the appointment.</li>
+      <li><strong>Not sure what to choose:</strong> select “Consultation / Not sure what to book” in the booking form.</li>
+      <li><strong>Price:</strong> a “from” price is a starting point, not a final quote. The salon must confirm the exact service and price.</li>
+    </ul>
+
+    <h2>What the website can answer—and what it cannot</h2>
+    <p>The eight services below have an owner-supported customer journey and structured planning information. Other treatment names may still be visible on older website pages, but their availability and details have not yet been approved for automated answers. For those services, ask the salon to confirm availability, price, duration, preparation, suitability, and aftercare.</p>
+    <p>The website and future chatbot can explain published service information and help prepare a booking request. They cannot diagnose a condition, decide whether an injectable or skin treatment is safe for an individual, identify a complication, prescribe aftercare for unexpected symptoms, or guarantee a result.</p>
+
+    ${treatmentSections}
+
+    <h2>Questions that always go to a person</h2>
+    <ul>
+      <li>“Am I suitable?” or “Is this safe with my condition or medicine?”</li>
+      <li>Questions involving pregnancy, breastfeeding, allergies, active infection, recent procedures, or a previous reaction.</li>
+      <li>Unexpected, worsening, or urgent symptoms during or after treatment.</li>
+      <li>Requests for a diagnosis, exact product or dose, guaranteed result, or individual medical advice.</li>
+      <li>Any service whose availability or details have not yet been verified on the website.</li>
+    </ul>
+
+    <h2>How to request the right appointment</h2>
+    <p>Use the <a href="/en/book">online booking form</a> and select the consultation option when you are unsure. In the notes, describe your goal, important dates, previous treatments, and the amount of downtime you can accept. You can also use the <a href="/en/contact-us">contact page</a> to call, email, or reach the salon on WhatsApp.</p>
+
+    <h2>Manufacturer information used for the skin-treatment sections</h2>
+    <ul>
+      <li><a href="https://www.skinpen.com/the-treatment" target="_blank" rel="noopener noreferrer">SkinPen: the treatment</a></li>
+      <li><a href="https://www.skinpen.com/faqs/" target="_blank" rel="noopener noreferrer">SkinPen: frequently asked questions</a></li>
+      <li><a href="https://www.isclinical.com/pages/fire-and-ice" target="_blank" rel="noopener noreferrer">iS Clinical: Fire & Ice</a></li>
+    </ul>
+  `;
+}
+
+function buildProductLibraryContent(): string {
+  const inventoryRows = salonProductInventory
+    .map(
+      (item) => `
+        <tr>
+          <td>${item.area}</td>
+          <td>${item.product}</td>
+          <td>${item.referenceBrands.length > 0 ? item.referenceBrands.join('; ') : 'No reference brand selected'}</td>
+          <td>${item.exactSalonBrand ?? 'Staff confirmation required'}</td>
+          <td>${item.usedFor}</td>
+        </tr>
+      `
+    )
+    .join('');
+  const productSections = productKnowledgeEntries
+    .map(
+      (entry) => `
+        <h2 id="${entry.id}">${entry.title}</h2>
+        <p><strong>Relevant services:</strong> ${entry.relevantTreatmentSlugs.join(', ')}</p>
+        <p><strong>Documented brand examples:</strong> ${entry.brandExamples.join('; ')}</p>
+        <p><strong>What it contains:</strong> ${entry.activeIngredientOrComponents}</p>
+        <p><strong>Role in treatment:</strong> ${entry.role}</p>
+        <p><strong>How it works:</strong> ${entry.mechanism}</p>
+        <p><strong>Authorization boundary:</strong> ${entry.authorizationBoundary}</p>
+        <p><strong>What Silk can currently say:</strong> ${entry.clientSafeAnswer}</p>
+        <h3>Evidence Silk must keep before naming the product as its own</h3>
+        <ul>${entry.salonEvidenceNeeded.map((item) => `<li>${item}</li>`).join('')}</ul>
+        <h3>Official sources</h3>
+        <ul>${entry.sourceUrls
+          .map(
+            (url) =>
+              `<li><a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a></li>`
+          )
+          .join('')}</ul>
+      `
+    )
+    .join('\n');
+
+  return `
+    <p>Clients often use “Botox” or “filler” as if each were one universal product. They are not. Trade names, active preparations, potency units, ingredients, approved uses, storage, and professional requirements can differ. This library explains the product categories behind Silk’s verified treatment pages and records what still needs proof from the salon.</p>
+
+    <h2>Important: research is not proof of Silk’s inventory</h2>
+    <p>A manufacturer page or foreign regulator can prove that a product exists and explain its official mechanism in that market. It cannot prove that Silk Beauty Salon bought it, stores it correctly, may lawfully use it in Georgia, or uses it for your appointment. Georgian law provides for a departmental registry of pharmaceutical products granted market authorization; the exact product still needs to be checked against that registry and the salon’s records.</p>
+    <p>Until that evidence is supplied, the chatbot will say “exact brand to be confirmed by the salon.” It will never convert toxin units, provide a dilution recipe, select a medicine, recommend self-application, diagnose a complication, or promise that a product is suitable.</p>
+
+    <h2>Product map by verified treatment</h2>
+    <ul>
+      <li><a href="/en/treatments/anti-wrinkle">Anti-wrinkle injections</a>, <a href="/en/treatments/masseter-botox">masseter treatment</a>, and <a href="/en/treatments/hyperhidrosis">hyperhidrosis treatment</a>: botulinum-toxin product plus product-specific preparation and optional comfort measures; exact brand not yet supplied by Silk.</li>
+      <li><a href="/en/treatments/lip-fillers">Lip fillers</a>: an exact hyaluronic-acid filler variant and clinical safety protocol; exact brand not yet supplied by Silk.</li>
+      <li><a href="/en/treatments/skinpen-microneedling">SkinPen microneedling</a>: published branded device service, but current model, cartridge, hydrogel, and inventory records still require verification.</li>
+      <li><a href="/en/treatments/is-clinical-fire-ice-peel">iS Clinical Fire & Ice</a>: published branded protocol, but current authentic stock, formulas, and professional protocol still require verification.</li>
+    </ul>
+
+    <h2>Complete salon product and brand inventory</h2>
+    <p>This is the master collection list for the staff review. A name in “reference brands” is an official-source example or a published service name—not a claim that Silk uses it. The “Silk brand” column stays unconfirmed until staff inspect the actual product and evidence.</p>
+    <div class="overflow-x-auto">
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Product</th>
+            <th>Reference brands or names</th>
+            <th>Silk brand</th>
+            <th>Used for</th>
+          </tr>
+        </thead>
+        <tbody>${inventoryRows}</tbody>
+      </table>
+    </div>
+
+    <h2>What staff must record for every item</h2>
+    <ol>${salonProductVerificationFields.map((field) => `<li>${field}</li>`).join('')}</ol>
+
+    ${productSections}
+
+    <h2>Nails and lashes: inventory still required</h2>
+    <p>The website supports nail and lash booking journeys, but the exact product systems are not documented yet. Before the chatbot answers brand, ingredient, allergy, removal, patch-test, or aftercare questions, Silk needs to supply:</p>
+    <ul>${unresolvedSalonProductAreas
+      .map((area) => `<li><strong>${area.treatmentSlug}:</strong> ${area.needed}</li>`)
+      .join('')}</ul>
+
+    <h2>Georgia verification</h2>
+    <p>For prescription medicines and injectable products, Silk’s clinical lead should verify the current Georgian market status and local scope-of-practice requirements, then sign off the product record. Foreign FDA, UK, or manufacturer information is evidence about that specific market only.</p>
+    <ul>
+      <li><a href="https://matsne.gov.ge/en/document/view/29836" target="_blank" rel="noopener noreferrer">Law of Georgia on Medicines and Pharmaceutical Activities</a></li>
+      <li><a href="https://ehealth.moh.gov.ge/Hmis/Portal/List.aspx" target="_blank" rel="noopener noreferrer">Georgia health information portal, including pharmaceutical modules</a></li>
+    </ul>
+  `;
+}
+
 const fallbackBlogPosts: BlogPost[] = [
+  {
+    id: 'fallback-silk-beauty-salon-appointment-guide',
+    title: 'Silk Beauty Salon Appointment Guide: Price, Timing, Preparation and Recovery',
+    slug: 'silk-beauty-salon-appointment-guide',
+    excerpt:
+      'The practical answers to check before booking: starting prices, appointment length, results, downtime, sessions, preparation, safety, and the 48-hour cancellation policy.',
+    image: '/images/hero-poster.jpg',
+    category: 'Appointment Guide',
+    author: 'Silk Beauty Salon editorial team',
+    readTime: '14 min read',
+    locale: 'en',
+    published: true,
+    createdAt: new Date('2026-07-22T10:00:00.000Z'),
+    updatedAt: new Date('2026-07-22T10:00:00.000Z'),
+    sourceUrls: [
+      'https://www.skinpen.com/the-treatment',
+      'https://www.skinpen.com/faqs/',
+      'https://www.isclinical.com/pages/fire-and-ice',
+    ],
+    content: buildAppointmentGuideContent(),
+  },
+  {
+    id: 'fallback-products-medicines-fillers-botulinum-toxin-library',
+    title: 'Product Library: Botulinum Toxin, Fillers, Numbing Products and Treatment Materials',
+    slug: 'products-medicines-fillers-botulinum-toxin-library',
+    excerpt:
+      'What Botox-type products, hyaluronic-acid fillers, numbing medicines, SkinPen materials, and Fire & Ice products do—and which exact brands Silk still needs to verify.',
+    image: '/images/hero-poster.jpg',
+    category: 'Product Library',
+    author: 'Silk Beauty Salon editorial team',
+    readTime: '16 min read',
+    locale: 'en',
+    published: true,
+    createdAt: new Date('2026-07-22T11:00:00.000Z'),
+    updatedAt: new Date('2026-07-22T11:00:00.000Z'),
+    sourceUrls: [
+      ...new Set(productKnowledgeEntries.flatMap((entry) => entry.sourceUrls)),
+      'https://matsne.gov.ge/en/document/view/29836',
+    ],
+    content: buildProductLibraryContent(),
+  },
   {
     id: 'fallback-beauty-salon-batumi-guide',
     title: 'Beauty Salon in Batumi: How to Choose Safe, Professional Care',

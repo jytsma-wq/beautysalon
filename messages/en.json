@@ -457,21 +457,21 @@
     },
     "faqs": {
       "consultationQuestion": "What should I expect during my first consultation?",
-      "consultationAnswer": "During your initial consultation, we'll discuss your concerns, goals, and medical history. Our practitioner will examine your skin and facial anatomy before recommending appropriate treatments. We believe in honest, transparent advice and will never recommend unnecessary treatments.",
+      "consultationAnswer": "Your first consultation focuses on your goal, relevant history, and current concerns. The salon will confirm the suitable service, realistic expectations, preparation, aftercare, assigned professional, exact price, and whether treatment can proceed. If you are unsure what to book, choose the consultation option.",
       "painQuestion": "Are the treatments painful?",
-      "painAnswer": "Most treatments involve minimal discomfort. We use topical numbing cream where appropriate, and many of our dermal fillers contain built-in local anesthetic. Our practitioners are skilled in making treatments as comfortable as possible.",
+      "painAnswer": "Comfort varies by treatment, body area, and individual sensitivity. The treatment page explains what is known; the salon will confirm the process and any appropriate comfort measures before treatment.",
       "resultsQuestion": "How long do results last?",
-      "resultsAnswer": "This depends on the treatment. Anti-wrinkle injections typically last 3-6 months, dermal fillers 6-18 months depending on the product and area treated, and skin tightening treatments can provide results lasting 1-2 years. We'll discuss expected duration during your consultation.",
+      "resultsAnswer": "Results and how long they last depend on the exact service and the individual. Use the service page for the published estimate, then ask the salon to confirm what is realistic for you. No website or chatbot answer can guarantee a result.",
       "downtimeQuestion": "Is there any downtime?",
-      "downtimeAnswer": "Many of our treatments have minimal to no downtime. Some treatments may cause temporary swelling, redness, or bruising. We'll provide detailed aftercare instructions and advice on timing treatments around social commitments.",
+      "downtimeAnswer": "Downtime is treatment-specific. Some services need no planned recovery, while others may cause temporary redness, swelling, tenderness, bruising, dryness, or peeling. Tell the salon about work, travel, or an important event before booking.",
       "bookingQuestion": "How do I book an appointment?",
-      "bookingAnswer": "You can book online through our website, call us at +995 577 34 57 67, or email info@silkbeautysalon.online. We recommend booking consultations in advance as we often have a waiting list.",
+      "bookingAnswer": "Send a booking request online, call +995 577 34 57 67, use WhatsApp at +995 577 28 68 55, or email info@silkbeautysalon.online. An online request is not confirmed until the salon contacts you; the team aims to reply within 24 hours.",
       "virtualQuestion": "Do you offer virtual consultations?",
-      "virtualAnswer": "Yes, we offer virtual consultations for those who cannot visit the salon initially. However, for treatments requiring precise assessment, an in-person consultation is recommended.",
+      "virtualAnswer": "Virtual-consultation availability is not confirmed on the website. Contact the salon to ask. A remote message or chatbot cannot approve suitability for a service that requires an in-person assessment.",
       "brandsQuestion": "What brands of products do you use?",
-      "brandsAnswer": "We use only premium, certified products from leading brands including Allergan (Juvederm), Galderma (Restylane), and Merz. For skin treatments, we use medical-grade products from iS Clinical, Obagi, and Mesoestetic.",
+      "brandsAnswer": "The verified service pages currently identify SkinPen and iS Clinical where relevant. For any appointment, ask the salon to confirm the exact product or device that will be used; the chatbot will not guess brands.",
       "qualifiedQuestion": "Are your practitioners qualified?",
-      "qualifiedAnswer": "All our practitioners are fully qualified and experienced professionals. They undergo continuous training in the latest techniques and safety protocols to ensure the highest standards of care."
+      "qualifiedAnswer": "Before a procedure, ask the salon to confirm who will perform it and to provide the current qualifications or authorization relevant to that service. The website and chatbot do not publish unverified staff names or credentials."
     }
   },
   "termsConditions": {
@@ -490,7 +490,7 @@
     "bookingItem3": "We reserve the right to refuse service if contraindications are identified",
     "bookingItem4": "Clients must arrive 15 minutes before their scheduled appointment",
     "cancellationTitle": "4. Cancellation Policy",
-    "cancellationText": "We understand that circumstances may change. Please provide at least 24 hours' notice for cancellations or rescheduling. Late cancellations or no-shows may be subject to a fee.",
+    "cancellationText": "We understand that circumstances may change. Please provide at least 48 hours' notice for cancellations and at least 24 hours' notice for rescheduling. Late cancellations or no-shows may be subject to a fee.",
     "paymentTitle": "5. Payment Terms",
     "paymentIntro": "Payment terms:",
     "paymentItem1": "Payment is due at the time of service unless otherwise agreed",
@@ -2117,7 +2117,7 @@
       "q1": "How long is a consultation?",
       "a1": "Initial consultations typically last 30-45 minutes, allowing time for a thorough assessment and discussion of your goals.",
       "q2": "Is there a deposit required?",
-      "a2": "A 20% deposit is required to secure your appointment, which is deducted from your treatment cost.",
+      "a2": "If a deposit applies, the salon will confirm the amount and payment instructions when it confirms your booking request.",
       "q3": "What is your cancellation policy?",
       "a3": "We require 48 hours notice for cancellations. Late cancellations may forfeit the deposit.",
       "q4": "Can I reschedule my appointment?",
@@ -2402,10 +2402,11 @@
     "beautySalonBatumi": "Beauty salon Batumi"
   },
   "blogPage": {
-    "title": "Our Blog",
-    "metaTitle": "Blog | Silk Beauty Salon",
-    "metaDescription": "Expert insights, treatment guides, and the latest from the world of aesthetics",
-    "subtitle": "Expert insights, treatment guides, and the latest from the world of aesthetics",
+    "title": "Beauty Knowledge Library",
+    "eyebrow": "Information library",
+    "metaTitle": "Beauty Knowledge Library | Silk Beauty Salon",
+    "metaDescription": "Practical, source-backed guides to services, products, preparation, recovery, booking, and safety boundaries.",
+    "subtitle": "Practical guides to services, products, preparation, recovery, booking, and the questions that require a person.",
     "breadcrumb": "Blog",
     "stayUpdated": "Stay Updated",
     "newsletterDesc": "Subscribe to our newsletter for the latest articles, tips, and exclusive offers",
@@ -2413,12 +2414,12 @@
     "backToBlog": "Back to Blog",
     "shareArticle": "Share this article",
     "aboutAuthor": "About the Author",
-    "readyToTransform": "Ready to Transform?",
-    "bookConsultationDesc": "Book a consultation with one of our expert practitioners to discuss your aesthetic goals.",
+    "readyToTransform": "Need an individual answer?",
+    "bookConsultationDesc": "Send a consultation request so the salon can confirm the right service, professional, price, and next step.",
     "relatedPosts": "Related Posts",
     "readMore": "Read More",
     "postNotFound": "Post not found",
-    "expertPractitioner": "Expert Practitioner"
+    "expertPractitioner": "Editorial team"
   },
   "treatmentPage": {
     "bookNow": "Book This Treatment",
@@ -2445,8 +2446,14 @@
     "youMightAlsoLike": "You Might Also Like",
     "learnMore": "Learn more",
     "heroAlt": "Luxury Beauty Salon",
-    "durationResults": "3-6 months",
-    "minimalDowntime": "None to minimal"
+    "durationResults": "Confirmed during consultation",
+    "minimalDowntime": "Confirmed during consultation",
+    "confirmedDuringConsultation": "Confirmed during consultation",
+    "planningAppointment": "Planning Your Appointment",
+    "sessions": "Sessions",
+    "preparation": "Preparation",
+    "comfort": "Comfort",
+    "safety": "Safety and human review"
   },
   "international": {
     "imageAlt": "Silk Beauty Salon",

@@ -12,6 +12,7 @@ import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 import { isIndexableTreatmentSlug } from '@/lib/search-index-policy';
+import { getTreatmentPlanningKnowledge } from '@/data/client-service-knowledge';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -85,21 +86,23 @@ export default async function TreatmentPage({ params }: Props) {
       .filter((item: { slug: string }) => item.slug !== treatment.slug)
       .slice(0, 3) || [];
   const stickyMeta = [treatment.duration, treatment.price].filter(Boolean).join(' • ');
+  const planningKnowledge = getTreatmentPlanningKnowledge(treatment.slug);
+  const showDetailedPlanningKnowledge = resolvedParams.locale === 'en' && planningKnowledge;
 
   const detailLabels = {
-    atAGlance: 'At a Glance',
-    procedureTime: 'Procedure Time',
-    priceFrom: 'Price From',
-    results: 'Results',
-    downtime: 'Downtime',
-    howItWorks: 'How It Works',
-    benefits: 'Benefits',
-    aftercare: 'Aftercare',
-    questions: 'Questions & Answers',
-    youMightAlsoLike: 'You Might Also Like',
-    learnMore: 'Learn more',
-    bookNow: 'Book Now',
-    bookThisTreatment: 'Book This Treatment',
+    atAGlance: tTreatmentPage('atAGlance'),
+    procedureTime: tTreatmentPage('duration'),
+    priceFrom: tTreatmentPage('price'),
+    results: tTreatmentPage('results'),
+    downtime: tTreatmentPage('downtime'),
+    howItWorks: tTreatmentPage('howItWorks'),
+    benefits: tTreatmentPage('benefits'),
+    aftercare: tTreatmentPage('aftercare'),
+    questions: tTreatmentPage('faqs'),
+    youMightAlsoLike: tTreatmentPage('youMightAlsoLike'),
+    learnMore: tTreatmentPage('learnMore'),
+    bookNow: tTreatmentPage('bookNowBtn'),
+    bookThisTreatment: tTreatmentPage('bookNow'),
   };
 
   return (
@@ -183,11 +186,19 @@ export default async function TreatmentPage({ params }: Props) {
             ) : null}
             <div>
               <dt className="mb-1 text-stone-500">{detailLabels.results}</dt>
-              <dd className="font-serif text-stone-900">{tTreatmentPage('durationResults')}</dd>
+              <dd className="font-serif text-stone-900">
+                {showDetailedPlanningKnowledge
+                  ? showDetailedPlanningKnowledge.results
+                  : tTreatmentPage('confirmedDuringConsultation')}
+              </dd>
             </div>
             <div>
               <dt className="mb-1 text-stone-500">{detailLabels.downtime}</dt>
-              <dd className="font-serif text-stone-900">{tTreatmentPage('minimalDowntime')}</dd>
+              <dd className="font-serif text-stone-900">
+                {showDetailedPlanningKnowledge
+                  ? showDetailedPlanningKnowledge.downtime
+                  : tTreatmentPage('confirmedDuringConsultation')}
+              </dd>
             </div>
           </dl>
 
@@ -243,6 +254,46 @@ export default async function TreatmentPage({ params }: Props) {
                 <p className="text-stone-700 leading-relaxed">{treatment.aftercare}</p>
               </div>
             </div>
+          ) : null}
+
+          {showDetailedPlanningKnowledge ? (
+            <section aria-labelledby="appointment-planning-title">
+              <h2
+                id="appointment-planning-title"
+                className="mt-16 mb-6 font-serif text-2xl font-light text-stone-900 md:text-3xl"
+              >
+                {tTreatmentPage('planningAppointment')}
+              </h2>
+              <dl className="grid gap-6 md:grid-cols-2">
+                {[
+                  [tTreatmentPage('sessions'), showDetailedPlanningKnowledge.sessions],
+                  [tTreatmentPage('preparation'), showDetailedPlanningKnowledge.preparation],
+                  [tTreatmentPage('comfort'), showDetailedPlanningKnowledge.comfort],
+                  [tTreatmentPage('safety'), showDetailedPlanningKnowledge.safety],
+                ].map(([label, value]) => (
+                  <div key={label} className="border border-stone-200 bg-stone-50 p-6">
+                    <dt className="mb-2 text-xs uppercase tracking-wider text-stone-500">
+                      {label}
+                    </dt>
+                    <dd className="text-sm leading-6 text-stone-700">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+                <Link
+                  href="/blog/silk-beauty-salon-appointment-guide"
+                  className="inline-flex text-sm text-stone-900 underline underline-offset-4"
+                >
+                  Read the full appointment guide
+                </Link>
+                <Link
+                  href="/blog/products-medicines-fillers-botulinum-toxin-library"
+                  className="inline-flex text-sm text-stone-900 underline underline-offset-4"
+                >
+                  View the product and brand library
+                </Link>
+              </div>
+            </section>
           ) : null}
         </div>
 

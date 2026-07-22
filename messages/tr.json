@@ -457,21 +457,21 @@
     },
     "faqs": {
       "consultationQuestion": "İlk konsültasyonum sırasında ne beklemeliyim?",
-      "consultationAnswer": "İlk konsültasyonunuz sırasında, endişelerinizi, hedeflerinizi ve tıbbi geçmişinizi tartışacağız. Uygulayıcımız, uygun tedavileri önermeden önce cildinizi ve yüz anatomisinizi inceleyecektir. Dürüst, şeffaf tavsiyelere inanıyoruz ve asla gereksiz tedavi önermiyoruz.",
+      "consultationAnswer": "İlk konsültasyon hedefinize, ilgili geçmişinize ve mevcut sorularınıza odaklanır. Salon uygun hizmeti, gerçekçi beklentileri, hazırlığı, sonrasındaki bakımı, görevlendirilen uzmanı, kesin fiyatı ve işlemin yapılıp yapılamayacağını teyit eder. Ne seçeceğinizden emin değilseniz konsültasyon seçeneğini seçin.",
       "painQuestion": "Tedaviler ağrılı mı?",
-      "painAnswer": "Çoğu tedavi minimal rahatsızlık içerir. Uygun olduğunda topikal uyuşturucu krem kullanıyoruz ve birçok dermal dolgumuz yerleşik lokal anestezik içeriyor. Uygulayıcılarımız, tedavileri olabildiğince rahat hale getirme konusunda ustadır.",
+      "painAnswer": "Konfor; işleme, vücut bölgesine ve kişisel hassasiyete göre değişir. Hizmet sayfası doğrulanmış bilgileri açıklar; salon işlemden önce süreci ve uygun konfor önlemlerini teyit eder.",
       "resultsQuestion": "Sonuçlar ne kadar sürer?",
-      "resultsAnswer": "Bu tedaviye bağlıdır. Kırışıklık karşıtı enjeksiyonlar genellikle 3-6 ay sürer, dermal dolgu ürüne ve tedavi edilen bölgeye bağlı olarak 6-18 ay, cilt sıkılaştırma tedavileri 1-2 yıl süren sonuçlar sağlayabilir. Beklenen süreyi konsültasyonunuz sırasında tartışacağız.",
+      "resultsAnswer": "Sonuç ve kalıcılık, seçilen hizmete ve kişiye bağlıdır. Yayınlanan tahmin için hizmet sayfasına bakın, ardından sizin için neyin gerçekçi olduğunu salona sorun. Web sitesi veya sohbet botu sonuç garantisi veremez.",
       "downtimeQuestion": "Herhangi bir iyileşme süresi var mı?",
-      "downtimeAnswer": "Tedavilerimizin çoğu minimal veya sıfır iyileşme süresine sahiptir. Bazı tedaviler geçici şişlik, kızarıklık veya morluklara neden olabilir. Tedavi sonrası bakım için ayrıntılı talimatlar ve sosyal taahhütler etrafında tedavilerin zamanlaması konusunda tavsiyeler sağlayacağız.",
+      "downtimeAnswer": "İyileşme süresi işleme özeldir. Bazı hizmetlerde planlı iyileşme gerekmezken diğerleri geçici kızarıklık, şişlik, hassasiyet, morarma, kuruluk veya soyulmaya yol açabilir. Rezervasyondan önce iş, seyahat veya önemli etkinlik tarihlerinizi salona bildirin.",
       "bookingQuestion": "Randevu nasıl alınır?",
-      "bookingAnswer": "Web sitemiz üzerinden çevrimiçi rezervasyon yapabilir, bizi +995 577 34 57 67 numaradan arayabilir veya info@silkbeautysalon.online adresine e-posta gönderebilirsiniz. Sıklıkla bekleme listemiz olduğu için konsültasyonları önceden ayırtmanızı öneririz.",
+      "bookingAnswer": "Çevrimiçi rezervasyon talebi gönderin, +995 577 34 57 67 numarasını arayın, WhatsApp'tan +995 577 28 68 55'e yazın veya info@silkbeautysalon.online adresine e-posta gönderin. Salon sizinle iletişime geçene kadar çevrimiçi talep onaylanmış değildir; ekip 24 saat içinde yanıtlamayı hedefler.",
       "virtualQuestion": "Sanal konsültasyon sunuyor musunuz?",
-      "virtualAnswer": "Evet, başlangıçta salona gelemeyenler için sanal konsültasyonlar sunuyoruz. Ancak hassas değerlendirme gerektiren tedaviler için yüz yüze konsültasyon önerilir.",
+      "virtualAnswer": "Sanal konsültasyonun mevcut olduğu web sitesinde doğrulanmamıştır. Salona doğrudan sorun. Yüz yüze değerlendirme gerektiren bir hizmet için uzaktan mesaj veya sohbet botu uygunluğu onaylayamaz.",
       "brandsQuestion": "Hangi ürün markalarını kullanıyorsunuz?",
-      "brandsAnswer": "Sadece Allergan (Juvederm), Galderma (Restylane) ve Merz gibi önde gelen markaların premium, sertifikalı ürünlerini kullanıyoruz. Cilt tedavileri için iS Clinical, Obagi ve Mesoestetic'ten tıbbi sınıf ürünler kullanıyoruz.",
+      "brandsAnswer": "Doğrulanmış hizmet sayfalarında ilgili olduğunda SkinPen ve iS Clinical adları yer alır. Her randevu için kullanılacak kesin ürün veya cihazı salondan teyit edin; sohbet botu marka tahmin etmez.",
       "qualifiedQuestion": "Uygulayıcılarınız nitelikli mi?",
-      "qualifiedAnswer": "Tüm uygulayıcılarımız tamamen nitelikli ve deneyimli profesyonellerdir. En yüksek bakım standartlarını sağlamak için en son teknikler ve güvenlik protokolleri konusunda sürekli eğitim alırlar."
+      "qualifiedAnswer": "İşlemden önce uygulamayı kimin yapacağını ve bu hizmete ilişkin güncel yeterlilik veya yetki belgesini salondan teyit edin. Web sitesi ve sohbet botu doğrulanmamış personel adlarını veya yeterliliklerini yayınlamaz."
     }
   },
   "termsConditions": {
@@ -490,7 +490,7 @@
     "bookingItem3": "Kontrendikasyonlar tespit edilirse hizmeti reddetme hakkını saklı tutarız",
     "bookingItem4": "Müşteriler planlanan randevularından 15 dakika önce gelmelidir",
     "cancellationTitle": "4. İptal Politikası",
-    "cancellationText": "Durumların değişebileceğini anlıyoruz. İptal veya yeniden planlama için lütfen en az 24 saat önceden bildirin. Geç iptaller veya no-show'lar ücrete tabi olabilir.",
+    "cancellationText": "Koşulların değişebileceğini anlıyoruz. İptal için en az 48 saat, yeniden planlama için en az 24 saat önceden haber verin. Geç iptal veya randevuya gelmeme ücrete tabi olabilir.",
     "paymentTitle": "5. Ödeme Koşulları",
     "paymentIntro": "Ödeme koşulları:",
     "paymentItem1": "Aksi kararlaştırılmadıkça ödeme hizmet sırasında yapılır",
@@ -1951,7 +1951,7 @@
       "q1": "Bir konsültasyon ne kadar sürer?",
       "a1": "İlk konsültasyonlar tipik olarak kapsamlı bir değerlendirme ve hedeflerinizin tartışılması için 30-45 dakika sürer.",
       "q2": "Depozito gerekiyor mu?",
-      "a2": "Randevunuzu garanti altına almak için %20 depozito gerekir ve bu tedavi maliyetinizden düşülür.",
+      "a2": "Depozito gerekiyorsa salon, rezervasyon talebinizi onaylarken tutarı ve ödeme talimatlarını bildirecektir.",
       "q3": "İptal politikanız nedir?",
       "a3": "İptaller için 48 saat önceden haber verilmesini gerektiriyoruz. Geç iptaller depozito kaybına neden olabilir.",
       "q4": "Randevumu yeniden planlayabilir miyim?",
@@ -2402,10 +2402,11 @@
     "beautySalonBatumi": "Batum güzellik salonu"
   },
   "blogPage": {
-    "title": "Blogumuz",
-    "metaTitle": "Blog | Silk Beauty Salon",
-    "metaDescription": "Uzman içgörüleri, tedavi rehberleri ve estetik dünyasından son haberler",
-    "subtitle": "Uzman içgörüleri, tedavi rehberleri ve estetik dünyasından son haberler",
+    "title": "Güzellik Bilgi Kütüphanesi",
+    "eyebrow": "Bilgi kütüphanesi",
+    "metaTitle": "Güzellik Bilgi Kütüphanesi | Silk Beauty Salon",
+    "metaDescription": "Hizmetler, ürünler, hazırlık, iyileşme, rezervasyon ve güvenlik sınırları için kaynaklı pratik rehberler.",
+    "subtitle": "Hizmetler, ürünler, hazırlık, iyileşme, rezervasyon ve insan yanıtı gerektiren sorular için pratik rehberler.",
     "breadcrumb": "Blog",
     "stayUpdated": "Güncel Kalın",
     "newsletterDesc": "En son makaleler, ipuçları ve özel teklifler için bültenimize abone olun",
@@ -2413,12 +2414,12 @@
     "backToBlog": "Bloga Dön",
     "shareArticle": "Makaleyi Paylaş",
     "aboutAuthor": "Yazar Hakkında",
-    "readyToTransform": "Dönüşüme Hazır mısınız?",
-    "bookConsultationDesc": "Estetik hedeflerinizi tartışmak için uzmanlarımızdan biriyle konsültasyon ayarlayın.",
+    "readyToTransform": "Kişisel bir yanıt mı gerekiyor?",
+    "bookConsultationDesc": "Salonun doğru hizmeti, uzmanı, fiyatı ve sonraki adımı teyit etmesi için konsültasyon talebi gönderin.",
     "relatedPosts": "İlgili Makaleler",
     "readMore": "Devamını Oku",
     "postNotFound": "Gönderi bulunamadı",
-    "expertPractitioner": "Uzman Uygulayıcı"
+    "expertPractitioner": "Editör ekibi"
   },
   "treatmentPage": {
     "bookNow": "Bu Tedaviyi Randevu Al",
@@ -2445,8 +2446,14 @@
     "youMightAlsoLike": "Ayrıca Hoşlanabilirsiniz",
     "learnMore": "Daha Fazla Öğrenin",
     "heroAlt": "Lüks Güzellik Salonu",
-    "durationResults": "3-6 ay",
-    "minimalDowntime": "Yoktan minimuma"
+    "durationResults": "Konsültasyonda teyit edilir",
+    "minimalDowntime": "Konsültasyonda teyit edilir",
+    "confirmedDuringConsultation": "Konsültasyonda teyit edilir",
+    "planningAppointment": "Randevunuzu Planlama",
+    "sessions": "Seanslar",
+    "preparation": "Hazırlık",
+    "comfort": "Konfor",
+    "safety": "Güvenlik ve insan değerlendirmesi"
   },
   "international": {
     "imageAlt": "Silk Beauty Salon",

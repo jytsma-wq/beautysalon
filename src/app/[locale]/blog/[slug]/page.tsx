@@ -222,7 +222,7 @@ export default async function BlogPostPage({
                   <User className="w-6 h-6 text-gold" />
                   <div>
                     <p className="font-medium text-primary">{post.author}</p>
-                    <p className="text-sm text-muted-foreground">Expert Practitioner</p>
+                    <p className="text-sm text-muted-foreground">{t('expertPractitioner')}</p>
                   </div>
                 </div>
               </div>

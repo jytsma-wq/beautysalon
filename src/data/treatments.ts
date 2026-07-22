@@ -579,6 +579,13 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
           "Reduces fine lines",
           "Improves skin tone",
           "Little to no downtime"
+        ],
+        howItWorks: "The professional protocol uses an intensive resurfacing masque that creates a warming sensation, followed by a cooling rejuvenating masque. The treatment is selected after the skin and current routine are reviewed.",
+        aftercare: "Follow the practitioner’s product and sun-protection instructions. Temporary warmth, redness, dryness, or sensitivity may occur. Ask the salon to confirm timing before an important event and contact the team if a reaction is unexpected or worsening.",
+        faqs: [
+          { question: "Is there downtime?", answer: "The manufacturer describes little to no downtime, but temporary warmth, redness, dryness, or sensitivity can occur and individual response varies." },
+          { question: "Can I book it before an event?", answer: "Ask the salon to review your skin and event date first. No treatment result or recovery time can be guaranteed for an individual client." },
+          { question: "How many sessions will I need?", answer: "It can be selected as a single appointment or as part of a skin plan. The salon confirms frequency after assessing your skin and goals." }
         ]
       },
       {
@@ -643,6 +650,13 @@ export const baseTreatmentCategories: TreatmentCategory[] = [
           "Reduces fine lines",
           "Natural collagen production",
           "Suitable for all skin types"
+        ],
+        howItWorks: "SkinPen creates controlled microscopic channels in the skin to support the skin’s natural remodelling process. The treatment area, settings, and number of sessions are selected after an individual assessment.",
+        aftercare: "Temporary redness, dryness, tightness, or peeling is commonly described for about 24-72 hours. Follow the practitioner’s exact cleansing, product, makeup, and sun-protection instructions, and contact the salon if symptoms are unexpected or worsening.",
+        faqs: [
+          { question: "How much downtime should I plan?", answer: "SkinPen describes temporary redness, dryness, tightness, or peeling for about 24-72 hours. Individual response varies, so discuss important dates before booking." },
+          { question: "How many sessions will I need?", answer: "A series is often recommended and appointments are commonly spaced around four weeks apart, but the provider must set the number of sessions after assessment." },
+          { question: "When will I see results?", answer: "Improvement is gradual as the skin remodels. SkinPen says changes may continue for 3-6 months; an individual result cannot be guaranteed." }
         ]
       }
     ]
