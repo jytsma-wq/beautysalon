@@ -1,6 +1,7 @@
 import { locales, type Locale } from '@/i18n';
 
 export type BookingTreatmentCategory =
+  | 'consultation'
   | 'injectables'
   | 'skin'
   | 'lashes'
@@ -13,7 +14,7 @@ export interface BookingTreatment {
   id: string;
   category: BookingTreatmentCategory;
   durationMinutes: number;
-  priceGel: number;
+  priceGel?: number;
   name: LocalizedText;
 }
 
@@ -21,12 +22,25 @@ export interface BookingTreatmentOption {
   id: string;
   category: BookingTreatmentCategory;
   durationMinutes: number;
-  priceGel: number;
+  priceGel?: number;
   label: string;
   value: string;
 }
 
 export const bookingTreatments: BookingTreatment[] = [
+  {
+    id: 'consultation-not-sure',
+    category: 'consultation',
+    durationMinutes: 45,
+    name: {
+      en: 'Consultation / Not sure what to book',
+      ka: 'კონსულტაცია / არ ვიცი, რა დავჯავშნო',
+      ru: 'Консультация / Не уверена, что выбрать',
+      tr: 'Konsültasyon / Ne seçeceğimden emin değilim',
+      ar: 'استشارة / لست متأكدة مما أحجز',
+      he: 'ייעוץ / לא בטוחה מה לקבוע',
+    },
+  },
   {
     id: 'lip-filler-1ml',
     category: 'injectables',

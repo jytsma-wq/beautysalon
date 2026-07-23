@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: locale === 'en' ? 'Beauty Care Blog in Batumi' : t('metaTitle'),
     description:
       locale === 'en'
-        ? 'Expert beauty salon guides for Batumi clients, including skin care, Botox, fillers, aftercare, and treatment planning.'
+        ? 'A practical beauty knowledge library for Batumi clients, covering services, products, preparation, recovery, booking, and human-review boundaries.'
         : t('metaDescription'),
     keywords: [
       'beauty blog Batumi',
@@ -60,7 +60,7 @@ export default async function BlogPage({
 
           <div className="max-w-4xl">
             <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-              Journal
+              {t('eyebrow')}
             </p>
             <h1 className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]">
               {t('title')}

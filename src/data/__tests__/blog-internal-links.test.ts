@@ -9,4 +9,24 @@ describe('blog internal links', () => {
     expect(source).toContain("slug: 'botox-fillers-batumi-consultation-guide'");
     expect(source).toContain('href="/en/botox-batumi">Botox in Batumi page</a>');
   });
+
+  it('publishes one detailed appointment guide from the chatbot knowledge source', () => {
+    const source = fs.readFileSync(path.join(process.cwd(), 'src/data/blog.ts'), 'utf8');
+
+    expect(source).toContain("slug: 'silk-beauty-salon-appointment-guide'");
+    expect(source).toContain('treatmentPlanningKnowledge[slug]');
+    expect(source).toContain('appointmentPolicies.cancellationNoticeHours');
+    expect(source).toContain('Consultation / Not sure what to book');
+  });
+
+  it('publishes the product library from product evidence records', () => {
+    const source = fs.readFileSync(path.join(process.cwd(), 'src/data/blog.ts'), 'utf8');
+
+    expect(source).toContain(
+      "slug: 'products-medicines-fillers-botulinum-toxin-library'"
+    );
+    expect(source).toContain('productKnowledgeEntries');
+    expect(source).toContain('salonProductInventory');
+    expect(source).toContain('research is not proof of Silk’s inventory');
+  });
 });

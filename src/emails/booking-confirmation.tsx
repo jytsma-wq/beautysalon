@@ -83,7 +83,8 @@ export function BookingConfirmationEmail({
 
             <Hr style={{ borderColor: colors.border, margin: '24px 0' }} />
             <Text style={{ color: '#6b5e52', fontSize: '14px', lineHeight: '20px' }}>
-              If you need to reschedule or cancel, please contact us at least 48 hours in advance.
+              Please contact us at least 48 hours before a cancellation or at least 24 hours before
+              rescheduling.
             </Text>
           </Section>
 

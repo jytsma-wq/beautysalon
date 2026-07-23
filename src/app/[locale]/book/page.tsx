@@ -22,8 +22,12 @@ const JSON_LD_BASE = {
   acceptsOffers: bookingTreatments.map((treatment) => ({
     '@type': 'Offer' as const,
     name: treatment.name.en,
-    price: String(treatment.priceGel),
-    priceCurrency: 'GEL',
+    ...(treatment.priceGel === undefined
+      ? {}
+      : {
+          price: String(treatment.priceGel),
+          priceCurrency: 'GEL',
+        }),
   })),
 } as const;
 
