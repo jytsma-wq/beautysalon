@@ -1675,6 +1675,88 @@
       ]
     }
   },
+  "chatbot": {
+    "title": "Mariam · Silk bakım rehberi",
+    "status": "Dost canlısı dijital salon rehberiniz",
+    "close": "Bakım rehberini kapat",
+    "launcherOpen": "Silk bakım rehberini aç",
+    "launcherClose": "Silk bakım rehberini kapat",
+    "invite": "Bakımlarımızı ve fiyatlarımızı sorun",
+    "transcriptLabel": "Silk bakım rehberiyle konuşma",
+    "welcome": "Merhaba, ben Silk'in dijital rehberi Mariam. Sorunuzu yazın; önce yayınlanan fiyatı ve süreyi göstereceğim.",
+    "disclaimer": "Uygunluk, ilaçlar veya beklenmeyen belirtiler için sizi salonla görüştüreceğim.",
+    "quickLabel": "Popüler sorular",
+    "inputLabel": "Sorunuz",
+    "placeholder": "Örnek: Dudak dolgusu ne kadar?",
+    "send": "Soruyu gönder",
+    "minutesShort": "dk",
+    "quick": {
+      "lipPrice": "Dudak dolgusu fiyatı",
+      "foreheadBotoxPrice": "Alın botoksu fiyatı",
+      "choose": "Seçmeme yardım edin",
+      "recovery": "İyileşme süresi"
+    },
+    "prompts": {
+      "lipPrice": "Dudak dolgusu ne kadar?",
+      "foreheadBotoxPrice": "Alın çizgileri için botoks ne kadar?",
+      "choose": "Hangi bakımı seçmem gerektiğinden emin değilim",
+      "recovery": "Dudak dolgusu sonrası iyileşme nasıldır?"
+    },
+    "answers": {
+      "emergency": "Bu durum acil tıbbi bakım gerektirebilir. Hemen yerel acil servise başvurun; salon veya sohbet yanıtını beklemeyin.",
+      "medical": "Tıbbi uygunluğa burada karar veremem. Bakımdan önce ilaçları, alerjileri, hamileliği veya emzirmeyi salona bildirin.",
+      "brand": "Salonun kullandığı kesin marka web sitesinde henüz doğrulanmadı. Randevudan önce ekipten ürünü, çeşidi ve uygulayıcıyı doğrulamasını isteyin.",
+      "foreheadFiller": "Alın dolgusu ile alın botoksu aynı şey değildir. Alın dolgusu için yayınlanmış fiyat yoktur; salon önce hizmetin sunulup sunulmadığını ve uygunluğu doğrulamalıdır.",
+      "cancellation": "Randevuyu en az {hours} saat önce iptal edin. Mevcut randevuyu değiştirmek için salonla doğrudan iletişime geçin.",
+      "reschedule": "Randevuyu en az {hours} saat önce yeniden planlayın. Mevcut randevuyu değiştirmek için salonla doğrudan iletişime geçin.",
+      "booking": "Çevrimiçi randevu isteği gönderin. Yalnızca salon sizinle iletişime geçtiğinde, normalde {hours} saat içinde, onaylanır.",
+      "location": "Silk Beauty Salon şu adrestedir: {address}, {city}, {country}.",
+      "hours": "Pazartesi–Cumartesi {mondaySaturday}; Pazar {sunday} açık.",
+      "contact": "Telefon: {phone}. WhatsApp: {whatsapp}. E-posta: {email}.",
+      "languages": "Web sitesi ve Mariam İngilizce, Gürcüce, Rusça, Türkçe, Arapça ve İbranice destekler. Konuşma dilini randevu sırasında salonla doğrulayın.",
+      "payment": "Web sitesine göre nakit ve başlıca kredi kartları kabul edilir. Aksi kararlaştırılmadıkça ödeme hizmet sırasında yapılır.",
+      "results": "Sonuç ve kalıcılığı bakımın türüne ve kişiye bağlıdır; yayınlanan tahmini bakım rehberinde görebilirsiniz.",
+      "downtime": "İyileşme bakıma özeldir; geçici kızarıklık, şişlik, hassasiyet, morarma, kuruluk veya soyulma olabilir.",
+      "askTreatmentPrice": "Yayınlanan fiyatı hemen görmek için bakımı yazın. Fiyat yayınlanmadıysa bunu açıkça söyleyeceğim.",
+      "askTreatmentDuration": "Yayınlanan randevu süresini hemen görmek için bakımı yazın.",
+      "priceOverview": "Kategoriye göre yayınlanan fiyat aralıkları:",
+      "priceUnavailable": "fiyat yayınlanmadı",
+      "consultation": "İstediğiniz sonucu anlatın veya ne seçeceğinizden emin değilseniz konsültasyon seçin.",
+      "unknown": "Web sitesinde onaylı bir yanıt bulamadım. İstediğiniz bakımı veya sonucu belirterek salona doğrudan sorun.",
+      "greeting": "Merhaba. Bakım, fiyat, süre, sonuç, iyileşme veya randevu hakkında sorun."
+    },
+    "labels": {
+      "results": "Sonuç",
+      "recovery": "İyileşme"
+    },
+    "categories": {
+      "injectables": "Enjeksiyonlar",
+      "skin": "Cilt",
+      "lashes": "Kirpik ve kaş",
+      "hair": "Saç",
+      "nails": "Tırnak"
+    },
+    "explanations": {
+      "antiWrinkle": "Kırışıklık karşıtı enjeksiyonlar seçilen kasları gevşeterek mimik çizgilerini yumuşatır; doz ve bölge değerlendirme gerektirir.",
+      "dermalFiller": "Dermal dolgu, değerlendirme sonrası seçilen bölgede hacmi geri kazandırmak veya şekillendirmek için kullanılan enjekte edilebilir bir jeldir.",
+      "lipFiller": "Dudak dolgusu hacim ekler veya dudağı şekillendirir. Yerleşmiş sonuç şişlik azaldıktan sonra değerlendirilir.",
+      "microneedling": "Mikroiğneleme, cildin kademeli yenilenmesini ve kolajen yapılanmasını desteklemek için kontrollü mikrokanallar oluşturur.",
+      "fireIce": "Fire & Ice, ısıtan maskeyi serinletici maskenin izlediği profesyonel bir yenileme bakımıdır.",
+      "chemicalPeel": "Kimyasal peeling, seçilen cilt katmanlarını soymak için profesyonel solüsyon kullanır; güç ve uygunluk değerlendirilmelidir.",
+      "skinBoosters": "Cilt canlandırıcılar yüz konturu için değil, cilt nemini ve kalitesini desteklemeyi amaçlayan enjeksiyonlardır.",
+      "nails": "Tırnak hizmetleri hazırlık, şekillendirme, kütikül bakımı ve seçilen renk veya tasarımı içerir.",
+      "lashes": "Kirpik hizmetleri kaldırma, renklendirme veya daha dolgun görünüm sağlar; işlem ve bakım seçilen hizmete bağlıdır.",
+      "balayage": "Balayage, yumuşak ve boyutlu bir sonuç için saçın elle açıldığı bir tekniktir.",
+      "keratin": "Keratin bakımı saçı yumuşatır ve bakım yapar; sonuç ve bakım saç ile kullanılan ürüne bağlıdır."
+    },
+    "actions": {
+      "book": "Bu bakımı rezerve et",
+      "guide": "Bakım rehberini oku",
+      "library": "Bilgi merkezini aç",
+      "prices": "Tam fiyat listesini gör",
+      "whatsapp": "Salona WhatsApp'tan sor"
+    }
+  },
   "whatsapp": {
     "greeting": "Merhaba! 👋 Silk Beauty Salon'a hoş geldiniz. Bugün size nasıl yardımcı olabiliriz?",
     "bookAppointment": "Randevu almak istiyorum",

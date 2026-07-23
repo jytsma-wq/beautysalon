@@ -33,6 +33,7 @@ describe('client locale messages', () => {
     expect(clientMessages.nav).toBeDefined();
     expect(clientMessages.common).toBeDefined();
     expect(clientMessages.consent).toBeDefined();
+    expect(clientMessages.chatbot).toBeDefined();
     expect(clientMessages.footer).toBeDefined();
     expect(clientMessages.bookingPage).toBeDefined();
     expect(clientMessages.homeEditorial).toBeDefined();

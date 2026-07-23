@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Toaster } from '@/components/ui/toaster';
 import { GaldermaHeader } from '@/components/layout/GaldermaHeader';
 import { GaldermaFooter } from '@/components/layout/GaldermaFooter';
-import { WhatsAppWidget } from '@/components/layout/WhatsAppWidget';
+import { SalonGuideWidget } from '@/components/layout/SalonGuideWidget';
 import { StickyMobileBookingBar } from '@/components/layout/StickyMobileBookingBar';
 import { SkipLink } from '@/components/layout/SkipLink';
 import { rtlLocales, type Locale } from '@/i18n';
@@ -29,7 +29,7 @@ export function LocaleChrome({ children, locale }: { children: ReactNode; locale
       </main>
       {!isDashboardPath ? <GaldermaFooter /> : null}
       {!isDashboardPath ? <StickyMobileBookingBar /> : null}
-      {!isDashboardPath ? <WhatsAppWidget /> : null}
+      {!isDashboardPath ? <SalonGuideWidget locale={locale} /> : null}
       <Toaster />
     </>
   );
