@@ -1,5 +1,5 @@
 import type { AnchorHTMLAttributes, ReactNode } from 'react';
-import { cleanup, render, screen, within } from '@testing-library/react';
+import { cleanup, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { NextIntlClientProvider } from 'next-intl';
 import { afterEach, describe, expect, it, vi } from 'vitest';
@@ -33,15 +33,20 @@ function renderWidget() {
 describe('SalonGuideWidget', () => {
   afterEach(() => {
     cleanup();
+    window.sessionStorage.clear();
     vi.restoreAllMocks();
+    vi.unstubAllGlobals();
   });
 
-  it('puts a visible treatment-and-price invitation in front of visitors', async () => {
+  it('puts a visible, personal Mariam invitation in front of visitors', async () => {
     const user = userEvent.setup();
     renderWidget();
 
+    expect(screen.getByText('Ask Mariam')).toBeVisible();
     expect(
-      screen.getByText('Ask about our treatments and prices')
+      screen.getByText(
+        "Hi, I'm Mariam 👋 Ask me about treatments, prices and duration."
+      )
     ).toBeVisible();
 
     await user.click(
@@ -51,7 +56,34 @@ describe('SalonGuideWidget', () => {
     expect(
       screen.getByRole('dialog', { name: 'Mariam · Silk treatment guide' })
     ).toBeVisible();
-    expect(screen.queryByText('Ask about our treatments and prices')).toBeNull();
+    expect(screen.queryByText('Ask Mariam')).toBeNull();
+  });
+
+  it('reveals the introduction once on touch devices', async () => {
+    vi.stubGlobal(
+      'matchMedia',
+      vi.fn().mockReturnValue({
+        matches: true,
+        media: '(hover: none), (pointer: coarse)',
+        onchange: null,
+        addListener: vi.fn(),
+        removeListener: vi.fn(),
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn(),
+      } satisfies MediaQueryList)
+    );
+
+    renderWidget();
+
+    const introduction = screen.getByText(
+      "Hi, I'm Mariam 👋 Ask me about treatments, prices and duration."
+    );
+
+    await waitFor(() => expect(introduction).toHaveClass('opacity-100'));
+    expect(
+      window.sessionStorage.getItem('silk-mariam-mobile-introduction-seen')
+    ).toBe('true');
   });
 
   it('answers a specific price question immediately with price and duration', async () => {

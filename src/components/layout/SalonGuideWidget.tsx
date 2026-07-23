@@ -253,8 +253,9 @@ export function SalonGuideWidget({ locale }: { locale: Locale }) {
   const launcherRef = useRef<HTMLButtonElement>(null);
   const transcriptRef = useRef<HTMLDivElement>(null);
   const nextMessageId = useRef(1);
+  const shouldReturnFocus = useRef(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [showInvitation, setShowInvitation] = useState(true);
+  const [showMobileInvitation, setShowMobileInvitation] = useState(false);
   const [question, setQuestion] = useState('');
   const [messages, setMessages] = useState<GuideMessage[]>([
     {
@@ -265,15 +266,16 @@ export function SalonGuideWidget({ locale }: { locale: Locale }) {
   ]);
 
   const openGuide = () => {
+    shouldReturnFocus.current = false;
     setIsOpen(true);
-    setShowInvitation(false);
+    setShowMobileInvitation(false);
     trackEvent('salon_guide_open');
   };
 
   const closeGuide = (returnFocus = false) => {
+    shouldReturnFocus.current = returnFocus;
     setIsOpen(false);
-    setShowInvitation(false);
-    if (returnFocus) requestAnimationFrame(() => launcherRef.current?.focus());
+    setShowMobileInvitation(false);
   };
 
   const askQuestion = (value: string, guidedIntent?: ChatbotIntent) => {
@@ -314,6 +316,44 @@ export function SalonGuideWidget({ locale }: { locale: Locale }) {
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen || !shouldReturnFocus.current) return;
+    launcherRef.current?.focus();
+    shouldReturnFocus.current = false;
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (
+      typeof window === 'undefined' ||
+      typeof window.matchMedia !== 'function' ||
+      !window.matchMedia('(hover: none), (pointer: coarse)').matches
+    ) {
+      return;
+    }
+
+    const storageKey = 'silk-mariam-mobile-introduction-seen';
+
+    try {
+      if (window.sessionStorage.getItem(storageKey)) return;
+      window.sessionStorage.setItem(storageKey, 'true');
+    } catch {
+      // Keep the introduction available when storage is restricted.
+    }
+
+    const invitationFrame = window.requestAnimationFrame(() =>
+      setShowMobileInvitation(true)
+    );
+    const invitationTimer = window.setTimeout(
+      () => setShowMobileInvitation(false),
+      7000
+    );
+
+    return () => {
+      window.cancelAnimationFrame(invitationFrame);
+      window.clearTimeout(invitationTimer);
+    };
+  }, []);
 
   useEffect(() => {
     const transcript = transcriptRef.current;
@@ -469,26 +509,52 @@ export function SalonGuideWidget({ locale }: { locale: Locale }) {
         </section>
       ) : null}
 
-      {showInvitation && !isOpen ? (
+      {isOpen ? (
         <button
+          ref={launcherRef}
+          type="button"
+          onClick={() => closeGuide()}
+          className="relative flex size-14 shrink-0 items-center justify-center bg-primary text-primary-foreground shadow-xl transition hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:hover:scale-100"
+          aria-label={t('launcherClose')}
+          aria-expanded="true"
+        >
+          <X className="size-6" aria-hidden="true" />
+        </button>
+      ) : (
+        <button
+          ref={launcherRef}
           type="button"
           onClick={openGuide}
-          className="max-w-56 border border-border bg-background px-4 py-3 text-start text-sm font-semibold leading-snug text-foreground shadow-xl transition hover:border-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+          className="group relative flex min-h-14 max-w-[calc(100vw-2rem)] shrink-0 items-center overflow-visible border border-primary/20 bg-background text-foreground shadow-2xl transition duration-200 hover:-translate-y-0.5 hover:border-primary focus-visible:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:transform-none motion-reduce:transition-none"
+          aria-label={t('launcherOpen')}
+          aria-expanded="false"
         >
-          {t('invite')}
+          <span
+            aria-hidden="true"
+            className={cn(
+              'pointer-events-none absolute bottom-[calc(100%+0.75rem)] w-[min(18rem,calc(100vw-2rem))] border border-border bg-background px-4 py-3 text-start text-sm font-medium leading-relaxed text-foreground shadow-xl transition duration-300 ltr:right-0 rtl:left-0',
+              'translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transform-none motion-reduce:transition-none',
+              showMobileInvitation && 'translate-y-0 opacity-100'
+            )}
+          >
+            {t('introduction')}
+          </span>
+          <span
+            className="flex size-14 shrink-0 items-center justify-center bg-primary text-primary-foreground"
+            aria-hidden="true"
+          >
+            <MessageCircleQuestion className="size-6" />
+          </span>
+          <span className="min-w-0 px-3 text-start sm:px-4">
+            <span className="hidden text-[0.65rem] font-medium uppercase tracking-[0.13em] text-muted-foreground sm:block">
+              {t('launcherRole')}
+            </span>
+            <span className="block text-sm font-semibold leading-none sm:mt-0.5">
+              {t('launcherLabel')}
+            </span>
+          </span>
         </button>
-      ) : null}
-
-      <button
-        ref={launcherRef}
-        type="button"
-        onClick={() => (isOpen ? closeGuide() : openGuide())}
-        className="relative flex size-14 shrink-0 items-center justify-center bg-primary text-primary-foreground shadow-xl transition hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring motion-reduce:hover:scale-100"
-        aria-label={isOpen ? t('launcherClose') : t('launcherOpen')}
-        aria-expanded={isOpen}
-      >
-        {isOpen ? <X className="size-6" aria-hidden="true" /> : <MessageCircleQuestion className="size-6" aria-hidden="true" />}
-      </button>
+      )}
     </div>
   );
 }
