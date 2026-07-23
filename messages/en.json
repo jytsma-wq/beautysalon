@@ -2205,6 +2205,88 @@
     "functionalDesc": "Enable enhanced functionality and personalization.",
     "required": "Required"
   },
+  "chatbot": {
+    "title": "Mariam · Silk treatment guide",
+    "status": "Your friendly digital salon guide",
+    "close": "Close treatment guide",
+    "launcherOpen": "Open the Silk treatment guide",
+    "launcherClose": "Close the Silk treatment guide",
+    "invite": "Ask about our treatments and prices",
+    "transcriptLabel": "Conversation with the Silk treatment guide",
+    "welcome": "Hello, I am Mariam, Silk's digital guide. Ask a treatment question and I will give you the published price and duration first.",
+    "disclaimer": "For suitability, medicines or unexpected symptoms, I will connect you with the salon.",
+    "quickLabel": "Popular questions",
+    "inputLabel": "Your question",
+    "placeholder": "Example: How much is lip filler?",
+    "send": "Send question",
+    "minutesShort": "min",
+    "quick": {
+      "lipPrice": "Lip filler price",
+      "foreheadBotoxPrice": "Forehead Botox price",
+      "choose": "Help me choose",
+      "recovery": "Recovery time"
+    },
+    "prompts": {
+      "lipPrice": "How much is lip filler?",
+      "foreheadBotoxPrice": "How much is Botox for forehead lines?",
+      "choose": "I am not sure which treatment to book",
+      "recovery": "What is the downtime after lip filler?"
+    },
+    "answers": {
+      "emergency": "This may need urgent medical care. Contact local emergency services now; do not wait for a salon or chatbot reply.",
+      "medical": "I cannot decide medical suitability here. Tell the salon about medicines, allergies, pregnancy or breastfeeding before treatment.",
+      "brand": "The exact salon brand is not yet verified on the website. Ask the team to confirm the product, variant and practitioner before booking.",
+      "foreheadFiller": "Forehead filler is not the same as forehead Botox. No forehead filler price is published; the salon must first confirm whether it is offered and suitable.",
+      "cancellation": "Cancel at least {hours} hours before the appointment. Contact the salon directly to change an existing booking.",
+      "reschedule": "Reschedule at least {hours} hours before the appointment. Contact the salon directly to move an existing booking.",
+      "booking": "Send an online booking request. It is confirmed only when the salon contacts you, normally within {hours} hours.",
+      "location": "Silk Beauty Salon is at {address}, {city}, {country}.",
+      "hours": "Open Monday–Saturday {mondaySaturday}; Sunday {sunday}.",
+      "contact": "Phone: {phone}. WhatsApp: {whatsapp}. Email: {email}.",
+      "languages": "The website and Mariam support English, Georgian, Russian, Turkish, Arabic and Hebrew. Confirm the preferred spoken language with the salon when booking.",
+      "payment": "The website states that cash and major credit cards are accepted. Payment is due at the service unless agreed otherwise.",
+      "results": "Results and how long they last depend on the exact service and the individual; the treatment guide shows the published estimate.",
+      "downtime": "Recovery is treatment-specific and can include temporary redness, swelling, tenderness, bruising, dryness or peeling.",
+      "askTreatmentPrice": "Name the treatment to receive its published price immediately. If no price is published, I will say so.",
+      "askTreatmentDuration": "Name the treatment to receive its published appointment duration immediately.",
+      "priceOverview": "Published price ranges by category:",
+      "priceUnavailable": "price not published",
+      "consultation": "Tell me the result you want, or choose a consultation if you are not sure what to book.",
+      "unknown": "I cannot find an approved answer on the website. Ask the salon directly and include the treatment or result you want.",
+      "greeting": "Hello. Ask me about a treatment, price, duration, results, recovery or booking."
+    },
+    "labels": {
+      "results": "Results",
+      "recovery": "Recovery"
+    },
+    "categories": {
+      "injectables": "Injectables",
+      "skin": "Skin",
+      "lashes": "Lashes and brows",
+      "hair": "Hair",
+      "nails": "Nails"
+    },
+    "explanations": {
+      "antiWrinkle": "Anti-wrinkle injections relax selected muscles to soften movement-related lines; dose and treatment area require assessment.",
+      "dermalFiller": "Dermal filler is an injectable gel used to restore or shape volume in a selected area after assessment.",
+      "lipFiller": "Lip filler adds or shapes lip volume. The settled result is assessed after swelling reduces.",
+      "microneedling": "Microneedling creates controlled microchannels to support gradual skin renewal and collagen remodeling.",
+      "fireIce": "Fire & Ice is a professional resurfacing facial with a warming masque followed by a cooling masque.",
+      "chemicalPeel": "A chemical peel uses a professional solution to exfoliate selected skin layers; strength and suitability require assessment.",
+      "skinBoosters": "Skin boosters are injectable treatments intended to support skin hydration and quality, not facial contouring.",
+      "nails": "Nail services include preparation, shaping, cuticle care and the selected colour or art finish.",
+      "lashes": "Lash services create a lift, tint or fuller finish; the exact process and aftercare depend on the selected service.",
+      "balayage": "Balayage is a hand-painted hair-lightening technique designed for a blended, dimensional result.",
+      "keratin": "A keratin hair treatment smooths and conditions the hair; results and maintenance depend on the hair and product used."
+    },
+    "actions": {
+      "book": "Book this treatment",
+      "guide": "Read the treatment guide",
+      "library": "Open the knowledge library",
+      "prices": "View the full price list",
+      "whatsapp": "Ask the salon on WhatsApp"
+    }
+  },
   "whatsapp": {
     "chatOnWhatsApp": "Chat on WhatsApp",
     "close": "Close",

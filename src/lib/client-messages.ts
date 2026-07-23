@@ -3,6 +3,7 @@ type MessageRecord = Record<string, unknown>;
 const passthroughNamespaces = [
   'accessibility',
   'common',
+  'chatbot',
   'consent',
   'contact',
   'contactPage',
