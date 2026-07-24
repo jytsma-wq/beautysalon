@@ -5,6 +5,49 @@ Phase: 8 - Reporting and operating rhythm
 Branch: `codex/visibility-readiness-audit`
 Mode: public technical baseline plus private-data access plan; no account settings changed
 
+## Google Refresh Baseline - 2026-07-24
+
+Authenticated Search Console data confirms that the canonical site is indexed
+and eligible for Search, but the exact brand and Botox queries are generally
+still on page two:
+
+| Metric | Current value |
+| --- | ---: |
+| Last-3-month clicks | 38 |
+| Last-3-month impressions | 841 |
+| CTR | 4.5% |
+| Average position | 6.2 |
+| Indexed pages | 24 |
+| Not indexed | 478 |
+| `silk beauty salon` average position | 12.8 |
+| `botox batumi` average position | 13.6 |
+
+No manual action or security issue is present. The indexing report was last
+updated on 2026-07-10 and is therefore older than the 2026-07-17 release that
+reduced and cleaned the crawl surface.
+
+Actions completed:
+
+- Revalidated production health for the main brand, Botox, price, sitemap,
+  robots, and health routes.
+- Confirmed the live sitemap currently contains `186` canonical URLs.
+- Resubmitted `https://silkbeautysalon.online/sitemap.xml`; Search Console
+  accepted it on 2026-07-24.
+- Ran live URL tests for seven high-intent English pages and placed each in the
+  priority crawl queue after indexability and canonical checks passed.
+- Kept the historical not-indexed backlog out of bulk submission.
+
+The current reporting cadence is:
+
+- 2026-07-31: sitemap processing, crawl-date, snippet, and index-coverage check.
+- 2026-08-07: exact brand and `botox batumi` query comparison.
+- Monthly: compare Search Console query/page performance, GBP actions and real
+  reviews/photos, citations, and first-party domain consolidation status.
+
+Ranking is not guaranteed. The largest unresolved controllable issue is the
+simultaneous operation of `silkbeauty.ge` and `silkbeautysalon.online` as
+self-canonical websites for the same business.
+
 ## Trust Baseline Update - 2026-07-16
 
 - Branch-only cleanup removes unverified testimonials and stock-photo before/after cases from publishable data.

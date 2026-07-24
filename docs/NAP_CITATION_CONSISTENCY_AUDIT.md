@@ -14,6 +14,42 @@ Mode: public citation audit and correction plan only; no third-party listing edi
 - Public search snippets are treated as approximate because snippets can be stale or personalized.
 - Any third-party edits require owner approval and confirmed account access first.
 
+## Same-Business Domain Conflict - Confirmed 2026-07-24
+
+Public evidence now confirms that `silkbeauty.ge` is not merely a similarly
+named competitor. It represents the same Batumi salon:
+
+- It publishes the same location: Zurab Gorgiladze 63, Batumi.
+- It publishes the same primary phone: `+995 577 34 57 67`.
+- It names Nana Gviniashvili in its team.
+- It links to BeautyBook salon `616`.
+- It links to Instagram, Facebook, and WhatsApp.
+- Its WhatsApp link uses `+995 577 34 57 67`, while the approved separate
+  WhatsApp channel on `silkbeautysalon.online` is `+995 577 28 68 55`.
+- It is an active Vercel-hosted Next.js website, publishes a self-canonical
+  `https://silkbeauty.ge`, allows crawling, and exposes its own six-URL sitemap.
+
+This creates a P0 entity and authority split: two active first-party sites ask
+Google to treat themselves as canonical for the same salon, address, phone,
+services, booking journey, and brand. Search results currently surface both
+domains, particularly for Georgian searches.
+
+No DNS, redirect, canonical, ownership, hosting, or third-party profile change
+was made. The owner must choose one strategy:
+
+1. Recommended: keep `silkbeautysalon.online` as the primary multilingual site
+   and arrange page-matched permanent redirects from `silkbeauty.ge`, preserving
+   the Georgian domain and links.
+2. Alternative: designate `silkbeauty.ge` as primary and prepare a controlled
+   migration from `.online`.
+3. Not recommended: continue operating both as separate self-canonical websites
+   with overlapping content and business identity.
+
+Before any redirect or DNS work, confirm domain ownership, Vercel/rando.ge
+administrator access, current traffic and links, booking dependencies, a
+complete backup, route mapping, rollback steps, and the owner-approved canonical
+domain. Until then, all GBP and citation website links should remain unchanged.
+
 ## Phase 6 Execution Update - 2026-07-05 09:55 Asia/Tbilisi
 
 This update refreshes the public NAP/citation audit after the Phase 5 visibility baseline. It uses public search results, directly accessible public pages, and the website source-of-truth in `src/data/site-config.ts`.

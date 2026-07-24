@@ -5,6 +5,73 @@ Phase: 3 - Google Search Console setup and indexing
 Branch: `codex/visibility-readiness-audit`
 Mode: Search Console execution log plus public technical readiness notes
 
+## Search Visibility Action Update - 2026-07-24
+
+An authenticated Search Console pass was completed for
+`sc-domain:silkbeautysalon.online`. No website code, DNS, Google Business
+Profile, Bing, analytics, email, dependency, or production setting was changed.
+
+### Current Account Baseline
+
+| Item | Result |
+| --- | --- |
+| Search performance, last 3 months | 38 clicks, 841 impressions, 4.5% CTR, average position 6.2 |
+| Exact `silk beauty salon` query | 1 click, 17 impressions, average position 12.8 |
+| Exact `botox batumi` query | 2 clicks, 5 impressions, average position 13.6 |
+| Page indexing overview | 24 indexed, 478 not indexed |
+| Main not-indexed reason | 474 `Discovered - currently not indexed` |
+| Other exclusions | 2 redirects, 1 server error, 1 alternate with proper canonical |
+| Page indexing report freshness | Last updated 2026-07-10; predates the 2026-07-17 crawl-surface release |
+| Manual actions | No issues detected |
+| Security issues | No issues detected |
+
+The live production health check returned HTTP `200` for `/en`,
+`/en/beauty-salon-batumi`, `/en/botox-batumi`, `/en/pricelist`,
+`/api/health`, `/sitemap.xml`, and `/robots.txt`.
+
+### Sitemap Refresh
+
+- The live sitemap contains `186` canonical URLs.
+- Search Console still showed the previously processed `492` discovered pages,
+  with last read date 2026-06-21.
+- The canonical sitemap URL was resubmitted on 2026-07-24.
+- Search Console confirmed `Sitemap submitted successfully`.
+- The submission date changed to 2026-07-24. The last-read date and discovered
+  count will update asynchronously after Google processes the refreshed file.
+- The historical 478-URL backlog remains monitoring data, not a bulk-submission
+  target.
+
+### Selective URL Inspection And Recrawl Requests
+
+Each URL below was already indexed, exposed a matching user-declared canonical,
+used the inspected URL as Google's selected canonical, passed the live test as
+available to Google, and reported that the page can be indexed.
+
+| URL | Live test | Indexing request |
+| --- | --- | --- |
+| `https://silkbeautysalon.online/en` | Passed | Accepted into priority crawl queue |
+| `https://silkbeautysalon.online/en/beauty-salon-batumi` | Passed | Accepted into priority crawl queue |
+| `https://silkbeautysalon.online/en/botox-batumi` | Passed | Accepted into priority crawl queue |
+| `https://silkbeautysalon.online/en/dermal-fillers-batumi` | Passed | Accepted into priority crawl queue |
+| `https://silkbeautysalon.online/en/lip-fillers-batumi` | Passed | Accepted into priority crawl queue |
+| `https://silkbeautysalon.online/en/skin-treatment-batumi` | Passed | Accepted into priority crawl queue |
+| `https://silkbeautysalon.online/en/pricelist` | Passed | Accepted into priority crawl queue |
+
+No quota or temporary-unavailable warning appeared. These URLs should not be
+submitted again before the follow-up review.
+
+Search Console showed that at least one indexed copy still reflected an older
+June crawl despite corrected current production content. The selective recrawl
+requests are intended to refresh those stale indexed copies and snippets; they
+do not guarantee a ranking change.
+
+Next checks:
+
+1. 2026-07-31: verify sitemap last-read date, discovered-page count, crawl dates,
+   snippets, and index coverage.
+2. 2026-08-07: compare exact brand and `botox batumi` impressions, position, and
+   selected landing pages without resubmitting unchanged URLs.
+
 ## Current Status Note - updated 2026-07-09
 
 Earlier notes in this file record that authenticated Search Console access was unavailable during the first 2026-07-04 pass. A later authenticated browser session became available on 2026-07-05. The current authoritative Search Console status is:

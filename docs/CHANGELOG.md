@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-24
+
+- Resubmitted the canonical production sitemap in the verified Search Console domain property after confirming the live crawl surface contains `186` URLs; Google accepted the refresh and will process the new count asynchronously.
+- Ran live URL Inspection tests for the English homepage, Beauty Salon Batumi, Botox, dermal fillers, lip fillers, skin treatments, and pricelist pages; all seven were indexable, used the inspected `.online` canonical, and were accepted into Google's priority crawl queue without a quota warning.
+- Recorded the current Search Console baseline of 38 clicks, 841 impressions, 4.5% CTR, average position 6.2, 24 indexed pages, and 478 not-indexed URLs; confirmed no manual action or security issue.
+- Confirmed that `silkbeauty.ge` represents the same salon and remains a separate self-canonical Vercel website with its own sitemap, same address and primary phone, BeautyBook booking path, and a conflicting WhatsApp role. No DNS, redirect, ownership, profile, website-code, or production change was made.
+
 ## 2026-07-16
 
 - Released the reviewed SEO trust, crawl-surface, and localized support-metadata commits to production `main` at `232a778` on 2026-07-17. Hostinger live verification passed across all `184` sitemap URLs, `18` representative browser routes, `/api/health`, robots, localized support canonicals/hreflang, six-language switching, and the approved BeautySalon schema/NAP fields.
