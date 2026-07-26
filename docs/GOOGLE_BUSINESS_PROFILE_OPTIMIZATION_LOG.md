@@ -5,6 +5,54 @@ Phase: 3 - Google Business Profile audit and safe optimization plan
 Branch: `codex/visibility-readiness-audit`
 Mode: owner-approved service-only publication plus documentation
 
+## Live Account Follow-up - 2026-07-26
+
+The owner-managed profile was inspected in Google Search. This was a read-only
+check: no profile field, service, photo, review, post, Q&A, category, ad, or
+account setting was changed.
+
+### Verified Profile State
+
+| Item | Observed state |
+| --- | --- |
+| Profile | Owner-managed `Silk Beauty Salon`, primary category `Beauty salon` |
+| Verified Maps identity | `https://www.google.com/maps?cid=6069473521831169161` |
+| Main website | `https://silkbeautysalon.online/en` |
+| Products/services link | `https://silkbeautysalon.online/en/treatments` |
+| Appointment link | `https://silkbeautysalon.online/en/book` |
+| Main phone | `577 34 57 67` |
+| Manager address | `63 Zurab Gorgiladze St, Batumi 6010` |
+| Public Search/Maps address | `63 Zurab Gorgiladze St, Batumi 6000` |
+| Hours | Mon-Sat 10:00-22:00; Sun 11:00-22:00 |
+| Social profiles | Facebook, Instagram, and TikTok are configured |
+| Recent profile visibility | Google showed 93 people saw the profile last month |
+| Customer interactions | 51 |
+| Google reviews | `Get your first reviews` is still shown; no Google rating is visible |
+| Official review link | `https://g.page/r/CYnMYroCGjtUEBM/review` |
+
+The manager-side postal code is already correct. The public `6000` display is a
+Google publishing/cache lag and should be monitored rather than repeatedly
+edited without a clear pending-state diagnosis.
+
+### Service And Trust Findings
+
+The approved core services are present, including consultation-led Botox /
+anti-wrinkle injections, lip fillers, skin treatments, skin consultation, acne
+treatments, and dermal fillers. The service editor also contains several
+pre-existing duplicates, including multiple Botox and dermal-filler variants.
+Do not delete or rename them without a separately approved cleanup pass.
+
+The highest-value no-cost actions are now:
+
+1. Ask real completed clients for honest Google reviews using the official link.
+2. Upload an owner-approved set of real exterior, interior, treatment-room,
+   hygiene/setup, staff, nails, and lashes/brows photos.
+3. Recheck the public postal code after Google refreshes the profile.
+4. Clean duplicate services only after the owner approves the exact keep/remove
+   list.
+5. Resolve the competing `.online` and `.ge` website signals before changing
+   public profile links.
+
 ## Trust And Entity Strategy Update - 2026-07-16
 
 - No Google Business Profile field was changed in this pass.

@@ -33,7 +33,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/silkbeauty_batumi/",
     facebook: "https://www.facebook.com/silkbeautybatumi/",
     tiktok: "https://www.tiktok.com/@silkbeautybatumi",
-    googleBusinessProfile: ""
+    googleBusinessProfile: "https://www.google.com/maps?cid=6069473521831169161"
   }
 };
 

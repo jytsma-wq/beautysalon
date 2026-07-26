@@ -5,6 +5,47 @@ Phase: 8 - Reporting and operating rhythm
 Branch: `codex/visibility-readiness-audit`
 Mode: public technical baseline plus private-data access plan; no account settings changed
 
+## Account And Entity Follow-up - 2026-07-26
+
+Fresh authenticated, read-only checks replace the older account-access gaps for
+Search Console and Google Business Profile. No public profile edit, indexing
+request, ad, DNS change, or deployment was performed.
+
+### Current Baseline
+
+| Area | 2026-07-26 result |
+| --- | --- |
+| Search Console performance, 3 months | 39 clicks, 875 impressions, 4.5% CTR, average position 6.2 |
+| Exact `botox batumi` query | 2 clicks, 8 impressions, average position 13.0 |
+| English Botox landing page for that query | 0 clicks, 6 impressions, average position 11.8 |
+| Georgian Botox landing page for that query | 2 clicks, 2 impressions, average position 16.5 |
+| English Botox indexing | Indexed; successful smartphone fetch; crawl/index allowed; self canonical selected by Google; last crawl 2026-07-24 |
+| Sitemap | Success; last read 2026-07-24; 186 discovered pages |
+| Page indexing report | Stale 2026-07-10 snapshot: 24 indexed, 478 not indexed; wait for refreshed post-sitemap data |
+| Links report | Still processing |
+| Core Web Vitals | Insufficient 90-day field data on mobile and desktop |
+| Google Business Profile | Owner-managed; 93 profile views last month and 51 interactions shown |
+| Google review baseline | No Google rating visible; `Get your first reviews` still shown |
+| GBP postal code | Manager uses correct `6010`; public Search/Maps still displays stale `6000` |
+
+### Ranking Diagnosis
+
+The English Botox page is technically healthy and close to page one. Additional
+keyword pages or repeated indexing requests are not the next bottleneck. The
+highest-value remaining constraints are:
+
+1. No Google reviews and no fresh owner-approved profile photo set.
+2. Two live first-party domains (`.online` and `.ge`) describing the same
+   business.
+3. Stale/off-message Salonly copy and possible Facebook page duplication.
+4. Duplicate Botox/filler rows in the Google Business Profile services editor.
+5. Limited processed link/authority data; Search Console's Links report is not
+   ready yet.
+
+Next monitoring date: 2026-08-02 for Search Console coverage/links and public
+postal-code refresh. Repeat the exact query baseline on 2026-08-26; do not infer
+trend from the current eight impressions alone.
+
 ## Trust Baseline Update - 2026-07-16
 
 - Branch-only cleanup removes unverified testimonials and stock-photo before/after cases from publishable data.

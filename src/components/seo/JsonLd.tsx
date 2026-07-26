@@ -129,7 +129,7 @@ export function buildLocalBusinessSchema(locale: string = "en"): SchemaObject {
       "postalCode": siteConfig.contact.postcode,
       "addressCountry": siteConfig.contact.country
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Zurab%20Gorgiladze%2063%2C%20Batumi%2C%20Georgia",
+    "hasMap": siteConfig.social.googleBusinessProfile,
     "areaServed": [
       {
         "@type": "City",

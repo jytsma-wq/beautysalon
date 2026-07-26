@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-26
+
+- Added the verified owner-managed Google Maps profile URL to the centralized site configuration and BeautySalon JSON-LD `sameAs` / `hasMap` properties, with focused regression assertions and no review/rating markup.
+- Refreshed the authenticated Search Console baseline: 39 clicks, 875 impressions, 4.5% CTR, average position 6.2; the indexed English Botox landing page averages position 11.8 for `botox batumi` in the current low-volume sample.
+- Recorded the successful 186-page sitemap read, the stale Page indexing report, the still-processing Links report, and the absence of sufficient Core Web Vitals field data without submitting another indexing request.
+- Recorded the read-only Google Business Profile state: 93 profile views last month, 51 interactions, no visible Google review rating, manager postcode `6010`, stale public postcode `6000`, configured website/booking/social links, and pre-existing duplicate service rows.
+- Prioritized real reviews/photos, duplicate-domain resolution, and owner-approved citation cleanup over additional keyword pages. No public profile, DNS, ad, third-party listing, deployment, analytics, or email change was made.
+
 ## 2026-07-16
 
 - Released the reviewed SEO trust, crawl-surface, and localized support-metadata commits to production `main` at `232a778` on 2026-07-17. Hostinger live verification passed across all `184` sitemap URLs, `18` representative browser routes, `/api/health`, robots, localized support canonicals/hreflang, six-language switching, and the approved BeautySalon schema/NAP fields.

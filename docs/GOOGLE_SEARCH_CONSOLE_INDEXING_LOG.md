@@ -5,6 +5,70 @@ Phase: 3 - Google Search Console setup and indexing
 Branch: `codex/visibility-readiness-audit`
 Mode: Search Console execution log plus public technical readiness notes
 
+## Account Follow-up - 2026-07-26
+
+An authenticated read-only Search Console check was completed for
+`sc-domain:silkbeautysalon.online`. No indexing request, DNS change, sitemap
+resubmission, or account setting change was made.
+
+### Current Search Performance
+
+The three-month Performance report was updated approximately 3.5 hours before
+this check:
+
+| Metric | Current value |
+| --- | ---: |
+| Clicks | 39 |
+| Impressions | 875 |
+| CTR | 4.5% |
+| Average position | 6.2 |
+
+For the exact query `botox batumi`, Search Console reports 2 clicks, 8
+impressions, and average position 13.0. The landing-page split is:
+
+| Landing page | Clicks | Impressions | Average position |
+| --- | ---: | ---: | ---: |
+| `/en/botox-batumi` | 0 | 6 | 11.8 |
+| `/ka/botox-batumi` | 2 | 2 | 16.5 |
+
+This is early, low-volume data. It confirms discoverability and near-page-one
+visibility, but it is not enough to claim a stable ranking improvement.
+
+### English Botox URL Inspection
+
+- URL: `https://silkbeautysalon.online/en/botox-batumi`
+- URL is on Google: yes
+- Crawl allowed: yes
+- Page fetch: successful
+- Indexing allowed: yes
+- User-declared canonical: inspected URL
+- Google-selected canonical: inspected URL
+- Crawler: Googlebot smartphone
+- Last crawl: 2026-07-24 08:45:14
+- HTTPS: valid
+- Breadcrumb enhancement: one valid item
+- Indexing request submitted in this pass: no; the indexed canonical URL does
+  not need another request
+
+URL Inspection showed a temporary sitemap-processing message, but the dedicated
+Sitemaps report is authoritative and reports:
+
+- Status: Success
+- Submitted: 2026-07-24
+- Last read: 2026-07-24
+- Discovered pages: 186
+
+### Coverage And Link Reports
+
+The Page indexing report is stale, last updated 2026-07-10. It still shows 24
+indexed and 478 not indexed, including 474 `Discovered - currently not indexed`,
+2 redirects, 1 server error, and 1 alternate canonical. Do not treat those
+counts as a current post-sitemap baseline and do not bulk-submit the URLs.
+
+The Links report is still processing. Core Web Vitals has insufficient 90-day
+field data for both mobile and desktop. Recheck both reports after Google has
+collected more data.
+
 ## Current Status Note - updated 2026-07-09
 
 Earlier notes in this file record that authenticated Search Console access was unavailable during the first 2026-07-04 pass. A later authenticated browser session became available on 2026-07-05. The current authoritative Search Console status is:
