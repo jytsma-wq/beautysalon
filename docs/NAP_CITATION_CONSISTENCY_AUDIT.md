@@ -5,6 +5,19 @@ Phase: 8 - Citations and NAP consistency
 Branch: `codex/visibility-readiness-audit`
 Mode: public citation audit and correction plan only; no third-party listing edits
 
+## Primary Domain Decision - 2026-07-27
+
+The owner confirmed that `silkbeautysalon.online` is the permanent primary
+domain and that the owner does not control `silkbeauty.ge`.
+
+The `.ge` site is therefore classified as an uncontrolled brand/entity
+collision, not an owned legacy site and not a redirect candidate. All
+owner-controlled citations must use `silkbeautysalon.online`. No DNS, redirect,
+canonical, hosting, takedown, or third-party profile action was attempted.
+
+Detailed source-of-truth policy:
+`docs/DOMAIN_SOURCE_OF_TRUTH_DECISION.md`.
+
 ## Entity And Citation Follow-up - 2026-07-26
 
 No third-party listing was edited in this pass. The following current public
@@ -14,7 +27,7 @@ signals were verified and should drive the next owner-approved cleanup:
 | --- | --- | --- | --- |
 | Google Business Profile | Verified owner-managed profile with CID `6069473521831169161`; website, treatments, booking, main phone, hours, and social profiles are configured. Manager address uses `6010`, while public Search/Maps still displays `6000`. | Monitor the public postcode; do not repeatedly resave the correct manager value without evidence that a new edit is needed. | Required before another public address edit |
 | `silkbeautysalon.online` | Current canonical multilingual website and Search Console property. | Keep as the primary SEO source unless the owner explicitly chooses another domain. | No change in this pass |
-| `silkbeauty.ge` | Independently indexed website for the same salon, address, phone, and team. It competes with `.online` for branded and Georgian relevance. | Owner confirms whether `.online` is the permanent primary domain and whether the `.ge` deployment is controlled. If yes, prepare page-matched permanent redirects instead of operating two competing sites. | Required; redirect/DNS ownership action |
+| `silkbeauty.ge` | Independently indexed website using the same salon identity, address, and phone. The owner confirmed it is not owner-controlled. | Keep it out of first-party schema, GBP, citations, and booking links. Monitor it as a brand collision; do not attempt redirects, DNS changes, or takedown action without ownership/evidence and separate approval. | Required only for any platform/legal escalation |
 | Salonly | Public listing is active, but its search description emphasizes hair extensions, `Botoxibio` curling, and nanoplastics rather than the current salon service mix. | Owner/admin reviews the description, website, booking link, services, hours, photos, and staff data in Salonly. | Required |
 | Facebook | GBP links to `facebook.com/silkbeautybatumi/`, while organic search also surfaces `facebook.com/people/SilkBeautySalon/61576489505786/`. | Confirm the canonical page and merge/retire only if both are owner-controlled and genuinely duplicate. | Required |
 

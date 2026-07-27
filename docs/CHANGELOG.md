@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-27
+
+- Recorded the owner decision that `silkbeautysalon.online` is the permanent primary domain and that `silkbeauty.ge` is not owner-controlled.
+- Confirmed application source, public assets, scripts, canonicals, hreflang, sitemap, booking links, and first-party schema do not reference the uncontrolled `.ge` domain.
+- Added a BeautySalon schema regression assertion preventing `silkbeauty.ge` from entering first-party entity markup.
+- Classified `.ge` as an uncontrolled brand/entity collision and documented the safe policy: reinforce `.online` in owner-controlled profiles and citations; do not attempt DNS, redirect, migration, ownership, or takedown actions without separate evidence and approval.
+- No public profile, DNS, hosting, citation, Search Console, Bing, ad, analytics, email, or production change was made.
+
 ## 2026-07-26
 
 - Added the verified owner-managed Google Maps profile URL to the centralized site configuration and BeautySalon JSON-LD `sameAs` / `hasMap` properties, with focused regression assertions and no review/rating markup.

@@ -5,6 +5,16 @@ Phase: 3 - Google Business Profile audit and safe optimization plan
 Branch: `codex/visibility-readiness-audit`
 Mode: owner-approved service-only publication plus documentation
 
+## Primary Website Decision - 2026-07-27
+
+The owner confirmed `https://silkbeautysalon.online` as the permanent primary
+domain and confirmed that `silkbeauty.ge` is not owner-controlled.
+
+The current GBP website, products/services, and appointment links already use
+the approved `.online` domain. No GBP edit is needed for this decision, and no
+public profile field was changed. Future GBP and citation work must not switch
+to or reference the uncontrolled `.ge` site.
+
 ## Live Account Follow-up - 2026-07-26
 
 The owner-managed profile was inspected in Google Search. This was a read-only

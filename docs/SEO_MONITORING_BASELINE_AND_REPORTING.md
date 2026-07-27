@@ -5,6 +5,24 @@ Phase: 8 - Reporting and operating rhythm
 Branch: `codex/visibility-readiness-audit`
 Mode: public technical baseline plus private-data access plan; no account settings changed
 
+## Primary Domain Decision - 2026-07-27
+
+- Permanent primary domain: `https://silkbeautysalon.online`
+- Owner control of `silkbeauty.ge`: no
+- Classification: uncontrolled brand/entity collision
+- First-party source audit: no `.ge` references found in application source,
+  public assets, scripts, or tests
+- Required policy: use `.online` exclusively in canonicals, hreflang, sitemap,
+  schema, GBP, Search Console, Bing, social profiles, citations, and booking
+  links
+- Prohibited without separate evidence and approval: `.ge` DNS/redirect changes,
+  ownership claims, Search Console migration, takedown, trademark, or hosting
+  complaints
+
+Monitor which domain Google selects for branded and Georgian queries. Improve
+the controlled `.online` entity through real reviews, real photos, consistent
+citations, and relevant links rather than creating more duplicate pages.
+
 ## Account And Entity Follow-up - 2026-07-26
 
 Fresh authenticated, read-only checks replace the older account-access gaps for

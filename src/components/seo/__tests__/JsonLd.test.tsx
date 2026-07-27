@@ -72,6 +72,7 @@ describe('LocalBusiness BeautySalon JSON-LD', () => {
     expect(schema.telephone).toBe('+995 577 34 57 67');
     expect(schema.hasMap).toBe(siteConfig.social.googleBusinessProfile);
     expect(JSON.stringify(schema)).not.toContain('+995 599 123 456');
+    expect(JSON.stringify(schema)).not.toContain('silkbeauty.ge');
     expect(schema.openingHoursSpecification).toHaveLength(7);
     expect(schema.sameAs).toEqual([
       siteConfig.social.instagram,
