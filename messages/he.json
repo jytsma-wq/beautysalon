@@ -2093,10 +2093,10 @@
     "servicePlaceholder": "בחרו טיפול",
     "messagePlaceholder": "דרישות או שאלות מיוחדות...",
     "serviceConsultation": "ייעוץ",
-    "serviceBotox": "Botox Treatment",
+    "serviceBotox": "טיפול בוטוקס",
     "serviceFillers": "פילרים דרמליים",
     "serviceLaser": "הסרת שיער בלייזר",
-    "serviceRejuvenation": "Skin Rejuvenation",
+    "serviceRejuvenation": "הצערת העור",
     "servicePeel": "פילינג כימי",
     "serviceMicroneedling": "מיקרונידלינג",
     "personalInfo": "מידע אישי",
@@ -2438,7 +2438,7 @@
     "contactSilkBeautySalon": "צור קשר עם סלק ביוטי סילק",
     "silkBeautySalon": "סלק ביוטי סילק",
     "salonInterior": "פנימי הסלון",
-    "teamMember": "{name} - חבר הצוותה",
+    "teamMember": "{name} - חבר/ת הצוות",
     "consultation": "ייעוצ",
     "bookConsultation": "הזמן ייעוצ",
     "skinCareTreatment": "טיפול עור אכילה"
@@ -2507,6 +2507,9 @@
     "expertPractitioner": "צוות העריכה"
   },
   "treatmentPage": {
+    "metadataTitle": "{name} בבטומי, גאורגיה",
+    "metadataDescription": "{description} קבעו תור ל-{name} ב-Silk Beauty Salon בבטומי.",
+    "imageAlt": "{name} ב-Silk Beauty Salon בבטומי",
     "bookNow": "קבע תור לטיפול זה",
     "backTo": "חזרה לטיפולים",
     "aboutTreatment": "על הטיפול הזה",
@@ -2527,7 +2530,7 @@
     "relatedTreatments": "טיפולים דומים",
     "atAGlance": "מבט במבט",
     "results": "תוצאות",
-    "downtime": "זמן התאושה",
+    "downtime": "זמן התאוששות",
     "youMightAlsoLike": "אולי תאהב גם",
     "learnMore": "למד עוד",
     "heroAlt": "סלון יופי יוקרתי",
@@ -2752,6 +2755,12 @@
     "section3Title": "תיק טיפולים",
     "section4Title": "מצבי עור",
     "section5Title": "תיק טיפולים"
+  },
+  "notFoundPage": {
+    "title": "הדף לא נמצא",
+    "description": "מצטערים, לא הצלחנו למצוא את הדף שחיפשתם. ייתכן שהוא הועבר או נמחק.",
+    "home": "חזרה לדף הבית",
+    "contact": "יצירת קשר"
   },
   "treatmentCollectionPage": {
     "metadataTitle": "{title} בבטומי, גאורגיה",

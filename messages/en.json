@@ -2507,6 +2507,9 @@
     "expertPractitioner": "Editorial team"
   },
   "treatmentPage": {
+    "metadataTitle": "{name} in Batumi, Georgia",
+    "metadataDescription": "{description} Book {name} at Silk Beauty Salon in Batumi, Georgia.",
+    "imageAlt": "{name} at Silk Beauty Salon in Batumi, Georgia",
     "bookNow": "Book This Treatment",
     "backTo": "Back to Treatments",
     "aboutTreatment": "About This Treatment",
@@ -2752,6 +2755,12 @@
     "section3Title": "Treatment portfolio",
     "section4Title": "Skin conditions",
     "section5Title": "Treatment portfolio"
+  },
+  "notFoundPage": {
+    "title": "Page not found",
+    "description": "Sorry, we couldn't find the page you're looking for. It may have been moved or deleted.",
+    "home": "Go home",
+    "contact": "Contact us"
   },
   "treatmentCollectionPage": {
     "metadataTitle": "{title} in Batumi, Georgia",

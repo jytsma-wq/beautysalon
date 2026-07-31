@@ -627,7 +627,7 @@
           "benefits": [
             "İnce çizgileri ve kırışıklıkları azaltır",
             "Yeni kırışıklıkların oluşumunu önler",
-            "Minimal downtime ile hızlı tedavi",
+            "Minimum iyileşme süresiyle hızlı uygulama",
             "Doğal görünümlü sonuçlar",
             "Uzun süreli etkiler (3-6 ay)"
           ],
@@ -836,7 +836,7 @@
             "Pigmentasyonu tedavi eder",
             "Güneş hasarını azaltır",
             "Cilt tonunu iyileştirir",
-            "Minimal downtime"
+            "Minimum iyileşme süresi"
           ]
         },
         "laser-vein": {
@@ -2093,10 +2093,10 @@
     "servicePlaceholder": "Bir tedavi seçin",
     "messagePlaceholder": "Özel istekler veya sorular...",
     "serviceConsultation": "Konsültasyon",
-    "serviceBotox": "Botox Treatment",
+    "serviceBotox": "Botoks uygulaması",
     "serviceFillers": "Dermal dolgular",
     "serviceLaser": "Lazer epilasyon",
-    "serviceRejuvenation": "Skin Rejuvenation",
+    "serviceRejuvenation": "Cilt gençleştirme",
     "servicePeel": "Kimyasal peeling",
     "serviceMicroneedling": "Mikro iğneleme",
     "personalInfo": "Kişisel Bilgiler",
@@ -2507,6 +2507,9 @@
     "expertPractitioner": "Editör ekibi"
   },
   "treatmentPage": {
+    "metadataTitle": "Batum, Gürcistan'da {name}",
+    "metadataDescription": "{description} Batum'daki Silk Beauty Salon'da {name} randevusu alın.",
+    "imageAlt": "Batum'daki Silk Beauty Salon'da {name}",
     "bookNow": "Bu Tedaviyi Randevu Al",
     "backTo": "Tedavilere Dön",
     "aboutTreatment": "Bu Tedavi Hakkında",
@@ -2752,6 +2755,12 @@
     "section3Title": "Tedavi Portföyü",
     "section4Title": "Cilt Durumları",
     "section5Title": "Tedavi Portföyü"
+  },
+  "notFoundPage": {
+    "title": "Sayfa bulunamadı",
+    "description": "Aradığınız sayfayı bulamadık. Sayfa taşınmış veya silinmiş olabilir.",
+    "home": "Ana sayfaya dön",
+    "contact": "Bize ulaşın"
   },
   "treatmentCollectionPage": {
     "metadataTitle": "{title} Batum, Gürcistan",

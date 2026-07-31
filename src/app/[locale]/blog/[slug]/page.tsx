@@ -19,14 +19,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const tBlog = await getTranslations({ locale, namespace: 'blogPage' });
+  const tNotFound = await getTranslations({ locale, namespace: 'notFoundPage' });
   const post = await getBlogPostBySlug(slug, locale);
   
   if (!post) {
     return buildSeoMetadata({
       locale,
       path: `/blog/${slug}`,
-      title: 'Post Not Found',
-      description: 'This Silk Beauty Salon blog post could not be found.',
+      title: tBlog('postNotFound'),
+      description: tNotFound('description'),
       noIndex: true,
     });
   }

@@ -407,7 +407,11 @@ const fallbackBlogPosts: BlogPost[] = [
 ];
 
 function getFallbackPosts(locale: string): BlogPost[] {
-  return fallbackBlogPosts.map((post) => ({ ...post, locale }));
+  if (locale !== 'en') {
+    return [];
+  }
+
+  return fallbackBlogPosts;
 }
 
 function toSummary(post: BlogPost): BlogPostSummary {
