@@ -29,6 +29,8 @@ Each message file now contains exactly 2,081 scalar values. All non-English file
 - Corrected repeated booking labels for Botox and skin rejuvenation in all five non-English packs.
 - Corrected high-confidence Georgian spelling, grammar, and literal-translation errors, including the anti-wrinkle treatment copy and repeated team/about copy.
 - Corrected Turkish `downtime` leftovers, a Hebrew recovery-time typo, and a Hebrew team-label grammar error.
+- Corrected a second set of high-confidence Georgian, Russian, Turkish, Arabic, and Hebrew UI errors in treatment, before/after, accessibility, booking, contact, and image-alt copy.
+- Replaced remaining Russian, Georgian, and Turkish `Email` labels with native-language equivalents.
 - Removed obsolete Georgian-only message keys and restored exact structural parity.
 - Added localized treatment metadata and localized 404-page copy for all six languages.
 
@@ -46,7 +48,10 @@ Each message file now contains exactly 2,081 scalar values. All non-English file
 - Stopped English fallback blog articles from being relabeled as Georgian, Russian, Turkish, Arabic, or Hebrew. English fallback articles are now English-only.
 - Localized missing-blog metadata.
 - Localized the mobile-menu screen-reader labels and the booking-confirmation email label.
-- Replaced the hardcoded English Batumi page image alt text with localized copy.
+- Localized the booking dialog close label, contact-form required labels, header social label, and before/after slider labels and value text.
+- Replaced hardcoded English image-alt suffixes across public locale routes and homepage carousels with concise localized copy.
+- Localized contact-page metadata instead of publishing English titles and descriptions for every locale.
+- Prevented backend or network error text from bypassing the localized contact-form error message.
 
 ### Open Graph and fonts
 
@@ -56,6 +61,11 @@ Each message file now contains exactly 2,081 scalar values. All non-English file
 - Replaced external build-time font downloads with local packages while preserving the website's Inter and DM Serif Display families.
 - Included the required Open Graph font files in the standalone production output.
 
+### CI reproducibility
+
+- Added and versioned `package-lock.json`, which is required by the existing `setup-node` npm cache and `npm ci` workflow.
+- Declared the Vitest configuration as ESM so the locked test toolchain loads it consistently.
+
 ## Validation
 
 - Translation structure: passed for all six locales.
@@ -64,7 +74,7 @@ Each message file now contains exactly 2,081 scalar values. All non-English file
 - Placeholder mismatches: 0.
 - TypeScript typecheck: passed.
 - ESLint: passed.
-- Vitest: 421 passed, 12 skipped.
+- Vitest: 424 passed, 12 skipped.
 - Production build: passed.
 - Static pages generated: 561.
 - Diff/whitespace check: passed.

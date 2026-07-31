@@ -182,7 +182,7 @@ export function ClinicalHeroCarousel() {
                   >
                     <Image
                       src={slide.image}
-                      alt={`Silk Beauty Salon in Batumi, Georgia - ${slide.title}`}
+                      alt={slide.title}
                       fill
                       preload={index === 0}
                       loading={index === 0 ? 'eager' : 'lazy'}
@@ -272,7 +272,7 @@ export function ConcernCarousel() {
                 <div className="relative aspect-4/5 overflow-hidden bg-stone-100">
                   <Image
                     src={item.image}
-                    alt={`${item.name} treatment consultation at Silk Beauty Salon in Batumi, Georgia`}
+                    alt={item.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     sizes="(max-width: 640px) 86vw, (max-width: 1024px) 48vw, 31vw"
@@ -330,8 +330,10 @@ export function ResultsCarousel() {
                 <BeforeAfterSlider
                   beforeSrc={item.beforeImage}
                   afterSrc={item.afterImage}
-                  beforeAlt={`Before ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
-                  afterAlt={`After ${item.treatment} treatment at Silk Beauty Salon in Batumi`}
+                  beforeAlt={`${t('results.before')}: ${item.treatment}`}
+                  afterAlt={`${t('results.after')}: ${item.treatment}`}
+                  beforeLabel={t('results.before')}
+                  afterLabel={t('results.after')}
                   initialPosition={52}
                 />
               </div>
@@ -513,7 +515,7 @@ export function TrendsCarousel() {
                 <div className="relative aspect-4/3 overflow-hidden bg-stone-100">
                   <Image
                     src={article.image}
-                    alt={`${article.title} - Silk Beauty Salon Batumi skin care guide`}
+                    alt={article.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 88vw, 32vw"

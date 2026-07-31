@@ -174,6 +174,7 @@ export function GaldermaHeaderClient({
   const [activeMegaMenu, setActiveMegaMenu] = useState<'treatments' | 'conditions' | 'more' | null>(null);
   const locale = useLocale() as Locale;
   const t = useTranslations('nav');
+  const tCommon = useTranslations('common');
 
   const moreMenuItems: MoreMenuItem[] = [
     { title: t('about', { defaultValue: 'About' }), href: '/about' },
@@ -235,7 +236,7 @@ export function GaldermaHeaderClient({
       >
         <div className="mx-auto flex h-11 max-w-7xl items-center justify-between px-6 text-xs lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-0.5" aria-label="Social media links">
+            <div className="flex items-center gap-0.5" aria-label={tCommon('social')}>
               <SocialIconLink href={siteConfig.social.facebook} label="Facebook">
                 <FacebookBrandIcon className="h-5 w-5" />
               </SocialIconLink>

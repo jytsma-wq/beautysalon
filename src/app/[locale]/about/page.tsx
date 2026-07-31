@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: copy.title,
     description: copy.description,
     keywords: localSeoKeywords,
-    imageAlt: 'Silk Beauty Salon in Batumi, Georgia',
+    imageAlt: copy.title,
   });
 }
 

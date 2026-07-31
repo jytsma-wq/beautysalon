@@ -115,6 +115,7 @@ const INITIAL_FORM_STATE: FormState = {
 
 export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
   const t = useTranslations("bookingPage");
+  const tCommon = useTranslations("common");
   const locale = useLocale();
   const treatmentOptions = getBookingTreatmentOptions(locale);
 
@@ -268,7 +269,7 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent closeLabel={tCommon("close")} className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader className="text-center">
           <DialogTitle className="text-2xl font-serif">{t('dialogTitle')}</DialogTitle>
           <DialogDescription>

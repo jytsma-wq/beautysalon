@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: post.excerpt,
     keywords: [post.title, post.category, post.author, ...localSeoKeywords],
     image: post.image,
-    imageAlt: `${post.title} by ${post.author}`,
+    imageAlt: `${post.title} — ${post.author}`,
     type: 'article',
     noIndex: !isIndexableEditorialLocale(locale),
     alternateLocales: ['en'],

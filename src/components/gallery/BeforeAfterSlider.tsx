@@ -11,6 +11,8 @@ interface BeforeAfterSliderProps {
   afterSrc: string;
   beforeAlt: string;
   afterAlt: string;
+  beforeLabel: string;
+  afterLabel: string;
   /** Initial slider position as percent (0–100). Default 50. */
   initialPosition?: number;
 }
@@ -20,6 +22,8 @@ export function BeforeAfterSlider({
   afterSrc,
   beforeAlt,
   afterAlt,
+  beforeLabel,
+  afterLabel,
   initialPosition = 50,
 }: BeforeAfterSliderProps) {
   const t = useTranslations('accessibility');
@@ -158,7 +162,7 @@ export function BeforeAfterSlider({
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={Math.round(position)}
-      aria-valuetext={`${Math.round(position)}% before image visible`}
+      aria-valuetext={`${Math.round(position)}% ${beforeLabel}`}
     >
       {/* After image (bottom layer — full width) */}
       <div className="absolute inset-0">
@@ -173,7 +177,7 @@ export function BeforeAfterSlider({
         {/* "AFTER" label */}
         <div className="absolute bottom-4 right-4 text-[0.55rem] tracking-[0.2em] uppercase
                         text-white/70 bg-black/30 backdrop-blur-sm px-3 py-1">
-          After
+          {afterLabel}
         </div>
       </div>
 
@@ -193,7 +197,7 @@ export function BeforeAfterSlider({
         {/* "BEFORE" label */}
         <div className="absolute bottom-4 left-4 text-[0.55rem] tracking-[0.2em] uppercase
                         text-white/70 bg-black/30 backdrop-blur-sm px-3 py-1">
-          Before
+          {beforeLabel}
         </div>
       </div>
 

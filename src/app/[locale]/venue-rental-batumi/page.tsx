@@ -48,7 +48,7 @@ export async function generateMetadata({
     title: content.metadataTitle,
     description: content.metadataDescription,
     image: '/images/hero-poster.jpg',
-    imageAlt: 'Silk Beauty Salon venue rental enquiries in Batumi',
+    imageAlt: content.title,
   });
 }
 
