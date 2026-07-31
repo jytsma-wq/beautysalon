@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       'Botox and fillers Batumi',
       ...localSeoKeywords,
     ],
-    imageAlt: 'Silk Beauty Salon beauty care journal in Batumi, Georgia',
+    imageAlt: t('title'),
     noIndex: !isIndexableEditorialLocale(locale),
     alternateLocales: ['en'],
   });

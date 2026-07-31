@@ -344,7 +344,7 @@ export default async function TreatmentPage({ params }: Props) {
                       <div className="relative mb-6 aspect-4/5 overflow-hidden">
                         <Image
                           src={related.image}
-                          alt={`${related.name} treatment at Silk Beauty Salon in Batumi`}
+                          alt={tTreatmentPage('imageAlt', { name: related.name })}
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />

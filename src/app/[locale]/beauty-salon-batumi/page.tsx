@@ -361,7 +361,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ...localSeoKeywords,
     ],
     image: '/images/hero-poster.jpg',
-    imageAlt: 'Silk Beauty Salon in Batumi, Georgia',
+    imageAlt: copy.h1,
   });
 }
 

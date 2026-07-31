@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         ? 'Find targeted skin care and aesthetic treatment plans for acne, pigmentation, wrinkles and more at Silk Beauty Salon in Batumi, Georgia.'
         : t('metaDescription'),
     keywords: localSeoKeywords,
-    imageAlt: 'Skin care treatments at Silk Beauty Salon in Batumi, Georgia',
+    imageAlt: t('imageAlt'),
     noIndex: true,
   });
 }
@@ -46,7 +46,7 @@ export default async function ConditionsPage({
       <section className="relative w-full h-[60vh] md:h-[80vh]">
         <Image
           src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80"
-          alt={`${t('skinCareTreatment')} at Silk Beauty Salon in Batumi, Georgia`}
+          alt={t('imageAlt')}
           fill
           className="object-cover"
           priority

@@ -18,15 +18,15 @@ function TikTokIcon({ className }: { className?: string }) {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'contactPage' });
 
   return buildSeoMetadata({
     locale,
     path: '/contact-us',
-    title: 'Contact Silk Beauty Salon in Batumi, Georgia',
-    description:
-      'Contact Silk Beauty Salon on Zurab Gorgiladze Street in Batumi, Georgia to book aesthetic treatments, skin care and beauty salon appointments.',
+    title: `${t('title')} | Silk Beauty Salon`,
+    description: t('subtitle'),
     keywords: localSeoKeywords,
-    imageAlt: 'Contact Silk Beauty Salon in Batumi, Georgia',
+    imageAlt: t('imageAlt'),
   });
 }
 
@@ -64,7 +64,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <div className="relative aspect-4/3 overflow-hidden rounded-xl">
               <Image
                 src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=80"
-                alt={`${t('contactSilkBeautySalon')} in Batumi, Georgia`}
+                alt={t('imageAlt')}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1023px) 100vw, 52vw"
