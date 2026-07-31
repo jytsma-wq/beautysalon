@@ -424,7 +424,7 @@ export default async function BeautySalonBatumiPage({
             <div className="relative aspect-[4/3] overflow-hidden rounded-[8px]">
               <Image
                 src="/images/hero-poster.jpg"
-                alt="Silk Beauty Salon in Batumi, Georgia"
+                alt={copy.h1}
                 fill
                 className="object-cover"
                 priority

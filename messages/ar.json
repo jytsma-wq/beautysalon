@@ -231,7 +231,7 @@
     "bookImageAlt": "احجز استشارة",
     "title": "اطلب استشارة",
     "imageAlt": "استشارة مع أخصائي تجميل",
-    "metaTitle": "Find a Specialist | Silk Beauty Salon",
+    "metaTitle": "اعثري على أخصائية | Silk Beauty Salon",
     "metaDescription": "احجز استشارة مع ممارسي التجميل الخبراء لدينا. ابدأ رحلتك نحو جمال طبيعي محسن.",
     "label": "رعاية مخصصة",
     "headline": "احجز استشارتك اليوم",
@@ -333,8 +333,8 @@
     "title": "احجز موعداً",
     "subtitle": "جدول استشارتك أو علاجك مع خبرائنا",
     "metadata": {
-      "title": "Book an Appointment | Silk Beauty Salon",
-      "description": "Book your consultation or treatment appointment at Silk Beauty Salon in Batumi, Georgia."
+      "title": "احجزي موعداً | Silk Beauty Salon",
+      "description": "احجزي موعداً للاستشارة أو العلاج في Silk Beauty Salon في باتومي، جورجيا."
     },
     "eyebrow": "حجز الاستشارة",
     "heroImageAlt": "داخل الصالون",
@@ -368,7 +368,7 @@
     },
     "needHelp": "تحتاج مساعدة؟",
     "phone": "الهاتف",
-    "email": "Email",
+    "email": "البريد الإلكتروني",
     "address": "العنوان",
     "faq": {
       "title": "أسئلة شائعة عن الحجز",
@@ -395,8 +395,8 @@
     "namePlaceholder": "أدخلي اسمك الكامل",
     "phoneNumber": "رقم الهاتف",
     "phonePlaceholder": "+995 577 34 57 67",
-    "emailAddress": "Email Address",
-    "emailPlaceholder": "your@email.com",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "emailPlaceholder": "name@example.com",
     "successTitle": "تم إرسال طلب الحجز",
     "successMessage": "شكرًا لطلب الحجز. سنتواصل معك قريبًا لتأكيد الموعد.",
     "bookAnother": "احجزي موعدًا آخر",
@@ -430,10 +430,10 @@
     "servicePlaceholder": "اختاري علاجاً",
     "messagePlaceholder": "أي متطلبات أو أسئلة خاصة...",
     "serviceConsultation": "استشارة",
-    "serviceBotox": "Botox Treatment",
+    "serviceBotox": "علاج البوتوكس",
     "serviceFillers": "فيلر جلدي",
     "serviceLaser": "إزالة الشعر بالليزر",
-    "serviceRejuvenation": "Skin Rejuvenation",
+    "serviceRejuvenation": "تجديد البشرة",
     "servicePeel": "تقشير كيميائي",
     "serviceMicroneedling": "مايكرونيدلينغ",
     "personalInfo": "المعلومات الشخصية",
@@ -476,7 +476,7 @@
     "phone": "هاتف: +995 577 34 57 67",
     "email": "info@silkbeautysalon.online",
     "openingHours": "ساعات العمل",
-    "social": "Follow Us",
+    "social": "تابعينا",
     "faqDesc": "اقرأ بعض الأسئلة الأكثر شيوعاً عن العيادة وعلاجاتنا.",
     "clinicTitle": "العيادة",
     "clinicDesc": "تقع في شارع زوراب غورغيلادزه، ساعات العمل 10ص–7م.",
@@ -484,13 +484,13 @@
     "teamDesc": "تعرف على المزيد عن موظفينا المهرة.",
     "pressTitle": "الإعلام والصحافة",
     "pressDesc": "اطلع على أحدث مقالاتنا الصحفية.",
-    "copyright": "© 2024 Silk Beauty Salon. All rights reserved.",
+    "copyright": "© 2024 Silk Beauty Salon. جميع الحقوق محفوظة.",
     "privacy": "الخصوصية",
     "terms": "شروط الاستخدام",
     "cookieNotice": "إشعار ملفات تعريف الارتباط",
     "stayConnected": "ابق على اتصال",
     "newsletterTitle": "انضم إلى عالمنا",
-    "emailPlaceholder": "Your email address",
+    "emailPlaceholder": "بريدك الإلكتروني",
     "subscribe": "اشتراك",
     "about": "من نحن",
     "information": "معلومات",
@@ -591,7 +591,7 @@
   "conditionsPage": {
     "imageAlt": "علاج العناية بالبشرة",
     "title": "الحالات",
-    "metaTitle": "Conditions We Treat | Silk Beauty Salon",
+    "metaTitle": "الحالات التي نعالجها | Silk Beauty Salon",
     "metaDescription": "تعرف على الحالات الجلدية المختلفة التي نعالجها بما في ذلك شيخوخة الجلد وندبات حب الشباب والتصبغات والوردية والمزيد في عيادة باتومي التجميلية.",
     "listingTitle": "الحالات التي نعالجها",
     "listingSubtitle": "مهما كانت مشكلة بشرتك، يمكن لخبرائنا إنشاء خطة علاج شخصية",
@@ -605,7 +605,7 @@
     "title": "معلومات عنا",
     "subtitle": "عيادة باتومي الرائدة في التجميل غير الجراحي، تجمع بين المتخصصين من الطراز العالمي وأحدث التقنيات",
     "ourStory": "قصتنا",
-    "storyP1": "Silk Beauty Salon was founded with a simple vision: to provide the highest quality aesthetic treatments in a luxurious, welcoming environment. Located on Zurab Gorgiladze Street in Batumi, our clinic brings together some of Georgia's most talented aesthetic practitioners.",
+    "storyP1": "تأسس Silk Beauty Salon برؤية بسيطة: تقديم علاجات تجميلية عالية الجودة في بيئة فاخرة ومرحبة. يقع الصالون في شارع زوراب غورغيلادزه في باتومي ويجمع نخبة من أخصائيات التجميل الموهوبات في جورجيا.",
     "storyP2": "نؤمن أن الجميع يستحق الشعور بالثقة والجمال. يركز نهجنا على تعزيز ملامحك الطبيعية بدلاً من تغيير ما أنت عليه. نحن فخورون بنتائجنا الدقيقة والمتقنة التي تساعدك على الظهور بأفضل صورة.",
     "storyP3": "من اللحظة التي تخطو فيها إلى عيادتنا، ستشعر بالفرق. يمتد التزامنا بالتميز إلى ما وراء علاجاتنا إلى كل جانب من جوانب زيارتك، من المساحة الفاخرة في عيادتنا إلى فريقنا الدافئ والمتيقظ.",
     "ourValues": "قيمنا",
@@ -623,13 +623,13 @@
     "teamSubtitle": "خبراؤنا يتمتعون بسنوات من الخبرة وشغف للتميز",
     "team": {
       "ninoRole": "المؤسس والممارس الرئيسي",
-      "ninoBio": "Nino is the founder of Silk Beauty Salon and a renowned aesthetic practitioner with over 15 years of experience in the beauty industry. She is known for her natural-looking results and meticulous attention to detail.",
+      "ninoBio": "نينو هي مؤسسة Silk Beauty Salon وأخصائية تجميل معروفة تتمتع بخبرة تزيد على 15 عاماً في مجال الجمال. تشتهر بنتائجها الطبيعية واهتمامها الدقيق بالتفاصيل.",
       "ketevanRole": "ممارس جمالي أول",
       "ketevanBio": "كيتيفان هي ممارسة جمالية ماهرة متخصصة في الحشوات الجلدية وعلاجات البشرة. نهجها اللطيف وعينها الفنية يضمنان نتائج جميلة وطبيعية لكل عميل.",
       "mariamRole": "ممارس جمالي",
       "mariamBio": "ماريام تجلب ثروة من المعرفة في علاجات البشرة المتقدمة والعلاج بالليزر. إنها شغوفة بمساعدة العملاء على تحقيق أهداف بشرتهم من خلال خطط علاج شخصية.",
       "sophiaRole": "ممارس جمالي",
-      "sophiaBio": "Sophia specializes in non-surgical facial rejuvenation and has extensive experience in anti-wrinkle treatments and dermal fillers. Her clients love her natural, fresh approach."
+      "sophiaBio": "تتخصص صوفيا في تجديد شباب الوجه من دون جراحة، ولديها خبرة واسعة في علاجات التجاعيد والفيلر. وتقدّر عميلاتها نهجها الطبيعي والمنعش."
     },
     "awards": {
       "title": "الجوائز والتقدير",
@@ -637,7 +637,7 @@
       "premierSalon": "صالون التجميل الرائد في باتومي",
       "featuredIn": "كما ظهر في مجلة Georgian Fashion & Beauty"
     },
-    "featuredInVogue": "Featured in Vogue, Grazia, Vanity Fair, and Tatler",
+    "featuredInVogue": "كما ظهر في Vogue وGrazia وVanity Fair وTatler",
     "featuredIn": "كما ظهر في مجلة Georgian Fashion & Beauty",
     "ctaTitle": "مستعد للبدء؟",
     "ctaSubtitle": "احجز استشارة مع أحد خبرائنا اليوم",
@@ -654,12 +654,12 @@
     "fullName": "الاسم الكامل",
     "namePlaceholder": "أدخل اسمك",
     "nameRequired": "الرجاء إدخال اسمك",
-    "emailAddress": "Email Address",
-    "emailPlaceholder": "Enter your email",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "emailPlaceholder": "أدخلي بريدك الإلكتروني",
     "emailRequired": "الرجاء إدخال عنوان البريد الإلكتروني",
     "emailInvalid": "الرجاء إدخال عنوان بريد إلكتروني صالح",
     "phoneNumber": "رقم الهاتف",
-    "phonePlaceholder": "Enter your phone",
+    "phonePlaceholder": "أدخلي رقم هاتفك",
     "phoneOptional": "اختياري",
     "message": "الرسالة",
     "messagePlaceholder": "كيف يمكننا مساعدتك؟",
@@ -669,7 +669,7 @@
     "getInTouch": "تواصل معنا",
     "address": "العنوان",
     "phone": "الهاتف",
-    "email": "Email",
+    "email": "البريد الإلكتروني",
     "openingHours": "ساعات العمل",
     "monTue": "الإثنين - الثلاثاء",
     "wedThu": "الأربعاء - الخميس",
@@ -680,9 +680,9 @@
     "bookAppointment": "احجز موعد",
     "bookOnline": "احجز أونلاين",
     "scheduleAppointment": "حدد موعدك",
-    "bookViaWhatsApp": "Book via WhatsApp",
+    "bookViaWhatsApp": "احجزي عبر واتساب",
     "whatsapp": "WhatsApp",
-    "viewOnMap": "View on Google Maps",
+    "viewOnMap": "عرض على خرائط Google",
     "mapAddress": "شارع زوراب جورجيلادز 63",
     "mapCity": "باتومي، جورجيا"
   },
@@ -771,6 +771,9 @@
     "readMore": "اقرأ المزيد"
   },
   "treatmentPage": {
+    "metadataTitle": "{name} في باتومي، جورجيا",
+    "metadataDescription": "{description} احجزي {name} في Silk Beauty Salon في باتومي.",
+    "imageAlt": "{name} في Silk Beauty Salon في باتومي",
     "heroAlt": "صالون تجميل فاخر",
     "durationResults": "يتم التأكيد أثناء الاستشارة",
     "minimalDowntime": "يتم التأكيد أثناء الاستشارة",
@@ -795,7 +798,7 @@
     "bookNowBtn": "احجز الآن",
     "contactUs": "اتصل بنا",
     "phone": "الهاتف",
-    "email": "Email",
+    "email": "البريد الإلكتروني",
     "address": "العنوان",
     "relatedTreatments": "علاجات مشابهة",
     "atAGlance": "نظرة سريعة",
@@ -851,11 +854,11 @@
     "bookOnline": "احجز عبر الإنترنت",
     "scheduleAppointment": "جدول موعدك",
     "whatsapp": "WhatsApp",
-    "bookViaWhatsApp": "Book via WhatsApp",
+    "bookViaWhatsApp": "احجزي عبر واتساب",
     "treatments": "العلاجات",
     "conditions": "الحالات",
     "notFound": "غير موجود",
-    "social": "Follow Us",
+    "social": "تابعينا",
     "searchPlaceholder": "البحث عن العلاجات والحالات...",
     "submitting": "جارٍ الإرسال...",
     "currentLanguageFlag": "علم {language}",
@@ -1272,7 +1275,7 @@
             "يعالج التصبغ",
             "يقلل أضرار الشمس",
             "يحسن التون",
-            "شفاءminimal"
+            "تعافٍ سريع"
           ]
         },
         "laser-vein": {
@@ -1334,7 +1337,7 @@
         "mesotherapy-hair": {
           "name": "ميزوثيرابي الشعر",
           "shortDescription": "حقن غنية بالمغذيات لفروة الرأس.",
-          "description": "الميزوثيرابي delivers المغذيات مباشرة لفروة الرأس.",
+          "description": "يوصل الميزوثيرابي العناصر المغذية مباشرة إلى فروة الرأس.",
           "benefits": [
             " يغذي فروة الرأس",
             "يحفز النمو",
@@ -2752,6 +2755,12 @@
         "title": "ما يجب معرفته قبل أول استشارة فيلر"
       }
     }
+  },
+  "notFoundPage": {
+    "title": "الصفحة غير موجودة",
+    "description": "عذراً، لم نتمكن من العثور على الصفحة المطلوبة. ربما نُقلت أو حُذفت.",
+    "home": "العودة إلى الرئيسية",
+    "contact": "تواصلي معنا"
   },
   "treatmentCollectionPage": {
     "metadataTitle": "{title} في باتومي، جورجيا",

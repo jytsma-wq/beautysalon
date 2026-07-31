@@ -193,7 +193,7 @@ function validateFile(source: unknown, target: unknown, fileName: string): Valid
   
   return {
     file: fileName,
-    valid: missingKeys.length === 0 && interpolationIssues.length === 0 && structureIssues.length === 0,
+    valid: missingKeys.length === 0 && extraKeys.length === 0 && interpolationIssues.length === 0 && structureIssues.length === 0,
     missingKeys,
     extraKeys,
     unusedKeys,
@@ -374,9 +374,9 @@ function main(): void {
     printCISummary(results);
   }
   
-  // Exit with error if any file has missing keys or structure issues
+  // Exit with error if locale structure differs from the English source.
   const hasCriticalIssues = results.some(
-    r => r.missingKeys.length > 0 || r.structureIssues.length > 0
+    r => r.missingKeys.length > 0 || r.extraKeys.length > 0 || r.structureIssues.length > 0
   );
   
   if (hasCriticalIssues) {

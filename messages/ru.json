@@ -232,7 +232,7 @@
     "selectDate": "Выберите дату",
     "selectTimeSlot": "Выберите время",
     "fullName": "Полное имя",
-    "email": "Email",
+    "email": "Электронная почта",
     "phone": "Телефон (необязательно)",
     "message": "Сообщение (необязательно)",
     "servicePlaceholder": "Выберите процедуру",
@@ -2093,10 +2093,10 @@
     "servicePlaceholder": "Выберите процедуру",
     "messagePlaceholder": "Особые пожелания или вопросы...",
     "serviceConsultation": "Консультация",
-    "serviceBotox": "Botox Treatment",
+    "serviceBotox": "Процедура ботокса",
     "serviceFillers": "Дермальные филлеры",
     "serviceLaser": "Лазерная эпиляция",
-    "serviceRejuvenation": "Skin Rejuvenation",
+    "serviceRejuvenation": "Омоложение кожи",
     "servicePeel": "Химический пилинг",
     "serviceMicroneedling": "Микронидлинг",
     "personalInfo": "Личная информация",
@@ -2386,7 +2386,7 @@
     "treatments": "Процедуры",
     "conditions": "Состояния",
     "notFound": "Не найдено",
-    "social": "Follow Us",
+    "social": "Мы в социальных сетях",
     "bookOnline": "Записаться онлайн",
     "scheduleAppointment": "Запланируйте прием",
     "whatsapp": "WhatsApp",
@@ -2507,6 +2507,9 @@
     "expertPractitioner": "Редакционная команда"
   },
   "treatmentPage": {
+    "metadataTitle": "{name} в Батуми, Грузия",
+    "metadataDescription": "{description} Запишитесь на {name} в Silk Beauty Salon в Батуми.",
+    "imageAlt": "{name} в Silk Beauty Salon в Батуми",
     "bookNow": "Записаться на процедуру",
     "backTo": "Назад к процедурам",
     "aboutTreatment": "Об этой процедуре",
@@ -2568,7 +2571,7 @@
     "getInTouch": "Свяжитесь с нами",
     "address": "Адрес",
     "phone": "Телефон",
-    "email": "Email",
+    "email": "Электронная почта",
     "openingHours": "Часы работы",
     "monTue": "Понедельник - Вторник",
     "wedThu": "Среда - Четверг",
@@ -2752,6 +2755,12 @@
     "section3Title": "Портфель процедур",
     "section4Title": "Состояния кожи",
     "section5Title": "Портфель процедур"
+  },
+  "notFoundPage": {
+    "title": "Страница не найдена",
+    "description": "К сожалению, мы не нашли нужную страницу. Возможно, она была перемещена или удалена.",
+    "home": "На главную",
+    "contact": "Связаться с нами"
   },
   "treatmentCollectionPage": {
     "metadataTitle": "{title} в Батуми, Грузия",

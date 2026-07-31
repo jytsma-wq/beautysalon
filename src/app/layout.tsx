@@ -1,23 +1,28 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
-import { DM_Serif_Display, Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { rtlLocales } from '@/i18n';
 import { siteConfig } from '@/data/site-config';
 import { getSiteUrl, localSeoKeywords } from '@/lib/seo';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+const inter = localFont({
+  src: [
+    { path: '../../node_modules/@fontsource/inter/files/inter-latin-300-normal.woff2', weight: '300', style: 'normal' },
+    { path: '../../node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: '../../node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2', weight: '500', style: 'normal' },
+    { path: '../../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2', weight: '600', style: 'normal' },
+  ],
   display: 'swap',
   variable: '--font-inter',
 });
 
-const dmSerifDisplay = DM_Serif_Display({
-  subsets: ['latin'],
-  weight: '400',
-  style: ['normal', 'italic'],
+const dmSerifDisplay = localFont({
+  src: [
+    { path: '../../node_modules/@fontsource/dm-serif-display/files/dm-serif-display-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: '../../node_modules/@fontsource/dm-serif-display/files/dm-serif-display-latin-400-italic.woff2', weight: '400', style: 'italic' },
+  ],
   display: 'swap',
   variable: '--font-dm-serif-display',
 });

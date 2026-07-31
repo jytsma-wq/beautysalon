@@ -27,6 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale: resolvedParams.locale,
     namespace: 'common',
   });
+  const tTreatmentPage = await getTranslations({
+    locale: resolvedParams.locale,
+    namespace: 'treatmentPage',
+  });
   const treatment = await getTreatmentBySlug(
     resolvedParams.slug,
     resolvedParams.locale
@@ -41,11 +45,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildSeoMetadata({
     locale: resolvedParams.locale,
     path: `/treatments/${resolvedParams.slug}`,
-    title: `${treatment.name} in Batumi, Georgia`,
-    description: `${treatment.shortDescription} Book ${treatment.name.toLowerCase()} at Silk Beauty Salon in Batumi, Georgia.`,
+    title: tTreatmentPage('metadataTitle', { name: treatment.name }),
+    description: tTreatmentPage('metadataDescription', {
+      description: treatment.shortDescription,
+      name: treatment.name,
+    }),
     keywords: [treatment.name, `${treatment.name} Batumi`, `${treatment.name} Georgia`, ...localSeoKeywords],
     image: treatment.image,
-    imageAlt: `${treatment.name} at Silk Beauty Salon in Batumi, Georgia`,
+    imageAlt: tTreatmentPage('imageAlt', { name: treatment.name }),
     noIndex: !isIndexableTreatmentSlug(resolvedParams.slug),
   });
 }
@@ -124,7 +131,7 @@ export default async function TreatmentPage({ params }: Props) {
               </nav>
 
               <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
-                {category?.name || 'Treatment'}
+                {category?.name || tCommon('treatments')}
               </p>
               <h1 className="localized-hero-heading mb-6 font-sans font-light text-[#241f1b]">
                 {treatment.name}
@@ -137,7 +144,7 @@ export default async function TreatmentPage({ params }: Props) {
                 {treatment.duration ? (
                   <div>
                     <span className="mb-1 block text-xs uppercase tracking-wider text-stone-500">
-                      Duration
+                      {detailLabels.procedureTime}
                     </span>
                     <span className="text-[#241f1b]">{treatment.duration}</span>
                   </div>
@@ -145,7 +152,7 @@ export default async function TreatmentPage({ params }: Props) {
                 {treatment.price ? (
                   <div>
                     <span className="mb-1 block text-xs uppercase tracking-wider text-stone-500">
-                      Price from
+                      {detailLabels.priceFrom}
                     </span>
                     <span className="text-[#241f1b]">{treatment.price}</span>
                   </div>
@@ -157,7 +164,7 @@ export default async function TreatmentPage({ params }: Props) {
           <div className="relative min-h-[44svh] overflow-hidden lg:min-h-0">
             <Image
               src={treatment.image}
-              alt={`${treatment.name} at Silk Beauty Salon in Batumi, Georgia`}
+              alt={tTreatmentPage('imageAlt', { name: treatment.name })}
               fill
               className="object-cover"
               priority

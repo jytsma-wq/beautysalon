@@ -822,9 +822,113 @@ const treatmentContentCategoryAliases: Record<string, string> = {
   hair: 'hair-treatments',
 };
 
+type TreatmentLocale = 'en' | 'ka' | 'ru' | 'tr' | 'ar' | 'he';
+
+const supportedTreatmentLocales = new Set<TreatmentLocale>([
+  'en',
+  'ka',
+  'ru',
+  'tr',
+  'ar',
+  'he',
+]);
+
+const durationLabels: Record<Exclude<TreatmentLocale, 'en'>, {
+  minutes: string;
+  initialTreatment: (minutes: string) => string;
+  weekProgram: (weeks: string) => string;
+}> = {
+  ka: {
+    minutes: 'წუთი',
+    initialTreatment: (minutes) => `პირველი პროცედურა — ${minutes} წუთი`,
+    weekProgram: (weeks) => `${weeks}-კვირიანი პროგრამა`,
+  },
+  ru: {
+    minutes: 'минут',
+    initialTreatment: (minutes) => `Первая процедура — ${minutes} минут`,
+    weekProgram: (weeks) => `Программа на ${weeks} недель`,
+  },
+  tr: {
+    minutes: 'dakika',
+    initialTreatment: (minutes) => `İlk uygulama — ${minutes} dakika`,
+    weekProgram: (weeks) => `${weeks} haftalık program`,
+  },
+  ar: {
+    minutes: 'دقيقة',
+    initialTreatment: (minutes) => `العلاج الأول — ${minutes} دقيقة`,
+    weekProgram: (weeks) => `برنامج لمدة ${weeks} أسبوعاً`,
+  },
+  he: {
+    minutes: 'דקות',
+    initialTreatment: (minutes) => `טיפול ראשון — ${minutes} דקות`,
+    weekProgram: (weeks) => `תוכנית של ${weeks} שבועות`,
+  },
+};
+
+function normalizeTreatmentLocale(locale: string): TreatmentLocale {
+  return supportedTreatmentLocales.has(locale as TreatmentLocale)
+    ? (locale as TreatmentLocale)
+    : 'en';
+}
+
+function localizeTreatmentPrice(price: string | undefined, locale: string): string | undefined {
+  if (!price) return price;
+
+  const normalizedLocale = normalizeTreatmentLocale(locale);
+  if (normalizedLocale === 'en') return price;
+
+  if (price === 'Consultation required') {
+    return {
+      ka: 'საჭიროა კონსულტაცია',
+      ru: 'Требуется консультация',
+      tr: 'Konsültasyon gerekli',
+      ar: 'تتطلب استشارة',
+      he: 'נדרש ייעוץ',
+    }[normalizedLocale];
+  }
+
+  const fromMatch = price.match(/^From\s+(.+)$/);
+  if (!fromMatch) return price;
+
+  const amount = fromMatch[1];
+  return {
+    ka: `${amount}-დან`,
+    ru: `От ${amount}`,
+    tr: `Başlangıç: ${amount}`,
+    ar: `ابتداءً من ${amount}`,
+    he: `החל מ-${amount}`,
+  }[normalizedLocale];
+}
+
+function localizeTreatmentDuration(duration: string | undefined, locale: string): string | undefined {
+  if (!duration) return duration;
+
+  const normalizedLocale = normalizeTreatmentLocale(locale);
+  if (normalizedLocale === 'en') return duration;
+
+  const labels = durationLabels[normalizedLocale];
+  const minutesMatch = duration.match(/^(\d+(?:-\d+)?) minutes$/);
+  if (minutesMatch) {
+    return `${minutesMatch[1]} ${labels.minutes}`;
+  }
+
+  const initialTreatmentMatch = duration.match(/^Initial treatment (\d+) minutes$/);
+  if (initialTreatmentMatch) {
+    return labels.initialTreatment(initialTreatmentMatch[1]);
+  }
+
+  const weekProgramMatch = duration.match(/^(\d+(?:-\d+)?) week program$/);
+  if (weekProgramMatch) {
+    return labels.weekProgram(weekProgramMatch[1]);
+  }
+
+  return duration;
+}
+
 // Merge base data with translations
 export async function getLocalizedTreatmentCategories(locale: string): Promise<TreatmentCategory[]> {
   const translations = await getTreatmentTranslations(locale);
+  const useEnglishFallback = normalizeTreatmentLocale(locale) === 'en';
   
   return baseTreatmentCategories.map(category => {
     const categoryTranslationKey = treatmentContentCategoryAliases[category.slug] || category.slug;
@@ -841,12 +945,24 @@ export async function getLocalizedTreatmentCategories(locale: string): Promise<T
         return {
           ...treatment,
           name: treatmentTranslation?.name || treatment.name,
-          description: treatmentTranslation?.description || treatment.description,
-          shortDescription: treatmentTranslation?.shortDescription || treatment.shortDescription,
-          benefits: treatmentTranslation?.benefits || treatment.benefits,
-          howItWorks: treatmentTranslation?.howItWorks || treatment.howItWorks,
-          aftercare: treatmentTranslation?.aftercare || treatment.aftercare,
-          faqs: treatmentTranslation?.faqs || treatment.faqs,
+          description:
+            treatmentTranslation?.description
+            || treatmentTranslation?.shortDescription
+            || (useEnglishFallback ? treatment.description : ''),
+          shortDescription:
+            treatmentTranslation?.shortDescription
+            || treatmentTranslation?.description
+            || (useEnglishFallback ? treatment.shortDescription : ''),
+          price: localizeTreatmentPrice(treatment.price, locale),
+          duration: localizeTreatmentDuration(treatment.duration, locale),
+          benefits: treatmentTranslation?.benefits || (useEnglishFallback ? treatment.benefits : []),
+          howItWorks:
+            treatmentTranslation?.howItWorks
+            || (useEnglishFallback ? treatment.howItWorks : undefined),
+          aftercare:
+            treatmentTranslation?.aftercare
+            || (useEnglishFallback ? treatment.aftercare : undefined),
+          faqs: treatmentTranslation?.faqs || (useEnglishFallback ? treatment.faqs : []),
         };
       })
     };
