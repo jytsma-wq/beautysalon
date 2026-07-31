@@ -4,7 +4,7 @@ import { getOpenGraphFonts } from '@/lib/opengraph-fonts';
 
 export const runtime = 'nodejs';
 
-export const alt = 'Treatments - Silk Beauty Salon';
+export const alt = 'Silk Beauty Salon';
 export const size = {
   width: 1200,
   height: 630,

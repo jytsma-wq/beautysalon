@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'aesthetic treatments Batumi',
     ],
     image: page.image,
-    imageAlt: `${content.h1} at Silk Beauty Salon`,
+    imageAlt: content.h1,
   });
 }
 
@@ -176,7 +176,7 @@ export default async function LocalSeoLandingPage({ params }: Props) {
             <div className="relative aspect-[4/3] overflow-hidden rounded-[8px]">
               <Image
                 src={page.image}
-                alt={`${content.h1} at Silk Beauty Salon in Batumi`}
+                alt={content.h1}
                 fill
                 priority
                 className="object-cover"

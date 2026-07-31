@@ -121,7 +121,7 @@ function PortfolioSection() {
                 <div className="relative aspect-4/5 overflow-hidden bg-stone-100">
                   <Image
                     src={item.image}
-                    alt={`${item.title} at Silk Beauty Salon in Batumi, Georgia`}
+                    alt={item.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                     sizes="(max-width: 1024px) 100vw, 33vw"

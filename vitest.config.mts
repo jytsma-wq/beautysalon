@@ -1,7 +1,11 @@
 import { defineConfig } from 'vitest/config';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const repositoryDirectory = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
+  root: repositoryDirectory,
   test: {
     environment: 'jsdom',
     globals: true,
@@ -32,7 +36,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(repositoryDirectory, './src'),
     },
   },
 });

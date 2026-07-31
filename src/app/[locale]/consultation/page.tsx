@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'Book an aesthetic consultation at Silk Beauty Salon in Batumi, Georgia and start a personalized treatment plan.',
     }),
     keywords: localSeoKeywords,
-    imageAlt: 'Aesthetic consultation at Silk Beauty Salon in Batumi, Georgia',
+    imageAlt: t('consultation'),
   });
 }
 
@@ -95,7 +95,7 @@ export default async function ConsultationPage({
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1920&q=80"
-            alt={`${t('consultation')} at Silk Beauty Salon in Batumi, Georgia`}
+            alt={t('consultation')}
             fill
             sizes="100vw"
             className="object-cover"
@@ -232,7 +232,7 @@ export default async function ConsultationPage({
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1920&q=80"
-            alt={`${t('bookConsultation')} at Silk Beauty Salon in Batumi, Georgia`}
+            alt={t('bookConsultation')}
             fill
             sizes="100vw"
             className="object-cover"

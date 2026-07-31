@@ -10,6 +10,8 @@ import { Textarea } from '@/components/ui/textarea';
 
 export default function ContactForm() {
   const t = useTranslations('contactPage');
+  const tContact = useTranslations('contact');
+  const tAccessibility = useTranslations('accessibility');
   const locale = useLocale();
   const [formData, setFormData] = useState({
     name: '',
@@ -71,20 +73,19 @@ export default function ContactForm() {
         body: JSON.stringify({ ...formData, locale, _csrf: csrfToken }),
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
+        throw new Error(tContact('errorMessage'));
       }
 
       setSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send message');
+    } catch {
+      const errorMessage = tContact('errorMessage');
+      setError(errorMessage);
       // Announce error to screen readers
       const errorAnnouncement = document.getElementById('form-error-announcement');
       if (errorAnnouncement) {
-        errorAnnouncement.textContent = err instanceof Error ? err.message : 'Failed to send message';
+        errorAnnouncement.textContent = errorMessage;
       }
     } finally {
       setLoading(false);
@@ -118,7 +119,7 @@ export default function ContactForm() {
                   )}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      {t('fullName')} <span aria-label="required">*</span>
+                      {t('fullName')} <span aria-label={tAccessibility('required')}>*</span>
                     </label>
                     <Input
                       id="name"
@@ -143,7 +144,7 @@ export default function ContactForm() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        {t('emailAddress')} <span aria-label="required">*</span>
+                        {t('emailAddress')} <span aria-label={tAccessibility('required')}>*</span>
                       </label>
                       <Input
                         id="email"
@@ -186,7 +187,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      {t('message')} <span aria-label="required">*</span>
+                      {t('message')} <span aria-label={tAccessibility('required')}>*</span>
                     </label>
                     <Textarea
                       id="message"
