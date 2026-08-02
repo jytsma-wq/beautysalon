@@ -5,18 +5,19 @@ on:
     branches: [main, develop]
   pull_request:
     branches: [main, develop]
-  schedule:
-    - cron: '0 3 * * *'
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '24'
   NEXT_TELEMETRY_DISABLED: 1
-  DATABASE_URL: postgresql://build:build@localhost:5432/build
-  DIRECT_DATABASE_URL: postgresql://build:build@localhost:5432/build
+  DATABASE_URL: mysql://build:build@localhost:3306/build
+  DIRECT_DATABASE_URL: mysql://build:build@localhost:3306/build
   CONTACT_EMAIL: info@silkbeautysalon.online
   SMTP_HOST: smtp.hostinger.com
   SMTP_PORT: '465'
@@ -74,6 +75,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -84,50 +87,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run npm audit
-        run: npm audit --audit-level=moderate
-        continue-on-error: true
+      - name: Enforce dependency audit policy
+        run: npm audit --audit-level=high
 
       - name: Check for verified secrets
-        uses: trufflesecurity/trufflehog@main
-        continue-on-error: true
+        uses: trufflesecurity/trufflehog@27b0417c16317ca9a472a9a8092acce143b49c55 # v3.95.9
         with:
-          path: ./
-          base: main
-          head: HEAD
+          version: 3.95.9
           extra_args: --debug --only-verified
-
-  backup:
-    name: Daily database backup
-    runs-on: ubuntu-latest
-    if: github.event_name == 'schedule'
-    env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
-      DIRECT_DATABASE_URL: ${{ secrets.DIRECT_DATABASE_URL }}
-      BACKUP_DIR: /tmp/backups
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      BACKUP_S3_BUCKET: ${{ secrets.BACKUP_S3_BUCKET }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run database backup
-        run: mkdir -p /tmp/backups && npm run db:backup
-
-      - name: Upload backup to S3
-        run: aws s3 cp /tmp/backups/ s3://$BACKUP_S3_BUCKET/postgres/$(date +%Y/%m/%d)/ --recursive
-
-      - name: Verify backup
-        run: npm run db:backup:verify
-        env:
-          BACKUP_DIR: /tmp/backups
