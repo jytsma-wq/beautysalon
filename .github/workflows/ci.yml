@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '24'
   NEXT_TELEMETRY_DISABLED: 1
   DATABASE_URL: mysql://build:build@localhost:3306/build
   DIRECT_DATABASE_URL: mysql://build:build@localhost:3306/build
