@@ -124,7 +124,7 @@ export default async function TreatmentCollectionPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-[#f7f2eb] pt-42.5 md:pt-47">
+      <section className="bg-[#f7f2eb]">
         <div className="grid min-h-[68svh] grid-cols-1 lg:grid-cols-[44%_56%]">
           <div className="flex items-end px-6 py-14 md:px-12 lg:px-16 xl:px-24">
             <div className="max-w-xl">

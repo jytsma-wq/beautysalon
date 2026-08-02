@@ -75,7 +75,7 @@ export default async function BookingPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero Section */}
-      <section className="bg-[#f7f2eb] pt-42.5 md:pt-47">
+      <section className="bg-[#f7f2eb]">
         <div className="container-custom py-16 md:py-20">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">

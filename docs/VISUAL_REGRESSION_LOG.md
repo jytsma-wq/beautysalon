@@ -1,5 +1,34 @@
 # Visual Regression Log
 
+## 2026-08-02 - Premium visual-system refinement
+
+Scope:
+- Existing global header and homepage hero, portfolio, popular-price, proof-stat, and conversion presentation.
+- Mobile salon-guide launcher containment and reduced-motion content visibility.
+- No copy, route, dependency, analytics, email, booking, business-data, or production change.
+
+Expected visual result:
+- A compact fashion-house-style desktop header and quieter tablet/mobile header preserve the established menu structure while giving treatment content more first-screen space.
+- The first homepage screen uses the existing treatment image as a full-width background, keeps title/supporting copy readable, and exposes booking without requiring mobile scrolling.
+- Portfolio items form a varied editorial rhythm rather than a uniform card wall; popular prices use a scan-friendly service list.
+- Muted green complements the existing warm neutral palette without replacing the logo or brand identity.
+- The small-screen salon guide is icon-only and does not cover hero copy or carousel controls.
+- Reduced-motion users see all portfolio and price content without opacity-gated entrance animation.
+- Existing homepage image choices are served from local WebP files so the hero and editorial sections do not depend on live Unsplash responses.
+
+Browser verification:
+- Local production preview: `http://127.0.0.1:4315`.
+- Desktop `/en` at 1280x720: compact two-level header, full-width hero, first-screen booking action, next-section hint, working More menu, no framework overlay, and no horizontal overflow.
+- Mobile `/en` at 375x812: full brand fits, hero copy and booking action fit, carousel controls remain clear, salon guide is icon-only, and no horizontal overflow appeared.
+- Mobile menu retained Treatments, Skin Conditions, Price List, Offers, International Clients, Salon Space Rental, Chair Rental, Download App, Contact, FAQ, Blog, and Booking.
+- Deep-route language switching on `/en/pricelist` retained unique `/pricelist` links for `en`, `ka`, `ru`, `tr`, `ar`, `he`, `nl`, `fr`, and `de`.
+- Arabic and Hebrew retained RTL direction and contained headers; Dutch, French, and German mobile homepages remained contained without overflow.
+- Booking, contact, treatment detail, and treatment category pages showed their headings near the start of the first content region rather than after the removed duplicate header gap.
+- Sticky mobile booking/WhatsApp actions appeared after the hero and hid over Visit Us. The lazy map, directions URL, address, phone, and WhatsApp actions remained intact.
+- Portfolio and popular-price layouts rendered with no opacity-hidden articles, distortion, or horizontal overflow.
+- Production-preview route crawl: 278 of 278 checks returned HTTP 200.
+- Optional Playwright Axe execution was blocked before navigation by a missing local Chromium binary; no dependency or browser binary was installed.
+
 ## 2026-07-16 - Complete production-preview audit
 
 Scope:

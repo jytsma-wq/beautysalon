@@ -2,6 +2,11 @@
 
 ## 2026-08-02
 
+- Refined the existing visual system after a public premium beauty/wellness benchmark: consolidated the desktop header, converted the homepage hero to an image-led full-width composition with a first-screen booking action, introduced a restrained muted-green accent, and replaced repetitive homepage card grids with calmer editorial service and price layouts.
+- Preserved the logo, copy, section order, menu destinations, booking/WhatsApp flows, nine-language structure, RTL behavior, and image choices while reducing mobile overlay competition and keeping all changes local to the review branch.
+- Fixed a reduced-motion visual regression that could leave homepage portfolio and price content invisible, and retained the hero's first-image preload/eager/high-priority behavior with full-width responsive sizing.
+- Removed the redundant second header offset from booking, contact, treatment-detail, and treatment-category heroes, reducing empty first-screen space without changing their content or behavior.
+- Replaced the homepage's live Unsplash dependencies with local WebP copies of the same eleven image selections after production-preview optimizer timeouts; hero LCP and below-fold imagery now render from versioned first-party files.
 - Added Dutch, French, and German as first-class website locales alongside the existing six languages, including complete message-key parity, routing, locale detection, flags, navigation, metadata, hreflang, sitemap coverage, Open Graph support, localized structured content, booking options, formatters, and route validation.
 - Localized booking calendar visuals and accessibility labels, including month, weekday, navigation, grid, individual day, and selected-date output for all supported locales.
 - Updated homepage prices and country display to use locale-aware shared data, and changed the visible supported-language count from six to nine without duplicating prices or changing official business data.

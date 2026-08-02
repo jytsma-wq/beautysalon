@@ -37,7 +37,7 @@ function SectionHeading({
 }) {
   return (
     <div className="max-w-3xl">
-      <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
+      <p className="mb-4 text-[0.68rem] font-medium uppercase tracking-normal text-[#31584f]">
         {eyebrow}
       </p>
       <h2 className="localized-section-heading font-sans font-light text-[#241f1b]">
@@ -57,7 +57,7 @@ function PhilosophySection() {
   const copy = beautySalonBatumiCopy[locale];
 
   return (
-    <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+    <section className="bg-white px-6 py-20 md:px-12 md:py-28 lg:px-16 xl:px-24">
       <RevealOnScroll className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[42%_58%] lg:items-end">
           <SectionHeading
             eyebrow={copy.whyEyebrow}
@@ -89,7 +89,7 @@ function PortfolioSection() {
   }));
 
   return (
-    <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+    <section className="bg-white px-6 py-20 md:px-12 md:py-28 lg:px-16 xl:px-24">
       <div className="mx-auto max-w-7xl">
         <RevealOnScroll className="mb-14 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
@@ -99,23 +99,26 @@ function PortfolioSection() {
           />
           <Link
             href="/treatments"
-            className="inline-flex h-12 items-center self-start border border-[#241f1b] px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+            className="inline-flex h-12 items-center self-start border border-[#31584f] px-7 text-xs font-medium uppercase tracking-normal text-[#31584f] transition-colors hover:bg-[#31584f] hover:text-white"
           >
             {t('portfolio.viewAll')}
           </Link>
         </RevealOnScroll>
 
-        <div className="grid gap-px bg-stone-200 lg:grid-cols-3">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-7">
           {items.map((item, index) => (
             <motion.article
               key={item.title}
-              className="bg-white"
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-              whileHover={shouldReduceMotion ? undefined : { y: -8 }}
+              className={
+                index === 0
+                  ? 'lg:col-span-5'
+                  : index === 1
+                    ? 'lg:col-span-3 lg:mt-20'
+                    : 'lg:col-span-4 lg:mt-8'
+              }
+              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
               whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
             >
               <Link href={item.href} className="group block h-full">
                 <div className="relative aspect-4/5 overflow-hidden bg-stone-100">
@@ -128,14 +131,14 @@ function PortfolioSection() {
                   />
                   <div className="absolute inset-x-0 bottom-0 h-24 translate-y-4 bg-linear-to-t from-[#241f1b]/35 to-transparent opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100" />
                 </div>
-                <div className="min-h-56 p-7 md:p-9">
-                  <h3 className="font-sans text-4xl font-light text-[#241f1b]">
+                <div className="border-b border-[#dfe5e2] py-6">
+                  <h3 className="font-sans text-3xl font-light text-[#241f1b] md:text-4xl">
                     {item.title}
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-stone-600">
                     {item.description}
                   </p>
-                  <span className="mt-7 inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-[#8d6f58]">
+                  <span className="mt-7 inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-normal text-[#31584f]">
                     {t('portfolio.explore')}
                     <span className="h-px w-7 bg-current transition-transform duration-300 group-hover:translate-x-2" />
                   </span>
@@ -161,7 +164,7 @@ function PopularTreatmentsSection() {
   }));
 
   return (
-    <section className="bg-white px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+    <section className="bg-[#f4f6f4] px-6 py-20 md:px-12 md:py-28 lg:px-16 xl:px-24">
       <div className="mx-auto max-w-7xl">
         <RevealOnScroll className="mb-14 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHeading
@@ -171,38 +174,39 @@ function PopularTreatmentsSection() {
           />
           <Link
             href="/pricelist"
-            className="inline-flex h-12 items-center self-start border border-[#241f1b] px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+            className="inline-flex h-12 items-center self-start border border-[#31584f] px-7 text-xs font-medium uppercase tracking-normal text-[#31584f] transition-colors hover:bg-[#31584f] hover:text-white"
           >
             {t('popularTreatments.viewPricelist')}
           </Link>
         </RevealOnScroll>
 
-        <div className="grid gap-px bg-stone-200 md:grid-cols-2 xl:grid-cols-3">
-          {items.map((item, index) => (
+        <div className="grid border-y border-[#cfd9d4] lg:grid-cols-2">
+          {items.map((item) => (
             <motion.article
               key={item.id}
-              className="bg-white"
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-              whileHover={shouldReduceMotion ? undefined : { y: -8 }}
+              className="border-b border-[#cfd9d4] last:border-b-0 lg:odd:border-r lg:[&:nth-last-child(-n+2)]:border-b-0"
+              whileHover={shouldReduceMotion ? undefined : { x: 4 }}
               whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.45, delay: index * 0.06, ease: 'easeOut' }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
             >
-              <Link href={item.href} className="group flex min-h-72 h-full flex-col p-7 md:p-9">
-                <p className="text-[0.68rem] font-medium uppercase tracking-[0.2em] text-[#8d6f58]">
-                  {t('popularTreatments.priceLabel')}
-                </p>
-                <p className="mt-3 font-sans text-3xl font-light text-[#241f1b]">
-                  {item.price}
-                </p>
-                <h3 className="mt-8 font-sans text-3xl font-light text-[#241f1b]">
-                  {item.title}
-                </h3>
-                <p className="mt-4 grow text-sm leading-7 text-stone-600">
+              <Link href={item.href} className="group flex min-h-56 h-full flex-col px-1 py-8 sm:px-7 md:py-10 lg:px-9">
+                <div className="flex items-start justify-between gap-6">
+                  <h3 className="font-sans text-2xl font-light text-[#241f1b] md:text-3xl">
+                    {item.title}
+                  </h3>
+                  <div className="shrink-0 text-end">
+                    <p className="text-[0.64rem] font-medium uppercase tracking-normal text-[#31584f]">
+                      {t('popularTreatments.priceLabel')}
+                    </p>
+                    <p className="mt-2 font-sans text-2xl font-light text-[#241f1b]">
+                      {item.price}
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-5 grow text-sm leading-7 text-stone-600">
                   {item.description}
                 </p>
-                <span className="mt-7 inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-[0.2em] text-[#8d6f58]">
+                <span className="mt-6 inline-flex items-center gap-3 text-[0.68rem] font-medium uppercase tracking-normal text-[#31584f]">
                   {item.linkLabel}
                   <span className="h-px w-7 bg-current transition-transform duration-300 group-hover:translate-x-2" />
                 </span>
@@ -219,15 +223,15 @@ function StatsSection() {
   const t = useTranslations('homeEditorial');
 
   return (
-    <section className="bg-[#f7f2eb] px-6 py-20 md:px-12 lg:px-16 xl:px-24">
-      <div className="mx-auto grid max-w-7xl gap-px bg-stone-200 md:grid-cols-3">
+    <section className="bg-[#31584f] px-6 py-16 text-white md:px-12 lg:px-16 xl:px-24">
+      <div className="mx-auto grid max-w-7xl divide-y divide-white/20 md:grid-cols-3 md:divide-x md:divide-y-0">
         {proofStats.map((stat, index) => (
           <RevealOnScroll key={stat.value} delay={index * 0.08}>
-            <div className="bg-[#f7f2eb] px-8 py-12 text-center">
-              <p className="font-sans text-6xl font-light leading-none text-[#241f1b]">
+            <div className="px-8 py-10 text-center">
+              <p className="font-sans text-5xl font-light leading-none text-white md:text-6xl">
                 {stat.value}
               </p>
-              <p className="mt-4 text-[0.68rem] uppercase tracking-[0.22em] text-stone-500">
+              <p className="mt-4 text-[0.68rem] uppercase tracking-normal text-white/70">
                 {t(`stats.item${index + 1}.label`)}
               </p>
             </div>
@@ -245,10 +249,10 @@ function SpecialistCta() {
   const tNav = useTranslations('nav');
 
   return (
-    <section className="bg-[#241f1b] px-6 py-24 text-white md:px-12 md:py-32 lg:px-16 xl:px-24">
+    <section className="bg-[#17201d] px-6 py-24 text-white md:px-12 md:py-32 lg:px-16 xl:px-24">
       <RevealOnScroll className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[55%_45%] lg:items-center">
         <div>
-          <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#d8cbbb]">
+          <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-normal text-[#d8cbbb]">
             {copy.whyEyebrow}
           </p>
           <h2 className="localized-hero-heading font-sans font-light">
@@ -262,13 +266,13 @@ function SpecialistCta() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/book"
-              className="inline-flex h-12 items-center justify-center rounded-md bg-white px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#f7f2eb]"
+              className="inline-flex h-12 items-center justify-center rounded-[4px] bg-white px-7 text-xs font-medium uppercase tracking-normal text-[#17201d] transition-colors hover:bg-[#dfe9e4]"
             >
               {tCommon('bookNow')}
             </Link>
             <Link
               href="/contact-us"
-              className="inline-flex h-12 items-center justify-center border border-white/60 px-7 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-white hover:text-[#241f1b]"
+              className="inline-flex h-12 items-center justify-center border border-white/60 px-7 text-xs font-medium uppercase tracking-normal text-white transition-colors hover:bg-white hover:text-[#17201d]"
             >
               {tNav('contact')}
             </Link>
@@ -286,7 +290,7 @@ export function GaldermaInspiredHome() {
       <ClinicalHeroCarousel />
       <PhilosophySection />
 
-      <section className="bg-[#f7f2eb] px-6 py-24 md:px-12 md:py-32 lg:px-16 xl:px-24">
+      <section className="bg-[#f7f2eb] px-6 py-20 md:px-12 md:py-28 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
           <RevealOnScroll className="mb-12">
             <SectionHeading

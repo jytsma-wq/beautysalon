@@ -43,7 +43,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <section className="bg-[#f7f2eb] pt-42.5 md:pt-47">
+      <section className="bg-[#f7f2eb]">
         <div className="container-custom py-16 md:py-20">
           <nav className="mb-8 flex items-center gap-2 text-[0.68rem] uppercase tracking-[0.18em] text-stone-500">
             <Link href="/" className="inline-flex min-h-11 min-w-11 items-center hover:text-[#241f1b]">

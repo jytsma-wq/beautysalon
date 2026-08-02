@@ -532,7 +532,7 @@ export function SalonGuideWidget({ locale }: { locale: Locale }) {
           <span
             aria-hidden="true"
             className={cn(
-              'pointer-events-none absolute bottom-[calc(100%+0.75rem)] w-[min(18rem,calc(100vw-2rem))] border border-border bg-background px-4 py-3 text-start text-sm font-medium leading-relaxed text-foreground shadow-xl transition duration-300 ltr:right-0 rtl:left-0',
+              'pointer-events-none absolute bottom-[calc(100%+0.75rem)] hidden w-[min(18rem,calc(100vw-2rem))] border border-border bg-background px-4 py-3 text-start text-sm font-medium leading-relaxed text-foreground shadow-xl transition duration-300 ltr:right-0 rtl:left-0 sm:block',
               'translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transform-none motion-reduce:transition-none',
               showMobileInvitation && 'translate-y-0 opacity-100'
             )}
@@ -545,7 +545,7 @@ export function SalonGuideWidget({ locale }: { locale: Locale }) {
           >
             <MessageCircleQuestion className="size-6" />
           </span>
-          <span className="min-w-0 px-3 text-start sm:px-4">
+          <span className="hidden min-w-0 px-4 text-start sm:block">
             <span className="hidden text-[0.65rem] font-medium uppercase tracking-[0.13em] text-muted-foreground sm:block">
               {t('launcherRole')}
             </span>

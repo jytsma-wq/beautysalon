@@ -44,14 +44,14 @@ function MegaMenuPanel({
 }) {
   return (
     <div className="absolute left-1/2 top-full z-50 w-[min(1120px,calc(100vw-3rem))] -translate-x-1/2 pt-4">
-      <div className="overflow-hidden rounded-xl border border-[#e8e4df] bg-[#fbf8f4] shadow-[0_24px_70px_rgba(36,31,27,0.12)]">
+      <div className="overflow-hidden rounded-[6px] border border-[#dfe5e2] bg-[#f4f6f4] shadow-[0_24px_70px_rgba(30,50,44,0.14)]">
         <div className="grid lg:grid-cols-[320px_1fr]">
           <div className="border-r border-[#e8e4df] bg-white">
             <div className="relative aspect-4/5 overflow-hidden">
               <Image src={image} alt="" fill className="object-cover" sizes="320px" />
             </div>
             <div className="p-8">
-              <p className="mb-3 text-[0.68rem] uppercase tracking-[0.24em] text-[#8d6f58]">
+              <p className="mb-3 text-[0.68rem] uppercase tracking-normal text-[#31584f]">
                 {eyebrow}
               </p>
               <h3 className="font-sans text-4xl font-light leading-[1.02] text-[#241f1b]">
@@ -60,7 +60,7 @@ function MegaMenuPanel({
               <p className="mt-4 text-sm leading-7 text-stone-600">{description}</p>
               <Link
                 href={overviewHref}
-                className="mt-8 inline-flex h-11 items-center rounded-md border border-[#d9cec1] bg-[#f7f2eb] px-6 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+                className="mt-8 inline-flex h-11 items-center rounded-[4px] bg-[#31584f] px-6 text-[0.68rem] font-medium uppercase tracking-normal text-white transition-colors hover:bg-[#24443e]"
               >
                 {overviewLabel}
               </Link>
@@ -75,7 +75,7 @@ function MegaMenuPanel({
                   href={item.href}
                   className="group rounded-[6px] border border-transparent bg-white/70 p-5 transition-colors hover:border-[#e8e4df] hover:bg-white"
                 >
-                  <h4 className="text-sm font-medium uppercase tracking-[0.16em] text-[#241f1b]">
+                  <h4 className="text-sm font-medium uppercase tracking-normal text-[#241f1b]">
                     {item.title}
                   </h4>
                   <p className="mt-3 text-sm leading-6 text-stone-600">{item.description}</p>
@@ -101,7 +101,7 @@ function MoreMenuPanel({ label, items }: { label: string; items: MoreMenuItem[] 
           <Link
             key={item.href}
             href={item.href}
-            className="flex min-h-11 items-center border-b border-[#eee8e2] text-sm text-stone-700 transition-colors last:border-b-0 hover:text-[#8d6f58]"
+            className="flex min-h-11 items-center border-b border-[#dfe5e2] text-sm text-stone-700 transition-colors last:border-b-0 hover:text-[#31584f]"
           >
             {item.title}
           </Link>
@@ -155,7 +155,7 @@ function SocialIconLink({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="grid h-10 w-9 place-items-center text-stone-600 transition-colors hover:text-[#8d6f58]"
+      className="grid h-10 w-9 place-items-center text-stone-600 transition-colors hover:text-[#31584f]"
     >
       {children}
     </a>
@@ -228,13 +228,13 @@ export function GaldermaHeaderClient({
 
       <motion.div
         dir="ltr"
-        className={`fixed top-0 left-0 right-0 z-50 border-b border-[#e8e4df] bg-[#f7f4f0] transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 hidden border-b border-[#dfe5e2] bg-[#f4f6f4] transition-all duration-300 lg:block ${
           isHidden ? '-translate-y-full' : 'translate-y-0'
         }`}
         initial={{ y: 0 }}
         animate={{ y: isHidden ? -100 : 0 }}
       >
-        <div className="mx-auto flex h-11 max-w-7xl items-center justify-between px-6 text-xs lg:px-8">
+        <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-6 text-xs lg:px-8">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-0.5" aria-label={tCommon('social')}>
               <SocialIconLink href={siteConfig.social.facebook} label="Facebook">
@@ -250,19 +250,19 @@ export function GaldermaHeaderClient({
             <nav className="hidden items-center gap-6 lg:flex">
               <Link
                 href="/about"
-                className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
+                className="uppercase tracking-normal text-stone-600 transition-colors hover:text-[#31584f]"
               >
                 {t('about', { defaultValue: 'About' })}
               </Link>
               <Link
                 href="/venue-rental-batumi"
-                className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
+                className="uppercase tracking-normal text-stone-600 transition-colors hover:text-[#31584f]"
               >
                 {t('venueRental', { defaultValue: 'Venue Rental' })}
               </Link>
               <Link
                 href="/contact-us"
-                className="uppercase tracking-[0.15em] text-stone-600 transition-colors hover:text-[#8d6f58]"
+                className="uppercase tracking-normal text-stone-600 transition-colors hover:text-[#31584f]"
               >
                 {t('contact', { defaultValue: 'Contact Us' })}
               </Link>
@@ -278,52 +278,38 @@ export function GaldermaHeaderClient({
 
       <motion.header
         dir="ltr"
-        className={`fixed left-0 right-0 z-40 border-b border-[#e8e4df] bg-white transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 border-b border-[#dfe5e2] bg-white/95 backdrop-blur-md transition-all duration-300 lg:top-10 ${
           isHidden ? '-translate-y-full' : 'translate-y-0'
         }`}
-        style={{ top: '44px' }}
         initial={{ y: 0 }}
-        animate={{ y: isHidden ? -140 : 0 }}
+        animate={{ y: isHidden ? -120 : 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="mx-auto max-w-7xl px-6 py-3 lg:px-8">
-          <div className="relative hidden min-h-[4.75rem] items-center justify-between gap-6 lg:flex">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="relative hidden min-h-20 grid-cols-[minmax(220px,1fr)_auto_auto] items-center gap-6 xl:grid">
             <Link
               href="/"
-              className="grid h-[4.75rem] w-[4.75rem] shrink-0 place-items-center overflow-hidden rounded-[10px] border border-[#c7a669]/45 bg-white shadow-[0_10px_28px_rgba(36,31,27,0.12)] ring-1 ring-white transition-opacity hover:opacity-90"
+              className="flex min-w-0 items-center gap-3 transition-opacity hover:opacity-80"
               aria-label={siteConfig.name}
             >
               <BrandLogo
                 priority
-                imageClassName="h-[4.45rem] w-[4.45rem] object-contain contrast-125 saturate-110"
+                imageClassName="h-14 w-14 shrink-0 object-contain contrast-125 saturate-110"
               />
+              <span className="truncate font-serif text-[1.7rem] leading-none text-[#1c1c1c]">
+                {siteConfig.name}
+              </span>
             </Link>
 
-            <Link
-              href="/"
-              className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap font-serif text-5xl leading-none tracking-tight text-[#1c1c1c] transition-colors hover:text-[#8d6f58]"
-            >
-              {siteConfig.name}
-            </Link>
-
-            <Link
-              href="/book"
-              className="shrink-0 rounded-md border border-[#d9cec1] bg-[#f7f2eb] px-7 py-2.5 text-center text-xs uppercase tracking-[0.15em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
-            >
-              {t('book', { defaultValue: 'Book' })}
-            </Link>
-          </div>
-
-          <div className="mt-3 hidden items-center justify-center lg:flex">
             <nav
               aria-label={t('mainNavigation', { defaultValue: 'Main navigation' })}
-              className="relative flex min-w-0 items-center justify-center gap-4 xl:gap-8"
+              className="relative flex min-w-0 items-center justify-center gap-4 2xl:gap-6"
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
               <div onMouseEnter={() => setActiveMegaMenu('treatments')}>
                 <button
                   type="button"
-                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none xl:tracking-[0.2em]"
+                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-normal text-stone-700 transition-colors hover:text-[#31584f] outline-none"
                   aria-expanded={activeMegaMenu === 'treatments'}
                 >
                   {t('treatments', { defaultValue: 'Treatments' })}
@@ -334,7 +320,7 @@ export function GaldermaHeaderClient({
               <div onMouseEnter={() => setActiveMegaMenu('conditions')}>
                 <button
                   type="button"
-                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none xl:tracking-[0.2em]"
+                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-normal text-stone-700 transition-colors hover:text-[#31584f] outline-none"
                   aria-expanded={activeMegaMenu === 'conditions'}
                 >
                   {t('conditions', { defaultValue: 'Skin Conditions' })}
@@ -342,19 +328,19 @@ export function GaldermaHeaderClient({
                 </button>
               </div>
 
-              <Link href="/pricelist" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
+              <Link href="/pricelist" className="whitespace-nowrap text-xs uppercase tracking-normal text-stone-700 transition-colors hover:text-[#31584f]">
                 {t('pricelist', { defaultValue: 'Pricelist' })}
               </Link>
-              <Link href="/offers" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
+              <Link href="/offers" className="whitespace-nowrap text-xs uppercase tracking-normal text-stone-700 transition-colors hover:text-[#31584f]">
                 {t('offers', { defaultValue: 'Offers' })}
               </Link>
-              <Link href="/international-clients" className="whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] xl:tracking-[0.2em]">
+              <Link href="/international-clients" className="whitespace-nowrap text-xs uppercase tracking-normal text-stone-700 transition-colors hover:text-[#31584f]">
                 {t('international', { defaultValue: 'International Clients' })}
               </Link>
               <div onMouseEnter={() => setActiveMegaMenu('more')}>
                 <button
                   type="button"
-                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-[0.16em] text-stone-700 transition-colors hover:text-[#8d6f58] outline-none xl:tracking-[0.2em]"
+                  className="flex items-center gap-1 whitespace-nowrap text-xs uppercase tracking-normal text-stone-700 transition-colors hover:text-[#31584f] outline-none"
                   aria-expanded={activeMegaMenu === 'more'}
                   aria-controls="silk-desktop-more-menu"
                   onFocus={() => setActiveMegaMenu('more')}
@@ -396,42 +382,52 @@ export function GaldermaHeaderClient({
                 />
               ) : null}
             </nav>
+
+            <Link
+              href="/book"
+              className="inline-flex h-11 shrink-0 items-center justify-center rounded-[4px] bg-[#31584f] px-6 text-center text-xs font-medium uppercase tracking-normal text-white transition-colors hover:bg-[#24443e]"
+            >
+              {t('book', { defaultValue: 'Book' })}
+            </Link>
           </div>
 
-          <div className="relative flex min-h-20 items-center justify-between lg:hidden">
+          <div className="relative flex min-h-20 items-center justify-between xl:hidden">
             <Link
               href="/"
-              className="grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-[10px] border border-[#c7a669]/45 bg-white shadow-[0_10px_26px_rgba(36,31,27,0.12)] ring-1 ring-white transition-opacity hover:opacity-90"
+              className="flex min-w-0 items-center gap-2 transition-opacity hover:opacity-80"
               aria-label={siteConfig.name}
             >
               <BrandLogo
                 priority
-                imageClassName="h-[4.65rem] w-[4.65rem] object-contain contrast-125 saturate-110"
+                imageClassName="h-12 w-12 shrink-0 object-contain contrast-125 saturate-110 sm:h-14 sm:w-14"
               />
+              <span className="hidden whitespace-nowrap font-serif text-[0.95rem] leading-none text-[#1c1c1c] min-[310px]:block sm:text-xl">
+                {siteConfig.name}
+              </span>
             </Link>
 
-            <Link
-              href="/"
-              className="absolute left-1/2 max-w-[calc(100vw-13.25rem)] -translate-x-1/2 truncate text-center font-serif text-xl leading-none tracking-tight text-[#1c1c1c] min-[380px]:text-[1.35rem] sm:text-2xl"
-            >
-              {siteConfig.name}
-            </Link>
-
-            <label
-              htmlFor={MOBILE_MENU_TOGGLE_ID}
-              className="grid h-11 w-11 cursor-pointer place-items-center text-[#1c1c1c]"
-              aria-label={t('openMenu')}
-            >
-              <Menu className="h-6 w-6" strokeWidth={1} />
-            </label>
-
+            <div className="flex shrink-0 items-center gap-0.5">
+              <div className="hidden sm:block lg:hidden">
+                <ThemeToggle />
+              </div>
+              <div className="lg:hidden">
+                <LanguageSwitcher />
+              </div>
+              <label
+                htmlFor={MOBILE_MENU_TOGGLE_ID}
+                className="grid h-11 w-11 cursor-pointer place-items-center text-[#1c1c1c]"
+                aria-label={t('openMenu')}
+              >
+                <Menu className="h-6 w-6" strokeWidth={1.25} />
+              </label>
+            </div>
           </div>
         </div>
       </motion.header>
 
       <div
         id="silk-mobile-menu-panel"
-        className="fixed inset-0 z-[70] hidden overflow-y-auto bg-[#f7f4f0] peer-checked/mobile-menu:block"
+        className="fixed inset-0 z-[70] hidden overflow-y-auto bg-[#f4f6f4] peer-checked/mobile-menu:block"
       >
         <div className="relative flex min-h-dvh items-center justify-center px-6 py-20">
           <label
@@ -451,26 +447,26 @@ export function GaldermaHeaderClient({
 
             <div className="grid grid-cols-1 gap-10">
               <nav className="space-y-5">
-                <span className="mb-6 block text-xs uppercase tracking-[0.4em] text-stone-400">{t('menu')}</span>
-                <Link href="/treatments" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                <span className="mb-6 block text-xs uppercase tracking-normal text-stone-500">{t('menu')}</span>
+                <Link href="/treatments" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#31584f]">
                   {t('treatments', { defaultValue: 'Treatments' })}
                 </Link>
-                <Link href="/conditions" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                <Link href="/conditions" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#31584f]">
                   {t('conditions', { defaultValue: 'Skin Conditions' })}
                 </Link>
-                <Link href="/pricelist" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                <Link href="/pricelist" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#31584f]">
                   {t('pricelist', { defaultValue: 'Pricelist' })}
                 </Link>
-                <Link href="/offers" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                <Link href="/offers" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#31584f]">
                   {t('offers', { defaultValue: 'Offers' })}
                 </Link>
-                <Link href="/international-clients" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#8d6f58]">
+                <Link href="/international-clients" onClick={closeMobileMenu} className="flex min-h-11 items-center font-serif text-3xl font-light text-stone-900 transition-colors hover:text-[#31584f]">
                   {t('international', { defaultValue: 'International Clients' })}
                 </Link>
               </nav>
 
               <div>
-                <span className="mb-6 block text-xs uppercase tracking-[0.4em] text-stone-400">{t('more')}</span>
+                <span className="mb-6 block text-xs uppercase tracking-normal text-stone-500">{t('more')}</span>
                 <nav className="mb-8 space-y-4">
                   <Link href="/about" onClick={closeMobileMenu} className="flex min-h-11 items-center text-lg text-stone-700 transition-colors hover:text-[#8d6f58]">
                     {t('about', { defaultValue: 'About' })}
@@ -509,7 +505,7 @@ export function GaldermaHeaderClient({
                 <Link
                   href="/book"
                   onClick={closeMobileMenu}
-                  className="mt-10 block w-full rounded-md border border-[#d9cec1] bg-[#f3ece3] py-5 text-center text-sm uppercase tracking-widest text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+                  className="mt-10 block w-full rounded-[4px] bg-[#31584f] py-5 text-center text-sm uppercase tracking-normal text-white transition-colors hover:bg-[#24443e]"
                 >
                   {t('bookConsultation', { defaultValue: 'Book Consultation' })}
                 </Link>

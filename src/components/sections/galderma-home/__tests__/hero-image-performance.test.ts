@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
@@ -20,11 +20,18 @@ describe('ClinicalHeroCarousel image loading', () => {
   });
 
   it('uses a responsive sizes value that matches the rendered hero image slot', () => {
-    expect(carouselSource).toContain('sizes="(max-width: 1023px) 100vw, 50vw"');
+    expect(carouselSource).toContain('sizes="100vw"');
   });
 
-  it('keeps homepage hero source images capped to a practical upstream width', () => {
-    expect(homepageDataSource).toContain('w=1920&q=85');
-    expect(homepageDataSource).not.toContain('w=2200&q=85');
+  it('serves homepage images from versioned local assets', () => {
+    const imagePaths = homepageDataSource.match(/"(\/images\/home\/[^\"]+\.webp)"/g) ?? [];
+
+    expect(homepageDataSource).not.toContain('images.unsplash.com');
+    expect(imagePaths.length).toBeGreaterThan(0);
+
+    for (const quotedPath of imagePaths) {
+      const imagePath = quotedPath.slice(1, -1);
+      expect(existsSync(resolve(process.cwd(), 'public', imagePath.slice(1)))).toBe(true);
+    }
   });
 });

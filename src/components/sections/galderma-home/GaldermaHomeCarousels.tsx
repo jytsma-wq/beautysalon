@@ -24,10 +24,12 @@ function CarouselButton({
   direction,
   onClick,
   disabled,
+  tone = 'light',
 }: {
   direction: 'previous' | 'next';
   onClick: () => void;
   disabled?: boolean;
+  tone?: 'light' | 'dark';
 }) {
   const t = useTranslations('homeEditorial');
   const Icon = direction === 'previous' ? ArrowLeft : ArrowRight;
@@ -38,7 +40,11 @@ function CarouselButton({
       onClick={onClick}
       disabled={disabled}
       aria-label={direction === 'previous' ? t('carousel.previousSlide') : t('carousel.nextSlide')}
-      className="grid size-11 place-items-center border border-stone-300 bg-white text-stone-950 transition-colors hover:border-stone-950 disabled:pointer-events-none disabled:opacity-30"
+      className={
+        tone === 'dark'
+          ? 'grid size-11 place-items-center border border-white/50 bg-black/20 text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#17201d] disabled:pointer-events-none disabled:opacity-30'
+          : 'grid size-11 place-items-center border border-stone-300 bg-white text-stone-950 transition-colors hover:border-stone-950 disabled:pointer-events-none disabled:opacity-30'
+      }
     >
       <Icon className="size-4" strokeWidth={1.5} />
     </button>
@@ -129,69 +135,68 @@ export function ClinicalHeroCarousel() {
   } = useCarouselControls();
 
   return (
-    <section className="relative bg-[#f7f2eb]">
+    <section className="relative isolate bg-[#17201d] text-white">
       <div className="overflow-hidden [contain:layout_paint]" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, index) => (
             <article key={slide.title} className="min-w-0 flex-[0_0_100%]">
-              <div className="grid min-h-[calc(100svh-128px)] grid-cols-1 lg:grid-cols-[50%_50%]">
-                <div className="order-2 flex items-center px-6 py-10 md:px-12 md:py-14 lg:order-1 lg:px-14 xl:px-20">
-                  <div className="max-w-2xl">
-                    <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-[0.28em] text-[#8d6f58]">
+              <div className="relative flex min-h-[calc(100svh-7.5rem)] items-center overflow-hidden sm:min-h-[34rem] lg:min-h-[calc(100svh-10rem)]">
+                <motion.div
+                  className="absolute inset-0"
+                  animate={
+                    shouldReduceMotion
+                      ? { scale: 1, x: '0%' }
+                      : { scale: [1.01, 1.045, 1.02], x: ['0%', '-0.75%', '0.4%'] }
+                  }
+                  transition={
+                    shouldReduceMotion
+                      ? { duration: 0 }
+                      : {
+                          duration: 18,
+                          repeat: Infinity,
+                          repeatType: 'mirror',
+                          ease: 'easeInOut',
+                        }
+                  }
+                  style={{ willChange: shouldReduceMotion ? 'auto' : 'transform' }}
+                >
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    fill
+                    preload={index === 0}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={index === 0 ? 'high' : 'low'}
+                    className="object-cover"
+                    sizes="100vw"
+                  />
+                </motion.div>
+                <div className="absolute inset-0 bg-[#101713]/55" aria-hidden="true" />
+
+                <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 pb-24 pt-12 md:px-12 lg:px-16 xl:px-24">
+                  <div className="max-w-[46rem]">
+                    <p className="mb-5 text-[0.68rem] font-medium uppercase tracking-normal text-[#eadfce]">
                       {slide.eyebrow}
                     </p>
                     {index === 0 ? (
-                      <h1 className="localized-carousel-heading font-sans font-light text-[#241f1b]">
+                      <h1 className="localized-carousel-heading font-sans font-light text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.24)]">
                         {slide.title}
                       </h1>
                     ) : (
-                      <h2 className="localized-carousel-heading font-sans font-light text-[#241f1b]">
+                      <h2 className="localized-carousel-heading font-sans font-light text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.24)]">
                         {slide.title}
                       </h2>
                     )}
-                    <p className="mt-7 max-w-md text-base leading-8 text-stone-700 md:text-lg">
+                    <p className="mt-6 max-w-xl text-base leading-7 text-white/85 md:text-lg md:leading-8">
                       {slide.description}
                     </p>
                     <Link
                       href={slide.href}
-                      className="mt-10 inline-flex h-12 items-center border border-[#241f1b] px-7 text-xs font-medium uppercase tracking-[0.18em] text-[#241f1b] transition-colors hover:bg-[#241f1b] hover:text-white"
+                      className="mt-8 inline-flex min-h-12 items-center rounded-[4px] bg-white px-7 text-xs font-medium uppercase tracking-normal text-[#17201d] transition-colors hover:bg-[#31584f] hover:text-white md:mt-10"
                     >
                       {slide.cta}
                     </Link>
                   </div>
-                </div>
-                <div className="relative order-1 min-h-[34svh] overflow-hidden sm:min-h-[42svh] lg:order-2 lg:min-h-0">
-                  <motion.div
-                    className="absolute inset-0"
-                    animate={
-                      shouldReduceMotion
-                        ? { scale: 1, x: '0%' }
-                        : { scale: [1.02, 1.07, 1.03], x: ['0%', '-1.5%', '0.75%'] }
-                    }
-                    transition={
-                      shouldReduceMotion
-                        ? { duration: 0 }
-                        : {
-                            duration: 18,
-                            repeat: Infinity,
-                            repeatType: 'mirror',
-                            ease: 'easeInOut',
-                          }
-                    }
-                    style={{ willChange: shouldReduceMotion ? 'auto' : 'transform' }}
-                  >
-                    <Image
-                      src={slide.image}
-                      alt={slide.title}
-                      fill
-                      preload={index === 0}
-                      loading={index === 0 ? 'eager' : 'lazy'}
-                      fetchPriority={index === 0 ? 'high' : 'low'}
-                      className="object-cover"
-                      sizes="(max-width: 1023px) 100vw, 50vw"
-                    />
-                  </motion.div>
-                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-black/20 to-transparent" />
                 </div>
               </div>
             </article>
@@ -199,16 +204,18 @@ export function ClinicalHeroCarousel() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 right-6 flex items-center gap-3 md:bottom-10 md:right-10">
+      <div className="absolute right-6 top-6 flex items-center gap-3 lg:bottom-10 lg:right-10 lg:top-auto">
         <CarouselButton
           direction="previous"
           onClick={scrollPrev}
           disabled={!canScrollPrev}
+          tone="dark"
         />
         <CarouselButton
           direction="next"
           onClick={scrollNext}
           disabled={!canScrollNext}
+          tone="dark"
         />
       </div>
       <div className="absolute bottom-8 left-6 flex gap-2 md:left-12 lg:left-16 xl:left-24">
@@ -216,7 +223,7 @@ export function ClinicalHeroCarousel() {
           <span
             key={slide.title}
             className={`h-px transition-all ${
-              selectedIndex === index ? 'w-12 bg-[#241f1b]' : 'w-5 bg-stone-400'
+              selectedIndex === index ? 'w-12 bg-white' : 'w-5 bg-white/50'
             }`}
           />
         ))}

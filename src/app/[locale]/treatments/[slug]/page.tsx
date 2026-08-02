@@ -114,7 +114,7 @@ export default async function TreatmentPage({ params }: Props) {
 
   return (
     <article className="min-h-screen bg-white">
-      <header className="bg-[#f7f2eb] pt-42.5 md:pt-47">
+      <header className="bg-[#f7f2eb]">
         <div className="grid min-h-[70svh] grid-cols-1 lg:grid-cols-[44%_56%]">
           <div className="flex items-end px-6 py-14 md:px-12 lg:px-16 xl:px-24">
             <div className="max-w-xl">
