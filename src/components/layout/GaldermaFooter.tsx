@@ -8,10 +8,11 @@ import { FacebookBrandIcon, InstagramBrandIcon, TikTokBrandIcon } from '@/compon
 import { siteConfig } from '@/data/site-config';
 import { useAnnouncer } from '@/components/ui/announcer';
 import { fetchClientCsrfToken } from '@/lib/csrf-client';
+import { localizedCountryNames, type Locale } from '@/i18n';
 
 export function GaldermaFooter() {
   const currentYear = new Date().getFullYear();
-  const locale = useLocale();
+  const locale = useLocale() as Locale;
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
   const tNewsletter = useTranslations('newsletter');
@@ -220,7 +221,7 @@ export function GaldermaFooter() {
               <p className="mb-3">
                 {siteConfig.contact.address}
                 <br />
-                {siteConfig.contact.city}, {siteConfig.contact.country} {siteConfig.contact.postcode}
+                {siteConfig.contact.city}, {localizedCountryNames[locale]} {siteConfig.contact.postcode}
               </p>
               <p className="mb-3">
                 <a href={`tel:${siteConfig.contact.phone}`} className="transition-colors hover:text-[#8d6f58]">

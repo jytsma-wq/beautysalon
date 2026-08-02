@@ -151,8 +151,9 @@ function PortfolioSection() {
 
 function PopularTreatmentsSection() {
   const t = useTranslations('homeEditorial');
+  const locale = useLocale() as Locale;
   const shouldReduceMotion = useHydratedReducedMotion();
-  const items = getPopularTreatmentHighlights().map((item) => ({
+  const items = getPopularTreatmentHighlights(locale).map((item) => ({
     ...item,
     title: t(`popularTreatments.items.${item.id}.title`),
     description: t(`popularTreatments.items.${item.id}.description`),

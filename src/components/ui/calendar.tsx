@@ -4,6 +4,7 @@ import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useLocale } from "next-intl"
 import { DayPicker } from "react-day-picker"
+import { ar, de, enUS, fr, he, ka, nl, ru, tr } from "react-day-picker/locale"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -113,20 +114,90 @@ const calendarLabels = {
     ],
     weekdays: ["א", "ב", "ג", "ד", "ה", "ו", "ש"],
   },
+  nl: {
+    months: [
+      "JANUARI",
+      "FEBRUARI",
+      "MAART",
+      "APRIL",
+      "MEI",
+      "JUNI",
+      "JULI",
+      "AUGUSTUS",
+      "SEPTEMBER",
+      "OKTOBER",
+      "NOVEMBER",
+      "DECEMBER",
+    ],
+    weekdays: ["ZO", "MA", "DI", "WO", "DO", "VR", "ZA"],
+  },
+  fr: {
+    months: [
+      "JANVIER",
+      "FÉVRIER",
+      "MARS",
+      "AVRIL",
+      "MAI",
+      "JUIN",
+      "JUILLET",
+      "AOÛT",
+      "SEPTEMBRE",
+      "OCTOBRE",
+      "NOVEMBRE",
+      "DÉCEMBRE",
+    ],
+    weekdays: ["DIM", "LUN", "MAR", "MER", "JEU", "VEN", "SAM"],
+  },
+  de: {
+    months: [
+      "JANUAR",
+      "FEBRUAR",
+      "MÄRZ",
+      "APRIL",
+      "MAI",
+      "JUNI",
+      "JULI",
+      "AUGUST",
+      "SEPTEMBER",
+      "OKTOBER",
+      "NOVEMBER",
+      "DEZEMBER",
+    ],
+    weekdays: ["SO", "MO", "DI", "MI", "DO", "FR", "SA"],
+  },
+} as const
+
+const calendarLocales = {
+  en: enUS,
+  ka,
+  ru,
+  tr,
+  ar,
+  he,
+  nl,
+  fr,
+  de,
 } as const
 
 function Calendar({
   className,
   classNames,
+  components,
+  formatters,
+  labels,
+  locale: datePickerLocale,
   showOutsideDays = true,
   ...props
 }: CalendarProps) {
   const locale = useLocale()
-  const labels = calendarLabels[locale as keyof typeof calendarLabels] ?? calendarLabels.en
+  const localeLabels = calendarLabels[locale as keyof typeof calendarLabels] ?? calendarLabels.en
+  const resolvedDatePickerLocale =
+    datePickerLocale ?? calendarLocales[locale as keyof typeof calendarLocales] ?? calendarLocales.en
 
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
+      locale={resolvedDatePickerLocale}
       className={cn("w-full p-3", className)}
       classNames={{
         root: "relative w-full",
@@ -162,15 +233,18 @@ function Calendar({
         hidden: "invisible",
         ...classNames,
       }}
+      labels={labels}
       formatters={{
-        formatCaption: (date) => `${labels.months[date.getMonth()]} ${date.getFullYear()}`,
-        formatWeekdayName: (date) => labels.weekdays[date.getDay()],
+        formatCaption: (date) => `${localeLabels.months[date.getMonth()]} ${date.getFullYear()}`,
+        formatWeekdayName: (date) => localeLabels.weekdays[date.getDay()],
+        ...formatters,
       }}
       components={{
         Chevron: ({ className, orientation, ...props }) => {
           const Icon = orientation === "left" ? ChevronLeft : ChevronRight
           return <Icon className={cn("h-4 w-4", className)} {...props} />
         },
+        ...components,
       }}
       {...props}
     />

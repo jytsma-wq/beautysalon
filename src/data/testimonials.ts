@@ -22,6 +22,9 @@ const localeMap: Record<Locale, string> = {
   tr: 'tr-TR',
   ar: 'ar-SA',
   he: 'he-IL',
+  nl: "nl-VS",
+  fr: "fr-US",
+  de: "en-US",
 };
 
 function firstAlphaNumericToken(value: string): string | undefined {

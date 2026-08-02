@@ -39,6 +39,12 @@ describe('i18n-formatters', () => {
       expect(result).toContain('100');
     });
 
+    it.each(['nl', 'fr', 'de'])('formats price in the %s European locale', (locale) => {
+      const result = formatPrice(100, locale, 'GEL');
+      expect(result).toContain('100');
+      expect(result).toContain('GEL');
+    });
+
     it('uses default GEL currency when not specified', () => {
       const result = formatPrice(100, 'en');
       expect(result).toContain('GEL');
@@ -80,6 +86,12 @@ describe('i18n-formatters', () => {
       const date = new Date('2024-01-15');
       const result = formatDate(date, 'ru');
       expect(result).toBeTruthy();
+    });
+
+    it.each(['nl', 'fr', 'de'])('formats dates in the %s European locale', (locale) => {
+      const result = formatDate(new Date('2024-01-15'), locale);
+      expect(result).toContain('15');
+      expect(result).toContain('2024');
     });
 
     it('accepts custom format options', () => {

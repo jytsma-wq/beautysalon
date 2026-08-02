@@ -12,7 +12,7 @@ test.describe('Homepage', () => {
   });
 
   test('loads supported localized homepages without placeholder text', async ({ page }) => {
-    const locales = ['ka', 'ru', 'tr', 'ar', 'he'] as const;
+    const locales = ['ka', 'ru', 'tr', 'ar', 'he', 'nl', 'fr', 'de'] as const;
 
     for (const locale of locales) {
       await page.goto(`/${locale}`, { waitUntil: 'domcontentloaded' });

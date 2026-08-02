@@ -52,6 +52,18 @@ const menuCategoryDescriptions: Record<Locale, { treatment: string; condition: s
     treatment: 'עיינו במידע על השירות ואשרו זמינות לפני ההזמנה.',
     condition: 'התחילו במידע ולאחר מכן אשרו עם הסלון את התור המתאים.',
   },
+  nl: {
+    treatment: "Controleer de service-informatie en bevestig de beschikbaarheid voordat u boekt.",
+    condition: "Begin met informatie en bevestig vervolgens de juiste afspraak met de salon.",
+  },
+  fr: {
+    treatment: "Consultez les informations sur le service et confirmez la disponibilité avant de réserver.",
+    condition: "Commencez par vous informer, puis confirmez le rendez-vous approprié avec le salon.",
+  },
+  de: {
+    treatment: "Überprüfen Sie vor der Buchung die Serviceinformationen und bestätigen Sie die Verfügbarkeit.",
+    condition: "Beginnen Sie mit den Informationen und vereinbaren Sie dann den entsprechenden Termin mit dem Salon.",
+  },
 };
 
 const conditionTranslationAliases: Record<string, string> = {
@@ -82,6 +94,18 @@ const overviewDescriptions: Record<Locale, { treatments: string; conditions: str
   he: {
     treatments: 'עיינו בכל תפריט הטיפולים ובכל הקטגוריות.',
     conditions: 'עיינו בכל מצבי העור ובמסלולי הטיפול המתאימים.',
+  },
+  nl: {
+    treatments: "Bekijk het volledige behandelportfolio en blader door elke categorie.",
+    conditions: "Blader door de volledige bibliotheek met huidproblemen en behandeltrajecten.",
+  },
+  fr: {
+    treatments: "Consultez la gamme complète de traitements et parcourez chaque catégorie.",
+    conditions: "Parcourez la bibliothèque complète des problèmes de peau et les parcours de traitement.",
+  },
+  de: {
+    treatments: "Sehen Sie sich das gesamte Behandlungsportfolio an und durchsuchen Sie jede Kategorie.",
+    conditions: "Durchsuchen Sie die vollständige Bibliothek zu Hautproblemen und Behandlungspfaden.",
   },
 };
 
@@ -144,6 +168,36 @@ const treatmentFallbacks: Record<Locale, Record<string, MenuCopy>> = {
     hair: {
       title: 'טיפולי שיער',
       description: 'שיקום שיער, תוספות, ציפורניים וריסים לטיפוח סלון מלא.',
+    },
+  },
+  nl: {
+    diagnostic: {
+      title: "Diagnostisch",
+      description: "Geavanceerde huidanalyse- en diagnostische hulpmiddelen om uw behandelplan te personaliseren.",
+    },
+    hair: {
+      title: "Haarbehandelingen",
+      description: "Haarrestauratie, extensions, nagels en wimperafwerking voor complete salonverzorging.",
+    },
+  },
+  fr: {
+    diagnostic: {
+      title: "Diagnostique",
+      description: "Outils avancés d’analyse cutanée et de diagnostic pour personnaliser votre plan de traitement.",
+    },
+    hair: {
+      title: "Traitements capillaires",
+      description: "Services de restauration de cheveux, d'extensions, d'ongles et de finition de cils pour des soins complets en salon.",
+    },
+  },
+  de: {
+    diagnostic: {
+      title: "Diagnose",
+      description: "Fortschrittliche Hautanalyse- und Diagnosetools zur Personalisierung Ihres Behandlungsplans.",
+    },
+    hair: {
+      title: "Haarbehandlungen",
+      description: "Haarwiederherstellung, Verlängerungen, Nägel und Wimpernveredelung für die komplette Salonpflege.",
     },
   },
 };
@@ -303,6 +357,84 @@ const conditionFallbacks: Record<Locale, Record<string, MenuCopy>> = {
     'other-conditions': {
       title: 'מצבים נוספים',
       description: 'פתרונות אישיים לצרכים נוספים של העור והאסתטיקה.',
+    },
+  },
+  nl: {
+    'uneven-skin-tone': {
+      title: "Ongelijkmatige huidskleur",
+      description: "Herstel een heldere, egale teint met gerichte pigmentatiebehandelingen.",
+    },
+    blemishes: {
+      title: "Vlekken",
+      description: "Verwijder oneffenheden en bereik een gladdere, gezonder uitziende teint.",
+    },
+    'collagen-stimulating': {
+      title: "Collageen stimulerend",
+      description: "Boost collageen voor een stevigere, jeugdigere huid.",
+    },
+    'fine-lines-wrinkles': {
+      title: "Fijne lijntjes en rimpels",
+      description: "Maak fijne lijntjes glad en voorkom ze met antirimpelbehandelingen en huidverzorging.",
+    },
+    'loss-of-firmness': {
+      title: "Verlies van stevigheid",
+      description: "Lift en verstevig de slappe huid met geavanceerde huidverstevigende behandelingen.",
+    },
+    'other-conditions': {
+      title: "Overige voorwaarden",
+      description: "Gepersonaliseerde oplossingen voor aanvullende huid- en esthetische problemen.",
+    },
+  },
+  fr: {
+    'uneven-skin-tone': {
+      title: "Teint inégal",
+      description: "Retrouvez un teint lumineux et uniforme grâce à des soins pigmentaires ciblés.",
+    },
+    blemishes: {
+      title: "Imperfections",
+      description: "Éliminez les imperfections et obtenez un teint plus lisse et plus sain.",
+    },
+    'collagen-stimulating': {
+      title: "Stimulant le collagène",
+      description: "Boostez le collagène pour une peau plus ferme et plus jeune.",
+    },
+    'fine-lines-wrinkles': {
+      title: "Ridules et rides",
+      description: "Lissez et prévenez les ridules avec des traitements et des soins antirides.",
+    },
+    'loss-of-firmness': {
+      title: "Perte de fermeté",
+      description: "Soulevez et resserrez la peau affaissée grâce à des traitements avancés de raffermissement de la peau.",
+    },
+    'other-conditions': {
+      title: "Autres conditions",
+      description: "Des solutions personnalisées pour des problèmes cutanés et esthétiques supplémentaires.",
+    },
+  },
+  de: {
+    'uneven-skin-tone': {
+      title: "Ungleichmäßiger Hautton",
+      description: "Stellen Sie mit gezielten Pigmentierungsbehandlungen einen strahlenden, ebenmäßigen Teint wieder her.",
+    },
+    blemishes: {
+      title: "Schönheitsfehler",
+      description: "Beseitigen Sie Hautunreinheiten und erzielen Sie einen glatteren, gesünder aussehenden Teint.",
+    },
+    'collagen-stimulating': {
+      title: "Kollagenstimulierend",
+      description: "Steigern Sie Kollagen für eine straffere, jugendlichere Haut.",
+    },
+    'fine-lines-wrinkles': {
+      title: "Feine Linien und Falten",
+      description: "Glätten und verhindern Sie feine Linien mit Anti-Falten-Behandlungen und Hautpflege.",
+    },
+    'loss-of-firmness': {
+      title: "Verlust der Festigkeit",
+      description: "Heben und straffen Sie schlaffe Haut mit fortschrittlichen Hautstraffungsbehandlungen.",
+    },
+    'other-conditions': {
+      title: "Sonstige Bedingungen",
+      description: "Personalisierte Lösungen für zusätzliche Haut- und Ästhetikprobleme.",
     },
   },
 };

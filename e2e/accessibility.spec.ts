@@ -3,7 +3,7 @@ import { injectAxe, getViolations } from 'axe-playwright';
 import type { RunOptions } from 'axe-core';
 
 // All supported locales
-const locales = ['en', 'ka', 'ru', 'tr', 'ar', 'he'] as const;
+const locales = ['en', 'ka', 'ru', 'tr', 'ar', 'he', 'nl', 'fr', 'de'] as const;
 type Locale = typeof locales[number];
 
 // RTL locales

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { format, isBefore, isToday } from 'date-fns';
 import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,12 +12,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { siteConfig } from '@/data/site-config';
 import type { BookingTreatmentOption } from '@/data/booking-treatments';
 import { useClientCsrfToken } from '@/lib/csrf-client';
+import { formatDate as formatLocalizedDate } from '@/lib/i18n-formatters';
 
 interface BookingFormProps {
   treatments: BookingTreatmentOption[];
 }
 
 export function BookingForm({ treatments }: BookingFormProps) {
+  const locale = useLocale();
   const t = useTranslations('bookingPage');
   const tCommon = useTranslations('common');
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
@@ -114,7 +116,8 @@ export function BookingForm({ treatments }: BookingFormProps) {
     return () => controller.abort();
   }, [selectedDate]);
 
-  const formatDateLabel = (date: Date) => format(date, 'EEEE, MMMM d, yyyy');
+  const formatDateLabel = (date: Date) =>
+    formatLocalizedDate(date, locale, { weekday: 'long' });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -64,6 +64,9 @@ function makeGeneratedLocalSeoContent(
     tr: makeTurkishLocalSeoContent(copies.tr),
     ar: makeArabicLocalSeoContent(copies.ar),
     he: makeHebrewLocalSeoContent(copies.he),
+    nl: makeDutchLocalSeoContent(copies.nl),
+    fr: makeFrenchLocalSeoContent(copies.fr),
+    de: makeGermanLocalSeoContent(copies.de),
   };
 }
 
@@ -115,6 +118,174 @@ function makeEnglishLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandin
         question: 'Where is the salon?',
         answer:
           'Silk Beauty Salon is located at Zurab Gorgiladze 63 in Batumi, Georgia.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeDutchLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `Vergelijkt u opties voor ${copy.searchPhrases[0]}? Silk Beauty Salon biedt in het centrum van Batumi consultatiegerichte ${copy.topic}, met een zorgvuldige geschiktheidsbeoordeling, duidelijke vanafprijzen en nazorginformatie.`,
+    searchTitle: 'Gerelateerde zoekonderwerpen',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `Waarom klanten Silk kiezen voor ${copy.h1}`,
+    benefits: [
+      {
+        title: 'Eerst een consultatie',
+        text: 'Het team bespreekt uw wensen, timing, mogelijke contra-indicaties en verwachtingen voordat een behandeling wordt bevestigd.',
+      },
+      {
+        title: 'Gekoppeld aan echte salondiensten',
+        text: 'Deze pagina verwijst naar bestaande behandelingen en prijsinformatie, zonder onbevestigde claims of dubbele prijslijsten.',
+      },
+      {
+        title: 'Centraal gelegen in Batumi',
+        text: 'Afspraken vinden plaats aan Zurab Gorgiladze 63. Online boeken en contact via telefoon, WhatsApp en e-mail zijn beschikbaar.',
+      },
+    ],
+    treatmentTitle: `Mogelijkheden voor ${copy.h1}`,
+    treatmentIntro:
+      'Vergelijk de bijbehorende behandelingen, vanafprijzen, duur en praktische informatie voordat u een consultatie boekt.',
+    faqTitle: `Vragen over ${copy.h1}`,
+    faqs: [
+      {
+        question: `Is ${copy.topic} geschikt voor mij?`,
+        answer:
+          'Dat hangt af van uw wensen, huid- of behandelgeschiedenis, planning en mogelijke contra-indicaties. Boek bij twijfel eerst een consultatie.',
+      },
+      {
+        question: `Wat kost ${copy.topic} in Batumi?`,
+        answer:
+          'De bijbehorende behandelkaarten en volledige prijslijst tonen vanafprijzen. De definitieve prijs wordt na overleg bevestigd.',
+      },
+      {
+        question: 'Kan ik boeken voordat ik in Batumi aankom?',
+        answer:
+          'Ja. Lokale en internationale klanten kunnen online boeken en vooraf contact opnemen over timing en voorbereiding.',
+      },
+      {
+        question: 'Waar is de salon?',
+        answer: 'Silk Beauty Salon bevindt zich aan Zurab Gorgiladze 63 in Batumi, Georgië.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeFrenchLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `Si vous comparez les options pour ${copy.searchPhrases[0]}, Silk Beauty Salon propose ce service dans le centre de Batumi avec une consultation préalable, des prix de départ clairs et des conseils de suivi.`,
+    searchTitle: 'Sujets de recherche associés',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `Pourquoi choisir Silk pour ${copy.h1}`,
+    benefits: [
+      {
+        title: 'Une consultation avant de réserver',
+        text: 'L’équipe vérifie vos objectifs, le calendrier, les éventuelles contre-indications et vos attentes avant de confirmer le soin.',
+      },
+      {
+        title: 'Relié aux services réels du salon',
+        text: 'Cette page renvoie vers les soins et tarifs existants, sans promesses non vérifiées ni duplication des prix.',
+      },
+      {
+        title: 'Au centre de Batumi',
+        text: 'Les rendez-vous ont lieu au 63 Zurab Gorgiladze. La réservation en ligne et le contact par téléphone, WhatsApp ou e-mail sont disponibles.',
+      },
+    ],
+    treatmentTitle: `Options pour ${copy.h1}`,
+    treatmentIntro:
+      'Comparez les soins associés, les prix de départ, la durée et les informations pratiques avant de réserver une consultation.',
+    faqTitle: `Questions sur ${copy.h1}`,
+    faqs: [
+      {
+        question: 'Ce service me convient-il ?',
+        answer:
+          'Cela dépend de vos objectifs, de vos antécédents cutanés ou esthétiques, du calendrier et des éventuelles contre-indications. En cas de doute, commencez par une consultation.',
+      },
+      {
+        question: 'Quel est le prix de ce service à Batumi ?',
+        answer:
+          'Les soins associés et la liste complète des prix indiquent les tarifs de départ. Le tarif final est confirmé après la consultation.',
+      },
+      {
+        question: 'Puis-je réserver avant mon arrivée à Batumi ?',
+        answer:
+          'Oui. Les clients locaux et internationaux peuvent réserver en ligne et contacter le salon à l’avance au sujet du calendrier et de la préparation.',
+      },
+      {
+        question: 'Où se trouve le salon ?',
+        answer: 'Silk Beauty Salon se trouve au 63 Zurab Gorgiladze, à Batumi, en Géorgie.',
+      },
+    ],
+    categoryCta: copy.categoryCta,
+    bookCta: copy.bookCta,
+    bookingTitle: copy.bookingTitle,
+    bookingText: copy.bookingText,
+  };
+}
+
+function makeGermanLocalSeoContent(copy: GeneratedLocalSeoCopy): LocalSeoLandingPageContent {
+  return {
+    title: copy.title,
+    h1: copy.h1,
+    description: copy.description,
+    eyebrow: copy.eyebrow,
+    intro: `Wenn Sie Angebote für ${copy.searchPhrases[0]} vergleichen, bietet Silk Beauty Salon im Zentrum von Batumi beratungsorientierte ${copy.topic} mit sorgfältiger Eignungsprüfung, transparenten Einstiegspreisen und Hinweisen zur Nachsorge.`,
+    searchTitle: 'Verwandte Suchthemen',
+    searchPhrases: copy.searchPhrases,
+    benefitsTitle: `Warum Kunden Silk für ${copy.h1} wählen`,
+    benefits: [
+      {
+        title: 'Beratung vor der Buchung',
+        text: 'Das Team bespricht Ihre Ziele, den Zeitplan, mögliche Kontraindikationen und Erwartungen, bevor eine Behandlung bestätigt wird.',
+      },
+      {
+        title: 'Mit echten Salonleistungen verknüpft',
+        text: 'Diese Seite verweist auf bestehende Behandlungen und Preisinformationen, ohne unbestätigte Aussagen oder doppelte Preislisten.',
+      },
+      {
+        title: 'Zentrale Lage in Batumi',
+        text: 'Termine finden in der Zurab-Gorgiladze-Straße 63 statt. Online-Buchung und Kontakt per Telefon, WhatsApp oder E-Mail sind möglich.',
+      },
+    ],
+    treatmentTitle: `Möglichkeiten für ${copy.h1}`,
+    treatmentIntro:
+      'Vergleichen Sie die zugehörigen Behandlungen, Einstiegspreise, Dauer und praktischen Informationen, bevor Sie eine Beratung buchen.',
+    faqTitle: `Fragen zu ${copy.h1}`,
+    faqs: [
+      {
+        question: `Ist ${copy.topic} für mich geeignet?`,
+        answer:
+          'Das hängt von Ihren Zielen, Ihrer Haut- oder Behandlungsgeschichte, dem Zeitplan und möglichen Kontraindikationen ab. Beginnen Sie bei Unsicherheit mit einer Beratung.',
+      },
+      {
+        question: `Was kostet ${copy.topic} in Batumi?`,
+        answer:
+          'Die zugehörigen Behandlungen und die vollständige Preisliste zeigen Einstiegspreise. Der endgültige Preis wird nach der Beratung bestätigt.',
+      },
+      {
+        question: 'Kann ich vor meiner Ankunft in Batumi buchen?',
+        answer:
+          'Ja. Lokale und internationale Kunden können online buchen und vorab Kontakt zum Salon aufnehmen, um Zeitplan und Vorbereitung zu besprechen.',
+      },
+      {
+        question: 'Wo befindet sich der Salon?',
+        answer: 'Silk Beauty Salon befindet sich in der Zurab-Gorgiladze-Straße 63 in Batumi, Georgien.',
       },
     ],
     categoryCta: copy.categoryCta,
@@ -770,7 +941,211 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         bookingText:
           'בחרו ייעוץ אם אתם מתלבטים בין טיפול בקמטים, מסטר, הזעה או אפשרויות נוספות.',
       },
-    },
+          nl: {
+        title: "Botox in Batumi, Georgië",
+        h1: "Botox in Batumi, Georgië",
+        description:
+          "Boek op consultatie geleide Botox-injecties in Batumi bij Silk Beauty Salon voor problemen met rimpels, kauwspieren en zweten, met duidelijke nazorg.",
+        eyebrow: "Batumi Botox kliniek zoeken",
+        intro:
+          "Als u op zoek bent naar Botox Batumi, Botox-injecties Batumi of antirimpelinjecties Batumi, dan biedt Silk Beauty Salon op consultatie gebaseerde injectables-afspraken in het centrale Batumi met realistische planning en nazorg.",
+        searchTitle: "Ondersteunde lokale zoekopdrachten",
+        searchPhrases: [
+          "Botox Batumi",
+          "Botox injecties Batumi",
+          "antirimpelinjecties Batumi",
+          "Botox prijs Batumi",
+          "waar Botox in Batumi beschikbaar is",
+        ],
+        benefitsTitle: "Waarom klanten Silk kiezen voor Botox in Batumi",
+        benefits: [
+          {
+            title: "Consult vóór de behandeling",
+            text: "Uw behandelaar beoordeelt gezichtsbewegingen, doelen, timing, relevante medische informatie en geschiktheid voordat een behandelplan wordt besproken.",
+          },
+          {
+            title: "Natuurlijk ogende planning",
+            text: "Afspraken zijn gericht op het verzachten van expressielijnen terwijl uw gezicht evenwichtig en expressief blijft.",
+          },
+          {
+            title: "Centrale Batumi-locatie",
+            text: "Bezoek Silk Beauty Salon op Zurab Gorgiladze 63, dicht bij de centrale Batumi hotels, winkels en de boulevard.",
+          },
+        ],
+        treatmentTitle: "Botox en neuromodulatoropties",
+        treatmentIntro:
+          "Verken de gerelateerde behandelingspagina's en boek vervolgens een consult zodat het team kan bevestigen wat geschikt is voor uw gezicht, timing en verwachtingen.",
+        faqTitle: "Botox Batumi vragen",
+        faqs: [
+          {
+            question: "Kan ik als toerist Botox in Batumi boeken?",
+            answer:
+              "Ja. Internationale klanten kunnen online boeken, bellen of e-mailen voordat ze arriveren. Het team legt de timing, de nazorg uit en legt uit of de behandeling past bij uw reisplannen.",
+          },
+          {
+            question: "Waar kan ik Botox in Batumi boeken?",
+            answer:
+              "Silk Beauty Salon biedt op consultatie gebaseerde Botox-afspraken en antirimpelinjectieafspraken bij Zurab Gorgiladze 63 in Batumi, waarbij de geschiktheid vóór de behandeling wordt beoordeeld.",
+          },
+          {
+            question: "Wat is de Botox-prijs in Batumi?",
+            answer:
+              "Vanafprijzen staan ​​vermeld op de Botox behandelkaarten en de prijslijst. De uiteindelijke prijs is afhankelijk van het behandelgebied en het consult.",
+          },
+          {
+            question: "Heeft de Botox downtime nodig?",
+            answer:
+              "Veel cliënten hervatten hun dagelijkse activiteiten snel, maar uw behandelaar geeft tijdens de afspraak persoonlijke nazorg- en timinginformatie.",
+          },
+          {
+            question: "Hoe weet ik welke Botox-behandeling geschikt is?",
+            answer:
+              "Begin met een consultatie. De behandelaar bespreekt gezichtsbewegingen, wensen, contra-indicaties en doelen voordat een plan wordt voorgesteld.",
+          },
+        ],
+        categoryCta: "Bekijk alle Botox behandelingen",
+        bookCta: "Boek Botox consultatie",
+        bookingTitle: "Boek Botox in Batumi",
+        bookingText:
+          "Kies een consultatie als u hulp wilt bij het kiezen tussen opties tegen rimpels, kauwspieren, zweten of andere neuromodulatoropties.",
+      },
+      fr: {
+        title: "Botox à Batumi, Géorgie",
+        h1: "Botox à Batumi, Géorgie",
+        description:
+          "Réservez à Batumi une consultation pour les injections de Botox et les options anti-rides, du masséter ou de la transpiration, avec des informations de suivi claires.",
+        eyebrow: "Consultation Botox à Batumi",
+        intro:
+          "Si vous recherchez Botox Batumi, injections Botox Batumi ou injections anti-rides Batumi, Silk Beauty Salon propose des rendez-vous précédés d'une consultation dans le centre de Batumi, avec une planification réaliste et des conseils de suivi.",
+        searchTitle: "Recherches locales prises en charge",
+        searchPhrases: [
+          "Botox Batumi",
+          "Injections Botox Batumi",
+          "injections anti-rides Batumi",
+          "Prix ​​​​Botox Batumi",
+          "où faire du Botox à Batumi",
+        ],
+        benefitsTitle: "Pourquoi choisir Silk pour le Botox à Batumi",
+        benefits: [
+          {
+            title: "Consultation avant traitement",
+            text: "Votre praticien examine les mouvements du visage, les objectifs, le timing, les antécédents médicaux et l’adéquation avant de recommander un plan injectable.",
+          },
+          {
+            title: "Une planification d'apparence naturelle",
+            text: "Les rendez-vous visent à adoucir les rides d’expression tout en gardant votre visage équilibré et expressif.",
+          },
+          {
+            title: "Emplacement central Batumi",
+            text: "Visitez Silk Beauty Salon au Zurab Gorgiladze 63, à proximité des hôtels du centre-ville Batumi, des magasins et du boulevard.",
+          },
+        ],
+        treatmentTitle: "Options Botox et neuromodulateur",
+        treatmentIntro:
+          "Explorez les pages de soins associées, puis réservez une consultation afin que l'équipe puisse confirmer ce qui convient à votre visage, au timing et à vos attentes.",
+        faqTitle: "Questions Botox Batumi",
+        faqs: [
+          {
+            question: "Puis-je réserver Botox à Batumi en tant que touriste ?",
+            answer:
+              "Oui. Les clients internationaux peuvent réserver en ligne, appeler ou envoyer un e-mail avant d'arriver. L'équipe vous expliquera le calendrier, le suivi et si le traitement correspond à vos projets de voyage.",
+          },
+          {
+            question: "Où puis-je obtenir du Botox à Batumi ?",
+            answer:
+              "Silk Beauty Salon propose des rendez-vous de consultation Botox et d'injection anti-rides au Zurab Gorgiladze 63 à Batumi, avec une évaluation de l'adéquation avant le traitement.",
+          },
+          {
+            question: "Quel est le prix Botox en Batumi ?",
+            answer:
+              "Les prix de départ sont indiqués sur les fiches de soins Botox et sur la liste de prix. Le prix final dépend de la zone de traitement et de la consultation.",
+          },
+          {
+            question: "Le Botox nécessite-t-il un temps d'arrêt ?",
+            answer:
+              "La plupart des clients reprennent rapidement leurs plans quotidiens normaux, mais votre praticien vous donnera des conseils de suivi et des conseils sur le timing pendant le rendez-vous.",
+          },
+          {
+            question: "Comment puis-je savoir quel traitement Botox est le bon ?",
+            answer:
+              "Commencez par une consultation. Le praticien vérifie les mouvements du visage, les préoccupations, les contre-indications et les objectifs avant de recommander un plan.",
+          },
+        ],
+        categoryCta: "Voir tous les traitements Botox",
+        bookCta: "Réserver une consultation Botox",
+        bookingTitle: "Réserver une consultation Botox à Batumi",
+        bookingText:
+          "Choisissez une consultation si vous souhaitez de l'aide pour choisir entre les options antirides, masséter, anti-transpiration ou autres neuromodulateurs.",
+      },
+      de: {
+        title: "Botox in Batumi, Georgien",
+        h1: "Botox in Batumi, Georgien",
+        description:
+          "Buchen Sie bei Silk Beauty Salon in Batumi eine Beratung zu Botox-Injektionen und Optionen für Falten, Masseter oder starkes Schwitzen, mit klaren Hinweisen zur Nachsorge.",
+        eyebrow: "Botox-Beratung in Batumi",
+        intro:
+          "Wenn Sie nach Botox Batumi-, Botox-Injektionen Batumi oder Anti-Falten-Injektionen Batumi suchen, bietet Silk Beauty Salon beratungsgeführte Injektionstermine im Zentrum von Batumi mit realistischer Planung und Nachsorge an.",
+        searchTitle: "Unterstützte lokale Suchen",
+        searchPhrases: [
+          "Botox Batumi",
+          "Botox-Injektionen Batumi",
+          "Anti-Falten-Injektionen Batumi",
+          "Botox Preis Batumi",
+          "Wo bekommt man Botox in Batumi",
+        ],
+        benefitsTitle: "Warum Kunden Silk für Botox in Batumi wählen",
+        benefits: [
+          {
+            title: "Beratung vor der Behandlung",
+            text: "Ihre Fachkraft prüft Gesichtsbewegungen, Ziele, Zeitplanung, relevante medizinische Angaben und Eignung, bevor ein Behandlungsplan besprochen wird.",
+          },
+          {
+            title: "Natürlich wirkende Planung",
+            text: "Bei den Terminen geht es darum, Mimikfalten zu mildern und gleichzeitig Ihr Gesicht ausgeglichen und ausdrucksstark zu halten.",
+          },
+          {
+            title: "Zentraler Batumi-Standort",
+            text: "Besuchen Sie Silk Beauty Salon unter der Adresse Zurab Gorgiladze 63, in der Nähe zentraler Batumi-Hotels, Geschäfte und des Boulevards.",
+          },
+        ],
+        treatmentTitle: "Botox und Neuromodulator-Optionen",
+        treatmentIntro:
+          "Erkunden Sie die entsprechenden Behandlungsseiten und vereinbaren Sie dann einen Beratungstermin, damit das Team bestätigen kann, was für Ihr Gesicht, Ihren Zeitpunkt und Ihre Erwartungen geeignet ist.",
+        faqTitle: "Botox Batumi Fragen",
+        faqs: [
+          {
+            question: "Kann ich als Tourist Botox in Batumi buchen?",
+            answer:
+              "Ja. Internationale Kunden können vor ihrer Ankunft online, telefonisch oder per E-Mail buchen. Das Team erklärt Ihnen den Zeitpunkt, die Nachsorge und ob die Behandlung zu Ihren Reiseplänen passt.",
+          },
+          {
+            question: "Wo kann ich Botox in Batumi bekommen?",
+            answer:
+              "Silk Beauty Salon bietet beratungsgeführte Botox- und Anti-Falten-Injektionstermine bei Zurab Gorgiladze 63 in Batumi an, wobei die Eignung vor der Behandlung überprüft wird.",
+          },
+          {
+            question: "Wie hoch ist der Botox-Preis in Batumi?",
+            answer:
+              "Die Startpreise sind auf den Behandlungskarten Botox und der Preisliste angegeben. Der endgültige Preis hängt vom Behandlungsbereich und der Beratung ab.",
+          },
+          {
+            question: "Erfordert Botox Ausfallzeiten?",
+            answer:
+              "Viele Kunden nehmen ihre üblichen Tagesaktivitäten schnell wieder auf. Ihre Fachkraft gibt Ihnen beim Termin individuelle Hinweise zur Nachsorge und Zeitplanung.",
+          },
+          {
+            question: "Woher weiß ich, welche Botox-Behandlung die richtige ist?",
+            answer:
+              "Beginnen Sie mit einer Beratung. Die Fachkraft bespricht Gesichtsbewegungen, Anliegen, Kontraindikationen und Ziele, bevor ein Plan vorgeschlagen wird.",
+          },
+        ],
+        categoryCta: "Alle Botox-Behandlungen anzeigen",
+        bookCta: "Buchen Sie eine Botox-Beratung",
+        bookingTitle: "Buchen Sie Botox in Batumi",
+        bookingText:
+          "Wählen Sie eine Beratung, wenn Sie Hilfe bei der Entscheidung zwischen Anti-Falten-, Masseter-, Schwitz- oder anderen neuromodulatorischen Optionen benötigen.",
+      },
+},
   },
   {
     slug: 'dermal-fillers-batumi',
@@ -1091,7 +1466,163 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         bookingText:
           'בחרו ייעוץ כדי לדון בשפתיים, לחיים, קו לסת, סנטר או אזור מתחת לעיניים.',
       },
-    },
+          nl: {
+        title: "Dermale fillers in Batumi",
+        h1: "Dermale fillers in Batumi",
+        description:
+          "Consultatiegerichte dermale fillers in Batumi voor onder meer lippen, wangen, kaaklijn, kin en het gebied onder de ogen bij Silk Beauty Salon.",
+        eyebrow: "Fillerconsultatie in Batumi",
+        intro:
+          "Als u op zoek bent naar fillers Batumi, lipfillers Batumi of fillers in Batumi, plant Silk Beauty Salon gezichtsbalancering met conservatief esthetisch oordeel.",
+        searchTitle: "Ondersteunde lokale zoekopdrachten",
+        searchPhrases: ["dermale fillers Batumi", "lipfillers Batumi", "fillers in Batumi"],
+        benefitsTitle: "Waarom klanten Silk kiezen voor fillers in Batumi",
+        benefits: [
+          {
+            title: "Gezichtsbalans eerst",
+            text: "Filler-plannen houden rekening met verhoudingen, profiel, expressie en of een subtiele aanpak geschikter is.",
+          },
+          {
+            title: "Duidelijke verwachtingen",
+            text: "Tijdens uw afspraak worden onder meer de zwelling, het risico op blauwe plekken, de timing, het onderhoud en de nazorg besproken.",
+          },
+          {
+            title: "Meerdere vulgebieden",
+            text: "Consultaties kunnen betrekking hebben op de lippen, wangen, kin, kaaklijn, holtes onder de ogen en profielbalancering.",
+          },
+        ],
+        treatmentTitle: "Behandelingsopties voor fillers",
+        treatmentIntro:
+          "Gebruik de onderstaande behandelpagina's om inzicht te krijgen in veel voorkomende fillergebieden en boek vervolgens een consult voor een persoonlijk plan.",
+        faqTitle: "Vragen over fillers in Batumi",
+        faqs: [
+          {
+            question: "Kan ik lipfillers boeken in Batumi?",
+            answer:
+              "Ja. Silk Beauty Salon biedt op consultatie gebaseerde lipfillerplanning, samen met andere dermale fillergebieden.",
+          },
+          {
+            question: "Zullen fillers er natuurlijk uitzien?",
+            answer:
+              "Het team richt zich op gezichtsharmonie en conservatieve planning. Geschiktheid en verwachte resultaten worden voorafgaand aan de behandeling besproken.",
+          },
+          {
+            question: "Hoe moet ik fillers plannen tijdens reizen?",
+            answer:
+              "Boek een consultatie vóór belangrijke evenementen of reisdagen, zodat het team de zwelling, het risico op blauwe plekken en de timing kan bespreken.",
+          },
+        ],
+        categoryCta: "Bekijk alle fillers",
+        bookCta: "Fillerconsultatie boeken",
+        bookingTitle: "Boek dermale fillers in Batumi",
+        bookingText:
+          "Kies een consult om lipfillers, wangfillers, kaaklijncontouren, kinondersteuning of onderoogplanning te bespreken.",
+      },
+      fr: {
+        title: "Filler et produits de comblement à Batumi",
+        h1: "Filler à Batumi",
+        description:
+          "Consultations pour les fillers à Batumi chez Silk Beauty Salon, notamment pour les lèvres, les joues, la mâchoire, le menton et le contour des yeux.",
+        eyebrow: "Consultation filler à Batumi",
+        intro:
+          "Si vous recherchez des produits de comblement cutané Batumi, des produits de comblement pour les lèvres Batumi ou des produits de comblement Batumi, Silk Beauty Salon prévoit un équilibrage du visage avec un jugement esthétique conservateur.",
+        searchTitle: "Recherches locales prises en charge",
+        searchPhrases: ["filler Batumi", "filler lèvres Batumi", "produits de comblement Batumi"],
+        benefitsTitle: "Pourquoi choisir Silk pour les fillers à Batumi",
+        benefits: [
+          {
+            title: "L’équilibre du visage d’abord",
+            text: "Les plans de remplissage tiennent compte des proportions, du profil, de l’expression et déterminent si une approche subtile est plus appropriée.",
+          },
+          {
+            title: "Des attentes claires",
+            text: "Votre rendez-vous comprend une discussion sur l’enflure, le risque d’ecchymoses, le moment choisi, l’entretien et le suivi.",
+          },
+          {
+            title: "Plusieurs zones de remplissage",
+            text: "Les consultations peuvent couvrir les lèvres, les joues, le menton, la mâchoire, les creux sous les yeux et l'équilibrage du profil.",
+          },
+        ],
+        treatmentTitle: "Options de traitement de comblement cutané",
+        treatmentIntro:
+          "Utilisez les pages de traitement ci-dessous pour comprendre les zones de comblement courantes, puis réservez une consultation pour un plan personnel.",
+        faqTitle: "Questions sur les produits de comblement cutané Batumi",
+        faqs: [
+          {
+            question: "Puis-je réserver un filler des lèvres à Batumi ?",
+            answer:
+              "Oui. Silk Beauty Salon propose une planification du remplissage des lèvres basée sur une consultation ainsi que d'autres domaines de remplissage cutané.",
+          },
+          {
+            question: "Les fillers auront-ils un aspect naturel ?",
+            answer:
+              "L’équipe se concentre sur l’harmonie du visage et une planification conservatrice. L'adéquation et les résultats attendus sont discutés avant le traitement.",
+          },
+          {
+            question: "Comment dois-je planifier les activités de remplissage en voyage ?",
+            answer:
+              "Réservez une consultation avant des événements importants ou des jours de voyage afin que l'équipe puisse discuter de l'enflure, du risque d'ecchymoses et du moment choisi.",
+          },
+        ],
+        categoryCta: "Voir tous les produits de comblement cutané",
+        bookCta: "Réserver une consultation filler",
+        bookingTitle: "Réserver une consultation filler à Batumi",
+        bookingText:
+          "Choisissez une consultation pour discuter du comblement des lèvres, du comblement des joues, du contour de la mâchoire, du soutien du menton ou de la planification sous les yeux.",
+      },
+      de: {
+        title: "Hautfüller in Batumi",
+        h1: "Hautfüller in Batumi",
+        description:
+          "Beratungsgeführte Hautfüller in Batumi für Lippen, Wangen, Kieferpartie, Kinn und Tränenkanalplanung in Silk Beauty Salon.",
+        eyebrow: "Füllstoffe Batumi",
+        intro:
+          "Wenn Sie nach Hautfüllern Batumi, Lippenfüllern Batumi oder Füllern in Batumi suchen, plant Silk Beauty Salon den Gesichtsausgleich mit konservativem ästhetischem Urteilsvermögen.",
+        searchTitle: "Unterstützte lokale Suchen",
+        searchPhrases: ["Hautfüller Batumi", "Lippenfüller Batumi", "Füllstoffe in Batumi"],
+        benefitsTitle: "Warum Kunden Silk für Filler in Batumi wählen",
+        benefits: [
+          {
+            title: "Zuerst die Gesichtsausgewogenheit",
+            text: "Füllpläne berücksichtigen Proportionen, Profil, Ausdruck und ob ein subtiler Ansatz besser geeignet ist.",
+          },
+          {
+            title: "Klare Erwartungen",
+            text: "Ihr Termin beinhaltet eine Besprechung von Schwellungen, dem Risiko von Blutergüssen, dem Zeitpunkt, der Wartung und der Nachsorge.",
+          },
+          {
+            title: "Mehrere Füllbereiche",
+            text: "Beratungen können Lippen, Wangen, Kinn, Kieferpartie, Augenhöhlen und Profilausgleich umfassen.",
+          },
+        ],
+        treatmentTitle: "Möglichkeiten der Dermalfiller-Behandlung",
+        treatmentIntro:
+          "Nutzen Sie die folgenden Behandlungsseiten, um häufige Füllbereiche zu verstehen, und vereinbaren Sie dann einen Beratungstermin für einen persönlichen Plan.",
+        faqTitle: "Fragen zu Hautfüllern Batumi",
+        faqs: [
+          {
+            question: "Kann ich Lippenfüller in Batumi buchen?",
+            answer:
+              "Ja. Silk Beauty Salon bietet zusammen mit anderen Hautfüllerbereichen eine beratungsgeführte Planung von Lippenfüllern an.",
+          },
+          {
+            question: "Sehen Füllstoffe natürlich aus?",
+            answer:
+              "Das Team konzentriert sich auf Gesichtsharmonie und konservative Planung. Eignung und erwartete Ergebnisse werden vor der Behandlung besprochen.",
+          },
+          {
+            question: "Wie sollte ich Füllstoffe rund um die Reise planen?",
+            answer:
+              "Vereinbaren Sie vor wichtigen Ereignissen oder Reisetagen einen Beratungstermin, damit das Team Schwellungen, das Risiko von Blutergüssen und den Zeitpunkt besprechen kann.",
+          },
+        ],
+        categoryCta: "Alle Hautfüller anzeigen",
+        bookCta: "Beratung zum Füllen von Büchern",
+        bookingTitle: "Buchen Sie Hautfüller in Batumi",
+        bookingText:
+          "Wählen Sie eine Beratung, um Lippenfüller, Wangenfüller, Kieferkonturierung, Kinnunterstützung oder Planung unter den Augen zu besprechen.",
+      },
+},
   },
   {
     slug: 'skin-treatment-batumi',
@@ -1415,7 +1946,163 @@ const coreLocalSeoLandingPages: LocalSeoLandingPage[] = [
         bookingText:
           'בחרו ייעוץ לתכנית של פילינג, מיקרונידלינג, תמיכת קולגן או ניתוח עור.',
       },
-    },
+          nl: {
+        title: "Huidbehandeling in Batumi",
+        h1: "Huidbehandeling in Batumi",
+        description:
+          "Huidbehandeling, huidverzorging, peelings, microneedling en huidanalyse in Batumi bij Silk Beauty Salon.",
+        eyebrow: "Huidverzorging Batumi",
+        intro:
+          "Als u op zoek bent naar huidbehandeling Batumi, huidverzorging Batumi of huidanalyse Batumi, plant Silk Beauty Salon huidbehandelingen rond uw huidconditie, doelen en timing.",
+        searchTitle: "Ondersteunde lokale zoekopdrachten",
+        searchPhrases: ["huidbehandeling Batumi", "huidverzorging Batumi", "huidanalyse Batumi"],
+        benefitsTitle: "Waarom klanten Silk kiezen voor huidbehandelingen in Batumi",
+        benefits: [
+          {
+            title: "Huidbeoordeling eerst",
+            text: "Het team kan gebruik maken van consultatie en huidanalyse om inzicht te krijgen in de textuur, poriën, pigmentatie, roodheid, acne of gevoeligheid.",
+          },
+          {
+            title: "Behandelplannen, geen gissingen",
+            text: "Peelings, microneedling, huidanalyse en apparaatgestuurde behandelingen worden geselecteerd op basis van uw huid en schema.",
+          },
+          {
+            title: "Nazorg ingebouwd",
+            text: "U ontvangt begeleiding voor blootstelling aan de zon, thuiszorg en timing rond het weer, reizen en evenementen.",
+          },
+        ],
+        treatmentTitle: "Opties voor huidbehandeling",
+        treatmentIntro:
+          "Ontdek huidanalyses, peelings, microneedling en op collageen gerichte behandelingen voordat u uw consultatie boekt.",
+        faqTitle: "Huidbehandeling Batumi vragen",
+        faqs: [
+          {
+            question: "Welke huidbehandeling moet ik boeken in Batumi?",
+            answer:
+              "Als u het niet zeker weet, boek dan eerst een consult of huidanalyse. Het team kan een geschikte peeling, microneedling of apparaatbehandeling aanbevelen.",
+          },
+          {
+            question: "Kan ik vóór een evenement een huidbehandeling boeken?",
+            answer:
+              "Ja, maar timing is belangrijk. Sommige behandelingen passen vlak voor een evenement, terwijl andere hersteltijd vragen. Overleg daarom vooraf met het team.",
+          },
+          {
+            question: "Bieden jullie opties voor acnesporen, poriën en huidtextuur?",
+            answer:
+              "Ja. Behandelingsopties kunnen worden besproken voor textuur, poriën, acne, dofheid, roodheid en problemen met de huidkwaliteit.",
+          },
+        ],
+        categoryCta: "Bekijk alle huidbehandelingen",
+        bookCta: "Huidconsult boeken",
+        bookingTitle: "Boek een huidbehandeling in Batumi",
+        bookingText:
+          "Kies voor een consult als je een huidplan wilt voor peelings, microneedling, collageenondersteuning of huidanalyse.",
+      },
+      fr: {
+        title: "Soins de la peau à Batumi",
+        h1: "Soins de la peau à Batumi",
+        description:
+          "Soins de la peau, peelings, microneedling et analyse cutanée à Batumi chez Silk Beauty Salon.",
+        eyebrow: "Soins de la peau Batumi",
+        intro:
+          "Si vous recherchez un traitement cutané Batumi, un soin cutané Batumi ou une analyse cutanée Batumi, Silk Beauty Salon planifie des traitements cutanés en fonction de votre état de peau, de vos objectifs et de votre timing.",
+        searchTitle: "Recherches locales prises en charge",
+        searchPhrases: ["traitement de la peau Batumi", "soins de la peau Batumi", "analyse cutanée Batumi"],
+        benefitsTitle: "Pourquoi choisir Silk pour les soins de la peau à Batumi",
+        benefits: [
+          {
+            title: "Évaluation cutanée en premier",
+            text: "L'équipe peut utiliser la consultation et l'analyse cutanée pour comprendre la texture, les pores, la pigmentation, les rougeurs, les marques d'acné ou la sensibilité.",
+          },
+          {
+            title: "Des plans de traitement, pas des suppositions",
+            text: "Les peelings, le microneedling, l'analyse cutanée et les traitements pilotés par des appareils sont sélectionnés en fonction de votre peau et de votre emploi du temps.",
+          },
+          {
+            title: "Suivi intégré",
+            text: "Vous recevez des conseils sur l'exposition au soleil, les soins à domicile et le calendrier concernant la météo, les voyages et les événements du Batumi.",
+          },
+        ],
+        treatmentTitle: "Options de traitement de la peau",
+        treatmentIntro:
+          "Découvrez l'analyse cutanée, les peelings, le microneedling et les traitements axés sur le collagène avant de réserver votre consultation.",
+        faqTitle: "Questions sur le traitement de la peau Batumi",
+        faqs: [
+          {
+            question: "Quel soin de la peau dois-je réserver au Batumi ?",
+            answer:
+              "En cas de doute, réservez d'abord une consultation ou une analyse de peau. L’équipe peut recommander un traitement par peeling, microneedling ou appareil adapté.",
+          },
+          {
+            question: "Puis-je réserver un soin de la peau avant un événement ?",
+            answer:
+              "Oui, mais le timing compte. Certains soins sont adaptés aux événements tandis que d'autres nécessitent un temps de récupération, alors renseignez-vous auprès de l'équipe avant de réserver à proximité d'un événement.",
+          },
+          {
+            question: "Aidez-vous à atténuer les marques, les pores et la texture de l'acné ?",
+            answer:
+              "Oui. Les options de traitement peuvent être discutées pour les problèmes de texture, de pores, de marques d’acné, de teint terne, de rougeurs et de qualité de la peau.",
+          },
+        ],
+        categoryCta: "Voir tous les soins de la peau",
+        bookCta: "Réserver une consultation cutanée",
+        bookingTitle: "Réservez un traitement de la peau à Batumi",
+        bookingText:
+          "Choisissez une consultation si vous souhaitez un plan cutané pour les peelings, le microneedling, le soutien au collagène ou l'analyse cutanée.",
+      },
+      de: {
+        title: "Hautbehandlung in Batumi",
+        h1: "Hautbehandlung in Batumi",
+        description:
+          "Hautbehandlung, Hautpflege, Peelings, Microneedling und Hautanalyse in Batumi bei Silk Beauty Salon.",
+        eyebrow: "Hautpflege Batumi",
+        intro:
+          "Wenn Sie nach einer Hautbehandlung Batumi, einer Hautpflege Batumi oder einer Hautanalyse Batumi suchen, plant Silk Beauty Salon Hautbehandlungen entsprechend Ihrem Hautzustand, Ihren Zielen und Ihrem Zeitplan.",
+        searchTitle: "Unterstützte lokale Suchen",
+        searchPhrases: ["Hautbehandlung Batumi", "Hautpflege Batumi", "Hautanalyse Batumi"],
+        benefitsTitle: "Warum Kunden Silk für Hautbehandlungen in Batumi wählen",
+        benefits: [
+          {
+            title: "Zuerst Hautbeurteilung",
+            text: "Durch Beratung und Hautanalyse kann das Team Beschaffenheit, Poren, Pigmentierung, Rötungen, Akneflecken oder Empfindlichkeit verstehen.",
+          },
+          {
+            title: "Behandlungspläne, keine Vermutungen",
+            text: "Peelings, Mikronadelung, Hautanalyse und gerätegesteuerte Behandlungen werden entsprechend Ihrer Haut und Ihrem Zeitplan ausgewählt.",
+          },
+          {
+            title: "Nachsorge eingebaut",
+            text: "Sie erhalten Hinweise zur Sonneneinstrahlung, zur häuslichen Pflege und zum Timing rund um Wetter, Reisen und Veranstaltungen.",
+          },
+        ],
+        treatmentTitle: "Möglichkeiten der Hautbehandlung",
+        treatmentIntro:
+          "Entdecken Sie Hautanalysen, Peelings, Microneedling und Kollagenbehandlungen, bevor Sie Ihren Beratungstermin buchen.",
+        faqTitle: "Fragen zur Hautbehandlung Batumi",
+        faqs: [
+          {
+            question: "Welche Hautbehandlung sollte ich in Batumi buchen?",
+            answer:
+              "Wenn Sie unsicher sind, vereinbaren Sie zunächst einen Beratungstermin oder eine Hautanalyse. Das Team kann Ihnen ein geeignetes Peeling, Microneedling oder eine Gerätebehandlung empfehlen.",
+          },
+          {
+            question: "Kann ich vor einer Veranstaltung eine Hautbehandlung buchen?",
+            answer:
+              "Ja, aber das Timing ist wichtig. Einige Behandlungen sind veranstaltungsfreundlich, während andere eine Erholungszeit erfordern. Fragen Sie daher das Team, bevor Sie in der Nähe einer Veranstaltung buchen.",
+          },
+          {
+            question: "Helfen Sie bei Akneflecken, Poren und Textur?",
+            answer:
+              "Ja. Es können Behandlungsoptionen für Beschaffenheit, Poren, Akneflecken, Mattheit, Rötung und Hautqualitätsprobleme besprochen werden.",
+          },
+        ],
+        categoryCta: "Alle Hautbehandlungen ansehen",
+        bookCta: "Buchen Sie eine Hautberatung",
+        bookingTitle: "Hautbehandlung in Batumi buchen",
+        bookingText:
+          "Wählen Sie eine Beratung, wenn Sie einen Hautplan für Peelings, Microneedling, Kollagenunterstützung oder Hautanalyse wünschen.",
+      },
+},
   },
 ];
 
@@ -1511,7 +2198,49 @@ const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
         bookingText:
           'בייעוץ דנים בצורת השפתיים, סימטריה, מטרת נפח, תזמון ומחיר התחלתי לפני אישור טיפול.',
       },
-    }),
+          nl: {
+        title: "Lipfillers in Batumi, Georgië",
+        h1: "Lipfillers in Batumi",
+        description:
+          "Lipfillers op adviesbasis in Batumi bij Silk Beauty Salon met natuurlijk ogende planning, vanafprijzen en begeleiding bij nazorg.",
+        eyebrow: "Consult voor het vullen van de lippen",
+        topic: "afspraken voor lipfillers",
+        searchPhrases: ["lipfillers Batumi", "lipvergroting Batumi", "lipfiller Georgië"],
+        categoryCta: "Bekijk de mogelijkheden voor fillers",
+        bookCta: "Boek een lipfiller consult",
+        bookingTitle: "Boek lipfillers in Batumi",
+        bookingText:
+          "Kies een consultatie om de lipvorm, symmetrie, volumedoelen, timing en de startprijs te bespreken voordat een behandeling wordt bevestigd.",
+      },
+      fr: {
+        title: "Produits de comblement des lèvres à Batumi, Géorgie",
+        h1: "Filler des lèvres à Batumi",
+        description:
+          "Consultation pour le filler des lèvres à Batumi chez Silk Beauty Salon, avec une planification naturelle, des prix de départ et des conseils de suivi.",
+        eyebrow: "Consultation de comblement des lèvres",
+        topic: "rendez-vous pour le remplissage des lèvres",
+        searchPhrases: ["filler lèvres Batumi", "augmentation des lèvres Batumi", "filler lèvres Géorgie"],
+        categoryCta: "Voir les options de produits de comblement cutané",
+        bookCta: "Réserver une consultation de comblement des lèvres",
+        bookingTitle: "Réserver une consultation pour les lèvres à Batumi",
+        bookingText:
+          "Choisissez une consultation pour discuter de la forme des lèvres, de la symétrie, des objectifs de volume, du calendrier et du prix de départ avant de confirmer tout traitement.",
+      },
+      de: {
+        title: "Lippenfüller in Batumi, Georgien",
+        h1: "Lippenfüller in Batumi",
+        description:
+          "Beratungsgeführte Lippenfüller in Batumi und Silk Beauty Salon mit natürlich aussehender Planung, Einstiegspreisen und Nachsorgeberatung.",
+        eyebrow: "Beratung zum Lippenfüller",
+        topic: "Termine für Lippenfüller",
+        searchPhrases: ["Lippenfüller Batumi", "Lippenvergrößerung Batumi", "Lippenfüller Georgien"],
+        categoryCta: "Sehen Sie sich die Optionen für Hautfüller an",
+        bookCta: "Buchen Sie eine Beratung zum Lippenfüller",
+        bookingTitle: "Buchen Sie Lippenfüller in Batumi",
+        bookingText:
+          "Wählen Sie eine Beratung, um Lippenform, Symmetrie, Volumenziele, Zeitpunkt und den Startpreis zu besprechen, bevor eine Behandlung bestätigt wird.",
+      },
+}),
   },
   {
     slug: 'acne-treatment-batumi',
@@ -1607,7 +2336,49 @@ const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
         bookingText:
           'בייעוץ דנים בפצעונים פעילים, סימני אקנה, מרקם, מוצרים נוכחיים, תזמון והנחיות לאחר טיפול.',
       },
-    }),
+          nl: {
+        title: "Acnebehandeling in Batumi, Georgië",
+        h1: "Acnebehandeling in Batumi",
+        description:
+          "Ontdek de opties voor acne- en post-acnebehandeling op consultatie in Batumi, waaronder huidanalyse, peelings, microneedling en apparaatgestuurde zorg.",
+        eyebrow: "Ondersteuning voor acne en post-acne",
+        topic: "planning van acne- en post-acnebehandeling",
+        searchPhrases: ["acnebehandeling Batumi", "Behandeling van acnelittekens Batumi", "post-acnebehandeling Batumi"],
+        categoryCta: "Bekijk de huidbehandelingsopties",
+        bookCta: "Acne consult boeken",
+        bookingTitle: "Boek een acnebehandelingsconsult in Batumi",
+        bookingText:
+          "Kies een consultatiegesprek om actieve puistjes, acne, textuur, huidige producten, behandelingstijdstip en nazorg te bespreken.",
+      },
+      fr: {
+        title: "Traitement de l'acné à Batumi, Géorgie",
+        h1: "Traitement de l'acné à Batumi",
+        description:
+          "Découvrez à Batumi des options de soins pour l'acné et les marques post-acné, notamment l'analyse cutanée, les peelings, le microneedling et les soins assistés par appareil.",
+        eyebrow: "Accompagnement acnéique et post-acnéique",
+        topic: "Planification du traitement de l'acné et post-acné",
+        searchPhrases: ["traitement de l'acné Batumi", "traitement des cicatrices d'acné Batumi", "traitement post-acnéique Batumi"],
+        categoryCta: "Voir les options de traitement de la peau",
+        bookCta: "Réserver une consultation contre l'acné",
+        bookingTitle: "Réservez une consultation de traitement de l'acné à Batumi",
+        bookingText:
+          "Choisissez une consultation pour discuter des éruptions cutanées actives, des marques d'acné, de la texture, des produits actuels, du calendrier du traitement et du suivi.",
+      },
+      de: {
+        title: "Aknebehandlung in Batumi, Georgien",
+        h1: "Aknebehandlung in Batumi",
+        description:
+          "Entdecken Sie in Batumi konsultativ geführte Akne- und Post-Akne-Behandlungsmöglichkeiten, einschließlich Hautanalyse, Peelings, Mikronadelung und gerätegeführter Pflege.",
+        eyebrow: "Unterstützung bei Akne und Post-Akne",
+        topic: "Akne- und Post-Akne-Behandlungsplanung",
+        searchPhrases: ["Aknebehandlung Batumi", "Aknenarbenbehandlung Batumi", "Post-Akne-Behandlung Batumi"],
+        categoryCta: "Sehen Sie sich die Behandlungsmöglichkeiten für die Haut an",
+        bookCta: "Buchen Sie eine Akne-Beratung",
+        bookingTitle: "Beratung zur Aknebehandlung in Batumi buchen",
+        bookingText:
+          "Wählen Sie eine Beratung, um aktive Ausbrüche, Akneflecken, Textur, aktuelle Produkte, Behandlungszeitpunkt und Nachsorge zu besprechen.",
+      },
+}),
   },
   {
     slug: 'nails-batumi',
@@ -1700,7 +2471,49 @@ const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
         bookingText:
           'קבעו שירות לצורה, טיפול בקוטיקולה, מניקור ג׳ל, עיצוב ציפורניים, פדיקור או הכנה לאירוע.',
       },
-    }),
+          nl: {
+        title: "Nagels, manicure en pedicure in Batumi",
+        h1: "Nagels in Batumi",
+        description:
+          "Boek manicure-, pedicure-, gelnagels- en nagelafwerkingsdiensten in Batumi met duidelijke timing, startprijzen en afspraakplanning.",
+        eyebrow: "Nagelsalon Batumi",
+        topic: "afspraken voor nagelservice",
+        searchPhrases: ["nagels Batumi", "manicure Batumi", "pedicure Batumi"],
+        categoryCta: "Bekijk nagelservices",
+        bookCta: "Nagelafspraak boeken",
+        bookingTitle: "Boek een nagelafspraak in Batumi",
+        bookingText:
+          "Kies een nagelafspraak voor vormgeving, nagelriemverzorging, gelmanicure, nail art, pedicureplanning of afwerking die klaar is voor een evenement.",
+      },
+      fr: {
+        title: "Ongles, manucure et pédicure à Batumi",
+        h1: "Ongles à Batumi",
+        description:
+          "Réservez une manucure, une pédicure, des ongles en gel ou une finition des ongles à Batumi, avec des durées et des prix de départ clairs.",
+        eyebrow: "Salon de manucure Batumi",
+        topic: "rendez-vous pour le service des ongles",
+        searchPhrases: ["ongles Batumi", "manucure Batumi", "pédicure Batumi"],
+        categoryCta: "Voir les services d'ongles",
+        bookCta: "Prendre rendez-vous pour les ongles",
+        bookingTitle: "Réserver un rendez-vous pour les ongles à Batumi",
+        bookingText:
+          "Choisissez un rendez-vous pour le façonnage, le soin des cuticules, la manucure en gel, le nail art, la planification d'une pédicure ou la finition d'un événement.",
+      },
+      de: {
+        title: "Nägel, Maniküre und Pediküre in Batumi",
+        h1: "Nägel in Batumi",
+        description:
+          "Buchen Sie Maniküre-, Pediküre-, Gelnägel- und Nagelfinish-Dienstleistungen in Batumi mit klarem Zeitplan, Startpreisen und Terminplanung.",
+        eyebrow: "Nagelstudio Batumi",
+        topic: "Nagelservice-Termine",
+        searchPhrases: ["Nägel Batumi", "Maniküre Batumi", "Pediküre Batumi"],
+        categoryCta: "Nageldienstleistungen ansehen",
+        bookCta: "Nageltermin vereinbaren",
+        bookingTitle: "Nageltermin in Batumi buchen",
+        bookingText:
+          "Wählen Sie einen Nageltermin für Formgebung, Nagelhautpflege, Gel-Maniküre, Nagelkunst, Pediküre-Planung oder Event-Ready-Finishing.",
+      },
+}),
   },
   {
     slug: 'lashes-brows-batumi',
@@ -1793,7 +2606,49 @@ const additionalLocalSeoLandingPages: LocalSeoLandingPage[] = [
         bookingText:
           'דונו בהרמת ריסים, עיצוב, למינציית גבות, העדפת צורה, תזמון והנחיות לאחר השירות.',
       },
-    }),
+          nl: {
+        title: "Wimpers en wenkbrauwen in Batumi",
+        h1: "Wimpers en wenkbrauwen in Batumi",
+        description:
+          "Boek wimperlifting, wimperstyling, Russische volumewimpers en ondersteuning voor wenkbrauwlaminering in Batumi met afspraakplanning op basis van advies.",
+        eyebrow: "Wimper- en wenkbrauwafspraken",
+        topic: "afspraak voor wimper- en wenkbrauwservice",
+        searchPhrases: ["wimpers Batumi", "wimperlifting Batumi", "wenkbrauwlaminering Batumi"],
+        categoryCta: "Bekijk wimperservices",
+        bookCta: "Maak een afspraak voor wimpers of wenkbrauwen",
+        bookingTitle: "Boek wimpers en wenkbrauwen in Batumi",
+        bookingText:
+          "Maak een afspraak om de wimperlift, wimperstyling, wenkbrauwlaminering, vormvoorkeuren, timing en nazorg te bespreken.",
+      },
+      fr: {
+        title: "Cils et sourcils à Batumi",
+        h1: "Cils et sourcils à Batumi",
+        description:
+          "Réservez à Batumi un rehaussement ou un stylisme des cils, des extensions volume russe ou une lamination des sourcils, après échange sur vos préférences.",
+        eyebrow: "Rendez-vous cils et sourcils",
+        topic: "rendez-vous pour le service des cils et des sourcils",
+        searchPhrases: ["cils Batumi", "rehaussement de cils Batumi", "lamination des sourcils Batumi"],
+        categoryCta: "Voir les services de cils",
+        bookCta: "Prendre rendez-vous pour les cils ou les sourcils",
+        bookingTitle: "Réserver les cils et les sourcils à Batumi",
+        bookingText:
+          "Choisissez un rendez-vous pour discuter du rehaussement et du style des cils, de la lamination des sourcils, de la forme souhaitée, du calendrier et de l'entretien.",
+      },
+      de: {
+        title: "Wimpern und Brauen in Batumi",
+        h1: "Wimpern und Brauen in Batumi",
+        description:
+          "Buchen Sie Wimpernlifting, Wimpernstyling, russische Volumenwimpern und Unterstützung bei der Augenbrauenlaminierung in Batumi mit Beratungsterminplanung.",
+        eyebrow: "Termine für Wimpern und Augenbrauen",
+        topic: "Termine für den Wimpern- und Augenbrauenservice",
+        searchPhrases: ["Wimpern Batumi", "Wimpernlift Batumi", "Augenbrauenlaminierung Batumi"],
+        categoryCta: "Wimpernservices ansehen",
+        bookCta: "Buchen Sie einen Wimpern- oder Augenbrauentermin",
+        bookingTitle: "Buchen Sie Wimpern und Brauen in Batumi",
+        bookingText:
+          "Wählen Sie einen Termin, um Wimpernlifting, Wimpernstyling, Augenbrauenlaminierung, Formpräferenzen, Zeitpunkt und Nachsorge zu besprechen.",
+      },
+}),
   },
 ];
 

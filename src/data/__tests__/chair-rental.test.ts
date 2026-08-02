@@ -3,7 +3,7 @@ import { locales } from '@/i18n';
 import { chairRentalContent } from '../chair-rental';
 
 describe('chairRentalContent', () => {
-  it('provides enquiry-based chair rental content for all six locales', () => {
+  it('provides enquiry-based chair rental content for every locale', () => {
     expect(Object.keys(chairRentalContent)).toEqual([...locales]);
 
     for (const locale of locales) {
@@ -16,7 +16,9 @@ describe('chairRentalContent', () => {
       expect(content.processSteps).toHaveLength(3);
       expect(content.faqs.length).toBeGreaterThanOrEqual(3);
       expect(content.whatsappMessage).toBeTruthy();
-      expect(content.availabilityNote).toMatch(/price|ფას|цен|fiyat|السعر|מחיר/i);
+      expect(content.availabilityNote).toMatch(
+        /price|ფას|цен|fiyat|السعر|מחיר|prijs|prix|preis/i
+      );
     }
   });
 });

@@ -417,7 +417,10 @@
     "ru": "Русский",
     "tr": "Türkçe",
     "ar": "العربية",
-    "he": "עברית"
+    "he": "עברית",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch"
   },
   "notFound": {
     "title": "Sayfa Bulunamadı",
@@ -1716,7 +1719,7 @@
       "location": "Silk Beauty Salon şu adrestedir: {address}, {city}, {country}.",
       "hours": "Pazartesi–Cumartesi {mondaySaturday}; Pazar {sunday} açık.",
       "contact": "Telefon: {phone}. WhatsApp: {whatsapp}. E-posta: {email}.",
-      "languages": "Web sitesi ve Mariam İngilizce, Gürcüce, Rusça, Türkçe, Arapça ve İbranice destekler. Konuşma dilini randevu sırasında salonla doğrulayın.",
+      "languages": "Web sitesi ve Mariam İngilizce, Gürcüce, Rusça, Türkçe, Arapça, İbranice, Hollandaca, Fransızca ve Almanca destekler. Konuşma dilini randevu sırasında salonla doğrulayın.",
       "payment": "Web sitesine göre nakit ve başlıca kredi kartları kabul edilir. Aksi kararlaştırılmadıkça ödeme hizmet sırasında yapılır.",
       "results": "Sonuç ve kalıcılığı bakımın türüne ve kişiye bağlıdır; yayınlanan tahmini bakım rehberinde görebilirsiniz.",
       "downtime": "İyileşme bakıma özeldir; geçici kızarıklık, şişlik, hassasiyet, morarma, kuruluk veya soyulma olabilir.",

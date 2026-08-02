@@ -23,6 +23,9 @@ export function formatPrice(
     ar: 'ar-SA',
     he: 'he-IL',
     tr: 'tr-TR',
+    nl: 'nl-NL',
+    fr: 'fr-FR',
+    de: 'de-DE',
   };
 
   const intlLocale = localeMap[locale] || locale;
@@ -59,6 +62,9 @@ export function formatDate(
     ar: 'ar-SA',
     he: 'he-IL',
     tr: 'tr-TR',
+    nl: 'nl-NL',
+    fr: 'fr-FR',
+    de: 'de-DE',
   };
 
   const intlLocale = localeMap[locale] || locale;
@@ -92,6 +98,9 @@ export function formatNumber(num: number, locale: string): string {
     ar: 'ar-SA',
     he: 'he-IL',
     tr: 'tr-TR',
+    nl: 'nl-NL',
+    fr: 'fr-FR',
+    de: 'de-DE',
   };
 
   const intlLocale = localeMap[locale] || locale;
@@ -120,6 +129,9 @@ export function formatRelativeTime(
     ar: 'ar-SA',
     he: 'he-IL',
     tr: 'tr-TR',
+    nl: 'nl-NL',
+    fr: 'fr-FR',
+    de: 'de-DE',
   };
 
   const intlLocale = localeMap[locale] || locale;

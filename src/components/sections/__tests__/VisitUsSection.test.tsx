@@ -9,7 +9,11 @@ import heMessages from '../../../../messages/he.json';
 import kaMessages from '../../../../messages/ka.json';
 import ruMessages from '../../../../messages/ru.json';
 import trMessages from '../../../../messages/tr.json';
+import nlMessages from '../../../../messages/nl.json';
+import frMessages from '../../../../messages/fr.json';
+import deMessages from '../../../../messages/de.json';
 import { siteConfig } from '@/data/site-config';
+import { localizedCountryNames } from '@/i18n';
 import { VisitUsSection } from '../VisitUsSection';
 
 vi.mock('@/components/effects/RevealOnScroll', () => ({
@@ -25,6 +29,9 @@ const localeMessages = {
   tr: trMessages,
   ar: arMessages,
   he: heMessages,
+  nl: nlMessages,
+  fr: frMessages,
+  de: deMessages,
 } as const;
 
 function renderVisitUsSection(locale: keyof typeof localeMessages = 'en') {
@@ -88,6 +95,11 @@ describe('VisitUsSection', () => {
       const { unmount } = renderVisitUsSection(locale);
 
       expect(screen.getByText(siteConfig.contact.address)).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          `${siteConfig.contact.city}, ${siteConfig.contact.postcode}, ${localizedCountryNames[locale]}`
+        )
+      ).toBeInTheDocument();
       expect(screen.getByRole('link', { name: /google maps/i }).getAttribute('href')).toContain(
         'https://www.google.com/maps/dir/?'
       );

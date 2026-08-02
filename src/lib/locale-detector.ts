@@ -27,6 +27,17 @@ const languageToLocale: Record<string, Locale> = {
   'he': 'he',
   'he-il': 'he',
   'iw': 'he', // Legacy Hebrew code
+  'nl': 'nl',
+  'nl-nl': 'nl',
+  'nl-be': 'nl',
+  'fr': 'fr',
+  'fr-fr': 'fr',
+  'fr-be': 'fr',
+  'fr-ch': 'fr',
+  'de': 'de',
+  'de-de': 'de',
+  'de-at': 'de',
+  'de-ch': 'de',
 };
 
 // Geolocation to locale mapping (country code to locale)
@@ -49,6 +60,11 @@ const countryToLocale: Record<string, Locale> = {
   'IQ': 'ar', // Iraq
   'IL': 'he', // Israel
   'PS': 'ar', // Palestine
+  'NL': 'nl', // Netherlands
+  'FR': 'fr', // France
+  'DE': 'de', // Germany
+  'AT': 'de', // Austria
+  'CH': 'de', // Switzerland (browser language takes priority)
 };
 
 export interface LocaleDetectionResult {

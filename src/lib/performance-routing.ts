@@ -6,7 +6,7 @@ export function shouldBypassLocaleRedirect(pathname: string): boolean {
 }
 
 function isDashboardPath(pathname: string): boolean {
-  return /^\/(?:en|ka|ru|tr|ar|he)\/dashboard(?:\/|$)/.test(pathname);
+  return /^\/(?:en|ka|ru|tr|ar|he|nl|fr|de)\/dashboard(?:\/|$)/.test(pathname);
 }
 
 export function getHtmlCacheControl(pathname: string, method: string): string | null {

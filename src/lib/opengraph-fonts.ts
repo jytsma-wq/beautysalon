@@ -15,6 +15,21 @@ const fontFiles: Record<Locale, { root: string; regular: string; bold: string }>
     regular: 'cormorant-garamond-latin-400-normal.woff2',
     bold: 'cormorant-garamond-latin-700-normal.woff2',
   },
+  nl: {
+    root: fontRoots.cormorantGaramond,
+    regular: 'cormorant-garamond-latin-400-normal.woff2',
+    bold: 'cormorant-garamond-latin-700-normal.woff2',
+  },
+  fr: {
+    root: fontRoots.cormorantGaramond,
+    regular: 'cormorant-garamond-latin-400-normal.woff2',
+    bold: 'cormorant-garamond-latin-700-normal.woff2',
+  },
+  de: {
+    root: fontRoots.cormorantGaramond,
+    regular: 'cormorant-garamond-latin-400-normal.woff2',
+    bold: 'cormorant-garamond-latin-700-normal.woff2',
+  },
   tr: {
     root: fontRoots.cormorantGaramond,
     regular: 'cormorant-garamond-latin-ext-400-normal.woff2',

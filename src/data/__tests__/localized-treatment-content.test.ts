@@ -5,12 +5,15 @@ import he from '../../../messages/he.json';
 import ka from '../../../messages/ka.json';
 import ru from '../../../messages/ru.json';
 import tr from '../../../messages/tr.json';
+import nl from '../../../messages/nl.json';
+import fr from '../../../messages/fr.json';
+import de from '../../../messages/de.json';
 
-const nonEnglishLocales = ['ka', 'ru', 'tr', 'ar', 'he'] as const;
+const nonEnglishLocales = ['ka', 'ru', 'tr', 'ar', 'he', 'nl', 'fr', 'de'] as const;
 
 describe('localized treatment content', () => {
   it('does not expose English booking labels in non-English locales', () => {
-    const messagesByLocale = { ka, ru, tr, ar, he };
+    const messagesByLocale = { ka, ru, tr, ar, he, nl, fr, de };
 
     for (const locale of nonEnglishLocales) {
       const messages = messagesByLocale[locale];

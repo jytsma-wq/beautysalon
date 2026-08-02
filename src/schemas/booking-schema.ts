@@ -136,7 +136,7 @@ export type NewsletterInput = z.infer<typeof newsletterSchema>;
  * User preferences schema
  */
 export const userPreferencesSchema = z.object({
-  locale: z.enum(['en', 'ka', 'ru', 'tr', 'ar', 'he']).default('en'),
+  locale: z.enum(['en', 'ka', 'ru', 'tr', 'ar', 'he', 'nl', 'fr', 'de']).default('en'),
   theme: z.enum(['light', 'dark', 'system']).default('system'),
   notifications: z.object({
     email: z.boolean().default(true),

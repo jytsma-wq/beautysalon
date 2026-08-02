@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr'];
+  const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr', 'nl', 'fr', 'de'];
   const slugs = (await getAllTreatments('en')).map((treatment) => treatment.slug);
 
   return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));

@@ -583,4 +583,292 @@ export const chairRentalContent: Record<Locale, ChairRentalContent> = {
     whatsappMessage:
       'שלום Silk Beauty Salon, אני רוצה לברר לגבי השכרת כיסא עבודה. השירות שלי: __. ניסיון: __. תאריכים/שעות מועדפים: __. תדירות: __. אני מביא/ה לקוחות משלי: כן/לא. צרכי עמדה או ציוד: __.',
   },
+  nl: {
+    navLabel: "Stoel verhuur",
+    metadataTitle: "Stoelverhuur voor schoonheidsprofessionals in Batumi",
+    metadataDescription:
+      "Vraag naar het huren van een stoel of werkplek bij Silk Beauty Salon in Batumi. Beschikbaarheid, geschiktheid, werkafspraken en prijs worden individueel bevestigd.",
+    eyebrow: "Onafhankelijke werkplekaanvragen",
+    title: "Stoelverhuur in Batumi",
+    intro:
+      "Schoonheidsprofessionals kunnen bij Silk Beauty Salon informeren naar het gebruik van een stoel of werkplek. We beoordelen het servicetype, het schema, de praktische behoeften en de werkafspraak voordat we bevestigen of de ruimte geschikt is.",
+    primaryCta: "Vraag naar stoelverhuur",
+    secondaryCta: "Bekijk salonruimte huren",
+    availabilityNote:
+      "Beschikbaarheid, geschiktheid, arbeidsvoorwaarden en prijs worden individueel schriftelijk bevestigd; deze pagina is geen automatisch huuraanbod.",
+    useCasesHeading: "Vragen over flexibele werkplekken",
+    useCasesIntro:
+      "Vertel ons hoe u van plan bent te werken. Elke aanvraag wordt beoordeeld aan de hand van het salonschema, de beschikbare werkruimte en praktische vereisten.",
+    useCases: [
+      {
+        title: "Onafhankelijke professionals",
+        description: "Vragen van schoonheidsprofessionals die na voorafgaande toestemming op zoek zijn naar een geschikte plek om hun eigen klanten te bedienen.",
+      },
+      {
+        title: "Bezoekende professionals",
+        description: "Kortetermijnaanvragen voor werkruimte voor professionals die in Batumi werken voor geselecteerde data of klantafspraken.",
+      },
+      {
+        title: "Terugkerende werkruimte",
+        description: "Regelmatige stoel- of werkstationvragen worden in overweging genomen op basis van servicecompatibiliteit en salonbeschikbaarheid.",
+      },
+    ],
+    confirmationHeading: "Wat we bevestigen vóór een overeenkomst",
+    confirmationIntro:
+      "Er wordt aangenomen dat er niets is opgenomen. Verantwoordelijkheden, toegang en commerciële voorwaarden moeten worden overeengekomen voordat een stoelverhuur begint.",
+    confirmationItems: [
+      "Uw servicetype, ervaring en klantarrangementen",
+      "Voorkeursdata, werktijden en frequentie",
+      "Werkstation, meubilair, gereedschap, producten en apparatuur nodig",
+      "Verantwoordelijkheden op het gebied van hygiëne, schoonmaak, was en afval",
+      "Verzekering, licenties of toestemmingen, indien van toepassing",
+      "Prijs, aanbetaling, annulering, toegang en andere schriftelijke voorwaarden",
+    ],
+    processHeading: "Hoe te informeren",
+    processSteps: [
+      {
+        title: "1. Introduceer je werk",
+        description: "Deel uw servicetype, ervaring, voorkeursschema en de klanten die u verwacht te bedienen.",
+      },
+      {
+        title: "2. Bekijk de praktische pasvorm",
+        description: "De salon bespreekt met u de ruimte, het schema, de hygiëne, de uitrusting en de operationele vereisten.",
+      },
+      {
+        title: "3. Spreek de voorwaarden schriftelijk af",
+        description: "Indien passend bevestigen beide partijen de omvang, prijs, verantwoordelijkheden en huurvoorwaarden voordat ze beginnen.",
+      },
+    ],
+    inquiryHeading: "Voeg deze details toe",
+    inquiryIntro: "Een volledige introductie helpt de salon om de aanvraag nauwkeurig te beoordelen.",
+    inquiryItems: [
+      "Uw naam en professionele service",
+      "Ervaring en eventuele relevante kwalificaties",
+      "Voorkeursdata, uren en verwachte frequentie",
+      "Of u nu uw eigen klanten meeneemt",
+      "Benodigde gereedschappen, producten, meubels en uitrusting",
+      "Voorkeurstelefoon, WhatsApp of e-mailcontact",
+    ],
+    locationLabel: "Salonlocatie",
+    faqHeading: "Vragen over stoelverhuur",
+    faqs: [
+      {
+        question: "Wie kan informatie krijgen over stoelverhuur?",
+        answer:
+          "Schoonheidsprofessionals kunnen navraag doen. Geschiktheid hangt af van de service, professionele vereisten, beschikbare werkruimte en salonschema.",
+      },
+      {
+        question: "Wat kost stoelverhuur?",
+        answer:
+          "Er is geen vaste publieksprijs. De kosten zijn afhankelijk van de planning, frequentie, werkruimte en overeengekomen faciliteiten en worden schriftelijk bevestigd.",
+      },
+      {
+        question: "Zijn gereedschappen, producten of apparatuur inbegrepen?",
+        answer:
+          "Enkel de zaken vermeld in de schriftelijke overeenkomst zijn inbegrepen. Leg uit wat u meeneemt en wat u nodig heeft vanuit de salon.",
+      },
+      {
+        question: "Kan ik mijn eigen klanten meenemen?",
+        answer:
+          "Klantafspraken, boekingsverantwoordelijkheden, betalingen en toegang tot de salon moeten worden besproken en overeengekomen voordat de huur begint.",
+      },
+    ],
+    closingTitle: "Vraag naar werken vanuit Silk Beauty Salon",
+    closingDescription:
+      "Stuur een professionele introductie en uw gewenste werkafspraak per WhatsApp, zodat het team de geschiktheid en beschikbaarheid kan beoordelen.",
+    whatsappMessage:
+      "Hallo Silk Beauty Salon, ik wil graag vragen stellen over stoelverhuur. Mijn dienst is: __. Ervaring: __. Voorkeursdata/hours: __. Verwachte frequentie: __. Ik breng mijn eigen klanten mee: ja/no. Behoeften aan werkruimte of apparatuur: __.",
+  },
+  fr: {
+    navLabel: "Location de chaises",
+    metadataTitle: "Location de chaises pour professionnels de la beauté à Batumi",
+    metadataDescription:
+      "Renseignez-vous sur la location d'une chaise ou d'un poste de travail au Silk Beauty Salon à Batumi. La disponibilité, l'adéquation, les modalités de travail et le prix sont confirmés individuellement.",
+    eyebrow: "Enquêtes indépendantes sur l’espace de travail",
+    title: "Location de chaise à Batumi",
+    intro:
+      "Les professionnels de la beauté peuvent se renseigner sur l'utilisation d'une chaise ou d'un poste de travail au Silk Beauty Salon. Nous examinons le type de service, le calendrier, les besoins pratiques et les modalités de travail avant de confirmer si l'espace est adapté.",
+    primaryCta: "Renseignez-vous sur la location de chaises",
+    secondaryCta: "Voir la location d'espace de salon",
+    availabilityNote:
+      "La disponibilité, l'adéquation, les conditions de travail et le prix sont confirmés individuellement par écrit ; cette page n'est pas une offre de location automatique.",
+    useCasesHeading: "Demandes d’espace de travail flexible",
+    useCasesIntro:
+      "Dites-nous comment vous envisagez de travailler. Chaque demande est examinée en fonction du calendrier du salon, de l'espace de travail disponible et des exigences pratiques.",
+    useCases: [
+      {
+        title: "Professionnels indépendants",
+        description: "Demandes de professionnels de la beauté recherchant un lieu adapté pour servir leurs propres clients sur accord préalable.",
+      },
+      {
+        title: "Professionnels invités",
+        description: "Demandes ponctuelles d'espace de travail pour les professionnels présents à Batumi à certaines dates ou pour des rendez-vous clients.",
+      },
+      {
+        title: "Espace de travail récurrent",
+        description: "Demandes régulières de chaises ou de postes de travail prises en compte en fonction de la compatibilité des services et de la disponibilité du salon.",
+      },
+    ],
+    confirmationHeading: "Ce que nous confirmons avant un accord",
+    confirmationIntro:
+      "Rien n’est supposé être inclus. Les responsabilités, l'accès et les conditions commerciales doivent être convenus avant le début de toute location de chaise.",
+    confirmationItems: [
+      "Votre type de service, votre expérience et les modalités client",
+      "Dates, horaires et fréquence souhaités",
+      "Poste de travail, mobilier, outils, produits et équipements nécessaires",
+      "Responsabilités en matière d'hygiène, de nettoyage, de lessive et de déchets",
+      "Assurance, licences ou autorisations le cas échéant",
+      "Prix, dépôt, annulation, accès et autres conditions écrites",
+    ],
+    processHeading: "Comment se renseigner",
+    processSteps: [
+      {
+        title: "1. Présentez votre travail",
+        description: "Partagez votre type de service, votre expérience, votre horaire préféré et les clients que vous comptez servir.",
+      },
+      {
+        title: "2. Examinez l’ajustement pratique",
+        description: "Le salon examine avec vous les besoins en matière d'espace, d'horaire, d'hygiène, d'équipement et de fonctionnement.",
+      },
+      {
+        title: "3. Acceptez les conditions par écrit",
+        description: "Le cas échéant, les deux parties confirment l'étendue, le prix, les responsabilités et les conditions de location avant de commencer.",
+      },
+    ],
+    inquiryHeading: "Inclure ces détails",
+    inquiryIntro: "Une introduction complète aide le salon à évaluer la demande avec précision.",
+    inquiryItems: [
+      "Votre nom et service professionnel",
+      "Expérience et toutes qualifications pertinentes",
+      "Dates, heures et fréquence souhaitées",
+      "Que vous ameniez vos propres clients",
+      "Outils, produits, mobilier et équipement requis",
+      "Téléphone préféré, WhatsApp ou contact par e-mail",
+    ],
+    locationLabel: "Emplacement du salon",
+    faqHeading: "Questions sur la location de chaises",
+    faqs: [
+      {
+        question: "Qui peut se renseigner sur la location de chaises ?",
+        answer:
+          "Les professionnels de la beauté peuvent se renseigner. L'adéquation dépend du service, des exigences professionnelles, de l'espace de travail disponible et de l'horaire du salon.",
+      },
+      {
+        question: "Combien coûte la location d'une chaise ?",
+        answer:
+          "Il n’y a pas de prix public fixe. Le coût dépend du calendrier, de la fréquence, de l'espace de travail et des installations convenues et est confirmé par écrit.",
+      },
+      {
+        question: "Les outils, produits ou équipements sont-ils inclus ?",
+        answer:
+          "Seuls les éléments répertoriés dans l’accord écrit sont inclus. Expliquez ce que vous apporterez et ce dont vous avez besoin du salon.",
+      },
+      {
+        question: "Puis-je amener mes propres clients ?",
+        answer:
+          "Les arrangements avec le client, les responsabilités de réservation, les paiements et l'accès au salon doivent être discutés et convenus avant le début de la location.",
+      },
+    ],
+    closingTitle: "Renseignez-vous sur le travail à partir de Silk Beauty Salon",
+    closingDescription:
+      "Envoyez une présentation professionnelle et votre modalité de travail préférée par WhatsApp afin que l'équipe puisse évaluer l'adéquation et la disponibilité.",
+    whatsappMessage:
+      "Bonjour Silk Beauty Salon, j'aimerais poser des questions sur la location de chaises. Mon service est : __. Expérience: __. Dates préférées/hours : __. Fréquence attendue : __. J'amène mes propres clients : oui/no. Besoins en espace de travail ou en équipement : __.",
+  },
+  de: {
+    navLabel: "Stuhlverleih",
+    metadataTitle: "Stuhlvermietung für Schönheitsprofis in Batumi",
+    metadataDescription:
+      "Fragen Sie nach der Anmietung eines Stuhls oder Arbeitsplatzes bei Silk Beauty Salon in Batumi. Verfügbarkeit, Eignung, Arbeitsmodalitäten und Preis werden individuell bestätigt.",
+    eyebrow: "Unabhängige Arbeitsplatzanfragen",
+    title: "Stuhlvermietung in Batumi",
+    intro:
+      "Kosmetikprofis können sich bei Silk Beauty Salon über die Nutzung eines Stuhls oder einer Arbeitsstation erkundigen. Wir überprüfen die Art der Dienstleistung, den Zeitplan, die praktischen Bedürfnisse und die Arbeitsvereinbarung, bevor wir bestätigen, ob der Raum geeignet ist.",
+    primaryCta: "Fragen Sie nach der Stuhlmiete",
+    secondaryCta: "Salonraummiete ansehen",
+    availabilityNote:
+      "Verfügbarkeit, Eignung, Arbeitsbedingungen und Preis werden individuell schriftlich bestätigt; Bei dieser Seite handelt es sich nicht um ein automatisches Mietangebot.",
+    useCasesHeading: "Anfragen zu flexiblen Arbeitsplätzen",
+    useCasesIntro:
+      "Sagen Sie uns, wie Sie arbeiten möchten. Jede Anfrage wird anhand des Salonplans, des verfügbaren Arbeitsplatzes und der praktischen Anforderungen überprüft.",
+    useCases: [
+      {
+        title: "Unabhängige Fachleute",
+        description: "Anfragen von Kosmetikprofis, die nach vorheriger Vereinbarung einen geeigneten Ort für die Betreuung ihrer eigenen Kunden suchen.",
+      },
+      {
+        title: "Fachbesucher",
+        description: "Kurzfristige Arbeitsplatzanfragen für Fachkräfte, die in Batumi für ausgewählte Termine oder Kundentermine arbeiten.",
+      },
+      {
+        title: "Wiederkehrender Arbeitsbereich",
+        description: "Regelmäßige Stuhl- oder Arbeitsplatzanfragen werden je nach Servicekompatibilität und Salonverfügbarkeit berücksichtigt.",
+      },
+    ],
+    confirmationHeading: "Was wir vor einer Vereinbarung bestätigen",
+    confirmationIntro:
+      "Es wird davon ausgegangen, dass nichts enthalten ist. Verantwortlichkeiten, Zugang und Geschäftsbedingungen müssen vor Beginn der Stuhlmiete vereinbart werden.",
+    confirmationItems: [
+      "Ihre Serviceart, Erfahrung und Kundenvereinbarungen",
+      "Bevorzugte Termine, Arbeitszeiten und Häufigkeit",
+      "Benötigter Arbeitsplatz, Möbel, Werkzeuge, Produkte und Ausrüstung",
+      "Hygiene-, Reinigungs-, Wäsche- und Abfallverantwortung",
+      "Versicherung, Lizenzen oder Genehmigungen, sofern zutreffend",
+      "Preis, Anzahlung, Stornierung, Zugang und andere schriftliche Bedingungen",
+    ],
+    processHeading: "So erkundigen Sie sich",
+    processSteps: [
+      {
+        title: "1. Stellen Sie Ihre Arbeit vor",
+        description: "Teilen Sie Ihren Servicetyp, Ihre Erfahrung, Ihren bevorzugten Zeitplan und die Kunden mit, die Sie voraussichtlich bedienen werden.",
+      },
+      {
+        title: "2. Überprüfen Sie die praktische Passform",
+        description: "Der Salon bespricht mit Ihnen Raum, Zeitplan, Hygiene, Ausstattung und Betriebsanforderungen.",
+      },
+      {
+        title: "3. Vereinbaren Sie die Bedingungen schriftlich",
+        description: "Bei Eignung bestätigen beide Seiten vor Beginn den Umfang, den Preis, die Verantwortlichkeiten und die Mietkonditionen.",
+      },
+    ],
+    inquiryHeading: "Geben Sie diese Details an",
+    inquiryIntro: "Eine vollständige Einführung hilft dem Salon, die Anfrage genau zu beurteilen.",
+    inquiryItems: [
+      "Ihr Name und professioneller Service",
+      "Erfahrung und alle relevanten Qualifikationen",
+      "Bevorzugte Termine, Öffnungszeiten und voraussichtliche Häufigkeit",
+      "Ob Sie Ihre eigenen Kunden mitbringen",
+      "Benötigte Werkzeuge, Produkte, Möbel und Geräte",
+      "Bevorzugter Telefonkontakt: WhatsApp oder E-Mail-Kontakt",
+    ],
+    locationLabel: "Salonstandort",
+    faqHeading: "Fragen zur Stuhlmiete",
+    faqs: [
+      {
+        question: "Wer kann eine Stuhlmietanfrage stellen?",
+        answer:
+          "Schönheitsprofis können sich erkundigen. Die Eignung hängt vom Service, den beruflichen Anforderungen, dem verfügbaren Arbeitsplatz und dem Salonplan ab.",
+      },
+      {
+        question: "Was kostet die Stuhlmiete?",
+        answer:
+          "Es gibt keinen festen öffentlichen Preis. Die Kosten hängen vom Zeitplan, der Häufigkeit, dem Arbeitsbereich und den vereinbarten Einrichtungen ab und werden schriftlich bestätigt.",
+      },
+      {
+        question: "Sind Werkzeuge, Produkte oder Geräte enthalten?",
+        answer:
+          "Es sind nur die in der schriftlichen Vereinbarung aufgeführten Punkte enthalten. Erklären Sie, was Sie mitbringen und was Sie im Salon benötigen.",
+      },
+      {
+        question: "Kann ich meine eigenen Kunden mitbringen?",
+        answer:
+          "Kundenvereinbarungen, Buchungspflichten, Zahlungen und Zugang zum Salon müssen vor Mietbeginn besprochen und vereinbart werden.",
+      },
+    ],
+    closingTitle: "Fragen Sie nach der Arbeit unter Silk Beauty Salon",
+    closingDescription:
+      "Senden Sie eine professionelle Vorstellung und Ihre bevorzugte Arbeitsvereinbarung per WhatsApp, damit das Team die Eignung und Verfügbarkeit prüfen kann.",
+    whatsappMessage:
+      "Hallo Silk Beauty Salon, ich würde gerne nach der Stuhlmiete fragen. Mein Service ist: __. Erfahrung: __. Wunschtermin/hours: __. Erwartete Häufigkeit: __. Ich bringe meine eigenen Kunden mit: ja/no. Anforderungen an den Arbeitsplatz oder die Ausrüstung: __.",
+  },
 };

@@ -822,7 +822,7 @@ const treatmentContentCategoryAliases: Record<string, string> = {
   hair: 'hair-treatments',
 };
 
-type TreatmentLocale = 'en' | 'ka' | 'ru' | 'tr' | 'ar' | 'he';
+type TreatmentLocale = 'en' | 'ka' | 'ru' | 'tr' | 'ar' | 'he' | 'nl' | 'fr' | 'de';
 
 const supportedTreatmentLocales = new Set<TreatmentLocale>([
   'en',
@@ -831,6 +831,9 @@ const supportedTreatmentLocales = new Set<TreatmentLocale>([
   'tr',
   'ar',
   'he',
+  'nl',
+  'fr',
+  'de',
 ]);
 
 const durationLabels: Record<Exclude<TreatmentLocale, 'en'>, {
@@ -863,6 +866,21 @@ const durationLabels: Record<Exclude<TreatmentLocale, 'en'>, {
     initialTreatment: (minutes) => `טיפול ראשון — ${minutes} דקות`,
     weekProgram: (weeks) => `תוכנית של ${weeks} שבועות`,
   },
+  nl: {
+    minutes: 'minuten',
+    initialTreatment: (minutes) => `Eerste behandeling — ${minutes} minuten`,
+    weekProgram: (weeks) => `Programma van ${weeks} weken`,
+  },
+  fr: {
+    minutes: 'min',
+    initialTreatment: (minutes) => `Premier traitement — ${minutes} min`,
+    weekProgram: (weeks) => `Programme de ${weeks} semaines`,
+  },
+  de: {
+    minutes: 'Minuten',
+    initialTreatment: (minutes) => `Erste Behandlung — ${minutes} Minuten`,
+    weekProgram: (weeks) => `${weeks}-Wochen-Programm`,
+  },
 };
 
 function normalizeTreatmentLocale(locale: string): TreatmentLocale {
@@ -871,7 +889,7 @@ function normalizeTreatmentLocale(locale: string): TreatmentLocale {
     : 'en';
 }
 
-function localizeTreatmentPrice(price: string | undefined, locale: string): string | undefined {
+export function localizeTreatmentPrice(price: string | undefined, locale: string): string | undefined {
   if (!price) return price;
 
   const normalizedLocale = normalizeTreatmentLocale(locale);
@@ -884,6 +902,9 @@ function localizeTreatmentPrice(price: string | undefined, locale: string): stri
       tr: 'Konsültasyon gerekli',
       ar: 'تتطلب استشارة',
       he: 'נדרש ייעוץ',
+      nl: 'Consultatie vereist',
+      fr: 'Consultation requise',
+      de: 'Beratung erforderlich',
     }[normalizedLocale];
   }
 
@@ -897,6 +918,9 @@ function localizeTreatmentPrice(price: string | undefined, locale: string): stri
     tr: `Başlangıç: ${amount}`,
     ar: `ابتداءً من ${amount}`,
     he: `החל מ-${amount}`,
+    nl: `Vanaf ${amount}`,
+    fr: `À partir de ${amount}`,
+    de: `Ab ${amount}`,
   }[normalizedLocale];
 }
 

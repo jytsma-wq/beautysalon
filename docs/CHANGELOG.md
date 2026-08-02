@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-02
+
+- Added Dutch, French, and German as first-class website locales alongside the existing six languages, including complete message-key parity, routing, locale detection, flags, navigation, metadata, hreflang, sitemap coverage, Open Graph support, localized structured content, booking options, formatters, and route validation.
+- Localized booking calendar visuals and accessibility labels, including month, weekday, navigation, grid, individual day, and selected-date output for all supported locales.
+- Updated homepage prices and country display to use locale-aware shared data, and changed the visible supported-language count from six to nine without duplicating prices or changing official business data.
+- Verified 63 NL/FR/DE routes in the visible production preview plus mobile menu, nine-language switching, RTL preservation, sticky CTA behavior, forms, schema, sitemap, robots, health, CSRF, console, hydration, images, and overflow.
+- Passed TypeScript, ESLint, 439 tests (`12` skipped), full translation validation, a production build generating 834 static pages, and whitespace validation. No deployment or push to production was performed.
+
 ## 2026-07-27
 
 - Recorded the owner decision that `silkbeautysalon.online` is the permanent primary domain and that `silkbeauty.ge` is not owner-controlled.

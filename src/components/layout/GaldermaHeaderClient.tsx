@@ -9,7 +9,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { FacebookBrandIcon, InstagramBrandIcon, TikTokBrandIcon } from '@/components/icons';
 import { siteConfig } from '@/data/site-config';
-import { rtlLocales, type Locale } from '@/i18n';
+import { localizedCountryNames, rtlLocales, type Locale } from '@/i18n';
 import { motion } from 'framer-motion';
 
 const MOBILE_MENU_TOGGLE_ID = 'silk-mobile-menu-toggle';
@@ -502,7 +502,7 @@ export function GaldermaHeaderClient({
                   <p className="text-sm leading-relaxed text-stone-600">
                     {siteConfig.contact.address}
                     <br />
-                    {siteConfig.contact.city}, {siteConfig.contact.country} {siteConfig.contact.postcode}
+                    {siteConfig.contact.city}, {localizedCountryNames[locale]} {siteConfig.contact.postcode}
                   </p>
                 </div>
 

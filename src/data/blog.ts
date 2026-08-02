@@ -275,7 +275,7 @@ const fallbackBlogPosts: BlogPost[] = [
 
       <h2>Look for visible trust signals</h2>
       <p>Trustworthy salons make it easy to identify where the salon is located, how to contact the business, what services are described, and how booking works. A useful local beauty salon page should include a street address, phone number, email address, opening hours, service information, and booking instructions.</p>
-      <p>Silk Beauty Salon is located at Zurab Gorgiladze 63 in Batumi, Georgia. Clients can book online, call the salon, use WhatsApp, or email info@silkbeautysalon.online. The website is available in six languages; clients should confirm their preferred spoken language when booking.</p>
+      <p>Silk Beauty Salon is located at Zurab Gorgiladze 63 in Batumi, Georgia. Clients can book online, call the salon, use WhatsApp, or email info@silkbeautysalon.online. The website is available in nine languages; clients should confirm their preferred spoken language when booking.</p>
 
       <h2>Check the treatment information before booking</h2>
       <p>Before choosing a salon, read the treatment page rather than booking from the service name alone. A helpful treatment page should explain what the treatment is for, how long it takes, what results may look like, common downtime, and aftercare. You can start with the <a href="/en/treatments">Silk Beauty Salon treatment menu</a>, then compare individual treatments such as skin quality treatments, anti-wrinkle treatments, fillers, lashes, nails, and hair care.</p>
@@ -394,7 +394,7 @@ const fallbackBlogPosts: BlogPost[] = [
       <p>International clients visiting Batumi should leave enough time for review before traveling onward. The <a href="/en/international-clients">international clients guide</a> explains how to plan aesthetic appointments around a stay in Georgia.</p>
 
       <h2>How Silk approaches injectables</h2>
-      <p>At Silk Beauty Salon, injectable appointments begin with consultation and planning. The website is available in six languages; confirm your preferred spoken language directly when booking. You can learn more on the <a href="/en/botox-batumi">Botox in Batumi page</a>, compare the wider <a href="/en/treatments">treatments page</a>, or <a href="/en/book">book a consultation</a>.</p>
+      <p>At Silk Beauty Salon, injectable appointments begin with consultation and planning. The website is available in nine languages; confirm your preferred spoken language directly when booking. You can learn more on the <a href="/en/botox-batumi">Botox in Batumi page</a>, compare the wider <a href="/en/treatments">treatments page</a>, or <a href="/en/book">book a consultation</a>.</p>
 
       <h2>Sources and further reading</h2>
       <ul>

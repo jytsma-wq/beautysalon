@@ -3,7 +3,7 @@ import { locales } from '@/i18n';
 import { venueRentalContent } from '../venue-rental';
 
 describe('venueRentalContent', () => {
-  it('provides complete rental content for all six supported locales', () => {
+  it('provides complete rental content for every supported locale', () => {
     expect(Object.keys(venueRentalContent)).toEqual([...locales]);
 
     for (const locale of locales) {

@@ -1,0 +1,2860 @@
+{
+  "site": {
+    "title": "Salon de beauté Premier à Batumi | Silk Beauty Salon",
+    "description": "Le premier salon de beauté de Batumi sur la rue Zurab Gorgiladze. Praticiens experts, soins de pointe & soins de luxe.",
+    "brandName": "Silk Beauty Salon",
+    "brandShort": "Silk Beauty"
+  },
+  "nav": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "conditions": "Conditions cutanées",
+    "about": "À propos",
+    "consultation": "Consultation",
+    "skinConcerns": "Problèmes de peau",
+    "results": "Résultats",
+    "aboutUs": "À propos de nous",
+    "findSpecialist": "Trouver un spécialiste",
+    "pricelist": "Liste de prix",
+    "offers": "Offres",
+    "beforeAfter": "Avant et après",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "bookAppointment": "Prendre rendez-vous",
+    "bookConsultation": "Réserver une consultation",
+    "faq": "FAQ",
+    "press": "Presse",
+    "blog": "Blog",
+    "team": "Notre équipe",
+    "mainNavigation": "Navigation principale",
+    "internationalClients": "Clientèle internationale",
+    "international": "Clientèle internationale",
+    "venueRental": "Location d'espace de salon",
+    "chairRental": "Location de chaises",
+    "book": "Réserver",
+    "allTreatments": "Tous les traitements",
+    "allConditions": "Tous les problèmes de peau",
+    "viewAll": "Tout afficher",
+    "exploreAll": "Tout explorer",
+    "visitUs": "Visitez-nous",
+    "menu": "Menu",
+    "more": "Plus",
+    "moreLinks": "Plus de liens",
+    "treatmentPortfolio": "Soins et traitements",
+    "skinConditions": "Affections cutanées",
+    "treatmentPortfolioDescription": "Explorez les produits injectables en consultation, les traitements de qualité de la peau, les ongles, les cils et les soins capillaires.",
+    "conditionsDescription": "Trouvez des informations adaptées à chaque préoccupation cutanée, des ridules et de la fermeté au teint, à la texture, à l’hydratation et à l’acné.",
+    "downloadApp": "Télécharger l'application",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "call": "Appeler Silk Beauty Salon",
+    "whatsapp": "Message Silk Beauty Salon sur WhatsApp",
+    "whatsappShort": "WhatsApp",
+    "bookNow": "Réservez maintenant",
+    "stickyBookNowLabel": "Prendre rendez-vous chez Silk Beauty Salon",
+    "stickyBookingLabel": "Actions de réservation mobile rapides"
+  },
+  "header": {
+    "announcement": "Primé | Salon de beauté de référence à Batumi | Présenté dans les médias géorgiens de mode et de beauté"
+  },
+  "hero": {
+    "title": "Spécialistes du rajeunissement cutané",
+    "subtitle": "Salon de beauté de référence à Batumi",
+    "description": "Silk Beauty Salon réunit des spécialistes expérimentés, des soins modernes et un accompagnement personnalisé pour mettre en valeur votre beauté naturelle avec précision.",
+    "heading": "La confiance en votre peau est notre principale préoccupation",
+    "imageAlt": "Intérieur de spa et salon de beauté de luxe",
+    "ctaText": "Découvrez comment",
+    "cta": {
+      "book": "Prendre rendez-vous",
+      "treatments": "Voir les traitements"
+    },
+    "eyebrow": "Silk Beauty · Batumi, Géorgie",
+    "exploreMore": "Explorer les traitements",
+    "scroll": "Défilement",
+    "cornerDetail": "EST. 2024<br />BATUMI, GE"
+  },
+  "content": {
+    "heading1": "Des possibilités esthétiques façonnées ensemble",
+    "body1": "Il existe de nombreux types de rides et de ridules, et un nom pour presque tous les types que nous pouvons rencontrer sur notre visage. Notre gamme de traitements offre une approche holistique pour obtenir des résultats naturels qui célèbrent votre individualité.",
+    "heading2": "Combattre les effets secondaires du temps",
+    "body2": "À mesure que nous vieillissons, les changements dans la structure sous-jacente de notre peau peuvent entraîner l'apparition de rides d'expression qui modifient notre apparence. En relaxant temporairement les muscles du visage, nous pouvons réduire l’apparence de ces rides d’expression et nous sentir mieux.",
+    "imageAlt2": "Combattre les effets secondaires du temps"
+  },
+  "categories": {
+    "fillers": "Fillers dermiques",
+    "fillersDesc": "Restaurez le volume et le contour avec des traitements à l'acide hyaluronique haut de gamme.",
+    "fillersAlt": "Traitement de comblement cutané",
+    "skinboosters": "Skinboosters",
+    "skinboostersDesc": "Hydratation et éclat en profondeur pour une peau revitalisée et éclatante.",
+    "skinboostersAlt": "Traitement Skinboosters",
+    "biostimulators": "Biostimulateurs",
+    "biostimulatorsDesc": "Stimulez la production naturelle de collagène de votre peau pour des résultats durables.",
+    "biostimulatorsAlt": "Traitement par biostimulateurs",
+    "other": "Autres traitements",
+    "otherDesc": "Traitements de la ligne Expression et solutions esthétiques supplémentaires.",
+    "otherAlt": "Autres traitements esthétiques"
+  },
+  "stats": {
+    "stat1": "Patients souhaitant se sentir plus heureux et plus confiants ou améliorer leur qualité de vie.",
+    "stat2": "Patients souhaitant se faire plaisir ou célébrer un événement marquant."
+  },
+  "cta": {
+    "heading": "Trouver un spécialiste",
+    "description": "Prêt à explorer vos options ? Connectez-vous avec un spécialiste qualifié près de chez vous.",
+    "imageAlt": "Trouver un spécialiste",
+    "ctaText": "Commencer"
+  },
+  "results": {
+    "beforeAlt": "Avant traitement",
+    "afterAlt": "Après traitement",
+    "ctaText": "Voir leurs résultats"
+  },
+  "treatments": {
+    "title": "Traitements",
+    "subtitle": "Des soins esthétiques de pointe adaptés à vos besoins",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tous les traitements",
+    "sectionLabel": "Nos traitements",
+    "sectionTitle": "Des traitements scientifiques pour une peau radieuse",
+    "sectionDescription": "Chaque traitement est sélectionné pour ses résultats prouvés et délivré avec un soin méticuleux.",
+    "categories": {
+      "botox": "Botox Injectables",
+      "fillers": "Produits injectables de comblement",
+      "laser": "Traitements laser",
+      "skin": "Traitements de la peau",
+      "intimate": "Traitements Intimes",
+      "diagnostic": "Tests de diagnostic",
+      "hair": "Traitements capillaires"
+    }
+  },
+  "conditions": {
+    "title": "que nous traitons",
+    "subtitle": "Des solutions expertes pour vos problèmes de peau",
+    "viewAll": "Voir toutes les conditions",
+    "items": {
+      "ageing": "Peau vieillissante",
+      "acne": "Acné et cicatrices",
+      "uneven": "Teint irrégulier",
+      "blemishes": "Imperfections",
+      "pigmentation": "Pigmentation",
+      "collagen": "Stimulateur de collagène",
+      "other": "Autres conditions"
+    }
+  },
+  "technologies": {
+    "title": "Technologies de pointe",
+    "subtitle": "Notre salon est équipé de technologies esthétiques avancées pour les produits injectables, les traitements cutanés au laser, les diagnostics et les soins de beauté personnalisés. Nous nous concentrons sur des traitements éprouvés qui donnent des résultats visibles avec un temps d'arrêt minimal.",
+    "aboutUs": "À PROPOS DE NOUS"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Résultats réels provenant de vrais clients",
+    "viewAll": "Voir tous les commentaires",
+    "sectionLabel": "Témoignages clients",
+    "description": "Histoires vraies de vrais clients sur la façon dont ils ont transformé leur apparence et leur confiance avec nous.",
+    "stats": {
+      "clients": "Clients satisfaits",
+      "rating": "Note moyenne",
+      "recommend": "recommanderait",
+      "years": "Années d'expérience"
+    }
+  },
+  "pressBar": {
+    "ariaLabel": "Identifiants de la clinique",
+    "credential1": "Clinique esthétique primée",
+    "credential2": "Plus de 5 000 patients traités",
+    "credential3": "Médecins experts",
+    "credential4": "Première clinique esthétique de Batumi",
+    "credential5": "Normes médicales internationales",
+    "credential6": "Procédures esthétiques certifiées"
+  },
+  "about": {
+    "sectionLabel": "À propos de nous",
+    "imageAlt": "Silk Beauty Salon",
+    "category": "À propos de nous",
+    "title": "À PROPOS DE NOUS",
+    "description": "Notre salon est équipé de technologies esthétiques avancées pour les produits injectables, les traitements cutanés au laser, les diagnostics et les soins de beauté personnalisés. Nous nous concentrons sur des traitements éprouvés qui donnent des résultats visibles avec un temps d'arrêt minimal.",
+    "descriptionExtended": "Découvrez le mélange parfait de technologie de pointe et de soins personnalisés au Silk Beauty Salon, où nous combinons des traitements esthétiques de pointe avec un engagement envers votre sécurité et votre satisfaction.",
+    "readMore": "Lire la suite",
+    "stats": {
+      "years": "Années",
+      "patients": "Patients heureux",
+      "treatments": "Traitements"
+    },
+    "features": {
+      "award": "Salon primé",
+      "practitioners": "Praticiens de classe mondiale",
+      "products": "Produits Premium uniquement",
+      "experience": "Expérience patient de luxe",
+      "technology": "Dernières technologies",
+      "results": "Des résultats naturels"
+    },
+    "values": {
+      "title": "Nos valeurs",
+      "excellence": "Excellence",
+      "excellenceDesc": "Nous visons l'excellence dans chaque traitement",
+      "safety": "Sécurité",
+      "safetyDesc": "Votre sécurité est notre priorité absolue",
+      "innovation": "Innovation",
+      "innovationDesc": "Utilisation des dernières technologies et techniques"
+    }
+  },
+  "manifesto": {
+    "label": "Notre philosophie",
+    "statement": "Là où la science rencontre l'art d'une belle peau.",
+    "value1": "Précision",
+    "value2": "Discrétion",
+    "value3": "Excellence",
+    "cta": "Découvrez notre histoire"
+  },
+  "quickLinks": {
+    "title": "Liens rapides",
+    "faq": {
+      "title": "Questions fréquentes",
+      "description": "Lisez certaines des questions les plus fréquemment posées sur le salon et nos traitements."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Situé sur la rue Zurab Gorgiladze 63. Ouvert du lundi au samedi de 10h00 à 22h00 et le dimanche de 11h00 à 22h00."
+    },
+    "team": {
+      "title": "Notre équipe",
+      "description": "Apprenez-en davantage sur nos collaborateurs qualifiés et sur la manière dont ils peuvent vous aider au mieux."
+    },
+    "press": {
+      "title": "Appuyez sur",
+      "description": "Pourquoi ne pas jeter un œil à nos articles de presse les plus récents et voir ce qu'ils disent de nous."
+    },
+    "learnMore": "En savoir plus"
+  },
+  "newsletter": {
+    "title": "Restez à jour",
+    "description": "Inscrivez-vous avec votre adresse e-mail pour recevoir des nouvelles et des mises à jour.",
+    "placeholder": "Adresse e-mail",
+    "subscribe": "Abonnez-vous",
+    "success": "Merci pour votre abonnement !",
+    "privacy": "Nous respectons votre vie privée. Désabonnez-vous à tout moment."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Entrez en contact avec notre équipe",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "message": "Votre message",
+      "submit": "Envoyer un message",
+      "success": "Merci ! Nous vous répondrons bientôt."
+    },
+    "successTitle": "Message envoyé",
+    "successMessage": "Merci pour votre message. Nous vous répondrons sous peu.",
+    "errorTitle": "Erreur",
+    "errorMessage": "Échec de l'envoi du message. Veuillez réessayer.",
+    "rateLimitMessage": "Trop de soumissions. Veuillez patienter 15 minutes.",
+    "info": {
+      "title": "Visitez-nous",
+      "address": "Zurab Gorgiladze 63",
+      "city": "Batumi 6010, Géorgie",
+      "phone": "+995 577 34 57 67",
+      "email": "info@silkbeautysalon.online"
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Trouvez les réponses aux questions courantes sur nos traitements"
+  },
+  "prices": {
+    "title": "Liste de prix",
+    "subtitle": "Tarification transparente pour tous nos soins",
+    "treatment": "Soin",
+    "price": "Prix",
+    "from": "De"
+  },
+  "offers": {
+    "title": "Offres spéciales",
+    "subtitle": "Profitez de nos promotions en cours",
+    "bookNow": "Réservez maintenant",
+    "expires": "Expire"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Dernières nouvelles et informations",
+    "readMore": "Lire la suite"
+  },
+  "press": {
+    "title": "Presse et médias",
+    "subtitle": "Tel que présenté dans",
+    "features": "Parutions dans la presse"
+  },
+  "team": {
+    "title": "Notre équipe",
+    "subtitle": "Rencontrez nos praticiens experts",
+    "bookWith": "Livre avec"
+  },
+  "treatmentsPage": {
+    "title": "Nos traitements",
+    "metaTitle": "Traitements | Silk Beauty Salon",
+    "metaDescription": "Découvrez notre gamme complète de traitements esthétiques haut de gamme, notamment Botox, des fillers dermiques, des traitements au laser et des soins de la peau avancés à Batumi, Géorgie.",
+    "subtitle": "Découvrez notre gamme complète de soins esthétiques haut de gamme conçus pour rehausser votre beauté naturelle",
+    "ctaTitle": "Prêt à commencer votre voyage ?",
+    "ctaSubtitle": "Réservez une consultation avec l'un de nos praticiens experts pour discuter de vos objectifs esthétiques",
+    "ctaButton": "Réserver une consultation"
+  },
+  "beforeAfterPage": {
+    "title": "Résultats réels,",
+    "realPeople": "De vraies personnes",
+    "subtitle": "Chaque visage raconte une histoire. Parcourez notre collection de résultats de traitements, chacun représentant un voyage vers une confiance renouvelée.",
+    "sectionLabel": "Résultats réels",
+    "before": "Avant",
+    "after": "Après",
+    "disclaimer": "Les résultats individuels peuvent varier. Toutes les photos sont de vrais clients montrées avec leur consentement.",
+    "comingSoon": "bientôt disponible",
+    "galleryDescription": "Nous préparons notre galerie avant et après. Revenez bientôt.",
+    "duration": "Durée des résultats",
+    "sessions": "Séances",
+    "concerns": "Préoccupations résolues",
+    "results": "Résultats obtenus",
+    "seeMoreResults": "Voir tous les résultats",
+    "filter": "Filtrer par traitement",
+    "homeTeaserTitle": "La preuve est dans les résultats",
+    "ctaTitle": "Prêt à transformer votre look ?",
+    "ctaText": "Réservez une consultation avec l'un de nos praticiens experts pour discuter de vos objectifs de traitement",
+    "bookNow": "Réservez maintenant"
+  },
+  "booking": {
+    "selectService": "Sélectionnez le traitement",
+    "selectDate": "Sélectionnez la date",
+    "selectTimeSlot": "Sélectionnez le créneau horaire",
+    "fullName": "Nom complet",
+    "email": "E-mail",
+    "phone": "(en option)",
+    "message": "(facultatif)",
+    "servicePlaceholder": "Choisissez un traitement",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "phonePlaceholder": "+1 234 567 890",
+    "messagePlaceholder": "Toute exigence ou question spécifique...",
+    "dialogTitle": "Prendre rendez-vous",
+    "dialogDescription": "Planifiez votre consultation avec nos praticiens experts",
+    "continue": "Continuer",
+    "back": "Retour",
+    "confirmBooking": "Confirmer la réservation",
+    "booking": "Réservation...",
+    "booked": "(Réservé)",
+    "slotConflict": "Ce créneau horaire est déjà réservé. Veuillez sélectionner une autre heure.",
+    "bookingFailed": "Échec de la création de la réservation",
+    "unexpectedError": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+    "rateLimitMessage": "Trop de soumissions. Veuillez patienter 15 minutes.",
+    "bookingSummary": "Récapitulatif de réservation",
+    "service": "Soin",
+    "date": "Date",
+    "time": "Heure",
+    "bookingConfirmed": "Réservation confirmée !",
+    "thankYou": "Merci, {name}. Votre rendez-vous a été programmé.",
+    "bookingDetails": "Détails de la réservation",
+    "done": "Terminé",
+    "serviceConsultation": "Consultation",
+    "serviceBotox": "Botox Traitement",
+    "serviceFillers": "Fillers dermiques",
+    "serviceLaser": "Épilation laser",
+    "serviceRejuvenation": "Rajeunissement de la peau",
+    "servicePeel": "Peeling chimique",
+    "serviceMicroneedling": "Microneedling"
+  },
+  "statistics": {
+    "years": "Années d'expérience",
+    "clients": "Clients satisfaits",
+    "satisfaction": "Taux de satisfaction",
+    "awards": "Distinctions professionnelles"
+  },
+  "testimonial": {
+    "quote": "L'équipe de Silk Beauty Salon a transformé ma confiance. Les résultats sont naturels et correspondent exactement à mes attentes.",
+    "name": "Sarah Mitchell",
+    "location": "Batumi, Géorgie",
+    "imageAlt": "Portrait témoignage client satisfait"
+  },
+  "faqPage": {
+    "title": "Foire aux questions",
+    "subtitle": "Trouvez des réponses aux questions courantes sur notre clinique, nos traitements et notre processus de réservation",
+    "breadcrumb": "Questions fréquentes",
+    "stillHaveQuestions": "Vous avez encore des questions ?",
+    "cantFindAnswer": "Vous ne trouvez pas la réponse que vous cherchez ? Veuillez contacter notre équipe amicale.",
+    "contactUs": "Contactez-nous",
+    "bookConsultation": "Réserver une consultation"
+  },
+  "pricelistPage": {
+    "title": "Liste de prix",
+    "subtitle": "Tarification transparente pour tous nos soins esthétiques haut de gamme",
+    "noteTitle": "Remarque :",
+    "noteText": "Les prix sont des prix de départ et peuvent varier en fonction des besoins individuels. Une consultation est nécessaire pour déterminer le plan de traitement exact et le coût. Toutes les consultations comprennent une analyse cutanée complète et des recommandations de traitement personnalisées.",
+    "treatment": "Soin",
+    "duration": "Durée",
+    "priceFrom": "Prix à partir de",
+    "enquire": "Renseignez-vous",
+    "ctaTitle": "Prêt à réserver ?",
+    "ctaSubtitle": "Réservez une consultation pour discuter de vos objectifs de traitement et recevoir un devis personnalisé",
+    "ctaButton": "Réserver une consultation"
+  },
+  "conditionPage": {
+    "title": "Préoccupation",
+    "backTo": "Retour aux Conditions",
+    "aboutCondition": "{name}",
+    "symptoms": "Signes et symptômes courants",
+    "causes": "Causes courantes",
+    "treatments": "Options de soin",
+    "bookConsultation": "Réserver une consultation",
+    "needHelp": "Besoin d'aide ?",
+    "bookConsultationDesc": "Réservez une consultation avec l'un de nos praticiens experts",
+    "bookNow": "Réservez maintenant",
+    "otherConditions": "Autres conditions",
+    "viewAllConditions": "Voir toutes les conditions",
+    "recommendedTreatments": "Traitements recommandés"
+  },
+  "language": {
+    "select": "Sélectionner la langue",
+    "en": "English",
+    "ka": "ქართული",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "he": "עברית",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Désolé, nous n'avons pas trouvé la page que vous recherchez. Il a peut-être été déplacé ou supprimé.",
+    "goHome": "Rentrer à la maison",
+    "contactUs": "Contactez-nous"
+  },
+  "siteConfig": {
+    "awards": {
+      "awardWinning": "Primé",
+      "premierSalon": "Le premier salon de beauté de Batumi",
+      "featuredIn": "Tel que présenté dans le magazine géorgien de mode et de beauté"
+    },
+    "navigation": {
+      "treatments": "Traitements",
+      "conditions": "Conditions cutanées",
+      "about": "À propos",
+      "priceList": "Liste de prix",
+      "offers": "Offres",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "press": "Presse",
+      "blog": "Blogue",
+      "aboutUs": "À propos de nous",
+      "ourTeam": "Notre équipe",
+      "careers": "Carrières"
+    },
+    "team": {
+      "ninoRole": "Fondateur et praticien principal",
+      "ninoBio": "Nino est le fondateur de Silk Beauty Salon et un praticien esthétique renommé avec plus de 15 ans d'expérience dans l'industrie de la beauté. Elle est connue pour ses résultats naturels et son attention méticuleuse aux détails.",
+      "ketevanRole": "Praticien Esthétique Senior",
+      "ketevanBio": "Ketevan est un praticien esthétique hautement qualifié, spécialisé dans les fillers dermiques et les traitements cutanés. Son approche douce et son œil artistique garantissent des résultats magnifiques et naturels à chaque client.",
+      "mariamRole": "Praticienne en Esthétique",
+      "mariamBio": "Mariam apporte une richesse de connaissances en matière de traitements cutanés avancés et de thérapie au laser. Elle est passionnée par le fait d'aider ses clients à atteindre leurs objectifs en matière de peau grâce à des plans de traitement personnalisés.",
+      "sophiaRole": "Praticienne en Esthétique",
+      "sophiaBio": "Sophia est spécialisée dans le rajeunissement du visage non chirurgical et possède une vaste expérience dans les traitements antirides et les fillers dermiques. Ses clients adorent son approche naturelle et fraîche."
+    },
+    "faqs": {
+      "consultationQuestion": "À quoi dois-je m’attendre lors de ma première consultation ?",
+      "consultationAnswer": "Votre première consultation se concentre sur votre objectif, votre historique pertinent et vos préoccupations actuelles. Le salon confirmera le service approprié, les attentes réalistes, la préparation, le suivi, le professionnel désigné, le prix exact et si le traitement peut avoir lieu. Si vous ne savez pas quoi réserver, choisissez l’option consultation.",
+      "painQuestion": "Les traitements sont-ils douloureux ?",
+      "painAnswer": "Le confort varie selon le traitement, la zone du corps et la sensibilité individuelle. La page de traitement explique ce qui est connu ; le salon confirmera le processus et toutes les mesures de confort appropriées avant le traitement.",
+      "resultsQuestion": "Combien de temps durent les résultats ?",
+      "resultsAnswer": "Les résultats et leur durée dépendent du service exact et de l'individu. Utilisez la page de service pour le devis publié, puis demandez au salon de confirmer ce qui est réaliste pour vous. Aucune réponse de site Web ou de chatbot ne peut garantir un résultat.",
+      "downtimeQuestion": "Y a-t-il des temps d'arrêt ?",
+      "downtimeAnswer": "Le temps d’arrêt dépend du traitement. Certains services ne nécessitent aucune récupération planifiée, tandis que d'autres peuvent provoquer une rougeur, un gonflement, une sensibilité, des ecchymoses, une sécheresse ou une desquamation temporaires. Informez le salon du travail, des voyages ou d'un événement important avant de réserver.",
+      "bookingQuestion": "Comment prendre rendez-vous ?",
+      "bookingAnswer": "Envoyez une demande de réservation en ligne, appelez +995 577 34 57 67, utilisez WhatsApp à +995 577 28 68 55 ou envoyez un e-mail à info@silkbeautysalon.online. Une demande en ligne n'est confirmée que lorsque le salon vous contacte ; l'équipe s'efforce de répondre dans les 24 heures.",
+      "virtualQuestion": "Offrez-vous des consultations virtuelles ?",
+      "virtualAnswer": "La disponibilité de la consultation virtuelle n’est pas confirmée sur le site Web. Contactez le salon pour demander. Un message distant ou un chatbot ne peut pas approuver l'adéquation à un service qui nécessite une évaluation en personne.",
+      "brandsQuestion": "Quelles marques de produits utilisez-vous ?",
+      "brandsAnswer": "Les pages de service vérifiées identifient actuellement SkinPen et iS Clinical, le cas échéant. Pour tout rendez-vous, demandez au salon de confirmer le produit ou l'appareil exact qui sera utilisé ; le chatbot ne devinera pas les marques.",
+      "qualifiedQuestion": "Vos praticiens sont-ils qualifiés ?",
+      "qualifiedAnswer": "Avant une procédure, demandez au salon de confirmer qui l'effectuera et de fournir les qualifications ou autorisations actuelles pertinentes pour ce service. Le site Web et le chatbot ne publient pas les noms ou informations d’identification non vérifiés du personnel."
+    }
+  },
+  "termsConditions": {
+    "title": "Conditions générales",
+    "subtitle": "Conditions régissant votre utilisation de notre site Web et de nos services",
+    "breadcrumb": "Conditions générales",
+    "lastUpdated": "Dernière mise à jour : avril 2026",
+    "acceptanceTitle": "1. Acceptation des conditions",
+    "acceptanceText": "En accédant et en utilisant le site Web et les services Silk Beauty Salon, vous acceptez d'être lié par ces termes et conditions. Si vous n'êtes pas d'accord avec une partie de ces conditions, veuillez ne pas utiliser notre site Web ou nos services.",
+    "servicesTitle": "2. Services",
+    "servicesText": "Silk Beauty Salon propose des soins esthétiques et de beauté. Tous les traitements sont effectués par des professionnels qualifiés conformément aux normes de l'industrie et aux réglementations locales. Les résultats peuvent varier selon les individus.",
+    "bookingTitle": "3. Réservation et rendez-vous",
+    "bookingIntro": "Lors de la prise de rendez-vous :",
+    "bookingItem1": "Les rendez-vous doivent être réservés via notre système de réservation officiel ou par téléphone",
+    "bookingItem2": "Une consultation peut être requise avant certains traitements",
+    "bookingItem3": "Nous nous réservons le droit de refuser le service si des contre-indications sont identifiées",
+    "bookingItem4": "Les clients doivent arriver 15 minutes avant leur rendez-vous prévu",
+    "cancellationTitle": "4. Politique d'annulation",
+    "cancellationText": "Nous comprenons que les circonstances peuvent changer. Veuillez fournir un préavis d'au moins 48 heures en cas d'annulation et d'au moins 24 heures en cas de reprogrammation. Les annulations tardives ou les non-présentations peuvent être soumises à des frais.",
+    "paymentTitle": "5. Conditions de paiement",
+    "paymentIntro": "Conditions de paiement :",
+    "paymentItem1": "Le paiement est dû au moment de la prestation, sauf accord contraire",
+    "paymentItem2": "Nous acceptons les espèces et les principales cartes de crédit",
+    "paymentItem3": "Les chèques cadeaux doivent être présentés au moment de la réservation",
+    "paymentItem4": "Tous les prix sont en lari géorgien (GEL) et incluent les taxes applicables",
+    "refundTitle": "6. Politique de remboursement",
+    "refundText": "Les forfaits de soins ne sont pas remboursables. En cas d'insatisfaction concernant un traitement, veuillez nous contacter dans les 7 jours afin que nous puissions répondre de manière appropriée à vos préoccupations.",
+    "medicalTitle": "7. Avis de non-responsabilité médicale",
+    "medicalText": "Nos traitements ne remplacent pas un avis médical, un diagnostic ou un traitement. Demandez toujours l’avis de votre médecin ou d’un autre professionnel de la santé qualifié pour toute question que vous pourriez avoir concernant un problème de santé.",
+    "intellectualTitle": "8. Propriété intellectuelle",
+    "intellectualText": "Tout le contenu de ce site Web, y compris les textes, images, logos et conceptions, est la propriété de Silk Beauty Salon et est protégé par le droit d'auteur et d'autres lois sur la propriété intellectuelle. L'utilisation non autorisée est interdite.",
+    "liabilityTitle": "9. Limitation de responsabilité",
+    "liabilityText": "Dans toute la mesure permise par la loi, Silk Beauty Salon ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs découlant de votre utilisation de nos services.",
+    "governingTitle": "10. Loi applicable",
+    "governingText": "Ces termes et conditions sont régis par les lois de la Géorgie. Tout litige découlant des présentes conditions sera soumis à la compétence exclusive des tribunaux de Batumi, Géorgie.",
+    "changesTitle": "11. Modifications des conditions",
+    "changesText": "Nous nous réservons le droit de modifier les présentes Conditions Générales à tout moment. Les modifications entreront en vigueur immédiatement après leur publication sur le site Web. Votre utilisation continue de nos services constitue l’acceptation des conditions révisées.",
+    "contactTitle": "12. Coordonnées",
+    "contactText": "Pour toute question concernant ces conditions générales, veuillez nous contacter à"
+  },
+  "careers": {
+    "title": "Carrières",
+    "subtitle": "Rejoignez notre équipe de professionnels passionnés dédiés à l'amélioration de la beauté naturelle",
+    "breadcrumb": "Carrières",
+    "whyWorkTitle": "Pourquoi travailler avec nous ?",
+    "whyWorkText": "Chez Silk Beauty Salon, nous croyons que notre équipe est notre plus grand atout. Nous nous engageons à créer un environnement où les professionnels talentueux peuvent s'épanouir, grandir et faire une réelle différence dans la vie de nos clients. Rejoignez-nous pour offrir des traitements et des expériences esthétiques exceptionnelles.",
+    "benefitsTitle": "Avantages",
+    "benefit1Title": "Salaire compétitif",
+    "benefit1Desc": "Nous proposons des programmes de rémunération de pointe avec des primes de performance.",
+    "benefit2Title": "Développement professionnel",
+    "benefit2Desc": "Possibilités de formation continue et de certification pour faire progresser votre carrière.",
+    "benefit3Title": "Environnement Premium",
+    "benefit3Desc": "Travaillez dans une clinique moderne et luxueuse dotée d'équipements de pointe.",
+    "benefit4Title": "Culture d’équipe",
+    "benefit4Desc": "Rejoignez une équipe solidaire qui valorise la collaboration et l'excellence.",
+    "openingsTitle": "Ouvertures actuelles",
+    "openingsSubtitle": "Nous sommes toujours à la recherche de personnes talentueuses pour rejoindre notre équipe",
+    "job1Title": "Praticien Esthétique",
+    "job1Type": "Temps plein",
+    "job1Location": "Batumi, Géorgie",
+    "job1Desc": "Nous recherchons des praticiens esthétiques expérimentés pour rejoindre notre équipe en pleine croissance.",
+    "job2Title": "Réceptionniste de clinique",
+    "job2Type": "Temps plein",
+    "job2Location": "Batumi, Géorgie",
+    "job2Desc": "Réceptionniste sympathique et professionnel pour gérer les réservations et les demandes des clients.",
+    "job3Title": "Spécialiste des soins de la peau",
+    "job3Type": "Temps partiel",
+    "job3Location": "Batumi, Géorgie",
+    "job3Desc": "Spécialiste agréé des soins de la peau avec expérience dans les traitements et consultations de la peau.",
+    "applyNow": "Postulez maintenant",
+    "noRoleTitle": "Vous ne trouvez pas le bon rôle ?",
+    "noRoleText": "Nous sommes toujours intéressés à rencontrer des professionnels talentueux. Envoyez-nous votre CV et nous tiendrons compte de vous pour de futures opportunités.",
+    "sendCV": "Envoyez votre CV",
+    "contactUs": "Contactez-nous"
+  },
+  "internationalPage": {
+    "title": "Clients internationaux",
+    "subtitle": "Esthétique médicale de classe mondiale pour les touristes médicaux à Batumi, Géorgie",
+    "heroTitle": "Esthétique médicale de classe mondiale à Batumi, Géorgie",
+    "heroSubtitle": "Premium Botox, fillers et esthétique de la peau à prix géorgiens",
+    "welcome": "Bienvenue",
+    "welcomeText": "Nous parlons votre langue",
+    "bookConsultation": "Réservez une consultation virtuelle gratuite",
+    "viewPackages": "Voir les forfaits de traitement",
+    "aboutNana": {
+      "title": "Rencontrez Nana Gviniashvili",
+      "subtitle": "Propriétaire et praticien en esthétique médicale",
+      "bio": "Nana Gviniashvili est la propriétaire et seule praticienne du Silk Beauty Salon. Forte d'une formation approfondie en esthétique médicale et en esthétique cutanée, elle se spécialise dans le Botox, les fillers dermiques et les traitements cutanés avancés. Nana est connue pour ses résultats naturels, son attention méticuleuse aux détails et son approche personnalisée envers chaque client.",
+      "qualifications": "Qualifications et certifications",
+      "qualification1": "Praticien Médical Esthétique Certifié",
+      "qualification2": "Formation avancée Botox et fillers dermiques",
+      "qualification3": "Spécialiste de l'esthétique de la peau",
+      "qualification4": "Membre de l'Association géorgienne de médecine esthétique",
+      "languages": "Langues parlées",
+      "languagesText": "géorgien, anglais, russe"
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi choisir Silk Beauty Salon",
+      "subtitle": "Esthétique médicale haut de gamme aux prix géorgiens",
+      "costSavings": "Économies de coûts",
+      "costSavingsDesc": "50 à 70 % de moins qu'en Europe occidentale pour les mêmes produits haut de gamme",
+      "premiumProducts": "Produits haut de gamme",
+      "premiumProductsDesc": "Allergan (Juvederm), Galderma (Restylane), Merz - produits authentiques uniquement",
+      "personalizedCare": "Soins personnalisés",
+      "personalizedCareDesc": "Consultation directe avec le propriétaire-praticien - pas de délégation aux juniors",
+      "privacy": "Confidentialité",
+      "privacyDesc": "Destination discrète loin de chez soi - récupération au bord de la mer Noire",
+      "travelFriendly": "Adapté aux voyages",
+      "travelFriendlyDesc": "Aucun visa requis pour de nombreuses nationalités, vols directs disponibles"
+    },
+    "services": {
+      "title": "Nos services pour les clients internationaux",
+      "subtitle": "Des soins médico-esthétiques adaptés aux voyageurs",
+      "durationLabel": "Durée :",
+      "recoveryLabel": "Récupération :",
+      "resultsLabel": "Résultats :",
+      "lastsLabel": "Durée :",
+      "botox": {
+        "title": "Botox Injectables",
+        "description": "Traitements antirides, amincissement masséter, hyperhidrose",
+        "duration": "15-30 minutes",
+        "recovery": "Aucun - départ le jour même possible",
+        "results": "visible 3 à 7 jours",
+        "lasts": "3-6 mois"
+      },
+      "fillers": {
+        "title": "Fillers dermiques",
+        "description": "Lèvres, joues, menton, mâchoire, dessous des yeux, rhinoplastie non chirurgicale",
+        "duration": "30 à 60 minutes",
+        "recovery": "24 à 48 heures en cas de gonflement",
+        "results": "Immédiat, définitif dans 1 à 2 semaines",
+        "lasts": "6-18 mois"
+      }
+    },
+    "packages": {
+      "title": "Forfaits de traitement pour les touristes",
+      "subtitle": "Forfaits préconçus avec économies intégrées",
+      "package": "Forfait",
+      "includes": "Comprend",
+      "savings": "Économies",
+      "freshFace": "Visage frais",
+      "freshFaceDesc": "Botox (3 zones) + Lip Filler",
+      "totalRejuvenation": "Rajeunissement total",
+      "totalRejuvenationDesc": "Visage intégral Botox + Remplisseur de joues + Booster de peau",
+      "nonSurgicalLift": "Ascenseur non chirurgical",
+      "nonSurgicalLiftDesc": "Levage à 8 points (placement stratégique du remplissage)",
+      "vacationGlow": "Éclat de vacances",
+      "vacationGlowDesc": "Booster de peau + Peeling chimique léger"
+    },
+    "pricing": {
+      "title": "Tarification transparente",
+      "subtitle": "Traitements haut de gamme aux prix géorgiens",
+      "treatment": "Soin",
+      "priceGEL": "Prix (GEL)",
+      "priceUSD": "Environ USD",
+      "note": "Les mêmes traitements en Europe occidentale ou au Royaume-Uni peuvent coûter 2 à 3 fois plus cher. Obtenez des résultats premium aux prix géorgiens.",
+      "finalNote": "Prix final déterminé lors de la consultation en fonction des besoins individuels"
+    },
+    "journey": {
+      "title": "Votre parcours client international",
+      "subtitle": "Une expérience transparente, de la demande au suivi",
+      "step1Title": "Consultation avant l’arrivée",
+      "step1Desc": "WhatsApp/Consultation vidéo, discuter des objectifs, recevoir un devis personnalisé",
+      "step2Title": "Examen des antécédents médicaux",
+      "step2Desc": "Formulaire en ligne sécurisé, vérification des contre-indications avant le voyage",
+      "step3Title": "Planification des déplacements",
+      "step3Desc": "Conseils sur le calendrier du traitement par rapport aux dates de voyage",
+      "step4Title": "Consultation en personne",
+      "step4Desc": "Évaluation en face à face, plan de traitement, consentement",
+      "step5Title": "Journée de traitement",
+      "step5Desc": "Procédure en environnement stérile, anesthésiant fourni",
+      "step6Title": "Suivi immédiat",
+      "step6Desc": "Instructions, blocs de glace, contact d'urgence fournis",
+      "step7Title": "Suivi",
+      "step7Desc": "Vérification de 2 semaines (en personne ou virtuelle), ajustements si nécessaire",
+      "step8Title": "Assistance à long terme",
+      "step8Desc": "Accès continu pour les questions et la planification future du traitement"
+    },
+    "timing": {
+      "title": "Guide des délais de traitement",
+      "subtitle": "Planifiez votre voyage en pensant à la récupération",
+      "treatment": "Soin",
+      "minStay": "Séjour minimum",
+      "reason": "Raison",
+      "botoxStay": "Même jour OK",
+      "botoxReason": "Aucun temps d'arrêt visible",
+      "fillersStay": "24-48 heures",
+      "fillersReason": "Laisser le gonflement diminuer",
+      "peelStay": "5-7 jours",
+      "peelReason": "Phase de pelage visible",
+      "prpStay": "48 heures",
+      "prpReason": "Rougeur, ecchymoses possibles",
+      "comboStay": "3-5 jours",
+      "comboReason": "Plusieurs phases de récupération",
+      "seaWarning": "Évitez de nager dans la mer Noire pendant 48 heures après le traitement pour prévenir l'infection."
+    },
+    "trust": {
+      "title": "Confiance et sécurité",
+      "subtitle": "Votre sécurité est notre priorité",
+      "licensed": "Établissement autorisé",
+      "licensedDesc": "Certifié par le ministère géorgien de la Santé",
+      "certified": "Praticien certifié",
+      "certifiedDesc": "Professionnel médico-esthétique pleinement qualifié",
+      "authentic": "Produits authentiques",
+      "authenticDesc": "Allergan, Galderma, Merz - avec vérification du numéro de lot",
+      "hygiene": "Environnement stérile",
+      "hygieneDesc": "Protocoles de stérilisation de qualité médicale",
+      "emergency": "Protocoles d'urgence",
+      "emergencyDesc": "Assistance après-vente claire et contact d'urgence"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "subtitle": "Questions courantes des clients internationaux",
+      "q1": "Est-il sécuritaire de suivre des traitements en voyage ?",
+      "a1": "Oui, de nombreux traitements ont un temps d'arrêt minimal. Nous fournissons des instructions de suivi détaillées et sommes disponibles pour une assistance de suivi via WhatsApp ou par appel vidéo.",
+      "q2": "Quelles langues Nana parle-t-elle ?",
+      "a2": "Nana parle couramment le géorgien, l'anglais et le russe, assurant une communication claire avec les clients internationaux.",
+      "q3": "Comment réserver avant d'arriver ?",
+      "a3": "Contactez-nous via WhatsApp pour une consultation virtuelle gratuite. Nous discuterons de vos objectifs, vous fournirons un devis et planifierons votre rendez-vous.",
+      "q4": "Puis-je bénéficier d'un traitement la veille d'un vol ?",
+      "a4": "Botox conviennent pour les voyages le jour même. Pour les produits de remplissage, nous recommandons 24 à 48 heures avant le vol pour permettre au gonflement de s'atténuer.",
+      "q5": "Que faire si j'ai une réaction après mon retour à la maison ?",
+      "a5": "Nous fournissons un contact d'urgence 24h/24 et 7j/7 et proposons des consultations de suivi virtuelles. Pour les fillers dermiques, nous pouvons fournir des conseils aux praticiens locaux si nécessaire.",
+      "q6": "Utilisez-vous des produits authentiques ?",
+      "a6": "Absolument. Nous utilisons uniquement les produits Allergan (Juvederm), Galderma (Restylane) et Merz. Vous pouvez voir l’emballage et les numéros de lot pendant votre traitement.",
+      "q7": "Quels modes de paiement acceptez-vous ?",
+      "a7": "Nous acceptons les paiements en espèces (GEL, USD, EUR), Visa, Mastercard et sans contact, y compris Apple Pay et Google Pay.",
+      "q8": "Offrez-vous des suivis virtuels ?",
+      "a8": "Oui, nous proposons des consultations de suivi virtuelles gratuites pour tous les clients internationaux 2 semaines après le traitement."
+    },
+    "contact": {
+      "title": "Contact & Réservation",
+      "subtitle": "Plusieurs façons de nous joindre",
+      "whatsapp": "WhatsApp",
+      "whatsappDesc": "Canal principal - réponse la plus rapide",
+      "telegram": "Télégramme",
+      "telegramDesc": "Populaire dans les pays de la CEI",
+      "instagram": "Instagram",
+      "instagramDesc": "Voir notre travail et envoyez-nous un message privé",
+      "videoConsult": "Consultation vidéo",
+      "videoConsultDesc": "Consultation gratuite avant l'arrivée",
+      "email": "E-mail",
+      "emailDesc": "Pour des demandes détaillées",
+      "responseTime": "Nous répondons aux demandes internationales dans un délai de 2 heures pendant les heures ouvrables."
+    },
+    "location": {
+      "title": "Comment nous trouver",
+      "address": "Zurab Gorgiladze 63, Batumi 6010, Géorgie",
+      "landmarks": "Près du boulevard Batumi, à 5 minutes du vieux Batumi",
+      "timezone": "Heure de Géorgie (GMT+4)",
+      "viewMap": "Vue sur Google Maps"
+    },
+    "cta": {
+      "title": "Prêt à commencer votre voyage ?",
+      "subtitle": "Réservez votre consultation virtuelle gratuite dès aujourd'hui",
+      "button": "Réservez via WhatsApp"
+    }
+  },
+  "internationalNav": {
+    "main": "Clients internationaux",
+    "preArrival": "Guide avant l’arrivée",
+    "packages": "Forfaits de soins",
+    "pricing": "Tarifs",
+    "faq": "Questions fréquentes",
+    "mainDesc": "Aperçu pour les touristes médicaux",
+    "packagesDesc": "Offres groupées spéciales avec économies",
+    "pricingDesc": "Tarification transparente en GEL et USD",
+    "faqDesc": "Réponses aux questions courantes"
+  },
+  "privacyPolicy": {
+    "title": "Politique de confidentialité",
+    "subtitle": "Comment nous collectons, utilisons et protégeons vos informations personnelles",
+    "breadcrumb": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : avril 2026",
+    "introTitle": "1. Introduction",
+    "introText": "Silk Beauty Salon (« nous », « notre » ou « nos ») respecte votre vie privée et s'engage à protéger vos données personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site Web ou utilisez nos services.",
+    "collectTitle": "2. Informations que nous collectons",
+    "collectIntro": "Nous pouvons collecter les types d'informations suivants :",
+    "collectItem1": "Informations personnelles : nom, adresse e-mail, numéro de téléphone et autres coordonnées que vous fournissez lors de la prise de rendez-vous ou lorsque vous nous contactez.",
+    "collectItem2": "Informations médicales : antécédents de santé et de traitement nécessaires à la fourniture de services esthétiques.",
+    "collectItem3": "Données d’utilisation : informations sur la façon dont vous utilisez notre site Web, y compris l’adresse IP, le type de navigateur et les pages visitées.",
+    "collectItem4": "Cookies : nous utilisons des cookies pour améliorer votre expérience de navigation.",
+    "useTitle": "3. Comment nous utilisons vos informations",
+    "useIntro": "Nous utilisons vos informations personnelles aux fins suivantes :",
+    "useItem1": "Pour fournir et gérer nos services esthétiques",
+    "useItem2": "Pour traiter les réservations et les rendez-vous",
+    "useItem3": "Pour communiquer avec vous sur les traitements et promotions",
+    "useItem4": "Pour améliorer notre site Web et nos services",
+    "useItem5": "Pour respecter les obligations légales",
+    "sharingTitle": "4. Partage d'informations",
+    "sharingText": "Nous ne vendons pas vos informations personnelles. Nous pouvons partager vos données avec :",
+    "sharingItem1": "Fournisseurs de services qui nous assistent dans nos opérations",
+    "sharingItem2": "Professionnels de santé lorsque cela est nécessaire pour le traitement",
+    "sharingItem3": "Autorités judiciaires lorsque la loi l'exige",
+    "securityTitle": "5. Sécurité des données",
+    "securityText": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos informations personnelles contre tout accès, altération, divulgation ou destruction non autorisés.",
+    "rightsTitle": "6. Vos droits",
+    "rightsIntro": "Selon votre localisation, vous pouvez disposer des droits suivants :",
+    "rightsItem1": "Droit d'accès à vos données personnelles",
+    "rightsItem2": "Droit de rectification des informations inexactes",
+    "rightsItem3": "Droit de demander la suppression de vos données",
+    "rightsItem4": "Droit d'opposition au traitement",
+    "rightsItem5": "Droit à la portabilité des données",
+    "contactTitle": "7. Contactez-nous",
+    "contactIntro": "Si vous avez des questions concernant cette politique de confidentialité ou nos pratiques en matière de données, veuillez nous contacter :",
+    "changesTitle": "8. Modifications apportées à cette politique",
+    "changesText": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle politique sur cette page et en mettant à jour la date de « Dernière mise à jour »."
+  },
+  "mediaPress": {
+    "title": "Presse et médias",
+    "subtitle": "Lisez nos dernières couvertures de presse et reportages médiatiques",
+    "breadcrumb": "Presse et médias",
+    "feature1Title": "Les meilleures cliniques esthétiques à Batumi",
+    "feature1Date": "janvier 2024",
+    "feature1Excerpt": "Silk Beauty Salon est désignée comme l'une des meilleures cliniques esthétiques de Batumi...",
+    "feature2Title": "Le guide ultime des traitements non chirurgicaux",
+    "feature2Date": "décembre 2023",
+    "feature2Excerpt": "Conseils d'experts de l'équipe de Silk Beauty Salon sur les derniers traitements...",
+    "feature3Title": "Les meilleures cliniques de beauté à visiter cette année",
+    "feature3Date": "novembre 2023",
+    "feature3Excerpt": "Découvrez pourquoi le Silk Beauty Salon continue d'être une destination incontournable...",
+    "feature4Title": "L'essor de l'esthétique d'apparence naturelle",
+    "feature4Date": "octobre 2023",
+    "feature4Excerpt": "Comment des cliniques de premier plan comme Silk Beauty Salon changent l'approche...",
+    "feature5Title": "Conseils d'experts pour votre premier traitement",
+    "feature5Date": "septembre 2023",
+    "feature5Excerpt": "Les experts du Silk Beauty Salon partagent leurs conseils pour les nouveaux arrivants...",
+    "feature6Title": "Les traitements dont tout le monde parle",
+    "feature6Date": "août 2023",
+    "feature6Excerpt": "Des boosters de peau aux traitements au laser, nous explorons les procédures les plus populaires...",
+    "readArticle": "Lire l'article",
+    "mediaEnquiries": "Demandes des médias",
+    "mediaText": "Pour les demandes de presse et de médias, veuillez contacter notre équipe au",
+    "contactPress": "Contacter l'équipe de presse",
+    "mapAddress": "63 Zurab Gorgiladze Rue",
+    "mapCity": "Batumi, Géorgie"
+  },
+  "treatmentContent": {
+    "botox": {
+      "name": "Botox Injectables",
+      "description": "Traitements antirides avancés utilisant de la toxine botulique de qualité supérieure pour lisser les rides et restaurer une apparence jeune.",
+      "treatments": {
+        "anti-wrinkle": {
+          "name": "Injections antirides",
+          "shortDescription": "Lisse les rides et ridules pour une apparence rafraîchie et jeune.",
+          "description": "Les injections antirides sont l’un des traitements cosmétiques non chirurgicaux les plus populaires disponibles. Grâce à la toxine botulique, nous détendons temporairement les muscles du visage responsables des rides, ce qui donne une peau plus lisse et plus jeune.",
+          "benefits": [
+            "Réduit l'apparence des rides et ridules",
+            "Empêche la formation de nouvelles rides",
+            "Traitement rapide avec un temps d'arrêt minimal",
+            "Des résultats naturels",
+            "Effets longue durée (3-6 mois)"
+          ],
+          "howItWorks": "La toxine botulique est injectée dans des muscles spécifiques du visage à l'aide d'une aiguille fine. La toxine bloque les signaux nerveux envoyés à ces muscles, les empêchant de se contracter et de créer des rides.",
+          "aftercare": "Évitez de vous allonger pendant 4 heures, évitez de faire de l'exercice pendant 24 heures et évitez de frotter la zone traitée."
+        },
+        "masseter-botox": {
+          "name": "Botox",
+          "shortDescription": "Affinez la mâchoire et soulagez le grincement des dents grâce au traitement ciblé Botox.",
+          "description": "Masseter Botox est un traitement spécialisé qui cible les muscles masséters pour affiner le visage et traiter le grincement des dents.",
+          "benefits": [
+            "Affine et galbe le bas du visage",
+            "Réduit la tension et la douleur de la mâchoire",
+            "Traite le grincement des dents",
+            "Remodelage du visage non chirurgical"
+          ]
+        },
+        "hyperhidrosis": {
+          "name": "Traitement de l'hyperhidrose",
+          "shortDescription": "Traitez efficacement la transpiration excessive avec des résultats durables.",
+          "description": "avec Botox est une solution très efficace contre la transpiration excessive.",
+          "benefits": [
+            "Réduit considérablement la transpiration excessive",
+            "Résultats des 6 à 12 derniers mois",
+            "Rapide et peu invasif",
+            "Améliore la confiance"
+          ]
+        },
+        "migraine-treatment": {
+          "name": "Traitement de la migraine",
+          "shortDescription": "Réduit la fréquence et la gravité des migraines chroniques.",
+          "description": "Botox est un traitement approuvé par la FDA pour les migraines chroniques.",
+          "benefits": [
+            "Réduit la fréquence des crises de migraine",
+            "Diminue la gravité des maux de tête",
+            "Approuvé par la FDA pour les migraines chroniques",
+            "Soulagement durable"
+          ]
+        }
+      }
+    },
+    "dermal-fillers": {
+      "name": "Fillers dermiques",
+      "description": "Restaurez le volume, améliorez les caractéristiques et lissez les lignes avec nos traitements de comblement cutané à l'acide hyaluronique haut de gamme.",
+      "treatments": {
+        "lip-fillers": {
+          "name": "Remplisseurs de lèvres",
+          "shortDescription": "Améliorez le volume et la forme des lèvres pour des résultats magnifiques et naturels.",
+          "description": "sont l'un de nos traitements les plus populaires pour améliorer la forme, le volume et la définition de vos lèvres.",
+          "benefits": [
+            "Ajoute du volume et de la définition",
+            "Crée une amélioration d'apparence naturelle",
+            "Améliore la symétrie des lèvres",
+            "Résultats des 6 à 12 derniers mois"
+          ]
+        },
+        "cheek-fillers": {
+          "name": "Remplisseurs de joues",
+          "shortDescription": "Restaurez le volume et définissez les pommettes pour une apparence jeune et liftée.",
+          "description": "Les combleurs de joues sont un excellent moyen de redonner du volume au milieu du visage et de créer une belle définition des pommettes.",
+          "benefits": [
+            "Restaure le volume perdu des joues",
+            "Définit et sublime les pommettes",
+            "Lifte la zone médiane du visage",
+            "Résultats des 12 à 18 derniers mois"
+          ]
+        },
+        "chin-fillers": {
+          "name": "Remplisseurs de menton",
+          "shortDescription": "Améliore la projection du menton et améliore l'équilibre du visage.",
+          "description": "peuvent améliorer considérablement le profil et les proportions de votre visage.",
+          "benefits": [
+            "Améliore les proportions du visage",
+            "Améliore la projection du menton",
+            "Crée une meilleure définition de la mâchoire",
+            "Alternative non chirurgicale aux implants"
+          ]
+        },
+        "jaw-fillers": {
+          "name": "Remplisseurs de mâchoires",
+          "shortDescription": "Définissez et contournez votre mâchoire pour un profil sculpté.",
+          "description": "constituent un excellent traitement pour définir et modeler la mâchoire.",
+          "benefits": [
+            "Crée une mâchoire plus définie",
+            "Améliore la symétrie du visage",
+            "Procédure non chirurgicale",
+            "Résultats immédiats"
+          ]
+        },
+        "tear-fill": {
+          "name": "Remplisseurs de larmes",
+          "shortDescription": "Réduit l’apparence des creux et des cernes sous les yeux.",
+          "description": "s'attaque aux creux sous les yeux et aux cernes pour une apparence plus rafraîchie.",
+          "benefits": [
+            "Réduit les creux sous les yeux",
+            "Minimise les cernes",
+            "Crée une apparence rafraîchie",
+            "Résultats des 12 à 18 derniers mois"
+          ]
+        },
+        "nose-fillers": {
+          "name": "Rhinoplastie non chirurgicale",
+          "shortDescription": "Remodelez votre nez sans chirurgie à l'aide de fillers dermiques.",
+          "description": "La rhinoplastie non chirurgicale utilise des fillers dermiques pour remodeler et modeler le nez.",
+          "benefits": [
+            "Alternative non chirurgicale",
+            "Aucun temps d'arrêt",
+            "Résultats immédiats",
+            "Réversible si nécessaire"
+          ]
+        },
+        "temple-fillers": {
+          "name": "Remplisseurs de branches",
+          "shortDescription": "Redonne du volume aux tempes pour une apparence plus jeune.",
+          "description": "redonnent du volume à la zone temporale, créant une apparence plus équilibrée et plus jeune.",
+          "benefits": [
+            "Restaure le volume perdu",
+            "Crée un contour jeune",
+            "Équilibre les proportions du visage",
+            "Résultats des 12 à 18 derniers mois"
+          ]
+        },
+        "hand-fillers": {
+          "name": "Remplisseurs manuels",
+          "shortDescription": "Rajeunissez les mains vieillissantes avec une restauration de volume.",
+          "description": "Les fillers pour les mains redonnent du volume aux mains, réduisant l'apparence des veines et des tendons.",
+          "benefits": [
+            "Réduit les veines visibles",
+            "Crée des mains jeunes",
+            "Procédure rapide",
+            "Résultats des 12 à 18 derniers mois"
+          ]
+        }
+      }
+    },
+    "skin-treatments": {
+      "name": "Traitements de la peau",
+      "description": "Traitements cutanés avancés pour répondre à diverses préoccupations et obtenir une peau radieuse et saine.",
+      "treatments": {
+        "skin-boosters": {
+          "name": "Boosters de peau",
+          "shortDescription": "Hydratation en profondeur pour une peau éclatante et radieuse.",
+          "description": "Les boosters de peau procurent une hydratation en profondeur pour améliorer la qualité de la peau et créer un éclat radieux.",
+          "benefits": [
+            "Hydratation en profondeur",
+            "Texture de peau améliorée",
+            "Lueur rayonnante",
+            "Des résultats durables"
+          ]
+        },
+        "chemical-peels": {
+          "name": "Peeling chimique",
+          "shortDescription": "Renouvelez votre peau avec des traitements de peeling chimique professionnels.",
+          "description": "Les peelings chimiques exfolient la peau pour révéler une peau plus fraîche et plus jeune en dessous.",
+          "benefits": [
+            "Renouvellement de la peau",
+            "Texture améliorée",
+            "Pigmentation réduite",
+            "Un teint uniforme"
+          ]
+        },
+        "microneedling": {
+          "name": "Microneedling",
+          "shortDescription": "Stimule la production de collagène pour une peau plus ferme et plus lisse.",
+          "description": "Le microneedling stimule le processus naturel de guérison de la peau pour produire du collagène et de l'élastine.",
+          "benefits": [
+            "Stimule le collagène",
+            "Réduit les cicatrices",
+            "Améliore la texture de la peau",
+            "Minimise les pores"
+          ]
+        },
+        "laser-hair": {
+          "name": "Épilation laser",
+          "shortDescription": "Réduction permanente des poils pour une peau lisse et sans poils.",
+          "description": "permet une réduction durable des poils pour une peau lisse.",
+          "benefits": [
+            "Réduction permanente",
+            "Peau lisse",
+            "Sûr et efficace",
+            "Gain de temps"
+          ]
+        }
+      }
+    },
+    "laser-treatments": {
+      "name": "Traitements laser",
+      "description": "Traitements laser de pointe pour le rajeunissement de la peau et l'épilation.",
+      "treatments": {
+        "co2-laser": {
+          "name": "Resurfaçage au laser CO2",
+          "shortDescription": "Resurfaçage spectaculaire de la peau pour un teint jeune.",
+          "description": "élimine les couches de peau endommagée pour révéler une peau plus lisse et plus jeune.",
+          "benefits": [
+            "Des résultats spectaculaires",
+            "Réduit les rides",
+            "Améliore les cicatrices",
+            "Un teint uniforme"
+          ]
+        },
+        "ipl-therapy": {
+          "name": "Thérapie IPL",
+          "shortDescription": "Traitez la pigmentation, les dommages causés par le soleil et les lésions vasculaires.",
+          "description": "utilise la lumière pour traiter divers problèmes de peau, notamment la pigmentation et les dommages causés par le soleil.",
+          "benefits": [
+            "Traite la pigmentation",
+            "Réduit les dommages causés par le soleil",
+            "Améliore le teint",
+            "Temps d'arrêt minimal"
+          ]
+        },
+        "laser-vein": {
+          "name": "Élimination des veines au laser",
+          "shortDescription": "Supprimez les veines indésirables et les varicosités.",
+          "description": "L'élimination des veines au laser élimine en toute sécurité les veines indésirables du visage et du corps.",
+          "benefits": [
+            "Supprime les varicosités",
+            "Procédure sécurisée",
+            "Aucun temps d'arrêt",
+            "Une peau plus claire"
+          ]
+        }
+      }
+    },
+    "intimate-treatments": {
+      "name": "Traitements Intimes",
+      "description": "Traitements de rajeunissement intime discrets et professionnels.",
+      "treatments": {
+        "vaginal-rejuvenation": {
+          "name": "Rajeunissement vaginal",
+          "shortDescription": "Restaurez le confort et la confiance avec un rajeunissement intime.",
+          "description": "Le rajeunissement vaginal utilise la technologie laser pour améliorer la santé et la fonction vaginales.",
+          "benefits": [
+            "Confort amélioré",
+            "Confiance améliorée",
+            "Non chirurgical",
+            "Récupération rapide"
+          ]
+        },
+        "labia-filler": {
+          "name": "Remplisseur de lèvres",
+          "shortDescription": "Améliorez le confort et l'esthétique avec le traitement de comblement labial.",
+          "description": "répond aux préoccupations esthétiques et améliore le confort.",
+          "benefits": [
+            "Esthétique améliorée",
+            "Confort amélioré",
+            "Non chirurgical",
+            "Résultats naturels"
+          ]
+        }
+      }
+    },
+    "hair-treatments": {
+      "name": "Traitements capillaires",
+      "description": "Restauration avancée des cheveux et traitements du cuir chevelu.",
+      "treatments": {
+        "prp-hair": {
+          "name": "Restauration capillaire PRP",
+          "shortDescription": "Stimulez la croissance des cheveux avec les propres facteurs de croissance de votre corps.",
+          "description": "PRP utilise vos propres plaquettes pour stimuler les follicules pileux et favoriser la croissance.",
+          "benefits": [
+            "Stimule la croissance",
+            "Cheveux plus épais",
+            "Traitement naturel",
+            "Aucun temps d'arrêt"
+          ]
+        },
+        "mesotherapy-hair": {
+          "name": "Mésothérapie capillaire",
+          "shortDescription": "Injections riches en nutriments pour nourrir le cuir chevelu et les follicules pileux.",
+          "description": "La mésothérapie capillaire fournit des nutriments essentiels directement au cuir chevelu pour favoriser la croissance des cheveux.",
+          "benefits": [
+            "Nourrit le cuir chevelu",
+            "Favorise la croissance",
+            "Réduit la chute des cheveux",
+            "Qualité des cheveux améliorée"
+          ]
+        }
+      }
+    },
+    "diagnostic": {
+      "name": "Diagnostic",
+      "description": "Outils avancés d'analyse cutanée et de diagnostic pour personnaliser votre plan de traitement."
+    },
+    "tear-trough": {
+      "name": "Remplisseurs de cuvettes de déchirure",
+      "shortDescription": "Réduisez les creux et les cernes sous les yeux pour un look rafraîchi.",
+      "description": "Les fillers des larmes sont un traitement spécialisé pour traiter les creux et les cernes sous les yeux. En vieillissant, nous perdons du volume sous les yeux, créant une apparence fatiguée et creuse. Ce traitement place soigneusement un filler à base d'acide hyaluronique dans la zone du creux lacrymal pour restaurer le volume, réduire l'apparence des cernes et créer une apparence plus fraîche et plus reposée. Il s’agit d’un traitement techniquement exigeant qui nécessite des praticiens experts pour des résultats optimaux.",
+      "benefits": [
+        "Réduit les creux sous les yeux",
+        "Minimise l'apparence des cernes",
+        "Crée une apparence plus fraîche et reposée",
+        "Traitement non chirurgical",
+        "Résultats des 12 à 18 derniers mois"
+      ]
+    },
+    "non-surgical-rhinoplasty": {
+      "name": "Rhinoplastie non chirurgicale",
+      "shortDescription": "Remodelez et affinez votre nez sans chirurgie.",
+      "description": "La rhinoplastie non chirurgicale, également connue sous le nom de « travail du nez liquide », est une excellente option pour ceux qui souhaitent améliorer l'apparence de leur nez sans chirurgie. À l’aide de fillers dermiques, nous pouvons lisser les bosses, corriger l’asymétrie, relever une pointe nasale tombante et améliorer la forme générale de votre nez. Ce traitement est rapide, avec un temps d'arrêt minimal et les résultats sont visibles immédiatement. C'est parfait pour ceux qui souhaitent « essayer » une nouvelle forme de nez avant de se lancer dans une intervention chirurgicale.",
+      "benefits": [
+        "Corrige les bosses et l'asymétrie",
+        "Relève la pointe nasale tombante",
+        "Aucune intervention chirurgicale ni temps d'arrêt",
+        "Résultats immédiats",
+        "Résultats des 12 à 18 derniers mois"
+      ]
+    },
+    "marionette-lines": {
+      "name": "Lignes de marionnettes",
+      "shortDescription": "Adoucit les lignes de marionnette pour une apparence plus jeune et rehaussée.",
+      "description": "Les lignes de marionnettes sont les lignes verticales qui s'étendent des coins de la bouche jusqu'au menton, donnant une apparence de marionnette. Ces rides se développent avec l’âge en raison d’une perte de volume et d’une fermeté réduite. Les fillers dermiques peuvent adoucir efficacement ces rides en remplaçant le volume perdu et en soutenant la peau. Ce traitement peut améliorer considérablement l’apparence d’une bouche baissée et lui redonner une expression plus jeune et plus joyeuse.",
+      "benefits": [
+        "Adoucit les rides profondes autour de la bouche",
+        "Améliore l'apparence baissée",
+        "Restaure les contours de jeunesse",
+        "Traitement rapide avec un temps d'arrêt minimal",
+        "Résultats des 12 à 18 derniers mois"
+      ]
+    },
+    "nasolabial-folds": {
+      "name": "Plis nasogéniens",
+      "shortDescription": "Adoucit les rides du sourire pour une apparence rafraîchie et jeune.",
+      "description": "Les sillons nasogéniens, souvent appelés « rides du sourire » ou « rides du rire », sont des rides profondes qui s'étendent des côtés du nez jusqu'aux commissures de la bouche. Bien que ces rides fassent naturellement partie de l’expression du visage, elles peuvent se creuser avec l’âge en raison d’une perte de volume et d’une fermeté réduite. Les fillers dermiques peuvent efficacement adoucir ces rides en remplaçant le volume perdu, créant ainsi une apparence plus lisse et plus jeune tout en conservant vos expressions naturelles.",
+      "benefits": [
+        "Adoucit les rides profondes du sourire",
+        "Redonne une apparence jeune",
+        "Conserve les expressions naturelles",
+        "Traitement rapide",
+        "Résultats des 12 à 18 derniers mois"
+      ]
+    },
+    "neck-rejuvenation": {
+      "name": "Rajeunissement du cou",
+      "shortDescription": "Lissez les lignes et restaurez les contours de la jeunesse du cou.",
+      "description": "Les traitements de rajeunissement du cou s'attaquent aux signes du vieillissement qui apparaissent souvent dans la région du cou, notamment les lignes horizontales, les bandes verticales et la fermeté réduite. En utilisant une combinaison de Botox et de fillers dermiques, nous pouvons lisser les lignes, détendre les bandes de cou proéminentes et restaurer un contour du cou plus jeune qui correspond à votre visage rajeuni.",
+      "benefits": [
+        "Lisse les lignes horizontales du cou",
+        "Détend les bandes de cou proéminentes",
+        "Restaure le contour jeune du cou",
+        "Traitement non chirurgical",
+        "Temps d'arrêt minimal"
+      ]
+    },
+    "decolletage-treatment": {
+      "name": "Traitement Décolleté",
+      "shortDescription": "Redonne une peau lisse et jeune à la zone du décolleté.",
+      "description": "La zone du décolleté est souvent l'un des premiers endroits à montrer des signes de vieillissement, avec des rides, une peau crépue et des dommages causés par le soleil qui deviennent visibles. Nos soins du décolleté utilisent une combinaison de boosters de peau, de microneedling et de soins de la peau spécialisés pour redonner douceur, hydratation et une apparence jeune à cette zone délicate.",
+      "benefits": [
+        "Lisse les rides de la poitrine",
+        "Améliore la texture de la peau",
+        "Restaure l'hydratation",
+        "Réduit l’apparence des dommages causés par le soleil",
+        "Crée un décolleté jeune"
+      ]
+    },
+    "hand-rejuvenation": {
+      "name": "Rajeunissement des mains",
+      "shortDescription": "Redonne volume et jeunesse aux mains vieillissantes.",
+      "description": "Les mains révèlent souvent notre âge avant notre visage, avec des veines, des tendons et une perte de volume visibles qui deviennent visibles avec le temps. Le rajeunissement des mains utilise des fillers dermiques pour restaurer le volume, minimisant l'apparence des veines et des tendons tout en créant des mains lisses et d'apparence jeune qui correspondent à votre apparence rajeunie.",
+      "benefits": [
+        "Redonne du volume aux mains",
+        "Minimise les veines visibles",
+        "Réduit la proéminence des tendons",
+        "Crée une apparence jeune",
+        "Des résultats durables"
+      ]
+    },
+    "clear-brilliant": {
+      "name": "Transparent + Brillant",
+      "shortDescription": "Traitement laser doux pour une peau plus lisse et plus éclatante.",
+      "description": "Clear + Brilliant est un traitement laser fractionné doux conçu pour prévenir et traiter les premiers signes du vieillissement. Ce traitement crée des zones de traitement microscopiques dans la peau, stimulant la production de collagène et remplaçant la peau endommagée par des tissus sains et d'apparence plus jeune. Il est parfait pour ceux qui souhaitent conserver l’apparence jeune de leur peau ou traiter les premiers signes du vieillissement, les ridules et les problèmes de texture de la peau avec un minimum de temps d’arrêt.",
+      "benefits": [
+        "Améliore la texture et le teint de la peau",
+        "Réduit les ridules",
+        "Minimise la taille des pores",
+        "Temps d'arrêt minimal",
+        "Prévient les signes du vieillissement"
+      ]
+    },
+    "cutera-aviclear": {
+      "name": "Cutera AviClear",
+      "shortDescription": "Traitement laser révolutionnaire ciblant l'acné à sa source.",
+      "description": "AviClear est un traitement laser révolutionnaire approuvé par la FDA, spécialement conçu pour traiter l'acné. Il s'agit du premier et unique appareil de ce type, utilisant un laser d'une longueur d'onde de 1 726 nm pour cibler et supprimer la production de sébum dans les glandes sébacées. Ce traitement s'attaque à l'acné à sa source, offrant des résultats durables sans avoir recours à des médicaments. La plupart des patients constatent une amélioration significative avec seulement trois traitements de 30 minutes.",
+      "benefits": [
+        "Approuvé par la FDA pour le traitement de l'acné",
+        "Cible la production de sébum",
+        "Aucun médicament requis",
+        "Des résultats durables",
+        "Convient à tous les types de peau"
+      ]
+    },
+    "cutera-c02-laser": {
+      "name": "Laser CO2 Cutera",
+      "shortDescription": "Resurfaçage puissant pour les rides profondes, les cicatrices et les dommages causés par le soleil.",
+      "description": "Le laser CO2 Cutera est un puissant traitement de resurfaçage de la peau qui répond à des problèmes cutanés importants, notamment les rides profondes, les cicatrices d'acné, les dommages causés par le soleil et la texture inégale. Ce laser CO2 fractionné crée des micro-lésions cutanées contrôlées, stimulant une production importante de collagène et le renouvellement cutané. C'est l'un des traitements les plus efficaces pour un rajeunissement spectaculaire de la peau, avec des résultats qui peuvent durer des années.",
+      "benefits": [
+        "Rajeunissement spectaculaire de la peau",
+        "Traite les rides profondes",
+        "Améliore les cicatrices d'acné",
+        "Résout les dommages causés par le soleil",
+        "Des résultats durables"
+      ]
+    },
+    "cutera-secret-pro-rf-microneedling": {
+      "name": "Cutera Secret PRO RF Microneedling",
+      "shortDescription": "RF et microneedling combinés pour un rajeunissement puissant de la peau.",
+      "description": "Le Cutera Secret PRO combine l'énergie radiofréquence avec le microneedling pour un rajeunissement puissant de la peau. Le traitement délivre de l'énergie RF à travers de minuscules aiguilles, créant des micro-blessures contrôlées tout en chauffant les couches profondes de la peau. Cette approche à double action stimule une production significative de collagène, améliorant ainsi la texture de la peau, les ridules, les rides et les cicatrices d'acné avec moins de temps d'arrêt que le resurfaçage traditionnel.",
+      "benefits": [
+        "Stimule la production de collagène",
+        "Améliore la texture de la peau",
+        "Réduit les ridules",
+        "Minimise les cicatrices d’acné",
+        "Resserre la peau"
+      ]
+    },
+    "cutera-excel-v-ipl": {
+      "name": "Cutera Excel V+ IPL",
+      "shortDescription": "Laser avancé pour les problèmes vasculaires, la pigmentation et le rajeunissement de la peau.",
+      "description": "Le Cutera Excel V+ est un système laser vasculaire et pigmentaire avancé qui traite un large éventail de problèmes de peau, notamment la rosacée, les veines du visage, les dommages causés par le soleil, les taches de vieillesse et les pigments indésirables. Ce système polyvalent utilise des longueurs d’onde de 532 nm et de 1 064 nm pour cibler divers problèmes avec précision. Il est excellent pour le rajeunissement global de la peau et pour créer un teint plus uniforme et plus clair.",
+      "benefits": [
+        "Traite la rosacée et les veines du visage",
+        "Réduit les dommages causés par le soleil",
+        "Améliore le teint",
+        "Traitement rapide",
+        "Aucun temps d'arrêt"
+      ]
+    },
+    "candela-vbeam-laser": {
+      "name": "Candela VBeam Laser",
+      "shortDescription": "Laser de référence pour les affections vasculaires et les rougeurs.",
+      "description": "Le Candela VBeam est un laser à colorant pulsé spécialement conçu pour traiter les affections vasculaires. C'est la référence en matière de traitement de la rosacée, des veines du visage, des taches de vin de Porto, des hémangiomes et autres lésions vasculaires. Le laser cible les vaisseaux sanguins sans endommager les tissus environnants, ce qui en fait un traitement sûr et efficace contre les rougeurs et les problèmes vasculaires. Il est également efficace pour traiter les vergetures et les cicatrices.",
+      "benefits": [
+        "Traite la rosacée",
+        "Supprime les veines du visage",
+        "Réduit les rougeurs",
+        "Améliore les cicatrices",
+        "Temps d'arrêt minimal"
+      ]
+    },
+    "bbl-hero": {
+      "name": "BBL HÉROS",
+      "shortDescription": "IPL avancé pour le rajeunissement et la pigmentation de la peau.",
+      "description": "BBL HERO (BroadBand Light High Energy Rapid Output) est une technologie IPL avancée pour la pigmentation visible, les rougeurs et les signes de vieillissement. La technologie HERO permet une couverture rapide et uniforme sur les zones de traitement sélectionnées. Il est excellent contre les dommages causés par le soleil, les taches de vieillesse, la rosacée et le rajeunissement général de la peau.",
+      "benefits": [
+        "Temps de traitement rapide",
+        "Traite les dommages causés par le soleil",
+        "Réduit la pigmentation",
+        "Temps de traitement rapide",
+        "Améliore le teint"
+      ]
+    },
+    "moxi-laser": {
+      "name": "Laser MOXI",
+      "shortDescription": "Laser fractionné doux pour une peau rafraîchie et éclatante.",
+      "description": "MOXI est un laser fractionné doux qui offre un traitement non ablatif pour le rajeunissement de la peau. Il est conçu pour rafraîchir et revitaliser la peau avec un minimum de temps d'arrêt, ce qui le rend parfait pour ceux qui souhaitent un traitement « à l'heure du déjeuner » qui donne de vrais résultats. MOXI améliore la texture, le teint et l'éclat général de la peau tout en étant suffisamment doux pour tous les types et tons de peau. Il est excellent pour les soins préventifs et pour maintenir une peau saine et éclatante.",
+      "benefits": [
+        "Temps d'arrêt minimal",
+        "Tous types de peau",
+        "Améliore la texture",
+        "Améliore l'éclat",
+        "Traitement préventif"
+      ]
+    },
+    "moxi-and-bbl": {
+      "name": "MOXI et BBL",
+      "shortDescription": "Traitement combiné pour un rajeunissement complet de la peau.",
+      "description": "La combinaison des traitements MOXI et BBL offre un rajeunissement complet de la peau. MOXI s'attaque à la texture et stimule le collagène, tandis que BBL cible les problèmes pigmentaires et vasculaires. Ensemble, ils offrent une puissante synergie qui améliore la qualité globale, le tonus, la texture et l’éclat de la peau. Cette combinaison est idéale pour ceux qui souhaitent des résultats significatifs avec un temps d'arrêt minimal.",
+      "benefits": [
+        "Rajeunissement complet",
+        "S'adresse à la texture et au pigment",
+        "Temps d'arrêt minimal",
+        "Résultats synergiques",
+        "Tous types de peau"
+      ]
+    },
+    "endolift": {
+      "name": "Endolift",
+      "shortDescription": "Laser mini-invasif pour l'affinement du contour du visage.",
+      "description": "Endolift est un traitement laser innovant mini-invasif pour l'affinement du contour du visage et la stimulation du collagène. La fibre laser est insérée sous la peau par de minuscules incisions, fournissant une énergie qui soutient une mâchoire, des bajoues et des problèmes de double menton plus nets. Les résultats incluent un resserrement immédiat avec une amélioration continue sur plusieurs mois.",
+      "benefits": [
+        "Mini-invasive",
+        "Support contour du visage",
+        "Stimulation du collagène",
+        "Résultats immédiats",
+        "Amélioration continue"
+      ]
+    },
+    "is-clinical-fire-ice-peel": {
+      "name": "iS Clinical Fire & Ice Peel",
+      "shortDescription": "Traitement de resurfaçage intensif pour des résultats spectaculaires et instantanés.",
+      "description": "Le iS Clinical Fire & Ice Peel est un traitement professionnel axé sur les résultats, conçu pour resurfacer la peau, en traitant les ridules, les rides et la texture inégale. Connu sous le nom de « Red Carpet Peel », ce traitement clinique intensif combine deux phases de traitement : le resurfaçage intensif « Fire » et le masque rajeunissant « Ice ». Il fournit des résultats spectaculaires avec peu ou pas de temps d'arrêt, ce qui le rend parfait avant des événements spéciaux.",
+      "benefits": [
+        "Résultats visibles immédiats",
+        "Refait surface le grain de peau",
+        "Réduit les ridules",
+        "Améliore le teint",
+        "Peu ou pas de temps d'arrêt"
+      ]
+    },
+    "mesoestetic-cosmelan-peel": {
+      "name": "Peeling cosmelan mésoestétique",
+      "shortDescription": "Traitement dépigmentant professionnel pour les taches brunes et le mélasma.",
+      "description": "Le Cosmelan Peel est un traitement dépigmentant de renommée mondiale qui réduit et élimine efficacement les taches brunes et le mélasma. Ce traitement de qualité professionnelle agit en inhibant l'enzyme responsable de la production de mélanine, traitant ainsi efficacement l'hyperpigmentation à sa source. Le traitement comprend à la fois un masque en clinique et des produits d'entretien à emporter pour des résultats optimaux.",
+      "benefits": [
+        "Traite le mélasma",
+        "Réduit les taches brunes",
+        "Unifie le teint",
+        "Des résultats durables",
+        "Formule professionnelle"
+      ]
+    },
+    "obagi-blue-radiance-peel": {
+      "name": "Peeling éclat bleu Obagi",
+      "shortDescription": "Peeling chimique pour une peau plus lisse et plus lumineuse.",
+      "description": "L'Obagi Blue Radiance Peel est un peeling chimique superficiel à moyen qui utilise un mélange d'acides salicylique, glycolique et lactique pour exfolier et améliorer la texture et le teint de la surface de la peau. Ce traitement est excellent pour ceux qui souhaitent améliorer l’apparence de la peau photoendommagée, des ridules et des cicatrices d’acné légères avec un temps d’arrêt minimal. Plusieurs traitements permettent une amélioration progressive.",
+      "benefits": [
+        "Améliore la texture de la peau",
+        "Réduit les ridules",
+        "Résout les dommages causés par les photos",
+        "Temps d’arrêt minimal",
+        "Résultats progressifs"
+      ]
+    },
+    "obagi-nu-derm": {
+      "name": "Obagi Nu-Derm",
+      "shortDescription": "Système de soins transformateur pour les photodommages et le vieillissement.",
+      "description": "Le système Obagi Nu-Derm est un protocole de soin complet qui transforme la peau au niveau cellulaire. Ce système dispensé par un médecin est conçu pour traiter les photodommages modérés à graves, l'hyperpigmentation et le vieillissement prématuré. Le système comprend plusieurs produits qui agissent ensemble pour accélérer le renouvellement cellulaire, améliorer le teint et révéler une peau plus saine et plus jeune sur 12 à 18 semaines.",
+      "benefits": [
+        "Transformation complète",
+        "Traite les dommages causés par les photos",
+        "Améliore l'hyperpigmentation",
+        "Accélère le renouvellement cellulaire",
+        "Des résultats durables"
+      ]
+    },
+    "skinpen-microneedling": {
+      "name": "SkinPen Microneedling",
+      "shortDescription": "approuvé par la FDA pour les cicatrices, les lignes et la texture.",
+      "description": "SkinPen est le premier appareil de microneedling approuvé par la FDA, délivrant des micro-blessures précises et contrôlées pour stimuler le processus naturel de guérison de la peau. Ce traitement améliore efficacement les cicatrices d’acné, les ridules, les rides et la texture globale de la peau. L'appareil crée des milliers de canaux microscopiques dans la peau, déclenchant la production de collagène et d'élastine pour une peau plus lisse et d'apparence plus saine. Les résultats continuent de s'améliorer pendant des mois après le traitement.",
+      "benefits": [
+        "Dispositif approuvé par la FDA",
+        "Améliore les cicatrices d'acné",
+        "Réduit les ridules",
+        "Production de collagène naturel",
+        "Convient à tous les types de peau"
+      ]
+    },
+    "dermamelan-intimate-peel": {
+      "name": "Dermamelan Peeling Intime",
+      "shortDescription": "Dépigmentation spécialisée pour les zones intimes.",
+      "description": "Dermamelan Intimate est un traitement dépigmentant spécialisé conçu pour les zones intimes, notamment les régions génitales et périanales. Ce traitement professionnel réduit de manière sûre et efficace l’hyperpigmentation dans ces zones sensibles, améliorant ainsi le teint de la peau et renforçant la confiance en soi. Le traitement comprend des composants en clinique et à domicile pour des résultats optimaux.",
+      "benefits": [
+        "Sans danger pour les zones intimes",
+        "Réduit l'hyperpigmentation",
+        "Améliore le teint",
+        "Renforce la confiance",
+        "Traitement professionnel"
+      ]
+    },
+    "intimate-laser-hair-removal": {
+      "name": "Épilation intime au laser",
+      "shortDescription": "Réduction permanente des poils des zones intimes.",
+      "description": "Notre service d’épilation intime au laser offre une réduction sûre, efficace et permanente des poils des zones sensibles. Utilisant une technologie laser avancée avec refroidissement intégré pour plus de confort, nous proposons des options d’épilation brésilienne et hollywoodienne. Nos praticiens qualifiés veillent à votre confort et à votre intimité tout au long du traitement, la plupart des patients obtenant une réduction significative de leurs poils après 6 à 8 séances.",
+      "benefits": [
+        "Réduction permanente des poils",
+        "Sûr et confortable",
+        "Confidentialité totale",
+        "Options brésiliennes et hollywoodiennes",
+        "Technologie de refroidissement avancée"
+      ]
+    },
+    "observe-skin-scanner": {
+      "name": "Observer le scanner cutané",
+      "shortDescription": "Analyse cutanée avancée pour une planification de traitement personnalisée.",
+      "description": "L'Observe Skin Scanner est un système d'imagerie avancé qui analyse votre peau à plusieurs couches pour révéler des problèmes sous-jacents non visibles à l'œil nu. Cette analyse complète examine la pigmentation, les dommages causés par les UV, les conditions vasculaires, les pores, les rides et la texture de la peau. Les résultats guident votre plan de traitement personnalisé pour des résultats optimaux.",
+      "benefits": [
+        "Analyse multicouche",
+        "révèle des problèmes cachés",
+        "Plan de traitement personnalisé",
+        "Suit les progrès",
+        "Expérience éducative"
+      ]
+    },
+    "hair-extensions": {
+      "name": "Extensions de cheveux",
+      "shortDescription": "Extensions de couleurs assorties pour des cheveux plus fournis, plus longs et d'apparence naturelle.",
+      "description": "Les extensions de cheveux sont planifiées en fonction de votre couleur naturelle, de votre densité, de votre style de vie et de la finition souhaitée. Lors de la consultation, nous évaluons les cheveux, sélectionnons la bonne méthode d'extension, planifions le mélange et expliquons l'entretien afin que le résultat soit confortable, poli et naturel sous tous les angles.",
+      "benefits": [
+        "Ajoute de la longueur et du volume",
+        "Correspondance des couleurs personnalisée",
+        "Planification des mélanges naturels",
+        "Guide de maintenance",
+        "Résultat fini salon"
+      ]
+    },
+    "nails": {
+      "name": "Ongles",
+      "shortDescription": "Services de manucure, pédicure et finition des ongles avec soins détaillés.",
+      "description": "Nos rendez-vous pour les ongles se concentrent sur une mise en forme nette, un soin précis des cuticules, une sélection de vernis et une finition raffinée. Les services peuvent être adaptés à l'entretien quotidien, à un événement spécial ou à une tenue plus longue, en accordant une attention particulière à la santé et au confort des ongles.",
+      "benefits": [
+        "Mise en forme nette et soin des cuticules",
+        "Finition salon polie",
+        "Options mains et pieds",
+        "Guide de couleur et de finition",
+        "Rendez-vous axé sur le confort"
+      ]
+    },
+    "lashes": {
+      "name": "Cils",
+      "shortDescription": "Services de rehaussement, de coiffage et de finition de cils façonnés autour de vos yeux.",
+      "description": "Lash sont conçus pour améliorer le contour des yeux avec une finition naturelle et bien formée. Nous évaluons la longueur, la direction et le résultat souhaité de vos cils avant de vous recommander un lifting, un rendez-vous de coiffure ou une finition de cils plus complète avec un suivi clair.",
+      "benefits": [
+        "Améliore les cils naturels",
+        "Planification de forme personnalisée",
+        "Ouvre et définit le contour des yeux",
+        "Finition nécessitant peu d’entretien",
+        "Instructions de suivi claires"
+      ]
+    }
+  },
+  "conditionContent": {
+    "ageing-skin": {
+      "name": "Peau vieillissante",
+      "shortDescription": "Traitez les ridules, les rides et la perte d'élasticité avec nos traitements anti-âge.",
+      "description": "Le vieillissement cutané est un processus naturel caractérisé par le développement de ridules, de rides, une perte d'élasticité et des changements dans la texture et le teint de la peau. En vieillissant, notre peau produit moins de collagène et d’élastine, ce qui entraîne un relâchement, des rides et une perte de volume de jeunesse. Des facteurs environnementaux tels que l’exposition au soleil, le tabagisme et la pollution peuvent accélérer ce processus. Notre clinique propose une gamme complète de traitements pour traiter les différents signes du vieillissement, des traitements préventifs aux procédures correctives avancées. Que vous soyez préoccupé par les ridules, les rides profondes, la perte de volume ou la perte de fermeté, nous avons des solutions qui peuvent vous aider à retrouver une apparence plus jeune et rafraîchie.",
+      "symptoms": [
+        "Rides et ridules",
+        "Perte d’élasticité cutanée",
+        "Relâchement cutané",
+        "Perte de volume au niveau des joues et des tempes",
+        "Sillons nasogéniens profonds",
+        "Lignes de marionnettes",
+        "Peau fine et crépue"
+      ],
+      "causes": [
+        "Diminution naturelle de la production de collagène",
+        "Dommages causés par le soleil (photovieillissement)",
+        "Perte de graisse et de volume du visage",
+        "Diminution de l'hydratation de la peau",
+        "Expressions faciales répétitives",
+        "Facteurs liés au mode de vie (tabagisme, régime alimentaire, stress)"
+      ],
+      "treatments": [
+        "Injections anti-rides pour détendre les muscles du visage",
+        "Fillers dermiques pour restaurer le volume",
+        "Traitements de rajeunissement de la peau pour améliorer la texture",
+        "Resurfaçage au laser pour améliorer la texture",
+        "Soins de la peau de qualité médicale"
+      ]
+    },
+    "acne": {
+      "name": "Acné et éruptions cutanées",
+      "shortDescription": "Des soins efficaces pour une peau plus claire et plus saine.",
+      "description": "L'acné est une affection cutanée courante qui touche les personnes de tous âges.",
+      "symptoms": [
+        "Points noirs",
+        "Têtes blanches",
+        "Papules",
+        "Pustules",
+        "Kystes",
+        "Cicatrices"
+      ],
+      "causes": [
+        "Production excédentaire de pétrole",
+        "Bactéries",
+        "Changements hormonaux",
+        "Certains médicaments"
+      ],
+      "treatments": [
+        "Peeling chimique",
+        "Thérapie au laser",
+        "Recommandations en matière de soins de la peau"
+      ]
+    },
+    "pigmentation": {
+      "name": "Pigmentation",
+      "shortDescription": "Traitez efficacement les taches solaires, le mélasma et l'hyperpigmentation.",
+      "description": "Les problèmes de pigmentation font référence à diverses conditions dans lesquelles la peau développe des taches ou des taches plus foncées en raison d'une production excessive de mélanine. Cela inclut les taches solaires, les taches de vieillesse, les taches de rousseur, le mélasma et l'hyperpigmentation post-inflammatoire. La pigmentation peut affecter les personnes de tous types de peau et peut être déclenchée par l'exposition au soleil, des changements hormonaux, des lésions cutanées ou certains médicaments. Même si une certaine pigmentation est inoffensive, elle peut causer d’importants problèmes esthétiques. Notre clinique propose des traitements avancés qui ciblent la pigmentation à différentes profondeurs de la peau, en utilisant la technologie laser, des peelings chimiques et des soins de la peau spécialisés pour restaurer un teint clair et uniforme.",
+      "symptoms": [
+        "Taches solaires et taches de vieillesse",
+        "Mélasma (pigmentation hormonale)",
+        "Taches de rousseur",
+        "Hyperpigmentation post-inflammatoire",
+        "Teint général inégal",
+        "Taches sombres sur le visage ou le corps"
+      ],
+      "causes": [
+        "Exposition aux UV et dommages causés par le soleil",
+        "Modifications hormonales (grossesse, contraceptifs)",
+        "Traumatisme cutané ou inflammation",
+        "Certains médicaments",
+        "Prédisposition génétique",
+        "Processus de vieillissement"
+      ],
+      "treatments": [
+        "Photothérapie BBL/IPL",
+        "Laser à commutation Q",
+        "Dépigmentation cosmélanienne",
+        "Peeling chimique",
+        "Soins éclaircissants sur ordonnance"
+      ]
+    },
+    "scars": {
+      "name": "Cicatrices",
+      "shortDescription": "Réduisez l’apparence des cicatrices pour une peau plus lisse.",
+      "description": "Les cicatrices peuvent résulter de l’acné, de blessures ou d’une intervention chirurgicale.",
+      "symptoms": [
+        "Cicatrices en retrait",
+        "Cicatrices en relief",
+        "Décoloration",
+        "Modifications de texture"
+      ],
+      "causes": [
+        "Acné",
+        "Blessures",
+        "Chirurgie",
+        "brûle"
+      ],
+      "treatments": [
+        "Microneedling",
+        "Thérapie au laser",
+        "Fillers dermiques",
+        "Peeling chimique"
+      ]
+    },
+    "hair-loss": {
+      "name": "Perte de cheveux",
+      "shortDescription": "Restaurez la croissance des cheveux avec des traitements avancés.",
+      "description": "La perte de cheveux peut toucher aussi bien les hommes que les femmes.",
+      "symptoms": [
+        "Cheveux clairsemés",
+        "Délié dégarni",
+        "Calvitie",
+        "Excrétion excessive"
+      ],
+      "causes": [
+        "Génétique",
+        "Changements hormonaux",
+        "Contrainte",
+        "Carences nutritionnelles"
+      ],
+      "treatments": [
+        "Thérapie PRP",
+        "Mésothérapie",
+        "Traitements de restauration capillaire"
+      ]
+    },
+    "rosacea": {
+      "name": "Rosacée",
+      "shortDescription": "Gérez les symptômes de la rosacée pour une peau plus claire.",
+      "description": "La rosacée est une affection cutanée chronique provoquant des rougeurs et des vaisseaux sanguins visibles.",
+      "symptoms": [
+        "Rougeur du visage",
+        "Vaisseaux sanguins visibles",
+        "Bosses et boutons",
+        "Irritation des yeux"
+      ],
+      "causes": [
+        "Génétique",
+        "Facteurs environnementaux",
+        "Anomalies des vaisseaux sanguins"
+      ],
+      "treatments": [
+        "Thérapie IPL",
+        "Traitement laser",
+        "Gestion des soins de la peau",
+        "Traitements médicaux"
+      ]
+    },
+    "stretch-marks": {
+      "name": "Vergetures",
+      "shortDescription": "Réduit l’apparence des vergetures.",
+      "description": "Les vergetures apparaissent lorsque la peau s'étire rapidement.",
+      "symptoms": [
+        "Stries roses ou rouges",
+        "Stries violettes ou brunes",
+        "Lignes en retrait",
+        "Texture lisse"
+      ],
+      "causes": [
+        "Grossesse",
+        "Gain de poids",
+        "Poussées de croissance",
+        "Changements hormonaux"
+      ],
+      "treatments": [
+        "Thérapie au laser",
+        "Microneedling",
+        "Traitements par radiofréquence",
+        "Traitements topiques"
+      ]
+    },
+    "dry-skin": {
+      "name": "Peau sèche",
+      "shortDescription": "Restaurez l'hydratation et obtenez une peau lisse et éclatante grâce à nos traitements ciblés pour la peau sèche.",
+      "description": "La peau sèche, également connue sous le nom de xérose, est une affection courante caractérisée par un manque d'humidité et d'huiles naturelles dans la peau. Cela peut entraîner des tiraillements, des écailles, une texture rugueuse et même des fissures ou des saignements dans les cas graves. La peau sèche peut toucher n’importe qui, mais elle devient plus fréquente avec l’âge à mesure que la production de sébum diminue. Des facteurs environnementaux tels que le froid, une faible humidité, des savons agressifs et des douches chaudes peuvent aggraver la situation. Notre clinique propose une planification complète de l'hydratation comprenant des traitements de qualité pour la peau et des protocoles de soins personnalisés pour restaurer la barrière d'hydratation de votre peau et obtenir un teint sain et éclatant.",
+      "symptoms": [
+        "Sensation de tiraillement et d'inconfort après le nettoyage",
+        "Desquamation ou desquamation de la peau",
+        "Texture rugueuse semblable à du papier de verre",
+        "Les ridules apparaissent plus proéminentes",
+        "Démangeaisons ou irritations",
+        "Teint terne et terne",
+        "Rougeur ou inflammation"
+      ],
+      "causes": [
+        "Diminution de la production de pétrole avec l'âge",
+        "Conditions météorologiques froides et sèches",
+        "Faible humidité intérieure",
+        "Douches et bains chauds",
+        "Savons et nettoyants agressifs",
+        "Déshydratation et mauvaise alimentation",
+        "Prédisposition génétique",
+        "Certains médicaments"
+      ],
+      "treatments": [
+        "Injections de rappel cutané (Profhilo, Volite)",
+        "Protocoles d'hydratation professionnels",
+        "Protocoles de soins personnalisés",
+        "Traitements professionnels riches en humectants"
+      ]
+    },
+    "sensitive-skin": {
+      "name": "Peau sensible",
+      "shortDescription": "Soins doux pour les peaux réactives.",
+      "description": "La peau sensible réagit facilement aux produits et aux facteurs environnementaux.",
+      "symptoms": [
+        "Rougeur",
+        "Gravure",
+        "Piquant",
+        "Étanchéité",
+        "Éruptions cutanées"
+      ],
+      "causes": [
+        "Génétique",
+        "Dysfonctionnement de la barrière",
+        "Allergènes",
+        "Facteurs environnementaux"
+      ],
+      "treatments": [
+        "Soins apaisants",
+        "Soins personnalisés",
+        "Thérapie LED"
+      ]
+    },
+    "acne-scarring": {
+      "name": "Acné et cicatrices",
+      "shortDescription": "Traitez l'acné active et améliorez l'apparence des cicatrices d'acné.",
+      "description": "L'acné est l'une des affections cutanées les plus courantes, touchant les personnes de tous âges. Cela se produit lorsque les follicules pileux sont obstrués par du sébum et des cellules mortes de la peau, entraînant l'apparition de points blancs, de points noirs et de boutons. L'acné sévère peut provoquer des cicatrices importantes qui persistent longtemps après la résolution des poussées actives. Les cicatrices d'acné peuvent être atrophiques (indentations), hypertrophiques (en relief) ou provoquer des modifications de la texture et du teint de la peau. Notre clinique propose des traitements avancés pour l'acné active et les cicatrices d'acné, en utilisant les dernières technologies pour améliorer la clarté et la texture de la peau. Des traitements au laser au microneedling, nous avons des solutions pour tous les types de problèmes d'acné.",
+      "symptoms": [
+        "Poussées actives (points noirs, points blancs, kystes)",
+        "Peau rouge et enflammée",
+        "Cicatrices atrophiques (roulage, wagon couvert, pic à glace)",
+        "Cicatrices hypertrophiques ou chéloïdes",
+        "Texture de peau inégale",
+        "Hyperpigmentation post-inflammatoire"
+      ],
+      "causes": [
+        "Production excédentaire de pétrole",
+        "Follicules pileux obstrués",
+        "Bactéries (P. acnés)",
+        "Changements hormonaux",
+        "Facteurs liés au régime alimentaire et au mode de vie",
+        "Génétique"
+      ],
+      "treatments": [
+        "Laser AviClear pour l'acné active",
+        "Microneedling pour améliorer les cicatrices",
+        "Peeling chimique",
+        "Resurfaçage au laser (CO2, fractionné)",
+        "Protocoles de soins de la peau de qualité médicale"
+      ]
+    },
+    "uneven-skin-tone": {
+      "name": "Teint irrégulier",
+      "shortDescription": "Retrouvez un teint éclatant et uniforme grâce à des traitements pigmentaires ciblés.",
+      "description": "Un teint irrégulier fait référence à des incohérences dans la couleur et la pigmentation de la peau sur le visage et le corps. Cette préoccupation courante peut se manifester par des taches de peau plus foncées ou plus claires, un teint terne général ou un manque d’éclat. Les facteurs contribuant à un teint inégal comprennent les dommages causés par le soleil, les changements hormonaux, l’inflammation et les lésions cutanées. De nombreuses personnes souffrent également d’hyperpigmentation post-inflammatoire suite à de l’acné ou à d’autres traumatismes cutanés. Notre clinique propose divers traitements pour restaurer un teint plus uniforme et éclatant, des traitements éclaircissants doux aux thérapies laser avancées qui ciblent la pigmentation à sa source.",
+      "symptoms": [
+        "Zones d'hyperpigmentation",
+        "Matité générale",
+        "Manque d’éclat",
+        "Taches solaires et taches de vieillesse",
+        "Patchs mélasma",
+        "Marques post-inflammatoires"
+      ],
+      "causes": [
+        "Exposition au soleil et dommages causés par les UV",
+        "Modifications hormonales (mélasma)",
+        "Pigmentation post-inflammatoire",
+        "Dommages environnementaux",
+        "Processus de vieillissement",
+        "Certains médicaments"
+      ],
+      "treatments": [
+        "Traitements IPL/BBL",
+        "Peeling chimique",
+        "Élimination de la pigmentation au laser",
+        "Protocoles de dépigmentation (Cosmelan)",
+        "Soins éclaircissants de qualité médicale"
+      ]
+    },
+    "blemishes": {
+      "name": "Imperfections",
+      "shortDescription": "Éliminez les imperfections et obtenez un teint impeccable.",
+      "description": "Les imperfections englobent diverses imperfections cutanées, notamment des taches, des marques et des lésions mineures qui affectent la clarté de la peau. Ceux-ci peuvent inclure des points blancs, des points noirs, des papules, des pustules et d’autres imperfections qui créent une surface cutanée inégale. Les imperfections peuvent être causées par une production excessive de sébum, des pores obstrués, des bactéries et une inflammation. Ils peuvent également laisser des marques post-inflammatoires qui persistent longtemps après la guérison de l’imperfection initiale. Notre clinique propose des traitements efficaces pour éliminer les imperfections actives, prévenir de futures éruptions cutanées et améliorer l'apparence de toutes les marques restantes pour une peau plus claire et d'apparence plus saine.",
+      "symptoms": [
+        "Points blancs et points noirs",
+        "Taches rouges enflammées",
+        "Pustules et papules",
+        "Pores obstrués",
+        "Marques post-imperfections",
+        "Surface cutanée inégale"
+      ],
+      "causes": [
+        "Production excessive de sébum",
+        "Pores obstrués",
+        "Infection bactérienne",
+        "Fluctuations hormonales",
+        "Mauvaise routine de soins de la peau",
+        "Régime alimentaire et mode de vie"
+      ],
+      "treatments": [
+        "Peeling chimique",
+        "Traitements professionnels de la peau",
+        "Traitements laser",
+        "Extraction professionnelle",
+        "Protocoles de soins ciblés"
+      ]
+    },
+    "collagen-stimulating": {
+      "name": "Stimulateur de collagène",
+      "shortDescription": "Boostez le collagène pour une peau plus ferme et plus jeune.",
+      "description": "sont conçus pour soutenir la production naturelle de collagène de votre peau, conduisant à une amélioration de la qualité, de la fermeté et de la texture de la peau. Le collagène est la protéine responsable de la force et de l'élasticité de la peau, mais sa production diminue considérablement avec l'âge. En encourageant la formation de nouveau collagène, nous pouvons répondre simultanément à plusieurs problèmes, notamment les ridules, les rides, les cicatrices et les changements de texture grâce à des traitements cutanés professionnels.",
+      "symptoms": [
+        "Rides et ridules",
+        "Perte de fermeté cutanée",
+        "Diminution de l'élasticité",
+        "Peau fine et crépue",
+        "Cicatrices d’acné",
+        "Pores dilatés"
+      ],
+      "causes": [
+        "Processus de vieillissement naturel",
+        "Diminution de la production de collagène",
+        "Dommages causés par le soleil",
+        "Dommages environnementaux",
+        "Facteurs liés au style de vie",
+        "Prédisposition génétique"
+      ],
+      "treatments": [
+        "Microneedling médical",
+        "Traitements booster de peau",
+        "Peelings professionnels",
+        "Resurfaçage laser",
+        "Relève-fils"
+      ]
+    },
+    "fine-lines-wrinkles": {
+      "name": "Ridules et rides",
+      "shortDescription": "Lissez et prévenez les ridules avec nos traitements antirides et nos solutions de soins de la peau.",
+      "description": "Les rides et ridules sont parmi les premiers signes du vieillissement, apparaissant généralement en premier autour des yeux (pattes d'oie), sur le front et entre les sourcils. Ces plis se forment en raison d’expressions faciales répétées, de la dégradation du collagène et d’une diminution de l’élasticité de la peau. Les ridules sont peu profondes et disparaissent souvent lorsque le visage est au repos, tandis que les rides plus profondes restent visibles. Notre clinique propose une gamme de traitements préventifs et correctifs, notamment des injections antirides, des boosters de peau, des traitements stimulant le collagène et des soins de la peau avancés pour lisser les rides existantes et empêcher la formation de nouvelles.",
+      "symptoms": [
+        "Lignes d'expression autour des yeux (pattes d'oie)",
+        "Lignes du front en soulevant les sourcils",
+        "Lignes de froncement entre les sourcils",
+        "Lignes autour de la bouche (lignes du fumeur)",
+        "Texture crépue sur les joues",
+        "Approfondissement des sillons nasogéniens"
+      ],
+      "causes": [
+        "Contractions répétées des muscles du visage",
+        "Diminution de la production de collagène",
+        "Perte d’élasticité cutanée",
+        "Dommages causés par le soleil et exposition aux UV",
+        "Déshydratation",
+        "Tabagisme et consommation d'alcool",
+        "Mauvaises habitudes de sommeil",
+        "Facteurs génétiques"
+      ],
+      "treatments": [
+        "Injections anti-rides (Botox)",
+        "Boosters cutanés pour l'hydratation",
+        "Traitements cutanés professionnels favorisant le collagène",
+        "Resurfaçage de la peau au laser",
+        "Soins de la peau aux rétinoïdes de qualité médicale"
+      ]
+    },
+    "loss-of-firmness": {
+      "name": "Perte de fermeté",
+      "shortDescription": "Soulevez et resserrez la peau affaissée grâce à nos traitements avancés de raffermissement de la peau.",
+      "description": "La perte de fermeté de la peau se produit lorsque la structure de soutien de la peau s'affaiblit en raison d'une diminution de la production de collagène et d'élastine. Cela peut être visible autour de la mâchoire, des joues, du cou et des paupières. La peau peut sembler moins résistante avec le temps. Bien que cela fasse naturellement partie du vieillissement, des facteurs tels que les dommages causés par le soleil, les fluctuations de poids et les choix de mode de vie peuvent accélérer le processus. Notre clinique propose des plans de traitement dirigés par des consultations utilisant des injectables, du microneedling, du resurfaçage au laser et des traitements de qualité professionnelle pour la peau.",
+      "symptoms": [
+        "Mâchoire affaissée (bajoues)",
+        "Peau relâchée sur les joues",
+        "Paupières tombantes",
+        "Apparence du cou de dinde",
+        "Perte de définition du contour du visage",
+        "Peau qui ne rebondit pas lorsqu'on le pince"
+      ],
+      "causes": [
+        "Diminution de la production de collagène et d’élastine",
+        "Répartition des fibres de collagène existantes",
+        "Les dommages causés par le soleil accélèrent le vieillissement",
+        "Perte de poids significative",
+        "Processus de vieillissement naturel",
+        "Mauvaises habitudes en matière de soins de la peau",
+        "Fumer réduit le flux sanguin vers la peau",
+        "Prédisposition génétique au relâchement"
+      ],
+      "treatments": [
+        "Injections anti-rides",
+        "Fillers dermiques pour le soutien du visage",
+        "Microneedling médical",
+        "Resurfaçage laser",
+        "Traitements professionnels de qualité de la peau"
+      ]
+    },
+    "other-conditions": {
+      "name": "Autres conditions",
+      "shortDescription": "Des solutions complètes pour divers problèmes cutanés et esthétiques.",
+      "description": "Au-delà des préoccupations courantes, notre clinique traite un large éventail d'autres affections cutanées et esthétiques. Ceux-ci incluent la rosacée, les lésions vasculaires, la transpiration excessive (hyperhidrose), le grincement des dents (bruxisme), les migraines et divers problèmes de texture de la peau. Nous proposons également des soins pour des zones spécifiques telles que la zone délicate des yeux, du cou et des mains. Notre processus de consultation complet garantit que nous comprenons vos préoccupations uniques et pouvons recommander les traitements les plus appropriés parmi notre vaste gamme de services.",
+      "symptoms": [
+        "Couperose et rougeurs du visage",
+        "Vaisseaux sanguins visibles",
+        "Transpiration excessive",
+        "Meulage des dents et tension des mâchoires",
+        "Migraines chroniques",
+        "Irrégularités de texture"
+      ],
+      "causes": [
+        "Divers facteurs sous-jacents",
+        "Prédisposition génétique",
+        "Déclencheurs environnementaux",
+        "Facteurs liés au style de vie",
+        "Conditions médicales",
+        "Stress et anxiété"
+      ],
+      "treatments": [
+        "Traitements vasculaires au laser",
+        "Botox pour conditions médicales",
+        "Resurfaçage de la peau",
+        "Thérapie laser ciblée",
+        "Plans de traitement personnalisés"
+      ]
+    }
+  },
+  "homeEditorial": {
+    "carousel": {
+      "previousSlide": "Diapositive précédente",
+      "nextSlide": "Diapositive suivante"
+    },
+    "heroSlides": {
+      "slide1": {
+        "eyebrow": "Salon de beauté à Batumi, Géorgie",
+        "title": "Silk Beauty Salon à Batumi, Géorgie.",
+        "description": "Comparez les rendez-vous de consultation et de remplissage, les soins de la peau, les ongles, les cils, les sourcils, les prix de départ et la réservation en ligne.",
+        "cta": "Prendre rendez-vous"
+      },
+      "slide2": {
+        "eyebrow": "Qualité de la peau",
+        "title": "Planifiez les soins de la peau en fonction de vos besoins.",
+        "description": "Découvrez les soins de la peau, les consultations contre l'acné, les peelings, le microneedling, les prix et les questions à poser avant de réserver.",
+        "cta": "Découvrir les soins de la peau"
+      },
+      "slide3": {
+        "eyebrow": "Injectables et contour",
+        "title": "Comparez les informations sur les rendez-vous injectables.",
+        "description": "Renseignez-vous sur le Botox et les consultations relatives aux fillers dermiques, les prix de départ, les délais et les questions de suivi avant de réserver.",
+        "cta": "Voir les traitements"
+      }
+    },
+    "philosophy": {
+      "eyebrow": "Notre approche",
+      "title": "Effacez les informations avant de réserver.",
+      "description": "Le site Web relie les descriptions de services, les prix de départ, les coordonnées et la réservation en ligne pour Silk Beauty Salon à Batumi.",
+      "statement": "Choisissez une page de service ou commencez par une consultation lorsque vous avez besoin d'aide pour décider quel rendez-vous demander."
+    },
+    "concerns": {
+      "eyebrow": "Problèmes de peau",
+      "title": "Explorez les problèmes de peau courants.",
+      "description": "Utilisez les pages de préoccupations comme point de départ, puis confirmez l'adéquation du service directement avec le salon."
+    },
+    "concernItems": {
+      "item1": {
+        "name": "Rides et ridules",
+        "description": "Adoucit les rides d'expression tout en préservant le mouvement naturel."
+      },
+      "item2": {
+        "name": "Perte de fermeté",
+        "description": "Soutenir le collagène, soulever le laxisme et affiner la structure du visage."
+      },
+      "item3": {
+        "name": "Tonalité inégale",
+        "description": "Cible la pigmentation, le teint terne et les marques post-inflammatoires."
+      },
+      "item4": {
+        "name": "Peau sèche",
+        "description": "Restaure l'hydratation, la fonction barrière et une luminosité durable."
+      },
+      "item5": {
+        "name": "Acné et cicatrices",
+        "description": "Améliore les éruptions actives, les marques et la texture inégale."
+      }
+    },
+    "portfolio": {
+      "eyebrow": "Sélection de soins",
+      "title": "Traitements esthétiques holistiques.",
+      "description": "Une gamme réfléchie pour l'équilibre du visage, la qualité de la peau et la confiance à long terme dans notre salon de beauté à Batumi, Géorgie.",
+      "viewAll": "Découvrez les soins de beauté à Batumi",
+      "explore": "Explorer",
+      "items": {
+        "item1": {
+          "title": "Fillers dermiques",
+          "description": "Traitements à l'acide hyaluronique pour les lèvres, les joues, la mâchoire, le menton, le dessous des yeux et l'équilibrage du visage."
+        },
+        "item2": {
+          "title": "Anti-rides injectables",
+          "description": "Traitements neuromodulateurs précis pour les rides du front, les rides du lion, les pattes d'oie, les masséters et la transpiration."
+        },
+        "item3": {
+          "title": "Qualité de la peau",
+          "description": "Soins de la peau, peelings, microneedling, consultation et informations sur les prix de départ."
+        }
+      }
+    },
+    "popularTreatments": {
+      "eyebrow": "Prix populaires",
+      "title": "Traitements populaires et prix de départ.",
+      "description": "Un moyen rapide de comparer les rendez-vous les plus demandés avant d'ouvrir la liste de prix complète.",
+      "viewPricelist": "Voir la liste de prix complète",
+      "priceLabel": "Prix de départ",
+      "items": {
+        "antiWrinkle": {
+          "title": "Botox / injections anti-rides",
+          "description": "Traitement de la ligne d'expression planifié de manière conservatrice après consultation.",
+          "linkLabel": "Voir le traitement"
+        },
+        "dermalFillers": {
+          "title": "Fillers dermiques",
+          "description": "Soutien du volume et du contour des lèvres, des joues, de la mâchoire et de l'équilibre du visage.",
+          "linkLabel": "Voir les options de remplissage"
+        },
+        "skinpen": {
+          "title": "SkinPen micro-aiguilletage",
+          "description": "Microneedling stimulant le collagène pour la texture, les cicatrices et les ridules.",
+          "linkLabel": "Voir le traitement"
+        },
+        "fireIce": {
+          "title": "Fire & Ice Peel",
+          "description": "Un peeling resurfaçant professionnel pour une peau éclatante, texturée et prête pour l'événement.",
+          "linkLabel": "Voir le traitement"
+        },
+        "nails": {
+          "title": "Services d'ongles",
+          "description": "Manucure, pédicure et finition des ongles avec une mise en forme nette et des soins détaillés.",
+          "linkLabel": "Voir les services"
+        },
+        "lashes": {
+          "title": "Services de cils",
+          "description": "Des rendez-vous pour le rehaussement de cils, le coiffage et la finition façonnés autour de vos yeux.",
+          "linkLabel": "Voir les services"
+        }
+      }
+    },
+    "stats": {
+      "item1": {
+        "label": "Zurab Gorgiladze Rue"
+      },
+      "item2": {
+        "label": "Langues du site Web"
+      },
+      "item3": {
+        "label": "Jours d'ouverture chaque semaine"
+      }
+    },
+    "results": {
+      "eyebrow": "Résultats réels",
+      "title": "Un plan personnalisé fait la différence.",
+      "description": "Les histoires avant et après doivent être lues comme des exemples cliniques et non comme des promesses. Votre résultat dépend de l’anatomie, du choix du produit, du dosage et du suivi.",
+      "cta": "Voir les résultats",
+      "before": "Avant",
+      "after": "Après",
+      "disclaimer": "Les résultats individuels varient. Tous les plans de traitement nécessitent une consultation clinique."
+    },
+    "resultItems": {
+      "item1": {
+        "treatment": "Support de joue et milieu du visage",
+        "detail": "Volume restauré avec un contour doux et lifté."
+      },
+      "item2": {
+        "treatment": "Hydratation et forme des lèvres",
+        "detail": "Bordure définie, volume équilibré, finition naturelle."
+      },
+      "item3": {
+        "treatment": "Plan éclat de la peau",
+        "detail": "Amélioration de la luminosité, de la texture et du raffinement de la surface."
+      }
+    },
+    "cta": {
+      "eyebrow": "Planifiez votre visite",
+      "title": "Choisissez un service ou commencez par une consultation.",
+      "description": "Contactez {clinicName} à Batumi pour confirmer la disponibilité du service, les horaires, les prix de départ et les options de réservation.",
+      "bookNow": "Réservez maintenant",
+      "contactUs": "Contactez-nous"
+    },
+    "visitUs": {
+      "eyebrow": "Visitez-nous",
+      "title": "Retrouvez-nous au centre Batumi.",
+      "description": "Planifiez votre rendez-vous au Silk Beauty Salon sur la rue Zurab Gorgiladze, proche du centre-ville et facilement accessible en taxi ou à pied.",
+      "addressLabel": "Adresse",
+      "hoursLabel": "Horaires d'ouverture",
+      "weekdays": "du lundi au vendredi",
+      "saturday": "samedi",
+      "sunday": "dimanche",
+      "phoneLabel": "Appeler",
+      "whatsappLabel": "WhatsApp",
+      "directions": "Obtenir un itinéraire",
+      "directionsAria": "Obtenir un itinéraire pour se rendre à {salonName} sur Google Maps",
+      "mapTitle": "Mapper vers {salonName}"
+    },
+    "journal": {
+      "eyebrow": "Tendances peau",
+      "title": "Informations sur les soins de beauté avant de réserver.",
+      "description": "Lisez des notes pratiques sur les questions de consultation, de calendrier, de préparation et de suivi.",
+      "cta": "Lire nos conseils"
+    },
+    "reviews": {
+      "eyebrow": "Témoignages clients",
+      "title": "Ce que disent les clients après leur visite.",
+      "description": "Un carrousel d’avis récents de clients ayant choisi Silk Beauty Salon pour les injections esthétiques, les fillers et les soins de la peau à Batumi.",
+      "ratingLabel": "{rating} étoiles sur 5",
+      "goToReview": "Aller à la revue {number}"
+    },
+    "trendItems": {
+      "item1": {
+        "category": "Planification du traitement",
+        "title": "Comment planifier les injectables sans paraître exagéré"
+      },
+      "item2": {
+        "category": "Santé de la peau",
+        "title": "La qualité de la peau est le nouveau fond de teint"
+      },
+      "item3": {
+        "category": "Consultation",
+        "title": "Ce qu'il faut savoir avant une première consultation de remplissage"
+      }
+    }
+  },
+  "bookingPage": {
+    "title": "Prendre rendez-vous",
+    "subtitle": "Planifiez votre consultation ou votre traitement avec nos praticiens experts",
+    "metadata": {
+      "title": "Prendre rendez-vous | Silk Beauty Salon",
+      "description": "Réservez votre consultation ou votre rendez-vous de traitement au Silk Beauty Salon à Batumi, Géorgie."
+    },
+    "eyebrow": "Réservation de consultation",
+    "heroImageAlt": "Intérieur du salon",
+    "selectDateTime": "Sélectionner la date et l'heure",
+    "bookingNotConfigured": "Réservation en ligne bientôt disponible",
+    "bookingNotConfiguredDesc": "Nous mettons en place notre système de réservation en ligne. En attendant, veuillez nous appeler ou nous envoyer un courriel pour planifier votre rendez-vous.",
+    "callToBook": "Appelez pour réserver",
+    "emailToBook": "Envoyer un e-mail pour réserver",
+    "consultationTypes": "Menu de traitement",
+    "treatmentMenu": "Menu de traitement",
+    "treatmentMenuDescription": "Choisissez parmi le même menu de traitement que celui utilisé dans l'application mobile Silk Beauty.",
+    "openTreatmentDropdown": "Ouvrir la liste déroulante des traitements",
+    "consultations": {
+      "skin": {
+        "title": "Consultation cutanée",
+        "duration": "45 min",
+        "description": "Analyse complète de la peau et planification du traitement"
+      },
+      "virtual": {
+        "title": "Consultation virtuelle",
+        "duration": "20 min",
+        "description": "Consultation en ligne pour clients à distance"
+      }
+    },
+    "whatToExpect": {
+      "title": "À quoi s’attendre",
+      "step1": "Remplissez notre questionnaire médical",
+      "step2": "Discutez de vos objectifs et de vos préoccupations",
+      "step3": "Recevez des recommandations de traitement personnalisées",
+      "step4": "Obtenez un devis clair sans frais cachés"
+    },
+    "needHelp": "Besoin d'aide ?",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "address": "Adresse",
+    "faq": {
+      "title": "Questions fréquentes sur la réservation",
+      "q1": "Quelle est la durée d’une consultation ?",
+      "a1": "Les consultations initiales durent généralement de 30 à 45 minutes, ce qui laisse le temps de procéder à une évaluation approfondie et à une discussion de vos objectifs.",
+      "q2": "Un dépôt est-il requis ?",
+      "a2": "Si un dépôt s'applique, le salon confirmera le montant et les instructions de paiement lorsqu'il confirmera votre demande de réservation.",
+      "q3": "Quelle est votre politique d'annulation ?",
+      "a3": "Nous exigeons un préavis de 48 heures pour les annulations. Les annulations tardives peuvent perdre le dépôt.",
+      "q4": "Puis-je reprogrammer mon rendez-vous ?",
+      "a4": "Oui, vous pouvez reprogrammer votre rendez-vous jusqu'à 24 heures avant l'heure prévue. Veuillez nous contacter par téléphone ou par e-mail pour convenir d'un nouvel horaire qui vous convient."
+    },
+    "preferredDate": "Date préférée",
+    "preferredTime": "Heure préférée",
+    "selectTime": "Sélectionnez un créneau horaire",
+    "morning": "Matin",
+    "afternoon": "Après-midi",
+    "evening": "Soirée",
+    "selectService": "Sélectionnez le traitement",
+    "selectServicePlaceholder": "Choisissez un traitement",
+    "selectTreatment": "Sélectionnez le traitement",
+    "selectTreatmentPlaceholder": "Choisissez un traitement",
+    "fullName": "Nom complet",
+    "namePlaceholder": "Entrez votre nom complet",
+    "phoneNumber": "Numéro de téléphone",
+    "phonePlaceholder": "+995 577 34 57 67",
+    "emailAddress": "Adresse e-mail",
+    "emailPlaceholder": "your@email.com",
+    "successTitle": "Demande de réservation soumise",
+    "successMessage": "Merci pour votre demande de réservation. Nous vous contacterons sous peu pour confirmer votre rendez-vous.",
+    "bookAnother": "Prendre un autre rendez-vous",
+    "additionalNotes": "Informations complémentaires",
+    "notesPlaceholder": "Toute demande particulière ou information que nous devrions connaître...",
+    "requestBooking": "Demande de réservation",
+    "bookingNote": "Nous confirmerons votre rendez-vous dans les 24 heures",
+    "dialogTitle": "Prendre rendez-vous",
+    "dialogDescription": "Planifiez votre consultation avec nos praticiens experts",
+    "continue": "Continuer",
+    "back": "Retour",
+    "confirmBooking": "Confirmer la réservation",
+    "bookingStatus": "Réservation...",
+    "booked": "(Réservé)",
+    "slotConflict": "Ce créneau horaire est déjà réservé. Veuillez sélectionner une autre heure.",
+    "bookingFailed": "Échec de la création de la réservation",
+    "unexpectedError": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+    "rateLimitMessage": "Trop de soumissions. Veuillez patienter 15 minutes.",
+    "bookingSummary": "Récapitulatif de réservation",
+    "bookingConfirmed": "Réservation confirmée !",
+    "thankYou": "Merci, {name}. Votre rendez-vous a été programmé.",
+    "bookingDetails": "Détails de la réservation",
+    "done": "Terminé",
+    "selectDate": "Sélectionnez la date",
+    "selectTimeSlot": "Sélectionnez le créneau horaire",
+    "service": "Soin",
+    "treatment": "Soin",
+    "date": "Date",
+    "time": "Heure",
+    "message": "Message (facultatif)",
+    "servicePlaceholder": "Choisissez un traitement",
+    "messagePlaceholder": "Toute exigence ou question spécifique...",
+    "serviceConsultation": "Consultation",
+    "serviceBotox": "Traitement Botox",
+    "serviceFillers": "Fillers dermiques",
+    "serviceLaser": "Épilation laser",
+    "serviceRejuvenation": "Rajeunissement de la peau",
+    "servicePeel": "Peeling chimique",
+    "serviceMicroneedling": "Microneedling",
+    "personalInfo": "Informations personnelles",
+    "formNotReady": "Le formulaire de réservation est toujours en préparation. Veuillez réessayer dans un instant."
+  },
+  "consent": {
+    "title": "Préférences en matière de cookies",
+    "bannerLabel": "Bannière de consentement aux cookies",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, proposer un contenu personnalisé et analyser notre trafic. En cliquant sur \"Tout accepter\", vous consentez à notre utilisation des cookies. Vous pouvez gérer vos préférences ou refuser les cookies non essentiels.",
+    "acceptAll": "Accepter tout",
+    "rejectAll": "Tout rejeter",
+    "managePreferences": "Gérer les préférences",
+    "savePreferences": "Enregistrer les préférences",
+    "necessaryTag": "Nécessaire - Toujours actif",
+    "analyticsTag": "Analyses",
+    "marketingTag": "Commercialisation",
+    "functionalTag": "Fonctionnel",
+    "settingsTitle": "Paramètres des cookies",
+    "settingsDescription": "Personnalisez vos préférences en matière de cookies. Les cookies nécessaires ne peuvent pas être désactivés car ils sont essentiels au fonctionnement du site Web.",
+    "necessary": "Nécessaire",
+    "necessaryDesc": "Indispensable au bon fonctionnement du site Internet. Ne peut pas être désactivé.",
+    "analytics": "Analyses",
+    "analyticsDesc": "Aidez-nous à comprendre comment les visiteurs interagissent avec notre site Web.",
+    "marketing": "Commercialisation",
+    "marketingDesc": "Utilisé pour suivre les visiteurs sur des sites Web à des fins publicitaires.",
+    "functional": "Fonctionnel",
+    "functionalDesc": "Activez des fonctionnalités et une personnalisation améliorées.",
+    "required": "Obligatoire"
+  },
+  "chatbot": {
+    "title": "Mariam · Guide des soins Silk",
+    "status": "Votre guide de salon numérique convivial",
+    "close": "Fermer le guide de traitement",
+    "launcherOpen": "Ouvrir le guide des soins Silk",
+    "launcherClose": "Fermer le guide des soins Silk",
+    "launcherRole": "Guide numérique du salon",
+    "launcherLabel": "Demandez à Mariam",
+    "introduction": "Salut, je m'appelle Mariam 👋 Renseignez-vous sur les soins, les prix et la durée.",
+    "invite": "Renseignez-vous sur nos traitements et nos prix",
+    "transcriptLabel": "Conversation avec le guide des soins Silk",
+    "welcome": "Bonjour, je suis Mariam, la guide numérique de Silk. Posez une question sur le traitement et je vous donnerai d'abord le prix et la durée publiés.",
+    "disclaimer": "Pour des raisons d'adéquation, de médicaments ou de symptômes inattendus, je vous mettrai en contact avec le salon.",
+    "quickLabel": "Questions fréquentes",
+    "inputLabel": "Votre question",
+    "placeholder": "Exemple : Quelle est la quantité de produit de remplissage pour les lèvres ?",
+    "send": "Envoyer une question",
+    "minutesShort": "min",
+    "quick": {
+      "lipPrice": "Prix du remplissage des lèvres",
+      "foreheadBotoxPrice": "Front Botox prix",
+      "choose": "Aidez-moi à choisir",
+      "recovery": "Temps de récupération"
+    },
+    "prompts": {
+      "lipPrice": "Combien coûte le produit de comblement des lèvres ?",
+      "foreheadBotoxPrice": "Combien coûte Botox pour les rides du front ?",
+      "choose": "Je ne sais pas quel traitement réserver",
+      "recovery": "Quel est le temps d'arrêt après le remplissage des lèvres ?"
+    },
+    "answers": {
+      "emergency": "Cela peut nécessiter des soins médicaux urgents. Contactez les services d'urgence locaux dès maintenant ; n'attendez pas la réponse d'un salon ou d'un chatbot.",
+      "medical": "Je ne peux pas décider ici de l'admissibilité médicale. Informez le salon des médicaments, des allergies, de la grossesse ou de l'allaitement avant le traitement.",
+      "brand": "La marque exacte du salon n'est pas encore vérifiée sur le site Web. Demandez à l'équipe de confirmer le produit, la variante et le praticien avant de réserver.",
+      "foreheadFiller": "n'est pas le même que le front Botox. Aucun prix de remplissage du front n’est publié ; le salon doit d'abord confirmer s'il est proposé et adapté.",
+      "cancellation": "Annulez au moins {hours} heures avant le rendez-vous. Contactez directement le salon pour modifier une réservation existante.",
+      "reschedule": "Reprogrammez au moins {hours} heures avant le rendez-vous. Contactez directement le salon pour déplacer une réservation existante.",
+      "booking": "Envoyez une demande de réservation en ligne. Elle n'est confirmée que lorsque le salon vous contacte, normalement dans les heures {hours}.",
+      "location": "Silk Beauty Salon est à {address}, {city}, {country}.",
+      "hours": "Ouvert du lundi au samedi {mondaySaturday} ; Dimanche {sunday}.",
+      "contact": "Téléphone : {phone}. WhatsApp : {whatsapp}. Courriel : {email}.",
+      "languages": "Le site et Mariam prennent en charge l'anglais, le géorgien, le russe, le turc, l'arabe, l'hébreu, le néerlandais, le français et l'allemand. Confirmez la langue parlée souhaitée auprès du salon lors de la réservation.",
+      "payment": "Le site Web indique que les espèces et les principales cartes de crédit sont acceptées. Le paiement est dû lors de la prestation, sauf accord contraire.",
+      "results": "Les résultats et leur durée dépendent du service exact et de l'individu ; le guide de traitement présente le devis publié.",
+      "downtime": "La récupération dépend du traitement et peut inclure une rougeur, un gonflement, une sensibilité, des ecchymoses, une sécheresse ou une desquamation temporaires.",
+      "askTreatmentPrice": "Nommez le traitement pour recevoir immédiatement son prix publié. Si aucun prix n'est publié, je le dirai.",
+      "askTreatmentDuration": "Nommez le traitement pour recevoir immédiatement sa durée de rendez-vous publiée.",
+      "priceOverview": "Fourchettes de prix publiées par catégorie :",
+      "priceUnavailable": "non publié",
+      "consultation": "Dites-moi le résultat que vous souhaitez ou choisissez une consultation si vous ne savez pas quoi réserver.",
+      "unknown": "Je ne trouve pas de réponse approuvée sur le site Web. Renseignez-vous directement auprès du salon et indiquez le traitement ou le résultat souhaité.",
+      "greeting": "Bonjour. Demandez-moi un soin, un prix, une durée, des résultats, une récupération ou une réservation."
+    },
+    "labels": {
+      "results": "Résultats",
+      "recovery": "Récupération"
+    },
+    "categories": {
+      "injectables": "Injectables",
+      "skin": "Peau",
+      "lashes": "Cils et sourcils",
+      "hair": "Cheveux",
+      "nails": "Ongles"
+    },
+    "explanations": {
+      "antiWrinkle": "Les injections antirides détendent les muscles sélectionnés pour adoucir les lignes liées au mouvement ; la dose et la zone de traitement doivent être évaluées.",
+      "dermalFiller": "est un gel injectable utilisé pour restaurer ou façonner le volume dans une zone sélectionnée après évaluation.",
+      "lipFiller": "Le combleur à lèvres ajoute ou façonne le volume des lèvres. Le résultat stable est évalué après réduction du gonflement.",
+      "microneedling": "Microneedling crée des microcanaux contrôlés pour soutenir le renouvellement progressif de la peau et le remodelage du collagène.",
+      "fireIce": "Fire & Ice est un soin du visage resurfaçant professionnel avec un masque chauffant suivi d'un masque rafraîchissant.",
+      "chemicalPeel": "Un peeling chimique utilise une solution professionnelle pour exfolier certaines couches de la peau ; la résistance et l’adéquation nécessitent une évaluation.",
+      "skinBoosters": "Les boosters cutanés sont des traitements injectables destinés à favoriser l'hydratation et la qualité de la peau, et non le contour du visage.",
+      "nails": "Les services pour les ongles comprennent la préparation, la mise en forme, le soin des cuticules et la couleur ou la finition artistique sélectionnée.",
+      "lashes": "Lash créent un rehaussement, une teinte ou une finition plus complète ; le processus exact et le suivi dépendent du service sélectionné.",
+      "balayage": "Le balayage est une technique d'éclaircissement des cheveux peinte à la main conçue pour un résultat homogène et dimensionnel.",
+      "keratin": "Un traitement capillaire à la kératine lisse et revitalise les cheveux ; les résultats et l'entretien dépendent des cheveux et du produit utilisé."
+    },
+    "actions": {
+      "book": "Réserver ce soin",
+      "guide": "Lire le guide de traitement",
+      "library": "Ouvrir la bibliothèque de connaissances",
+      "prices": "Voir la liste complète des prix",
+      "whatsapp": "Demandez au salon sur WhatsApp"
+    }
+  },
+  "whatsapp": {
+    "chatOnWhatsApp": "Discutez sur WhatsApp",
+    "close": "Fermer",
+    "greeting": "Bonjour ! 👋 Bienvenue sur Silk Beauty Salon. Comment pouvons-nous vous aider aujourd’hui ?",
+    "bookAppointment": "Je souhaite prendre rendez-vous",
+    "serviceQuestion": "J'ai une question sur les services",
+    "pricingInfo": "J'ai besoin de plus d'informations sur les tarifs",
+    "otherInquiry": "Autre demande",
+    "typicalReply": "Répond généralement en quelques minutes"
+  },
+  "metadata": {
+    "homeTitle": "Salon de beauté à Batumi, Géorgie | Silk Beauty Salon",
+    "homeDescription": "Silk Beauty Salon est un salon de beauté situé à Batumi, en Géorgie, pour le Botox, les fillers dermiques, les traitements au laser, les ongles, les cils et les soins avancés de la peau."
+  },
+  "errors": {
+    "title": "Un problème s'est produit",
+    "description": "Nous nous excusons pour la gêne occasionnée. Une erreur inattendue s'est produite.",
+    "retry": "Réessayez",
+    "goHome": "Aller à la maison",
+    "referenceId": "Référence de l’erreur",
+    "api": {
+      "BAD_REQUEST": "Demande invalide. Veuillez vérifier votre saisie.",
+      "VALIDATION_ERROR": "Certains champs contiennent des erreurs. Merci de les corriger.",
+      "UNAUTHORIZED": "Veuillez vous connecter pour continuer.",
+      "FORBIDDEN": "Vous n'êtes pas autorisé à accéder à cette ressource.",
+      "NOT_FOUND": "La ressource demandée est introuvable.",
+      "INTERNAL_ERROR": "Une erreur interne s'est produite. Veuillez réessayer plus tard.",
+      "SERVICE_UNAVAILABLE": "Service temporairement indisponible. Veuillez réessayer plus tard.",
+      "RATE_LIMITED": "Trop de demandes. Veuillez patienter un moment et réessayer."
+    },
+    "network": {
+      "title": "Erreur de connexion",
+      "description": "Impossible de se connecter au serveur. Veuillez vérifier votre connexion Internet.",
+      "retry": "Nouvelle tentative de connexion"
+    },
+    "form": {
+      "submitError": "Échec de l'envoi du formulaire. Veuillez réessayer.",
+      "loadError": "Échec du chargement des données du formulaire. Veuillez actualiser la page."
+    }
+  },
+  "mediaGallery": {
+    "metadata": {
+      "title": "Galerie Média | Silk Beauty Salon",
+      "description": "Explorez notre vidéothèque, nos galeries de traitements et notre contenu en coulisses de Silk Beauty Salon à Batumi."
+    },
+    "hero": {
+      "title": "Silk Beauty",
+      "subtitle": "Plongez-vous dans notre monde d'esthétique de luxe et de traitements transformateurs"
+    },
+    "sectionLabel": "Galerie",
+    "pageTitle": "Vidéos et images",
+    "pageDescription": "Parcourez notre collection de vidéos de traitement, de témoignages de clients et d'images de galerie présentant l'expérience Silk Beauty.",
+    "tabs": {
+      "allVideos": "Toutes les vidéos",
+      "treatments": "Traitements",
+      "testimonials": "Témoignages",
+      "gallery": "Galerie photo"
+    },
+    "allVideos": {
+      "title": "Collection complète de vidéos",
+      "description": "Parcourez toutes nos vidéos, y compris les traitements, les témoignages et le contenu des coulisses."
+    },
+    "treatments": {
+      "title": "Vidéos des soins",
+      "description": "Découvrez nos traitements en action et apprenez-en davantage sur ce à quoi vous attendre lors de votre visite."
+    },
+    "testimonials": {
+      "title": "Témoignages clients",
+      "description": "Écoutez nos clients satisfaits parler de leurs expériences et transformations."
+    },
+    "gallery": {
+      "title": "Galerie photo",
+      "description": "Découvrez nos installations, nos salles de traitement et nos résultats époustouflants dans notre galerie de photos."
+    },
+    "featured": {
+      "label": "En vedette",
+      "title": "Visite virtuelle du salon",
+      "description": "Faites une promenade virtuelle à travers nos installations luxueuses à Batumi. De notre réception accueillante à nos salles de soins ultramodernes, découvrez la différence Silk Beauty avant même de franchir nos portes.",
+      "duration": "Durée : 2h00"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "close": "Fermer",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "viewAll": "Tout afficher",
+    "learnMore": "En savoir plus",
+    "home": "Accueil",
+    "readMore": "Lire la suite",
+    "bookNow": "Réservez maintenant",
+    "bookConsultation": "Réserver une consultation",
+    "bookOnline": "Réservation en ligne",
+    "scheduleAppointment": "Planifiez votre rendez-vous",
+    "whatsapp": "WhatsApp",
+    "bookViaWhatsApp": "Réservez via WhatsApp",
+    "treatments": "Traitements",
+    "conditions": "Problèmes de peau",
+    "notFound": "introuvable",
+    "social": "Suivez-nous",
+    "searchPlaceholder": "Rechercher des traitements, des conditions...",
+    "submitting": "Envoi en cours...",
+    "tryAgain": "Réessayez",
+    "view": "Voir",
+    "currentLanguageFlag": "Drapeau : {language}",
+    "languageFlag": "Drapeau : {language}"
+  },
+  "errorPage": {
+    "somethingWentWrong": "Quelque chose s’est mal passé",
+    "apologyMessage": "Nous nous excusons pour la gêne occasionnée. Une erreur inattendue s'est produite.",
+    "tryAgain": "Réessayez",
+    "globalError": "Un problème s'est produit"
+  },
+  "accessibility": {
+    "skipToContent": "Passer au contenu principal",
+    "skipToMain": "Passer au contenu principal",
+    "skipToTreatments": "Passer aux traitements",
+    "skipToBooking": "Passer à la réservation",
+    "skipNavigation": "Ignorer les liens",
+    "loadingThemeToggle": "Basculement du thème de chargement",
+    "switchToDarkTheme": "Passer au thème sombre",
+    "switchToLightTheme": "Passer au thème lumineux",
+    "closeVideo": "Fermer la vidéo",
+    "muteVideo": "Vidéo muette",
+    "unmuteVideo": "Activer le son de la vidéo",
+    "toggleFullscreen": "Basculer vers le plein écran",
+    "closeGallery": "Fermer la galerie",
+    "previousImage": "Image précédente",
+    "nextImage": "Image suivante",
+    "skipLinks": "Ignorer les liens",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "required": "requis",
+    "keyTab": "Tabulation",
+    "keyEscape": "Échap",
+    "beforeAfterComparison": "Comparaison avant et après pour {beforeAlt}",
+    "switchToVideo": "Passer à la vidéo {title}"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "specialOffers": "Offres spéciales",
+    "luxuryBeautySalon": "Salon de beauté de luxe",
+    "contactSilkBeautySalon": "Contacter Silk Beauty Salon",
+    "silkBeautySalon": "Silk Beauty Salon",
+    "teamMember": "{name} - Membre de l'équipe",
+    "consultation": "Consultation",
+    "bookConsultation": "Réserver une consultation",
+    "skinCareTreatment": "Traitement de soins de la peau",
+    "salonInterior": "Intérieur du salon"
+  },
+  "footer": {
+    "description": "Le premier salon de beauté de Batumi sur la rue Zurab Gorgiladze.",
+    "quickLinks": "Liens utiles",
+    "treatments": "Traitements",
+    "conditions": "Conditions cutanées",
+    "contact": "Coordonnées",
+    "address": "Zurab Gorgiladze 63, Batumi 6010, Géorgie",
+    "phone": "Tél. : +995 577 34 57 67",
+    "email": "info@silkbeautysalon.online",
+    "openingHours": "Heures d'ouverture",
+    "hours": {
+      "monFri": "Du lundi au vendredi : 10h00 - 22h00",
+      "satSun": "Samedi : 10h00 - 22h00 / Dimanche : 11h00 - 22h00",
+      "sat": "Sam.",
+      "sun": "Dim.",
+      "monFriLabel": "Du lundi au vendredi"
+    },
+    "social": "Suivez-nous",
+    "faqDesc": "Lisez certaines des questions les plus fréquemment posées sur la clinique et nos traitements.",
+    "clinicTitle": "La Clinique",
+    "clinicDesc": "Situé sur la rue Zurab Gorgiladze. Ouvert du lundi au samedi de 10h00 à 22h00 et le dimanche de 11h00 à 22h00.",
+    "teamTitle": "L'équipe",
+    "teamDesc": "Apprenez-en davantage sur nos collaborateurs qualifiés et sur la manière dont ils peuvent vous aider au mieux.",
+    "pressTitle": "Médias & Presse",
+    "pressDesc": "Pourquoi ne pas jeter un œil à nos articles de presse les plus récents et voir ce qu'ils disent de nous.",
+    "copyright": "© 2024 Silk Beauty Salon. Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookieNotice": "Avis sur les cookies",
+    "stayConnected": "Restez connecté",
+    "newsletterTitle": "Rejoignez notre monde",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "subscribe": "S'abonner",
+    "about": "À propos",
+    "information": "Information",
+    "visitUs": "Visitez-nous",
+    "designedIn": "Conçu à Batumi",
+    "socialDescription": "Suivez-nous sur les réseaux sociaux pour les actualités et les informations du salon.",
+    "disclaimer": "Consultez toujours un professionnel de la santé pour obtenir des recommandations de traitement personnalisées et pour discuter des informations de sécurité importantes et des risques associés à l'utilisation des produits.",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "beautySalonBatumi": "Institut de beauté Batumi"
+  },
+  "blogPage": {
+    "title": "Bibliothèque de connaissances sur la beauté",
+    "eyebrow": "Bibliothèque d'informations",
+    "metaTitle": "Bibliothèque de connaissances sur la beauté | Silk Beauty Salon",
+    "metaDescription": "Guides pratiques et fondés sur des sources sur les services, les produits, la préparation, la récupération, la réservation et les limites de sécurité.",
+    "subtitle": "Guides pratiques sur les services, les produits, la préparation, la récupération, la réservation et les questions qui nécessitent une personne.",
+    "breadcrumb": "Blog",
+    "stayUpdated": "Restez à jour",
+    "newsletterDesc": "Abonnez-vous à notre newsletter pour les derniers articles, conseils et offres exclusives",
+    "subscribeButton": "Abonnez-vous à la newsletter",
+    "backToBlog": "Retour au blog",
+    "shareArticle": "Partager cet article",
+    "aboutAuthor": "À propos de l'auteur",
+    "readyToTransform": "Besoin d'une réponse individuelle ?",
+    "bookConsultationDesc": "Envoyez une demande de consultation afin que le salon puisse confirmer le bon service, le professionnel, le prix et la prochaine étape.",
+    "relatedPosts": "Articles connexes",
+    "readMore": "Lire la suite",
+    "postNotFound": "Message introuvable",
+    "expertPractitioner": "Equipe éditoriale"
+  },
+  "treatmentPage": {
+    "metadataTitle": "{name} à Batumi, Géorgie",
+    "metadataDescription": "{description} Réservez {name} sur Silk Beauty Salon à Batumi, Géorgie.",
+    "imageAlt": "{name} chez Silk Beauty Salon à Batumi, Géorgie",
+    "bookNow": "Réservez ce traitement",
+    "backTo": "Retour aux traitements",
+    "aboutTreatment": "À propos de ce traitement",
+    "benefits": "Bénéfices",
+    "howItWorks": "Comment ça marche",
+    "aftercare": "Service après-vente",
+    "faqs": "Questions fréquentes",
+    "price": "Prix à partir de",
+    "duration": "Durée",
+    "readyToStart": "Prêt à commencer ?",
+    "bookConsultation": "Réserver une consultation",
+    "bookConsultationDesc": "Réservez une consultation avec l'un de nos praticiens experts",
+    "bookNowBtn": "Réservez maintenant",
+    "contactUs": "Contactez-nous",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "address": "Adresse",
+    "relatedTreatments": "Traitements associés",
+    "atAGlance": "en un coup d'œil",
+    "results": "Résultats",
+    "downtime": "Temps d'arrêt",
+    "youMightAlsoLike": "Vous pourriez aussi aimer",
+    "learnMore": "En savoir plus",
+    "heroAlt": "Salon de beauté de luxe",
+    "durationResults": "Confirmé lors de la consultation",
+    "minimalDowntime": "Confirmé lors de la consultation",
+    "confirmedDuringConsultation": "Confirmé lors de la consultation",
+    "planningAppointment": "Planifier votre rendez-vous",
+    "sessions": "Séances",
+    "preparation": "Préparation",
+    "comfort": "Confort",
+    "safety": "Sécurité et examen humain"
+  },
+  "international": {
+    "imageAlt": "Silk Beauty Salon",
+    "teamAlt": "Nana Gviniashvili"
+  },
+  "contactPage": {
+    "title": "Contactez-nous",
+    "subtitle": "Contactez notre équipe pour réserver une consultation ou poser des questions",
+    "formTitle": "Envoyez-nous un message",
+    "thankYou": "Merci !",
+    "messageSent": "Votre message a été envoyé avec succès. Nous vous répondrons sous peu.",
+    "fullName": "Nom complet",
+    "namePlaceholder": "Entrez votre nom",
+    "nameRequired": "Veuillez entrer votre nom",
+    "emailAddress": "Adresse e-mail",
+    "emailPlaceholder": "Entrez votre email",
+    "emailRequired": "Veuillez saisir votre adresse e-mail",
+    "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+    "phoneNumber": "Numéro de téléphone",
+    "phonePlaceholder": "Entrez votre téléphone",
+    "phoneOptional": "En option",
+    "message": "Votre message",
+    "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+    "messageRequired": "Veuillez saisir un message",
+    "sending": "Envoi en cours...",
+    "sendMessage": "Envoyer un message",
+    "getInTouch": "Contactez-nous",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "openingHours": "Horaires d'ouverture",
+    "monTue": "Lundi - Mardi",
+    "wedThu": "mercredi - jeudi",
+    "friday": "vendredi",
+    "satSun": "samedi - dimanche",
+    "readyToBook": "Prêt à réserver ?",
+    "bookOnlineDesc": "Prenez rendez-vous en ligne via notre système de réservation",
+    "bookAppointment": "Prendre rendez-vous",
+    "bookOnline": "Réservation en ligne",
+    "scheduleAppointment": "Planifiez votre rendez-vous",
+    "bookViaWhatsApp": "Réservez via WhatsApp",
+    "whatsapp": "WhatsApp",
+    "viewOnMap": "Vue sur Google Maps",
+    "mapAddress": "63 Zurab Gorgiladze Rue",
+    "mapCity": "Batumi, Géorgie",
+    "imageAlt": "Contacter Silk Beauty Salon",
+    "mapTitle": "Silk Beauty Salon Emplacement"
+  },
+  "consultation": {
+    "title": "Demander une consultation",
+    "imageAlt": "Consultation avec le spécialiste esthétique",
+    "metaTitle": "Trouver un spécialiste | Silk Beauty Salon",
+    "metaDescription": "Réservez une consultation avec nos praticiens esthétiques experts. Commencez votre voyage vers une beauté naturelle améliorée.",
+    "label": "Soins personnalisés",
+    "headline": "Réservez votre consultation aujourd'hui",
+    "body": "Planifiez une consultation personnalisée avec nos praticiens experts pour discuter de vos objectifs esthétiques et créer un plan de traitement sur mesure rien que pour vous.",
+    "cta": {
+      "title": "Prêt à commencer votre voyage ?",
+      "description": "Réservez votre consultation dès aujourd'hui et faites le premier pas vers une beauté naturelle améliorée.",
+      "button": "Trouver un spécialiste"
+    },
+    "hero": {
+      "title": "Explorez les possibilités avec une consultation de traitement",
+      "description": "Partie essentielle du traitement, la consultation esthétique est le point de départ de votre voyage. Mieux nous comprendrons vos besoins et vos désirs, plus vous aurez de chances d’obtenir les résultats souhaités.",
+      "cta": "Réserver une consultation",
+      "call": "Appelez-nous"
+    },
+    "features": {
+      "expert": {
+        "title": "Praticiens experts",
+        "description": "Notre équipe réunit des praticiens expérimentés disposant d’une formation professionnelle adaptée."
+      },
+      "personalized": {
+        "title": "Approche personnalisée",
+        "description": "Chaque plan de traitement est adapté à votre anatomie faciale unique et à vos objectifs esthétiques."
+      },
+      "convenient": {
+        "title": "Emplacement pratique",
+        "description": "Accès facile au centre Batumi avec des salles de soins confortables et privées."
+      }
+    },
+    "journey": {
+      "title": "Votre parcours esthétique",
+      "subtitle": "De la consultation aux résultats, nous vous guidons à chaque étape de votre transformation."
+    },
+    "steps": {
+      "consultation": {
+        "title": "Consultation initiale",
+        "description": "Discutez de vos préoccupations, de vos objectifs et de vos antécédents médicaux avec notre spécialiste."
+      },
+      "assessment": {
+        "title": "Évaluation cutanée",
+        "description": "Analyse complète de la structure de votre visage et de l'état de votre peau."
+      },
+      "plan": {
+        "title": "Plan de soins",
+        "description": "Recevez un plan de traitement personnalisé avec des recommandations et des tarifs."
+      },
+      "treatment": {
+        "title": "Soin",
+        "description": "Planifiez votre traitement à votre convenance avec notre équipe attentionnée."
+      }
+    },
+    "treatments": {
+      "title": "Traitements que nous proposons",
+      "subtitle": "Des solutions esthétiques complètes pour chaque préoccupation.",
+      "explore": "Explorer les traitements ->"
+    },
+    "bookImageAlt": "Consultation chez Silk Beauty Salon"
+  },
+  "conditionsPage": {
+    "title": "Préoccupations cutanées",
+    "metaTitle": "Conditions que nous traitons | Silk Beauty Salon",
+    "metaDescription": "Découvrez les différentes affections cutanées que nous traitons, notamment le vieillissement cutané, les cicatrices d'acné, la pigmentation, la rosacée et plus encore dans notre clinique esthétique Batumi.",
+    "listingTitle": "que nous traitons",
+    "listingSubtitle": "Quel que soit votre problème de peau, nos praticiens experts peuvent créer un plan de traitement personnalisé",
+    "ctaTitle": "Vous ne savez pas quel traitement vous convient le mieux ?",
+    "ctaSubtitle": "Réservez une consultation avec l'un de nos praticiens experts qui évaluera vos préoccupations et recommandera les meilleures options de traitement",
+    "bookConsultation": "Réserver une consultation",
+    "imageAlt": "Traitement de soins de la peau"
+  },
+  "offersPage": {
+    "title": "Offres spéciales",
+    "subtitle": "Profitez de nos promotions exclusives et offres spéciales",
+    "breadcrumb": "Offres",
+    "offers": {
+      "newClient": {
+        "title": "Spécial nouveau client",
+        "description": "Réservez votre première consultation et recevez 20 % de réduction sur votre premier traitement.",
+        "terms": "Valable pour les nouveaux clients uniquement. Ne peut être jumelé à aucune autre offre."
+      },
+      "antiWrinkle": {
+        "title": "Forfait anti-rides",
+        "description": "Réservez 3 zones de traitement anti-rides et économisez.",
+        "terms": "Valable pour 3 zones traitées dans la même séance."
+      },
+      "dermalFiller": {
+        "title": "Forfait de fillers",
+        "description": "Réservez 2 ml ou plus de produit de comblement cutané et recevez un booster de peau gratuit.",
+        "terms": "Offre à durée limitée. Sous réserve de disponibilité."
+      },
+      "referral": {
+        "title": "Programme de recommandation",
+        "description": "Parrainez un ami et vous recevrez tous les deux un crédit de 50₾ pour votre prochain traitement.",
+        "terms": "L'ami parrainé doit suivre un traitement."
+      },
+      "seasonal": {
+        "title": "Rafraîchissement saisonnier de la peau",
+        "description": "Combinez n'importe quel traitement au laser avec une analyse cutanée ou un peeling adapté et économisez 15 % sur les deux.",
+        "terms": "Les deux soins doivent être réservés le même mois."
+      },
+      "loyalty": {
+        "title": "Programme de fidélité",
+        "description": "Rejoignez notre programme de fidélité et gagnez des points sur chaque soin.",
+        "terms": "peuvent être échangés contre de futurs traitements."
+      }
+    },
+    "ctaTitle": "Réservez votre traitement aujourd'hui",
+    "ctaSubtitle": "Contactez-nous pour réserver votre consultation et profiter de ces offres exclusives",
+    "ctaButton": "Réservez maintenant",
+    "termsText": "Toutes les offres sont soumises à disponibilité et peuvent être retirées à tout moment. Les offres ne sont pas cumulables sauf indication contraire. Merci de mentionner l'offre lors de la réservation.",
+    "imageAlt": "Offres spéciales"
+  },
+  "aboutPage": {
+    "title": "À propos de nous",
+    "subtitle": "Batumi, la clinique esthétique non chirurgicale leader, réunissant des praticiens de classe mondiale et des traitements de pointe",
+    "ourStory": "Notre histoire",
+    "storyP1": "Silk Beauty Salon a été fondée avec une vision simple : fournir des traitements esthétiques de la plus haute qualité dans un environnement luxueux et accueillant. Située dans la rue Zurab Gorgiladze à Batumi, notre clinique rassemble certains des praticiens esthétiques les plus talentueux de Géorgie.",
+    "storyP2": "Nous pensons que tout le monde mérite de se sentir belle et en confiance. Notre approche se concentre sur l’amélioration de vos caractéristiques naturelles plutôt que sur le changement de qui vous êtes. Nous sommes fiers de nos résultats subtils et raffinés qui vous aident à ressembler à la meilleure version de vous-même.",
+    "storyP3": "Dès que vous entrerez dans notre clinique, vous ferez l’expérience de la différence. Notre engagement envers l'excellence s'étend au-delà de nos traitements et s'étend à tous les aspects de votre visite, de notre espace clinique luxueux à notre équipe chaleureuse et attentive.",
+    "ourValues": "Nos valeurs",
+    "values": {
+      "patientCare": "Soins axés sur le patient d'abord",
+      "patientCareDesc": "Votre confort, votre sécurité et votre satisfaction sont nos principales priorités.",
+      "excellence": "Excellence",
+      "excellenceDesc": "Nous utilisons uniquement des produits haut de gamme et les dernières techniques pour des résultats optimaux.",
+      "safety": "Sécurité",
+      "safetyDesc": "Tous les traitements sont effectués par des professionnels de la santé qualifiés.",
+      "naturalResults": "Résultats naturels",
+      "naturalResultsDesc": "Nous valorisons votre beauté naturelle avec des soins subtils et raffinés."
+    },
+    "meetTeam": "Rencontrez notre équipe",
+    "teamSubtitle": "Nos praticiens experts apportent des années d'expérience et une passion pour l'excellence",
+    "team": {
+      "ninoRole": "et praticien principal",
+      "ninoBio": "Nino est le fondateur de Silk Beauty Salon et un praticien esthétique renommé avec plus de 15 ans d'expérience dans l'industrie de la beauté. Elle est connue pour ses résultats naturels et son attention méticuleuse aux détails.",
+      "ketevanRole": "Praticien Esthétique Senior",
+      "ketevanBio": "Ketevan est un praticien esthétique hautement qualifié spécialisé dans les fillers dermiques et les traitements cutanés. Son approche douce et son œil artistique garantissent des résultats magnifiques et naturels à chaque client.",
+      "mariamRole": "Praticien Esthétique",
+      "mariamBio": "Mariam apporte une richesse de connaissances en matière de traitements cutanés avancés et de thérapie au laser. Elle est passionnée par le fait d'aider ses clients à atteindre leurs objectifs en matière de peau grâce à des plans de traitement personnalisés.",
+      "sophiaRole": "Praticien Esthétique",
+      "sophiaBio": "Sophia est spécialisée dans le rajeunissement non chirurgical du visage et possède une vaste expérience dans les traitements antirides et les fillers dermiques. Ses clients adorent son approche naturelle et fraîche."
+    },
+    "awards": {
+      "title": "Prix et reconnaissance",
+      "awardWinning": "Primé",
+      "premierSalon": "Batumi Premier salon de beauté",
+      "featuredIn": "Tel que présenté dans le magazine géorgien de mode et de beauté"
+    },
+    "featuredInVogue": "présenté dans Vogue, Grazia, Vanity Fair et Tatler",
+    "featuredIn": "Tel que présenté dans le magazine géorgien de mode et de beauté",
+    "ctaTitle": "Prêt à commencer votre voyage ?",
+    "ctaSubtitle": "Réservez dès aujourd'hui une consultation avec l'un de nos praticiens experts",
+    "ctaButton": "Réserver une consultation",
+    "interiorAlt": "Silk Beauty Salon Intérieur",
+    "clinicAlt": "Silk Beauty Salon Clinique"
+  },
+  "home": {
+    "section1Title": "Portefeuille de traitements",
+    "section2Title": "Affections cutanées",
+    "section3Title": "Portefeuille de traitements",
+    "section4Title": "Affections cutanées",
+    "section5Title": "Portefeuille de traitements"
+  },
+  "notFoundPage": {
+    "title": "Page introuvable",
+    "description": "Désolé, nous n'avons pas trouvé la page que vous recherchez. Il a peut-être été déplacé ou supprimé.",
+    "home": "Rentrer à la maison",
+    "contact": "Contactez-nous"
+  },
+  "treatmentCollectionPage": {
+    "metadataTitle": "{title} à Batumi, Géorgie",
+    "metadataDescription": "{description} Réservez une consultation menée par {title} à Silk Beauty Salon à Batumi, Géorgie.",
+    "imageAlt": "{title} chez Silk Beauty Salon à Batumi, Géorgie",
+    "includedTreatments": "Traitements inclus",
+    "treatmentOptionsTitle": "Options de traitement dans cette catégorie",
+    "serviceOptions": "Options de service",
+    "serviceOptionsTitle": "Services de beauté axés sur la consultation",
+    "consultationEyebrow": "Consultation",
+    "consultationTitle": "Élaborez le bon plan avant le traitement.",
+    "consultationDescription": "Chaque rendez-vous commence par l'anatomie, l'état de la peau, le timing, les temps d'arrêt et la planification des résultats. Cela permet de garder le résultat précis et réaliste.",
+    "collections": {
+      "botox": {
+        "title": "Botox",
+        "eyebrow": "Injectables",
+        "description": "Une édition ciblée de traitements neuromodulateurs antirides, thérapeutiques et équilibrants du visage."
+      },
+      "dermalFillers": {
+        "title": "Fillers dermiques",
+        "eyebrow": "Volume et contour",
+        "description": "Lèvres, joues, menton, mâchoire, creux des larmes et soins d'équilibrage de profil construits autour de l'harmonie du visage."
+      },
+      "skinTreatments": {
+        "title": "Traitements de la peau",
+        "eyebrow": "Qualité de la peau",
+        "description": "Un mélange sélectionné de peelings, de microneedling, de diagnostics et de traitements de soutien au collagène pour une peau plus lumineuse et plus saine."
+      },
+      "laserTreatments": {
+        "title": "Traitements laser",
+        "eyebrow": "Appareils et resurfaçage",
+        "description": "Traitements de resurfaçage, de pigmentation, de stimulation vasculaire et de collagène au laser sélectionnés pour la précision de la peau."
+      },
+      "hairAndHairExtensions": {
+        "title": "Cheveux et extensions de cheveux",
+        "eyebrow": "Services de coiffure",
+        "description": "Consultation axée sur le cuir chevelu, planification de restauration et soutien beauté en salon pour des cheveux plus fournis et plus polis.",
+        "services": {
+          "service1": {
+            "title": "Consultation en restauration capillaire",
+            "description": "Évaluation clinique du cuir chevelu et planification de traitement personnalisée.",
+            "duration": "45 à 60 minutes"
+          },
+          "service2": {
+            "title": "Consultation en extension de cheveux",
+            "description": "Correspondance des couleurs, planification du mélange et conseils d'entretien avant application.",
+            "duration": "30 minutes"
+          }
+        }
+      },
+      "nails": {
+        "title": "Ongles",
+        "eyebrow": "Services de salon",
+        "description": "Les services de manucure et de pédicure sont réservés sur rendez-vous en salon de consultation.",
+        "services": {
+          "service1": {
+            "title": "Manucure signature",
+            "description": "Forme, soin des cuticules, planification du vernis et sélection des finitions.",
+            "duration": "45 minutes"
+          },
+          "service2": {
+            "title": "Pédicure de luxe",
+            "description": "Soin des pieds, exfoliation, hydratation et finition vernis longue tenue.",
+            "duration": "60 minutes"
+          }
+        }
+      },
+      "lashes": {
+        "title": "Cils",
+        "eyebrow": "Finition esthétique",
+        "description": "Les rendez-vous cils sont planifiés sous forme de services de beauté dédiés avec des options de forme, de rehaussement et de finition.",
+        "services": {
+          "service1": {
+            "title": "Consultation rehaussement de cils",
+            "description": "Lifting naturel, direction des boucles et planification du suivi.",
+            "duration": "30 minutes"
+          },
+          "service2": {
+            "title": "Rendez-vous coiffage des cils",
+            "description": "Une finition de cils plus complète avec une forme personnalisée et des conseils d'entretien.",
+            "duration": "45 minutes"
+          }
+        }
+      }
+    }
+  },
+  "localSeoTemplate": {
+    "locationText": "{name} est situé à {address}, {city}. La réservation en ligne, l'assistance téléphonique, WhatsApp et l'e-mail sont disponibles pour les clients locaux et internationaux.",
+    "booking": "Réservation",
+    "online": "En ligne",
+    "phone": "Téléphone",
+    "email": "E-mail"
+  }
+}

@@ -13,7 +13,7 @@ import { rtlLocales, type Locale } from '@/i18n';
 
 export function LocaleChrome({ children, locale }: { children: ReactNode; locale: Locale }) {
   const pathname = usePathname();
-  const isDashboardPath = /^\/(?:en|ka|ru|tr|ar|he)\/dashboard(?:\/|$)/.test(pathname || '');
+  const isDashboardPath = /^\/(?:en|ka|ru|tr|ar|he|nl|fr|de)\/dashboard(?:\/|$)/.test(pathname || '');
 
   useEffect(() => {
     document.documentElement.lang = locale;

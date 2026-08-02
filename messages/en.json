@@ -417,7 +417,10 @@
     "ru": "Русский",
     "tr": "Türkçe",
     "ar": "العربية",
-    "he": "עברית"
+    "he": "עברית",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch"
   },
   "notFound": {
     "title": "Page Not Found",
@@ -2246,7 +2249,7 @@
       "location": "Silk Beauty Salon is at {address}, {city}, {country}.",
       "hours": "Open Monday–Saturday {mondaySaturday}; Sunday {sunday}.",
       "contact": "Phone: {phone}. WhatsApp: {whatsapp}. Email: {email}.",
-      "languages": "The website and Mariam support English, Georgian, Russian, Turkish, Arabic and Hebrew. Confirm the preferred spoken language with the salon when booking.",
+      "languages": "The website and Mariam support English, Georgian, Russian, Turkish, Arabic, Hebrew, Dutch, French and German. Confirm the preferred spoken language with the salon when booking.",
       "payment": "The website states that cash and major credit cards are accepted. Payment is due at the service unless agreed otherwise.",
       "results": "Results and how long they last depend on the exact service and the individual; the treatment guide shows the published estimate.",
       "downtime": "Recovery is treatment-specific and can include temporary redness, swelling, tenderness, bruising, dryness or peeling.",

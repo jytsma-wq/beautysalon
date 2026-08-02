@@ -9,6 +9,9 @@ export const localeOpenGraphMap: Record<string, string> = {
   tr: 'tr_TR',
   ar: 'ar_SA',
   he: 'he_IL',
+  nl: 'nl_NL',
+  fr: 'fr_FR',
+  de: 'de_DE',
 };
 
 export function getSiteUrl(): string {

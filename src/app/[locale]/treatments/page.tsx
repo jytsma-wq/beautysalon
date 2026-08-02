@@ -9,7 +9,7 @@ import { buildSeoMetadata, localSeoKeywords } from '@/lib/seo';
 
 // Generate static params for all locales
 export async function generateStaticParams() {
-  const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr'];
+  const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr', 'nl', 'fr', 'de'];
   const categories = await getAllCategorySlugs();
   
   const params = [];

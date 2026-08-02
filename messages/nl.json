@@ -1,0 +1,2860 @@
+{
+  "site": {
+    "title": "Eersteklas schoonheidssalon in Batumi | Silk Beauty Salon",
+    "description": "Batumi's beste schoonheidssalon in de Zurab Gorgiladze-straat. Deskundige beoefenaars, geavanceerde behandelingen en luxe zorg.",
+    "brandName": "Silk Beauty Salon",
+    "brandShort": "Silk Beauty"
+  },
+  "nav": {
+    "home": "Startpagina",
+    "treatments": "Behandelingen",
+    "conditions": "Huidaandoeningen",
+    "about": "Over",
+    "consultation": "Consultatie",
+    "skinConcerns": "Huidproblemen",
+    "results": "Resultaten",
+    "aboutUs": "Over ons",
+    "findSpecialist": "Zoek een specialist",
+    "pricelist": "Prijslijst",
+    "offers": "Aanbiedingen",
+    "beforeAfter": "Voor en na",
+    "gallery": "Galerij",
+    "contact": "Contact",
+    "bookAppointment": "Afspraak boeken",
+    "bookConsultation": "Consultatie boeken",
+    "faq": "Veelgestelde vragen",
+    "press": "Pers",
+    "blog": "Blog",
+    "team": "Ons team",
+    "mainNavigation": "Hoofdnavigatie",
+    "internationalClients": "Internationale klanten",
+    "international": "Internationale klanten",
+    "venueRental": "Salonruimte huren",
+    "chairRental": "Stoelverhuur",
+    "book": "Boeken",
+    "allTreatments": "Alle behandelingen",
+    "allConditions": "Alle huidproblemen",
+    "viewAll": "Alles weergeven",
+    "exploreAll": "Ontdek alles",
+    "visitUs": "Bezoek ons",
+    "menu": "Menu",
+    "more": "Meer",
+    "moreLinks": "Meer links",
+    "treatmentPortfolio": "Behandelportfolio",
+    "skinConditions": "Huidaandoeningen",
+    "treatmentPortfolioDescription": "Ontdek op consultatie gebaseerde injectables, huidkwaliteitsbehandelingen, nagels, wimpers en haarverzorging.",
+    "conditionsDescription": "Vind passende informatie per huidprobleem, van fijne lijntjes en stevigheid tot teint, textuur, hydratatie en acne.",
+    "downloadApp": "Download de app",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "call": "Bel Silk Beauty Salon",
+    "whatsapp": "Bericht Silk Beauty Salon op WhatsApp",
+    "whatsappShort": "WhatsApp",
+    "bookNow": "Boek nu",
+    "stickyBookNowLabel": "Maak een afspraak op Silk Beauty Salon",
+    "stickyBookingLabel": "Snelle mobiele boekingsacties"
+  },
+  "header": {
+    "announcement": "Bekroond | Toonaangevende schoonheidssalon in Batumi | Uitgelicht in Georgische mode- en beautymedia"
+  },
+  "hero": {
+    "title": "Specialisten in huidverjonging",
+    "subtitle": "Toonaangevende schoonheidssalon in Batumi",
+    "description": "Silk Beauty Salon brengt ervaren specialisten, moderne behandelingen en persoonlijke zorg samen om uw natuurlijke uitstraling zorgvuldig te ondersteunen.",
+    "heading": "Vertrouwen in uw huid is onze grootste zorg",
+    "imageAlt": "Luxe spa- en schoonheidssaloninterieur",
+    "ctaText": "Ontdek hoe",
+    "cta": {
+      "book": "Afspraak boeken",
+      "treatments": "Behandelingen bekijken"
+    },
+    "eyebrow": "Silk Beauty · Batumi, Georgië",
+    "exploreMore": "Ontdek behandelingen",
+    "scroll": "Blader door",
+    "cornerDetail": "GESCH. 2024<br />BATUMI, GE"
+  },
+  "content": {
+    "heading1": "Esthetische mogelijkheden samen vormgegeven",
+    "body1": "Er zijn veel soorten fijne lijntjes en rimpels, en een naam voor bijna elk type dat we op ons gezicht kunnen tegenkomen. Ons behandelportfolio biedt een holistische benadering om natuurlijk ogende resultaten te bereiken die uw individualiteit vieren.",
+    "heading2": "Bestrijd de bijwerkingen van de tijd",
+    "body2": "Naarmate we ouder worden, kunnen veranderingen in de onderliggende structuur van onze huid resulteren in expressielijnen die ons uiterlijk veranderen. Door de spieren van het gezicht tijdelijk te ontspannen, kunnen we de verschijning van deze expressielijnen verminderen en ons op ons best voelen.",
+    "imageAlt2": "Bestrijd de bijwerkingen van de tijd"
+  },
+  "categories": {
+    "fillers": "Dermale fillers",
+    "fillersDesc": "Herstel volume en contour met premium hyaluronzuurbehandelingen.",
+    "fillersAlt": "Behandeling met fillers",
+    "skinboosters": "Skinboosters",
+    "skinboostersDesc": "Diepe hydratatie en uitstraling voor een gerevitaliseerde, stralende huid.",
+    "skinboostersAlt": "Skinboosters-behandeling",
+    "biostimulators": "Biostimulatoren",
+    "biostimulatorsDesc": "Stimuleer de natuurlijke collageenproductie van uw huid voor langdurig resultaat.",
+    "biostimulatorsAlt": "Behandeling met biostimulatoren",
+    "other": "Andere behandelingen",
+    "otherDesc": "Expressielijnbehandelingen en aanvullende esthetische oplossingen.",
+    "otherAlt": "Overige esthetische behandelingen"
+  },
+  "stats": {
+    "stat1": "Patiënten die zich gelukkiger en zelfverzekerder willen voelen of de kwaliteit van leven willen verbeteren.",
+    "stat2": "Patiënten die zichzelf willen verwennen of een mijlpaal willen vieren."
+  },
+  "cta": {
+    "heading": "Zoek een specialist",
+    "description": "Klaar om uw opties te verkennen? Kom in contact met een gekwalificeerde specialist bij u in de buurt.",
+    "imageAlt": "Zoek een specialist",
+    "ctaText": "Aan de slag"
+  },
+  "results": {
+    "beforeAlt": "Vóór de behandeling",
+    "afterAlt": "Na behandeling",
+    "ctaText": "Bekijk hun resultaten"
+  },
+  "treatments": {
+    "title": "Behandelingen",
+    "subtitle": "Geavanceerde esthetische behandelingen afgestemd op uw behoeften",
+    "learnMore": "Meer informatie",
+    "viewAll": "Bekijk alle behandelingen",
+    "sectionLabel": "Onze behandelingen",
+    "sectionTitle": "Wetenschappelijk onderbouwde behandelingen voor een stralende huid",
+    "sectionDescription": "Elke behandeling is geselecteerd op bewezen resultaten en wordt met uiterste zorg uitgevoerd.",
+    "categories": {
+      "botox": "Botox Injecteerbare producten",
+      "fillers": "Injecteerbare dermale fillers",
+      "laser": "Laserbehandelingen",
+      "skin": "Huidbehandelingen",
+      "intimate": "Intieme behandelingen",
+      "diagnostic": "Diagnostische tests",
+      "hair": "Haarbehandelingen"
+    }
+  },
+  "conditions": {
+    "title": "Voorwaarden die wij behandelen",
+    "subtitle": "Deskundige oplossingen voor uw huidproblemen",
+    "viewAll": "Bekijk alle voorwaarden",
+    "items": {
+      "ageing": "Verouderende huid",
+      "acne": "Acne en littekens",
+      "uneven": "Oneven huidskleur",
+      "blemishes": "Vlekken",
+      "pigmentation": "Pigmentatie",
+      "collagen": "Collageenstimulerend",
+      "other": "Overige voorwaarden"
+    }
+  },
+  "technologies": {
+    "title": "Geavanceerde technologieën",
+    "subtitle": "Onze salon is uitgerust met geavanceerde esthetische technologieën voor injectables, laserhuidbehandelingen, diagnostiek en gepersonaliseerde schoonheidsverzorging. Wij richten ons op bewezen behandelingen die zichtbare resultaten opleveren met minimale hersteltijd.",
+    "aboutUs": "OVER ONS"
+  },
+  "testimonials": {
+    "title": "Wat onze klanten zeggen",
+    "subtitle": "Echte resultaten van echte klanten",
+    "viewAll": "Bekijk alle beoordelingen",
+    "sectionLabel": "Klantverhalen",
+    "description": "Echte verhalen van echte klanten over hoe zij bij ons hun uiterlijk en zelfvertrouwen hebben getransformeerd.",
+    "stats": {
+      "clients": "Tevreden klanten",
+      "rating": "Gemiddelde beoordeling",
+      "recommend": "Zou",
+      "years": "Jarenlange ervaring"
+    }
+  },
+  "pressBar": {
+    "ariaLabel": "Kliniekgegevens",
+    "credential1": "Bekroonde esthetische kliniek",
+    "credential2": "Meer dan 5.000 patiënten behandeld",
+    "credential3": "Deskundige artsen",
+    "credential4": "Batumi's beste esthetische kliniek",
+    "credential5": "Internationale medische normen",
+    "credential6": "Gecertificeerde esthetische procedures"
+  },
+  "about": {
+    "sectionLabel": "Over ons",
+    "imageAlt": "Silk Beauty Salon",
+    "category": "Over ons",
+    "title": "OVER ONS",
+    "description": "Onze salon is uitgerust met geavanceerde esthetische technologieën voor injectables, laserhuidbehandelingen, diagnostiek en gepersonaliseerde schoonheidsverzorging. Wij richten ons op bewezen behandelingen die zichtbare resultaten opleveren met minimale hersteltijd.",
+    "descriptionExtended": "Ervaar de perfecte mix van geavanceerde technologie en persoonlijke zorg bij Silk Beauty Salon, waar we geavanceerde esthetische behandelingen combineren met toewijding aan uw veiligheid en tevredenheid.",
+    "readMore": "Lees meer",
+    "stats": {
+      "years": "Jaar",
+      "patients": "Tevreden patiënten",
+      "treatments": "Behandelingen"
+    },
+    "features": {
+      "award": "Bekroonde salon",
+      "practitioners": "Beoefenaars van wereldklasse",
+      "products": "Alleen premiumproducten",
+      "experience": "Luxe patiëntervaring",
+      "technology": "Nieuwste technologieën",
+      "results": "Natuurlijk ogende resultaten"
+    },
+    "values": {
+      "title": "Onze waarden",
+      "excellence": "Uitmuntendheid",
+      "excellenceDesc": "Wij streven naar uitmuntendheid in elke behandeling",
+      "safety": "Veiligheid",
+      "safetyDesc": "Uw veiligheid is onze topprioriteit",
+      "innovation": "Innovatie",
+      "innovationDesc": "Gebruikmakend van de nieuwste technologieën en technieken"
+    }
+  },
+  "manifesto": {
+    "label": "Onze filosofie",
+    "statement": "Waar wetenschap de kunst van een mooie huid ontmoet.",
+    "value1": "Precisie",
+    "value2": "Discretie",
+    "value3": "Uitmuntendheid",
+    "cta": "Ontdek ons verhaal"
+  },
+  "quickLinks": {
+    "title": "Snelle links",
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "description": "Lees enkele van de meest gestelde vragen over de salon en onze behandelingen."
+    },
+    "contact": {
+      "title": "Neem contact op met",
+      "description": "Gelegen aan de Zurab Gorgiladze-straat 63. Open van maandag tot en met zaterdag van 10:00 tot 22:00 uur en op zondag van 11:00 tot 22:00 uur."
+    },
+    "team": {
+      "title": "Ons team",
+      "description": "Ontdek meer over onze deskundige medewerkers en hoe zij u het beste kunnen helpen."
+    },
+    "press": {
+      "title": "Druk op",
+      "description": "Kijk eens naar onze meest recente persartikelen en kijk wat ze over ons zeggen."
+    },
+    "learnMore": "Meer informatie"
+  },
+  "newsletter": {
+    "title": "Blijf op de hoogte",
+    "description": "Meld u aan met uw e-mailadres om nieuws en updates te ontvangen.",
+    "placeholder": "E-mailadres",
+    "subscribe": "Inschrijven",
+    "success": "Bedankt voor uw inschrijving!",
+    "privacy": "Wij respecteren uw privacy. U kunt zich op elk gewenst moment afmelden."
+  },
+  "contact": {
+    "title": "Neem contact met ons op",
+    "subtitle": "Neem contact op met ons team",
+    "form": {
+      "name": "Volledige naam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer",
+      "message": "Uw bericht",
+      "submit": "Bericht verzenden",
+      "success": "Bedankt! We nemen snel contact met u op."
+    },
+    "successTitle": "Bericht verzonden",
+    "successMessage": "Bedankt voor uw bericht. We nemen zo snel mogelijk contact met u op.",
+    "errorTitle": "Fout",
+    "errorMessage": "Kan bericht niet verzenden. Probeer het opnieuw.",
+    "rateLimitMessage": "Te veel inzendingen. Wacht alstublieft 15 minuten.",
+    "info": {
+      "title": "Bezoek ons",
+      "address": "Zurab Gorgiladze 63",
+      "city": "Batumi 6010, Georgië",
+      "phone": "+995 577 34 57 67",
+      "email": "info@silkbeautysalon.online"
+    }
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Vind antwoorden op veelgestelde vragen over onze behandelingen"
+  },
+  "prices": {
+    "title": "Prijslijst",
+    "subtitle": "Transparante prijzen voor al onze behandelingen",
+    "treatment": "Behandeling",
+    "price": "Prijs",
+    "from": "Van"
+  },
+  "offers": {
+    "title": "Speciale aanbiedingen",
+    "subtitle": "Profiteer van onze huidige promoties",
+    "bookNow": "Boek nu",
+    "expires": "Verloopt"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Laatste nieuws en inzichten",
+    "readMore": "Lees meer"
+  },
+  "press": {
+    "title": "Pers en media",
+    "subtitle": "Zoals vermeld in",
+    "features": "Persfuncties"
+  },
+  "team": {
+    "title": "Ons team",
+    "subtitle": "Maak kennis met onze deskundige praktijkmensen",
+    "bookWith": "Boek met"
+  },
+  "treatmentsPage": {
+    "title": "Onze behandelingen",
+    "metaTitle": "Behandelingen | Silk Beauty Salon",
+    "metaDescription": "Ontdek ons uitgebreide assortiment hoogwaardige esthetische behandelingen, waaronder Botox, dermale fillers, laserbehandelingen en geavanceerde huidverzorging in Batumi, Georgië.",
+    "subtitle": "Ontdek ons uitgebreide assortiment hoogwaardige esthetische behandelingen die zijn ontworpen om uw natuurlijke schoonheid te verbeteren",
+    "ctaTitle": "Klaar om aan uw reis te beginnen?",
+    "ctaSubtitle": "Boek een consultatie met een van onze deskundige beoefenaars om uw esthetische doelen te bespreken",
+    "ctaButton": "Boek een consult"
+  },
+  "beforeAfterPage": {
+    "title": "Echte resultaten,",
+    "realPeople": "Echte mensen",
+    "subtitle": "Elk gezicht vertelt een verhaal. Blader door onze samengestelde verzameling behandelresultaten, die elk een reis naar hernieuwd vertrouwen vertegenwoordigen.",
+    "sectionLabel": "Echte resultaten",
+    "before": "Vóór",
+    "after": "Na",
+    "disclaimer": "Individuele resultaten kunnen variëren. Alle foto's zijn van echte klanten en worden met hun toestemming getoond.",
+    "comingSoon": "Galerie binnenkort beschikbaar",
+    "galleryDescription": "We bereiden onze voor en na galerij voor. Kom snel terug.",
+    "duration": "Resultatenduur",
+    "sessions": "Sessies",
+    "concerns": "Probleem opgelost",
+    "results": "Behaalde resultaten",
+    "seeMoreResults": "Bekijk alle resultaten",
+    "filter": "Filter op behandeling",
+    "homeTeaserTitle": "Het bewijs staat in de resultaten",
+    "ctaTitle": "Klaar om je look te transformeren?",
+    "ctaText": "Boek een consultatie met een van onze deskundige behandelaars om uw behandeldoelen te bespreken",
+    "bookNow": "Boek nu"
+  },
+  "booking": {
+    "selectService": "Selecteer behandeling",
+    "selectDate": "Datum selecteren",
+    "selectTimeSlot": "Selecteer Tijdslot",
+    "fullName": "Volledige naam",
+    "email": "E-mail",
+    "phone": "Telefoon (optioneel)",
+    "message": "Bericht (optioneel)",
+    "servicePlaceholder": "Kies een behandeling",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "phonePlaceholder": "+1 234 567 890",
+    "messagePlaceholder": "Eventuele specifieke vereisten of vragen...",
+    "dialogTitle": "Afspraak boeken",
+    "dialogDescription": "Plan uw consultatie met onze deskundige behandelaars",
+    "continue": "Ga verder met",
+    "back": "Terug",
+    "confirmBooking": "Boeking bevestigen",
+    "booking": "Boeking...",
+    "booked": "(geboekt)",
+    "slotConflict": "Dit tijdslot is al geboekt. Selecteer een ander tijdstip.",
+    "bookingFailed": "Kan boeking",
+    "unexpectedError": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
+    "rateLimitMessage": "Te veel inzendingen. Wacht alstublieft 15 minuten.",
+    "bookingSummary": "Boekingsoverzicht",
+    "service": "Behandeling",
+    "date": "Datum",
+    "time": "Tijd",
+    "bookingConfirmed": "Boeking bevestigd!",
+    "thankYou": "Bedankt, {name}. Uw afspraak is gepland.",
+    "bookingDetails": "Boekingsgegevens",
+    "done": "Klaar",
+    "serviceConsultation": "Consultatie",
+    "serviceBotox": "Botox Behandeling",
+    "serviceFillers": "Dermale fillers",
+    "serviceLaser": "Laserontharing",
+    "serviceRejuvenation": "Huidverjonging",
+    "servicePeel": "Chemische peeling",
+    "serviceMicroneedling": "Microneedling"
+  },
+  "statistics": {
+    "years": "Jarenlange ervaring",
+    "clients": "Tevreden klanten",
+    "satisfaction": "Tevredenheidspercentage",
+    "awards": "Industrieprijzen"
+  },
+  "testimonial": {
+    "quote": "Het team van Silk Beauty Salon heeft mijn zelfvertrouwen getransformeerd. De resultaten zijn natuurlijk en precies wat ik voor ogen had.",
+    "name": "Sarah Mitchell",
+    "location": "Batumi, Georgië",
+    "imageAlt": "Testimonial portret van tevreden klant"
+  },
+  "faqPage": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Vind antwoorden op veelgestelde vragen over onze kliniek, behandelingen en boekingsproces",
+    "breadcrumb": "Veelgestelde vragen",
+    "stillHaveQuestions": "Heeft u nog vragen?",
+    "cantFindAnswer": "Kunt u het antwoord dat u zoekt niet vinden? Neem contact op met ons vriendelijke team.",
+    "contactUs": "Neem contact met ons op",
+    "bookConsultation": "Boek een consult"
+  },
+  "pricelistPage": {
+    "title": "Prijslijst",
+    "subtitle": "Transparante prijzen voor al onze hoogwaardige esthetische behandelingen",
+    "noteTitle": "Opmerking:",
+    "noteText": "Prijzen zijn vanafprijzen en kunnen variëren op basis van individuele wensen. Om het exacte behandelplan en de kosten te bepalen, is een consultatie nodig. Alle consulten omvatten een uitgebreide huidanalyse en gepersonaliseerde behandeladviezen.",
+    "treatment": "Behandeling",
+    "duration": "Duur",
+    "priceFrom": "Prijs vanaf",
+    "enquire": "Informeer",
+    "ctaTitle": "Klaar om te boeken?",
+    "ctaSubtitle": "Boek een consult om uw behandeldoelen te bespreken en ontvang een persoonlijke offerte",
+    "ctaButton": "Boek een consult"
+  },
+  "conditionPage": {
+    "title": "Conditie",
+    "backTo": "Terug naar voorwaarden",
+    "aboutCondition": "Over {name}",
+    "symptoms": "Veel voorkomende klachten en symptomen",
+    "causes": "Veel voorkomende oorzaken",
+    "treatments": "Behandelingsopties",
+    "bookConsultation": "Boek een consult",
+    "needHelp": "Hulp nodig?",
+    "bookConsultationDesc": "Boek een consultatie bij een van onze deskundige behandelaars",
+    "bookNow": "Boek nu",
+    "otherConditions": "Overige voorwaarden",
+    "viewAllConditions": "Bekijk alle voorwaarden",
+    "recommendedTreatments": "Aanbevolen behandelingen"
+  },
+  "language": {
+    "select": "Taal selecteren",
+    "en": "English",
+    "ka": "ქართული",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "ar": "العربية",
+    "he": "עברית",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch"
+  },
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "description": "Sorry, we konden de pagina die u zocht niet vinden. Mogelijk is deze verplaatst of verwijderd.",
+    "goHome": "Ga naar huis",
+    "contactUs": "Neem contact met ons op"
+  },
+  "siteConfig": {
+    "awards": {
+      "awardWinning": "Bekroonde",
+      "premierSalon": "Batumi's beste schoonheidssalon",
+      "featuredIn": "Zoals vermeld in het Georgian Fashion & Beauty Magazine"
+    },
+    "navigation": {
+      "treatments": "Behandelingen",
+      "conditions": "Huidaandoeningen",
+      "about": "Over",
+      "priceList": "Prijslijst",
+      "offers": "Aanbiedingen",
+      "contact": "Neem contact op met",
+      "faq": "Veelgestelde vragen",
+      "press": "Druk op",
+      "blog": "Blog",
+      "aboutUs": "Over ons",
+      "ourTeam": "Ons team",
+      "careers": "Carrière"
+    },
+    "team": {
+      "ninoRole": "Oprichter en hoofddeskundige",
+      "ninoBio": "Nino is de oprichter van Silk Beauty Salon en een gerenommeerd esthetisch arts met meer dan 15 jaar ervaring in de schoonheidsindustrie. Ze staat bekend om haar natuurlijk ogende resultaten en nauwgezette aandacht voor detail.",
+      "ketevanRole": "Senior esthetisch arts",
+      "ketevanBio": "Ketevan is een zeer ervaren esthetisch arts, gespecialiseerd in dermale fillers en huidbehandelingen. Haar zachte aanpak en artistieke blik zorgen voor mooie, natuurlijke resultaten voor elke klant.",
+      "mariamRole": "Esthetisch arts",
+      "mariamBio": "Mariam brengt een schat aan kennis met zich mee op het gebied van geavanceerde huidbehandelingen en lasertherapie. Ze heeft een passie om klanten te helpen hun huiddoelen te bereiken door middel van gepersonaliseerde behandelplannen.",
+      "sophiaRole": "Esthetisch arts",
+      "sophiaBio": "Sophia is gespecialiseerd in niet-chirurgische gezichtsverjonging en heeft uitgebreide ervaring met antirimpelbehandelingen en fillers. Haar klanten waarderen haar natuurlijke, frisse aanpak."
+    },
+    "faqs": {
+      "consultationQuestion": "Wat moet ik verwachten tijdens mijn eerste consult?",
+      "consultationAnswer": "Uw eerste consult richt zich op uw doel, relevante geschiedenis en huidige zorgen. De salon bevestigt de passende service, realistische verwachtingen, voorbereiding, nazorg, toegewezen professional, exacte prijs en of de behandeling door kan gaan. Als u niet zeker weet wat u moet boeken, kies dan voor de consultatieoptie.",
+      "painQuestion": "Zijn de behandelingen pijnlijk?",
+      "painAnswer": "Het comfort varieert afhankelijk van de behandeling, het lichaamsgebied en de individuele gevoeligheid. Op de behandelpagina staat wat er bekend is; de salon zal vóór de behandeling het proces en eventuele passende comfortmaatregelen bevestigen.",
+      "resultsQuestion": "Hoe lang houden de resultaten aan?",
+      "resultsAnswer": "Resultaten en hoe lang ze duren, zijn afhankelijk van de exacte service en het individu. Gebruik de servicepagina voor de gepubliceerde schatting en vraag vervolgens de salon om te bevestigen wat voor u realistisch is. Geen enkel antwoord op een website of chatbot kan een resultaat garanderen.",
+      "downtimeQuestion": "Is er sprake van downtime?",
+      "downtimeAnswer": "Downtime is behandelingsspecifiek. Sommige behandelingen behoeven geen gepland herstel, terwijl andere tijdelijke roodheid, zwelling, gevoeligheid, blauwe plekken, droogheid of vervelling kunnen veroorzaken. Vertel de salon over werk, reizen of een belangrijke gebeurtenis voordat u boekt.",
+      "bookingQuestion": "Hoe maak ik een afspraak?",
+      "bookingAnswer": "Stuur online een boekingsaanvraag, bel +995 577 34 57 67, gebruik WhatsApp op +995 577 28 68 55 of stuur een e-mail naar info@silkbeautysalon.online. Een online aanvraag wordt pas bevestigd als de salon contact met u opneemt; Het team streeft ernaar om binnen 24 uur te reageren.",
+      "virtualQuestion": "Bieden jullie virtuele consultaties aan?",
+      "virtualAnswer": "De beschikbaarheid van virtueel advies wordt niet bevestigd op de website. Neem contact op met de salon om ernaar te vragen. Een bericht op afstand of een chatbot kan de geschiktheid niet goedkeuren voor een dienst waarvoor een persoonlijke beoordeling vereist is.",
+      "brandsQuestion": "Welke merken producten gebruikt u?",
+      "brandsAnswer": "De geverifieerde servicepagina's identificeren momenteel SkinPen en iS Clinical waar relevant. Vraag voor elke afspraak de salon om het exacte product of apparaat dat zal worden gebruikt te bevestigen; de chatbot raadt geen merken.",
+      "qualifiedQuestion": "Zijn uw beoefenaars gekwalificeerd?",
+      "qualifiedAnswer": "Vraag de salon vóór een procedure om te bevestigen wie de procedure zal uitvoeren en om de huidige kwalificaties of autorisatie te verstrekken die relevant zijn voor die service. De website en chatbot publiceren geen niet-geverifieerde personeelsnamen of inloggegevens."
+    }
+  },
+  "termsConditions": {
+    "title": "Algemene voorwaarden",
+    "subtitle": "Voorwaarden voor uw gebruik van onze website en diensten",
+    "breadcrumb": "Algemene voorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: april 2026",
+    "acceptanceTitle": "1. Acceptatie van de voorwaarden",
+    "acceptanceText": "Door de website en diensten van Silk Beauty Salon te bezoeken en te gebruiken, gaat u ermee akkoord gebonden te zijn aan deze Algemene voorwaarden. Als u het niet eens bent met enig onderdeel van deze voorwaarden, maak dan geen gebruik van onze website of diensten.",
+    "servicesTitle": "2. Diensten",
+    "servicesText": "Silk Beauty Salon biedt esthetische en schoonheidsbehandelingen. Alle behandelingen worden uitgevoerd door gekwalificeerde professionals in overeenstemming met de industrienormen en lokale regelgeving. De resultaten kunnen per individu verschillen.",
+    "bookingTitle": "3. Boeking en afspraken",
+    "bookingIntro": "Bij het boeken van afspraken:",
+    "bookingItem1": "Afspraken moeten worden geboekt via ons officiële boekingssysteem of per telefoon",
+    "bookingItem2": "Voorafgaand aan bepaalde behandelingen kan een consultatie nodig zijn.",
+    "bookingItem3": "Wij behouden ons het recht voor om service te weigeren als er contra-indicaties worden vastgesteld",
+    "bookingItem4": "Klanten moeten 15 minuten vóór hun geplande afspraak aanwezig zijn",
+    "cancellationTitle": "4. Annuleringsbeleid",
+    "cancellationText": "Wij begrijpen dat de omstandigheden kunnen veranderen. Geef annuleringen minimaal 48 uur van tevoren door en voor verplaatsingen minimaal 24 uur van tevoren. Voor late annuleringen of no-shows kunnen kosten in rekening worden gebracht.",
+    "paymentTitle": "5. Betalingsvoorwaarden",
+    "paymentIntro": "Betalingsvoorwaarden:",
+    "paymentItem1": "Betaling dient te geschieden op het moment van de dienstverlening, tenzij anders overeengekomen.",
+    "paymentItem2": "Wij accepteren contant geld en de belangrijkste creditcards",
+    "paymentItem3": "Cadeaubonnen moeten worden getoond op het moment van reserveren",
+    "paymentItem4": "Alle prijzen zijn in Georgische Lari (GEL) en inclusief toepasselijke belastingen",
+    "refundTitle": "6. Terugbetalingsbeleid",
+    "refundText": "Behandelingspakketten kunnen niet worden gerestitueerd. Indien u niet tevreden bent over een behandeling, verzoeken wij u binnen 7 dagen contact met ons op te nemen, zodat wij uw klacht op passende wijze kunnen aanpakken.",
+    "medicalTitle": "7. Medische disclaimer",
+    "medicalText": "Onze behandelingen zijn geen vervanging voor medisch advies, diagnose of behandeling. Vraag altijd advies aan uw arts of een andere gekwalificeerde zorgverlener als u vragen heeft over een medische aandoening.",
+    "intellectualTitle": "8. Intellectuele eigendom",
+    "intellectualText": "Alle inhoud op deze website, inclusief tekst, afbeeldingen, logo's en ontwerp, is eigendom van Silk Beauty Salon en wordt beschermd door auteursrecht en andere wetten op intellectueel eigendom. Ongeautoriseerd gebruik is verboden.",
+    "liabilityTitle": "9. Beperking van aansprakelijkheid",
+    "liabilityText": "Voor zover toegestaan door de wet, is Silk Beauty Salon niet aansprakelijk voor enige indirecte, incidentele, speciale, gevolg- of punitieve schade die voortvloeit uit uw gebruik van onze diensten.",
+    "governingTitle": "10. Toepasselijk recht",
+    "governingText": "Deze Algemene Voorwaarden worden beheerst door de wetten van Georgië. Alle geschillen die voortvloeien uit deze voorwaarden zijn onderworpen aan de exclusieve jurisdictie van de rechtbanken van Batumi, Georgië.",
+    "changesTitle": "11. Wijzigingen in de voorwaarden",
+    "changesText": "Wij behouden ons het recht voor om deze Algemene Voorwaarden op elk moment te wijzigen. Wijzigingen worden onmiddellijk van kracht zodra ze op de website worden geplaatst. Als u onze diensten blijft gebruiken, betekent dit dat u akkoord gaat met de herziene voorwaarden.",
+    "contactTitle": "12. Contactgegevens",
+    "contactText": "Voor vragen over deze Algemene Voorwaarden kunt u contact met ons opnemen via"
+  },
+  "careers": {
+    "title": "Carrière",
+    "subtitle": "Sluit u aan bij ons team van gepassioneerde professionals die zich inzetten voor het verbeteren van de natuurlijke schoonheid",
+    "breadcrumb": "Carrière",
+    "whyWorkTitle": "Waarom met ons samenwerken?",
+    "whyWorkText": "Bij Silk Beauty Salon geloven we dat ons team onze grootste troef is. We streven ernaar een omgeving te creëren waarin getalenteerde professionals kunnen gedijen, groeien en een echt verschil kunnen maken in het leven van onze klanten. Doe met ons mee en lever uitzonderlijke esthetische behandelingen en ervaringen.",
+    "benefitsTitle": "Voordelen",
+    "benefit1Title": "Competitief salaris",
+    "benefit1Desc": "Wij bieden toonaangevende beloningspakketten met prestatiebonussen.",
+    "benefit2Title": "Professionele ontwikkeling",
+    "benefit2Desc": "Continue opleidings- en certificeringsmogelijkheden om uw carrière vooruit te helpen.",
+    "benefit3Title": "Premium-omgeving",
+    "benefit3Desc": "Werken in een moderne, luxe kliniek met de modernste apparatuur.",
+    "benefit4Title": "Teamcultuur",
+    "benefit4Desc": "Sluit je aan bij een ondersteunend team dat samenwerking en uitmuntendheid waardeert.",
+    "openingsTitle": "Huidige openingen",
+    "openingsSubtitle": "We zijn altijd op zoek naar getalenteerde individuen om ons team te versterken",
+    "job1Title": "Esthetisch arts",
+    "job1Type": "Voltijds",
+    "job1Location": "Batumi, Georgië",
+    "job1Desc": "We zijn op zoek naar ervaren esthetische beoefenaars om ons groeiende team te versterken.",
+    "job2Title": "Kliniekreceptionist",
+    "job2Type": "Voltijds",
+    "job2Location": "Batumi, Georgië",
+    "job2Desc": "Vriendelijke en professionele receptioniste die boekingen en vragen van klanten beheert.",
+    "job3Title": "Huidverzorgingsspecialist",
+    "job3Type": "Parttime",
+    "job3Location": "Batumi, Georgië",
+    "job3Desc": "Erkend huidverzorgingsspecialist met ervaring in huidbehandelingen en consulten.",
+    "applyNow": "Nu solliciteren",
+    "noRoleTitle": "Ziet u de juiste rol niet?",
+    "noRoleText": "We zijn altijd geïnteresseerd in het ontmoeten van getalenteerde professionals. Stuur ons je CV en we houden je in gedachten voor toekomstige vacatures.",
+    "sendCV": "Stuur uw CV",
+    "contactUs": "Neem contact met ons op"
+  },
+  "internationalPage": {
+    "title": "Internationale klanten",
+    "subtitle": "Medische esthetiek van wereldklasse voor medische toeristen in Batumi, Georgië",
+    "heroTitle": "Medische esthetiek van wereldklasse in Batumi, Georgië",
+    "heroSubtitle": "Premium Botox, fillers en huidesthetiek tegen Georgische prijzen",
+    "welcome": "Welkom",
+    "welcomeText": "Wij spreken uw taal",
+    "bookConsultation": "Boek gratis virtueel adviesgesprek",
+    "viewPackages": "Behandelingspakketten bekijken",
+    "aboutNana": {
+      "title": "Maak kennis met Nana Gviniashvili",
+      "subtitle": "Eigenaar en medisch esthetisch arts",
+      "bio": "Nana Gviniashvili is de eigenaar en enige arts bij Silk Beauty Salon. Met een uitgebreide opleiding in medische esthetiek en huidesthetiek is ze gespecialiseerd in Botox, dermale fillers en geavanceerde huidbehandelingen. Nana staat bekend om haar natuurlijk ogende resultaten, nauwgezette aandacht voor detail en persoonlijke benadering van elke klant.",
+      "qualifications": "Kwalificaties en certificeringen",
+      "qualification1": "Gecertificeerd medisch esthetisch arts",
+      "qualification2": "Geavanceerde Botox- en dermale fillertraining",
+      "qualification3": "Huidesthetiekspecialist",
+      "qualification4": "Lid van de Georgische Vereniging voor Esthetische Geneeskunde",
+      "languages": "Gesproken talen",
+      "languagesText": "Georgisch, Engels, Russisch"
+    },
+    "whyChooseUs": {
+      "title": "Waarom kiezen voor Silk Beauty Salon",
+      "subtitle": "Eersteklas medische esthetiek tegen Georgische prijzen",
+      "costSavings": "Kostenbesparingen",
+      "costSavingsDesc": "50-70% minder dan West-Europa voor dezelfde premiumproducten",
+      "premiumProducts": "Premiumproducten",
+      "premiumProductsDesc": "Allergan (Juvederm), Galderma (Restylane), Merz - alleen authentieke producten",
+      "personalizedCare": "Gepersonaliseerde zorg",
+      "personalizedCareDesc": "Direct overleg met eigenaar-beoefenaar - geen delegatie naar junioren",
+      "privacy": "Privacy",
+      "privacyDesc": "Discrete bestemming weg van huis - herstel aan de Zwarte Zee",
+      "travelFriendly": "Reisvriendelijk",
+      "travelFriendlyDesc": "Voor veel nationaliteiten geen visum nodig, directe vluchten mogelijk"
+    },
+    "services": {
+      "title": "Onze diensten voor internationale klanten",
+      "subtitle": "Medische esthetische behandelingen op maat voor reizigers",
+      "durationLabel": "Duur:",
+      "recoveryLabel": "Herstel:",
+      "resultsLabel": "Resultaten:",
+      "lastsLabel": "Leest:",
+      "botox": {
+        "title": "Botox Injecteerbare producten",
+        "description": "Antirimpelbehandelingen, afslanken van de kauwspieren, hyperhidrose",
+        "duration": "15-30 minuten",
+        "recovery": "Geen - vertrek op dezelfde dag mogelijk",
+        "results": "3-7 dagen zichtbaar",
+        "lasts": "3-6 maanden"
+      },
+      "fillers": {
+        "title": "Dermale fillers",
+        "description": "Lippen, wangen, kin, kaaklijn, onder de ogen, niet-chirurgische neuscorrectie",
+        "duration": "30-60 minuten",
+        "recovery": "24-48 uur voor zwelling",
+        "results": "Onmiddellijk, definitief na 1-2 weken",
+        "lasts": "6-18 maanden"
+      }
+    },
+    "packages": {
+      "title": "Behandelingspakketten voor toeristen",
+      "subtitle": "Vooraf ontworpen pakketten met ingebouwde besparingen",
+      "package": "Pakket",
+      "includes": "Inclusief",
+      "savings": "Besparingen",
+      "freshFace": "Fris gezicht",
+      "freshFaceDesc": "Botox (3 zones) + Lipfiller",
+      "totalRejuvenation": "Totale verjonging",
+      "totalRejuvenationDesc": "Volledig gezicht Botox + Wangvuller + Huidversterker",
+      "nonSurgicalLift": "Niet-chirurgische lift",
+      "nonSurgicalLiftDesc": "8-puntslift (strategische plaatsing van vulmiddel)",
+      "vacationGlow": "Vakantiegloed",
+      "vacationGlowDesc": "Huidbooster + Lichte chemische peeling"
+    },
+    "pricing": {
+      "title": "Transparante prijzen",
+      "subtitle": "Premiumbehandelingen tegen Georgische prijzen",
+      "treatment": "Behandeling",
+      "priceGEL": "Prijs (GEL)",
+      "priceUSD": "Ongeveer USD",
+      "note": "Dezelfde behandelingen kunnen in West-Europa of Groot-Brittannië 2-3 keer duurder zijn. Krijg premium resultaten tegen Georgische prijzen.",
+      "finalNote": "Definitieve prijs bepaald tijdens overleg op basis van individuele behoeften"
+    },
+    "journey": {
+      "title": "Uw internationale klantreis",
+      "subtitle": "Een naadloze ervaring, van aanvraag tot follow-up",
+      "step1Title": "Consult vóór aankomst",
+      "step1Desc": "WhatsApp/Videoconsultatie, doelen bespreken, gepersonaliseerde offerte ontvangen",
+      "step2Title": "Medische geschiedenisoverzicht",
+      "step2Desc": "Veilig online formulier, contra-indicaties controleren vóór vertrek",
+      "step3Title": "Reisplanning",
+      "step3Desc": "Richtlijnen voor behandelingstijdstip versus reisdata",
+      "step4Title": "Persoonlijk consult",
+      "step4Desc": "Persoonlijke beoordeling, behandelplan, toestemming",
+      "step5Title": "Behandeldag",
+      "step5Desc": "Procedure in een steriele omgeving, voorzien van verdoving",
+      "step6Title": "Onmiddellijke nazorg",
+      "step6Desc": "Instructies, ijspakketten, contact voor noodgevallen meegeleverd",
+      "step7Title": "Vervolg",
+      "step7Desc": "Controle van 2 weken (persoonlijk of virtueel), aanpassingen indien nodig",
+      "step8Title": "Langdurige ondersteuning",
+      "step8Desc": "Doorlopende toegang voor vragen, toekomstige behandelplanning"
+    },
+    "timing": {
+      "title": "Gids voor behandelingstijd",
+      "subtitle": "Plan uw reis met herstel in gedachten",
+      "treatment": "Behandeling",
+      "minStay": "Minimum verblijf",
+      "reason": "Reden",
+      "botoxStay": "Dezelfde dag OK",
+      "botoxReason": "Geen zichtbare stilstand",
+      "fillersStay": "24-48 uur",
+      "fillersReason": "Laat de zwelling afnemen",
+      "peelStay": "5-7 dagen",
+      "peelReason": "Schilfase zichtbaar",
+      "prpStay": "48 uur",
+      "prpReason": "Roodheid, mogelijke blauwe plekken",
+      "comboStay": "3-5 dagen",
+      "comboReason": "Meerdere herstelfasen",
+      "seaWarning": "Vermijd zwemmen in de Zwarte Zee gedurende 48 uur na de behandeling om infectie te voorkomen."
+    },
+    "trust": {
+      "title": "Vertrouwen en veiligheid",
+      "subtitle": "Uw veiligheid is onze prioriteit",
+      "licensed": "Gelicentieerde kliniek",
+      "licensedDesc": "Georgisch ministerie van Volksgezondheid gecertificeerd",
+      "certified": "Gecertificeerd arts",
+      "certifiedDesc": "Volledig gekwalificeerde medisch-esthetische professional",
+      "authentic": "Authentieke producten",
+      "authenticDesc": "Allergan, Galderma, Merz - met lotnummerverificatie",
+      "hygiene": "Steriele omgeving",
+      "hygieneDesc": "Sterilisatieprotocollen van medische kwaliteit",
+      "emergency": "Noodprotocollen",
+      "emergencyDesc": "Duidelijke nazorgondersteuning en contact in geval van nood"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "subtitle": "Veelgestelde vragen van internationale klanten",
+      "q1": "Is het veilig om behandelingen te ondergaan tijdens het reizen?",
+      "a1": "Ja, veel behandelingen hebben een minimale hersteltijd. We bieden gedetailleerde nazorginstructies en zijn beschikbaar voor vervolgondersteuning via WhatsApp of videogesprek.",
+      "q2": "Welke talen spreekt Nana?",
+      "a2": "Nana spreekt vloeiend Georgisch, Engels en Russisch en zorgt voor duidelijke communicatie met internationale klanten.",
+      "q3": "Hoe boek ik voor aankomst?",
+      "a3": "Neem contact met ons op via WhatsApp voor een gratis virtueel adviesgesprek. We bespreken uw doelstellingen, stellen een offerte op en plannen uw afspraak.",
+      "q4": "Kan ik een behandeling krijgen de dag vóór een vlucht?",
+      "a4": "Botox-behandelingen zijn prima voor reizen op dezelfde dag. Voor fillers adviseren wij 24-48 uur vóór het vliegen, zodat de zwelling kan afnemen.",
+      "q5": "Wat moet ik doen als ik een reactie krijg nadat ik thuiskom?",
+      "a5": "Wij bieden 24/7 noodcontact en bieden virtueel vervolgconsulten aan. Voor dermale fillers kunnen we indien nodig lokale behandelaars begeleiden.",
+      "q6": "Maakt u gebruik van authentieke producten?",
+      "a6": "Absoluut. We gebruiken uitsluitend de producten Allergan (Juvederm), Galderma (Restylane) en Merz. Tijdens uw behandeling kunt u de verpakking en lotnummers zien.",
+      "q7": "Welke betaalmethoden accepteert u?",
+      "a7": "Wij accepteren contant geld (GEL, USD, EUR), Visa, Mastercard en contactloze betalingen, waaronder Apple Pay en Google Pay.",
+      "q8": "Biedt u virtuele vervolgacties aan?",
+      "a8": "Ja, we bieden gratis virtuele vervolgconsulten aan voor alle internationale cliënten 2 weken na de behandeling."
+    },
+    "contact": {
+      "title": "Contact & Boeking",
+      "subtitle": "Meerdere manieren om ons te bereiken",
+      "whatsapp": "WhatsApp",
+      "whatsappDesc": "Primair kanaal - snelste respons",
+      "telegram": "Telegram",
+      "telegramDesc": "Populair in GOS-landen",
+      "instagram": "Instagram",
+      "instagramDesc": "Bekijk ons werk en stuur ons een DM",
+      "videoConsult": "Videoconsultatie",
+      "videoConsultDesc": "Gratis adviesgesprek vóór aankomst",
+      "email": "E-mail",
+      "emailDesc": "Voor gedetailleerde vragen",
+      "responseTime": "Tijdens kantooruren reageren wij binnen 2 uur op internationale vragen."
+    },
+    "location": {
+      "title": "Hoe u ons kunt vinden",
+      "address": "Zurab Gorgiladze 63, Batumi 6010, Georgië",
+      "landmarks": "Dichtbij Batumi Boulevard, 5 minuten van het oude Batumi",
+      "timezone": "Georgische tijd (GMT+4)",
+      "viewMap": "Bekijk op Google Maps"
+    },
+    "cta": {
+      "title": "Klaar om aan uw reis te beginnen?",
+      "subtitle": "Boek vandaag nog uw gratis virtuele consultatie",
+      "button": "Boek via WhatsApp"
+    }
+  },
+  "internationalNav": {
+    "main": "Internationale klanten",
+    "preArrival": "Gids vóór aankomst",
+    "packages": "Behandelingspakketten",
+    "pricing": "Prijzen",
+    "faq": "Veelgestelde vragen",
+    "mainDesc": "Overzicht voor medische toeristen",
+    "packagesDesc": "Speciale bundels met voordeel",
+    "pricingDesc": "Transparante prijzen in GEL en USD",
+    "faqDesc": "Veelgestelde vragen beantwoord"
+  },
+  "privacyPolicy": {
+    "title": "Privacybeleid",
+    "subtitle": "Hoe we uw persoonlijke gegevens verzamelen, gebruiken en beschermen",
+    "breadcrumb": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: april 2026",
+    "introTitle": "1. Introductie",
+    "introText": "Silk Beauty Salon (\"wij\", \"onze\" of \"ons\") respecteert uw privacy en doet er alles aan om uw persoonlijke gegevens te beschermen. In dit privacybeleid wordt uitgelegd hoe wij uw gegevens verzamelen, gebruiken, openbaar maken en beveiligen wanneer u onze website bezoekt of onze diensten gebruikt.",
+    "collectTitle": "2. Informatie die we verzamelen",
+    "collectIntro": "We kunnen de volgende soorten informatie verzamelen:",
+    "collectItem1": "Persoonlijke informatie: naam, e-mailadres, telefoonnummer en andere contactgegevens die u verstrekt wanneer u afspraken boekt of contact met ons opneemt.",
+    "collectItem2": "Medische informatie: Gezondheids- en behandelgeschiedenis die nodig is voor het verlenen van esthetische diensten.",
+    "collectItem3": "Gebruiksgegevens: Informatie over hoe u onze website gebruikt, inclusief IP-adres, browsertype en bezochte pagina's.",
+    "collectItem4": "Cookies: Wij gebruiken cookies om uw surfervaring te verbeteren.",
+    "useTitle": "3. Hoe wij uw gegevens gebruiken",
+    "useIntro": "Wij gebruiken uw persoonlijke gegevens voor de volgende doeleinden:",
+    "useItem1": "Voor het leveren en beheren van onze esthetische diensten",
+    "useItem2": "Om boekingen en afspraken te verwerken",
+    "useItem3": "Om met u te communiceren over behandelingen en promoties",
+    "useItem4": "Om onze website en diensten te verbeteren",
+    "useItem5": "Om te voldoen aan wettelijke verplichtingen",
+    "sharingTitle": "4. Informatie delen",
+    "sharingText": "Wij verkopen uw persoonlijke gegevens niet. Wij kunnen uw gegevens delen met:",
+    "sharingItem1": "Dienstverleners die assisteren bij onze activiteiten",
+    "sharingItem2": "Beroepsbeoefenaren in de gezondheidszorg indien nodig voor de behandeling",
+    "sharingItem3": "Juridische autoriteiten indien vereist door de wet",
+    "securityTitle": "5. Gegevensbeveiliging",
+    "securityText": "We implementeren passende technische en organisatorische maatregelen om uw persoonlijke gegevens te beschermen tegen ongeoorloofde toegang, wijziging, openbaarmaking of vernietiging.",
+    "rightsTitle": "6. Uw rechten",
+    "rightsIntro": "Afhankelijk van uw locatie heeft u mogelijk de volgende rechten:",
+    "rightsItem1": "Recht op toegang tot uw persoonsgegevens",
+    "rightsItem2": "Recht om onjuiste informatie te corrigeren",
+    "rightsItem3": "Recht om verwijdering van uw gegevens te verzoeken",
+    "rightsItem4": "Recht om bezwaar te maken tegen de verwerking",
+    "rightsItem5": "Recht op gegevensoverdraagbaarheid",
+    "contactTitle": "7. Neem contact met ons op",
+    "contactIntro": "Als u vragen heeft over dit privacybeleid of onze gegevenspraktijken, neem dan contact met ons op:",
+    "changesTitle": "8. Wijzigingen in dit beleid",
+    "changesText": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. We zullen u op de hoogte stellen van eventuele wijzigingen door het nieuwe beleid op deze pagina te plaatsen en de datum 'Laatst bijgewerkt' bij te werken."
+  },
+  "mediaPress": {
+    "title": "Pers en media",
+    "subtitle": "Lees onze laatste berichtgeving in de pers en mediaartikelen",
+    "breadcrumb": "Pers en media",
+    "feature1Title": "De beste esthetische klinieken in Batumi",
+    "feature1Date": "Januari 2024",
+    "feature1Excerpt": "Silk Beauty Salon wordt genoemd als een van de beste esthetische klinieken in Batumi...",
+    "feature2Title": "De ultieme gids voor niet-chirurgische behandelingen",
+    "feature2Date": "december 2023",
+    "feature2Excerpt": "Deskundig advies van het team van Silk Beauty Salon over de nieuwste behandelingen...",
+    "feature3Title": "De beste schoonheidsklinieken die u dit jaar kunt bezoeken",
+    "feature3Date": "november 2023",
+    "feature3Excerpt": "Ontdek waarom de Silk Beauty Salon een go-to-bestemming blijft...",
+    "feature4Title": "De opkomst van natuurlijk ogende esthetiek",
+    "feature4Date": "Oktober 2023",
+    "feature4Excerpt": "Hoe toonaangevende klinieken zoals Silk Beauty Salon de aanpak veranderen...",
+    "feature5Title": "Tips van experts voor uw eerste behandeling",
+    "feature5Date": "September 2023",
+    "feature5Excerpt": "De experts van Silk Beauty Salon delen hun advies voor nieuwkomers...",
+    "feature6Title": "De behandelingen waar iedereen het over heeft",
+    "feature6Date": "Augustus 2023",
+    "feature6Excerpt": "Van skinboosters tot laserbehandelingen, we verkennen de meest populaire procedures...",
+    "readArticle": "Lees artikel",
+    "mediaEnquiries": "Mediavragen",
+    "mediaText": "Voor pers- en mediavragen kunt u contact opnemen met ons team op",
+    "contactPress": "Contact Persteam",
+    "mapAddress": "63 Zurab Gorgiladze Straat",
+    "mapCity": "Batumi, Georgië"
+  },
+  "treatmentContent": {
+    "botox": {
+      "name": "Botox Injecteerbare producten",
+      "description": "Geavanceerde antirimpelbehandelingen met eersteklas botulinetoxine om lijntjes glad te strijken en de jeugdige uitstraling te herstellen.",
+      "treatments": {
+        "anti-wrinkle": {
+          "name": "Antirimpelinjecties",
+          "shortDescription": "Strijkt rimpels en fijne lijntjes glad voor een frisse, jeugdige uitstraling.",
+          "description": "Antirimpelinjecties zijn een van de populairste niet-chirurgische cosmetische behandelingen die er zijn. Met behulp van botulinetoxine ontspannen we tijdelijk de gezichtsspieren die rimpels veroorzaken, wat resulteert in een gladdere, jonger uitziende huid.",
+          "benefits": [
+            "Vermindert de verschijning van fijne lijntjes en rimpels",
+            "Voorkomt de vorming van nieuwe rimpels",
+            "Snelle behandeling met minimale hersteltijd",
+            "Natuurlijk ogende resultaten",
+            "Langdurige effecten (3-6 maanden)"
+          ],
+          "howItWorks": "Botulinetoxine wordt met behulp van een fijne naald in specifieke gezichtsspieren geïnjecteerd. Het toxine blokkeert de zenuwsignalen naar deze spieren, waardoor wordt voorkomen dat ze samentrekken en rimpels veroorzaken.",
+          "aftercare": "Vermijd liggen gedurende 4 uur, vermijd lichaamsbeweging gedurende 24 uur en vermijd wrijven over het behandelde gebied."
+        },
+        "masseter-botox": {
+          "name": "Kauwspieren Botox",
+          "shortDescription": "Maak de kaaklijn slanker en verlicht het tandenknarsen met de gerichte Botox-behandeling.",
+          "description": "Kauwspieren Botox is een gespecialiseerde behandeling die zich richt op de kauwspieren om het gezicht slanker te maken en tandenknarsen te behandelen.",
+          "benefits": [
+            "Maakt de onderkant slanker en contouren",
+            "Vermindert kaakspanning en pijn",
+            "Behandelt tandenknarsen",
+            "Niet-chirurgische gezichtscontouren"
+          ]
+        },
+        "hyperhidrosis": {
+          "name": "Behandeling van hyperhidrose",
+          "shortDescription": "Behandel effectief overmatig zweten met langdurig resultaat.",
+          "description": "Hyperhidrosebehandeling met Botox is een zeer effectieve oplossing voor overmatig zweten.",
+          "benefits": [
+            "Vermindert overmatig zweten dramatisch",
+            "Resultaten duren 6-12 maanden",
+            "Snelle en minimaal invasieve",
+            "Verbetert het vertrouwen"
+          ]
+        },
+        "migraine-treatment": {
+          "name": "Migrainebehandeling",
+          "shortDescription": "Verminder de frequentie en ernst van chronische migraine.",
+          "description": "Botox is een door de FDA goedgekeurde behandeling voor chronische migraine.",
+          "benefits": [
+            "Vermindert de frequentie van migraineaanvallen",
+            "Vermindert de ernst van hoofdpijn",
+            "FDA-goedgekeurd voor chronische migraine",
+            "Langdurige verlichting"
+          ]
+        }
+      }
+    },
+    "dermal-fillers": {
+      "name": "Dermale fillers",
+      "description": "Herstel het volume, verbeter de gelaatstrekken en maak lijntjes glad met onze premium fillerbehandelingen met hyaluronzuur.",
+      "treatments": {
+        "lip-fillers": {
+          "name": "Lipfillers",
+          "shortDescription": "Verbeter het lipvolume en de vorm voor prachtige, natuurlijk ogende resultaten.",
+          "description": "Lipfillers zijn een van onze meest populaire behandelingen voor het verbeteren van de vorm, het volume en de definitie van uw lippen.",
+          "benefits": [
+            "Voegt volume en definitie toe",
+            "Creëert een natuurlijk ogende verbetering",
+            "Verbetert de lipsymmetrie",
+            "Resultaten afgelopen 6-12 maanden"
+          ]
+        },
+        "cheek-fillers": {
+          "name": "Wangvullers",
+          "shortDescription": "Herstelt het volume en definieert de jukbeenderen voor een jeugdig, gelift uiterlijk.",
+          "description": "Wangvullers zijn een uitstekende manier om het volume in het midden van het gezicht te herstellen en een mooie jukbeendefinitie te creëren.",
+          "benefits": [
+            "Herstelt verloren volume in de wangen",
+            "Definieert en verbetert de jukbeenderen",
+            "Lift het middengezicht",
+            "Resultaten duren 12-18 maanden"
+          ]
+        },
+        "chin-fillers": {
+          "name": "Kinvullers",
+          "shortDescription": "Verbeter de kinprojectie en verbeter de gezichtsbalans.",
+          "description": "Kinvullers kunnen uw gezichtsprofiel en proporties dramatisch verbeteren.",
+          "benefits": [
+            "Verbetert de gezichtsverhoudingen",
+            "Verbetert de kinprojectie",
+            "Creëert een betere definitie van de kaaklijn",
+            "Niet-chirurgisch alternatief voor implantaten"
+          ]
+        },
+        "jaw-fillers": {
+          "name": "Kaakvullers",
+          "shortDescription": "Definieer en contour uw kaaklijn voor een gevormd profiel.",
+          "description": "Kaakvullers zijn een uitstekende behandeling voor het definiëren en contouren van de kaaklijn.",
+          "benefits": [
+            "Creëert een meer gedefinieerde kaaklijn",
+            "Verbetert de gezichtssymmetrie",
+            "Niet-chirurgische procedure",
+            "Onmiddellijk resultaat"
+          ]
+        },
+        "tear-fill": {
+          "name": "Traanvullers",
+          "shortDescription": "Vermindert de zichtbaarheid van holtes onder de ogen en donkere kringen.",
+          "description": "Traanvullerbehandeling pakt holtes onder de ogen en donkere kringen aan voor een frisser uiterlijk.",
+          "benefits": [
+            "Vermindert holten onder de ogen",
+            "Minimaliseert donkere kringen",
+            "Creëert een vernieuwd uiterlijk",
+            "Resultaten afgelopen 12-18 maanden"
+          ]
+        },
+        "nose-fillers": {
+          "name": "Niet-chirurgische neuscorrectie",
+          "shortDescription": "Geef uw neus een nieuwe vorm zonder operatie met fillers.",
+          "description": "Bij niet-chirurgische neuscorrectie wordt gebruik gemaakt van fillers om de neus opnieuw vorm te geven en contouren te geven.",
+          "benefits": [
+            "Niet-chirurgisch alternatief",
+            "Geen stilstand",
+            "Onmiddellijk resultaat",
+            "Omkeerbaar indien nodig"
+          ]
+        },
+        "temple-fillers": {
+          "name": "Verenvullers",
+          "shortDescription": "Herstelt het volume van de slapen voor een jeugdiger uiterlijk.",
+          "description": "Tempelvullers herstellen het volume in het tijdelijke gebied, waardoor een evenwichtiger en jeugdiger uiterlijk ontstaat.",
+          "benefits": [
+            "Herstelt verloren volume",
+            "Creëert jeugdige contouren",
+            "Brengt de gezichtsverhoudingen in evenwicht",
+            "Resultaten duren 12-18 maanden"
+          ]
+        },
+        "hand-fillers": {
+          "name": "Handvullers",
+          "shortDescription": "Verjong verouderende handen met volumeherstel.",
+          "description": "Handfillers herstellen het volume van de handen en verminderen de verschijning van aderen en pezen.",
+          "benefits": [
+            "Vermindert zichtbare aderen",
+            "Creëert jeugdige handen",
+            "Snelle procedure",
+            "Resultaten afgelopen 12-18 maanden"
+          ]
+        }
+      }
+    },
+    "skin-treatments": {
+      "name": "Huidbehandelingen",
+      "description": "Geavanceerde huidbehandelingen om verschillende problemen aan te pakken en een stralende, gezonde huid te bereiken.",
+      "treatments": {
+        "skin-boosters": {
+          "name": "Skinboosters",
+          "shortDescription": "Diepe hydratatie voor een stralende, stralende huid.",
+          "description": "Huidboosters zorgen voor een diepe hydratatie om de huidkwaliteit te verbeteren en een stralende glans te creëren.",
+          "benefits": [
+            "Diepe hydratatie",
+            "Verbeterde huidtextuur",
+            "Stralende gloed",
+            "Langdurige resultaten"
+          ]
+        },
+        "chemical-peels": {
+          "name": "Chemische peelings",
+          "shortDescription": "Vernieuw uw huid met professionele chemische peelingbehandelingen.",
+          "description": "Chemische peelings exfoliëren de huid en onthullen een frissere, jonger uitziende huid eronder.",
+          "benefits": [
+            "Huidvernieuwing",
+            "Verbeterde textuur",
+            "Verminderde pigmentatie",
+            "Egale huidskleur"
+          ]
+        },
+        "microneedling": {
+          "name": "Microneedling",
+          "shortDescription": "Stimuleer de collageenproductie voor een stevigere, gladdere huid.",
+          "description": "Microneedling stimuleert het natuurlijke genezingsproces van de huid om collageen en elastine aan te maken.",
+          "benefits": [
+            "Stimuleert collageen",
+            "Vermindert littekens",
+            "Verbetert de huidtextuur",
+            "Minimaliseert de poriën"
+          ]
+        },
+        "laser-hair": {
+          "name": "Laserontharing",
+          "shortDescription": "Permanente haarreductie voor een gladde, haarvrije huid.",
+          "description": "Laserontharing zorgt voor langdurige haarvermindering voor een gladde huid.",
+          "benefits": [
+            "Permanente reductie",
+            "Gladde huid",
+            "Veilig en effectief",
+            "Bespaart tijd"
+          ]
+        }
+      }
+    },
+    "laser-treatments": {
+      "name": "Laserbehandelingen",
+      "description": "State-of-the-art laserbehandelingen voor huidverjonging en ontharing.",
+      "treatments": {
+        "co2-laser": {
+          "name": "CO2-laserresurfacing",
+          "shortDescription": "Een dramatisch huidvernieuwing voor een jeugdige teint.",
+          "description": "CO2-laserresurfacing verwijdert lagen beschadigde huid om een gladdere, jongere huid te onthullen.",
+          "benefits": [
+            "Dramatische resultaten",
+            "Vermindert rimpels",
+            "Verbetert littekens",
+            "Egale huidskleur"
+          ]
+        },
+        "ipl-therapy": {
+          "name": "IPL-therapie",
+          "shortDescription": "Behandel pigmentatie, schade door de zon en vasculaire laesies.",
+          "description": "IPL-therapie maakt gebruik van licht om verschillende huidproblemen te behandelen, waaronder pigmentatie en schade door de zon.",
+          "benefits": [
+            "Behandelt pigmentatie",
+            "Vermindert schade door de zon",
+            "Verbetert de huidskleur",
+            "Minimale stilstand"
+          ]
+        },
+        "laser-vein": {
+          "name": "Laseraderverwijdering",
+          "shortDescription": "Verwijder ongewenste nerven en spataderen.",
+          "description": "Laseraderverwijdering elimineert veilig ongewenste aderen in gezicht en lichaam.",
+          "benefits": [
+            "Verwijdert spataderen",
+            "Veilige procedure",
+            "Geen stilstand",
+            "Een zuiverdere huid"
+          ]
+        }
+      }
+    },
+    "intimate-treatments": {
+      "name": "Intieme behandelingen",
+      "description": "Discrete en professionele intieme verjongingsbehandelingen.",
+      "treatments": {
+        "vaginal-rejuvenation": {
+          "name": "Vaginale verjonging",
+          "shortDescription": "Herstel het comfort en vertrouwen met intieme verjonging.",
+          "description": "Vaginale verjonging maakt gebruik van lasertechnologie om de vaginale gezondheid en functie te verbeteren.",
+          "benefits": [
+            "Verbeterd comfort",
+            "Verbeterd vertrouwen",
+            "Niet-chirurgisch",
+            "Snel herstel"
+          ]
+        },
+        "labia-filler": {
+          "name": "Schaamlipvuller",
+          "shortDescription": "Verbeter het comfort en de esthetiek met een labiale fillerbehandeling.",
+          "description": "Labia filler-behandeling pakt cosmetische problemen aan en verbetert het comfort.",
+          "benefits": [
+            "Verbeterde esthetiek",
+            "Verbeterd comfort",
+            "Niet-chirurgisch",
+            "Natuurlijke resultaten"
+          ]
+        }
+      }
+    },
+    "hair-treatments": {
+      "name": "Haarbehandelingen",
+      "description": "Geavanceerde haarherstel- en hoofdhuidbehandelingen.",
+      "treatments": {
+        "prp-hair": {
+          "name": "PRP Haarherstel",
+          "shortDescription": "Stimuleer de haargroei met de lichaamseigen groeifactoren.",
+          "description": "PRP haarherstel maakt gebruik van uw eigen bloedplaatjes om de haarzakjes te stimuleren en de groei te bevorderen.",
+          "benefits": [
+            "Stimuleert de groei",
+            "Dikker haar",
+            "Natuurlijke behandeling",
+            "Geen stilstand"
+          ]
+        },
+        "mesotherapy-hair": {
+          "name": "Haarmesotherapie",
+          "shortDescription": "Voedingsrijke injecties om de hoofdhuid en haarzakjes te voeden.",
+          "description": "Haarmesotherapie levert essentiële voedingsstoffen rechtstreeks aan de hoofdhuid om de haargroei te bevorderen.",
+          "benefits": [
+            "Voedt de hoofdhuid",
+            "Bevordert de groei",
+            "Vermindert haaruitval",
+            "Verbeterde haarkwaliteit"
+          ]
+        }
+      }
+    },
+    "diagnostic": {
+      "name": "Diagnostische",
+      "description": "Geavanceerde huidanalyse- en diagnostische hulpmiddelen om uw behandelplan te personaliseren."
+    },
+    "tear-trough": {
+      "name": "Traangootvullers",
+      "shortDescription": "Verminder holtes onder de ogen en donkere kringen voor een frisse look.",
+      "description": "Traangootvullers zijn een gespecialiseerde behandeling voor het aanpakken van holtes onder de ogen en donkere kringen. Naarmate we ouder worden, verliezen we volume onder de ogen, waardoor een vermoeide, holle uitstraling ontstaat. Deze behandeling plaatst zorgvuldig hyaluronzuurvuller in het traangootgebied om het volume te herstellen, donkere kringen te verminderen en een frisser, meer uitgerust uiterlijk te creëren. Dit is een technisch veeleisende behandeling waarvoor deskundige beoefenaars nodig zijn voor een optimaal resultaat.",
+      "benefits": [
+        "Vermindert holten onder de ogen",
+        "Minimaliseert de verschijning van donkere kringen",
+        "Zorgt voor een frisser, uitgeruster uiterlijk",
+        "Niet-chirurgische behandeling",
+        "Resultaten afgelopen 12-18 maanden"
+      ]
+    },
+    "non-surgical-rhinoplasty": {
+      "name": "Niet-chirurgische neuscorrectie",
+      "shortDescription": "Geef uw neus een nieuwe vorm en verfijn deze zonder operatie.",
+      "description": "Niet-chirurgische neuscorrectie, ook wel 'vloeibare neuscorrectie' genoemd, is een uitstekende optie voor mensen die het uiterlijk van hun neus willen verbeteren zonder een operatie. Met fillers kunnen we oneffenheden gladstrijken, asymmetrie corrigeren, een hangende neuspunt optillen en de algehele vorm van uw neus verbeteren. Deze behandeling is snel, met minimale hersteltijd en de resultaten zijn onmiddellijk zichtbaar. Het is perfect voor mensen die een nieuwe neusvorm willen 'passen' voordat ze een operatie ondergaan.",
+      "benefits": [
+        "Corrigeert oneffenheden en asymmetrie",
+        "Tilt hangende neustip op",
+        "Geen operatie of hersteltijd",
+        "Onmiddellijk resultaat",
+        "Resultaten afgelopen 12-18 maanden"
+      ]
+    },
+    "marionette-lines": {
+      "name": "Marionettenlijnen",
+      "shortDescription": "Verzacht marionetlijnen voor een jeugdiger, opgewekter uiterlijk.",
+      "description": "Marionetlijnen zijn de verticale lijnen die van de mondhoeken naar beneden naar de kin lopen, waardoor het een popachtig uiterlijk krijgt. Deze lijnen ontwikkelen zich naarmate we ouder worden als gevolg van volumeverlies en verminderde stevigheid. Dermale fillers kunnen deze lijntjes effectief verzachten door het verloren volume te vervangen en de huid te ondersteunen. Deze behandeling kan het uiterlijk van een naar beneden gerichte mond aanzienlijk verbeteren en een jeugdiger, opgewekter uitdrukking herstellen.",
+      "benefits": [
+        "Verzacht diepe lijnen rond de mond",
+        "Verbetert het sombere uiterlijk",
+        "Herstelt jeugdige contouren",
+        "Snelle behandeling met minimale hersteltijd",
+        "Resultaten duren 12-18 maanden"
+      ]
+    },
+    "nasolabial-folds": {
+      "name": "Nasolabiale plooien",
+      "shortDescription": "Verzacht de lachrimpels voor een frisse, jeugdige uitstraling.",
+      "description": "Nasolabiale plooien, vaak 'lachlijnen' of 'lachlijnen' genoemd, zijn de diepe lijnen die van de zijkanten van de neus naar de mondhoeken lopen. Hoewel deze lijnen een natuurlijk onderdeel zijn van de gezichtsuitdrukking, kunnen ze met de jaren dieper worden als gevolg van volumeverlies en verminderde stevigheid. Dermale fillers kunnen deze lijntjes effectief verzachten door het verloren volume te vervangen, waardoor een gladder, jeugdiger uiterlijk ontstaat terwijl uw natuurlijke uitdrukking behouden blijft.",
+      "benefits": [
+        "Verzacht diepe glimlachrimpels",
+        "Herstelt de jeugdige uitstraling",
+        "Behoudt natuurlijke uitdrukkingen",
+        "Snelle behandeling",
+        "Resultaten afgelopen 12-18 maanden"
+      ]
+    },
+    "neck-rejuvenation": {
+      "name": "Nekverjonging",
+      "shortDescription": "Gladde lijnen en herstelt jeugdige contouren van de nek.",
+      "description": "Nekverjongingsbehandelingen pakken de tekenen van veroudering aan die vaak in het nekgebied voorkomen, waaronder horizontale lijnen, verticale banden en verminderde stevigheid. Met behulp van een combinatie van Botox en dermale fillers kunnen we lijnen gladstrijken, prominente nekbanden ontspannen en een jeugdiger nekcontour herstellen die past bij uw verjongde gezicht.",
+      "benefits": [
+        "Maakt horizontale halslijnen glad",
+        "Ontspant prominente nekbanden",
+        "Herstelt de jeugdige nekcontour",
+        "Niet-chirurgische behandeling",
+        "Minimale uitvaltijd"
+      ]
+    },
+    "decolletage-treatment": {
+      "name": "Decolletébehandeling",
+      "shortDescription": "Herstelt een gladde, jeugdige huid tot aan het decolleté.",
+      "description": "Het decolletégebied is vaak een van de eerste plekken waar tekenen van veroudering zichtbaar worden, waarbij rimpels, een crêpe huid en schade door de zon zichtbaar worden. Onze decolletébehandelingen maken gebruik van een combinatie van skinboosters, microneedling en gespecialiseerde huidverzorging om de gladheid, hydratatie en een jeugdige uitstraling van dit gevoelige gebied te herstellen.",
+      "benefits": [
+        "Verzacht borstrimpels",
+        "Verbetert de huidtextuur",
+        "Herstelt de hydratatie",
+        "Vermindert schade door de zon",
+        "Creëert een jeugdig decolleté"
+      ]
+    },
+    "hand-rejuvenation": {
+      "name": "Handverjonging",
+      "shortDescription": "Herstelt het volume en de jeugdigheid van ouder wordende handen.",
+      "description": "Handen laten onze leeftijd vaak zien voordat ons gezicht dat doet, waarbij zichtbare aderen, pezen en volumeverlies na verloop van tijd prominenter worden. Bij handverjonging wordt gebruik gemaakt van dermale fillers om het volume te herstellen, waardoor de verschijning van aderen en pezen wordt geminimaliseerd en tegelijkertijd gladde, jeugdig ogende handen worden gecreëerd die passen bij uw verjongde uiterlijk.",
+      "benefits": [
+        "Herstelt het volume van de handen",
+        "Minimaliseert zichtbare aderen",
+        "Vermindert de prominentie van de pezen",
+        "Creëert een jeugdige uitstraling",
+        "Langdurige resultaten"
+      ]
+    },
+    "clear-brilliant": {
+      "name": "Helder + briljant",
+      "shortDescription": "Zachte laserbehandeling voor een gladdere, stralendere huid.",
+      "description": "Clear + Brilliant is een zachte fractionele laserbehandeling die is ontworpen om vroege tekenen van veroudering te voorkomen en aan te pakken. Deze behandeling creëert microscopisch kleine behandelzones in de huid, stimuleert de collageenproductie en vervangt de beschadigde huid door gezond, jonger uitziend weefsel. Het is perfect voor diegenen die de jeugdige uitstraling van hun huid willen behouden of vroege tekenen van veroudering, fijne lijntjes en problemen met de huidtextuur willen aanpakken met minimale hersteltijd.",
+      "benefits": [
+        "Verbetert de huidtextuur en -toon",
+        "Vermindert fijne lijntjes",
+        "Minimaliseert de poriegrootte",
+        "Minimale stilstand",
+        "Voorkomt tekenen van veroudering"
+      ]
+    },
+    "cutera-aviclear": {
+      "name": "Cutera AviClear",
+      "shortDescription": "Revolutionaire laserbehandeling die acne bij de bron aanpakt.",
+      "description": "AviClear is een revolutionaire, door de FDA goedgekeurde laserbehandeling die speciaal is ontworpen om acne te behandelen. Het is het eerste en enige apparaat in zijn soort dat gebruik maakt van een laser met een golflengte van 1726 nm om de talgproductie in de talgklieren te richten en te onderdrukken. Deze behandeling pakt acne bij de bron aan en zorgt voor langdurige resultaten zonder dat er medicijnen nodig zijn. De meeste patiënten zien een aanzienlijke verbetering met slechts drie behandelingen van 30 minuten.",
+      "benefits": [
+        "FDA-goedgekeurd voor acnebehandeling",
+        "Gaat de talgproductie tegen",
+        "Geen medicatie nodig",
+        "Langdurige resultaten",
+        "Geschikt voor alle huidtypes"
+      ]
+    },
+    "cutera-c02-laser": {
+      "name": "Cutera CO2-laser",
+      "shortDescription": "Krachtig resurfacing voor diepe rimpels, littekens en schade door de zon.",
+      "description": "De Cutera CO2-laser is een krachtige huidvernieuwingsbehandeling die aanzienlijke huidproblemen aanpakt, waaronder diepe rimpels, acnelittekens, schade door de zon en een ongelijkmatige textuur. Deze fractionele CO2-laser creëert gecontroleerde micro-verwondingen in de huid, waardoor een aanzienlijke collageenproductie en huidvernieuwing wordt gestimuleerd. Het is een van de meest effectieve behandelingen voor dramatische huidverjonging met resultaten die jaren aanhouden.",
+      "benefits": [
+        "Dramatische huidverjonging",
+        "Behandelt diepe rimpels",
+        "Verbetert acnelittekens",
+        "Verhelpt zonneschade",
+        "Langdurige resultaten"
+      ]
+    },
+    "cutera-secret-pro-rf-microneedling": {
+      "name": "Cutera Secret PRO RF Microneedling",
+      "shortDescription": "Gecombineerde RF en microneedling voor krachtige huidverjonging.",
+      "description": "De Cutera Secret PRO combineert radiofrequentie-energie met microneedling voor krachtige huidverjonging. De behandeling levert RF-energie via kleine naalden, waardoor gecontroleerde micro-verwondingen ontstaan ​​terwijl de diepere huidlagen worden verwarmd. Deze aanpak met dubbele werking stimuleert de collageenproductie aanzienlijk, waardoor de huidtextuur, fijne lijntjes, rimpels en acnelittekens worden verbeterd met minder hersteltijd dan traditionele resurfacing.",
+      "benefits": [
+        "Stimuleert de collageenproductie",
+        "Verbetert de huidtextuur",
+        "Vermindert fijne lijntjes",
+        "Minimaliseert acnelittekens",
+        "Verstevigt de huid"
+      ]
+    },
+    "cutera-excel-v-ipl": {
+      "name": "Cutera Excel V+ IPL",
+      "shortDescription": "Geavanceerde laser voor vasculaire problemen, pigmentatie en huidverjonging.",
+      "description": "De Cutera Excel V+ is een geavanceerd vasculair en pigmentlasersysteem dat een breed scala aan huidproblemen behandelt, waaronder rosacea, gezichtsaders, schade door de zon, ouderdomsvlekken en ongewenst pigment. Dit veelzijdige systeem maakt gebruik van zowel 532 nm- als 1064 nm-golflengten om verschillende problemen nauwkeurig aan te pakken. Het is uitstekend geschikt voor algehele huidverjonging en het creëren van een gelijkmatigere, heldere teint.",
+      "benefits": [
+        "Behandelt rosacea en aderen in het gezicht",
+        "Vermindert schade door de zon",
+        "Verbetert de huidskleur",
+        "Snelle behandeling",
+        "Geen stilstand"
+      ]
+    },
+    "candela-vbeam-laser": {
+      "name": "Candela VBeam-laser",
+      "shortDescription": "Gouden standaardlaser voor vasculaire aandoeningen en roodheid.",
+      "description": "De Candela VBeam is een gepulseerde kleurstoflaser die speciaal is ontworpen voor de behandeling van vasculaire aandoeningen. Het is de gouden standaard voor de behandeling van rosacea, aderen in het gezicht, wijnvlekken, hemangiomen en andere vasculaire laesies. De laser richt zich op bloedvaten zonder het omliggende weefsel te beschadigen, waardoor het een veilige en effectieve behandeling is voor roodheid en vasculaire problemen. Het is ook effectief voor de behandeling van striae en littekens.",
+      "benefits": [
+        "Behandelt rosacea",
+        "Verwijdert gezichtsaderen",
+        "Vermindert roodheid",
+        "Verbetert littekens",
+        "Minimale stilstand"
+      ]
+    },
+    "bbl-hero": {
+      "name": "BBL HELD",
+      "shortDescription": "Geavanceerde IPL voor huidverjonging en pigmentatie.",
+      "description": "BBL HERO (BroadBand Light High Energy Rapid Output) is een geavanceerde IPL-technologie voor zichtbare pigmentatie, roodheid en tekenen van veroudering. De HERO-technologie zorgt voor een snelle, gelijkmatige dekking op geselecteerde behandelingsgebieden. Het is uitstekend geschikt voor schade door de zon, ouderdomsvlekken, rosacea en algehele huidverjonging.",
+      "benefits": [
+        "Snelle behandeltijd",
+        "Behandelt zonneschade",
+        "Vermindert pigmentatie",
+        "Snelle behandeltijd",
+        "Verbetert de huidskleur"
+      ]
+    },
+    "moxi-laser": {
+      "name": "MOXI-laser",
+      "shortDescription": "Zachte fractionele laser voor een frisse, stralende huid.",
+      "description": "MOXI is een zachte fractionele laser die een niet-ablatieve behandeling voor huidverjonging levert. Het is ontworpen om de huid te verfrissen en te revitaliseren met minimale hersteltijd, waardoor het perfect is voor diegenen die een 'lunchtijd'-behandeling willen die echte resultaten oplevert. MOXI verbetert de huidtextuur, de toon en de algehele uitstraling en is tegelijkertijd zacht genoeg voor alle huidtypes en -tinten. Het is uitstekend geschikt voor preventieve verzorging en het behouden van een gezonde, stralende huid.",
+      "benefits": [
+        "Minimale uitvaltijd",
+        "Alle huidtypes",
+        "Verbetert de textuur",
+        "Verbetert de uitstraling",
+        "Preventieve behandeling"
+      ]
+    },
+    "moxi-and-bbl": {
+      "name": "MOXI en BBL",
+      "shortDescription": "Gecombineerde behandeling voor uitgebreide huidverjonging.",
+      "description": "De combinatie van MOXI- en BBL-behandelingen biedt uitgebreide huidverjonging. MOXI richt zich op de textuur en stimuleert collageen, terwijl BBL zich richt op pigment- en vasculaire problemen. Samen zorgen ze voor een krachtige synergie die de algehele huidkwaliteit, -tint, -textuur en -glans verbetert. Deze combinatie is ideaal voor diegenen die significante resultaten willen met minimale downtime.",
+      "benefits": [
+        "Uitgebreide verjonging",
+        "Adressen textuur en pigment",
+        "Minimale stilstand",
+        "Synergetische resultaten",
+        "Alle huidtypes"
+      ]
+    },
+    "endolift": {
+      "name": "Endolift",
+      "shortDescription": "Minimaal invasieve laser voor verfijning van de gezichtscontouren.",
+      "description": "Endolift is een innovatieve, minimaal invasieve laserbehandeling voor gezichtscontourverfijning en collageenstimulatie. De laservezel wordt via kleine incisies onder de huid ingebracht en levert energie die een scherpere kaaklijn, wangen en problemen met de onderkin ondersteunt. Resultaten omvatten een onmiddellijke aanscherping met aanhoudende verbetering gedurende meerdere maanden.",
+      "benefits": [
+        "Minimaal invasief",
+        "Gezichtscontourondersteuning",
+        "Collageenstimulatie",
+        "Onmiddellijk resultaat",
+        "Voortdurende verbetering"
+      ]
+    },
+    "is-clinical-fire-ice-peel": {
+      "name": "iS Clinical Fire & Ice Peel",
+      "shortDescription": "Intensieve resurfacing-behandeling voor dramatische, onmiddellijke resultaten.",
+      "description": "De iS Clinical Fire & Ice Peel is een resultaatgerichte professionele behandeling die is ontworpen om de huid een nieuw gezicht te geven en fijne lijntjes, rimpels en een oneffen textuur te behandelen. Deze intensieve klinische behandeling staat bekend als de 'Red Carpet Peel' en combineert twee behandelingsfasen: de intensieve resurfacing 'Fire' en het verjongende masker 'Ice'. Het levert dramatische resultaten op met weinig tot geen downtime, waardoor het perfect is voor speciale evenementen.",
+      "benefits": [
+        "Onmiddellijk zichtbaar resultaat",
+        "Herstelt de huidtextuur",
+        "Vermindert fijne lijntjes",
+        "Verbetert de huidskleur",
+        "Weinig tot geen downtime"
+      ]
+    },
+    "mesoestetic-cosmelan-peel": {
+      "name": "Mesoestetic Cosmelan Peel",
+      "shortDescription": "Professionele depigmentatiebehandeling voor donkere vlekken en melasma.",
+      "description": "De Cosmelan Peel is een wereldberoemde depigmentatiebehandeling die donkere vlekken en melasma effectief vermindert en elimineert. Deze professionele behandeling werkt door het enzym dat verantwoordelijk is voor de melanineproductie te remmen, waardoor hyperpigmentatie effectief bij de bron wordt behandeld. De behandeling omvat zowel een masker in de kliniek als onderhoudsproducten om mee naar huis te nemen voor optimale resultaten.",
+      "benefits": [
+        "Behandelt melasma",
+        "Vermindert donkere vlekken",
+        "Egaliseert de huidskleur",
+        "Langdurige resultaten",
+        "Professionele formule"
+      ]
+    },
+    "obagi-blue-radiance-peel": {
+      "name": "Obagi Blue Radiance Peel",
+      "shortDescription": "Chemische peeling voor een gladdere, helderdere huid.",
+      "description": "De Obagi Blue Radiance Peel is een oppervlakkige tot middeldiepe chemische peeling die een mengsel van salicylzuur, glycolzuur en melkzuur gebruikt om de textuur en de toon van het huidoppervlak te exfoliëren en te verbeteren. Deze behandeling is uitstekend geschikt voor diegenen die het uiterlijk van een door licht beschadigde huid, fijne lijntjes en milde acnelittekens willen verbeteren met minimale hersteltijd. Meerdere behandelingen zorgen voor progressieve verbetering.",
+      "benefits": [
+        "Verbetert de huidtextuur",
+        "Vermindert fijne lijntjes",
+        "Verhelpt fotoschade",
+        "Minimale uitvaltijd",
+        "Progressieve resultaten"
+      ]
+    },
+    "obagi-nu-derm": {
+      "name": "Obagi Nu-Derm",
+      "shortDescription": "Transformatief huidverzorgingssysteem voor fotoschade en veroudering.",
+      "description": "Het Obagi Nu-Derm-systeem is een uitgebreid huidverzorgingsprotocol dat de huid op cellulair niveau transformeert. Dit door een arts verstrekte systeem is ontworpen voor de behandeling van matige tot ernstige lichtschade, hyperpigmentatie en vroegtijdige veroudering. Het systeem omvat meerdere producten die samenwerken om de celvernieuwing te versnellen, de huidskleur te verbeteren en een gezondere, jonger uitziende huid te onthullen gedurende 12 tot 18 weken.",
+      "benefits": [
+        "Uitgebreide transformatie",
+        "Behandelt fotoschade",
+        "Verbetert hyperpigmentatie",
+        "Versnelt de celvernieuwing",
+        "Langdurige resultaten"
+      ]
+    },
+    "skinpen-microneedling": {
+      "name": "SkinPen Microneedling",
+      "shortDescription": "FDA-goedgekeurde microneedling voor littekens, lijntjes en textuur.",
+      "description": "SkinPen is het eerste door de FDA goedgekeurde micronaaldapparaat dat nauwkeurige, gecontroleerde micro-verwondingen veroorzaakt om het natuurlijke genezingsproces van de huid te stimuleren. Deze behandeling verbetert effectief acnelittekens, fijne lijntjes, rimpels en de algehele huidtextuur. Het apparaat creëert duizenden microscopisch kleine kanaaltjes in de huid, waardoor de productie van collageen en elastine wordt gestimuleerd voor een gladdere, gezonder uitziende huid. De resultaten blijven maanden na de behandeling verbeteren.",
+      "benefits": [
+        "FDA-goedgekeurd apparaat",
+        "Verbetert acnelittekens",
+        "Vermindert fijne lijntjes",
+        "Natuurlijke collageenproductie",
+        "Geschikt voor alle huidtypes"
+      ]
+    },
+    "dermamelan-intimate-peel": {
+      "name": "Dermamelan Intieme Peeling",
+      "shortDescription": "Gespecialiseerde depigmentatie voor intieme zones.",
+      "description": "Dermamelan Intimate is een gespecialiseerde depigmentatiebehandeling ontworpen voor intieme gebieden, waaronder de genitale en perianale regio's. Deze professionele behandeling vermindert veilig en effectief hyperpigmentatie in deze gevoelige gebieden, verbetert de huidtint en vergroot het zelfvertrouwen. De behandeling omvat zowel klinische als thuiscomponenten voor optimale resultaten.",
+      "benefits": [
+        "Veilig voor intieme zones",
+        "Vermindert hyperpigmentatie",
+        "Verbetert de huidskleur",
+        "Verhoogt het vertrouwen",
+        "Professionele behandeling"
+      ]
+    },
+    "intimate-laser-hair-removal": {
+      "name": "Intieme laserontharing",
+      "shortDescription": "Permanente haarreductie voor intieme zones.",
+      "description": "Onze intieme laserontharingsservice biedt veilige, effectieve en permanente haarreductie voor gevoelige gebieden. Met behulp van geavanceerde lasertechnologie met ingebouwde koeling voor comfort bieden wij ontharingsopties uit Brazilië en Hollywood. Onze getrainde behandelaars garanderen uw comfort en privacy tijdens de behandeling, waarbij de meeste patiënten na 6-8 sessies een aanzienlijke haarreductie bereiken.",
+      "benefits": [
+        "Permanente haarreductie",
+        "Veilig en comfortabel",
+        "Volledige privacy",
+        "Braziliaanse en Hollywood-opties",
+        "Geavanceerde koeltechnologie"
+      ]
+    },
+    "observe-skin-scanner": {
+      "name": "Observeer huidscanner",
+      "shortDescription": "Geavanceerde huidanalyse voor gepersonaliseerde behandelplanning.",
+      "description": "De Observe Skin Scanner is een geavanceerd beeldvormingssysteem dat uw huid in meerdere lagen analyseert om onderliggende problemen bloot te leggen die niet met het blote oog zichtbaar zijn. Deze uitgebreide analyse onderzoekt pigmentatie, UV-schade, vasculaire aandoeningen, poriën, rimpels en huidtextuur. De resultaten begeleiden uw persoonlijke behandelplan voor optimale resultaten.",
+      "benefits": [
+        "Meerlaagse analyse",
+        "Onthult verborgen problemen",
+        "Gepersonaliseerd behandelplan",
+        "Houdt de voortgang bij",
+        "Educatieve ervaring"
+      ]
+    },
+    "hair-extensions": {
+      "name": "Haarextensies",
+      "shortDescription": "Op kleur afgestemde extensions voor voller, langer en natuurlijk ogend haar.",
+      "description": "Haarextensies worden gepland rond uw natuurlijke kleur, dichtheid, levensstijl en gewenste afwerking. Tijdens een consult beoordelen we het haar, selecteren we de juiste verlengingsmethode, plannen we de blend en leggen we het onderhoud uit, zodat het resultaat vanuit elke hoek comfortabel, gepolijst en natuurlijk aanvoelt.",
+      "benefits": [
+        "Voegt lengte en volume toe",
+        "Gepersonaliseerde kleurafstemming",
+        "Planning van natuurlijke mengsels",
+        "Onderhoudsrichtlijnen",
+        "Salon-afgewerkt resultaat"
+      ]
+    },
+    "nails": {
+      "name": "Nagels",
+      "shortDescription": "Manicure-, pedicure- en nagelafwerkingsdiensten met gedetailleerde zorg.",
+      "description": "Onze nagelbehandelingen zijn gericht op een zuivere vormgeving, nauwkeurige verzorging van de nagelriemen, selectie van nagellak en een verfijnde afwerking. De diensten kunnen op maat worden gemaakt voor dagelijks onderhoud, een speciale gebeurtenis of een langerhoudende look, waarbij zorgvuldige aandacht wordt besteed aan de gezondheid en het comfort van de nagels.",
+      "benefits": [
+        "Schone vormgeving en verzorging van de nagelriemen",
+        "Gepolijste salonafwerking",
+        "Handen en voeten opties",
+        "Kleur- en afwerkingsrichtlijnen",
+        "Comfortgerichte afspraak"
+      ]
+    },
+    "lashes": {
+      "name": "Wimpers",
+      "shortDescription": "Wimperlifting, styling en afwerking rond uw ogen.",
+      "description": "Wimperbehandelingen zijn ontworpen om het gebied rond de ogen te verfraaien met een natuurlijke, goed gevormde afwerking. Wij beoordelen uw wimperlengte, richting en gewenst resultaat voordat u een lift, stylingafspraak of vollere wimperafwerking met duidelijke nazorg adviseert.",
+      "benefits": [
+        "Verbetert de natuurlijke wimpers",
+        "Gepersonaliseerde vormplanning",
+        "Opent en definieert het ooggebied",
+        "Onderhoudsarme afwerking",
+        "Duidelijke begeleiding bij nazorg"
+      ]
+    }
+  },
+  "conditionContent": {
+    "ageing-skin": {
+      "name": "Verouderende huid",
+      "shortDescription": "Pak fijne lijntjes, rimpels en verlies van elasticiteit aan met onze antiverouderingsbehandelingen.",
+      "description": "Een verouderende huid is een natuurlijk proces dat wordt gekenmerkt door de ontwikkeling van fijne lijntjes, rimpels, verlies van elasticiteit en veranderingen in de huidtextuur en -tint. Naarmate we ouder worden, produceert onze huid minder collageen en elastine, wat leidt tot verslapping, rimpels en verlies van jeugdig volume. Omgevingsfactoren zoals blootstelling aan de zon, roken en vervuiling kunnen dit proces versnellen. Onze kliniek biedt een uitgebreid scala aan behandelingen om de verschillende tekenen van veroudering aan te pakken, van preventieve behandelingen tot geavanceerde correctieve procedures. Of u zich nu zorgen maakt over fijne lijntjes, diepe rimpels, volumeverlies of verminderde stevigheid, wij hebben oplossingen die u kunnen helpen een jeugdiger, frisser uiterlijk te herstellen.",
+      "symptoms": [
+        "Fijne lijntjes en rimpels",
+        "Verlies van elasticiteit van de huid",
+        "Verslapping van de huid",
+        "Volumeverlies in wangen en slapen",
+        "Diepe nasolabiale plooien",
+        "Marionettenlijnen",
+        "Dunne, crêpe huid"
+      ],
+      "causes": [
+        "Natuurlijke afname van de collageenproductie",
+        "Schade door de zon (fotoveroudering)",
+        "Verlies van gezichtsvet en volume",
+        "Verminderde hydratatie van de huid",
+        "Herhaalde gezichtsuitdrukkingen",
+        "Leefstijlfactoren (roken, dieet, stress)"
+      ],
+      "treatments": [
+        "Antirimpelinjecties om de gezichtsspieren te ontspannen",
+        "Dermale fillers om het volume te herstellen",
+        "Huidverjongingsbehandelingen voor textuurverbetering",
+        "Laserresurfacing voor textuurverbetering",
+        "Medische huidverzorging"
+      ]
+    },
+    "acne": {
+      "name": "Acne en puistjes",
+      "shortDescription": "Effectieve behandelingen voor een zuiverdere, gezondere huid.",
+      "description": "Acne is een veel voorkomende huidaandoening die mensen van alle leeftijden treft.",
+      "symptoms": [
+        "Mee-eters",
+        "Whiteheads",
+        "Papules",
+        "Puisten",
+        "Cysten",
+        "Littekens"
+      ],
+      "causes": [
+        "Overmatige olieproductie",
+        "Bacteriën",
+        "Hormonale veranderingen",
+        "Bepaalde medicijnen"
+      ],
+      "treatments": [
+        "Chemische peelings",
+        "Lasertherapie",
+        "Huidverzorgingsaanbevelingen"
+      ]
+    },
+    "pigmentation": {
+      "name": "Pigmentatie",
+      "shortDescription": "Behandel effectief zonnevlekken, melasma en hyperpigmentatie.",
+      "description": "Pigmentatieproblemen verwijzen naar verschillende aandoeningen waarbij de huid donkerdere plekken of vlekken ontwikkelt als gevolg van overmatige melanineproductie. Dit omvat zonnevlekken, ouderdomsvlekken, sproeten, melasma en post-inflammatoire hyperpigmentatie. Pigmentatie kan mensen van alle huidtypes treffen en kan worden veroorzaakt door blootstelling aan de zon, hormonale veranderingen, huidletsel of bepaalde medicijnen. Hoewel sommige pigmentvlekken onschadelijk zijn, kan dit aanzienlijke cosmetische problemen veroorzaken. Onze kliniek biedt geavanceerde behandelingen die zich richten op pigmentatie op verschillende diepten van de huid, met behulp van lasertechnologie, chemische peelings en gespecialiseerde huidverzorging om een ​​heldere, egale teint te herstellen.",
+      "symptoms": [
+        "Zonnevlekken en ouderdomsvlekken",
+        "Melasma (hormonale pigmentatie)",
+        "Sproeten",
+        "Post-inflammatoire hyperpigmentatie",
+        "Algemene ongelijkmatige teint",
+        "Donkere vlekken op gezicht of lichaam"
+      ],
+      "causes": [
+        "Blootstelling aan UV en schade door de zon",
+        "Hormonale veranderingen (zwangerschap, anticonceptiva)",
+        "Huidtrauma of -ontsteking",
+        "Bepaalde medicijnen",
+        "Genetische aanleg",
+        "Verouderingsproces"
+      ],
+      "treatments": [
+        "BBL/IPL-fototherapie",
+        "Q-switched laser",
+        "Cosmelan depigmentatie",
+        "Chemische peelings",
+        "Verhelderende huidverzorging op recept"
+      ]
+    },
+    "scars": {
+      "name": "Littekens",
+      "shortDescription": "Vermindert de verschijning van littekens voor een gladdere huid.",
+      "description": "Littekens kunnen het gevolg zijn van acne, verwondingen of een operatie.",
+      "symptoms": [
+        "Ingesprongen littekens",
+        "Opstaande littekens",
+        "Verkleuring",
+        "Textuurveranderingen"
+      ],
+      "causes": [
+        "Acne",
+        "Blessures",
+        "Chirurgie",
+        "Brandt"
+      ],
+      "treatments": [
+        "Microneedling",
+        "Lasertherapie",
+        "Dermale fillers",
+        "Chemische peelings"
+      ]
+    },
+    "hair-loss": {
+      "name": "Haaruitval",
+      "shortDescription": "Herstel de haargroei met geavanceerde behandelingen.",
+      "description": "Haarverlies kan zowel mannen als vrouwen treffen.",
+      "symptoms": [
+        "Dunner wordend haar",
+        "Terugwijkende haarlijn",
+        "Kale plekken",
+        "Overmatig verlies"
+      ],
+      "causes": [
+        "Genetica",
+        "Hormonale veranderingen",
+        "Stress",
+        "Voedingstekorten"
+      ],
+      "treatments": [
+        "PRP-therapie",
+        "Mesotherapie",
+        "Haarherstelbehandelingen"
+      ]
+    },
+    "rosacea": {
+      "name": "Rosacea",
+      "shortDescription": "Beheers de symptomen van rosacea voor een zuiverdere huid.",
+      "description": "Rosacea is een chronische huidaandoening die roodheid en zichtbare bloedvaten veroorzaakt.",
+      "symptoms": [
+        "Roodheid in het gezicht",
+        "Zichtbare bloedvaten",
+        "Hobbels en puistjes",
+        "Oogirritatie"
+      ],
+      "causes": [
+        "Genetica",
+        "Omgevingsfactoren",
+        "Bloedvatafwijkingen"
+      ],
+      "treatments": [
+        "IPL-therapie",
+        "Laserbehandeling",
+        "Huidverzorgingsbeheer",
+        "Medische behandelingen"
+      ]
+    },
+    "stretch-marks": {
+      "name": "Striae",
+      "shortDescription": "Vermindert de verschijning van striae.",
+      "description": "Striae verschijnen wanneer de huid snel uitrekt.",
+      "symptoms": [
+        "Roze of rode strepen",
+        "Paarse of bruine strepen",
+        "Ingesprongen regels",
+        "Gladde textuur"
+      ],
+      "causes": [
+        "Zwangerschap",
+        "Gewichtstoename",
+        "Groeispurten",
+        "Hormonale veranderingen"
+      ],
+      "treatments": [
+        "Lasertherapie",
+        "Microneedling",
+        "Radiofrequentiebehandelingen",
+        "Topische behandelingen"
+      ]
+    },
+    "dry-skin": {
+      "name": "Droge huid",
+      "shortDescription": "Herstel de hydratatie en bereik een gladde, stralende huid met onze gerichte droge huidbehandelingen.",
+      "description": "Een droge huid, ook bekend als xerosis, is een veel voorkomende aandoening die wordt gekenmerkt door een gebrek aan vocht en natuurlijke oliën in de huid. Dit kan leiden tot strakheid, schilfering, een ruwe textuur en in ernstige gevallen zelfs barsten of bloedingen. Een droge huid kan bij iedereen voorkomen, maar komt vaker voor naarmate de olieproductie afneemt. Omgevingsfactoren zoals koud weer, lage luchtvochtigheid, agressieve zeep en warme douches kunnen de toestand verergeren. Onze kliniek biedt een uitgebreide hydratatieplanning, inclusief behandelingen van huidkwaliteit en gepersonaliseerde huidverzorgingsprotocollen om de vochtbarrière van uw huid te herstellen en een gezonde, stralende teint te bereiken.",
+      "symptoms": [
+        "Strak, oncomfortabel gevoel na het reinigen",
+        "Schilferende of vervellende huid",
+        "Ruwe, schuurpapierachtige textuur",
+        "Fijne lijnen verschijnen prominenter",
+        "Jeuk of irritatie",
+        "Doffe, doffe teint",
+        "Roodheid of ontsteking"
+      ],
+      "causes": [
+        "Verminderde olieproductie naarmate de leeftijd toeneemt",
+        "Koude, droge weersomstandigheden",
+        "Lage luchtvochtigheid binnenshuis",
+        "Warme douches en baden",
+        "Agressieve zepen en reinigingsmiddelen",
+        "Uitdroging en slechte voeding",
+        "Genetische aanleg",
+        "Bepaalde medicijnen"
+      ],
+      "treatments": [
+        "Skinbooster-injecties (Profhilo, Volite)",
+        "Professionele hydratatieprotocollen",
+        "Huidverzorgingsprotocollen op maat",
+        "Professionele behandelingen rijk aan vocht"
+      ]
+    },
+    "sensitive-skin": {
+      "name": "Gevoelige huid",
+      "shortDescription": "Zachte behandelingen voor reactieve huidtypes.",
+      "description": "Een gevoelige huid reageert gemakkelijk op producten en omgevingsfactoren.",
+      "symptoms": [
+        "Roodheid",
+        "Branderig gevoel",
+        "Prikkelend",
+        "Dichtheid",
+        "Huiduitslag"
+      ],
+      "causes": [
+        "Genetica",
+        "Barrièredisfunctie",
+        "Allergenen",
+        "Omgevingsfactoren"
+      ],
+      "treatments": [
+        "Kalmerende behandelingen",
+        "Huidverzorging op maat",
+        "LED-therapie"
+      ]
+    },
+    "acne-scarring": {
+      "name": "Acne en littekens",
+      "shortDescription": "Behandel actieve acne en verbeter het uiterlijk van acnelittekens.",
+      "description": "Acne is een van de meest voorkomende huidaandoeningen en treft mensen van alle leeftijden. Het treedt op wanneer de haarzakjes verstopt raken met olie en dode huidcellen, wat leidt tot whiteheads, mee-eters en puistjes. Ernstige acne kan aanzienlijke littekens veroorzaken die aanhouden lang nadat de actieve puistjes zijn verdwenen. Acnelittekens kunnen atrofisch (inkepingen), hypertrofisch (verhoogd) zijn of veranderingen in de huidtextuur en -tint veroorzaken. Onze kliniek biedt geavanceerde behandelingen voor zowel actieve acne als acnelittekens, waarbij gebruik wordt gemaakt van de nieuwste technologieën om de helderheid en textuur van de huid te verbeteren. Van laserbehandelingen tot microneedling, we hebben oplossingen voor alle soorten acneproblemen.",
+      "symptoms": [
+        "Actieve puistjes (mee-eters, whiteheads, cysten)",
+        "Rode, ontstoken huid",
+        "Atrofische littekens (rollend, gesloten wagen, ijspriem)",
+        "Hypertrofische of keloïde littekens",
+        "Ongelijkmatige huidtextuur",
+        "Post-inflammatoire hyperpigmentatie"
+      ],
+      "causes": [
+        "Overmatige olieproductie",
+        "Verstopte haarzakjes",
+        "Bacteriën (P. acnes)",
+        "Hormonale veranderingen",
+        "Dieet- en levensstijlfactoren",
+        "Genetica"
+      ],
+      "treatments": [
+        "AviClear-laser voor actieve acne",
+        "Microneedling voor littekenverbetering",
+        "Chemische peelings",
+        "Laserresurfacing (CO2, fractioneel)",
+        "Huidverzorgingsprotocollen van medische kwaliteit"
+      ]
+    },
+    "uneven-skin-tone": {
+      "name": "Oneven huidskleur",
+      "shortDescription": "Herstel een heldere, egale teint met gerichte pigmentatiebehandelingen.",
+      "description": "Een ongelijkmatige huidskleur verwijst naar inconsistenties in huidskleur en pigmentatie over het hele gezicht en lichaam. Dit veel voorkomende probleem kan zich manifesteren als plekken op een donkerdere of lichtere huid, algemene dofheid of een gebrek aan glans. Factoren die bijdragen aan een ongelijkmatige teint zijn onder meer schade door de zon, hormonale veranderingen, ontstekingen en huidletsel. Veel mensen ervaren ook post-inflammatoire hyperpigmentatie na acne of ander huidtrauma. Onze kliniek biedt verschillende behandelingen om een ​​egalere, stralende teint te herstellen, van zachte verhelderende behandelingen tot geavanceerde lasertherapieën die pigmentatie bij de bron aanpakken.",
+      "symptoms": [
+        "Gebieden met hyperpigmentatie",
+        "Algemene saaiheid",
+        "Gebrek aan uitstraling",
+        "Zonnevlekken en ouderdomsvlekken",
+        "Melasma-patches",
+        "Post-inflammatoire vlekken"
+      ],
+      "causes": [
+        "Blootstelling aan de zon en UV-schade",
+        "Hormonale veranderingen (melasma)",
+        "Post-inflammatoire pigmentatie",
+        "Milieuschade",
+        "Verouderingsproces",
+        "Bepaalde medicijnen"
+      ],
+      "treatments": [
+        "IPL/BBL-behandelingen",
+        "Chemische peelings",
+        "Laserpigmentatie verwijderen",
+        "Depigmentatieprotocollen (Cosmelan)",
+        "Verhelderende huidverzorging van medische kwaliteit"
+      ]
+    },
+    "blemishes": {
+      "name": "Vlekken",
+      "shortDescription": "Verwijder oneffenheden en bereik een vlekkeloze teint.",
+      "description": "Onvolkomenheden omvatten verschillende huidonvolkomenheden, waaronder vlekken, vlekken en kleine laesies die de helderheid van de huid beïnvloeden. Deze kunnen onder meer whiteheads, mee-eters, papels, puisten en andere onvolkomenheden zijn die een oneffen huidoppervlak creëren. Vlekken kunnen worden veroorzaakt door overmatige olieproductie, verstopte poriën, bacteriën en ontstekingen. Ze kunnen ook post-inflammatoire vlekken achterlaten die lang nadat de aanvankelijke vlek is genezen, blijven bestaan. Onze kliniek biedt effectieve behandelingen om actieve puistjes te verwijderen, toekomstige puistjes te voorkomen en de verschijning van eventuele resterende vlekken te verbeteren voor een helderdere, gezonder uitziende huid.",
+      "symptoms": [
+        "Whiteheads en mee-eters",
+        "Rode, ontstoken plekken",
+        "Puisten en papels",
+        "Verstopte poriën",
+        "Post-smetvlekken",
+        "Oneffen huidoppervlak"
+      ],
+      "causes": [
+        "Overmatige talgproductie",
+        "Verstopte poriën",
+        "Bacteriële infectie",
+        "Hormonale schommelingen",
+        "Slechte huidverzorgingsroutine",
+        "Dieet en levensstijl"
+      ],
+      "treatments": [
+        "Chemische peelings",
+        "Professionele huidbehandelingen",
+        "Laserbehandelingen",
+        "Professionele afzuiging",
+        "Gerichte huidverzorgingsprotocollen"
+      ]
+    },
+    "collagen-stimulating": {
+      "name": "Collageenstimulerend",
+      "shortDescription": "Boost collageen voor een stevigere, jeugdigere huid.",
+      "description": "Collageenstimulatiebehandelingen zijn ontworpen om de natuurlijke collageenproductie van uw huid te ondersteunen, wat leidt tot een verbeterde huidkwaliteit, stevigheid en textuur. Collageen is het eiwit dat verantwoordelijk is voor de sterkte en elasticiteit van de huid, maar de productie ervan neemt aanzienlijk af naarmate we ouder worden. Door de vorming van nieuwe collageen aan te moedigen, kunnen we meerdere problemen tegelijkertijd aanpakken, waaronder fijne lijntjes, rimpels, littekens en textuurveranderingen met professionele huidbehandelingen.",
+      "symptoms": [
+        "Fijne lijntjes en rimpels",
+        "Verlies van stevigheid van de huid",
+        "Verminderde elasticiteit",
+        "Dunne, crêpe huid",
+        "Acnelittekens",
+        "Vergrote poriën"
+      ],
+      "causes": [
+        "Natuurlijk verouderingsproces",
+        "Verminderde collageenproductie",
+        "Zonschade",
+        "Milieuschade",
+        "Leefstijlfactoren",
+        "Genetische aanleg"
+      ],
+      "treatments": [
+        "Medische microneedling",
+        "Huidversterkerbehandelingen",
+        "Professionele schillen",
+        "Laserresurfacen",
+        "Draadliften"
+      ]
+    },
+    "fine-lines-wrinkles": {
+      "name": "Fijne lijntjes en rimpels",
+      "shortDescription": "Maak fijne lijntjes glad en voorkom ze met onze antirimpelbehandelingen en huidverzorgingsoplossingen.",
+      "description": "Fijne lijntjes en rimpels behoren tot de eerste tekenen van veroudering en verschijnen meestal eerst rond de ogen (kraaienpootjes), het voorhoofd en tussen de wenkbrauwen. Deze plooien ontstaan ​​als gevolg van herhaalde gezichtsuitdrukkingen, de afbraak van collageen en een verminderde elasticiteit van de huid. Fijne lijntjes zijn oppervlakkig en verdwijnen vaak als het gezicht in rust is, terwijl diepere rimpels zichtbaar blijven. Onze kliniek biedt een scala aan preventieve en corrigerende behandelingen, waaronder antirimpelinjecties, huidversterkers, collageenstimulerende behandelingen en geavanceerde huidverzorging om bestaande lijntjes glad te strijken en te voorkomen dat er nieuwe ontstaan.",
+      "symptoms": [
+        "Expressielijnen rond de ogen (kraaienpootjes)",
+        "Voorhoofdlijnen bij het optrekken van de wenkbrauwen",
+        "Fronslijnen tussen de wenkbrauwen",
+        "Lijnen rond de mond (rokerslijnen)",
+        "Crêpeachtige textuur op de wangen",
+        "Verdieping van de neus-lippenplooien"
+      ],
+      "causes": [
+        "Herhaalde samentrekkingen van de gezichtsspieren",
+        "Verminderde collageenproductie",
+        "Verlies van elasticiteit van de huid",
+        "Schade door de zon en blootstelling aan UV-straling",
+        "Uitdroging",
+        "Roken en alcoholgebruik",
+        "Slechte slaapgewoonten",
+        "Genetische factoren"
+      ],
+      "treatments": [
+        "Antirimpelinjecties (Botox)",
+        "Huidversterkers voor hydratatie",
+        "Professionele collageenondersteunende huidbehandelingen",
+        "Laserhuidvernieuwing",
+        "Retinoïde huidverzorging van medische kwaliteit"
+      ]
+    },
+    "loss-of-firmness": {
+      "name": "Verlies van stevigheid",
+      "shortDescription": "Lift en verstevigt de slappe huid met onze geavanceerde huidverstevigende behandelingen.",
+      "description": "Verlies van stevigheid van de huid treedt op wanneer de ondersteunende structuur van de huid verzwakt als gevolg van een verminderde productie van collageen en elastine. Dit kan zichtbaar zijn rond de kaaklijn, wangen, nek en oogleden. De huid kan na verloop van tijd minder veerkrachtig aanvoelen. Hoewel dit een natuurlijk onderdeel is van het ouder worden, kunnen factoren als schade door de zon, gewichtsschommelingen en levensstijlkeuzes het proces versnellen. Onze kliniek biedt op consultatie gebaseerde behandelplannen met behulp van injectables, microneedling, laser resurfacing en professionele huidkwaliteitsbehandelingen.",
+      "symptoms": [
+        "Doorhangende kaaklijn (kaken)",
+        "Losse huid op de wangen",
+        "Hangende oogleden",
+        "Kalkoenhals-uiterlijk",
+        "Verlies van gezichtscontourdefinitie",
+        "Huid die niet terugveert als hij wordt bekneld"
+      ],
+      "causes": [
+        "Verminderde productie van collageen en elastine",
+        "Afbraak van bestaande collageenvezels",
+        "Schade door de zon versnelt veroudering",
+        "Aanzienlijk gewichtsverlies",
+        "Natuurlijk verouderingsproces",
+        "Slechte huidverzorgingsgewoonten",
+        "Roken vermindert de bloedtoevoer naar de huid",
+        "Genetische aanleg voor verzakking"
+      ],
+      "treatments": [
+        "Antirimpelinjecties",
+        "Dermale fillers voor gezichtsondersteuning",
+        "Medische microneedling",
+        "Laserresurfacen",
+        "Professionele huidkwaliteitsbehandelingen"
+      ]
+    },
+    "other-conditions": {
+      "name": "Overige voorwaarden",
+      "shortDescription": "Uitgebreide oplossingen voor diverse huid- en esthetische problemen.",
+      "description": "Naast de algemene problemen behandelt onze kliniek een breed scala aan andere huid- en esthetische aandoeningen. Deze omvatten rosacea, vasculaire laesies, overmatig zweten (hyperhidrose), tandenknarsen (bruxisme), migraine en verschillende problemen met de huidtextuur. We bieden ook behandelingen aan voor specifieke gebieden, zoals het gevoelige gebied rond de ogen, nek en handen. Ons uitgebreide consultatieproces zorgt ervoor dat we uw unieke zorgen begrijpen en de meest geschikte behandelingen uit ons uitgebreide dienstenaanbod kunnen aanbevelen.",
+      "symptoms": [
+        "Rosacea en roodheid in het gezicht",
+        "Zichtbare bloedvaten",
+        "Overmatig zweten",
+        "Tandenslijpen en kaakspanning",
+        "Chronische migraine",
+        "Textuuronregelmatigheden"
+      ],
+      "causes": [
+        "Diverse onderliggende factoren",
+        "Genetische aanleg",
+        "Omgevingstriggers",
+        "Leefstijlfactoren",
+        "Medische aandoeningen",
+        "Stress en angst"
+      ],
+      "treatments": [
+        "Vasculaire laserbehandelingen",
+        "Botox voor medische aandoeningen",
+        "Huidvernieuwing",
+        "Gerichte lasertherapie",
+        "Gepersonaliseerde behandelplannen"
+      ]
+    }
+  },
+  "homeEditorial": {
+    "carousel": {
+      "previousSlide": "Vorige dia",
+      "nextSlide": "Volgende dia"
+    },
+    "heroSlides": {
+      "slide1": {
+        "eyebrow": "Schoonheidssalon in Batumi, Georgië",
+        "title": "Silk Beauty Salon in Batumi, Georgië.",
+        "description": "Vergelijk consultatiegestuurde Botox- en fillerafspraken, huidverzorging, nagels, wimpers, wenkbrauwen, startprijzen en online boeking.",
+        "cta": "Maak een afspraak"
+      },
+      "slide2": {
+        "eyebrow": "Huidkwaliteit",
+        "title": "Plan uw huidverzorging op basis van uw behoeften.",
+        "description": "Lees over huidverzorging, acneconsulten, peelings, microneedling, prijzen en vragen die u kunt stellen voordat u boekt.",
+        "cta": "Bekijk huidbehandelingen"
+      },
+      "slide3": {
+        "eyebrow": "Injectables en contour",
+        "title": "Vergelijk informatie over injecteerbare afspraken.",
+        "description": "Lees meer over Botox- en fillerconsulten, startprijzen, timing en vragen over nazorg voordat u boekt.",
+        "cta": "Bekijk behandelingen"
+      }
+    },
+    "philosophy": {
+      "eyebrow": "Onze aanpak",
+      "title": "Duidelijke informatie voordat u boekt.",
+      "description": "De website combineert servicebeschrijvingen, startprijzen, contactgegevens en online boekingen voor Silk Beauty Salon in Batumi.",
+      "statement": "Kies een servicepagina of start met een adviesgesprek als u hulp nodig heeft bij het beslissen welke afspraak u wilt aanvragen."
+    },
+    "concerns": {
+      "eyebrow": "Huidproblemen",
+      "title": "Ontdek veelvoorkomende huidproblemen.",
+      "description": "Gebruik de zorgpagina's als uitgangspunt en bevestig vervolgens rechtstreeks bij de salon of de service geschikt is."
+    },
+    "concernItems": {
+      "item1": {
+        "name": "Fijne lijntjes en rimpels",
+        "description": "Verzacht expressielijnen terwijl de natuurlijke beweging behouden blijft."
+      },
+      "item2": {
+        "name": "Verlies van stevigheid",
+        "description": "Ondersteunt collageen, heft laksheid op en verfijnt de gezichtsstructuur."
+      },
+      "item3": {
+        "name": "Ongelijkmatige toon",
+        "description": "Richt zich op pigmentatie, dofheid en post-inflammatoire vlekken."
+      },
+      "item4": {
+        "name": "Droge huid",
+        "description": "Herstelt de hydratatie, barrièrefunctie en langdurige helderheid."
+      },
+      "item5": {
+        "name": "Acne en littekens",
+        "description": "Verbeter actieve puistjes, vlekken en oneffen textuur."
+      }
+    },
+    "portfolio": {
+      "eyebrow": "Behandelingen",
+      "title": "Holistische esthetische behandelingen.",
+      "description": "Een weloverwogen portfolio voor gezichtsbalans, huidkwaliteit en vertrouwen op lange termijn in onze schoonheidssalon in Batumi, Georgië.",
+      "viewAll": "Ontdek schoonheidsbehandelingen in Batumi",
+      "explore": "Ontdek",
+      "items": {
+        "item1": {
+          "title": "Dermale fillers",
+          "description": "Hyaluronzuurbehandelingen voor lippen, wangen, kaaklijn, kin, onder de ogen en gezichtsbalancering."
+        },
+        "item2": {
+          "title": "Anti-rimpel injectables",
+          "description": "Nauwkeurige neuromodulatorbehandelingen voor voorhoofdslijnen, fronslijnen, kraaienpootjes, kauwspieren en zweten."
+        },
+        "item3": {
+          "title": "Huidkwaliteit",
+          "description": "Huidverzorging, peelings, microneedling, advies en vanafprijsinformatie."
+        }
+      }
+    },
+    "popularTreatments": {
+      "eyebrow": "Populaire prijzen",
+      "title": "Populaire behandelingen & vanafprijzen.",
+      "description": "Een snelle manier om de meest gevraagde afspraken te vergelijken voordat u de volledige prijslijst opent.",
+      "viewPricelist": "Bekijk de volledige prijslijst",
+      "priceLabel": "Vanafprijs",
+      "items": {
+        "antiWrinkle": {
+          "title": "Botox / antirimpelinjecties",
+          "description": "Behandeling op de expressielijn conservatief gepland na overleg.",
+          "linkLabel": "Behandeling bekijken"
+        },
+        "dermalFillers": {
+          "title": "Dermale fillers",
+          "description": "Volume- en contourondersteuning voor lippen, wangen, kaaklijn en gezichtsbalans.",
+          "linkLabel": "Bekijk vulopties"
+        },
+        "skinpen": {
+          "title": "SkinPen microneedling",
+          "description": "Collageenstimulerende microneedling voor textuur, littekens en fijne lijntjes.",
+          "linkLabel": "Behandeling bekijken"
+        },
+        "fireIce": {
+          "title": "Fire & Ice Peel",
+          "description": "Een professionele resurfacing-peeling voor glans, textuur en een huid die klaar is voor evenementen.",
+          "linkLabel": "Behandeling bekijken"
+        },
+        "nails": {
+          "title": "Nageldiensten",
+          "description": "Manicure, pedicure en nagelafwerking met strakke vormgeving en gedetailleerde verzorging.",
+          "linkLabel": "Bekijk diensten"
+        },
+        "lashes": {
+          "title": "Wimperdiensten",
+          "description": "Wimperlift-, styling- en afwerkingsafspraken rond uw ogen.",
+          "linkLabel": "Diensten bekijken"
+        }
+      }
+    },
+    "stats": {
+      "item1": {
+        "label": "Zurab Gorgiladze Straat"
+      },
+      "item2": {
+        "label": "Websitetalen"
+      },
+      "item3": {
+        "label": "Dagen elke week geopend"
+      }
+    },
+    "results": {
+      "eyebrow": "Echte resultaten",
+      "title": "Een persoonlijk plan staat centraal.",
+      "description": "Voor-en-na-verhalen moeten worden gelezen als klinische voorbeelden, niet als beloftes. Uw resultaat is afhankelijk van anatomie, productkeuze, dosering en nazorg.",
+      "cta": "Zie resultaten",
+      "before": "Vóór",
+      "after": "Na",
+      "disclaimer": "Individuele resultaten variëren. Alle behandelplannen vereisen klinisch overleg."
+    },
+    "resultItems": {
+      "item1": {
+        "treatment": "Wang- en middengezichtssteun",
+        "detail": "Hersteld volume met een zachte, gelifte contour."
+      },
+      "item2": {
+        "treatment": "Hydratatie en vorm van de lippen",
+        "detail": "Gedefinieerde rand, gebalanceerd volume, natuurlijke afwerking."
+      },
+      "item3": {
+        "treatment": "Huidglansplan",
+        "detail": "Verbeterde helderheid, textuur en oppervlakteverfijning."
+      }
+    },
+    "cta": {
+      "eyebrow": "Plan uw bezoek",
+      "title": "Kies een dienst of start met een adviesgesprek.",
+      "description": "Neem contact op met {clinicName} in Batumi om de beschikbaarheid van de service, timing, startprijzen en boekingsopties te bevestigen.",
+      "bookNow": "Boek nu",
+      "contactUs": "Neem contact met ons op"
+    },
+    "visitUs": {
+      "eyebrow": "Bezoek ons",
+      "title": "Vind ons in het centrum van Batumi.",
+      "description": "Plan uw afspraak bij Silk Beauty Salon aan de Zurab Gorgiladze-straat, dichtbij het stadscentrum en gemakkelijk te bereiken met de taxi of te voet.",
+      "addressLabel": "Adres",
+      "hoursLabel": "Openingstijden",
+      "weekdays": "ma - vr",
+      "saturday": "Zaterdag",
+      "sunday": "Zondag",
+      "phoneLabel": "Bellen",
+      "whatsappLabel": "WhatsApp",
+      "directions": "Routebeschrijving",
+      "directionsAria": "Ontvang routebeschrijving naar {salonName} op Google Maps",
+      "mapTitle": "Kaart naar {salonName}"
+    },
+    "journal": {
+      "eyebrow": "Huidtrends",
+      "title": "Informatie over schoonheidsverzorging voordat u boekt.",
+      "description": "Lees praktische opmerkingen over consultatie, timing, voorbereiding en nazorgvragen.",
+      "cta": "Lees onze tips"
+    },
+    "reviews": {
+      "eyebrow": "Klantverhalen",
+      "title": "Wat klanten zeggen na hun bezoek.",
+      "description": "Een bewegende carrousel van recente klantfeedback van mensen die Silk Beauty Salon kiezen voor injectables, fillers en huidbehandelingen in Batumi.",
+      "ratingLabel": "{rating} van 5 sterren",
+      "goToReview": "Ga naar recensie {number}"
+    },
+    "trendItems": {
+      "item1": {
+        "category": "Behandelplanning",
+        "title": "Hoe injectables te plannen zonder er overdreven uit te zien"
+      },
+      "item2": {
+        "category": "Huidgezondheid",
+        "title": "Huidkwaliteit is de nieuwe basis"
+      },
+      "item3": {
+        "category": "Consultatie",
+        "title": "Wat u moet weten vóór een eerste fillerconsult"
+      }
+    }
+  },
+  "bookingPage": {
+    "title": "Maak een afspraak",
+    "subtitle": "Plan uw consultatie of behandeling met onze deskundige behandelaars",
+    "metadata": {
+      "title": "Maak een afspraak | Silk Beauty Salon",
+      "description": "Boek uw consultatie- of behandelingsafspraak bij Silk Beauty Salon in Batumi, Georgië."
+    },
+    "eyebrow": "Consultatie boeken",
+    "heroImageAlt": "Saloninterieur",
+    "selectDateTime": "Datum en tijd selecteren",
+    "bookingNotConfigured": "Online boeking binnenkort beschikbaar",
+    "bookingNotConfiguredDesc": "We zijn ons online boekingssysteem aan het opzetten. In de tussentijd kunt u ons bellen of mailen om uw afspraak in te plannen.",
+    "callToBook": "Bel om te boeken",
+    "emailToBook": "Mail om te boeken",
+    "consultationTypes": "Behandelingsmenu",
+    "treatmentMenu": "Behandelingsmenu",
+    "treatmentMenuDescription": "Kies uit hetzelfde behandelmenu dat wordt gebruikt in de mobiele Silk Beauty-app.",
+    "openTreatmentDropdown": "Open het dropdownmenu voor behandelingen",
+    "consultations": {
+      "skin": {
+        "title": "Huidconsult",
+        "duration": "45 min.",
+        "description": "Uitgebreide huidanalyse en behandelplanning"
+      },
+      "virtual": {
+        "title": "Virtueel consult",
+        "duration": "20 min.",
+        "description": "Online consultatie voor externe klanten"
+      }
+    },
+    "whatToExpect": {
+      "title": "Wat kunt u verwachten",
+      "step1": "Vul onze medische vragenlijst in",
+      "step2": "Bespreek uw doelen en zorgen",
+      "step3": "Ontvang gepersonaliseerde behandelaanbevelingen",
+      "step4": "Ontvang een duidelijke offerte zonder verborgen kosten"
+    },
+    "needHelp": "Hulp nodig?",
+    "phone": "Telefoon",
+    "email": "E-mail",
+    "address": "Adres",
+    "faq": {
+      "title": "Veelgestelde vragen over boeken",
+      "q1": "Hoe lang duurt een consult?",
+      "a1": "Het eerste consult duurt doorgaans 30-45 minuten, waardoor er tijd is voor een grondige beoordeling en bespreking van uw doelen.",
+      "q2": "Is er een aanbetaling vereist?",
+      "a2": "Als er een aanbetaling van toepassing is, bevestigt de salon het bedrag en de betalingsinstructies wanneer zij uw boekingsaanvraag bevestigt.",
+      "q3": "Wat zijn uw annuleringsvoorwaarden?",
+      "a3": "Voor annuleringen geldt een opzegtermijn van 48 uur. Bij te late annuleringen kan de aanbetaling verloren gaan.",
+      "q4": "Kan ik mijn afspraak verzetten?",
+      "a4": "Ja, u kunt uw afspraak tot 24 uur vóór het geplande tijdstip verzetten. Neem telefonisch of per e-mail contact met ons op om een ​​nieuw tijdstip af te spreken dat voor u past."
+    },
+    "preferredDate": "Voorkeursdatum",
+    "preferredTime": "Voorkeurstijd",
+    "selectTime": "Selecteer een tijdslot",
+    "morning": "Ochtend",
+    "afternoon": "Middag",
+    "evening": "Avond",
+    "selectService": "Behandeling",
+    "selectServicePlaceholder": "Kies een behandeling",
+    "selectTreatment": "Behandeling",
+    "selectTreatmentPlaceholder": "Kies een behandeling",
+    "fullName": "Volledige naam",
+    "namePlaceholder": "Voer uw volledige naam in",
+    "phoneNumber": "Telefoonnummer",
+    "phonePlaceholder": "+995 577 34 57 67",
+    "emailAddress": "E-mailadres",
+    "emailPlaceholder": "your@email.com",
+    "successTitle": "Boekingsaanvraag ingediend",
+    "successMessage": "Bedankt voor uw boekingsaanvraag. Wij nemen spoedig contact met u op om uw afspraak te bevestigen.",
+    "bookAnother": "Nog een afspraak maken",
+    "additionalNotes": "Aanvullende opmerkingen",
+    "notesPlaceholder": "Eventuele speciale verzoeken of informatie die we moeten weten...",
+    "requestBooking": "Boeking aanvragen",
+    "bookingNote": "Wij bevestigen uw afspraak binnen 24 uur",
+    "dialogTitle": "Afspraak boeken",
+    "dialogDescription": "Plan uw consultatie met onze deskundige behandelaars",
+    "continue": "Ga verder met",
+    "back": "Terug",
+    "confirmBooking": "Boeking bevestigen",
+    "bookingStatus": "Boeking...",
+    "booked": "(geboekt)",
+    "slotConflict": "Dit tijdslot is al geboekt. Selecteer een ander tijdstip.",
+    "bookingFailed": "Boeking kon niet worden aangemaakt",
+    "unexpectedError": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
+    "rateLimitMessage": "Te veel inzendingen. Wacht alstublieft 15 minuten.",
+    "bookingSummary": "Boekingsoverzicht",
+    "bookingConfirmed": "Boeking bevestigd!",
+    "thankYou": "Bedankt, {name}. Uw afspraak is gepland.",
+    "bookingDetails": "Boekingsgegevens",
+    "done": "Klaar",
+    "selectDate": "Datum selecteren",
+    "selectTimeSlot": "Kies een tijdslot",
+    "service": "Behandeling",
+    "treatment": "Behandeling",
+    "date": "Datum",
+    "time": "Tijd",
+    "message": "Bericht (optioneel)",
+    "servicePlaceholder": "Kies een behandeling",
+    "messagePlaceholder": "Eventuele specifieke vereisten of vragen...",
+    "serviceConsultation": "Consultatie",
+    "serviceBotox": "Botox-behandeling",
+    "serviceFillers": "Dermale fillers",
+    "serviceLaser": "Laserontharing",
+    "serviceRejuvenation": "Huidverjonging",
+    "servicePeel": "Chemische peeling",
+    "serviceMicroneedling": "Microneedling",
+    "personalInfo": "Persoonlijke gegevens",
+    "formNotReady": "Het boekingsformulier is nog in voorbereiding. Probeer het over enkele ogenblikken opnieuw."
+  },
+  "consent": {
+    "title": "Cookievoorkeuren",
+    "bannerLabel": "Banner voor toestemming voor cookies",
+    "description": "We gebruiken cookies om uw surfervaring te verbeteren, gepersonaliseerde inhoud aan te bieden en ons verkeer te analyseren. Door op ‘Alles accepteren’ te klikken, gaat u akkoord met ons gebruik van cookies. U kunt uw voorkeuren beheren of niet-essentiële cookies weigeren.",
+    "acceptAll": "Accepteer alles",
+    "rejectAll": "Alles afwijzen",
+    "managePreferences": "Voorkeuren beheren",
+    "savePreferences": "Voorkeuren opslaan",
+    "necessaryTag": "Noodzakelijk - Altijd actief",
+    "analyticsTag": "Analyse",
+    "marketingTag": "Marketing",
+    "functionalTag": "Functioneel",
+    "settingsTitle": "Cookie-instellingen",
+    "settingsDescription": "Pas uw cookievoorkeuren aan. Noodzakelijke cookies kunnen niet worden uitgeschakeld, omdat ze essentieel zijn voor het functioneren van de website.",
+    "necessary": "Noodzakelijk",
+    "necessaryDesc": "Essentieel voor het goed functioneren van de website. Kan niet worden uitgeschakeld.",
+    "analytics": "Analyse",
+    "analyticsDesc": "Help ons begrijpen hoe bezoekers omgaan met onze website.",
+    "marketing": "Marketing",
+    "marketingDesc": "Wordt gebruikt om bezoekers op websites te volgen voor reclamedoeleinden.",
+    "functional": "Functioneel",
+    "functionalDesc": "Maak verbeterde functionaliteit en personalisatie mogelijk.",
+    "required": "Vereist"
+  },
+  "chatbot": {
+    "title": "Mariam · Silk-behandelgids",
+    "status": "Uw vriendelijke digitale salongids",
+    "close": "Behandelingsgids sluiten",
+    "launcherOpen": "Open de Silk-behandelgids",
+    "launcherClose": "Sluit de Silk-behandelgids",
+    "launcherRole": "Digitale salongids",
+    "launcherLabel": "Vraag het aan Mariam",
+    "introduction": "Hallo, ik ben Mariam 👋 Vraag mij naar behandelingen, prijzen en duur.",
+    "invite": "Vraag naar onze behandelingen en prijzen",
+    "transcriptLabel": "Gesprek met de Silk-behandelgids",
+    "welcome": "Hallo, ik ben Mariam, de digitale gids van Silk. Stel een behandelvraag en ik geef je eerst de gepubliceerde prijs en duur.",
+    "disclaimer": "Bij geschiktheid, medicijnen of onverwachte klachten verbind ik u door met de salon.",
+    "quickLabel": "Populaire vragen",
+    "inputLabel": "Uw vraag",
+    "placeholder": "Voorbeeld: Hoeveel kost lipfiller?",
+    "send": "Vraag verzenden",
+    "minutesShort": "min",
+    "quick": {
+      "lipPrice": "Lipfiller prijs",
+      "foreheadBotoxPrice": "Voorhoofd Botox prijs",
+      "choose": "Help mij bij het kiezen van",
+      "recovery": "Hersteltijd"
+    },
+    "prompts": {
+      "lipPrice": "Hoeveel kost een lipfiller?",
+      "foreheadBotoxPrice": "Hoeveel kost Botox voor voorhoofdlijnen?",
+      "choose": "Ik weet niet zeker welke behandeling ik moet boeken",
+      "recovery": "Wat is de hersteltijd na een lipfiller?"
+    },
+    "answers": {
+      "emergency": "Hiervoor is mogelijk dringende medische zorg nodig. Neem nu contact op met de lokale hulpdiensten; wacht niet op een antwoord van een salon of chatbot.",
+      "medical": "Ik kan hier niet beslissen over medische geschiktheid. Vertel de salon vóór de behandeling over medicijnen, allergieën, zwangerschap of borstvoeding.",
+      "brand": "Het exacte salonmerk is nog niet geverifieerd op de website. Vraag het team om het product, de variant en de behandelaar te bevestigen voordat u boekt.",
+      "foreheadFiller": "Voorhoofdvuller is niet hetzelfde als voorhoofd Botox. Er wordt geen prijs voor voorhoofdvuller gepubliceerd; de salon moet eerst bevestigen of het aangeboden en geschikt is.",
+      "cancellation": "Annuleer minimaal {hours} uur vóór de afspraak. Neem rechtstreeks contact op met de salon om een ​​bestaande boeking te wijzigen.",
+      "reschedule": "Verplaats minimaal {hours} uur vóór de afspraak. Neem rechtstreeks contact op met de salon om een ​​bestaande boeking te verplaatsen.",
+      "booking": "Verstuur een online boekingsaanvraag. Het wordt alleen bevestigd wanneer de salon contact met u opneemt, normaal gesproken binnen {hours}-uren.",
+      "location": "Silk Beauty Salon bevindt zich bij {address}, {city}, {country}.",
+      "hours": "Open van maandag t/m zaterdag {mondaySaturday}; Zondag {sunday}.",
+      "contact": "Telefoon: {phone}. WhatsApp: {whatsapp}. E-mail: {email}.",
+      "languages": "De website en Mariam ondersteunen Engels, Georgisch, Russisch, Turks, Arabisch, Hebreeuws, Nederlands, Frans en Duits. Bevestig bij het boeken de gewenste gesproken taal bij de salon.",
+      "payment": "Op de website staat dat contant geld en de belangrijkste creditcards worden geaccepteerd. Betaling dient ter plaatse te geschieden, tenzij anders overeengekomen.",
+      "results": "Resultaten en hoe lang ze duren, zijn afhankelijk van de exacte service en het individu; de behandelgids toont de gepubliceerde schatting.",
+      "downtime": "Herstel is behandelingsspecifiek en kan tijdelijke roodheid, zwelling, gevoeligheid, blauwe plekken, droogheid of vervelling omvatten.",
+      "askTreatmentPrice": "Geef de behandeling een naam om onmiddellijk de gepubliceerde prijs te ontvangen. Als er geen prijs wordt gepubliceerd, zal ik dat zeggen.",
+      "askTreatmentDuration": "Geef de behandeling een naam, zodat u onmiddellijk de gepubliceerde afspraakduur krijgt.",
+      "priceOverview": "Gepubliceerde prijsklassen per categorie:",
+      "priceUnavailable": "prijs niet gepubliceerd",
+      "consultation": "Vertel mij het gewenste resultaat, of kies voor een consultatie als u niet zeker weet wat u moet boeken.",
+      "unknown": "Ik kan geen goedgekeurd antwoord vinden op de website. Vraag het direct aan bij de salon en vermeld de gewenste behandeling of resultaat.",
+      "greeting": "Hallo. Vraag mij naar een behandeling, prijs, duur, resultaat, herstel of boeking."
+    },
+    "labels": {
+      "results": "Resultaten",
+      "recovery": "Herstel"
+    },
+    "categories": {
+      "injectables": "Injecteerbare producten",
+      "skin": "Huid",
+      "lashes": "Wimpers en wenkbrauwen",
+      "hair": "Haar",
+      "nails": "Nagels"
+    },
+    "explanations": {
+      "antiWrinkle": "Antirimpelinjecties ontspannen geselecteerde spieren om bewegingsgerelateerde lijnen te verzachten; dosis en behandelingsgebied vereisen beoordeling.",
+      "dermalFiller": "Dermale filler is een injecteerbare gel die wordt gebruikt om na beoordeling het volume in een geselecteerd gebied te herstellen of vorm te geven.",
+      "lipFiller": "Lipfiller voegt lipvolume toe of vormt het. Het resultaat wordt beoordeeld nadat de zwelling is afgenomen.",
+      "microneedling": "Microneedling creëert gecontroleerde microkanalen om de geleidelijke huidvernieuwing en collageenremodellering te ondersteunen.",
+      "fireIce": "Fire & Ice is een professionele resurfacing gezichtsbehandeling met een verwarmend masker gevolgd door een verkoelend masker.",
+      "chemicalPeel": "Bij een chemische peeling wordt gebruik gemaakt van een professionele oplossing om geselecteerde huidlagen te exfoliëren; sterkte en geschiktheid vereisen beoordeling.",
+      "skinBoosters": "Skinboosters zijn injecteerbare behandelingen die bedoeld zijn om de hydratatie en kwaliteit van de huid te ondersteunen, niet voor gezichtscontouren.",
+      "nails": "Nagelservices omvatten voorbereiding, vormgeving, nagelriemverzorging en de geselecteerde kleur of kunstafwerking.",
+      "lashes": "Wimperbehandelingen creëren een lift, tint of vollere finish; het exacte proces en de nazorg zijn afhankelijk van de gekozen dienst.",
+      "balayage": "Balayage is een handgeschilderde haarverlichtingstechniek, ontworpen voor een gemengd, dimensionaal resultaat.",
+      "keratin": "Een keratinehaarbehandeling maakt het haar glad en conditioneert; resultaten en onderhoud zijn afhankelijk van het gebruikte haar en product."
+    },
+    "actions": {
+      "book": "Boek deze behandeling",
+      "guide": "Lees de behandelhandleiding",
+      "library": "Open de kennisbibliotheek",
+      "prices": "Bekijk de volledige prijslijst",
+      "whatsapp": "Vraag het salon op WhatsApp"
+    }
+  },
+  "whatsapp": {
+    "chatOnWhatsApp": "Chat op WhatsApp",
+    "close": "Sluit",
+    "greeting": "Hallo daar! 👋 Welkom bij Silk Beauty Salon. Hoe kunnen wij u vandaag helpen?",
+    "bookAppointment": "Ik wil graag een afspraak maken",
+    "serviceQuestion": "Ik heb een vraag over de diensten",
+    "pricingInfo": "Ik heb meer informatie nodig over de prijzen van",
+    "otherInquiry": "Andere aanvraag",
+    "typicalReply": "Antwoordt doorgaans binnen enkele minuten"
+  },
+  "metadata": {
+    "homeTitle": "Schoonheidssalon in Batumi, Georgië | Silk Beauty Salon",
+    "homeDescription": "Silk Beauty Salon is een schoonheidssalon in Batumi, Georgië voor Botox, dermale fillers, laserbehandelingen, nagels, wimpers en geavanceerde huidverzorging."
+  },
+  "errors": {
+    "title": "Er is iets misgegaan",
+    "description": "Onze excuses voor het ongemak. Er is een onverwachte fout opgetreden.",
+    "retry": "Probeer het opnieuw",
+    "goHome": "Ga naar huis",
+    "referenceId": "Foutreferentie",
+    "api": {
+      "BAD_REQUEST": "Ongeldige aanvraag. Controleer uw invoer.",
+      "VALIDATION_ERROR": "Sommige velden bevatten fouten. Corrigeer ze alstublieft.",
+      "UNAUTHORIZED": "Meld u aan om door te gaan.",
+      "FORBIDDEN": "U heeft geen toegang tot deze bron.",
+      "NOT_FOUND": "De opgevraagde bron is niet gevonden.",
+      "INTERNAL_ERROR": "Er is een interne fout opgetreden. Probeer het later opnieuw.",
+      "SERVICE_UNAVAILABLE": "Service tijdelijk niet beschikbaar. Probeer het later opnieuw.",
+      "RATE_LIMITED": "Te veel verzoeken. Wacht even en probeer het opnieuw."
+    },
+    "network": {
+      "title": "Verbindingsfout",
+      "description": "Kan geen verbinding maken met de server. Controleer uw internetverbinding.",
+      "retry": "Probeer opnieuw verbinding te maken"
+    },
+    "form": {
+      "submitError": "Kan het formulier niet verzenden. Probeer het opnieuw.",
+      "loadError": "Kan formuliergegevens niet laden. Vernieuw de pagina."
+    }
+  },
+  "mediaGallery": {
+    "metadata": {
+      "title": "Mediagalerij | Silk Beauty Salon",
+      "description": "Ontdek onze videotheek, behandelgalerijen en inhoud achter de schermen van Silk Beauty Salon in Batumi."
+    },
+    "hero": {
+      "title": "Ervaring Silk Beauty",
+      "subtitle": "Dompel jezelf onder in onze wereld van luxe esthetiek en transformatieve behandelingen"
+    },
+    "sectionLabel": "Galerij",
+    "pageTitle": "Video's en afbeeldingen",
+    "pageDescription": "Blader door onze verzameling behandelvideo's, getuigenissen van klanten en galerijafbeeldingen die de Silk Beauty-ervaring laten zien.",
+    "tabs": {
+      "allVideos": "Alle video's",
+      "treatments": "Behandelingen",
+      "testimonials": "Getuigenissen",
+      "gallery": "Fotogalerij"
+    },
+    "allVideos": {
+      "title": "Volledige videocollectie",
+      "description": "Blader door al onze video's, inclusief behandelingen, getuigenissen en inhoud achter de schermen."
+    },
+    "treatments": {
+      "title": "Behandelingsvideo's",
+      "description": "Bekijk onze behandelingen in actie en leer meer over wat u tijdens uw bezoek kunt verwachten."
+    },
+    "testimonials": {
+      "title": "Getuigenissen van klanten",
+      "description": "Hoor van onze tevreden klanten over hun ervaringen en transformaties."
+    },
+    "gallery": {
+      "title": "Fotogalerij",
+      "description": "Ontdek onze faciliteiten, behandelkamers en verbluffende resultaten in onze fotogalerij."
+    },
+    "featured": {
+      "label": "Uitgelicht",
+      "title": "Virtuele salonrondleiding",
+      "description": "Maak een virtuele wandeling door onze luxe faciliteiten in Batumi. Van onze gastvrije ontvangst tot onze ultramoderne behandelkamers: ervaar het verschil met de Silk Beauty voordat u zelfs maar door onze deuren stapt.",
+      "duration": "Duur: 2:00"
+    }
+  },
+  "common": {
+    "loading": "Bezig met laden...",
+    "error": "Er is een fout opgetreden",
+    "close": "Sluit",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "viewAll": "Alles weergeven",
+    "learnMore": "Meer informatie",
+    "home": "Startpagina",
+    "readMore": "Lees meer",
+    "bookNow": "Boek nu",
+    "bookConsultation": "Boek een consult",
+    "bookOnline": "Boek online",
+    "scheduleAppointment": "Plan uw afspraak",
+    "whatsapp": "WhatsApp",
+    "bookViaWhatsApp": "Boek via WhatsApp",
+    "treatments": "Behandelingen",
+    "conditions": "Huidproblemen",
+    "notFound": "Niet gevonden",
+    "social": "Volg ons",
+    "searchPlaceholder": "Zoek behandelingen, aandoeningen...",
+    "submitting": "Verzenden...",
+    "tryAgain": "Probeer het opnieuw",
+    "view": "Bekijk",
+    "currentLanguageFlag": "{language} vlag",
+    "languageFlag": "{language} vlag"
+  },
+  "errorPage": {
+    "somethingWentWrong": "Er is iets misgegaan",
+    "apologyMessage": "Onze excuses voor het ongemak. Er is een onverwachte fout opgetreden.",
+    "tryAgain": "Probeer het opnieuw",
+    "globalError": "Er is iets misgegaan"
+  },
+  "accessibility": {
+    "skipToContent": "Ga direct naar de hoofdinhoud",
+    "skipToMain": "Ga direct naar de hoofdinhoud",
+    "skipToTreatments": "Ga verder naar behandelingen",
+    "skipToBooking": "Ga verder naar boeking",
+    "skipNavigation": "Links overslaan",
+    "loadingThemeToggle": "Themaschakelaar laden",
+    "switchToDarkTheme": "Schakel over naar het donkere thema",
+    "switchToLightTheme": "Schakel over naar lichtthema",
+    "closeVideo": "Video sluiten",
+    "muteVideo": "Video dempen",
+    "unmuteVideo": "Dempen van video",
+    "toggleFullscreen": "Schakel volledig scherm",
+    "closeGallery": "Galerij sluiten",
+    "previousImage": "Vorige afbeelding",
+    "nextImage": "Volgende afbeelding",
+    "skipLinks": "Links overslaan",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "required": "vereist",
+    "keyTab": "Tabblad",
+    "keyEscape": "Ontsnappen",
+    "beforeAfterComparison": "Voor en na vergelijking voor {beforeAlt}",
+    "switchToVideo": "Overschakelen naar {title} video"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "specialOffers": "Speciale aanbiedingen",
+    "luxuryBeautySalon": "Luxe schoonheidssalon",
+    "contactSilkBeautySalon": "Neem contact op met Silk Beauty Salon",
+    "silkBeautySalon": "Silk Beauty Salon",
+    "teamMember": "{name} - Teamlid",
+    "consultation": "Consultatie",
+    "bookConsultation": "Consultatie boeken",
+    "skinCareTreatment": "Huidverzorging",
+    "salonInterior": "Saloninterieur"
+  },
+  "footer": {
+    "description": "Schoonheidssalon in Batumi aan de Zurab Gorgiladze-straat.",
+    "quickLinks": "Snelle links",
+    "treatments": "Behandelingen",
+    "conditions": "Huidaandoeningen",
+    "contact": "Contactgegevens",
+    "address": "Zurab Gorgiladze 63, Batumi 6010, Georgië",
+    "phone": "Tel: +995 577 34 57 67",
+    "email": "info@silkbeautysalon.online",
+    "openingHours": "Openingstijden",
+    "hours": {
+      "monFri": "ma-vr: 10:00 - 22:00",
+      "satSun": "za: 10:00 - 22:00 / zo: 11:00 - 22:00",
+      "sat": "Za",
+      "sun": "Zo",
+      "monFriLabel": "ma - vr"
+    },
+    "social": "Volg ons",
+    "faqDesc": "Lees enkele van de meest gestelde vragen over de kliniek en onze behandelingen.",
+    "clinicTitle": "De kliniek",
+    "clinicDesc": "Gelegen aan de straat Zurab Gorgiladze. Open van maandag t/m zaterdag 10.00-22.00 uur en zondag 11.00-22.00 uur.",
+    "teamTitle": "Het team",
+    "teamDesc": "Ontdek meer over onze deskundige medewerkers en hoe zij u het beste kunnen helpen.",
+    "pressTitle": "Media en pers",
+    "pressDesc": "Bekijk recente artikelen en vermeldingen over Silk Beauty Salon.",
+    "copyright": "© 2024 Silk Beauty Salon. Alle rechten voorbehouden.",
+    "privacy": "Privacy",
+    "terms": "Gebruiksvoorwaarden",
+    "cookieNotice": "Cookieverklaring",
+    "stayConnected": "Blijf verbonden",
+    "newsletterTitle": "Sluit je aan bij onze wereld",
+    "emailPlaceholder": "Uw e-mailadres",
+    "subscribe": "Inschrijven",
+    "about": "Over",
+    "information": "Informatie",
+    "visitUs": "Bezoek ons",
+    "designedIn": "Ontworpen in Batumi",
+    "socialDescription": "Volg ons op sociale media voor nieuws en updates van de salon.",
+    "disclaimer": "Raadpleeg altijd een beroepsbeoefenaar in de gezondheidszorg voor geïndividualiseerde behandelaanbevelingen en om belangrijke veiligheidsinformatie en risico's in verband met het gebruik van de producten te bespreken.",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "beautySalonBatumi": "Schoonheidssalon Batumi"
+  },
+  "blogPage": {
+    "title": "Schoonheidskennisbibliotheek",
+    "eyebrow": "Informatiebibliotheek",
+    "metaTitle": "Schoonheidskennisbibliotheek | Silk Beauty Salon",
+    "metaDescription": "Praktische, op bronnen gebaseerde gidsen voor diensten, producten, voorbereiding, herstel, boeking en veiligheidsgrenzen.",
+    "subtitle": "Praktische gidsen voor diensten, producten, voorbereiding, herstel, boeking en de vragen die een persoon vereisen.",
+    "breadcrumb": "Blog",
+    "stayUpdated": "Blijf op de hoogte",
+    "newsletterDesc": "Abonneer u op onze nieuwsbrief voor de nieuwste artikelen, tips en exclusieve aanbiedingen",
+    "subscribeButton": "Abonneer u op de nieuwsbrief",
+    "backToBlog": "Terug naar blog",
+    "shareArticle": "Deel dit artikel",
+    "aboutAuthor": "Over de auteur",
+    "readyToTransform": "Een individueel antwoord nodig?",
+    "bookConsultationDesc": "Stuur een adviesverzoek zodat de salon de juiste service, professional, prijs en volgende stap kan bevestigen.",
+    "relatedPosts": "Gerelateerde berichten",
+    "readMore": "Lees meer",
+    "postNotFound": "Bericht niet gevonden",
+    "expertPractitioner": "Redactie"
+  },
+  "treatmentPage": {
+    "metadataTitle": "{name} in Batumi, Georgië",
+    "metadataDescription": "{description} Boek {name} bij Silk Beauty Salon in Batumi, Georgië.",
+    "imageAlt": "{name} bij Silk Beauty Salon in Batumi, Georgië",
+    "bookNow": "Boek deze behandeling",
+    "backTo": "Terug naar behandelingen",
+    "aboutTreatment": "Over deze behandeling",
+    "benefits": "Voordelen",
+    "howItWorks": "Hoe het werkt",
+    "aftercare": "Nazorg",
+    "faqs": "Veelgestelde vragen",
+    "price": "Prijs vanaf",
+    "duration": "Duur",
+    "readyToStart": "Klaar om aan de slag te gaan?",
+    "bookConsultation": "Boek een consult",
+    "bookConsultationDesc": "Boek een consultatie bij een van onze deskundige behandelaars",
+    "bookNowBtn": "Boek nu",
+    "contactUs": "Neem contact met ons op",
+    "phone": "Telefoon",
+    "email": "E-mail",
+    "address": "Adres",
+    "relatedTreatments": "Gerelateerde behandelingen",
+    "atAGlance": "In één oogopslag",
+    "results": "Resultaten",
+    "downtime": "Hersteltijd",
+    "youMightAlsoLike": "Misschien vind je",
+    "learnMore": "Meer informatie",
+    "heroAlt": "Luxe schoonheidssalon",
+    "durationResults": "Bevestigd tijdens overleg",
+    "minimalDowntime": "Bevestigd tijdens overleg",
+    "confirmedDuringConsultation": "Bevestigd tijdens overleg",
+    "planningAppointment": "Uw afspraak plannen",
+    "sessions": "Sessies",
+    "preparation": "Voorbereiding",
+    "comfort": "Behandelcomfort",
+    "safety": "Veiligheids- en menselijke beoordeling"
+  },
+  "international": {
+    "imageAlt": "Silk Beauty Salon",
+    "teamAlt": "Nana Gviniashvili"
+  },
+  "contactPage": {
+    "title": "Neem contact met ons op",
+    "subtitle": "Neem contact op met ons team om een adviesgesprek te boeken of om vragen te stellen",
+    "formTitle": "Stuur ons een bericht",
+    "thankYou": "Bedankt!",
+    "messageSent": "Uw bericht is succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
+    "fullName": "Volledige naam",
+    "namePlaceholder": "Voer uw naam in",
+    "nameRequired": "Voer uw naam in",
+    "emailAddress": "E-mailadres",
+    "emailPlaceholder": "Voer uw e-mailadres in",
+    "emailRequired": "Voer uw e-mailadres in",
+    "emailInvalid": "Voer een geldig e-mailadres in",
+    "phoneNumber": "Telefoonnummer",
+    "phonePlaceholder": "Voer uw telefoon in",
+    "phoneOptional": "Optioneel",
+    "message": "Bericht",
+    "messagePlaceholder": "Hoe kunnen wij u helpen?",
+    "messageRequired": "Voer een bericht in",
+    "sending": "Bezig met verzenden...",
+    "sendMessage": "Bericht verzenden",
+    "getInTouch": "Neem contact op",
+    "address": "Adres",
+    "phone": "Telefoon",
+    "email": "E-mail",
+    "openingHours": "Openingstijden",
+    "monTue": "maandag - dinsdag",
+    "wedThu": "woensdag - donderdag",
+    "friday": "Vrijdag",
+    "satSun": "zaterdag - zondag",
+    "readyToBook": "Klaar om te boeken?",
+    "bookOnlineDesc": "Boek uw afspraak online via ons boekingssysteem",
+    "bookAppointment": "Afspraak boeken",
+    "bookOnline": "Boek online",
+    "scheduleAppointment": "Plan uw afspraak",
+    "bookViaWhatsApp": "Boek via WhatsApp",
+    "whatsapp": "WhatsApp",
+    "viewOnMap": "Bekijk op Google Maps",
+    "mapAddress": "63 Zurab Gorgiladze Straat",
+    "mapCity": "Batumi, Georgië",
+    "imageAlt": "Neem contact op met Silk Beauty Salon",
+    "mapTitle": "Silk Beauty Salon Locatie"
+  },
+  "consultation": {
+    "title": "Vraag een adviesgesprek aan",
+    "imageAlt": "Overleg met esthetisch specialist",
+    "metaTitle": "Zoek een specialist | Silk Beauty Salon",
+    "metaDescription": "Boek een consultatie bij onze deskundige esthetische beoefenaars. Begin uw reis naar verbeterde natuurlijke schoonheid.",
+    "label": "Gepersonaliseerde zorg",
+    "headline": "Boek vandaag nog uw consultatie",
+    "body": "Plan een persoonlijk adviesgesprek met onze deskundige behandelaars om uw esthetische doelen te bespreken en speciaal voor u een op maat gemaakt behandelplan op te stellen.",
+    "cta": {
+      "title": "Klaar om aan uw reis te beginnen?",
+      "description": "Boek vandaag nog uw consultatie en zet de eerste stap naar een betere natuurlijke schoonheid.",
+      "button": "Zoek een specialist"
+    },
+    "hero": {
+      "title": "Ontdek de mogelijkheden met een behandeladviesgesprek",
+      "description": "Een essentieel onderdeel van de behandeling: het esthetische consult is waar uw reis begint. Hoe beter wij uw behoeften en wensen begrijpen, hoe groter de kans dat u de gewenste resultaten behaalt.",
+      "cta": "Consultatie boeken",
+      "call": "Bel ons"
+    },
+    "features": {
+      "expert": {
+        "title": "Deskundige beoefenaars",
+        "description": "Ons team bestaat uit ervaren behandelaars met relevante professionele training."
+      },
+      "personalized": {
+        "title": "Persoonlijke aanpak",
+        "description": "Elk behandelplan is afgestemd op uw unieke gezichtsanatomie en esthetische doelen."
+      },
+      "convenient": {
+        "title": "Gunstige locatie",
+        "description": "Gemakkelijke toegang in het centrum van Batumi met comfortabele privébehandelkamers."
+      }
+    },
+    "journey": {
+      "title": "Uw esthetische reis",
+      "subtitle": "Van advies tot resultaat, wij begeleiden u bij elke stap van uw transformatie."
+    },
+    "steps": {
+      "consultation": {
+        "title": "Eerste consult",
+        "description": "Bespreek uw zorgen, doelen en medische geschiedenis met onze specialist."
+      },
+      "assessment": {
+        "title": "Huidbeoordeling",
+        "description": "Uitgebreide analyse van uw gezichtsstructuur en huidconditie."
+      },
+      "plan": {
+        "title": "Behandelplan",
+        "description": "Ontvang een persoonlijk behandelplan met aanbevelingen en prijzen."
+      },
+      "treatment": {
+        "title": "Behandeling",
+        "description": "Plan uw behandeling wanneer het u uitkomt met ons zorgzame team."
+      }
+    },
+    "treatments": {
+      "title": "Behandelingen die wij aanbieden",
+      "subtitle": "Uitgebreide esthetische oplossingen voor elk probleem.",
+      "explore": "Ontdek behandelingen ->"
+    },
+    "bookImageAlt": "Consultatie bij Silk Beauty Salon"
+  },
+  "conditionsPage": {
+    "title": "Voorwaarden",
+    "metaTitle": "Voorwaarden die wij behandelen | Silk Beauty Salon",
+    "metaDescription": "Leer meer over de verschillende huidaandoeningen die we behandelen, waaronder een ouder wordende huid, acnelittekens, pigmentvlekken, rosacea en meer in onze esthetische kliniek Batumi.",
+    "listingTitle": "Voorwaarden die wij behandelen",
+    "listingSubtitle": "Wat uw huidprobleem ook is, onze deskundige behandelaars kunnen een persoonlijk behandelplan opstellen",
+    "ctaTitle": "Weet u niet zeker welke behandeling voor u geschikt is?",
+    "ctaSubtitle": "Boek een consultatie met een van onze deskundige behandelaars die uw zorgen zal beoordelen en de beste behandelingsopties zal aanbevelen",
+    "bookConsultation": "Boek een consult",
+    "imageAlt": "Huidverzorging"
+  },
+  "offersPage": {
+    "title": "Speciale aanbiedingen",
+    "subtitle": "Profiteer van onze exclusieve promoties en speciale aanbiedingen",
+    "breadcrumb": "Aanbiedingen",
+    "offers": {
+      "newClient": {
+        "title": "Nieuwe klantspecial",
+        "description": "Boek uw eerste consult en ontvang 20% korting op uw eerste behandeling.",
+        "terms": "Alleen geldig voor nieuwe klanten. Niet cumuleerbaar met andere aanbiedingen."
+      },
+      "antiWrinkle": {
+        "title": "Antirimpelpakket",
+        "description": "Boek 3 antirimpelbehandelingen en bespaar.",
+        "terms": "Geldig voor 3 gebieden die in dezelfde sessie worden behandeld."
+      },
+      "dermalFiller": {
+        "title": "Dermale fillerbundel",
+        "description": "Boek 2 ml of meer dermale filler en ontvang een gratis huidbooster.",
+        "terms": "Tijdelijke aanbieding. Onder voorbehoud van beschikbaarheid."
+      },
+      "referral": {
+        "title": "Verwijzingsbeloning",
+        "description": "Verwijs een vriend(in) en jullie ontvangen allebei ₾50 tegoed voor je volgende behandeling.",
+        "terms": "Doorverwezen vriend moet een behandeling voltooien."
+      },
+      "seasonal": {
+        "title": "Seizoensgebonden huidvernieuwing",
+        "description": "Combineer elke laserbehandeling met een huidanalyse of een passende peeling en bespaar op beide 15%.",
+        "terms": "Beide behandelingen moeten in dezelfde maand worden geboekt."
+      },
+      "loyalty": {
+        "title": "Loyaliteitsprogramma",
+        "description": "Sluit u aan bij ons loyaliteitsprogramma en verdien punten bij elke behandeling.",
+        "terms": "Punten kunnen worden ingewisseld voor toekomstige behandelingen."
+      }
+    },
+    "ctaTitle": "Boek vandaag nog uw behandeling",
+    "ctaSubtitle": "Neem contact met ons op om uw consultatie te boeken en te profiteren van deze exclusieve aanbiedingen",
+    "ctaButton": "Boek nu",
+    "termsText": "Alle aanbiedingen zijn afhankelijk van beschikbaarheid en kunnen op elk moment worden ingetrokken. Aanbiedingen kunnen niet worden gecombineerd, tenzij anders vermeld. Vermeld het aanbod bij het reserveren.",
+    "imageAlt": "Speciale aanbiedingen"
+  },
+  "aboutPage": {
+    "title": "Over ons",
+    "subtitle": "Batumi's toonaangevende niet-chirurgische esthetische kliniek, die beoefenaars van wereldklasse en geavanceerde behandelingen samenbrengt",
+    "ourStory": "Ons verhaal",
+    "storyP1": "Silk Beauty Salon is opgericht met een eenvoudige visie: het bieden van esthetische behandelingen van de hoogste kwaliteit in een luxueuze, gastvrije omgeving. Gelegen aan de Zurab Gorgiladze-straat in Batumi, brengt onze kliniek enkele van de meest getalenteerde esthetische beoefenaars van Georgië samen.",
+    "storyP2": "Wij geloven dat iedereen het verdient om zich zelfverzekerd en mooi te voelen. Onze aanpak is gericht op het verbeteren van uw natuurlijke kenmerken in plaats van het veranderen van wie u bent. We zijn trots op onze subtiele, verfijnde resultaten die ervoor zorgen dat u er uitziet als de beste versie van uzelf.",
+    "storyP3": "Vanaf het moment dat u onze kliniek binnenstapt, ervaart u het verschil. Onze toewijding aan uitmuntendheid reikt verder dan onze behandelingen en betreft elk aspect van uw bezoek, van onze luxe kliniekruimte tot ons warme, attente team.",
+    "ourValues": "Onze waarden",
+    "values": {
+      "patientCare": "Patiëntgerichte zorg",
+      "patientCareDesc": "Uw comfort, veiligheid en tevredenheid zijn onze topprioriteiten.",
+      "excellence": "Uitmuntendheid",
+      "excellenceDesc": "Wij gebruiken uitsluitend premium producten en de nieuwste technieken voor optimaal resultaat.",
+      "safety": "Veiligheid",
+      "safetyDesc": "Alle behandelingen worden uitgevoerd door gekwalificeerde medische professionals.",
+      "naturalResults": "Natuurlijke resultaten",
+      "naturalResultsDesc": "Wij versterken uw natuurlijke schoonheid met subtiele, verfijnde behandelingen."
+    },
+    "meetTeam": "Maak kennis met ons team",
+    "teamSubtitle": "Onze deskundige beoefenaars brengen jarenlange ervaring en een passie voor uitmuntendheid mee",
+    "team": {
+      "ninoRole": "Oprichter en hoofddeskundige",
+      "ninoBio": "Nino is de oprichter van Silk Beauty Salon en een gerenommeerd esthetisch arts met meer dan 15 jaar ervaring in de schoonheidsindustrie. Ze staat bekend om haar natuurlijk ogende resultaten en nauwgezette aandacht voor detail.",
+      "ketevanRole": "Senior esthetisch arts",
+      "ketevanBio": "Ketevan is een hoogopgeleide esthetisch arts, gespecialiseerd in dermale fillers en huidbehandelingen. Haar zachte aanpak en artistieke blik zorgen voor mooie, natuurlijke resultaten voor elke klant.",
+      "mariamRole": "Esthetisch arts",
+      "mariamBio": "Mariam brengt een schat aan kennis met zich mee op het gebied van geavanceerde huidbehandelingen en lasertherapie. Ze heeft een passie om klanten te helpen hun huiddoelen te bereiken door middel van gepersonaliseerde behandelplannen.",
+      "sophiaRole": "Esthetisch arts",
+      "sophiaBio": "Sophia is gespecialiseerd in niet-chirurgische gezichtsverjonging en heeft ruime ervaring met antirimpelbehandelingen en fillers. Haar klanten waarderen haar natuurlijke, frisse aanpak."
+    },
+    "awards": {
+      "title": "Prijzen en erkenning",
+      "awardWinning": "Bekroonde",
+      "premierSalon": "Batumi's beste schoonheidssalon",
+      "featuredIn": "Zoals vermeld in Georgian Fashion & Beauty Magazine"
+    },
+    "featuredInVogue": "Te zien in Vogue, Grazia, Vanity Fair en Tatler",
+    "featuredIn": "Zoals vermeld in Georgian Fashion & Beauty Magazine",
+    "ctaTitle": "Klaar om aan uw reis te beginnen?",
+    "ctaSubtitle": "Boek vandaag nog een consultatie bij een van onze deskundige behandelaars",
+    "ctaButton": "Boek een consult",
+    "interiorAlt": "Silk Beauty Salon Interieur",
+    "clinicAlt": "Silk Beauty Salon Kliniek"
+  },
+  "home": {
+    "section1Title": "Behandelportfolio",
+    "section2Title": "Huidaandoeningen",
+    "section3Title": "Behandelportfolio",
+    "section4Title": "Huidaandoeningen",
+    "section5Title": "Behandelportfolio"
+  },
+  "notFoundPage": {
+    "title": "Pagina niet gevonden",
+    "description": "Sorry, we konden de pagina die u zocht niet vinden. Mogelijk is deze verplaatst of verwijderd.",
+    "home": "Ga naar huis",
+    "contact": "Neem contact met ons op"
+  },
+  "treatmentCollectionPage": {
+    "metadataTitle": "{title} in Batumi, Georgië",
+    "metadataDescription": "{description} Boek een consultatie voor {title} bij Silk Beauty Salon in Batumi, Georgië.",
+    "imageAlt": "{title} bij Silk Beauty Salon in Batumi, Georgië",
+    "includedTreatments": "Inbegrepen behandelingen",
+    "treatmentOptionsTitle": "Behandelingsopties in deze categorie",
+    "serviceOptions": "Serviceopties",
+    "serviceOptionsTitle": "Schoonheidsdiensten op adviesbasis",
+    "consultationEyebrow": "Consultatie",
+    "consultationTitle": "Stel vóór de behandeling het juiste plan op.",
+    "consultationDescription": "Elke afspraak begint met anatomie, huidconditie, timing, hersteltijd en uitkomstplanning. Dat houdt het resultaat nauwkeurig en realistisch.",
+    "collections": {
+      "botox": {
+        "title": "Botox",
+        "eyebrow": "Injecteerbare producten",
+        "description": "Een gerichte selectie van antirimpel-, therapeutische en gezichtsbalancerende neuromodulatorbehandelingen."
+      },
+      "dermalFillers": {
+        "title": "Dermale fillers",
+        "eyebrow": "Volume en contour",
+        "description": "Lippen, wangen, kin, kaaklijn, traangoot en profielbalancerende behandelingen opgebouwd rond gezichtsharmonie."
+      },
+      "skinTreatments": {
+        "title": "Huidbehandelingen",
+        "eyebrow": "Huidkwaliteit",
+        "description": "Een samengestelde mix van peelings, microneedling, diagnostiek en collageenondersteunende behandelingen voor een helderdere, gezondere huid."
+      },
+      "laserTreatments": {
+        "title": "Laserbehandelingen",
+        "eyebrow": "Apparaten en resurfacing",
+        "description": "Lasergestuurde resurfacing-, pigmentatie-, vasculaire en collageenstimulatiebehandelingen geselecteerd voor huidprecisie."
+      },
+      "hairAndHairExtensions": {
+        "title": "Haar en haarextensions",
+        "eyebrow": "Haarservices",
+        "description": "Hoofdhuidadvies, restauratieplanning en schoonheidsondersteuning in de salon voor voller, glanzender haar.",
+        "services": {
+          "service1": {
+            "title": "Advies voor haarherstel",
+            "description": "Klinische hoofdhuidbeoordeling en gepersonaliseerde behandelplanning.",
+            "duration": "45-60 minuten"
+          },
+          "service2": {
+            "title": "Advies over haarverlenging",
+            "description": "Kleurmatch, mengplanning en onderhoudsadvies vóór het aanbrengen.",
+            "duration": "30 minuten"
+          }
+        }
+      },
+      "nails": {
+        "title": "Nagels",
+        "eyebrow": "Salondiensten",
+        "description": "Manicure- en pedicurediensten worden geboekt via eerst consultatie in de salon.",
+        "services": {
+          "service1": {
+            "title": "Kenmerkende manicure",
+            "description": "Vorm, nagelriemverzorging, polijstplanning en afwerkingskeuze.",
+            "duration": "45 minuten"
+          },
+          "service2": {
+            "title": "Luxe pedicure",
+            "description": "Voetbehandeling, exfoliatie, hydratatie en duurzame, gepolijste afwerking.",
+            "duration": "60 minuten"
+          }
+        }
+      },
+      "lashes": {
+        "title": "Wimpers",
+        "eyebrow": "Schoonheidsafwerking",
+        "description": "Wimperafspraken worden gepland als speciale schoonheidsbehandelingen met opties voor vorm, lift en afwerking.",
+        "services": {
+          "service1": {
+            "title": "Wimperlift consult",
+            "description": "Natuurlijke lift, krulrichting en nazorgplanning.",
+            "duration": "30 minuten"
+          },
+          "service2": {
+            "title": "Afspraak voor wimperstyling",
+            "description": "Een vollere wimperafwerking met persoonlijke vorm- en onderhoudsbegeleiding.",
+            "duration": "45 minuten"
+          }
+        }
+      }
+    }
+  },
+  "localSeoTemplate": {
+    "locationText": "{name} bevindt zich op {address}, {city}. Online boeken, telefonische ondersteuning, WhatsApp en e-mail zijn beschikbaar voor lokale en internationale klanten.",
+    "booking": "Boeking",
+    "online": "Online",
+    "phone": "Telefoon",
+    "email": "E-mail"
+  }
+}

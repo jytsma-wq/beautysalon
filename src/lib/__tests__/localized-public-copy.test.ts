@@ -5,8 +5,11 @@ import he from '../../../messages/he.json';
 import ka from '../../../messages/ka.json';
 import ru from '../../../messages/ru.json';
 import tr from '../../../messages/tr.json';
+import nl from '../../../messages/nl.json';
+import fr from '../../../messages/fr.json';
+import de from '../../../messages/de.json';
 
-const localizedMessages = { ka, ru, tr, ar, he } as const;
+const localizedMessages = { ka, ru, tr, ar, he, nl, fr, de } as const;
 const namespaces = ['beforeAfterPage', 'treatmentPage', 'accessibility', 'contactPage'] as const;
 const allowedSharedValues = new Set([
   'accessibility.keyTab',

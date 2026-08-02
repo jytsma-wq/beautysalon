@@ -1,9 +1,10 @@
 'use client';
 
 import { Clock, MapPin, MessageCircle, Navigation, Phone } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { RevealOnScroll } from '@/components/effects/RevealOnScroll';
 import { siteConfig } from '@/data/site-config';
+import { localizedCountryNames, type Locale } from '@/i18n';
 import { getBusinessAddress, getGoogleMapsDirectionsUrl, getGoogleMapsEmbedUrl } from '@/lib/location-links';
 
 function getPhoneHref(phoneNumber: string) {
@@ -17,6 +18,7 @@ function getWhatsAppHref(phoneNumber: string) {
 }
 
 export function VisitUsSection() {
+  const locale = useLocale() as Locale;
   const t = useTranslations('homeEditorial.visitUs');
   const address = getBusinessAddress();
   const directionsUrl = getGoogleMapsDirectionsUrl(address.fullAddress);
@@ -58,7 +60,7 @@ export function VisitUsSection() {
                   <span className="block font-medium">{siteConfig.name}</span>
                   <span className="block">{address.streetAddress}</span>
                   <span className="block">
-                    {address.locality}, {siteConfig.contact.postcode}, {address.country}
+                    {address.locality}, {siteConfig.contact.postcode}, {localizedCountryNames[locale]}
                   </span>
                 </address>
               </div>

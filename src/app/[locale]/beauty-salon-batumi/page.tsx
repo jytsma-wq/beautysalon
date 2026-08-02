@@ -339,6 +339,162 @@ const serviceNavigationByLocale: Record<
       },
     ],
   },
+  nl: {
+    title: "Populaire schoonheidsdiensten in Batumi",
+    intro:
+      "Gebruik deze gids om van de brede schoonheidssalonpagina naar de service-, prijs- of boekingsinformatie te gaan die bij uw bezoek past.",
+    links: [
+      {
+        label: "Botox en antirimpelconsulten",
+        href: '/botox-batumi',
+        description: "Lees meer over consultatie-geleide injectable-afspraken en nazorgplanning.",
+      },
+      {
+        label: "Dermale fillers",
+        href: '/dermal-fillers-batumi',
+        description: "Ontdek opties voor gezichtsbalancering voor lippen, wangen, kin, kaaklijn en gebieden onder de ogen.",
+      },
+      {
+        label: "Lipvullers",
+        href: '/lip-fillers-batumi',
+        description: "Bekijk de consultinformatie voor lipfillers voordat u een afspraak kiest.",
+      },
+      {
+        label: "Huidbehandelingen",
+        href: '/skin-treatment-batumi',
+        description: "Vergelijk huidanalyse, peelings, microneedling en ondersteuning voor huidkwaliteit.",
+      },
+      {
+        label: "Acne verzorging",
+        href: '/acne-treatment-batumi',
+        description: "Vind consultatiemogelijkheden voor acne-gevoelige huid en post-acne textuurproblemen.",
+      },
+      {
+        label: "Nagels",
+        href: '/nails-batumi',
+        description: "Bekijk informatie over manicure, pedicure en nagelservice voordat u boekt.",
+      },
+      {
+        label: "Wimpers en wenkbrauwen",
+        href: '/lashes-brows-batumi',
+        description: "Plan wimperextensions, wimperlifting, wenkbrauwlaminering of vormgevingsafspraken.",
+      },
+      {
+        label: "Prijzen",
+        href: '/pricelist',
+        description: "Controleer de vanafprijzen en gebruik de lijst als leidraad vóór overleg.",
+      },
+      {
+        label: "Boek een afspraak",
+        href: '/book',
+        description: "Kies online een consult- of behandeltijd.",
+      },
+    ],
+  },
+  fr: {
+    title: "Services de beauté populaires à Batumi",
+    intro:
+      "Utilisez ce guide pour passer de la page générale du salon de beauté aux informations sur le service, le prix ou la réservation qui correspondent à votre visite.",
+    links: [
+      {
+        label: "Botox et consultations anti-rides",
+        href: '/botox-batumi',
+        description: "Découvrez les rendez-vous pour les injections menés en consultation et la planification du suivi.",
+      },
+      {
+        label: "Fillers dermiques",
+        href: '/dermal-fillers-batumi',
+        description: "Explorez les options d'équilibrage du visage pour les lèvres, les joues, le menton, la mâchoire et le dessous des yeux.",
+      },
+      {
+        label: "Remplisseurs de lèvres",
+        href: '/lip-fillers-batumi',
+        description: "Consultez les informations sur la consultation de comblement des lèvres avant de choisir un rendez-vous.",
+      },
+      {
+        label: "Traitements de la peau",
+        href: '/skin-treatment-batumi',
+        description: "Comparez l'analyse cutanée, les peelings, le microneedling et le support de la qualité de la peau.",
+      },
+      {
+        label: "Soins de l'acné",
+        href: '/acne-treatment-batumi',
+        description: "Trouvez des options de consultation pour les problèmes de peau à tendance acnéique et de texture post-acnéique.",
+      },
+      {
+        label: "Ongles",
+        href: '/nails-batumi',
+        description: "Consultez les informations sur les manucures, pédicures et services d’ongles avant de réserver.",
+      },
+      {
+        label: "Cils et sourcils",
+        href: '/lashes-brows-batumi',
+        description: "Planifiez des extensions de cils, un rehaussement de cils, une stratification des sourcils ou des rendez-vous de mise en forme.",
+      },
+      {
+        label: "Tarifs",
+        href: '/pricelist',
+        description: "Vérifiez les prix de départ et utilisez la liste comme guide avant toute consultation.",
+      },
+      {
+        label: "Prendre rendez-vous",
+        href: '/book',
+        description: "Choisissez une heure de consultation ou de traitement en ligne.",
+      },
+    ],
+  },
+  de: {
+    title: "Beliebte Schönheitsbehandlungen in Batumi",
+    intro:
+      "Verwenden Sie diesen Leitfaden, um von der breiten Seite des Schönheitssalons zu den Service-, Preis- oder Buchungsinformationen zu wechseln, die zu Ihrem Besuch passen.",
+    links: [
+      {
+        label: "Botox und Anti-Falten-Beratung",
+        href: '/botox-batumi',
+        description: "Lesen Sie mehr über beratungsgeführte Injektionstermine und Nachsorgeplanung.",
+      },
+      {
+        label: "Dermal-Filler",
+        href: '/dermal-fillers-batumi',
+        description: "Entdecken Sie Möglichkeiten zum Gesichtsausgleich für Lippen, Wangen, Kinn, Kiefer und Augenpartie.",
+      },
+      {
+        label: "Lippenfüller",
+        href: '/lip-fillers-batumi',
+        description: "Lesen Sie die Informationen zur Lippenfüller-Beratung durch, bevor Sie einen Termin vereinbaren.",
+      },
+      {
+        label: "Hautbehandlungen",
+        href: '/skin-treatment-batumi',
+        description: "Vergleichen Sie Hautanalyse, Peelings, Microneedling und Hautqualitätsunterstützung.",
+      },
+      {
+        label: "Akne-Pflege",
+        href: '/acne-treatment-batumi',
+        description: "Finden Sie Beratungsmöglichkeiten für zu Akne neigende Haut und Probleme mit der Textur nach der Akne.",
+      },
+      {
+        label: "Nägel",
+        href: '/nails-batumi',
+        description: "Informieren Sie sich vor der Buchung über die Informationen zu Maniküre, Pediküre und Nagelpflege.",
+      },
+      {
+        label: "Wimpern und Brauen",
+        href: '/lashes-brows-batumi',
+        description: "Planen Sie Wimpernverlängerungen, Wimpernlifting, Augenbrauenlaminierung oder Formungstermine.",
+      },
+      {
+        label: "Preise",
+        href: '/pricelist',
+        description: "Prüfen Sie die Einstiegspreise und nutzen Sie die Liste als Orientierung vor der Beratung.",
+      },
+      {
+        label: "Buchen Sie einen Termin",
+        href: '/book',
+        description: "Wählen Sie online einen Beratungs- oder Behandlungstermin.",
+      },
+    ],
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

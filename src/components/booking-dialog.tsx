@@ -9,6 +9,7 @@ import { apiPost, apiGet, API_ENDPOINTS, ApiError } from "@/lib/api-client";
 import { useClientCsrfToken } from "@/lib/csrf-client";
 import { siteConfig } from "@/data/site-config";
 import { getBookingTreatmentOptions } from "@/data/booking-treatments";
+import { formatDate as formatLocalizedDate } from "@/lib/i18n-formatters";
 import {
   Dialog,
   DialogContent,
@@ -117,6 +118,7 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
   const t = useTranslations("bookingPage");
   const tCommon = useTranslations("common");
   const locale = useLocale();
+  const formatSelectedDate = (date: Date) => formatLocalizedDate(date, locale);
   const treatmentOptions = getBookingTreatmentOptions(locale);
 
   // Consolidated form state
@@ -390,7 +392,7 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
                 </p>
                 <p>
                   <span className="font-medium">{t('date')}:</span>{" "}
-                  {selectedDate && format(selectedDate, "MMMM d, yyyy")}
+                  {selectedDate && formatSelectedDate(selectedDate)}
                 </p>
                 <p>
                   <span className="font-medium">{t('time')}:</span> {selectedTime}
@@ -513,7 +515,7 @@ export function BookingDialog({ open, onOpenChange }: BookingDialogProps) {
                 </p>
                 <p>
                   <span className="font-medium">{t('date')}:</span>{" "}
-                  {selectedDate && format(selectedDate, "MMMM d, yyyy")}
+                  {selectedDate && formatSelectedDate(selectedDate)}
                 </p>
                 <p>
                   <span className="font-medium">{t('time')}:</span> {selectedTime}

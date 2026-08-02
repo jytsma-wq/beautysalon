@@ -36,7 +36,7 @@ const collectionMessageKeys: Record<string, string> = {
 };
 
 export async function generateStaticParams() {
-  const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr'];
+  const locales = ['en', 'ka', 'ru', 'ar', 'he', 'tr', 'nl', 'fr', 'de'];
   const slugs = Object.keys(legacyCategoryAnchors);
 
   return locales.flatMap((locale) =>

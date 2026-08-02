@@ -148,6 +148,60 @@ const copy: Record<Locale, DownloadCopy> = {
     supportText: 'שלחו הודעה לצוות הסלון ונדריך אתכם בתהליך Android.',
     supportCta: 'יצירת קשר',
   },
+  nl: {
+    badge: "Android-app",
+    title: "Download de Silk Beauty Android-app",
+    subtitle: "Boek afspraken, blader door behandelingen en houd salongegevens bij de hand terwijl u in Batumi bent.",
+    cta: "APK downloaden",
+    fileLabel: "APK vrijgeven",
+    benefitsTitle: "Gebouwd voor salonbezoeken",
+    installTitle: "Hoe te installeren",
+    installIntro:
+      "Omdat deze app rechtstreeks vanuit Silk Beauty Salon wordt gedistribueerd, kan Android u vragen om toestemming voor het installeren van onbekende apps toe te staan ​​voor uw browser of bestandsbeheerder.",
+    installSteps: androidInstallSteps,
+    safetyTitle: "Direct downloaden",
+    safetyText:
+      "De APK is ondertekend via EAS Build en geleverd door Silk Beauty Salon. Het wordt niet gepubliceerd via Google Play.",
+    supportTitle: "Hulp nodig bij het installeren?",
+    supportText: "Stuur een bericht naar het salonteam en wij begeleiden u door de Android-prompt.",
+    supportCta: "Neem contact met ons op",
+  },
+  fr: {
+    badge: "Application Android",
+    title: "Téléchargez l'application Android Silk Beauty",
+    subtitle: "Prenez rendez-vous, parcourez les traitements et gardez les détails du salon à portée de main pendant que vous êtes à Batumi.",
+    cta: "Télécharger l'APK",
+    fileLabel: "Publier l'APK",
+    benefitsTitle: "Conçu pour les visites en salon",
+    installTitle: "Comment installer",
+    installIntro:
+      "Étant donné que cette application est distribuée directement à partir de Silk Beauty Salon, Android peut vous demander d'autoriser l'autorisation Installer des applications inconnues pour votre navigateur ou gestionnaire de fichiers.",
+    installSteps: androidInstallSteps,
+    safetyTitle: "Téléchargement direct",
+    safetyText:
+      "L'APK est signé via EAS Build et fourni par Silk Beauty Salon. Il n'est pas publié via Google Play.",
+    supportTitle: "Besoin d'aide pour l'installation ?",
+    supportText: "Envoyez un message à l'équipe du salon et nous vous guiderons à travers l'invite Android.",
+    supportCta: "Contactez-nous",
+  },
+  de: {
+    badge: "Android-App",
+    title: "Laden Sie die Android-App Silk Beauty herunter",
+    subtitle: "Buchen Sie Termine, stöbern Sie nach Behandlungen und behalten Sie die Salondetails im Auge, während Sie in Batumi sind.",
+    cta: "APK herunterladen",
+    fileLabel: "APK veröffentlichen",
+    benefitsTitle: "Gebaut für Salonbesuche",
+    installTitle: "Anleitung zur Installation",
+    installIntro:
+      "Da diese App direkt von Silk Beauty Salon vertrieben wird, werden Sie möglicherweise von Android aufgefordert, die Berechtigung „Unbekannte Apps installieren“ für Ihren Browser oder Dateimanager zuzulassen.",
+    installSteps: androidInstallSteps,
+    safetyTitle: "Direkter Download",
+    safetyText:
+      "Das APK ist durch EAS Build signiert und wird von Silk Beauty Salon bereitgestellt. Es wird nicht über Google Play veröffentlicht.",
+    supportTitle: "Benötigen Sie Hilfe bei der Installation?",
+    supportText: "Senden Sie eine Nachricht an das Salonteam und wir führen Sie durch die Android-Eingabeaufforderung.",
+    supportCta: "Kontaktieren Sie uns",
+  },
 };
 
 function getCopy(locale: string) {

@@ -1,4 +1,4 @@
-import { baseTreatmentCategories } from './treatments';
+import { baseTreatmentCategories, localizeTreatmentPrice } from './treatments';
 
 export const homeHeroSlides = [
   {
@@ -136,10 +136,13 @@ const treatmentPriceBySlug = new Map(
   )
 );
 
-export function getPopularTreatmentHighlights() {
+export function getPopularTreatmentHighlights(locale = 'en') {
   return popularTreatmentHighlights.map((item) => ({
     ...item,
-    price: treatmentPriceBySlug.get(item.priceTreatmentSlug) || 'Consultation required',
+    price: localizeTreatmentPrice(
+      treatmentPriceBySlug.get(item.priceTreatmentSlug) || 'Consultation required',
+      locale
+    ),
   }));
 }
 
@@ -179,6 +182,6 @@ export const skinTrendArticles = [
 
 export const proofStats = [
   { value: "63", label: "Zurab Gorgiladze Street" },
-  { value: "6", label: "Website languages" },
+  { value: "9", label: "Website languages" },
   { value: "7", label: "Days open each week" },
 ];

@@ -5,7 +5,7 @@ import { NextRequest } from 'next/server';
 // We need to extract and export these from middleware.ts for testing
 
 // Re-implement the functions here for testing (since they're not exported from middleware.ts)
-const SUPPORTED_LOCALES = ['en', 'ka', 'ru', 'tr', 'ar', 'he'];
+const SUPPORTED_LOCALES = ['en', 'ka', 'ru', 'tr', 'ar', 'he', 'nl', 'fr', 'de'];
 
 function parseAcceptLanguage(header: string | null): Array<{ tag: string; quality: number }> {
   if (!header) return [];
@@ -105,6 +105,9 @@ describe('mapToSupportedLocale', () => {
     expect(mapToSupportedLocale('tr')).toBe('tr');
     expect(mapToSupportedLocale('ar')).toBe('ar');
     expect(mapToSupportedLocale('he')).toBe('he');
+    expect(mapToSupportedLocale('nl')).toBe('nl');
+    expect(mapToSupportedLocale('fr')).toBe('fr');
+    expect(mapToSupportedLocale('de')).toBe('de');
   });
 
   it('matches primary language subtag for region variants', () => {
@@ -116,6 +119,9 @@ describe('mapToSupportedLocale', () => {
     expect(mapToSupportedLocale('ru-RU')).toBe('ru');
     expect(mapToSupportedLocale('tr-TR')).toBe('tr');
     expect(mapToSupportedLocale('ka-GE')).toBe('ka');
+    expect(mapToSupportedLocale('nl-NL')).toBe('nl');
+    expect(mapToSupportedLocale('fr-FR')).toBe('fr');
+    expect(mapToSupportedLocale('de-DE')).toBe('de');
   });
 
   it('handles case insensitivity', () => {
@@ -125,8 +131,6 @@ describe('mapToSupportedLocale', () => {
   });
 
   it('returns null for unsupported locales', () => {
-    expect(mapToSupportedLocale('fr')).toBeNull();
-    expect(mapToSupportedLocale('de')).toBeNull();
     expect(mapToSupportedLocale('es-MX')).toBeNull();
     expect(mapToSupportedLocale('zh-CN')).toBeNull();
   });
@@ -157,14 +161,14 @@ describe('detectLocale', () => {
     expect(detectLocale(request)).toBe('ar');
   });
 
-  it('returns "en" for unknown language tag', () => {
+  it('returns "fr" for a supported French language tag', () => {
     request.headers.set('accept-language', 'fr-FR');
-    expect(detectLocale(request)).toBe('en');
+    expect(detectLocale(request)).toBe('fr');
   });
 
   it('respects quality values and returns first supported match', () => {
-    // fr is not supported, en is, so en should be returned
-    request.headers.set('accept-language', 'fr;q=0.9,en;q=0.8');
+    // Spanish is not supported, English is, so English should be returned.
+    request.headers.set('accept-language', 'es;q=0.9,en;q=0.8');
     expect(detectLocale(request)).toBe('en');
   });
 
@@ -174,7 +178,7 @@ describe('detectLocale', () => {
   });
 
   it('falls back when no languages match', () => {
-    request.headers.set('accept-language', 'fr,de,es');
+    request.headers.set('accept-language', 'es,it,pl');
     expect(detectLocale(request)).toBe('en');
   });
 

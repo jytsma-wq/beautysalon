@@ -6,6 +6,7 @@ import { baseTreatmentCategories } from '../treatments';
 import {
   getPopularTreatmentHighlights,
   portfolioHighlights,
+  proofStats,
   popularTreatmentHighlights,
 } from '../homepage';
 
@@ -55,6 +56,13 @@ describe('homepage popular treatment highlights', () => {
 
     expect(botoxCard?.href).toBe('/botox-batumi');
     expect(botoxPortfolioCard?.href).toBe('/botox-batumi');
+  });
+
+  it('localizes central prices and reports all nine website languages', () => {
+    expect(getPopularTreatmentHighlights('nl')[0].price).toBe('Vanaf ₾200');
+    expect(getPopularTreatmentHighlights('fr')[0].price).toBe('À partir de ₾200');
+    expect(getPopularTreatmentHighlights('de')[0].price).toBe('Ab ₾200');
+    expect(proofStats.find((stat) => stat.label === 'Website languages')?.value).toBe('9');
   });
 
   it('has localized homepage copy for every supported language', () => {
